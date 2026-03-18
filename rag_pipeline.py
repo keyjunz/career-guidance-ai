@@ -108,15 +108,24 @@ class RAGPipeline:
         pipeline_start = time.perf_counter()
         step_times = {}
 
+        # Step 0: Translate Query (Multi-lingual RAG)
+        search_query = question
+        if language == "vi" and self.llm is not None:
+            t0 = time.perf_counter()
+            search_query = self.llm.translate_query(question, language="vi")
+            step_times["translation"] = (time.perf_counter() - t0) * 1000
+        else:
+            step_times["translation"] = 0
+
         # Step 1: Embed query
         t0 = time.perf_counter()
-        query_embedding = self.embedding.encode_query(question)
+        query_embedding = self.embedding.encode_query(search_query)
         step_times["embedding"] = (time.perf_counter() - t0) * 1000
 
         # Step 2: Hybrid Retrieve
         t0 = time.perf_counter()
         retrieved = self.retriever.search(
-            query=question,
+            query=search_query,
             query_embedding=query_embedding,
             top_k=retrieve_k,
         )
@@ -125,7 +134,7 @@ class RAGPipeline:
         # Step 3: Rerank
         t0 = time.perf_counter()
         reranked = self.reranker.rerank(
-            query=question,
+            query=search_query,
             documents=retrieved,
             top_k=rerank_k,
         )

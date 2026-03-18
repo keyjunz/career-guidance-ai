@@ -211,6 +211,50 @@ class LLMGenerator:
             "tokens_per_second": tokens_gen / (latency / 1000) if latency > 0 else 0,
         }
 
+    def translate_query(self, query: str, language: str = "en") -> str:
+        """Dịch query sang Tiếng Anh để tăng cường hiệu quả Retrieval (FAISS + BM25)."""
+        if language != "vi":
+            return query
+            
+        if not self._loaded:
+            self.load()
+            
+        prompt = f"Translate the following Vietnamese question to American English accurately. Return ONLY the English translation, without any quotes, explanations, or Markdown formatting.\n\nVietnamese: {query}\nEnglish:"
+        
+        start = time.perf_counter()
+        
+        try:
+            if hasattr(self.tokenizer, "apply_chat_template") and self.tokenizer.chat_template:
+                messages = [{"role": "user", "content": prompt}]
+                outputs = self.pipe(
+                    messages,
+                    max_new_tokens=60,
+                    temperature=0.1,
+                    top_p=1.0,
+                    do_sample=False,
+                    return_full_text=False,
+                )
+                eng_query = outputs[0]["generated_text"]
+                if isinstance(eng_query, list) and len(eng_query) > 0:
+                    eng_query = eng_query[0].get("content", str(eng_query))
+            else:
+                outputs = self.pipe(
+                    prompt,
+                    max_new_tokens=60,
+                    temperature=0.1,
+                    top_p=1.0,
+                    do_sample=False,
+                    return_full_text=False,
+                )
+                eng_query = outputs[0]["generated_text"]
+                
+            eng_query = eng_query.strip(" '\"\n`")
+            print(f"[Query Translator] VI -> EN: '{query}' -> '{eng_query}' ({(time.perf_counter()-start)*1000:.0f}ms)")
+            return eng_query
+        except Exception as e:
+            print(f"[Query Translator] Lỗi dịch Local LLM: {e}. Sử dụng query gốc.")
+            return query
+
     def benchmark_latency(
         self,
         n_runs: int = 5,
@@ -389,6 +433,41 @@ class APILLMGenerator:
             "provider": self.provider,
             "model": self.model_name,
         }
+
+    def translate_query(self, query: str, language: str = "en") -> str:
+        """Dịch query sang Tiếng Anh qua API LLM."""
+        if language != "vi":
+            return query
+            
+        if not self._loaded:
+            self.load()
+            
+        prompt = f"Translate the following Vietnamese question to American English accurately. Return ONLY the English translation, without any quotes, explanations, or Markdown formatting.\n\nVietnamese: {query}\nEnglish:"
+        
+        start = time.perf_counter()
+        
+        try:
+            if self.provider == "groq":
+                response = self.client.chat.completions.create(
+                    model=self.model_name,
+                    messages=[{"role": "user", "content": prompt}],
+                    max_tokens=60,
+                    temperature=0.1,
+                )
+                eng_query = response.choices[0].message.content
+            elif self.provider == "gemini":
+                response = self.client.generate_content(
+                    prompt,
+                    generation_config={"max_output_tokens": 60, "temperature": 0.1},
+                )
+                eng_query = response.text
+                
+            eng_query = eng_query.strip(" '\"\n`")
+            print(f"[Query Translator] VI -> EN: '{query}' -> '{eng_query}' ({(time.perf_counter()-start)*1000:.0f}ms)")
+            return eng_query
+        except Exception as e:
+            print(f"[Query Translator] Lỗi dịch API: {e}. Sử dụng query gốc.")
+            return query
 
     def unload(self):
         """API client không cần giải phóng GPU."""
