@@ -22,9 +22,11 @@ from config import (
 from rouge_score import rouge_scorer
 import nltk
 try:
-    nltk.data.find('tokenizers/punkt_tab')
-except LookupError:
+    # Cần thiết cho BLEU/ROUGE split tokens
+    nltk.download('punkt', quiet=True)
     nltk.download('punkt_tab', quiet=True)
+except Exception:
+    pass
 from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
 
 
@@ -299,12 +301,12 @@ def evaluate_pipeline(
             "question": qa["question"],
             "reference": reference,
             "generated": answer,
-            "bleu": round(bleu, 2),
-            "rouge_l": round(rouge_l, 2),
-            "f1": round(f1, 2),
-            "hallucination_rate": round(halluc_rate, 3),
-            "is_hallucinated": is_hallucinated,
-            "latency_ms": round(result["latency"]["total_ms"], 1),
+            "bleu": float(round(bleu, 2)),
+            "rouge_l": float(round(rouge_l, 2)),
+            "f1": float(round(f1, 2)),
+            "hallucination_rate": float(round(halluc_rate, 3)),
+            "is_hallucinated": bool(is_hallucinated),
+            "latency_ms": float(round(result["latency"]["total_ms"], 1)),
             "category": qa.get("category", ""),
         })
 
@@ -314,15 +316,15 @@ def evaluate_pipeline(
     # Summary
     summary = {
         "total_questions": len(qa_data),
-        "avg_bleu": round(np.mean(all_bleu), 2),
-        "avg_rouge_l": round(np.mean(all_rouge_l), 2),
-        "avg_f1": round(np.mean(all_f1), 2),
-        "avg_latency_ms": round(np.mean(all_latency), 1),
-        "p95_latency_ms": round(np.percentile(all_latency, 95), 1),
-        "hallucination_rate": round(hallucination_count / len(qa_data), 3),
-        "pass_bleu": np.mean(all_bleu) >= BLEU_THRESHOLD,
-        "pass_rouge_l": np.mean(all_rouge_l) >= ROUGE_L_THRESHOLD,
-        "pass_hallucination": (hallucination_count / len(qa_data)) < HALLUCINATION_THRESHOLD,
+        "avg_bleu": float(round(np.mean(all_bleu), 2)),
+        "avg_rouge_l": float(round(np.mean(all_rouge_l), 2)),
+        "avg_f1": float(round(np.mean(all_f1), 2)),
+        "avg_latency_ms": float(round(np.mean(all_latency), 1)),
+        "p95_latency_ms": float(round(np.percentile(all_latency, 95), 1)),
+        "hallucination_rate": float(round(hallucination_count / len(qa_data), 3)),
+        "pass_bleu": bool(np.mean(all_bleu) >= BLEU_THRESHOLD),
+        "pass_rouge_l": bool(np.mean(all_rouge_l) >= ROUGE_L_THRESHOLD),
+        "pass_hallucination": bool((hallucination_count / len(qa_data)) < HALLUCINATION_THRESHOLD),
     }
 
     output = {"summary": summary, "results": results}
