@@ -168,6 +168,95 @@ def create_sample_qa_dataset(output_file: str = None) -> List[Dict]:
     return qa_data
 
 
+def generate_qa_from_corpus(output_file: str = None, num_questions: int = 20) -> List[Dict]:
+    """
+    Sử dụng LLM API (Groq/Gemini) để tự động sinh bộ câu hỏi và ground truth từ chunks.json.
+    Đảm bảo tính khách quan cho bộ test.
+    """
+    import random
+    from tqdm import tqdm
+    from models.llm_generator import APILLMGenerator
+
+    if output_file is None:
+        output_file = str(DATA_DIR / "qa_test.json")
+
+    chunks_file = DATA_DIR / "chunks.json"
+    if not chunks_file.exists():
+        print(f"Lỗi: Không tìm thấy {chunks_file}. Hãy chạy data crawler trước.")
+        return []
+
+    with open(chunks_file, "r", encoding="utf-8") as f:
+        chunks = json.load(f)
+
+    # Bỏ qua các chunk quá ngắn để tránh câu hỏi thiếu ý nghĩa
+    valid_chunks = [c for c in chunks if len(c.get("text", "").split()) > 50]
+    if len(valid_chunks) < num_questions:
+        selected_chunks = valid_chunks
+    else:
+        selected_chunks = random.sample(valid_chunks, num_questions)
+
+    print(f"[QA Gen] Sinh {num_questions} câu hỏi tự động từ {len(valid_chunks)} đoạn văn bản gốc...")
+    llm = APILLMGenerator()
+    llm.load()
+
+    qa_data = []
+
+    for i, chunk in enumerate(tqdm(selected_chunks, desc="Generating QA")):
+        prompt = f"""You are an expert evaluator. Based on the following text chunk, generate exactly ONE question and ONE detailed reference answer.
+The question must be distinctly answerable ONLY using the information explicitly provided in the text.
+Return ONLY a valid JSON object with the keys "question" and "reference_answer", without any markdown blocks or extra text.
+
+TEXT CHUNK:
+{chunk['text']}"""
+
+        try:
+            if llm.provider == "groq":
+                response = llm.client.chat.completions.create(
+                    model=llm.model_name,
+                    messages=[{"role": "user", "content": prompt}],
+                    max_tokens=600,
+                    temperature=0.3,
+                )
+                raw_ans = response.choices[0].message.content
+            elif llm.provider == "gemini":
+                response = llm.client.generate_content(
+                    prompt,
+                    generation_config={"max_output_tokens": 600, "temperature": 0.3},
+                )
+                raw_ans = response.text
+            else:
+                continue
+
+            # Xử lý dọn dẹp JSON
+            raw_ans = raw_ans.strip()
+            if raw_ans.startswith("```json"):
+                raw_ans = raw_ans[7:]
+            if raw_ans.endswith("```"):
+                raw_ans = raw_ans[:-3]
+            raw_ans = raw_ans.strip()
+
+            qa_dict = json.loads(raw_ans)
+            if "question" in qa_dict and "reference_answer" in qa_dict:
+                qa_data.append({
+                    "id": i + 1,
+                    "question": qa_dict["question"],
+                    "reference_answer": qa_dict["reference_answer"],
+                    "category": chunk.get("title", "auto-generated")
+                })
+        except Exception as e:
+            print(f"\\n[QA Gen] Bỏ qua chunk {i} do lỗi: {e}")
+            time.sleep(1.5)
+        
+        time.sleep(0.5)
+
+    if qa_data:
+        with open(output_file, "w", encoding="utf-8") as f:
+            json.dump(qa_data, f, ensure_ascii=False, indent=2)
+        print(f"\\n[QA Gen] ✅ Hoàn thành. Đã tạo và lưu {len(qa_data)} câu hỏi vào: {output_file}")
+
+    return qa_data
+
+
 # ── Metrics ───────────────────────────────────────────────────────
 def compute_bleu(reference: str, hypothesis: str) -> float:
     """Compute BLEU score (0-100)."""
@@ -249,8 +338,8 @@ def evaluate_pipeline(
     # Load or create QA data
     qa_path = Path(qa_file)
     if not qa_path.exists():
-        print(f"QA file not found. Creating sample dataset...")
-        qa_data = create_sample_qa_dataset(str(qa_path))
+        print(f"QA file not found. Generating automated dataset from corpus...")
+        qa_data = generate_qa_from_corpus(str(qa_path), num_questions=max_questions or 20)
     else:
         with open(qa_path, "r", encoding="utf-8") as f:
             qa_data = json.load(f)
@@ -357,7 +446,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     if args.create_dataset:
-        create_sample_qa_dataset()
+        generate_qa_from_corpus(num_questions=args.max_questions or 20)
     else:
         from rag_pipeline import RAGPipeline
         rag = RAGPipeline(load_llm=not args.no_llm)
