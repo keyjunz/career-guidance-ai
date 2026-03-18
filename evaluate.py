@@ -204,10 +204,11 @@ def generate_qa_from_corpus(output_file: str = None, num_questions: int = 20) ->
     for i, chunk in enumerate(tqdm(selected_chunks, desc="Generating QA")):
         prompt = f"""You are an expert evaluator. Based on the following text chunk, generate exactly ONE question and ONE detailed reference answer.
 The question must be distinctly answerable ONLY using the information explicitly provided in the text.
+The reference_answer MUST be a complete, well-formed sentence (or a few sentences) that thoroughly answers the question, rather than just a single word or short phrase. It must sound like natural conversational text.
 Return ONLY a valid JSON object with the keys "question" and "reference_answer", without any markdown blocks or extra text.
 
 TEXT CHUNK:
-{chunk['text']}"""
+{chunk.get('text', '')}"""
 
         try:
             if llm.provider == "groq":
