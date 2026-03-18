@@ -1,19 +1,10 @@
 # 🤖 RAG Chatbot (Retrieval-Augmented Generation)
 
-Đây là module RAG Pipeline cốt lõi cho dự án AI Chatbot chuyên ngành Computer Science. Hệ thống được thiết kế tối ưu để có thể chạy trên phần cứng cá nhân hạn chế (như GTX 1650 4GB) bằng cách kết hợp sức mạnh tìm kiếm cục bộ và khả năng sinh văn bản (Generation) từ các LLM API miễn phí (Groq/Gemini).
-
-## 🌟 Tính Năng Nổi Bật
-
-- **Hybrid Search (Tìm kiếm Lai):** Kết hợp FAISS (Semantic Search bằng vector) và BM25 (Keyword Search) qua thuật toán Reciprocal Rank Fusion (RRF) để ra kết quả chính xác nhất.
-- **Cross-Encoder Reranking:** Sử dụng `ms-marco-MiniLM` để chấm điểm lại mức độ phù hợp của tài liệu so với câu hỏi (chạy cực nhẹ trên CPU/GPU local).
-- **API LLM Integration:** Hỗ trợ gọi API tới **Groq** (Llama-3-70B) và **Google Gemini** thay vì chạy mô hình nặng trên máy, giảm độ trễ (latency) từ vài chục phút xuống dưới **1 giây**.
-- **Đa Ngôn Ngữ:** Hỗ trợ hỏi đáp bằng cả Tiếng Anh và Tiếng Việt.
+Đây là module RAG Pipeline cốt lõi cho dự án AI Chatbot chuyên ngành Computer Science. Hệ thống được thiết kế tối ưu để có thể chạy trên phần cứng cá nhân hạn chế bằng cách kết hợp sức mạnh tìm kiếm cục bộ và khả năng sinh văn bản (Generation) từ các LLM API miễn phí (Groq/Gemini).
 
 ---
 
-## 🎯 Đánh Giá Mức Độ Hoàn Thành Kế Hoạch (For Leader/Manager)
-
-Dưới đây là phần đối chiếu giữa **Bản Kế Hoạch Yêu Cầu Gốc** và thực tế mã nguồn đã hoàn thiện 100% trong dự án:
+## 🎯 Mức Độ Hoàn Thành Kế Hoạch
 
 | Task Gốc | Hạng Mục | Trạng Thái | Chi Tiết Thành Quả Trong Code |
 |---|---|---|---|
