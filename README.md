@@ -12,7 +12,7 @@
 | **1.4** | **Query (Vector Search)** | ✅ Hoàn Thành | - Phiên dịch câu hỏi (Query) thành dạng số (Embedding vector).<br>- Thực hiện Hybrid Search chạy song song FAISS và BM25 chặn bắt Top 20 tài liệu liên quan nhất. |
 | **1.5** | **Implement Rerank** | ✅ Hoàn Thành | - Dùng Cross-Encoder `ms-marco-MiniLM-L-6-v2`.<br>- Nhận Top 20 từ Search, cho AI đọc và cho điểm lại (Relevance Score), hất văng tài liệu nhiễu và đóng gói đúng Top 5 xịn nhất gửi đi. |
 | **1.6** | **Implement Generation** | ✅ Hoàn Thành | - LLM tích hợp được cả Qwen cục bộ lẫn **API mây siêu tốc (Groq/Gemini)**.<br>- Quản lý cấu trúc Prompt (đã inject context).<br>- Quản lý nghẽn bộ nhớ bằng cách chặt Token cứng (512 token ở Input, `MAX_ANSWER_WORDS` ở Output).<br>- Code thêm tính năng **Tự động thử lại (Retry 3 lần có độ trễ)** khi gọi API tránh lỗi mạng. |
-| **1.7** | **RAG Pipeline** | ✅ Hoàn Thành | - Ghép đủ 6 khối mắt xích thành một file hệ thống `rag_pipeline.py`. Chỉ bằng 1 lệnh gọi là chạy Auto từ A đến Z. |
+| **1.7** | **RAG Pipeline** | ✅ Hoàn Thành | - Ghép đủ 6 khối mắt xích thành một file hệ thống `rag_pipeline.py`. Chỉ bằng 1 lệnh gọi là chạy Auto từ A đến Z.<br>- **Mới:** Tích hợp tự động nhận diện ngôn ngữ (VI/EN) giúp người dùng chat tự nhiên không cần chuyển đổi thủ công. |
 
 ---
 
@@ -57,15 +57,20 @@ python build_vectordb.py --backend faiss
 *(Đầu ra: Thư mục `indexes/` chứa cấu trúc tri thức)*
 
 ### Bước 3: Chạy RAG Chatbot!
-Hỏi một câu đơn lẻ (kết hợp Groq API để siêu nhanh):
+Hệ thống mặc định sử dụng Groq API (Llama 3 70B) để đảm bảo tốc độ và độ chính xác cao nhất.
+
+Hỏi một câu đơn lẻ:
 ```bash
-python rag_pipeline.py --query "question?" --use-api --api-model groq-llama3-70b
+python rag_pipeline.py --query "Mạng nơ-ron nhân tạo là gì?"
 ```
 
-Hoặc bật chế độ Chat tương tác liên tục:
+Hoặc bật chế độ Chat tương tác liên tục (Khuyên dùng):
 ```bash
-python rag_pipeline.py --interactive --use-api --api-model groq-llama3-70b
+python rag_pipeline.py --interactive
 ```
+
+> [!TIP]
+> **Tính năng Auto-Language:** Bạn có thể hỏi bằng cả Tiếng Việt và Tiếng Anh. Hệ thống sẽ tự động nhận diện, dịch câu hỏi (nếu cần) và trả lời đúng ngôn ngữ bạn sử dụng.
 
 ---
 

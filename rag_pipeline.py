@@ -9,6 +9,8 @@ import argparse
 from pathlib import Path
 from typing import Dict, List, Optional
 
+import langdetect
+
 import sys
 sys.path.insert(0, str(Path(__file__).parent))
 from config import (
@@ -87,7 +89,7 @@ class RAGPipeline:
     def query(
         self,
         question: str,
-        language: str = "en",
+        language: str = "auto",
         retrieve_k: int = RETRIEVER_FINAL_K,
         rerank_k: int = RERANKER_TOP_K,
         verbose: bool = True,
@@ -108,7 +110,18 @@ class RAGPipeline:
         pipeline_start = time.perf_counter()
         step_times = {}
 
-        # Step 0: Translate Query (Multi-lingual RAG)
+        # Step 0: Auto-detect language
+        if language == "auto":
+            try:
+                detected_lang = langdetect.detect(question)
+                # Chỉ lọc ra 'vi' hoặc 'en' để tương thích với logic hiện tại
+                language = "vi" if detected_lang == "vi" else "en"
+            except:
+                language = "en"
+            if verbose:
+                print(f"[Language Detect] Auto-detected language: {language.upper()}")
+
+        # Step 1: Translate Query (Multi-lingual RAG)
         search_query = question
         if language == "vi" and self.llm is not None:
             t0 = time.perf_counter()
@@ -224,13 +237,13 @@ class RAGPipeline:
         """Chế độ interactive chat."""
         print("\n" + "=" * 60)
         print("  RAG CHATBOT — Interactive Mode")
-        print("  Type 'quit' to exit, 'vi' to switch to Vietnamese")
+        print("  Type 'quit' to exit")
+        print("  Hệ thống sẽ TỰ ĐỘNG nhận diện ngôn ngữ Tiếng Việt/Tiếng Anh.")
         print("=" * 60)
 
-        language = "en"
         while True:
             try:
-                question = input(f"\n[{language.upper()}] You: ").strip()
+                question = input(f"\nYou: ").strip()
             except (EOFError, KeyboardInterrupt):
                 break
 
@@ -238,16 +251,8 @@ class RAGPipeline:
                 continue
             if question.lower() in ("quit", "exit", "q"):
                 break
-            if question.lower() == "vi":
-                language = "vi"
-                print("Switched to Vietnamese mode.")
-                continue
-            if question.lower() == "en":
-                language = "en"
-                print("Switched to English mode.")
-                continue
 
-            self.query(question, language=language, verbose=True)
+            self.query(question, language="auto", verbose=True)
 
 
 def main():
