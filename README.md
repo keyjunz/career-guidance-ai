@@ -12,7 +12,7 @@
 | **1.4** | **Query (Vector Search)** | ✅ Hoàn Thành | - Phiên dịch câu hỏi (Query) thành dạng số (Embedding vector).<br>- Thực hiện Hybrid Search chạy song song FAISS và BM25 chặn bắt Top 20 tài liệu liên quan nhất. |
 | **1.5** | **Implement Rerank** | ✅ Hoàn Thành | - Dùng Cross-Encoder `ms-marco-MiniLM-L-6-v2`.<br>- Nhận Top 20 từ Search, cho AI đọc và cho điểm lại (Relevance Score), hất văng tài liệu nhiễu và đóng gói đúng Top 5 xịn nhất gửi đi. |
 | **1.6** | **Implement Generation** | ✅ Hoàn Thành | - LLM tích hợp được cả Qwen cục bộ lẫn **API mây siêu tốc (Groq/Gemini)**.<br>- Quản lý cấu trúc Prompt (đã inject context).<br>- Quản lý nghẽn bộ nhớ bằng cách chặt Token cứng (512 token ở Input, `MAX_ANSWER_WORDS` ở Output).<br>- Code thêm tính năng **Tự động thử lại (Retry 3 lần có độ trễ)** khi gọi API tránh lỗi mạng. |
-| **1.7** | **RAG Pipeline** | ✅ Hoàn Thành | - Ghép đủ 6 khối mắt xích thành một file hệ thống `rag_pipeline.py`. Chỉ bằng 1 lệnh gọi là chạy Auto từ A đến Z.<br>- **Mới:** Tích hợp tự động nhận diện ngôn ngữ (VI/EN) giúp người dùng chat tự nhiên không cần chuyển đổi thủ công. |
+| **1.7** | **RAG Pipeline** | ✅ Hoàn Thành | - Ghép đủ 6 khối mắt xích thành một file hệ thống `rag_pipeline.py`. Chỉ bằng 1 lệnh gọi là chạy Auto.<br>- **Mới:** Tích hợp tự động nhận diện ngôn ngữ (VI/EN) giúp người dùng chat tự nhiên không cần chuyển đổi thủ công. |
 
 ---
 
