@@ -1,15 +1,15 @@
 """Handler exports."""
 
 from .base_handler import DomainError, RequestContext
-from .chat_handler import StubChatbot, handle_chat, handle_chat_stream
-from .sync_doc_handler import StubSyncDocumentModule, handle_sync_documents
+from .chat_handler import AgentChatbot, handle_chat, handle_chat_stream
+from .sync_doc_handler import SyncDataHandler, SyncDocumentModuleRuntime
 
 __all__ = [
     "DomainError",
     "RequestContext",
-    "StubChatbot",
+    "AgentChatbot",
     "handle_chat",
     "handle_chat_stream",
-    "StubSyncDocumentModule",
-    "handle_sync_documents",
+    "SyncDataHandler",
+    "SyncDocumentModuleRuntime",
 ]

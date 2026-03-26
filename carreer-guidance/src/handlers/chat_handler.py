@@ -2,12 +2,17 @@
 
 from __future__ import annotations
 
+import inspect
 from collections.abc import AsyncIterator
 from typing import Protocol
-from uuid import uuid4
 
-from src.handlers.base_handler import RequestContext, map_exception_to_domain_error
-from src.request_body.chat import ChatRequest, ChatResponse, ContentItem
+from src.agent import main as agent_main
+from src.handlers.base_handler import (
+    DomainError,
+    RequestContext,
+    map_exception_to_domain_error,
+)
+from src.request_body.chat import ChatRequest, ChatResponse
 
 
 class ChatbotProtocol(Protocol):
@@ -22,26 +27,48 @@ class ChatbotProtocol(Protocol):
     ) -> AsyncIterator[str]: ...
 
 
-class StubChatbot:
-    """Fallback chatbot implementation to keep local server runnable."""
+class AgentChatbot:
+    """Runtime chatbot adapter backed by agent layer."""
 
     async def invoke(
         self, request: ChatRequest, context: RequestContext
     ) -> ChatResponse:
-        conversation_id = request.conversation_id or uuid4()
-        text = (request.message or "").strip() or "Da nhan hinh anh tu nguoi dung."
-        return ChatResponse(
-            type="text",
-            content=[ContentItem(type="text", text=f"[stub] {text}")],
-            conversation_id=conversation_id,
-            trace_id=context.trace_id,
+        invoke_fn = getattr(agent_main, "invoke", None)
+        if invoke_fn is None:
+            raise DomainError(
+                code="NOT_IMPLEMENTED",
+                message="Chat agent is not configured.",
+            )
+
+        result = invoke_fn(request=request, context=context)
+        if inspect.isawaitable(result):
+            result = await result
+
+        if isinstance(result, ChatResponse):
+            return result
+        if isinstance(result, dict):
+            return ChatResponse.model_validate(result)
+
+        raise DomainError(
+            code="INTERNAL_ERROR",
+            message="Invalid response from chat agent.",
         )
 
     async def invoke_stream(
         self, request: ChatRequest, context: RequestContext
     ) -> AsyncIterator[str]:
-        content = (request.message or "").strip() or "Da nhan request stream"
-        for token in ["[stub] ", content]:
+        invoke_stream_fn = getattr(agent_main, "invoke_stream", None)
+        if invoke_stream_fn is None:
+            raise DomainError(
+                code="NOT_IMPLEMENTED",
+                message="Chat stream agent is not configured.",
+            )
+
+        stream = invoke_stream_fn(request=request, context=context)
+        if inspect.isawaitable(stream):
+            stream = await stream
+
+        async for token in stream:
             yield token
 
 
