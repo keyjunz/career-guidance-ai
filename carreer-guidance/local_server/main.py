@@ -11,7 +11,6 @@ from fastapi.responses import JSONResponse
 
 from local_server.routes.chat.router import router as chat_router
 from local_server.routes.sync_doc.router import router as sync_doc_router
-from src.handlers.base_handler import DomainError
 from src.request_body.common import ErrorResponse
 
 APP_NAME = "career-guidance-ai"
@@ -55,18 +54,6 @@ def create_app() -> FastAPI:
             trace_id=getattr(request.state, "trace_id", None),
         )
         return JSONResponse(status_code=422, content=payload.model_dump())
-
-    @app.exception_handler(DomainError)
-    async def domain_exception_handler(
-        request: Request, exc: DomainError
-    ) -> JSONResponse:
-        payload = ErrorResponse(
-            code=exc.code,
-            message=exc.message,
-            details=exc.details,
-            trace_id=getattr(request.state, "trace_id", None),
-        )
-        return JSONResponse(status_code=400, content=payload.model_dump())
 
     @app.exception_handler(Exception)
     async def unhandled_exception_handler(

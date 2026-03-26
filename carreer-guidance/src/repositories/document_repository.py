@@ -50,6 +50,14 @@ class DocumentRepository(RepositoryFactory[Document, dict, dict]):
         )
         return list(self.session.scalars(stmt).all())
 
+    def get_by_ingestion_job_id(self, ingestion_job_id: str) -> list[Document]:
+        stmt = (
+            select(Document)
+            .where(Document.ingestion_job_id == ingestion_job_id)
+            .order_by(Document.updated_at.desc())
+        )
+        return list(self.session.scalars(stmt).all())
+
     def bulk_upsert_metadata(self, rows: Sequence[dict]) -> list[Document]:
         """Upsert document metadata rows based on id or deterministic fallback keys."""
 

@@ -3,4 +3,5 @@ __pycache__/
 .venv/
 .env
 *.png
-*.md
+.idea/
+ai_doc.md
