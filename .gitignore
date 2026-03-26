@@ -29,3 +29,6 @@ Thumbs.db
 
 # Agent
 .agent/
+
+# Idea
+.idea/
