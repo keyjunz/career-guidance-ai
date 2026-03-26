@@ -13,7 +13,7 @@ cd carreer-guidance
 ### 2. Tao va kich hoat moi truong ao
 ```powershell
 py -3 -m venv .venv
-.\.venv\Scripts\Activate.ps1
+.\.venv\Scripts\activate
 ```
 
 ### 3. Cai dat thu vien can thiet

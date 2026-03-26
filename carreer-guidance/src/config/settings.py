@@ -56,8 +56,12 @@ class DatabaseSettings(BaseSettings):
     @classmethod
     def validate_database_url(cls, value: str) -> str:
         parsed = urlparse(value)
-        if parsed.scheme != "postgresql+asyncpg":
-            raise ValueError("DATABASE_URL must use postgresql+asyncpg scheme")
+        allowed_schemes = {"postgresql", "postgresql+psycopg2", "postgresql+psycopg"}
+        if parsed.scheme not in allowed_schemes:
+            raise ValueError(
+                "DATABASE_URL must use one of schemes: "
+                "postgresql, postgresql+psycopg2, postgresql+psycopg"
+            )
         if not parsed.hostname:
             raise ValueError("DATABASE_URL must include a host")
         return value

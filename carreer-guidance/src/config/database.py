@@ -1,26 +1,22 @@
-"""SQLAlchemy async engine and session factory helpers."""
+"""SQLAlchemy sync engine and session factory helpers."""
 
 from __future__ import annotations
 
-from contextlib import asynccontextmanager
-from collections.abc import AsyncIterator
+from contextlib import contextmanager
+from collections.abc import Iterator
 from functools import lru_cache
 
-from sqlalchemy.ext.asyncio import (
-    AsyncEngine,
-    AsyncSession,
-    async_sessionmaker,
-    create_async_engine,
-)
+from sqlalchemy import Engine, create_engine
+from sqlalchemy.orm import Session, sessionmaker
 
 from .settings import Settings, get_settings
 
 
-def create_async_engine_from_settings(settings: Settings | None = None) -> AsyncEngine:
-    """Create SQLAlchemy async engine from application settings."""
+def create_engine_from_settings(settings: Settings | None = None) -> Engine:
+    """Create SQLAlchemy sync engine from application settings."""
 
     cfg = settings or get_settings()
-    return create_async_engine(
+    return create_engine(
         cfg.db.url,
         pool_pre_ping=True,
         pool_size=5,
@@ -29,14 +25,14 @@ def create_async_engine_from_settings(settings: Settings | None = None) -> Async
     )
 
 
-def create_async_session_factory(
-    engine: AsyncEngine,
-) -> async_sessionmaker[AsyncSession]:
-    """Create a configured async session maker."""
+def create_session_factory(
+    engine: Engine,
+) -> sessionmaker[Session]:
+    """Create a configured sync session maker."""
 
-    return async_sessionmaker(
+    return sessionmaker(
         bind=engine,
-        class_=AsyncSession,
+        class_=Session,
         expire_on_commit=False,
         autoflush=False,
         autocommit=False,
@@ -44,40 +40,45 @@ def create_async_session_factory(
 
 
 @lru_cache(maxsize=1)
-def get_engine() -> AsyncEngine:
-    """Return cached async engine based on current settings."""
+def get_engine() -> Engine:
+    """Return cached sync engine based on current settings."""
 
-    return create_async_engine_from_settings()
+    return create_engine_from_settings()
 
 
 @lru_cache(maxsize=1)
-def get_session_factory() -> async_sessionmaker[AsyncSession]:
-    """Return cached async session factory."""
+def get_session_factory() -> sessionmaker[Session]:
+    """Return cached sync session factory."""
 
-    return create_async_session_factory(get_engine())
+    return create_session_factory(get_engine())
 
 
-async def get_session(
-    session_factory: async_sessionmaker[AsyncSession] | None = None,
-) -> AsyncIterator[AsyncSession]:
-    """FastAPI-compatible async session dependency with proper cleanup."""
+def get_session(
+    session_factory: sessionmaker[Session] | None = None,
+) -> Iterator[Session]:
+    """FastAPI-compatible sync session dependency with proper cleanup."""
 
     factory = session_factory or get_session_factory()
-    async with factory() as session:
+    with factory() as session:
         yield session
 
 
-@asynccontextmanager
-async def session_scope(
-    session_factory: async_sessionmaker[AsyncSession] | None = None,
-) -> AsyncIterator[AsyncSession]:
-    """Provide a transactional async session scope with commit and rollback."""
+@contextmanager
+def session_scope(
+    session_factory: sessionmaker[Session] | None = None,
+) -> Iterator[Session]:
+    """Provide a transactional sync session scope with commit and rollback."""
 
     factory = session_factory or get_session_factory()
-    async with factory() as session:
+    with factory() as session:
         try:
             yield session
-            await session.commit()
+            session.commit()
         except Exception:
-            await session.rollback()
+            session.rollback()
             raise
+
+
+# Backward-compatible aliases for older imports.
+create_async_engine_from_settings = create_engine_from_settings
+create_async_session_factory = create_session_factory

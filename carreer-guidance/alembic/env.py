@@ -1,9 +1,10 @@
 from logging.config import fileConfig
+import os
+from pathlib import Path
 
 from alembic import context
-from sqlalchemy import pool
+from sqlalchemy import engine_from_config, pool
 from sqlalchemy.engine import Connection
-from sqlalchemy.ext.asyncio import async_engine_from_config
 
 from src.database import Base
 
@@ -14,20 +15,55 @@ from src.database.models import (
     RequestCostLog,
     Role,
     User,
-)  
+)
 
 config = context.config
 
 if config.config_file_name is not None:
     fileConfig(config.config_file_name)
 
-try:
-    from src.config import get_settings
 
-    settings = get_settings()
-    config.set_main_option("sqlalchemy.url", settings.db.url)
-except Exception:
-    pass
+def _read_database_url_from_env_file() -> str | None:
+    root_dir = Path(__file__).resolve().parents[1]
+    env_path = root_dir / ".env"
+    if not env_path.exists():
+        return None
+
+    for line in env_path.read_text(encoding="utf-8").splitlines():
+        stripped = line.strip()
+        if not stripped or stripped.startswith("#") or "=" not in stripped:
+            continue
+        key, value = stripped.split("=", 1)
+        if key.strip() == "DATABASE_URL":
+            return value.strip().strip('"').strip("'")
+    return None
+
+
+def _resolve_database_url() -> str:
+    try:
+        from src.config import get_settings
+
+        settings = get_settings()
+        if settings.db.url:
+            return settings.db.url
+    except Exception:
+        # Fallback to environment and .env file in migration contexts.
+        pass
+
+    env_file_url = _read_database_url_from_env_file()
+    if env_file_url:
+        return env_file_url
+
+    env_url = os.getenv("DATABASE_URL", "").strip()
+    if env_url:
+        return env_url
+
+    raise RuntimeError(
+        "DATABASE_URL is missing. Set DATABASE_URL in environment or .env file."
+    )
+
+
+config.set_main_option("sqlalchemy.url", _resolve_database_url())
 
 target_metadata = Base.metadata
 
@@ -57,24 +93,20 @@ def do_run_migrations(connection: Connection) -> None:
         context.run_migrations()
 
 
-async def run_migrations_online() -> None:
-    """Run migrations in online mode using async SQLAlchemy engine."""
+def run_migrations_online() -> None:
+    """Run migrations in online mode using sync SQLAlchemy engine."""
 
-    connectable = async_engine_from_config(
+    connectable = engine_from_config(
         config.get_section(config.config_ini_section, {}),
         prefix="sqlalchemy.",
         poolclass=pool.NullPool,
     )
 
-    async with connectable.connect() as connection:
-        await connection.run_sync(do_run_migrations)
-
-    await connectable.dispose()
+    with connectable.connect() as connection:
+        do_run_migrations(connection)
 
 
 if context.is_offline_mode():
     run_migrations_offline()
 else:
-    import asyncio
-
-    asyncio.run(run_migrations_online())
+    run_migrations_online()
