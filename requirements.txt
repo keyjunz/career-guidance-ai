@@ -1,39 +1,40 @@
 # RAG Chatbot - Dependencies
-# Môi trường: Python 3.10, conda env: rag310
+# Target environment: Python 3.10
 
-# ─── Core ────────────────────────────────────────────────────
+# Core
 torch>=2.2.0
 transformers>=4.40.0
 sentence-transformers>=2.7.0
 
-# ─── Quantization ────────────────────────────────────────────
+# Quantization
 bitsandbytes>=0.43.0
 accelerate>=0.30.0
 
-# ─── Vector Database ─────────────────────────────────────────
+# Vector database
 faiss-cpu>=1.8.0
 chromadb>=0.5.0
 
-# ─── Retrieval ───────────────────────────────────────────────
+# Retrieval
 rank-bm25>=0.2.2
 
-# ─── Evaluation ──────────────────────────────────────────────
+# Evaluation
 rouge-score>=0.1.2
 nltk>=3.8.0
 
-# ─── Data Crawling ───────────────────────────────────────────
+# Data crawling
 wikipedia-api>=0.6.0
 arxiv>=2.1.0
 datasets>=2.19.0
 
-# ─── Utilities ───────────────────────────────────────────────
+# Utilities
 numpy>=1.26.0
 scipy>=1.12.0
 tqdm>=4.66.0
 psutil>=5.9.0
 huggingface-hub>=0.22.0
 python-dotenv>=1.0.0
+langdetect>=1.0.9
 
-# ─── API LLM ─────────────────────────────────────────────────
+# API LLM
 groq>=0.5.0
 google-generativeai>=0.5.0

@@ -1,116 +1,195 @@
-# 🤖 RAG Chatbot (Retrieval-Augmented Generation)
+# RAG Chatbot
 
-Đây là module RAG Pipeline cốt lõi cho dự án AI Chatbot chuyên ngành Computer Science. Hệ thống được thiết kế tối ưu để có thể chạy trên phần cứng cá nhân hạn chế bằng cách kết hợp sức mạnh tìm kiếm cục bộ và khả năng sinh văn bản (Generation) từ các LLM API miễn phí (Groq/Gemini).
+Module RAG core cho he thong chatbot hoi dap chuyen nganh Computer Science.
 
----
+Trang thai hien tai cua codebase:
 
-## 🎯 Mức Độ Hoàn Thành Kế Hoạch
+- Runtime query hien tai dung hybrid retriever `FAISS + BM25`.
+- Co ho tro build Chroma DB, nhung `rag_pipeline.py` chua dung Chroma lam backend truy van runtime.
+- Mac dinh dung API LLM, khong phai local LLM.
+- Co ho tro auto-detect ngon ngu VI/EN va dich query tieng Viet sang tieng Anh truoc khi retrieval.
 
-| Task Gốc | Hạng Mục | Trạng Thái | Chi Tiết Thành Quả Trong Code |
-|---|---|---|---|
-| **1.3** | **Implement Embedding** | ✅ Hoàn Thành | - Dùng model `multilingual-e5-small`.<br>- Có hàm `encode_query` & `encode_passages` (chạy batch).<br>- Tích hợp bộ đệm lưu Cache (MD5 hashing) ngay trên ổ cứng giúp siêu tiết kiệm sức mạnh tính toán. |
-| **1.4** | **Query (Vector Search)** | ✅ Hoàn Thành | - Phiên dịch câu hỏi (Query) thành dạng số (Embedding vector).<br>- Thực hiện Hybrid Search chạy song song FAISS và BM25 chặn bắt Top 20 tài liệu liên quan nhất. |
-| **1.5** | **Implement Rerank** | ✅ Hoàn Thành | - Dùng Cross-Encoder `ms-marco-MiniLM-L-6-v2`.<br>- Nhận Top 20 từ Search, cho AI đọc và cho điểm lại (Relevance Score), hất văng tài liệu nhiễu và đóng gói đúng Top 5 xịn nhất gửi đi. |
-| **1.6** | **Implement Generation** | ✅ Hoàn Thành | - LLM tích hợp được cả Qwen cục bộ lẫn **API mây siêu tốc (Groq/Gemini)**.<br>- Quản lý cấu trúc Prompt (đã inject context).<br>- Quản lý nghẽn bộ nhớ bằng cách chặt Token cứng (512 token ở Input, `MAX_ANSWER_WORDS` ở Output).<br>- Code thêm tính năng **Tự động thử lại (Retry 3 lần có độ trễ)** khi gọi API tránh lỗi mạng. |
-| **1.7** | **RAG Pipeline** | ✅ Hoàn Thành | - Ghép đủ 6 khối mắt xích thành một file hệ thống `rag_pipeline.py`. Chỉ bằng 1 lệnh gọi là chạy Auto.<br>- **Mới:** Tích hợp tự động nhận diện ngôn ngữ (VI/EN) giúp người dùng chat tự nhiên không cần chuyển đổi thủ công. |
+## Kien truc hien tai
 
----
+Pipeline end-to-end:
 
-## 🛠 Cài Đặt Ban Đầu
+1. `data_crawler.py`
+   Crawl du lieu tu Wikipedia, arXiv va synthetic QA, sau do chunk thanh `data/chunks.json`.
+2. `build_vectordb.py`
+   Sinh embeddings, cache embeddings, build va save retriever index.
+3. `rag_pipeline.py`
+   Load embedding model, retriever, reranker, LLM, sau do tra loi cau hoi.
+4. `evaluate.py`
+   Chay evaluation voi BLEU, ROUGE-L, F1, latency va heuristic hallucination rate.
+5. `benchmark.py`
+   Do latency va memory cho tung component.
 
-**1. Tạo môi trường Conda**
+## Entry Points
+
+- `config.py`: cau hinh tap trung cho models, thresholds, prompts, paths, API keys.
+- `data_crawler.py`: crawl va chunk corpus.
+- `build_vectordb.py`: build FAISS/BM25, tuy chon build them Chroma.
+- `rag_pipeline.py`: CLI query va interactive chat.
+- `evaluate.py`: tao QA dataset va cham diem pipeline.
+- `benchmark.py`: benchmark embedding, retriever, reranker, LLM.
+
+## Yeu cau moi truong
+
+- Python `3.10`
+- Khuyen nghi dung conda env rieng:
+
 ```bash
 conda create -n rag310 python=3.10
 conda activate rag310
-```
-
-**2. Cài đặt Python packages**
-```bash
 pip install -r requirements.txt
 ```
 
-**3. Cấu hình API Key**
-Copy file `.env.example` thành file `.env` và điền khóa API của bạn vào:
+Neu ban dang dung Python 3.7 hoac 3.8, nhieu dependency se khong cai hoac chay on dinh.
+
+## Dependencies chinh
+
+File [requirements.txt](/D:/Documents/RAG_chatbot/requirements.txt) da duoc dong bo voi code hien tai, bao gom:
+
+- Core ML: `torch`, `transformers`, `sentence-transformers`
+- Retrieval: `faiss-cpu`, `chromadb`, `rank-bm25`
+- Evaluation: `rouge-score`, `nltk`
+- Crawling: `wikipedia-api`, `arxiv`, `datasets`
+- Utilities: `python-dotenv`, `psutil`, `tqdm`, `langdetect`
+- API LLM: `groq`, `google-generativeai`
+
+## Cau hinh API
+
+Copy `.env.example` thanh `.env` va dien API key:
+
 ```env
 GROQ_API_KEY=gsk_your_key_here
 GEMINI_API_KEY=AIzaSy_your_key_here
 ```
 
----
+Code hien tai mac dinh:
 
-## 🚀 Hướng Dẫn Sử Dụng
+- `USE_API_LLM = True`
+- `DEFAULT_API_LLM = "groq-llama3-70b"`
+- `DEFAULT_LLM = "qwen2.5-1.5b"` chi duoc dung khi bat local mode
 
-Quy trình chuẩn bị dữ liệu và chạy Bot bao gồm 3 bước:
+Xem chi tiet tai [config.py](/D:/Documents/RAG_chatbot/config.py).
 
-### Bước 1: Thu thập & Chia nhỏ Dữ Liệu (Data Crawling)
-Lấy dữ liệu từ Wikipedia và arXiv, sau đó cắt nhỏ (chunking) thành tài liệu 512 tokens:
+## Cach chay
+
+### 1. Crawl va chunk du lieu
+
 ```bash
 python data_crawler.py
 ```
-*(Đầu ra: `data/chunks.json`)*
 
-### Bước 2: Xây Dựng Vector DB (Indexing)
-Tính toán Vector Embedding cho tất cả các tài liệu và lưu thành Database:
+Output:
+
+- `data/chunks.json`
+
+### 2. Build retriever index
+
+Build backend runtime hien tai:
+
 ```bash
 python build_vectordb.py --backend faiss
 ```
-*(Đầu ra: Thư mục `indexes/` chứa cấu trúc tri thức)*
 
-### Bước 3: Chạy RAG Chatbot!
-Hệ thống mặc định sử dụng Groq API (Llama 3 70B) để đảm bảo tốc độ và độ chính xác cao nhất.
+Build Chroma de test hoac chuan bi cho integration:
 
-Hỏi một câu đơn lẻ:
 ```bash
-python rag_pipeline.py --query "Mạng nơ-ron nhân tạo là gì?"
+python build_vectordb.py --backend chroma
 ```
 
-Hoặc bật chế độ Chat tương tác liên tục (Khuyên dùng):
+Build ca hai:
+
+```bash
+python build_vectordb.py --backend both
+```
+
+Output chinh cho runtime hien tai:
+
+- `indexes/retriever_faiss.index`
+- `indexes/retriever_bm25.pkl`
+- `indexes/retriever_docs.json`
+
+### 3. Chay RAG pipeline
+
+Query don:
+
+```bash
+python rag_pipeline.py --query "What is the transformer architecture?"
+```
+
+Interactive mode:
+
 ```bash
 python rag_pipeline.py --interactive
 ```
 
-> [!TIP]
-> **Tính năng Auto-Language:** Bạn có thể hỏi bằng cả Tiếng Việt và Tiếng Anh. Hệ thống sẽ tự động nhận diện, dịch câu hỏi (nếu cần) và trả lời đúng ngôn ngữ bạn sử dụng.
+Ep local LLM:
 
----
-
-## 📊 Đánh Giá Đóng Gói (Benchmarking & Evaluation)
-
-### 1. Benchmark (Đo Hiệu Năng Tốc Độ / Bộ Nhớ)
-Đo xem mỗi cục xử lý (Embedding, Retriever, Reranker, LLM) tốn bao nhiêu mili-giây và bao nhiêu RAM:
 ```bash
-# Đo Embedding
-python benchmark.py --component embedding
-
-# Đo Retriever (FAISS + BM25)
-python benchmark.py --component retriever
-
-# Đo tốc độ chấm điểm lõi
-python benchmark.py --component reranker
-
-# Đo tốc độ của LLM local
-python benchmark.py --component llm
-
-# Đo toàn bộ pipeline (Full)
-python benchmark.py --component full
+python rag_pipeline.py --query "Explain backpropagation" --use-local
 ```
 
-### 2. Evaluation (Đo Chất Lượng Trả Lời)
-Hệ thống có một tập câu hỏi test (Tự sinh hoặc tự soạn). Script này đo điểm số BLEU, ROUGE-L (độ khớp với đáp án mẫu) và **Tỉ lệ Ảo giác (Hallucination Rate)** (xem AI có bịa thông tin lố so với tài liệu gốc không).
+Chon API model:
 
 ```bash
-# Tạo bộ test data (tự động 12 câu) từ dữ liệu bot
-python evaluate.py --create-dataset --max-questions 12
+python rag_pipeline.py --query "What is RAG?" --use-api --api-model groq-llama3-8b
+```
 
-# Chạy chấm điểm
+Luu y:
+
+- Neu khong co index da build truoc, pipeline se canh bao va retrieval se khong dung duoc.
+- `--language` hien tai chi nhan `en` hoac `vi`. Interactive mode tu auto-detect ngon ngu.
+
+## Evaluation
+
+Tao QA dataset tu corpus bang API LLM:
+
+```bash
+python evaluate.py --create-dataset --max-questions 12
+```
+
+Chay evaluation:
+
+```bash
 python evaluate.py --max-questions 12
 ```
 
-**Kết quả đánh giá thực tế của hệ thống(Bộ câu hỏi test được tạo từ corpus gốc bởi LLM do Groq cung cấp giống với LLM dùng để trả lời):**
-- **Avg BLEU:** 27.19 ✅ (Vượt ngưỡng 25. Trả lời khá chuẩn xác so với đáp án gốc)
-- **Avg ROUGE-L:** 54.16 ✅ (Vượt ngưỡng 40. Bám sát ý chính, diễn đạt tốt)
-- **Hallucination Rate:** 0.0% ✅ (Mức ảo giác bằng 0. Hoàn toàn phụ thuộc vào ngữ cảnh được cung cấp, không bịa đặt)
-- **Avg Latency:** 6383ms (Đã bao gồm: 50% thời gian Embedding/Retrieval và 50% thời gian gọi Groq API sinh câu trả lời)
+Output:
 
----
-*Thuộc dự án RAG Core System - AI Agent.*
+- `results/evaluation_results.json`
+
+## Benchmark
+
+```bash
+python benchmark.py --component embedding
+python benchmark.py --component retriever
+python benchmark.py --component reranker
+python benchmark.py --component llm
+python benchmark.py --component all
+```
+
+Luu y: `benchmark.py` ho tro `all`, khong phai `full`.
+
+## Ghi chu ky thuat
+
+- Chunking dung tokenizer `bert-base-uncased`, nen token count la xap xi voi generator/embedding model.
+- Heuristic hallucination trong `evaluate.py` rat don gian, khong nen xem la metric chat luong cuoi cung.
+- Chroma da co trong module indexing, nhung runtime query van dang load retriever FAISS/BM25.
+
+## Quy trinh xac nhan clean start duoc khuyen nghi
+
+1. Tao moi truong Python 3.10 moi.
+2. `pip install -r requirements.txt`
+3. `python data_crawler.py`
+4. `python build_vectordb.py --backend faiss`
+5. `python rag_pipeline.py --query "What is RAG?"`
+6. `python evaluate.py --max-questions 3`
+
+Neu muon xac nhan local LLM, chay them:
+
+```bash
+python rag_pipeline.py --query "What is attention?" --use-local
+```
