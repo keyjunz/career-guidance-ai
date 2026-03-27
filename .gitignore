@@ -4,4 +4,4 @@ __pycache__/
 .env
 *.png
 *.md
-!README.md
+.idea/
