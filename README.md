@@ -1,6 +1,13 @@
 # Career Guidance AI
 
-Career Guidance AI la du an tro ly huong nghiep su dung AI, ho tro hoi dap theo boi canh nguoi dung va mo rong duoc voi cac module nhu RAG, web search, sinh anh va dong bo tai lieu.
+Career Guidance AI la du an tro ly huong nghiep su dung AI, ho tro chat theo boi canh nguoi dung va luong dong bo tai lieu OCR.
+
+## Kien truc runtime hien tai
+- Chat sync: API -> ChatHandler -> agent invoke.
+- Chat async: API -> ChatHandler -> DispatcherService -> Redis queue.
+- Chat worker: ChatWorkerService dequeue va process sync tung message.
+- Sync doc: API -> SyncDataHandler -> SyncDocumentModuleImpl -> services.
+- execution_id su dung tu trace_id middleware va di xuyen suot flow.
 
 ## Setup va chay du an
 ### Create .env:
