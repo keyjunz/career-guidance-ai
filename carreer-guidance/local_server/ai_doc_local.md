@@ -2,35 +2,31 @@
 
 ## 1. Scope
 Folder: local_server/
-Layer nay chi la HTTP boundary. Khong chua business logic.
+Layer nay chi la HTTP boundary cua FastAPI.
 
 ## 2. Files chinh
-- local_server/main.py: tao app, middleware, exception mapping, include routers.
-- local_server/routes/chat/router.py: endpoint chat.
-- local_server/routes/sync_doc/router.py: endpoint sync-doc submit + poll status.
+- local_server/main.py: create app, middleware trace_id, global exception handler.
+- local_server/routes/chat/router.py: chat sync, chat async enqueue, stream SSE.
+- local_server/routes/sync_doc/router.py: submit sync-doc job va poll status.
 
-## 3. Rules
-- Route duoc async de phu hop FastAPI.
-- Route chi lam 4 viec: nhan request, tao RequestContext, goi handler, map response util.
-- Dung src/utils/api_response cho tat ca response.
-- Khong de queue/in-memory status cho sync flow neu da co DB status.
+## 3. Rule chung
+- Route phai async (phu hop FastAPI).
+- Route chi parse request, tao context, goi handler, map response util.
+- Dung src/utils/api_response cho output payload.
+- Khong dat business logic OCR/chunking/DB update trong route.
 
-## 4. Sync endpoints contract
-- POST /api/sync-documents:
-  - Nhap SyncDocumentsRequest.
-  - Tao context chua trace_id (execution_id).
-  - Goi SyncDataHandler.handle_sync_data(...).
-  - Tra ve SyncDocumentsResponse theo response util.
-- GET /api/sync-documents/{job_id}:
-  - Goi SyncDataHandler.handle_get_sync_data_status(...).
-  - Tra ve status tu module/service DB, khong doc local dict.
+## 4. Chat endpoint contract
+- POST /api/chat?invocation_type=sync|async
+- sync: goi ChatHandler.execute(..., "sync") de process ngay.
+- async: goi ChatHandler.execute(..., "async") de enqueue vao Redis qua DispatcherService.
+- POST /api/chat/stream: stream token SSE tu ChatHandler.stream_tokens.
 
-## 5. Error mapping
-- DomainError BAD_REQUEST -> 400.
-- DomainError NOT_FOUND -> 404.
-- DomainError khac -> 500.
-- Unknown error -> InternalServerError.
+## 5. Sync endpoint contract
+- POST /api/sync-documents: goi SyncDataHandler.handle_sync_data.
+- GET /api/sync-documents/{job_id}: goi SyncDataHandler.handle_get_sync_data_status.
+- status chi doc tu DB, khong dung in-memory fallback.
 
-## 6. Logging
-- Log theo trace_id tu middleware.
-- Khong setup logger config trong route file.
+## 6. Tracing va error
+- x-trace-id middleware duoc set trong request.state.trace_id.
+- trace_id duoc propagate thanh execution_id.
+- ValueError map ve bad request, cac loi con lai map internal server error.

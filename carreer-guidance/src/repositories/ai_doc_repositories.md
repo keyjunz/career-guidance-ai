@@ -2,18 +2,17 @@
 
 ## 1. Scope
 Folder: src/repositories/
-Repository cach ly SQL/query khoi business logic.
+Repository gom query/persistence methods, khong chua business orchestration.
 
-## 2. Rules
-- Tat ca repository methods la sync.
-- Nhan Session da duoc quan ly boi service/context manager.
-- Khong commit/rollback tung method nho tru khi co ly do dac biet.
+## 2. Rule chung
+- Tat ca method la sync.
+- Session duoc truyen vao tu service layer.
+- Commit/rollback quan ly o session_scope, khong commit roi rac trong tung method.
 
-## 3. Required capabilities
-- Generic CRUD base.
-- DocumentRepository co get_by_ingestion_job_id cho sync-doc polling.
-- Methods list co pagination cho tap du lieu lon.
+## 3. DocumentRepository
+- Bulk upsert metadata cho sync-doc.
+- Query theo ingestion_job_id de phuc vu polling status.
 
-## 4. Boundaries
-- Khong map HTTP error o repository.
-- Khong chua orchestration flow.
+## 4. Boundary
+- Khong map HTTP response o repository.
+- Khong call external API o repository.

@@ -2,36 +2,32 @@
 
 ## 1. Scope
 Folder: src/modules/
-Module la orchestration layer cho business flow. Khong chua implementation chi tiet.
+Module la orchestration business flow, khong chua implementation external I/O.
 
-## 2. Sync document module bat buoc
+## 2. Sync document module
 Folder: src/modules/sync_doc_module/
-Trong class SyncDocumentModuleImpl chi duoc ton tai dung 3 methods:
-- __init__
-- sync_documents
-- get_status_sync_doc
+Class: SyncDocumentModuleImpl
 
-## 3. Service delegation rules
-- OCR phai goi src/services/gemini/ocr_service.py
-- Document prepare/chunk phai goi src/services/document_service.py
-- DB status/job phai goi src/services/database_service.py
-- Vector DB phai goi src/services/vector_db_services.py
-- Khong define service class moi trong module.
+Method:
+- __init__(execution_id, ...service overrides)
+- sync_documents(request, context)
+- get_status_sync_doc(ingestion_job_id, context)
 
-## 4. Sync workflow contract
-- sync_documents(request, context):
-  - tao job status start
-  - update processing
-  - run prepare -> ocr -> chunk -> upsert
-  - ket thuc completed hoac failed
-- get_status_sync_doc(job_id, context):
-  - tra SyncDocumentsResponse theo DB status
+## 3. Delegation bat buoc
+- Download + chunk: DocumentService.
+- OCR: GeminiOCRService.
+- Status job DB: DatabaseSyncService.
+- Chunk archive/upsert: VectorDBService.
 
-## 5. Status va tracing
-- Chi dung: start | processing | failed | completed.
-- execution_id = context.trace_id, truyen xuong service.
-- Khong su dung business session_id trong sync summary.
+## 4. Luong sync_documents
+1. Validate context.trace_id khop execution_id.
+2. Create sync job (status start).
+3. Update processing.
+4. prepare_documents -> extract_text_batch -> apply_ocr_results -> chunk_documents -> upsert_chunks.
+5. Mark completed hoac failed.
+6. Tra SyncDocumentsResponse.
 
-## 6. Error rules
-- Module catch exception de cap nhat failed neu can.
-- Raise DomainError da map hoac map tai boundary phu hop.
+## 5. Rule chung module
+- Module duoc phep orchestration theo thu tu, nhung khong goi truc tiep DB session hoac HTTP client.
+- execution_id phai di xuyen suot.
+- Neu exception xay ra sau khi tao job thi phai mark_failed.

@@ -2,17 +2,21 @@
 
 ## 1. Scope
 Folder: src/database/
-Dinh nghia models, metadata, migrations.
+Chua SQLAlchemy base va models persistence.
 
-## 2. Sync-doc lien quan
-- Document model phai co ingestion_job_id + status.
-- Status luu bo 4 gia tri workflow: start, processing, failed, completed.
+## 2. Folder structure
+- src/database/base.py
+- src/database/models/*
 
-## 3. Transaction boundary
-- CRUD thong qua repositories/service.
-- Dung sync session context manager.
-- Khong su dung async SQLAlchemy cho core flow.
+## 3. Sync-doc data rule
+- Document model luu ingestion_job_id va status.
+- status hop le: start, processing, failed, completed.
+- Polling status phai dua tren du lieu DB, khong fallback local memory.
 
-## 4. Migration
-- Co init schema va downgrade hop le.
-- Index cho ingestion_job_id va cac truong truy van thuong xuyen.
+## 4. Transaction boundary
+- Service/repository la noi thao tac transaction.
+- Khong thao tac session truc tiep trong route/handler/module.
+
+## 5. Migration
+- Alembic version phai dong bo voi model hien tai.
+- Moi thay doi schema can kem migration upgrade/downgrade ro rang.

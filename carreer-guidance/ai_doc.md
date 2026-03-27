@@ -1,40 +1,50 @@
 # Master Implementation Guide
 
-## 1. Vai tro
-Ban dong vai tro AI coder cho backend system theo clean architecture va workflow sync-doc da chot.
-Muc tieu: code dung boundaries, dung contract, dung thu tu layer.
+## 1. Muc tieu
+Tai lieu nay la index tong de dieu huong code trong thu muc carreer-guidance.
+Muc tieu: moi thanh vien nam ro boundaries, contracts, va workflow hien tai.
 
-## 2. Architecture bat buoc
-- local_server: HTTP boundary (FastAPI route).
-- handlers: orchestration sat boundary, map input/output/error.
-- modules: business orchestration theo luong sync.
-- services: implementation thuc te (OCR, DB, vector DB, archive, LLM).
-- repositories: persistence abstraction.
+## 2. Kien truc tong
+- local_server: HTTP boundary (FastAPI router + middleware).
+- handlers: parse request, goi module/service, map response.
+- modules: business orchestration.
+- services: implementation va external I/O (Gemini, Redis, filesystem, DB session usage).
+- repositories: query/persistence abstraction.
 - database: SQLAlchemy model + migration.
 
-## 3. Workflow phai tuan thu
-- Chat: route async, handler async, module co the async/sync tuy contract hien tai.
-- Sync document: route co the async boundary, nhung flow xu ly business phai sync trong handler/module/service.
-- Status sync chi duoc dung 4 gia tri: start, processing, failed, completed.
-- execution_id phai di xuyen suot route -> handler -> module -> service.
-- Session DB chi duoc su dung trong context manager tai tang DB/service (`with session_scope()` hoac `with get_session() as session`).
+## 3. Workflow chuan
+### 3.1 Chat
+- Sync mode: route -> ChatHandler.invoke_sync_chat_handler -> agent invoke.
+- Async mode: route -> ChatHandler.invoke_async_chat_handler -> DispatcherService -> Redis queue.
+- Worker mode: ChatWorkerService dequeue va process tung message theo kieu sync.
 
-## 4. Quy tac coding
-- Khong dat business logic trong route.
-- Khong goi truc tiep DB/OCR/LLM tai handler.
-- Khong goi external API truc tiep tai module, phai qua service.
-- Type hints day du, model typed ro rang.
-- Error map ve DomainError o handler boundary.
+### 3.2 Sync document
+- route -> SyncDataHandler -> SyncDocumentModuleImpl -> services.
+- DB status dung 4 gia tri: start, processing, failed, completed.
+- trace_id middleware chinh la execution_id business.
 
-## 5. Thu tu implementation
-1. Cap nhat tai lieu ai_doc_*.
-2. Cap nhat handlers theo workflow.
-3. Cap nhat route de dung handler contracts.
-4. Cap nhat module/service neu contract thay doi.
-5. Chay check loi va test luong chinh.
+## 4. Rule bat buoc
+- Router khong chua business logic.
+- Handler khong goi DB/OCR truc tiep.
+- Module khong goi external API truc tiep.
+- Service nhan execution_id qua constructor.
+- DB session chi dung trong service/repository boundary bang context manager.
+
+## 5. Danh muc huong dan theo thu muc
+- local_server/ai_doc_local.md
+- src/config/ai_doc_config.md
+- src/database/ai_doc_database.md
+- src/repositories/ai_doc_repositories.md
+- src/request_body/ai_doc_request_body.md
+- src/handlers/ai_doc_handler.md
+- src/modules/ai_doc_module.md
+- src/services/ai_doc_services.md
+- src/agent/ai_doc_agent.md
+- src/prompts/ai_doc_prompt.md
+- src/utils/ai_doc_utils.md
 
 ## 6. Definition of done
-- Khong con pending trong sync status.
-- Khong con stub bat buoc cho sync flow production path.
-- execution_id hien dien trong log/context toan bo sync flow.
-- Khong su dung session_id nghiep vu trong sync summary.
+- Tinh nhat quan boundaries duoc giu vung.
+- Khong con import/cu phap cu (base_handler, DomainError protocol runtime da bo).
+- execution_id duoc truyen thong suot va log duoc.
+- Doc update phan anh dung code hien tai.

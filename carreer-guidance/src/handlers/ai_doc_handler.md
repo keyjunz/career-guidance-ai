@@ -2,37 +2,38 @@
 
 ## 1. Scope
 Folder: src/handlers/
-Handlers la boundary orchestrator, khong chua business implementation.
+Handler la boundary orchestrator giua route va business layer.
 
-## 2. Required files
-- src/handlers/base_handler.py
+## 2. Files hien tai
 - src/handlers/chat_handler.py
 - src/handlers/sync_doc_handler.py
 
-## 3. base_handler.py contract
-- RequestContext dataclass: trace_id, user_id.
-- DomainError: code, message, details(optional).
-- map_exception_to_domain_error(exc) -> DomainError.
+## 3. ChatHandler contract
+Class ChatHandler:
+- __init__(execution_id)
+- execute(request, invocation_type)
+- invoke_async_chat_handler(request)
+- invoke_sync_chat_handler(request)
+- stream_tokens(request)
 
-## 4. chat_handler.py contract
-- handle_chat(request, context, chatbot) -> ChatResponse.
-- handle_chat_stream(request, context, chatbot) -> AsyncIterator[str].
-- Chi map error, khong viet chat logic tai handler.
+Rule:
+- invocation_type="async" chi enqueue vao queue (qua DispatcherService).
+- invocation_type="sync" process ngay qua agent_main.invoke.
+- stream_tokens dung invoke_stream va tra token async iterator.
 
-## 5. sync_doc_handler.py contract
-Class SyncDataHandler chi duoc co dung 3 methods:
-- __init__
-- handle_sync_data
-- handle_get_sync_data_status
+## 4. SyncDataHandler contract
+Class SyncDataHandler:
+- __init__(execution_id)
+- handle_sync_data(body, context)
+- handle_get_sync_data_status(params)
 
-Rules:
-- Parse body linh hoat (model|string|dict) trong handle_sync_data.
-- Goi sync_document_module.sync_documents(...) cho submit flow.
-- Goi sync_document_module.get_status_sync_doc(...) cho polling flow.
-- Khong dung in-memory status store trong handler.
-- Khong stub business flow cho production path.
+Rule:
+- Body parser chap nhan model, json string, dict.
+- Goi SyncDocumentModuleImpl cho submit va status.
+- Khong co in-memory status store.
 
-## 6. Global rules
-- execution_id = context.trace_id, di xuyen suot qua module/service.
-- Khong tao va khong truyen business session_id trong sync flow.
-- Dung api_response util tai route layer.
+## 5. Rule chung
+- Khong su dung base_handler/dataclass protocol runtime layer da bo.
+- Khong query DB truc tiep o handler.
+- Khong call OCR/Redis truc tiep o handler.
+- execution_id phai truyen xuong module/service.

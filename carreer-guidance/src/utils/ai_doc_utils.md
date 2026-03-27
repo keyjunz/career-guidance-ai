@@ -2,15 +2,12 @@
 
 ## 1. Scope
 Folder: src/utils/
-Noi chua utility dung chung, khong chua business flow.
+Noi chua utility dung chung, khong chua business orchestration.
 
-## 2. Required utilities
-- api_response: format response thong nhat.
-- error classes/code map.
-- tracing helper (trace_id).
-- text/time helper neu can.
+## 2. Hien tai
+- src/utils/api_response/*: wrapper response Ok, BadRequest, NotFound, InternalServerError, ...
 
-## 3. Rules
-- User-facing error message de hieu.
-- Internal error khong lo thong tin nhay cam.
-- Utility functions ngan, typed, de test.
+## 3. Rule
+- Utility phai stateless, de test.
+- Error message huong user can de hieu nhung khong lo thong tin nhay cam.
+- Moi utility moi can typed ro rang va ten de doan duoc hanh vi.

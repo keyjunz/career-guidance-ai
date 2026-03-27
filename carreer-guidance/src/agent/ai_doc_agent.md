@@ -2,19 +2,17 @@
 
 ## 1. Scope
 Folder: src/agent/
-Agent phuc vu chat orchestration. Khong can tham gia sync-document pipeline.
+Agent la runtime xu ly chat logic khi ChatHandler chay sync mode.
 
-## 2. Rules
-- Dung typed state ro rang.
-- Co trace_id/execution_id trong state de observability.
-- Tool calls phai qua module/service contracts, khong call DB truc tiep.
+## 2. Integration point
+- ChatHandler.invoke_sync_chat_handler goi src.agent.main.invoke.
+- ChatHandler.stream_tokens goi src.agent.main.invoke_stream.
 
-## 3. Constraints lien quan workflow chung
-- Khong anh huong sync-doc status model.
-- Khong chia se business session_id cho sync-doc.
-- Neu can luu hoi thoai, dung conversation/session domain rieng cua chat.
+## 3. Rule
+- Agent phai ton trong execution_id/trace_id tu context.
+- Khong duoc can thiep workflow sync-document status.
+- Neu dung tool, phai qua module/service boundary, tranh query DB truc tiep.
 
-## 4. Quality
-- Co fallback khi tool fail.
-- Khong hallucinate sources.
-- Co guard retry de tranh loop vo han.
+## 4. Ghi chu hien tai
+- src/agent/main.py dang la diem neo interface.
+- Khi implement chi tiet, giu nguyen contract invoke/invoke_stream de khong vo ChatHandler.
