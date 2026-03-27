@@ -4,4 +4,4 @@ __pycache__/
 .env
 *.png
 .idea/
-ai_doc.md
+*.md
