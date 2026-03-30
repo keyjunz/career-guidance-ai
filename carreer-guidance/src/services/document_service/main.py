@@ -1,6 +1,3 @@
-"""Document preparation and semantic chunking service."""
-
-
 import logging
 import os
 import re
@@ -14,8 +11,6 @@ logger.setLevel(logging.INFO)
 
 
 class DocumentService:
-    """Transform OCR text into semantically coherent chunks using embeddings."""
-
     def __init__(
         self,
         execution_id: str,
@@ -117,6 +112,46 @@ class DocumentService:
             )
 
         return chunks
+
+    def count_pages(self, text: str, file_path: str | None = None) -> int:
+        """Count pages, preferring direct PDF file analysis when possible."""
+        file_pages = self._count_pages_from_pdf_file(file_path)
+        if file_pages > 0:
+            return file_pages
+        return len(self._split_text_by_pages(text))
+
+    def _count_pages_from_pdf_file(self, file_path: str | None) -> int:
+        """Best-effort PDF page count without external dependencies."""
+        if not file_path:
+            return 0
+
+        path = Path(file_path)
+        if path.suffix.lower() != ".pdf" or not path.exists():
+            return 0
+
+        try:
+            data = path.read_bytes()
+            if not data.startswith(b"%PDF"):
+                return 0
+
+            # Common PDFs expose one '/Type /Page' per page object.
+            page_objects = re.findall(rb"/Type\s*/Page(?!s)", data)
+            if page_objects:
+                return len(page_objects)
+
+            # Fallback: page tree can carry '/Count N'.
+            counts = [int(m) for m in re.findall(rb"/Count\s+(\d+)", data)]
+            if counts:
+                return max(counts)
+        except Exception as exc:
+            logger.warning(
+                "count pages from pdf failed: execution_id=%s file_path=%s error=%s",
+                self.execution_id,
+                file_path,
+                exc,
+            )
+
+        return 0
 
     def _semantic_split_text(self, text: str) -> list[str]:
         """Split text into semantically coherent chunks using sentence grouping."""

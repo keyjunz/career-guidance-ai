@@ -1,6 +1,3 @@
-"""Vector database service with ChromaDB integration."""
-
-
 import logging
 import os
 import sqlite3

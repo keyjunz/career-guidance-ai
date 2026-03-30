@@ -161,7 +161,9 @@ async def get_sync_status_endpoint(
             ingestion_job_id=ingestion_job_id,
             context=context,
         )
-        return _to_json_response(Ok(response.model_dump()).get_response())
+        payload = response.model_dump()
+        payload["ingestion_job_id"] = payload.pop("job_id", ingestion_job_id)
+        return _to_json_response(Ok(payload).get_response())
     except ValueError as exc:
         return _to_json_response(BadRequest(str(exc)).get_response())
     except Exception as exc:

@@ -1,6 +1,3 @@
-"""Redis queue service for async chat dispatch."""
-
-
 import json
 from typing import Any
 

@@ -1,12 +1,5 @@
-"""Sync document module orchestration.
-
-Rules:
-- No direct DB/API/LLM/OCR implementation here
-- All real operations delegated to services
-"""
-
-
 import logging
+import time
 from typing import Any
 
 from src.request_body.sync_doc import SyncDocumentsRequest, SyncDocumentsResponse
@@ -58,6 +51,7 @@ class SyncDocumentModuleImpl:
         """Process uploaded files: OCR extraction → chunk → vector DB."""
         job_id = ""
         user_id = str(request.user_id)
+        started_at = time.perf_counter()
         try:
             if context.get("execution_id") != self.execution_id:
                 raise ValueError("context.execution_id must match module execution_id")
@@ -116,6 +110,28 @@ class SyncDocumentModuleImpl:
                     file_path,
                     success,
                     extracted_len,
+                )
+
+            file_page_counts: dict[str, int] = {}
+            total_pages = 0
+            for item in ocr_results:
+                if not bool(item.get("success")):
+                    continue
+                file_path = str(item.get("file_path") or "")
+                text = str(item.get("text") or "")
+                page_count = self.document_service.count_pages(
+                    text=text,
+                    file_path=file_path,
+                )
+                file_page_counts[file_path] = page_count
+                total_pages += page_count
+                logger.info(
+                    "sync_documents file pages: execution_id=%s user_id=%s job_id=%s file_path=%s pages=%d",
+                    self.execution_id,
+                    user_id,
+                    job_id,
+                    file_path,
+                    page_count,
                 )
 
             industry_by_file_path = {
@@ -180,14 +196,18 @@ class SyncDocumentModuleImpl:
                 self.database_service.mark_failed(job_id)
 
             logger.info(
-                "sync_documents completed: execution_id=%s user_id=%s job_id=%s processed=%d failed=%d status=%s",
+                "sync_documents completed: execution_id=%s user_id=%s job_id=%s processed=%d failed=%d total_pages=%d status=%s execution_time_ms=%d",
                 self.execution_id,
                 user_id,
                 job_id,
                 processed_count,
                 failed_count,
+                total_pages,
                 status,
+                int((time.perf_counter() - started_at) * 1000),
             )
+
+            execution_time_ms = int((time.perf_counter() - started_at) * 1000)
 
             return SyncDocumentsResponse(
                 job_id=job_id,
@@ -195,6 +215,9 @@ class SyncDocumentModuleImpl:
                 processed=processed_count,
                 failed=failed_count,
                 downloaded=len(prepared_docs),
+                total_pages=total_pages,
+                file_page_counts=file_page_counts,
+                execution_time_ms=execution_time_ms,
             )
         except Exception as exc:
             logger.error(

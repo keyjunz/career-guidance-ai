@@ -1,6 +1,3 @@
-"""Sync-document handler that orchestrates ingestion module calls."""
-
-
 import logging
 from typing import Any
 from uuid import UUID
@@ -15,8 +12,6 @@ logger.setLevel(logging.INFO)
 
 
 class SyncDataHandler:
-    """Handler for sync-data operations with strict body parsing."""
-
     def __init__(
         self,
         execution_id: str,

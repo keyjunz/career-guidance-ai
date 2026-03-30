@@ -1,6 +1,3 @@
-"""Chat background worker service consuming queued requests."""
-
-
 import logging
 from typing import Any, Awaitable, Callable
 

@@ -1,6 +1,3 @@
-"""Generic sync repositories and repository factory utilities."""
-
-
 from collections.abc import Mapping
 from typing import Any, Generic, TypeVar
 

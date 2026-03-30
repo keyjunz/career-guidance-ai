@@ -1,6 +1,3 @@
-"""Chat handler that orchestrates chat module calls."""
-
-
 import inspect
 import logging
 from collections.abc import AsyncIterator
@@ -17,8 +14,6 @@ logger.setLevel(logging.INFO)
 
 
 class ChatHandler:
-    """Handler for chat endpoint using sync or async invocation mode."""
-
     def __init__(self, execution_id: str) -> None:
         self.execution_id = execution_id
         self.dispatcher_service = DispatcherService(execution_id=execution_id)

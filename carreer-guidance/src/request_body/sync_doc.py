@@ -1,6 +1,3 @@
-"""Schemas for document synchronization APIs."""
-
-
 from uuid import UUID
 
 from pydantic import BaseModel, ConfigDict, Field
@@ -27,3 +24,6 @@ class SyncDocumentsResponse(BaseModel):
     processed: int = 0
     failed: int = 0
     downloaded: int = 0
+    total_pages: int = 0
+    file_page_counts: dict[str, int] = Field(default_factory=dict)
+    execution_time_ms: int = 0

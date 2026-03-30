@@ -1,5 +1,3 @@
-"""FastAPI application entrypoint for local development server."""
-
 import json
 import logging
 import os
@@ -15,7 +13,7 @@ from fastapi.staticfiles import StaticFiles
 
 from local_server.routes.chat.router import router as chat_router
 from local_server.routes.sync_doc.router import router as sync_doc_router
-from src.request_body.common import ErrorResponse
+from src.utils.common import ErrorResponse
 
 APP_NAME = "career-guidance-ai"
 APP_VERSION = "0.1.0"

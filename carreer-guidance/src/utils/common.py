@@ -1,6 +1,3 @@
-"""Common request/response models shared by API endpoints."""
-
-
 from typing import Any
 
 from pydantic import BaseModel, ConfigDict, Field
