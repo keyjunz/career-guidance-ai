@@ -1,6 +1,5 @@
 """Sync-document handler that orchestrates ingestion module calls."""
 
-from __future__ import annotations
 
 import logging
 from typing import Any

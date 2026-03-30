@@ -1,6 +1,5 @@
 """Chat handler that orchestrates chat module calls."""
 
-from __future__ import annotations
 
 import inspect
 import logging

@@ -1,6 +1,5 @@
 """Dispatcher service for routing async jobs to queue backends."""
 
-from __future__ import annotations
 
 from typing import Any
 
