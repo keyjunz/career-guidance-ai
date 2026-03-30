@@ -1,6 +1,5 @@
 """Chat handler that orchestrates chat module calls."""
 
-from __future__ import annotations
 
 import inspect
 import logging
@@ -14,6 +13,7 @@ from src.utils.api_response import BadRequest, InternalServerError, NotFound, Ok
 
 RequestContext = dict[str, Any]
 logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
 
 
 class ChatHandler:

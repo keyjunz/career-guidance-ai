@@ -1,43 +1,20 @@
 """Schemas for document synchronization APIs."""
 
-from __future__ import annotations
 
 from uuid import UUID
 
-from pydantic import BaseModel, ConfigDict, Field, field_validator
+from pydantic import BaseModel, ConfigDict, Field
 
 
 class SyncDocumentsRequest(BaseModel):
-    """Input payload to start a document synchronization job."""
+    """Internal request model for sync operations."""
 
     model_config = ConfigDict(extra="forbid")
 
     user_id: UUID
     file_urls: list[str] = Field(min_length=1)
     download_dir: str | None = None
-
-    @field_validator("file_urls")
-    @classmethod
-    def validate_file_urls(cls, value: list[str]) -> list[str]:
-        cleaned = [url.strip() for url in value]
-        invalid = [
-            url
-            for url in cleaned
-            if not (url.startswith("http://") or url.startswith("https://"))
-        ]
-        if invalid:
-            raise ValueError("All file_urls must start with 'http://' or 'https://'")
-        return cleaned
-
-    @field_validator("download_dir")
-    @classmethod
-    def validate_download_dir(cls, value: str | None) -> str | None:
-        if value is None:
-            return None
-        cleaned = value.strip()
-        if not cleaned:
-            raise ValueError("download_dir must be non-empty when provided")
-        return cleaned
+    industry_type: str | None = None
 
 
 class SyncDocumentsResponse(BaseModel):

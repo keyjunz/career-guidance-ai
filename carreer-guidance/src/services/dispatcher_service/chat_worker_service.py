@@ -1,6 +1,5 @@
 """Chat background worker service consuming queued requests."""
 
-from __future__ import annotations
 
 import logging
 from typing import Any, Awaitable, Callable
@@ -8,6 +7,7 @@ from typing import Any, Awaitable, Callable
 from src.services.redis_service.main import RedisQueueService
 
 logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
 
 
 class ChatWorkerService:

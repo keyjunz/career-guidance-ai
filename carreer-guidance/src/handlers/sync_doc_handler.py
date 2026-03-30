@@ -1,9 +1,9 @@
 """Sync-document handler that orchestrates ingestion module calls."""
 
-from __future__ import annotations
 
 import logging
 from typing import Any
+from uuid import UUID
 
 from src.modules.sync_doc_module.main import SyncDocumentModuleImpl
 from src.request_body.sync_doc import SyncDocumentsRequest, SyncDocumentsResponse
@@ -11,6 +11,7 @@ from src.request_body.sync_doc import SyncDocumentsRequest, SyncDocumentsRespons
 RequestContext = dict[str, Any]
 
 logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
 
 
 class SyncDataHandler:
@@ -25,36 +26,39 @@ class SyncDataHandler:
             execution_id=self.execution_id
         )
 
-    def handle_sync_data(
+    def process_uploaded_files(
         self,
-        body: SyncDocumentsRequest | str | dict,
+        file_paths: list[str],
+        user_id: UUID,
         context: RequestContext,
+        industry_type: str | None = None,
     ) -> SyncDocumentsResponse:
+        """Process uploaded files by converting to SyncDocumentsRequest."""
         logger.info(
-            "Start sync handle: execution_id=%s, trace_id=%s",
+            "Start processing uploaded files: execution_id=%s, context_execution_id=%s, files=%d",
             self.execution_id,
-            context.get("trace_id"),
+            context.get("execution_id"),
+            len(file_paths),
         )
         try:
-            match body:
-                case SyncDocumentsRequest():
-                    request = body
-                case str():
-                    request = SyncDocumentsRequest.model_validate_json(body)
-                case dict():
-                    request = SyncDocumentsRequest.model_validate(body)
-                case _:
-                    raise ValueError("Invalid request body format.")
+            # Create request from file paths
+            request = SyncDocumentsRequest(
+                user_id=user_id,
+                file_urls=file_paths,
+                download_dir=None,
+                industry_type=industry_type,
+            )
+
+            # Process using sync_documents
+            return self.sync_document_module.sync_documents(
+                request=request,
+                context=context,
+            )
         except ValueError:
             raise
         except Exception as exc:
-            raise ValueError(f"Invalid request body format: {exc}") from exc
-
-        try:
-            return self.sync_document_module.sync_documents(request, context)
-        except Exception as exc:
             logger.error(
-                "Error during document syncing process: execution_id=%s error=%s",
+                "Error processing uploaded files: execution_id=%s error=%s",
                 self.execution_id,
                 exc,
             )
@@ -62,16 +66,19 @@ class SyncDataHandler:
                 raise
             raise RuntimeError("Internal server error") from exc
 
-    def handle_get_sync_data_status(
+    def get_sync_status(
         self,
-        params: dict[str, str],
+        ingestion_job_id: str,
+        context: RequestContext,
     ) -> SyncDocumentsResponse:
-        ingestion_job_id = params.get("ingestion_job_id")
-        if not ingestion_job_id:
-            raise ValueError("ingestion_job_id is required")
-
+        """Fetch current sync status for a specific ingestion job."""
+        logger.info(
+            "Get sync status: execution_id=%s, context_execution_id=%s, job_id=%s",
+            self.execution_id,
+            context.get("execution_id"),
+            ingestion_job_id,
+        )
         try:
-            context: RequestContext = {"trace_id": self.execution_id}
             return self.sync_document_module.get_status_sync_doc(
                 ingestion_job_id=ingestion_job_id,
                 context=context,
@@ -80,8 +87,11 @@ class SyncDataHandler:
             raise
         except Exception as exc:
             logger.error(
-                "Error getting sync status: execution_id=%s error=%s",
+                "Error getting sync status: execution_id=%s, job_id=%s, error=%s",
                 self.execution_id,
+                ingestion_job_id,
                 exc,
             )
+            if isinstance(exc, ValueError):
+                raise
             raise RuntimeError("Internal server error") from exc

@@ -1,6 +1,5 @@
 """Database sync service implementation."""
 
-from __future__ import annotations
 
 from pathlib import Path
 from urllib.parse import urlparse
@@ -36,7 +35,7 @@ class DatabaseSyncService:
                     "user_id": request.user_id,
                     "document_name": document_name,
                     "document_type": document_type,
-                    "file_path": file_url,
+                    "content": file_url,
                     "ingestion_job_id": job_id,
                     "status": DocSyncStatus.START.value,
                 }
@@ -88,7 +87,7 @@ class DatabaseSyncService:
             }
 
             for doc in docs:
-                doc.status = status_by_url.get(doc.file_path, doc.status)
+                doc.status = status_by_url.get(doc.content, doc.status)
                 session.add(doc)
 
     def mark_completed(self, job_id: str) -> None:

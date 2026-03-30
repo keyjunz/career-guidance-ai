@@ -26,6 +26,7 @@ async def chat_endpoint(
     "/stream",
     summary="Stream chat",
     description="Stream chat response token-by-token via SSE",
+    response_model=None,
 )
 async def chat_stream_endpoint(
     payload: ChatRequest,

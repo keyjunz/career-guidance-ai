@@ -1,6 +1,5 @@
 """Common request/response models shared by API endpoints."""
 
-from __future__ import annotations
 
 from typing import Any
 
