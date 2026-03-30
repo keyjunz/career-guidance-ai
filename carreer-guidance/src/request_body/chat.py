@@ -1,6 +1,5 @@
 """Schemas for chat API requests and responses."""
 
-from __future__ import annotations
 
 from typing import Literal
 from uuid import UUID

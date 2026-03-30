@@ -6,7 +6,6 @@ Rules:
 - Follows sync_doc_module pattern: clean orchestration only
 """
 
-from __future__ import annotations
 
 import logging
 import time
@@ -57,17 +56,6 @@ class RAGModuleImpl:
         self.logger.info("RAG module initialized.")
 
     def query(self, request: RAGQuery) -> RAGResult:
-        """Execute full RAG pipeline for a single question.
-
-        Steps:
-        0. Auto-detect language
-        1. Translate query (if Vietnamese)
-        2. Embed query
-        3. Hybrid retrieve (ChromaDB + BM25 → RRF)
-        4. Rerank (Cross-Encoder)
-        5. Build context
-        6. LLM Generate
-        """
         pipeline_start = time.perf_counter()
         question = request.question
         language = request.language

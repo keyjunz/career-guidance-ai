@@ -1,33 +1,14 @@
 """LLM service — API-based text generation (Groq / Gemini)."""
 
-from __future__ import annotations
 
 import logging
 import os
 import time
 from typing import Any, Dict, Optional
 
+from src.prompts.rag_prompts import RAG_PROMPT_TEMPLATE, RAG_PROMPT_TEMPLATE_VI
+
 MAX_ANSWER_WORDS = 500
-
-RAG_PROMPT_TEMPLATE = """You are an expert AI/Computer Science assistant. Answer the question using ONLY the provided context. If the context doesn't contain enough information, say so honestly. Keep your answer concise (under 500 words), accurate, and well-structured.
-
-### Context:
-{context}
-
-### Question:
-{question}
-
-### Answer:"""
-
-RAG_PROMPT_TEMPLATE_VI = """Bạn là trợ lý chuyên gia AI/Khoa học Máy tính. Trả lời câu hỏi CHỈ dựa trên ngữ cảnh được cung cấp. Nếu ngữ cảnh không chứa đủ thông tin, hãy nói rõ điều đó. Giữ câu trả lời ngắn gọn (dưới 500 từ), chính xác và có cấu trúc rõ ràng.
-
-### Ngữ cảnh:
-{context}
-
-### Câu hỏi:
-{question}
-
-### Trả lời:"""
 
 API_LLM_MODELS = {
     "groq-llama3-70b": {"provider": "groq", "name": "llama-3.3-70b-versatile", "api_key_env": "GROQ_API_KEY", "max_tokens": 1024, "temperature": 0.3},

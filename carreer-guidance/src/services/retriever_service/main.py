@@ -1,6 +1,5 @@
 """Retriever service — Hybrid ChromaDB (dense) + BM25 (sparse) + RRF fusion."""
 
-from __future__ import annotations
 
 import logging
 from typing import Any, Dict, List, Tuple
