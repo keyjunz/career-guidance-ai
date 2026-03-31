@@ -1,6 +1,5 @@
 """Redis queue service for async chat dispatch."""
 
-from __future__ import annotations
 
 import json
 from typing import Any

@@ -1,6 +1,5 @@
 """Generic sync repositories and repository factory utilities."""
 
-from __future__ import annotations
 
 from collections.abc import Mapping
 from typing import Any, Generic, TypeVar
