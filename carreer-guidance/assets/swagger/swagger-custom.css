@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #f7fafc 0%, #edf2f7 100%);
+}
+
+.topbar {
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.swagger-ui .topbar {
+  background: #1f2937;
+}
+
+.swagger-ui .topbar .download-url-wrapper input[type="text"] {
+  border: 1px solid #cbd5e0;
+}
+
+.swagger-ui .info .title {
+  color: #1f2937;
+}

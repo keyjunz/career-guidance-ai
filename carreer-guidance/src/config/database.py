@@ -12,8 +12,6 @@ from .settings import Settings, get_settings
 
 
 def create_engine_from_settings(settings: Settings | None = None) -> Engine:
-    """Create SQLAlchemy sync engine from application settings."""
-
     cfg = settings or get_settings()
     return create_engine(
         cfg.db.url,
@@ -27,8 +25,6 @@ def create_engine_from_settings(settings: Settings | None = None) -> Engine:
 def create_session_factory(
     engine: Engine,
 ) -> sessionmaker[Session]:
-    """Create a configured sync session maker."""
-
     return sessionmaker(
         bind=engine,
         class_=Session,

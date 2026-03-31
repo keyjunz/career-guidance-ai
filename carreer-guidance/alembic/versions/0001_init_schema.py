@@ -1,11 +1,9 @@
-"""Initial database schema.
+"""Initial database schema (squashed).
 
 Revision ID: 20260326_0001
 Revises:
 Create Date: 2026-03-26 00:01:00
 """
-
-from __future__ import annotations
 
 from alembic import op
 import sqlalchemy as sa
@@ -22,11 +20,10 @@ def upgrade() -> None:
     op.create_table(
         "role",
         sa.Column("id", postgresql.UUID(as_uuid=True), nullable=False),
-        sa.Column("client", sa.String(length=100), nullable=False),
-        sa.Column("admin", sa.String(length=100), nullable=False),
+        sa.Column("role", sa.String(length=100), nullable=False),
         sa.PrimaryKeyConstraint("id", name="pk_role"),
     )
-    op.create_index("ix_role_client", "role", ["client"], unique=False)
+    op.create_index("ix_role_role", "role", ["role"], unique=True)
 
     op.create_table(
         "user",
@@ -236,5 +233,5 @@ def downgrade() -> None:
     op.drop_index("ix_user_user_name", table_name="user")
     op.drop_table("user")
 
-    op.drop_index("ix_role_client", table_name="role")
+    op.drop_index("ix_role_role", table_name="role")
     op.drop_table("role")

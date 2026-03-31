@@ -13,7 +13,11 @@ class Role(Base):
     id: Mapped[UUID] = mapped_column(
         PG_UUID(as_uuid=True), primary_key=True, default=uuid4
     )
-    client: Mapped[str] = mapped_column(String(100), nullable=False, index=True)
-    admin: Mapped[str] = mapped_column(String(100), nullable=False)
+    role: Mapped[str] = mapped_column(
+        String(100),
+        nullable=False,
+        unique=True,
+        index=True,
+    )
 
     users: Mapped[list["User"]] = relationship("User", back_populates="role")

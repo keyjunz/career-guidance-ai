@@ -7,6 +7,7 @@ from typing import Any, Awaitable, Callable
 from src.services.redis_service.main import RedisQueueService
 
 logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
 
 
 class ChatWorkerService:

@@ -1,15 +1,27 @@
 from functools import lru_cache
+from pathlib import Path
 from typing import Any, Literal
 from urllib.parse import urlparse
 
 from pydantic import Field, field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+ENV_FILE_PATH = PROJECT_ROOT / ".env"
+
+
+COMMON_SETTINGS_CONFIG = SettingsConfigDict(
+    env_file=str(ENV_FILE_PATH),
+    env_file_encoding="utf-8",
+    case_sensitive=False,
+    extra="ignore",
+)
+
 
 class AppSettings(BaseSettings):
     """Application runtime settings."""
 
-    model_config = SettingsConfigDict(extra="forbid")
+    model_config = COMMON_SETTINGS_CONFIG
 
     name: str = Field(..., alias="APP_NAME")
     env: Literal["dev", "staging", "prod"] = Field(..., alias="APP_ENV")
@@ -45,7 +57,7 @@ class AppSettings(BaseSettings):
 class DatabaseSettings(BaseSettings):
     """Database connection settings."""
 
-    model_config = SettingsConfigDict(extra="forbid")
+    model_config = COMMON_SETTINGS_CONFIG
 
     url: str = Field(
         ...,
@@ -70,7 +82,7 @@ class DatabaseSettings(BaseSettings):
 class LLMSettings(BaseSettings):
     """Gemini model settings."""
 
-    model_config = SettingsConfigDict(extra="forbid")
+    model_config = COMMON_SETTINGS_CONFIG
 
     gemini_api_key: str = Field(..., alias="GEMINI_API_KEY")
     gemini_model_name: str = Field(..., alias="GEMINI_MODEL_NAME")
@@ -80,7 +92,7 @@ class LLMSettings(BaseSettings):
 class VectorStoreSettings(BaseSettings):
     """Chroma vector store settings."""
 
-    model_config = SettingsConfigDict(extra="forbid")
+    model_config = COMMON_SETTINGS_CONFIG
 
     chroma_host: str = Field(..., alias="CHROMA_HOST")
     chroma_port: int = Field(..., alias="CHROMA_PORT")
@@ -89,7 +101,7 @@ class VectorStoreSettings(BaseSettings):
 class RedisSettings(BaseSettings):
     """Redis settings."""
 
-    model_config = SettingsConfigDict(extra="forbid")
+    model_config = COMMON_SETTINGS_CONFIG
 
     redis_url: str = Field(..., alias="REDIS_URL")
 
@@ -97,7 +109,7 @@ class RedisSettings(BaseSettings):
 class WebSearchSettings(BaseSettings):
     """Web search provider settings."""
 
-    model_config = SettingsConfigDict(extra="forbid")
+    model_config = COMMON_SETTINGS_CONFIG
 
     api_key: str = Field(..., alias="WEB_SEARCH_API_KEY")
 
@@ -105,12 +117,7 @@ class WebSearchSettings(BaseSettings):
 class Settings(BaseSettings):
     """Centralized settings container for all configuration sections."""
 
-    model_config = SettingsConfigDict(
-        env_file=".env",
-        env_file_encoding="utf-8",
-        case_sensitive=False,
-        extra="forbid",
-    )
+    model_config = COMMON_SETTINGS_CONFIG
 
     app: AppSettings = Field(default_factory=AppSettings)
     db: DatabaseSettings = Field(default_factory=DatabaseSettings)

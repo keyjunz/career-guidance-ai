@@ -9,8 +9,10 @@ from pathlib import Path
 from urllib import error, parse, request
 
 from src.config.settings import get_settings
+from src.prompts.ocr_prompt import OCR_EXTRACT_PROMPT
 
 logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
 
 
 class GeminiOCRService:
@@ -77,12 +79,7 @@ class GeminiOCRService:
             "contents": [
                 {
                     "parts": [
-                        {
-                            "text": (
-                                "Extract all readable text from this document exactly as plain text. "
-                                "Keep headings and paragraph order. Do not add explanations."
-                            )
-                        },
+                        {"text": OCR_EXTRACT_PROMPT},
                         {
                             "inline_data": {
                                 "mime_type": mime_type,
@@ -151,3 +148,60 @@ class GeminiOCRService:
         if suffix == ".png":
             return "image/png"
         return "application/octet-stream"
+
+
+class GeminiEmbeddingService:
+    """Generate embeddings from Gemini embedContent API."""
+
+    def __init__(self, execution_id: str, timeout_seconds: int = 60) -> None:
+        self.execution_id = execution_id
+        self.timeout_seconds = timeout_seconds
+        settings = get_settings()
+        self.api_key = settings.llm.gemini_api_key
+        self.model_name = settings.llm.gemini_embedding_model
+        self.base_url = "https://generativelanguage.googleapis.com/v1beta"
+
+    def get_embedding(self, text: str) -> list[float]:
+        if not text.strip():
+            raise ValueError("Cannot generate embedding for empty text")
+
+        endpoint = (
+            f"{self.base_url}/models/{parse.quote(self.model_name, safe='')}:embedContent"
+            f"?key={parse.quote(self.api_key, safe='')}"
+        )
+        body = {
+            "model": f"models/{self.model_name}",
+            "content": {
+                "parts": [
+                    {
+                        "text": text,
+                    }
+                ]
+            },
+        }
+        payload = json.dumps(body).encode("utf-8")
+
+        req = request.Request(
+            endpoint,
+            data=payload,
+            headers={"Content-Type": "application/json"},
+            method="POST",
+        )
+
+        try:
+            with request.urlopen(req, timeout=self.timeout_seconds) as resp:
+                response = json.loads(resp.read().decode("utf-8"))
+        except error.HTTPError as exc:
+            detail = exc.read().decode("utf-8", errors="ignore")
+            raise ValueError(
+                f"Gemini embedding API HTTP {exc.code} for execution_id={self.execution_id}: {detail}"
+            ) from exc
+        except error.URLError as exc:
+            raise ValueError(
+                f"Gemini embedding API connection error for execution_id={self.execution_id}: {exc.reason}"
+            ) from exc
+
+        values = response.get("embedding", {}).get("values", [])
+        if not values:
+            raise ValueError("Gemini embedding API returned empty vector")
+        return values

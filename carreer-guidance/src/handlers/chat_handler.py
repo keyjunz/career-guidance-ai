@@ -13,11 +13,10 @@ from src.utils.api_response import BadRequest, InternalServerError, NotFound, Ok
 
 RequestContext = dict[str, Any]
 logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
 
 
 class ChatHandler:
-    """Handler for chat endpoint using sync or async invocation mode."""
-
     def __init__(self, execution_id: str) -> None:
         self.execution_id = execution_id
         self.dispatcher_service = DispatcherService(execution_id=execution_id)
