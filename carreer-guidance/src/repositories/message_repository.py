@@ -11,8 +11,6 @@ from src.repositories.repository_factory import RepositoryFactory
 
 
 class MessageRepository(RepositoryFactory[Message, dict, dict]):
-    """Sync repository for message persistence operations."""
-
     def __init__(self, session: Session) -> None:
         super().__init__(session=session, model=Message)
 

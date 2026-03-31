@@ -12,8 +12,6 @@ from src.repositories.repository_factory import RepositoryFactory
 
 
 class DocumentRepository(RepositoryFactory[Document, dict, dict]):
-    """Sync repository for document persistence operations."""
-
     def __init__(self, session: Session) -> None:
         super().__init__(session=session, model=Document)
 

@@ -1,13 +1,3 @@
-"""RAG module orchestration.
-
-Rules:
-- No direct model/API implementation here
-- All real operations delegated to services
-- Follows sync_doc_module pattern: clean orchestration only
-"""
-
-from __future__ import annotations
-
 import logging
 import time
 
@@ -23,16 +13,6 @@ logger = logging.getLogger(__name__)
 
 
 class RAGModuleImpl:
-    """RAG module orchestration class.
-
-    Must contain only orchestration logic.
-    All real operations delegated to services.
-
-    Pattern mirrors SyncDocumentModuleImpl:
-    - receives services via __init__
-    - exposes query() and health_check()
-    """
-
     def __init__(
         self,
         *,
@@ -49,17 +29,6 @@ class RAGModuleImpl:
         logger.info("RAG module initialized.")
 
     def query(self, request: RAGQuery) -> RAGResult:
-        """Execute full RAG pipeline for a single question.
-
-        Steps:
-        0. Auto-detect language
-        1. Translate query (if Vietnamese)
-        2. Embed query
-        3. Hybrid retrieve (ChromaDB + BM25 → RRF)
-        4. Rerank (Cross-Encoder)
-        5. Build context
-        6. LLM Generate
-        """
         pipeline_start = time.perf_counter()
         question = request.question
         language = request.language
@@ -100,13 +69,15 @@ class RAGModuleImpl:
         sources = []
         for i, doc in enumerate(reranked):
             context_parts.append(f"[{i + 1}] {doc['text']}")
-            sources.append(SourceInfo(
-                rank=i + 1,
-                text=doc["text"][:100] + "...",
-                source=doc.get("source", "unknown"),
-                title=doc.get("title", ""),
-                rerank_score=doc.get("rerank_score", 0.0),
-            ))
+            sources.append(
+                SourceInfo(
+                    rank=i + 1,
+                    text=doc["text"][:100] + "...",
+                    source=doc.get("source", "unknown"),
+                    title=doc.get("title", ""),
+                    rerank_score=doc.get("rerank_score", 0.0),
+                )
+            )
         context = "\n\n".join(context_parts)
 
         # Step 6: LLM Generate ────────────────────────────────────

@@ -1,6 +1,3 @@
-"""Chat handler that orchestrates chat module calls."""
-
-
 import inspect
 import logging
 from collections.abc import AsyncIterator

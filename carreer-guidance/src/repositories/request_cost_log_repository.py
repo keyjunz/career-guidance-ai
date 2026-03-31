@@ -12,8 +12,6 @@ from src.repositories.repository_factory import RepositoryFactory
 
 
 class RequestCostLogRepository(RepositoryFactory[RequestCostLog, dict, dict]):
-    """Sync repository for request cost logging operations."""
-
     def __init__(self, session: Session) -> None:
         super().__init__(session=session, model=RequestCostLog)
 

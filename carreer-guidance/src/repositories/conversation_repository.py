@@ -1,6 +1,3 @@
-"""Conversation repository."""
-
-
 from uuid import UUID
 from sqlalchemy import select
 from sqlalchemy.orm import Session
@@ -10,8 +7,6 @@ from src.repositories.repository_factory import RepositoryFactory
 
 
 class ConversationRepository(RepositoryFactory[Conversation, dict, dict]):
-    """Sync repository for conversation persistence operations."""
-
     def __init__(self, session: Session) -> None:
         super().__init__(session=session, model=Conversation)
 

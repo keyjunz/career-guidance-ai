@@ -15,8 +15,6 @@ UpdateSchemaType = TypeVar("UpdateSchemaType")
 
 
 def _to_dict(payload: Any) -> dict[str, Any]:
-    """Normalize dict-like payloads from pydantic/dataclass/plain mappings."""
-
     if payload is None:
         return {}
     if isinstance(payload, Mapping):

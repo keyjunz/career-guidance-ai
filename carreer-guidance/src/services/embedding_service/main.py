@@ -1,10 +1,3 @@
-"""Embedding service — Load, encode, cache embeddings.
-
-Wraps sentence-transformers models. Reusable across modules.
-Supports: multilingual-e5-small, all-MiniLM-L6-v2, bge-m3
-"""
-
-
 import hashlib
 import logging
 import pickle
@@ -18,8 +11,6 @@ from src.config.embedding_config import CACHE_DIR, DEFAULT_EMBEDDING, DEVICE, EM
 
 
 class EmbeddingService:
-    """Sentence-Transformer embedding service with disk caching."""
-
     def __init__(self, *, execution_id: str, model_key: str = DEFAULT_EMBEDDING, device: str = DEVICE):
         self.execution_id = execution_id
         self.logger = logging.getLogger(f"{__name__}[{execution_id}]")

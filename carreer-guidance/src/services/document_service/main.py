@@ -1,6 +1,3 @@
-"""Document preparation and chunking service."""
-
-
 import logging
 import os
 import re

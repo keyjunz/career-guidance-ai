@@ -1,6 +1,3 @@
-"""Chat background worker service consuming queued requests."""
-
-
 import logging
 from typing import Any, Awaitable, Callable
 
@@ -11,8 +8,6 @@ logger.setLevel(logging.INFO)
 
 
 class ChatWorkerService:
-    """Consume async chat requests and process them sequentially."""
-
     def __init__(self, execution_id: str, queue_name: str = "chat:requests") -> None:
         self.execution_id = execution_id
         self.redis_queue = RedisQueueService(

@@ -1,6 +1,3 @@
-"""Retriever service — Hybrid ChromaDB (dense) + BM25 (sparse) + RRF fusion."""
-
-
 import logging
 from typing import Any, Dict, List, Tuple
 

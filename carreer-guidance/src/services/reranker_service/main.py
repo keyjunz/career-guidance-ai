@@ -1,6 +1,3 @@
-"""Reranker service — Cross-Encoder reranking."""
-
-
 import logging
 from typing import Dict, List
 

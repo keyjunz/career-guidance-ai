@@ -26,8 +26,6 @@ class Document(Base):
     )
     document_name: Mapped[str] = mapped_column(String(512), nullable=False, index=True)
     document_type: Mapped[str] = mapped_column(String(512), nullable=False, index=True)
-    # Keep column name aligned with current migration schema.
-    # In sync flow this field stores the source file path/URL metadata.
     content: Mapped[str] = mapped_column(Text, nullable=False)
     ingestion_job_id: Mapped[str | None] = mapped_column(
         String(128), nullable=True, index=True
