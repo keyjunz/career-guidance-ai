@@ -1,3 +1,6 @@
+"""Request cost log repository."""
+
+
 from datetime import datetime
 from uuid import UUID
 

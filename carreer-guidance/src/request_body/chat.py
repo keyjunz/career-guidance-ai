@@ -1,3 +1,6 @@
+"""Schemas for chat API requests and responses."""
+
+
 from typing import Literal
 from uuid import UUID
 

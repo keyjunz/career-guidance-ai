@@ -1,3 +1,7 @@
+"""Vector database service implementation."""
+
+
+import json
 import logging
 import os
 import sqlite3

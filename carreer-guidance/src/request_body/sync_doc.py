@@ -1,3 +1,6 @@
+"""Schemas for document synchronization APIs."""
+
+
 from uuid import UUID
 
 from pydantic import BaseModel, ConfigDict, Field

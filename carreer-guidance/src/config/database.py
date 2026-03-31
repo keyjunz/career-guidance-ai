@@ -1,3 +1,6 @@
+"""SQLAlchemy sync engine and session factory helpers."""
+
+
 from contextlib import contextmanager
 from collections.abc import Iterator
 from functools import lru_cache

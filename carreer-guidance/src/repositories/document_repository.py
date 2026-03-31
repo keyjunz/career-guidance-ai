@@ -1,3 +1,6 @@
+"""Document repository."""
+
+
 from collections.abc import Sequence
 from uuid import UUID
 

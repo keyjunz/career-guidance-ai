@@ -1,3 +1,6 @@
+"""Gemini OCR service implementation."""
+
+
 import base64
 import json
 import logging

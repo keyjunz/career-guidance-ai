@@ -1,3 +1,6 @@
+"""Sync-document handler that orchestrates ingestion module calls."""
+
+
 import logging
 from typing import Any
 from uuid import UUID
