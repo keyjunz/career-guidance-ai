@@ -1,32 +1,59 @@
+"""RAG module orchestration.
+
+Rules:
+- No direct model/API implementation here
+- All real operations delegated to services
+- Follows sync_doc_module pattern: clean orchestration only
+"""
+
+
 import logging
 import time
 
 import langdetect
 
 from src.modules.rag_module.schemas import RAGQuery, RAGResult, SourceInfo
-from src.services.embedding_service import EmbeddingService
-from src.services.retriever_service import RetrieverService
-from src.services.reranker_service import RerankerService
-from src.services.llm_service import LLMService
-
-logger = logging.getLogger(__name__)
+from src.services.embedding_service.main import EmbeddingService
+from src.services.retriever_service.main import RetrieverService
+from src.services.reranker_service.main import RerankerService
+from src.services.llm_service.main import LLMService
 
 
 class RAGModuleImpl:
+    """RAG module orchestration class.
+
+    Must contain only orchestration logic.
+    All real operations delegated to services.
+
+    Pattern mirrors SyncDocumentModuleImpl:
+    - receives services via __init__
+    - exposes query() and health_check()
+    """
+
     def __init__(
         self,
         *,
-        embedding_service: EmbeddingService,
-        retriever_service: RetrieverService,
-        reranker_service: RerankerService,
+        execution_id: str,
+        embedding_service: EmbeddingService | None = None,
+        retriever_service: RetrieverService | None = None,
+        reranker_service: RerankerService | None = None,
         llm_service: LLMService | None = None,
     ) -> None:
-        self.embedding_service = embedding_service
-        self.retriever_service = retriever_service
-        self.reranker_service = reranker_service
+        self.execution_id = execution_id
+        self.logger = logging.getLogger(f"{__name__}[{execution_id}]")
+
+        self.embedding_service = embedding_service or EmbeddingService(
+            execution_id=self.execution_id
+        )
+        self.retriever_service = retriever_service or RetrieverService(
+            execution_id=self.execution_id
+        )
+        self.reranker_service = reranker_service or RerankerService(
+            execution_id=self.execution_id
+        )
         self.llm_service = llm_service
 
-        logger.info("RAG module initialized.")
+        self.logger.info("RAG module initialized.")
 
     def query(self, request: RAGQuery) -> RAGResult:
         pipeline_start = time.perf_counter()
@@ -40,7 +67,7 @@ class RAGModuleImpl:
                 language = "vi" if detected == "vi" else "en"
             except Exception:
                 language = "en"
-            logger.info("Auto-detected language: %s", language.upper())
+            self.logger.info("Auto-detected language: %s", language.upper())
 
         # Step 1: Translate query (Vietnamese → English) ──────────
         search_query = question
@@ -69,15 +96,13 @@ class RAGModuleImpl:
         sources = []
         for i, doc in enumerate(reranked):
             context_parts.append(f"[{i + 1}] {doc['text']}")
-            sources.append(
-                SourceInfo(
-                    rank=i + 1,
-                    text=doc["text"][:100] + "...",
-                    source=doc.get("source", "unknown"),
-                    title=doc.get("title", ""),
-                    rerank_score=doc.get("rerank_score", 0.0),
-                )
-            )
+            sources.append(SourceInfo(
+                rank=i + 1,
+                text=doc["text"][:100] + "...",
+                source=doc.get("source", "unknown"),
+                title=doc.get("title", ""),
+                rerank_score=doc.get("rerank_score", 0.0),
+            ))
         context = "\n\n".join(context_parts)
 
         # Step 6: LLM Generate ────────────────────────────────────
@@ -96,7 +121,7 @@ class RAGModuleImpl:
             tokens_per_second = 0.0
 
         total_ms = (time.perf_counter() - pipeline_start) * 1000
-        logger.info("RAG query completed in %.0fms", total_ms)
+        self.logger.info("RAG query completed in %.0fms", total_ms)
 
         return RAGResult(
             question=question,
