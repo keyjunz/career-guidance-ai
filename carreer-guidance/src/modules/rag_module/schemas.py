@@ -1,3 +1,6 @@
+"""Schemas for RAG module orchestration."""
+
+
 from dataclasses import dataclass, field
 from typing import Literal
 
