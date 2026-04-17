@@ -3,7 +3,10 @@ from typing import Any
 from uuid import UUID
 
 from src.modules.sync_doc_module.main import SyncDocumentModuleImpl
-from src.request_body.sync_doc import SyncDocumentsRequest, SyncDocumentsResponse
+from src.request_body.sync_request_body import (
+    SyncDocumentsRequest,
+    SyncDocumentsResponse,
+)
 
 RequestContext = dict[str, Any]
 
@@ -17,9 +20,6 @@ class SyncDataHandler:
         execution_id: str,
     ) -> None:
         self.execution_id = execution_id
-        self.sync_document_module = SyncDocumentModuleImpl(
-            execution_id=self.execution_id
-        )
 
     def process_uploaded_files(
         self,
@@ -45,7 +45,11 @@ class SyncDataHandler:
             )
 
             # Process using sync_documents
-            return self.sync_document_module.sync_documents(
+            sync_document_module = SyncDocumentModuleImpl(
+                self.execution_id,
+                user_id=str(user_id),
+            )
+            return sync_document_module.sync_documents(
                 request=request,
                 context=context,
             )
@@ -74,7 +78,11 @@ class SyncDataHandler:
             ingestion_job_id,
         )
         try:
-            return self.sync_document_module.get_status_sync_doc(
+            sync_document_module = SyncDocumentModuleImpl(
+                self.execution_id,
+                user_id=str(context.get("user_id") or "").strip() or None,
+            )
+            return sync_document_module.get_status_sync_doc(
                 ingestion_job_id=ingestion_job_id,
                 context=context,
             )

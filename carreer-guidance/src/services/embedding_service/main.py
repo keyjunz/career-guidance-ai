@@ -7,11 +7,21 @@ from typing import List, Union
 import numpy as np
 from sentence_transformers import SentenceTransformer
 
-from src.config.embedding_config import CACHE_DIR, DEFAULT_EMBEDDING, DEVICE, EMBEDDING_MODELS
+from src.config.embedding_config import (
+    CACHE_DIR,
+    DEFAULT_EMBEDDING,
+    DEVICE,
+    EMBEDDING_MODELS,
+)
 
 
 class EmbeddingService:
-    def __init__(self, *, execution_id: str, model_key: str = DEFAULT_EMBEDDING, device: str = DEVICE):
+    def __init__(
+        self,
+        execution_id: str,
+        model_key: str = DEFAULT_EMBEDDING,
+        device: str = DEVICE,
+    ):
         self.execution_id = execution_id
         self.logger = logging.getLogger(f"{__name__}[{execution_id}]")
 
@@ -29,9 +39,18 @@ class EmbeddingService:
         self.logger.info("Loading %s on %s...", self.model_name, self.device)
         self.model = SentenceTransformer(self.model_name, device=self.device)
         self.model.max_seq_length = self.model_config["max_seq_length"]
-        self.logger.info("Loaded. Dim=%d, MaxSeqLen=%d", self.dim, self.model.max_seq_length)
+        self.logger.info(
+            "Loaded. Dim=%d, MaxSeqLen=%d", self.dim, self.model.max_seq_length
+        )
 
-    def encode(self, texts: Union[str, List[str]], is_query: bool = True, batch_size: int = 64, show_progress: bool = False, use_cache: bool = True) -> np.ndarray:
+    def encode(
+        self,
+        texts: Union[str, List[str]],
+        is_query: bool = True,
+        batch_size: int = 64,
+        show_progress: bool = False,
+        use_cache: bool = True,
+    ) -> np.ndarray:
         single_input = isinstance(texts, str)
         if single_input:
             texts = [texts]
@@ -40,11 +59,19 @@ class EmbeddingService:
         if use_cache:
             cached, to_encode, to_encode_idx = self._check_cache(prefixed_texts)
             if to_encode:
-                new_embeddings = self.model.encode(to_encode, batch_size=batch_size, show_progress_bar=show_progress, convert_to_numpy=True, normalize_embeddings=True)
+                new_embeddings = self.model.encode(
+                    to_encode,
+                    batch_size=batch_size,
+                    show_progress_bar=show_progress,
+                    convert_to_numpy=True,
+                    normalize_embeddings=True,
+                )
                 for text, emb in zip(to_encode, new_embeddings):
                     self._cache[self._hash(text)] = emb
                 self._save_cache()
-                all_embeddings = np.zeros((len(prefixed_texts), self.dim), dtype=np.float32)
+                all_embeddings = np.zeros(
+                    (len(prefixed_texts), self.dim), dtype=np.float32
+                )
                 encode_idx = 0
                 for i in range(len(prefixed_texts)):
                     if i in to_encode_idx:
@@ -53,16 +80,28 @@ class EmbeddingService:
                     else:
                         all_embeddings[i] = cached[self._hash(prefixed_texts[i])]
             else:
-                all_embeddings = np.array([cached[self._hash(t)] for t in prefixed_texts], dtype=np.float32)
+                all_embeddings = np.array(
+                    [cached[self._hash(t)] for t in prefixed_texts], dtype=np.float32
+                )
         else:
-            all_embeddings = self.model.encode(prefixed_texts, batch_size=batch_size, show_progress_bar=show_progress, convert_to_numpy=True, normalize_embeddings=True)
+            all_embeddings = self.model.encode(
+                prefixed_texts,
+                batch_size=batch_size,
+                show_progress_bar=show_progress,
+                convert_to_numpy=True,
+                normalize_embeddings=True,
+            )
         return all_embeddings[0] if single_input else all_embeddings
 
     def encode_query(self, query: str, use_cache: bool = True) -> np.ndarray:
         return self.encode(query, is_query=True, use_cache=use_cache)
 
-    def encode_passages(self, passages: List[str], batch_size: int = 64, show_progress: bool = True) -> np.ndarray:
-        return self.encode(passages, is_query=False, batch_size=batch_size, show_progress=show_progress)
+    def encode_passages(
+        self, passages: List[str], batch_size: int = 64, show_progress: bool = True
+    ) -> np.ndarray:
+        return self.encode(
+            passages, is_query=False, batch_size=batch_size, show_progress=show_progress
+        )
 
     @staticmethod
     def _hash(text: str) -> str:
@@ -98,5 +137,7 @@ class EmbeddingService:
         self.logger.info("Embedding cache cleared.")
 
     def get_memory_usage_mb(self) -> float:
-        param_size = sum(p.numel() * p.element_size() for p in self.model[0].auto_model.parameters())
-        return param_size / (1024 ** 2)
+        param_size = sum(
+            p.numel() * p.element_size() for p in self.model[0].auto_model.parameters()
+        )
+        return param_size / (1024**2)

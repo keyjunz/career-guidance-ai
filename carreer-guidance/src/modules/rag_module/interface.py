@@ -1,9 +1,8 @@
 """Contracts for RAG module."""
 
-
 from typing import Protocol
 
-from src.modules.rag_module.schemas import RAGQuery, RAGResult
+from src.modules.rag_module.schema_models import RAGQuery, RAGResult
 
 
 class RAGModule(Protocol):

@@ -10,7 +10,7 @@ from .database import (
     get_session,
     session_scope,
 )
-from .settings import Settings, get_settings, validate_startup_config
+from .settings_models import Settings, get_settings, validate_startup_config
 
 __all__ = [
     "Settings",

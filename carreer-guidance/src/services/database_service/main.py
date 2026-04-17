@@ -8,7 +8,10 @@ from src.config.database import session_scope
 from src.database.models import Document
 from src.enums.doc_status_method import DocSyncStatus
 from src.repositories.document_repository import DocumentRepository
-from src.request_body.sync_doc import SyncDocumentsRequest, SyncDocumentsResponse
+from src.request_body.sync_request_body import (
+    SyncDocumentsRequest,
+    SyncDocumentsResponse,
+)
 
 
 class DatabaseSyncService:

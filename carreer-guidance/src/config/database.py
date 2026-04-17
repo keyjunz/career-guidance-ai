@@ -5,7 +5,7 @@ from functools import lru_cache
 from sqlalchemy import Engine, create_engine
 from sqlalchemy.orm import Session, sessionmaker
 
-from .settings import Settings, get_settings
+from .settings_models import Settings, get_settings
 
 
 def create_engine_from_settings(settings: Settings | None = None) -> Engine:

@@ -158,6 +158,31 @@ class VectorDBService:
             )
             self.collection = None
 
+    def _build_embedding(self, text: str) -> list[float] | None:
+        if not self.embedding_service:
+            return None
+
+        if hasattr(self.embedding_service, "get_embedding"):
+            vector = self.embedding_service.get_embedding(text)
+        elif hasattr(self.embedding_service, "encode"):
+            vector = self.embedding_service.encode(
+                text,
+                is_query=False,
+                use_cache=True,
+            )
+        else:
+            raise TypeError(
+                "embedding_service must provide get_embedding(text) or encode(text, ...)"
+            )
+
+        if vector is None:
+            return None
+
+        if hasattr(vector, "tolist"):
+            vector = vector.tolist()
+
+        return [float(value) for value in vector]
+
     def upsert_chunks(
         self,
         ingestion_job_id: str,
@@ -190,7 +215,7 @@ class VectorDBService:
                 embedding = None
                 if self.embedding_service:
                     try:
-                        embedding = self.embedding_service.get_embedding(text)
+                        embedding = self._build_embedding(text)
                     except Exception as exc:
                         logger.warning(
                             "Failed to get embedding for chunk %s: %s", chunk_id, exc

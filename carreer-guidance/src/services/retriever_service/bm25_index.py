@@ -1,0 +1,30 @@
+from typing import List, Tuple
+
+import numpy as np
+from rank_bm25 import BM25Okapi
+
+BM25_K1 = 1.5
+BM25_B = 0.75
+
+
+class BM25Index:
+    """BM25 sparse retriever for keyword-based search."""
+
+    def __init__(self) -> None:
+        self.bm25: BM25Okapi | None = None
+        self.corpus_tokens: list[list[str]] | None = None
+
+    def build(self, corpus: List[str]) -> None:
+        self.corpus_tokens = [doc.lower().split() for doc in corpus]
+        self.bm25 = BM25Okapi(self.corpus_tokens, k1=BM25_K1, b=BM25_B)
+
+    @property
+    def is_built(self) -> bool:
+        return self.bm25 is not None
+
+    def search(self, query: str, k: int = 20) -> Tuple[np.ndarray, np.ndarray]:
+        query_tokens = query.lower().split()
+        scores = self.bm25.get_scores(query_tokens)
+        top_indices = np.argsort(scores)[::-1][:k]
+        top_scores = scores[top_indices]
+        return top_scores, top_indices

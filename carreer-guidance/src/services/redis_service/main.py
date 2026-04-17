@@ -1,7 +1,7 @@
 import json
 from typing import Any
 
-from src.config.settings import get_settings
+from src.config.settings_models import get_settings
 
 
 class RedisQueueService:

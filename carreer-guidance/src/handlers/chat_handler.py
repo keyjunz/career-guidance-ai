@@ -4,7 +4,7 @@ from collections.abc import AsyncIterator
 from typing import Any
 
 from src.agent import main as agent_main
-from src.request_body.chat import ChatRequest, ChatResponse
+from src.request_body.chat_request_body import ChatRequest, ChatResponse
 from src.services.dispatcher_service.main import DispatcherService
 from src.utils.api_response import BadRequest, InternalServerError, NotFound, Ok
 

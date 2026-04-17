@@ -6,13 +6,12 @@ Rules:
 - Follows sync_doc_module pattern: clean orchestration only
 """
 
-
 import logging
 import time
 
 import langdetect
 
-from src.modules.rag_module.schemas import RAGQuery, RAGResult, SourceInfo
+from src.modules.rag_module.schema_models import RAGQuery, RAGResult, SourceInfo
 from src.services.embedding_service.main import EmbeddingService
 from src.services.retriever_service.main import RetrieverService
 from src.services.reranker_service.main import RerankerService
@@ -34,12 +33,14 @@ class RAGModuleImpl:
         self,
         *,
         execution_id: str,
+        user_id: str | None = None,
         embedding_service: EmbeddingService | None = None,
         retriever_service: RetrieverService | None = None,
         reranker_service: RerankerService | None = None,
         llm_service: LLMService | None = None,
     ) -> None:
         self.execution_id = execution_id
+        self.user_id = str(user_id).strip() if user_id else None
         self.logger = logging.getLogger(f"{__name__}[{execution_id}]")
 
         self.embedding_service = embedding_service or EmbeddingService(
@@ -78,10 +79,15 @@ class RAGModuleImpl:
         query_embedding = self.embedding_service.encode_query(search_query)
 
         # Step 3: Hybrid Retrieve ─────────────────────────────────
+        where_filter = None
+        if self.user_id:
+            where_filter = {"user_id": {"$eq": self.user_id}}
+
         retrieved = self.retriever_service.search(
             query=search_query,
             query_embedding=query_embedding,
             top_k=request.retrieve_k,
+            where=where_filter,
         )
 
         # Step 4: Rerank ──────────────────────────────────────────
@@ -96,13 +102,15 @@ class RAGModuleImpl:
         sources = []
         for i, doc in enumerate(reranked):
             context_parts.append(f"[{i + 1}] {doc['text']}")
-            sources.append(SourceInfo(
-                rank=i + 1,
-                text=doc["text"][:100] + "...",
-                source=doc.get("source", "unknown"),
-                title=doc.get("title", ""),
-                rerank_score=doc.get("rerank_score", 0.0),
-            ))
+            sources.append(
+                SourceInfo(
+                    rank=i + 1,
+                    text=doc["text"][:100] + "...",
+                    source=doc.get("source", "unknown"),
+                    title=doc.get("title", ""),
+                    rerank_score=doc.get("rerank_score", 0.0),
+                )
+            )
         context = "\n\n".join(context_parts)
 
         # Step 6: LLM Generate ────────────────────────────────────

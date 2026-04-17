@@ -2,10 +2,14 @@ import logging
 import time
 from typing import Any
 
-from src.request_body.sync_doc import SyncDocumentsRequest, SyncDocumentsResponse
+from src.request_body.sync_request_body import (
+    SyncDocumentsRequest,
+    SyncDocumentsResponse,
+)
 from src.services.database_service.main import DatabaseSyncService
 from src.services.document_service.main import DocumentService
-from src.services.gemini.main import GeminiEmbeddingService, GeminiOCRService
+from src.services.embedding_service.main import EmbeddingService
+from src.services.gemini.main import GeminiOCRService
 from src.services.vector_db_service.main import VectorDBService
 
 RequestContext = dict[str, Any]
@@ -18,29 +22,18 @@ class SyncDocumentModuleImpl:
 
     def __init__(
         self,
-        *,
         execution_id: str,
-        document_service: DocumentService | None = None,
-        gemini_ocr_service: GeminiOCRService | None = None,
-        database_service: DatabaseSyncService | None = None,
-        vector_db_service: VectorDBService | None = None,
+        user_id: str | None = None,
     ) -> None:
         self.execution_id = execution_id
-        self.document_service = document_service or DocumentService(
-            execution_id=self.execution_id
-        )
-        self.gemini_ocr_service = gemini_ocr_service or GeminiOCRService(
-            execution_id=self.execution_id
-        )
-        self.database_service = database_service or DatabaseSyncService(
-            execution_id=self.execution_id
-        )
-        gemini_embedding_service = GeminiEmbeddingService(
-            execution_id=self.execution_id
-        )
-        self.vector_db_service = vector_db_service or VectorDBService(
-            execution_id=self.execution_id,
-            embedding_service=gemini_embedding_service,
+        self.user_id = str(user_id).strip() if user_id else None
+        self.document_service = DocumentService(execution_id)
+        self.gemini_ocr_service = GeminiOCRService(execution_id)
+        self.database_service = DatabaseSyncService(execution_id)
+        embedding_service = EmbeddingService(execution_id)
+        self.vector_db_service = VectorDBService(
+            execution_id,
+            embedding_service=embedding_service,
         )
 
     def sync_documents(
@@ -51,10 +44,15 @@ class SyncDocumentModuleImpl:
         """Process uploaded files: OCR extraction → chunk → vector DB."""
         job_id = ""
         user_id = str(request.user_id)
+        context_user_id = str(context.get("user_id") or "").strip()
         started_at = time.perf_counter()
         try:
             if context.get("execution_id") != self.execution_id:
                 raise ValueError("context.execution_id must match module execution_id")
+            if self.user_id and self.user_id != user_id:
+                raise ValueError("module.user_id must match request.user_id")
+            if context_user_id and context_user_id != user_id:
+                raise ValueError("context.user_id must match request.user_id")
 
             logger.info(
                 "sync_documents started: execution_id=%s user_id=%s files=%d industry_type=%s",
