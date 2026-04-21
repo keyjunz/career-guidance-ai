@@ -1,17 +1,102 @@
+import logging
 from pathlib import Path
 from urllib.parse import urlparse
+from uuid import UUID
 from uuid import uuid4
 
 from sqlalchemy import select
 
 from src.config.database import session_scope
-from src.database.models import Document
+from src.database.models import Conversation, Document, Message
 from src.enums.doc_status_method import DocSyncStatus
+from src.repositories.conversation_repository import ConversationRepository
 from src.repositories.document_repository import DocumentRepository
+from src.repositories.message_repository import MessageRepository
 from src.request_body.sync_request_body import (
     SyncDocumentsRequest,
     SyncDocumentsResponse,
 )
+
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+
+
+class DatabaseChatService:
+    """Persist chat conversations and messages to database."""
+
+    def __init__(self, execution_id: str) -> None:
+        self.execution_id = execution_id
+
+    def save_chat_turn(
+        self,
+        *,
+        user_id: UUID,
+        question: str,
+        answer: str,
+        conversation_id: UUID | None = None,
+        session_id: str | None = None,
+    ) -> tuple[UUID, UUID]:
+        normalized_question = question.strip()
+        normalized_answer = answer.strip()
+        if not normalized_question:
+            raise ValueError("question must not be empty")
+        if not normalized_answer:
+            raise ValueError("answer must not be empty")
+
+        normalized_session_id = (
+            session_id or self.execution_id or str(uuid4())
+        ).strip()
+        normalized_session_id = normalized_session_id[:50] or uuid4().hex[:50]
+
+        with session_scope() as session:
+            conversation_repo = ConversationRepository(session)
+            message_repo = MessageRepository(session)
+
+            conversation = self._resolve_conversation(
+                conversation_repo=conversation_repo,
+                user_id=user_id,
+                conversation_id=conversation_id,
+                session_id=normalized_session_id,
+            )
+
+            message = message_repo.create(
+                {
+                    "conversation_id": conversation.id,
+                    "user_message": normalized_question,
+                    "chatbot_response": normalized_answer,
+                    "user_id": user_id,
+                }
+            )
+
+        return conversation.id, message.id
+
+    def _resolve_conversation(
+        self,
+        *,
+        conversation_repo: ConversationRepository,
+        user_id: UUID,
+        conversation_id: UUID | None,
+        session_id: str,
+    ) -> Conversation:
+        if conversation_id is not None:
+            existing = conversation_repo.get_by_id(conversation_id)
+            if existing is not None:
+                return existing
+
+            return conversation_repo.create(
+                {
+                    "id": conversation_id,
+                    "session_id": session_id,
+                    "user_id": user_id,
+                }
+            )
+
+        return conversation_repo.create(
+            {
+                "session_id": session_id,
+                "user_id": user_id,
+            }
+        )
 
 
 class DatabaseSyncService:

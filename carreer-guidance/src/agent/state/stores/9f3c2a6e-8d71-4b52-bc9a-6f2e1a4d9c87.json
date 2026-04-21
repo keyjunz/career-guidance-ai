@@ -1,0 +1,1024 @@
+{
+  "user_id": "9f3c2a6e-8d71-4b52-bc9a-6f2e1a4d9c87",
+  "created_at": "2026-04-21T07:33:56.629896+00:00",
+  "updated_at": "2026-04-21T08:13:06.363817+00:00",
+  "pending_by_execution": {},
+  "status_by_execution": {
+    "d0a15ccb-a06b-4d65-aefa-9f4f227ecccf": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-04-21T07:33:56.631036+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-04-21T07:33:56.633287+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-04-21T07:33:56.634287+00:00"
+      },
+      {
+        "status": "Dang truy xuat tri thuc va sinh cau tra loi (RAG).",
+        "timestamp": "2026-04-21T07:33:56.635287+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-04-21T07:34:27.432532+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-04-21T07:34:27.432532+00:00"
+      }
+    ],
+    "d1d8729b-e4c3-4cdc-8cc2-a3825c16ec26": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-04-21T07:40:06.979292+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-04-21T07:40:06.981805+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-04-21T07:40:06.982860+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-04-21T07:40:06.983858+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-04-21T07:40:06.984861+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-04-21T07:40:06.984861+00:00"
+      }
+    ],
+    "87f66202-41ad-4a81-9880-099cef6a51dc": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-04-21T07:40:08.315189+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-04-21T07:40:08.317854+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-04-21T07:40:08.318854+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-04-21T07:40:08.318854+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-04-21T07:40:08.320896+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-04-21T07:40:08.322153+00:00"
+      }
+    ],
+    "3a54ac7e-8bd9-4af4-858a-bc7062175c02": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-04-21T07:40:09.230757+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-04-21T07:40:09.232692+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-04-21T07:40:09.235427+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-04-21T07:40:09.237437+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-04-21T07:40:09.243193+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-04-21T07:40:09.244683+00:00"
+      }
+    ],
+    "e3896f79-a765-47b7-a8c1-6c69b6f90a01": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-04-21T07:40:11.063142+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-04-21T07:40:11.066170+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-04-21T07:40:11.067168+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-04-21T07:40:11.068169+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-04-21T07:40:11.069673+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-04-21T07:40:11.070672+00:00"
+      }
+    ],
+    "aa4fb421-1a2b-47ed-9057-0c00cc9d2fc9": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-04-21T07:40:21.185898+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-04-21T07:40:21.187320+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-04-21T07:40:21.190866+00:00"
+      },
+      {
+        "status": "Dang truy xuat tri thuc va sinh cau tra loi (RAG).",
+        "timestamp": "2026-04-21T07:40:21.193866+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-04-21T07:40:51.451099+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-04-21T07:40:51.452094+00:00"
+      }
+    ],
+    "f7a8f983-8bec-4132-9b85-404f7fcdc4c8": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-04-21T07:42:17.214792+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-04-21T07:42:17.221787+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-04-21T07:42:17.223121+00:00"
+      },
+      {
+        "status": "Dang truy xuat tri thuc va sinh cau tra loi (RAG).",
+        "timestamp": "2026-04-21T07:42:17.225122+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-04-21T07:42:45.079211+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-04-21T07:42:45.081212+00:00"
+      }
+    ],
+    "bceba526-29d9-461b-bb8f-e44a99186b6b": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-04-21T07:44:48.889652+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-04-21T07:44:48.892003+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-04-21T07:44:48.893047+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-04-21T07:44:48.894613+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-04-21T07:44:48.897202+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-04-21T07:44:48.898437+00:00"
+      }
+    ],
+    "eb5f43c4-692b-4223-8db5-6f9e3b315ff5": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-04-21T07:44:53.716273+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-04-21T07:44:53.720991+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-04-21T07:44:53.723189+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-04-21T07:44:53.725260+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-04-21T07:44:53.730066+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-04-21T07:44:53.733662+00:00"
+      }
+    ],
+    "ee745c73-7cce-4c1c-96d4-fc8b901eed91": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-04-21T07:46:36.836766+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-04-21T07:46:36.839108+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-04-21T07:46:36.841106+00:00"
+      },
+      {
+        "status": "Dang truy xuat tri thuc va sinh cau tra loi (RAG).",
+        "timestamp": "2026-04-21T07:46:36.841106+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-04-21T07:47:01.871669+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-04-21T07:47:01.872679+00:00"
+      }
+    ],
+    "7274a124-cff8-43ae-a5b8-2faefd2c3d0c": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-04-21T07:48:38.567661+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-04-21T07:48:38.575169+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-04-21T07:48:38.577222+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-04-21T07:48:38.578358+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-04-21T07:48:38.581460+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-04-21T07:48:38.582778+00:00"
+      }
+    ],
+    "e762baac-956c-4511-8216-344b14b01542": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-04-21T07:57:32.966776+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-04-21T07:57:32.972280+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-04-21T07:57:32.974278+00:00"
+      },
+      {
+        "status": "Dang truy xuat tri thuc va sinh cau tra loi (RAG).",
+        "timestamp": "2026-04-21T07:57:32.976621+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-04-21T07:57:57.864555+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-04-21T07:57:57.866557+00:00"
+      }
+    ],
+    "6cbedb03-2926-4c6a-8785-5f55cee40af3": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-04-21T08:13:06.349087+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-04-21T08:13:06.353737+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-04-21T08:13:06.355177+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-04-21T08:13:06.357205+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-04-21T08:13:06.361208+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-04-21T08:13:06.363817+00:00"
+      }
+    ]
+  },
+  "qa_cache": {
+    "what is the main difference between traditional databases and vector databases?": {
+      "question": "What is the main difference between traditional databases and vector databases?",
+      "answer": "[API Error] Failed after 3 retries: Connection error.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "I. THE LIMITATION OF TRADITIONAL DATABASES\nTraditional databases (SQL like PostgreSQL or NoSQL like ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": 5.210312366485596
+        },
+        {
+          "rank": 2,
+          "text": "Storage: The vector is stored in the database along with \"Metadata\" (the original text and the\nfilen...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -1.4484267234802246
+        },
+        {
+          "rank": 3,
+          "text": "• HNSW (Hierarchical Navigable Small World): The \"Gold Standard\" algorithm. It creates a\nmulti-layer...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -5.225646495819092
+        },
+        {
+          "rank": 4,
+          "text": "Add a document from your library\ndoc_text = \"Standardizing data pipelines is essential for Big Data ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -6.235584259033203
+        }
+      ],
+      "conversation_id": "091f7eba-d757-4e8a-b6a5-3c1d0eefddf6",
+      "updated_at": "2026-04-21T07:44:53.727697+00:00"
+    },
+    "what is the main difference between traditional databases and vector databasess?": {
+      "question": "What is the main difference between traditional databases and vector databasess?",
+      "answer": "[API Error] Failed after 3 retries: Connection error.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "I. THE LIMITATION OF TRADITIONAL DATABASES\nTraditional databases (SQL like PostgreSQL or NoSQL like ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": 5.388350486755371
+        },
+        {
+          "rank": 2,
+          "text": "Storage: The vector is stored in the database along with \"Metadata\" (the original text and the\nfilen...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -2.039137363433838
+        },
+        {
+          "rank": 3,
+          "text": "• HNSW (Hierarchical Navigable Small World): The \"Gold Standard\" algorithm. It creates a\nmulti-layer...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -5.048145771026611
+        },
+        {
+          "rank": 4,
+          "text": "Add a document from your library\ndoc_text = \"Standardizing data pipelines is essential for Big Data ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -6.217458724975586
+        }
+      ],
+      "conversation_id": "bc7a9a98-b77d-4371-b32c-732c4900f31f",
+      "updated_at": "2026-04-21T07:44:48.895670+00:00"
+    },
+    "what is the main difference between traditional databases and vector databasess": {
+      "question": "What is the main difference between traditional databases and vector databasess",
+      "answer": "[API Error] Failed after 3 retries: Connection error.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "I. THE LIMITATION OF TRADITIONAL DATABASES\nTraditional databases (SQL like PostgreSQL or NoSQL like ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": 5.923628330230713
+        },
+        {
+          "rank": 2,
+          "text": "Storage: The vector is stored in the database along with \"Metadata\" (the original text and the\nfilen...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -0.5802570581436157
+        },
+        {
+          "rank": 3,
+          "text": "• HNSW (Hierarchical Navigable Small World): The \"Gold Standard\" algorithm. It creates a\nmulti-layer...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -4.399115562438965
+        },
+        {
+          "rank": 4,
+          "text": "Add a document from your library\ndoc_text = \"Standardizing data pipelines is essential for Big Data ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -5.609365940093994
+        }
+      ],
+      "conversation_id": "c3c28079-20fb-4044-88ca-e56754e96eed",
+      "updated_at": "2026-04-21T07:48:38.580308+00:00"
+    },
+    "what is the main difference between traditional databases and vector databasesss?": {
+      "question": "What is the main difference between traditional databases and vector databasesss?",
+      "answer": "The main difference between traditional databases and vector databases lies in how they store and retrieve data. Traditional databases, like SQL or NoSQL, are designed for exact matches. For example, a SQL database would not find \"car\" if you searched for \"automobile\" unless a synonym map was explicitly programmed.\n\nIn contrast, vector databases store data based on contextual meaning. They represent data, such as text, as arrays of floating-point numbers called vector embeddings. These embeddings capture the semantic meaning of the data. The key principle is that mathematically similar data points will have vector embeddings that are physically close to each other in a high-dimensional space. This allows vector databases to understand that \"automobile\" and \"car\" are semantically similar because their vector embeddings are close.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "I. THE LIMITATION OF TRADITIONAL DATABASES\nTraditional databases (SQL like PostgreSQL or NoSQL like ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": 5.001784324645996
+        },
+        {
+          "rank": 2,
+          "text": "Storage: The vector is stored in the database along with \"Metadata\" (the original text and the\nfilen...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -2.331265687942505
+        },
+        {
+          "rank": 3,
+          "text": "• HNSW (Hierarchical Navigable Small World): The \"Gold Standard\" algorithm. It creates a\nmulti-layer...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -5.134487628936768
+        },
+        {
+          "rank": 4,
+          "text": "Add a document from your library\ndoc_text = \"Standardizing data pipelines is essential for Big Data ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -6.321060657501221
+        }
+      ],
+      "conversation_id": "54ad1664-7ad7-40f6-a176-435850ecf32f",
+      "updated_at": "2026-04-21T07:47:01.869161+00:00"
+    },
+    "how does the vector approach improve search results compared to sql": {
+      "question": "How does the vector approach improve search results compared to SQL",
+      "answer": "The vector approach improves search results compared to traditional SQL databases by storing data based on **contextual meaning** rather than exact string matches.\n\nSQL databases require explicit programming of synonym maps to find related terms (e.g., \"car\" for \"automobile\"). In contrast, vector databases store data as arrays of floating-point numbers called **vector embeddings**. These embeddings represent the contextual meaning of the data.\n\nWhen a search is performed, the vector database doesn't look for exact matches. Instead, it uses **similarity metrics** like Cosine Similarity to find vectors that are mathematically close to the query vector in high-dimensional space. This means that a query for \"automobile\" can find data containing \"car\" because their vector embeddings are physically close, indicating semantic similarity.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "I. THE LIMITATION OF TRADITIONAL DATABASES\nTraditional databases (SQL like PostgreSQL or NoSQL like ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -0.8031310439109802
+        },
+        {
+          "rank": 2,
+          "text": "Storage: The vector is stored in the database along with \"Metadata\" (the original text and the\nfilen...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -3.796149253845215
+        },
+        {
+          "rank": 3,
+          "text": "Add a document from your library\ndoc_text = \"Standardizing data pipelines is essential for Big Data ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -4.152554512023926
+        },
+        {
+          "rank": 4,
+          "text": "• HNSW (Hierarchical Navigable Small World): The \"Gold Standard\" algorithm. It creates a\nmulti-layer...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -6.0271406173706055
+        }
+      ],
+      "conversation_id": "c84e9da7-d797-49c9-80bf-7eeb89a3c89e",
+      "updated_at": "2026-04-21T08:13:06.359207+00:00"
+    }
+  },
+  "history": [
+    {
+      "execution_id": "d0a15ccb-a06b-4d65-aefa-9f4f227ecccf",
+      "conversation_id": "fddf19d5-6eed-4c97-9e08-98bd632bf7d7",
+      "question": "What is the main difference between traditional databases and vector databases?",
+      "answer": "[API Error] Failed after 3 retries: Connection error.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "I. THE LIMITATION OF TRADITIONAL DATABASES\nTraditional databases (SQL like PostgreSQL or NoSQL like ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": 5.210312366485596
+        },
+        {
+          "rank": 2,
+          "text": "Storage: The vector is stored in the database along with \"Metadata\" (the original text and the\nfilen...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -1.4484267234802246
+        },
+        {
+          "rank": 3,
+          "text": "• HNSW (Hierarchical Navigable Small World): The \"Gold Standard\" algorithm. It creates a\nmulti-layer...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -5.225646495819092
+        },
+        {
+          "rank": 4,
+          "text": "Add a document from your library\ndoc_text = \"Standardizing data pipelines is essential for Big Data ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -6.235584259033203
+        }
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-04-21T07:34:27.431497+00:00"
+    },
+    {
+      "execution_id": "d1d8729b-e4c3-4cdc-8cc2-a3825c16ec26",
+      "conversation_id": "d637f9a0-e712-4244-87a9-3d8e7aa9b831",
+      "question": "What is the main difference between traditional databases and vector databases?",
+      "answer": "[API Error] Failed after 3 retries: Connection error.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "I. THE LIMITATION OF TRADITIONAL DATABASES\nTraditional databases (SQL like PostgreSQL or NoSQL like ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": 5.210312366485596
+        },
+        {
+          "rank": 2,
+          "text": "Storage: The vector is stored in the database along with \"Metadata\" (the original text and the\nfilen...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -1.4484267234802246
+        },
+        {
+          "rank": 3,
+          "text": "• HNSW (Hierarchical Navigable Small World): The \"Gold Standard\" algorithm. It creates a\nmulti-layer...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -5.225646495819092
+        },
+        {
+          "rank": 4,
+          "text": "Add a document from your library\ndoc_text = \"Standardizing data pipelines is essential for Big Data ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -6.235584259033203
+        }
+      ],
+      "cache_hit": true,
+      "timestamp": "2026-04-21T07:40:06.983858+00:00"
+    },
+    {
+      "execution_id": "87f66202-41ad-4a81-9880-099cef6a51dc",
+      "conversation_id": "e5af8e7b-6664-4d6a-8be4-3251e3de64e6",
+      "question": "What is the main difference between traditional databases and vector databases?",
+      "answer": "[API Error] Failed after 3 retries: Connection error.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "I. THE LIMITATION OF TRADITIONAL DATABASES\nTraditional databases (SQL like PostgreSQL or NoSQL like ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": 5.210312366485596
+        },
+        {
+          "rank": 2,
+          "text": "Storage: The vector is stored in the database along with \"Metadata\" (the original text and the\nfilen...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -1.4484267234802246
+        },
+        {
+          "rank": 3,
+          "text": "• HNSW (Hierarchical Navigable Small World): The \"Gold Standard\" algorithm. It creates a\nmulti-layer...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -5.225646495819092
+        },
+        {
+          "rank": 4,
+          "text": "Add a document from your library\ndoc_text = \"Standardizing data pipelines is essential for Big Data ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -6.235584259033203
+        }
+      ],
+      "cache_hit": true,
+      "timestamp": "2026-04-21T07:40:08.319895+00:00"
+    },
+    {
+      "execution_id": "3a54ac7e-8bd9-4af4-858a-bc7062175c02",
+      "conversation_id": "135fe4e5-5640-45e3-b356-6c08badc4b42",
+      "question": "What is the main difference between traditional databases and vector databases?",
+      "answer": "[API Error] Failed after 3 retries: Connection error.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "I. THE LIMITATION OF TRADITIONAL DATABASES\nTraditional databases (SQL like PostgreSQL or NoSQL like ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": 5.210312366485596
+        },
+        {
+          "rank": 2,
+          "text": "Storage: The vector is stored in the database along with \"Metadata\" (the original text and the\nfilen...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -1.4484267234802246
+        },
+        {
+          "rank": 3,
+          "text": "• HNSW (Hierarchical Navigable Small World): The \"Gold Standard\" algorithm. It creates a\nmulti-layer...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -5.225646495819092
+        },
+        {
+          "rank": 4,
+          "text": "Add a document from your library\ndoc_text = \"Standardizing data pipelines is essential for Big Data ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -6.235584259033203
+        }
+      ],
+      "cache_hit": true,
+      "timestamp": "2026-04-21T07:40:09.241176+00:00"
+    },
+    {
+      "execution_id": "e3896f79-a765-47b7-a8c1-6c69b6f90a01",
+      "conversation_id": "75c8e886-265a-4697-802a-2c232363d1c1",
+      "question": "What is the main difference between traditional databases and vector databases?",
+      "answer": "[API Error] Failed after 3 retries: Connection error.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "I. THE LIMITATION OF TRADITIONAL DATABASES\nTraditional databases (SQL like PostgreSQL or NoSQL like ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": 5.210312366485596
+        },
+        {
+          "rank": 2,
+          "text": "Storage: The vector is stored in the database along with \"Metadata\" (the original text and the\nfilen...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -1.4484267234802246
+        },
+        {
+          "rank": 3,
+          "text": "• HNSW (Hierarchical Navigable Small World): The \"Gold Standard\" algorithm. It creates a\nmulti-layer...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -5.225646495819092
+        },
+        {
+          "rank": 4,
+          "text": "Add a document from your library\ndoc_text = \"Standardizing data pipelines is essential for Big Data ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -6.235584259033203
+        }
+      ],
+      "cache_hit": true,
+      "timestamp": "2026-04-21T07:40:11.068169+00:00"
+    },
+    {
+      "execution_id": "aa4fb421-1a2b-47ed-9057-0c00cc9d2fc9",
+      "conversation_id": "737c1ef7-5e9f-4941-ad02-072fadb776fc",
+      "question": "What is the main difference between traditional databases and vector databasess?",
+      "answer": "[API Error] Failed after 3 retries: Connection error.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "I. THE LIMITATION OF TRADITIONAL DATABASES\nTraditional databases (SQL like PostgreSQL or NoSQL like ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": 5.388350486755371
+        },
+        {
+          "rank": 2,
+          "text": "Storage: The vector is stored in the database along with \"Metadata\" (the original text and the\nfilen...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -2.039137363433838
+        },
+        {
+          "rank": 3,
+          "text": "• HNSW (Hierarchical Navigable Small World): The \"Gold Standard\" algorithm. It creates a\nmulti-layer...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -5.048145771026611
+        },
+        {
+          "rank": 4,
+          "text": "Add a document from your library\ndoc_text = \"Standardizing data pipelines is essential for Big Data ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -6.217458724975586
+        }
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-04-21T07:40:51.449083+00:00"
+    },
+    {
+      "execution_id": "f7a8f983-8bec-4132-9b85-404f7fcdc4c8",
+      "conversation_id": "58bedb47-c390-43c1-8583-2b9d433e3be9",
+      "question": "What is the main difference between traditional databases and vector databasess",
+      "answer": "[API Error] Failed after 3 retries: Connection error.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "I. THE LIMITATION OF TRADITIONAL DATABASES\nTraditional databases (SQL like PostgreSQL or NoSQL like ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": 5.923628330230713
+        },
+        {
+          "rank": 2,
+          "text": "Storage: The vector is stored in the database along with \"Metadata\" (the original text and the\nfilen...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -0.5802570581436157
+        },
+        {
+          "rank": 3,
+          "text": "• HNSW (Hierarchical Navigable Small World): The \"Gold Standard\" algorithm. It creates a\nmulti-layer...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -4.399115562438965
+        },
+        {
+          "rank": 4,
+          "text": "Add a document from your library\ndoc_text = \"Standardizing data pipelines is essential for Big Data ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -5.609365940093994
+        }
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-04-21T07:42:45.077213+00:00"
+    },
+    {
+      "execution_id": "bceba526-29d9-461b-bb8f-e44a99186b6b",
+      "conversation_id": "bc7a9a98-b77d-4371-b32c-732c4900f31f",
+      "question": "What is the main difference between traditional databases and vector databasess?",
+      "answer": "[API Error] Failed after 3 retries: Connection error.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "I. THE LIMITATION OF TRADITIONAL DATABASES\nTraditional databases (SQL like PostgreSQL or NoSQL like ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": 5.388350486755371
+        },
+        {
+          "rank": 2,
+          "text": "Storage: The vector is stored in the database along with \"Metadata\" (the original text and the\nfilen...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -2.039137363433838
+        },
+        {
+          "rank": 3,
+          "text": "• HNSW (Hierarchical Navigable Small World): The \"Gold Standard\" algorithm. It creates a\nmulti-layer...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -5.048145771026611
+        },
+        {
+          "rank": 4,
+          "text": "Add a document from your library\ndoc_text = \"Standardizing data pipelines is essential for Big Data ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -6.217458724975586
+        }
+      ],
+      "cache_hit": true,
+      "timestamp": "2026-04-21T07:44:48.895670+00:00"
+    },
+    {
+      "execution_id": "eb5f43c4-692b-4223-8db5-6f9e3b315ff5",
+      "conversation_id": "091f7eba-d757-4e8a-b6a5-3c1d0eefddf6",
+      "question": "What is the main difference between traditional databases and vector databases?",
+      "answer": "[API Error] Failed after 3 retries: Connection error.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "I. THE LIMITATION OF TRADITIONAL DATABASES\nTraditional databases (SQL like PostgreSQL or NoSQL like ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": 5.210312366485596
+        },
+        {
+          "rank": 2,
+          "text": "Storage: The vector is stored in the database along with \"Metadata\" (the original text and the\nfilen...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -1.4484267234802246
+        },
+        {
+          "rank": 3,
+          "text": "• HNSW (Hierarchical Navigable Small World): The \"Gold Standard\" algorithm. It creates a\nmulti-layer...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -5.225646495819092
+        },
+        {
+          "rank": 4,
+          "text": "Add a document from your library\ndoc_text = \"Standardizing data pipelines is essential for Big Data ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -6.235584259033203
+        }
+      ],
+      "cache_hit": true,
+      "timestamp": "2026-04-21T07:44:53.727697+00:00"
+    },
+    {
+      "execution_id": "ee745c73-7cce-4c1c-96d4-fc8b901eed91",
+      "conversation_id": "54ad1664-7ad7-40f6-a176-435850ecf32f",
+      "question": "What is the main difference between traditional databases and vector databasesss?",
+      "answer": "The main difference between traditional databases and vector databases lies in how they store and retrieve data. Traditional databases, like SQL or NoSQL, are designed for exact matches. For example, a SQL database would not find \"car\" if you searched for \"automobile\" unless a synonym map was explicitly programmed.\n\nIn contrast, vector databases store data based on contextual meaning. They represent data, such as text, as arrays of floating-point numbers called vector embeddings. These embeddings capture the semantic meaning of the data. The key principle is that mathematically similar data points will have vector embeddings that are physically close to each other in a high-dimensional space. This allows vector databases to understand that \"automobile\" and \"car\" are semantically similar because their vector embeddings are close.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "I. THE LIMITATION OF TRADITIONAL DATABASES\nTraditional databases (SQL like PostgreSQL or NoSQL like ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": 5.001784324645996
+        },
+        {
+          "rank": 2,
+          "text": "Storage: The vector is stored in the database along with \"Metadata\" (the original text and the\nfilen...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -2.331265687942505
+        },
+        {
+          "rank": 3,
+          "text": "• HNSW (Hierarchical Navigable Small World): The \"Gold Standard\" algorithm. It creates a\nmulti-layer...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -5.134487628936768
+        },
+        {
+          "rank": 4,
+          "text": "Add a document from your library\ndoc_text = \"Standardizing data pipelines is essential for Big Data ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -6.321060657501221
+        }
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-04-21T07:47:01.869590+00:00"
+    },
+    {
+      "execution_id": "7274a124-cff8-43ae-a5b8-2faefd2c3d0c",
+      "conversation_id": "c3c28079-20fb-4044-88ca-e56754e96eed",
+      "question": "What is the main difference between traditional databases and vector databasess",
+      "answer": "[API Error] Failed after 3 retries: Connection error.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "I. THE LIMITATION OF TRADITIONAL DATABASES\nTraditional databases (SQL like PostgreSQL or NoSQL like ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": 5.923628330230713
+        },
+        {
+          "rank": 2,
+          "text": "Storage: The vector is stored in the database along with \"Metadata\" (the original text and the\nfilen...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -0.5802570581436157
+        },
+        {
+          "rank": 3,
+          "text": "• HNSW (Hierarchical Navigable Small World): The \"Gold Standard\" algorithm. It creates a\nmulti-layer...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -4.399115562438965
+        },
+        {
+          "rank": 4,
+          "text": "Add a document from your library\ndoc_text = \"Standardizing data pipelines is essential for Big Data ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -5.609365940093994
+        }
+      ],
+      "cache_hit": true,
+      "timestamp": "2026-04-21T07:48:38.580308+00:00"
+    },
+    {
+      "execution_id": "e762baac-956c-4511-8216-344b14b01542",
+      "conversation_id": "e0eb98b3-739f-4dd2-8f3c-82a38f896307",
+      "question": "How does the vector approach improve search results compared to SQL",
+      "answer": "The vector approach improves search results compared to traditional SQL databases by storing data based on **contextual meaning** rather than exact string matches.\n\nSQL databases require explicit programming of synonym maps to find related terms (e.g., \"car\" for \"automobile\"). In contrast, vector databases store data as arrays of floating-point numbers called **vector embeddings**. These embeddings represent the contextual meaning of the data.\n\nWhen a search is performed, the vector database doesn't look for exact matches. Instead, it uses **similarity metrics** like Cosine Similarity to find vectors that are mathematically close to the query vector in high-dimensional space. This means that a query for \"automobile\" can find data containing \"car\" because their vector embeddings are physically close, indicating semantic similarity.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "I. THE LIMITATION OF TRADITIONAL DATABASES\nTraditional databases (SQL like PostgreSQL or NoSQL like ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -0.8031310439109802
+        },
+        {
+          "rank": 2,
+          "text": "Storage: The vector is stored in the database along with \"Metadata\" (the original text and the\nfilen...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -3.796149253845215
+        },
+        {
+          "rank": 3,
+          "text": "Add a document from your library\ndoc_text = \"Standardizing data pipelines is essential for Big Data ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -4.152554512023926
+        },
+        {
+          "rank": 4,
+          "text": "• HNSW (Hierarchical Navigable Small World): The \"Gold Standard\" algorithm. It creates a\nmulti-layer...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -6.0271406173706055
+        }
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-04-21T07:57:57.862556+00:00"
+    },
+    {
+      "execution_id": "6cbedb03-2926-4c6a-8785-5f55cee40af3",
+      "conversation_id": "c84e9da7-d797-49c9-80bf-7eeb89a3c89e",
+      "question": "How does the vector approach improve search results compared to SQL",
+      "answer": "The vector approach improves search results compared to traditional SQL databases by storing data based on **contextual meaning** rather than exact string matches.\n\nSQL databases require explicit programming of synonym maps to find related terms (e.g., \"car\" for \"automobile\"). In contrast, vector databases store data as arrays of floating-point numbers called **vector embeddings**. These embeddings represent the contextual meaning of the data.\n\nWhen a search is performed, the vector database doesn't look for exact matches. Instead, it uses **similarity metrics** like Cosine Similarity to find vectors that are mathematically close to the query vector in high-dimensional space. This means that a query for \"automobile\" can find data containing \"car\" because their vector embeddings are physically close, indicating semantic similarity.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "I. THE LIMITATION OF TRADITIONAL DATABASES\nTraditional databases (SQL like PostgreSQL or NoSQL like ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -0.8031310439109802
+        },
+        {
+          "rank": 2,
+          "text": "Storage: The vector is stored in the database along with \"Metadata\" (the original text and the\nfilen...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -3.796149253845215
+        },
+        {
+          "rank": 3,
+          "text": "Add a document from your library\ndoc_text = \"Standardizing data pipelines is essential for Big Data ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -4.152554512023926
+        },
+        {
+          "rank": 4,
+          "text": "• HNSW (Hierarchical Navigable Small World): The \"Gold Standard\" algorithm. It creates a\nmulti-layer...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -6.0271406173706055
+        }
+      ],
+      "cache_hit": true,
+      "timestamp": "2026-04-21T08:13:06.359207+00:00"
+    }
+  ]
+}

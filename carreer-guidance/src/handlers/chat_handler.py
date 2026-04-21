@@ -1,126 +1,64 @@
-import inspect
+import asyncio
 import logging
 from collections.abc import AsyncIterator
 from typing import Any
 
-from src.agent import main as agent_main
-from src.request_body.chat_request_body import ChatRequest, ChatResponse
-from src.services.dispatcher_service.main import DispatcherService
-from src.utils.api_response import BadRequest, InternalServerError, NotFound, Ok
+from src.modules.chat_module.main import ChatModuleImpl
+from src.request_body.chat_request_body import ChatRequest
 
 RequestContext = dict[str, Any]
+
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
 
 class ChatHandler:
-    def __init__(self, execution_id: str) -> None:
+    def __init__(
+        self,
+        execution_id: str,
+    ) -> None:
         self.execution_id = execution_id
-        self.dispatcher_service = DispatcherService(execution_id=execution_id)
 
-    async def invoke_async_chat_handler(self, request: ChatRequest) -> dict:
-        try:
-            payload = {
-                "target_function_name": "invoke_sync_chat_handler",
-                **request.model_dump(mode="json"),
-                "execution_id": self.execution_id,
-            }
-            logger.info("Enqueue async chat request: %s", payload)
-            await self.dispatcher_service.dispatch_chat_request(payload)
+    def _build_context(self, request: ChatRequest) -> RequestContext:
+        return {
+            "execution_id": self.execution_id,
+            "trace_id": self.execution_id,
+            "user_id": str(request.user_id),
+        }
 
-            response = {
-                "message": "Message dispatched successfully",
-                "execution_id": self.execution_id,
-            }
-            return Ok(response).get_response()
-        except Exception as exc:
-            logger.error("Error in async chat handler: %s", exc)
-            return InternalServerError(
-                "Failed to dispatch async chat request."
-            ).get_response()
-
-    async def invoke_sync_chat_handler(self, request: ChatRequest) -> dict:
-        try:
-            logger.info("Invoking sync chat handler with message: %s", request.message)
-            context: RequestContext = {
-                "trace_id": self.execution_id,
-                "user_id": str(request.user_id),
-            }
-
-            invoke_fn = getattr(agent_main, "invoke", None)
-            if invoke_fn is None:
-                raise RuntimeError("Chat agent is not configured.")
-
-            result = invoke_fn(request=request, context=context)
-            if inspect.isawaitable(result):
-                result = await result
-
-            if isinstance(result, ChatResponse):
-                payload = result.model_dump()
-            elif isinstance(result, dict):
-                payload = ChatResponse.model_validate(result).model_dump()
-            else:
-                raise RuntimeError("Invalid response from chat agent.")
-
-            return Ok(payload).get_response()
-        except ValueError as exc:
-            logger.error("Value error in sync chat handler: %s", exc)
-            return BadRequest(str(exc)).get_response()
-        except Exception as exc:
-            logger.error("Error in sync chat handler: %s", exc)
-            return InternalServerError("Failed to process chat request.").get_response()
+    def _build_module(self, request: ChatRequest) -> ChatModuleImpl:
+        return ChatModuleImpl(
+            execution_id=self.execution_id,
+            user_id=str(request.user_id),
+        )
 
     async def execute(
         self,
-        request: ChatRequest | str | dict,
-        invocation_type: str,
-    ) -> dict:
-        logger.info("Executing chat handler with invocation type: %s", invocation_type)
-        try:
-            parsed_request = self._parse_request(request)
-        except ValueError as exc:
-            logger.error("Value error parsing chat request: %s", exc)
-            return BadRequest(f"Invalid request body format: {exc}").get_response()
-        except Exception as exc:
-            logger.error("Error parsing chat request: %s", exc)
-            return InternalServerError("Failed to parse chat request.").get_response()
+        request: ChatRequest,
+        invocation_type: str = "sync",
+    ) -> dict[str, Any]:
+        mode = (invocation_type or "sync").strip().lower()
+        if mode not in {"sync", "async"}:
+            raise ValueError("invocation_type must be either 'sync' or 'async'")
 
-        match invocation_type:
-            case "async":
-                return await self.invoke_async_chat_handler(parsed_request)
-            case "sync":
-                return await self.invoke_sync_chat_handler(parsed_request)
-            case _:
-                return NotFound("Invocation type not found").get_response()
+        if mode == "async":
+            return await self.invoke_async_chat_handler(request)
 
-    async def stream_tokens(
-        self,
-        request: ChatRequest | str | dict,
-    ) -> AsyncIterator[str]:
-        parsed_request = self._parse_request(request)
-        context: RequestContext = {
-            "trace_id": self.execution_id,
-            "user_id": str(parsed_request.user_id),
-        }
+        return await self.invoke_sync_chat_handler(request)
 
-        invoke_stream_fn = getattr(agent_main, "invoke_stream", None)
-        if invoke_stream_fn is None:
-            raise RuntimeError("Chat stream agent is not configured.")
+    async def invoke_async_chat_handler(self, request: ChatRequest) -> dict[str, Any]:
+        module = self._build_module(request)
+        context = self._build_context(request)
+        return await module.invoke_async_chat(request, context=context)
 
-        stream = invoke_stream_fn(request=parsed_request, context=context)
-        if inspect.isawaitable(stream):
-            stream = await stream
+    async def invoke_sync_chat_handler(self, request: ChatRequest) -> dict[str, Any]:
+        module = self._build_module(request)
+        context = self._build_context(request)
+        response = await asyncio.to_thread(module.invoke_sync_chat, request, context)
+        return response.model_dump(mode="json")
 
-        async for token in stream:
+    async def stream_tokens(self, request: ChatRequest) -> AsyncIterator[str]:
+        module = self._build_module(request)
+        context = self._build_context(request)
+        async for token in module.stream_tokens(request, context=context):
             yield token
-
-    def _parse_request(self, request: ChatRequest | str | dict) -> ChatRequest:
-        match request:
-            case ChatRequest():
-                return request
-            case str():
-                return ChatRequest.model_validate_json(request)
-            case dict():
-                return ChatRequest.model_validate(request)
-            case _:
-                raise ValueError("Invalid request format for chat handler.")

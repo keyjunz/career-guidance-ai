@@ -24,11 +24,11 @@ def _build_state(
 ) -> AgentRuntimeState:
     user_id = str(request.user_id)
     execution_id = _resolve_execution_id(context)
-    conversation_id = request.conversation_id or uuid4()
+    conversation_id = uuid4()
 
-    question = (request.message or "").strip()
+    question = request.question.strip()
     if not question:
-        raise ValueError("message is required for RAG chat")
+        raise ValueError("question is required for RAG chat")
 
     return AgentRuntimeState(
         user_id=user_id,

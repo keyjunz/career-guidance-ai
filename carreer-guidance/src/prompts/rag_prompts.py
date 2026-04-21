@@ -8,7 +8,7 @@ RAG_PROMPT_TEMPLATE = """You are an expert AI/Computer Science assistant. Answer
 
 ### Answer:"""
 
-RAG_PROMPT_TEMPLATE_VI = """Bạn là trợ lý chuyên gia AI/Khoa học Máy tính. Trả lời câu hỏi CHỈ dựa trên ngữ cảnh được cung cấp. Nếu ngữ cảnh không chứa đủ thông tin, hãy nói rõ điều đó. Giữ câu trả lời ngắn gọn (dưới 500 từ), chính xác và có cấu trúc rõ ràng.
+RAG_PROMPT_TEMPLATE_VI = """Bạn là trợ lý chuyên gia AI/Khoa học Máy tính. Trả lời câu hỏi CHỈ dựa trên ngữ cảnh được cung cấp. Nếu ngữ cảnh không chứa đủ thông tin, hãy nói rõ điều đó. Giữ câu trả lời ngắn gọn (dưới 500 từ), chính xác và có cấu trúc rõ ràng. Format lại câu trả lời nếu có dạng câu hỏi mà trả về câu trả lời dạng list, bảng,.. thì phải format cho thành list, bảng,... .
 
 ### Ngữ cảnh:
 {context}

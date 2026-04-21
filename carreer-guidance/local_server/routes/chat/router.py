@@ -1,12 +1,23 @@
 import json
 from fastapi import APIRouter, Query, Request
-from fastapi.responses import StreamingResponse
+from fastapi.responses import JSONResponse, StreamingResponse
 
 from src.handlers.chat_handler import ChatHandler
-from src.request_body.chat import ChatRequest
-from src.utils.api_response import BadRequest, InternalServerError
+from src.request_body.chat_request_body import ChatRequest
+from src.utils.api_response import BadRequest, InternalServerError, Ok
 
 router = APIRouter(prefix="/api/chat", tags=["chat"])
+
+
+def _to_json_response(payload: dict) -> JSONResponse:
+    status_code = int(payload.get("statusCode", 200))
+    headers = payload.get("headers", {"Content-Type": "application/json"})
+    body_raw = payload.get("body", "{}")
+    try:
+        body = json.loads(body_raw) if isinstance(body_raw, str) else body_raw
+    except Exception:
+        body = {"raw": str(body_raw)}
+    return JSONResponse(status_code=status_code, content=body, headers=headers)
 
 
 @router.post("", summary="Chat", description="Handle chat request")
@@ -14,12 +25,19 @@ async def chat_endpoint(
     payload: ChatRequest,
     request: Request,
     invocation_type: str = Query(default="sync", pattern="^(sync|async)$"),
-) -> dict:
+) -> JSONResponse:
     try:
         handler = ChatHandler(execution_id=request.state.trace_id)
-        return await handler.execute(payload, invocation_type=invocation_type)
+        response_payload = await handler.execute(
+            payload, invocation_type=invocation_type
+        )
+        return _to_json_response(Ok(response_payload).get_response())
+    except ValueError as exc:
+        return _to_json_response(BadRequest(str(exc)).get_response())
     except Exception:
-        return InternalServerError("Failed to process chat request.").get_response()
+        return _to_json_response(
+            InternalServerError("Failed to process chat request.").get_response()
+        )
 
 
 @router.post(
@@ -31,7 +49,7 @@ async def chat_endpoint(
 async def chat_stream_endpoint(
     payload: ChatRequest,
     request: Request,
-) -> StreamingResponse | dict:
+) -> StreamingResponse | JSONResponse:
     try:
         handler = ChatHandler(execution_id=request.state.trace_id)
 
@@ -52,4 +70,6 @@ async def chat_stream_endpoint(
 
         return StreamingResponse(event_stream(), media_type="text/event-stream")
     except Exception:
-        return InternalServerError("Failed to initialize chat stream.").get_response()
+        return _to_json_response(
+            InternalServerError("Failed to initialize chat stream.").get_response()
+        )

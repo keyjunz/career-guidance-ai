@@ -8,8 +8,10 @@ Rules:
 
 import logging
 import time
+from importlib import import_module
+from importlib.util import find_spec
 
-import langdetect
+langdetect = import_module("langdetect") if find_spec("langdetect") else None
 
 from src.modules.rag_module.schema_models import RAGQuery, RAGResult, SourceInfo
 from src.services.embedding_service.main import EmbeddingService
@@ -64,6 +66,8 @@ class RAGModuleImpl:
         # Step 0: Auto-detect language ─────────────────────────────
         if language == "auto":
             try:
+                if langdetect is None:
+                    raise RuntimeError("langdetect unavailable")
                 detected = langdetect.detect(question)
                 language = "vi" if detected == "vi" else "en"
             except Exception:
@@ -78,10 +82,9 @@ class RAGModuleImpl:
         # Step 2: Embed query ─────────────────────────────────────
         query_embedding = self.embedding_service.encode_query(search_query)
 
-        # Step 3: Hybrid Retrieve ─────────────────────────────────
+        # Step 3: Hybrid Retrieve on shared knowledge base ───────
+        # Support ingests a shared corpus; all clients query the same corpus.
         where_filter = None
-        if self.user_id:
-            where_filter = {"user_id": {"$eq": self.user_id}}
 
         retrieved = self.retriever_service.search(
             query=search_query,

@@ -42,11 +42,7 @@
             "description": "Successful Response",
             "content": {
               "application/json": {
-                "schema": {
-                  "type": "object",
-                  "additionalProperties": true,
-                  "title": "Response Chat Endpoint Api Chat Post"
-                }
+                "schema": {}
               }
             }
           },
@@ -252,49 +248,18 @@
             "format": "uuid",
             "title": "User Id"
           },
-          "message": {
-            "anyOf": [
-              {
-                "type": "string",
-                "maxLength": 5000
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Message"
-          },
-          "image_url": {
-            "anyOf": [
-              {
-                "type": "string",
-                "maxLength": 2083,
-                "minLength": 1,
-                "format": "uri"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Image Url"
-          },
-          "conversation_id": {
-            "anyOf": [
-              {
-                "type": "string",
-                "format": "uuid"
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Conversation Id"
+          "question": {
+            "type": "string",
+            "maxLength": 5000,
+            "minLength": 1,
+            "title": "Question"
           }
         },
         "additionalProperties": false,
         "type": "object",
         "required": [
-          "user_id"
+          "user_id",
+          "question"
         ],
         "title": "ChatRequest",
         "description": "Incoming request for chat interaction."

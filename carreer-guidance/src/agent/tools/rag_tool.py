@@ -28,6 +28,8 @@ class RAGTool:
             chroma_host=settings.vector_store.chroma_host,
             chroma_port=settings.vector_store.chroma_port,
             collection_name=collection_name,
+            chroma_client_mode=settings.vector_store.chroma_client_mode,
+            chroma_persist_dir=settings.vector_store.chroma_persist_dir,
         )
         self.retriever_service.connect()
 

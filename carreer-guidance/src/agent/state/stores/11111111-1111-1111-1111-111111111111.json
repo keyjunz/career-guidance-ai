@@ -1,0 +1,336 @@
+{
+  "user_id": "11111111-1111-1111-1111-111111111111",
+  "created_at": "2026-04-20T07:47:55.740666+00:00",
+  "updated_at": "2026-04-20T08:27:45.352384+00:00",
+  "pending_by_execution": {
+    "2243c88d-69ff-48ca-911b-e731d82dc550": {
+      "conversation_id": "5edae6f8-2b9d-4065-8592-8ea566895139",
+      "question": "Hoc AI bat dau tu dau?",
+      "timestamp": "2026-04-20T07:47:55.741666+00:00"
+    },
+    "38d58673-ebff-46a8-aef7-b5b7b10a945c": {
+      "conversation_id": "964ce257-93c1-4943-82cb-81fe850e6098",
+      "question": "Hoc AI bat dau tu dau?",
+      "timestamp": "2026-04-20T07:49:23.602332+00:00"
+    },
+    "64335eff-b4da-43a1-9b6f-185e83de7ad0": {
+      "conversation_id": "d97245c8-1f53-4a65-aba6-bb2ace816415",
+      "question": "Hoc AI bat dau tu dau?",
+      "timestamp": "2026-04-20T07:54:20.351227+00:00"
+    },
+    "dd7a295a-dec0-4999-8cc8-8a271615ea57": {
+      "conversation_id": "cab73350-f9f8-416e-9924-3a44e96532fd",
+      "question": "Hoc AI bat dau tu dau?",
+      "timestamp": "2026-04-20T07:56:53.632946+00:00"
+    },
+    "e0d5e7a3-cc2f-44fc-b685-fbbd7aadbfe8": {
+      "conversation_id": "692bda12-7c24-4155-87ee-88ac4877b7c3",
+      "question": "Hoc AI bat dau tu dau?",
+      "timestamp": "2026-04-20T08:21:58.564358+00:00"
+    },
+    "f2903234-4d1f-4b58-8ee1-5320457213c3": {
+      "conversation_id": "15852e96-17ca-4a89-8010-e548a940e9de",
+      "question": "Hoc AI bat dau tu dau?",
+      "timestamp": "2026-04-20T08:23:38.571211+00:00"
+    }
+  },
+  "status_by_execution": {
+    "2243c88d-69ff-48ca-911b-e731d82dc550": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-04-20T07:47:55.740666+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-04-20T07:47:55.742668+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-04-20T07:47:55.742668+00:00"
+      },
+      {
+        "status": "Dang truy xuat tri thuc va sinh cau tra loi (RAG).",
+        "timestamp": "2026-04-20T07:47:55.742668+00:00"
+      }
+    ],
+    "38d58673-ebff-46a8-aef7-b5b7b10a945c": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-04-20T07:49:23.601330+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-04-20T07:49:23.602332+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-04-20T07:49:23.602332+00:00"
+      },
+      {
+        "status": "Dang truy xuat tri thuc va sinh cau tra loi (RAG).",
+        "timestamp": "2026-04-20T07:49:23.603838+00:00"
+      }
+    ],
+    "64335eff-b4da-43a1-9b6f-185e83de7ad0": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-04-20T07:54:20.350225+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-04-20T07:54:20.352229+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-04-20T07:54:20.352229+00:00"
+      },
+      {
+        "status": "Dang truy xuat tri thuc va sinh cau tra loi (RAG).",
+        "timestamp": "2026-04-20T07:54:20.353227+00:00"
+      }
+    ],
+    "dd7a295a-dec0-4999-8cc8-8a271615ea57": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-04-20T07:56:53.631431+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-04-20T07:56:53.632946+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-04-20T07:56:53.634335+00:00"
+      },
+      {
+        "status": "Dang truy xuat tri thuc va sinh cau tra loi (RAG).",
+        "timestamp": "2026-04-20T07:56:53.634335+00:00"
+      }
+    ],
+    "e0d5e7a3-cc2f-44fc-b685-fbbd7aadbfe8": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-04-20T08:21:58.563053+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-04-20T08:21:58.564358+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-04-20T08:21:58.565864+00:00"
+      },
+      {
+        "status": "Dang truy xuat tri thuc va sinh cau tra loi (RAG).",
+        "timestamp": "2026-04-20T08:21:58.566772+00:00"
+      }
+    ],
+    "f2903234-4d1f-4b58-8ee1-5320457213c3": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-04-20T08:23:38.569900+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-04-20T08:23:38.571211+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-04-20T08:23:38.573084+00:00"
+      },
+      {
+        "status": "Dang truy xuat tri thuc va sinh cau tra loi (RAG).",
+        "timestamp": "2026-04-20T08:23:38.574012+00:00"
+      }
+    ],
+    "8c3c3e89-68ce-46de-87f1-424ae5499bbb": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-04-20T08:26:00.422120+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-04-20T08:26:00.423120+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-04-20T08:26:00.424122+00:00"
+      },
+      {
+        "status": "Dang truy xuat tri thuc va sinh cau tra loi (RAG).",
+        "timestamp": "2026-04-20T08:26:00.425121+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-04-20T08:26:31.019854+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-04-20T08:26:31.020864+00:00"
+      }
+    ],
+    "7cff85bd-11fb-41db-8a9f-cec4b6a0383a": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-04-20T08:27:45.345795+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-04-20T08:27:45.348115+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-04-20T08:27:45.349864+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-04-20T08:27:45.349864+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-04-20T08:27:45.351372+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-04-20T08:27:45.352384+00:00"
+      }
+    ]
+  },
+  "qa_cache": {
+    "hoc ai bat dau tu dau?": {
+      "question": "Hoc AI bat dau tu dau?",
+      "answer": "[API Error] Failed after 3 retries: Connection error.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "• df.drop(): Removing irrelevant features to reduce memory footprint and prevent \"Overfitting\" in\nML...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -11.35092830657959
+        },
+        {
+          "rank": 2,
+          "text": "I. INTRODUCTION TO PANDAS: THE DATA ENGINE\nWhile NumPy handles the raw numerical arrays, Pandas prov...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -11.461898803710938
+        },
+        {
+          "rank": 3,
+          "text": "Deletion (dropna): Removing rows or columns with missing values. Use this only if the amount\nof miss...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -11.462430000305176
+        },
+        {
+          "rank": 4,
+          "text": "• JSON: pd.read_json() — Standard for web APIs and NoSQL exports. • SQL: pd.read_sql() — Connecting ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -11.484183311462402
+        },
+        {
+          "rank": 5,
+          "text": "For datasets larger than available memory, you\nshould use \"chunking\" or switch to Dask/PySpark. • Q:...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -11.504679679870605
+        }
+      ],
+      "conversation_id": "8e979331-8365-49f0-b3df-eef3f6657fa6",
+      "updated_at": "2026-04-20T08:27:45.349864+00:00"
+    }
+  },
+  "history": [
+    {
+      "execution_id": "8c3c3e89-68ce-46de-87f1-424ae5499bbb",
+      "conversation_id": "adb53ee0-2aae-4660-a24c-82761418a138",
+      "question": "Hoc AI bat dau tu dau?",
+      "answer": "[API Error] Failed after 3 retries: Connection error.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "• df.drop(): Removing irrelevant features to reduce memory footprint and prevent \"Overfitting\" in\nML...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -11.35092830657959
+        },
+        {
+          "rank": 2,
+          "text": "I. INTRODUCTION TO PANDAS: THE DATA ENGINE\nWhile NumPy handles the raw numerical arrays, Pandas prov...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -11.461898803710938
+        },
+        {
+          "rank": 3,
+          "text": "Deletion (dropna): Removing rows or columns with missing values. Use this only if the amount\nof miss...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -11.462430000305176
+        },
+        {
+          "rank": 4,
+          "text": "• JSON: pd.read_json() — Standard for web APIs and NoSQL exports. • SQL: pd.read_sql() — Connecting ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -11.484183311462402
+        },
+        {
+          "rank": 5,
+          "text": "For datasets larger than available memory, you\nshould use \"chunking\" or switch to Dask/PySpark. • Q:...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -11.504679679870605
+        }
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-04-20T08:26:31.018452+00:00"
+    },
+    {
+      "execution_id": "7cff85bd-11fb-41db-8a9f-cec4b6a0383a",
+      "conversation_id": "8e979331-8365-49f0-b3df-eef3f6657fa6",
+      "question": "Hoc AI bat dau tu dau?",
+      "answer": "[API Error] Failed after 3 retries: Connection error.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "• df.drop(): Removing irrelevant features to reduce memory footprint and prevent \"Overfitting\" in\nML...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -11.35092830657959
+        },
+        {
+          "rank": 2,
+          "text": "I. INTRODUCTION TO PANDAS: THE DATA ENGINE\nWhile NumPy handles the raw numerical arrays, Pandas prov...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -11.461898803710938
+        },
+        {
+          "rank": 3,
+          "text": "Deletion (dropna): Removing rows or columns with missing values. Use this only if the amount\nof miss...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -11.462430000305176
+        },
+        {
+          "rank": 4,
+          "text": "• JSON: pd.read_json() — Standard for web APIs and NoSQL exports. • SQL: pd.read_sql() — Connecting ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -11.484183311462402
+        },
+        {
+          "rank": 5,
+          "text": "For datasets larger than available memory, you\nshould use \"chunking\" or switch to Dask/PySpark. • Q:...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -11.504679679870605
+        }
+      ],
+      "cache_hit": true,
+      "timestamp": "2026-04-20T08:27:45.349864+00:00"
+    }
+  ]
+}

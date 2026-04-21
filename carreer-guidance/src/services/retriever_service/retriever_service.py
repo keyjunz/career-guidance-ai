@@ -1,4 +1,6 @@
 import logging
+import os
+from pathlib import Path
 from typing import Any, Dict, List
 
 import numpy as np
@@ -20,6 +22,8 @@ class RetrieverService:
         chroma_host: str = "localhost",
         chroma_port: int = 8000,
         collection_name: str = "career_guidance_chunks",
+        chroma_client_mode: str = "http",
+        chroma_persist_dir: str = "./chroma_data",
     ) -> None:
         self.execution_id = execution_id
         self.logger = logging.getLogger(f"{__name__}[{execution_id}]")
@@ -27,6 +31,8 @@ class RetrieverService:
         self.chroma_host = chroma_host
         self.chroma_port = chroma_port
         self.collection_name = collection_name
+        self.chroma_client_mode = (chroma_client_mode or "http").strip().lower()
+        self.chroma_persist_dir = chroma_persist_dir
 
         self._client: Any = None
         self._collection: Any = None
@@ -39,13 +45,29 @@ class RetrieverService:
 
     def connect(self) -> None:
         try:
+            os.environ["ANONYMIZED_TELEMETRY"] = "FALSE"
             import chromadb
+            from chromadb.config import Settings as ChromaSettings
 
-            self._client = chromadb.HttpClient(
-                host=self.chroma_host,
-                port=self.chroma_port,
-            )
-            self._client.heartbeat()
+            settings = ChromaSettings(anonymized_telemetry=False)
+
+            if self.chroma_client_mode == "persistent":
+                persist_path = Path(self.chroma_persist_dir).expanduser().resolve()
+                persist_path.mkdir(parents=True, exist_ok=True)
+                self._client = chromadb.PersistentClient(
+                    path=str(persist_path),
+                    settings=settings,
+                )
+                connection_label = str(persist_path)
+            else:
+                self._client = chromadb.HttpClient(
+                    host=self.chroma_host,
+                    port=self.chroma_port,
+                    settings=settings,
+                )
+                self._client.heartbeat()
+                connection_label = f"{self.chroma_host}:{self.chroma_port}"
+
             self._collection = self._client.get_or_create_collection(
                 name=self.collection_name,
                 metadata={"hnsw:space": "cosine"},
@@ -53,9 +75,9 @@ class RetrieverService:
             self._connected = True
             count = self._collection.count()
             self.logger.info(
-                "Connected to ChromaDB at %s:%d | collection=%s | docs=%d",
-                self.chroma_host,
-                self.chroma_port,
+                "Connected to ChromaDB | mode=%s | endpoint=%s | collection=%s | docs=%d",
+                self.chroma_client_mode,
+                connection_label,
                 self.collection_name,
                 count,
             )
@@ -113,7 +135,15 @@ class RetrieverService:
         }
         if where:
             kwargs["where"] = where
-        results = self._collection.query(**kwargs)
+        try:
+            results = self._collection.query(**kwargs)
+        except Exception as exc:
+            self.logger.warning(
+                "Dense Chroma query failed, fallback to BM25 only for this request: %s",
+                exc,
+            )
+            return []
+
         docs = []
         if results["ids"] and results["ids"][0]:
             for i in range(len(results["ids"][0])):

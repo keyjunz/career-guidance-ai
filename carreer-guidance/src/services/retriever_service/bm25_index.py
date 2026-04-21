@@ -15,6 +15,11 @@ class BM25Index:
         self.corpus_tokens: list[list[str]] | None = None
 
     def build(self, corpus: List[str]) -> None:
+        if not corpus:
+            self.bm25 = None
+            self.corpus_tokens = None
+            return
+
         self.corpus_tokens = [doc.lower().split() for doc in corpus]
         self.bm25 = BM25Okapi(self.corpus_tokens, k1=BM25_K1, b=BM25_B)
 
@@ -22,9 +27,18 @@ class BM25Index:
     def is_built(self) -> bool:
         return self.bm25 is not None
 
-    def search(self, query: str, k: int = 20) -> Tuple[np.ndarray, np.ndarray]:
+    def get_scores(self, query: str) -> np.ndarray:
+        if self.bm25 is None:
+            return np.array([])
+
         query_tokens = query.lower().split()
-        scores = self.bm25.get_scores(query_tokens)
+        return self.bm25.get_scores(query_tokens)
+
+    def search(self, query: str, k: int = 20) -> Tuple[np.ndarray, np.ndarray]:
+        scores = self.get_scores(query)
+        if scores.size == 0:
+            return np.array([]), np.array([], dtype=int)
+
         top_indices = np.argsort(scores)[::-1][:k]
         top_scores = scores[top_indices]
         return top_scores, top_indices
