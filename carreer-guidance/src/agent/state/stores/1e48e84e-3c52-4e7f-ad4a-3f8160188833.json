@@ -1,0 +1,108 @@
+{
+  "user_id": "1e48e84e-3c52-4e7f-ad4a-3f8160188833",
+  "created_at": "2026-04-24T15:37:14.375975+00:00",
+  "updated_at": "2026-04-24T15:37:14.468889+00:00",
+  "pending_by_execution": {},
+  "status_by_execution": {
+    "chat-e2e-a-22301f7f": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-04-24T15:37:14.383674+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-04-24T15:37:14.385741+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-04-24T15:37:14.386481+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-04-24T15:37:14.387391+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-04-24T15:37:14.388792+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-04-24T15:37:14.389665+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-04-24T15:37:14.392651+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-04-24T15:37:14.394322+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-04-24T15:37:14.397671+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-04-24T15:37:14.398602+00:00"
+      }
+    ],
+    "chat-e2e-b-cd55fd88": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-04-24T15:37:14.457887+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-04-24T15:37:14.461212+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-04-24T15:37:14.462276+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-04-24T15:37:14.463397+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-04-24T15:37:14.467453+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-04-24T15:37:14.468875+00:00"
+      }
+    ]
+  },
+  "qa_cache": {
+    "hello": {
+      "question": "hello",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "conversation_id": "83057c84-3263-471c-9f2b-74e86a6aff61",
+      "updated_at": "2026-04-24T15:37:14.465812+00:00"
+    }
+  },
+  "history": [
+    {
+      "execution_id": "chat-e2e-a-22301f7f",
+      "conversation_id": "9ef65f01-6983-42ea-b2a3-08beff8908de",
+      "question": "hello",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-04-24T15:37:14.396235+00:00"
+    },
+    {
+      "execution_id": "chat-e2e-b-cd55fd88",
+      "conversation_id": "83057c84-3263-471c-9f2b-74e86a6aff61",
+      "question": "hello",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-04-24T15:37:14.465864+00:00"
+    }
+  ]
+}

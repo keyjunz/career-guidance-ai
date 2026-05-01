@@ -3,11 +3,29 @@ import os
 import re
 import tempfile
 from pathlib import Path
-from urllib import parse, request
 from typing import Any
+from urllib import parse, request
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
+
+TEXT_LABELS = {
+    "paragraph_title",
+    "text",
+    "number",
+    "abstract",
+    "content",
+    "reference",
+    "doc_title",
+    "footnote",
+    "header",
+    "algorithm",
+    "footer",
+    "aside_text",
+    "reference_content",
+}
+CAPTION_LABELS = {"figure_title"}
+IMAGE_LABELS = {"image", "chart", "table"}
 
 
 class DocumentService:
@@ -73,6 +91,12 @@ class DocumentService:
         for result in ocr_results:
             if not bool(result.get("success")):
                 continue
+
+            pages = result.get("pages")
+            if isinstance(pages, list) and pages:
+                chunks.extend(self._chunk_layout_pages(result))
+                continue
+
             text = str(result.get("text") or "").strip()
             if not text:
                 continue
@@ -93,6 +117,8 @@ class DocumentService:
                                 "execution_id": self.execution_id,
                                 "source_url": str(result.get("source_url") or ""),
                                 "file_path": file_path,
+                                "source": file_path,
+                                "title": Path(file_path).name,
                                 "industry_type": str(result.get("industry_type") or ""),
                                 "page_number": page_number,
                                 "chunk_index": idx,
@@ -112,6 +138,270 @@ class DocumentService:
             )
 
         return chunks
+
+    def _chunk_layout_pages(self, result: dict[str, Any]) -> list[dict]:
+        chunks: list[dict] = []
+        file_path = str(result.get("file_path") or "")
+        source_url = str(result.get("source_url") or "")
+        industry_type = str(result.get("industry_type") or "")
+        doc_id = str(result.get("doc_id") or Path(file_path).stem)
+
+        pages = result.get("pages") or []
+        text_blocks = self._collect_text_blocks(pages)
+        image_blocks = self._collect_image_blocks(pages)
+        caption_blocks = self._collect_caption_blocks(pages)
+
+        image_links = self._link_images_to_text(image_blocks, text_blocks)
+        image_captions = self._link_images_to_captions(image_blocks, caption_blocks)
+
+        current_blocks: list[dict[str, Any]] = []
+        current_text_parts: list[str] = []
+        current_length = 0
+        chunk_index = 0
+
+        for block in text_blocks:
+            text = str(block.get("text") or "").strip()
+            if not text:
+                continue
+
+            projected = current_length + len(text) + (1 if current_text_parts else 0)
+            if current_text_parts and projected > self.max_chunk_size:
+                chunk = self._build_layout_chunk(
+                    doc_id=doc_id,
+                    file_path=file_path,
+                    source_url=source_url,
+                    industry_type=industry_type,
+                    chunk_index=chunk_index,
+                    text_blocks=current_blocks,
+                    image_links=image_links,
+                    image_captions=image_captions,
+                )
+                chunks.append(chunk)
+                chunk_index += 1
+                current_blocks = []
+                current_text_parts = []
+                current_length = 0
+
+            current_blocks.append(block)
+            current_text_parts.append(text)
+            current_length += len(text) + (1 if current_text_parts else 0)
+
+        if current_blocks:
+            chunk = self._build_layout_chunk(
+                doc_id=doc_id,
+                file_path=file_path,
+                source_url=source_url,
+                industry_type=industry_type,
+                chunk_index=chunk_index,
+                text_blocks=current_blocks,
+                image_links=image_links,
+                image_captions=image_captions,
+            )
+            chunks.append(chunk)
+
+        logger.info(
+            "layout chunking done: execution_id=%s file_path=%s pages=%d chunks=%d",
+            self.execution_id,
+            file_path,
+            len(pages),
+            len(chunks),
+        )
+        return chunks
+
+    def _build_layout_chunk(
+        self,
+        *,
+        doc_id: str,
+        file_path: str,
+        source_url: str,
+        industry_type: str,
+        chunk_index: int,
+        text_blocks: list[dict[str, Any]],
+        image_links: dict[str, dict[str, Any]],
+        image_captions: dict[str, str],
+    ) -> dict:
+        page_number = int(text_blocks[0].get("page_number") or 1)
+        chunk_text = "\n".join(
+            str(block.get("text") or "").strip() for block in text_blocks
+        ).strip()
+
+        linked_images = self._collect_linked_images(text_blocks, image_links)
+        image_paths = []
+        image_ids = []
+        image_sentences = []
+        image_bboxes = []
+
+        for image in linked_images:
+            image_id = str(image.get("image_id") or "")
+            image_path = str(image.get("image_path") or "")
+            if not image_path:
+                continue
+            image_paths.append(image_path)
+            if image_id:
+                image_ids.append(image_id)
+            image_bboxes.append(image.get("bbox"))
+
+            caption = image_captions.get(image_id, "")
+            sentence = self._build_image_sentence(caption, image.get("linked_text"))
+            if sentence:
+                image_sentences.append(sentence)
+
+        if image_sentences:
+            chunk_text = f"{chunk_text}\n\n" + "\n".join(
+                f"[Image] {sentence}" for sentence in image_sentences
+            )
+
+        metadata: dict[str, Any] = {
+            "execution_id": self.execution_id,
+            "source_url": source_url,
+            "file_path": file_path,
+            "source": file_path,
+            "title": Path(file_path).name,
+            "industry_type": industry_type,
+            "page_number": page_number,
+            "chunk_index": chunk_index,
+            "doc_id": doc_id,
+            "has_image": bool(image_paths),
+        }
+
+        if image_paths:
+            metadata.update(
+                {
+                    "image_paths": image_paths,
+                    "image_ids": image_ids,
+                    "image_sentences": image_sentences,
+                    "image_bboxes": image_bboxes,
+                }
+            )
+
+        return {
+            "chunk_id": f"{doc_id}:p{page_number}:{chunk_index}",
+            "document_id": Path(file_path).name,
+            "text": chunk_text,
+            "metadata": metadata,
+        }
+
+    def _collect_text_blocks(self, pages: list[dict[str, Any]]) -> list[dict[str, Any]]:
+        blocks: list[dict[str, Any]] = []
+        for page in pages:
+            for block in page.get("blocks", []):
+                if str(block.get("type") or "") in TEXT_LABELS:
+                    blocks.append(block)
+        blocks.sort(
+            key=lambda b: (
+                b.get("page_number", 0),
+                (b.get("bbox") or [0, 0, 0, 0])[1],
+                (b.get("bbox") or [0, 0, 0, 0])[0],
+            )
+        )
+        return blocks
+
+    def _collect_caption_blocks(
+        self, pages: list[dict[str, Any]]
+    ) -> list[dict[str, Any]]:
+        blocks: list[dict[str, Any]] = []
+        for page in pages:
+            for block in page.get("blocks", []):
+                if str(block.get("type") or "") in CAPTION_LABELS:
+                    blocks.append(block)
+        return blocks
+
+    def _collect_image_blocks(
+        self, pages: list[dict[str, Any]]
+    ) -> list[dict[str, Any]]:
+        blocks: list[dict[str, Any]] = []
+        for page in pages:
+            for block in page.get("blocks", []):
+                if str(block.get("type") or "") in IMAGE_LABELS:
+                    blocks.append(block)
+        return blocks
+
+    def _link_images_to_text(
+        self,
+        image_blocks: list[dict[str, Any]],
+        text_blocks: list[dict[str, Any]],
+    ) -> dict[str, dict[str, Any]]:
+        links: dict[str, dict[str, Any]] = {}
+        for image in image_blocks:
+            image_id = str(image.get("image_id") or "")
+            if not image_id:
+                continue
+            best = self._nearest_block(image, text_blocks)
+            if best is None:
+                continue
+            links[image_id] = {
+                "image_id": image_id,
+                "image_path": image.get("image_path"),
+                "bbox": image.get("bbox"),
+                "linked_text": best.get("text"),
+                "linked_block_id": best.get("block_id"),
+            }
+        return links
+
+    def _link_images_to_captions(
+        self,
+        image_blocks: list[dict[str, Any]],
+        caption_blocks: list[dict[str, Any]],
+    ) -> dict[str, str]:
+        captions: dict[str, str] = {}
+        for image in image_blocks:
+            image_id = str(image.get("image_id") or "")
+            if not image_id:
+                continue
+            nearest = self._nearest_block(image, caption_blocks)
+            if nearest and str(nearest.get("text") or "").strip():
+                captions[image_id] = str(nearest.get("text") or "").strip()
+        return captions
+
+    def _collect_linked_images(
+        self,
+        text_blocks: list[dict[str, Any]],
+        image_links: dict[str, dict[str, Any]],
+    ) -> list[dict[str, Any]]:
+        linked: list[dict[str, Any]] = []
+        block_ids = {block.get("block_id") for block in text_blocks}
+        for image in image_links.values():
+            if image.get("linked_block_id") in block_ids:
+                linked.append(image)
+        return linked
+
+    def _nearest_block(
+        self,
+        image_block: dict[str, Any],
+        candidates: list[dict[str, Any]],
+    ) -> dict[str, Any] | None:
+        if not candidates:
+            return None
+        image_bbox = image_block.get("bbox") or [0, 0, 0, 0]
+        best = None
+        best_distance = None
+        for block in candidates:
+            if block.get("page_number") != image_block.get("page_number"):
+                continue
+            distance = self._bbox_distance(
+                image_bbox, block.get("bbox") or [0, 0, 0, 0]
+            )
+            if best_distance is None or distance < best_distance:
+                best_distance = distance
+                best = block
+        return best
+
+    def _bbox_distance(self, bbox_a: list[int], bbox_b: list[int]) -> float:
+        ax = (bbox_a[0] + bbox_a[2]) / 2
+        ay = (bbox_a[1] + bbox_a[3]) / 2
+        bx = (bbox_b[0] + bbox_b[2]) / 2
+        by = (bbox_b[1] + bbox_b[3]) / 2
+        return abs(ax - bx) + abs(ay - by)
+
+    def _build_image_sentence(self, caption: str, linked_text: str | None) -> str:
+        cleaned_caption = caption.strip()
+        if cleaned_caption:
+            return f"Figure: {cleaned_caption}"
+        if linked_text:
+            snippet = str(linked_text).strip()[:160]
+            if snippet:
+                return f"Image related to: {snippet}"
+        return ""
 
     def count_pages(self, text: str, file_path: str | None = None) -> int:
         """Count pages, preferring direct PDF file analysis when possible."""

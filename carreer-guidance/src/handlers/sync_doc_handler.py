@@ -3,6 +3,7 @@ from typing import Any
 from uuid import UUID
 
 from src.modules.sync_doc_module.main import SyncDocumentModuleImpl
+from src.modules.sync_doc_module.gemini_main import SyncDocumentModuleGeminiImpl
 from src.request_body.sync_request_body import (
     SyncDocumentsRequest,
     SyncDocumentsResponse,
@@ -29,14 +30,50 @@ class SyncDataHandler:
         industry_type: str | None = None,
     ) -> SyncDocumentsResponse:
         """Process uploaded files by converting to SyncDocumentsRequest."""
+        return self._process_uploaded_files(
+            file_paths=file_paths,
+            user_id=user_id,
+            context=context,
+            industry_type=industry_type,
+            module_cls=SyncDocumentModuleImpl,
+            label="sync",
+        )
+
+    def process_uploaded_files_gemini(
+        self,
+        file_paths: list[str],
+        user_id: UUID,
+        context: RequestContext,
+        industry_type: str | None = None,
+    ) -> SyncDocumentsResponse:
+        """Process uploaded files using Gemini OCR."""
+        return self._process_uploaded_files(
+            file_paths=file_paths,
+            user_id=user_id,
+            context=context,
+            industry_type=industry_type,
+            module_cls=SyncDocumentModuleGeminiImpl,
+            label="sync_gemini",
+        )
+
+    def _process_uploaded_files(
+        self,
+        *,
+        file_paths: list[str],
+        user_id: UUID,
+        context: RequestContext,
+        industry_type: str | None,
+        module_cls: type,
+        label: str,
+    ) -> SyncDocumentsResponse:
         logger.info(
-            "Start processing uploaded files: execution_id=%s, context_execution_id=%s, files=%d",
+            "Start processing uploaded files: execution_id=%s, context_execution_id=%s, files=%d, label=%s",
             self.execution_id,
             context.get("execution_id"),
             len(file_paths),
+            label,
         )
         try:
-            # Create request from file paths
             request = SyncDocumentsRequest(
                 user_id=user_id,
                 file_urls=file_paths,
@@ -44,8 +81,7 @@ class SyncDataHandler:
                 industry_type=industry_type,
             )
 
-            # Process using sync_documents
-            sync_document_module = SyncDocumentModuleImpl(
+            sync_document_module = module_cls(
                 self.execution_id,
                 user_id=str(user_id),
             )
@@ -57,8 +93,9 @@ class SyncDataHandler:
             raise
         except Exception as exc:
             logger.error(
-                "Error processing uploaded files: execution_id=%s error=%s",
+                "Error processing uploaded files: execution_id=%s label=%s error=%s",
                 self.execution_id,
+                label,
                 exc,
             )
             if isinstance(exc, ValueError):

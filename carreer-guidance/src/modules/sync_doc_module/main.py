@@ -9,7 +9,7 @@ from src.request_body.sync_request_body import (
 from src.services.database_service.main import DatabaseSyncService
 from src.services.document_service.main import DocumentService
 from src.services.embedding_service.main import EmbeddingService
-from src.services.gemini.main import GeminiOCRService
+from src.services.ocr.paddle_ocr_service import PaddleOCRService
 from src.services.vector_db_service.main import VectorDBService
 
 RequestContext = dict[str, Any]
@@ -28,7 +28,7 @@ class SyncDocumentModuleImpl:
         self.execution_id = execution_id
         self.user_id = str(user_id).strip() if user_id else None
         self.document_service = DocumentService(execution_id)
-        self.gemini_ocr_service = GeminiOCRService(execution_id)
+        self.ocr_service = PaddleOCRService(execution_id)
         self.database_service = DatabaseSyncService(execution_id)
         embedding_service = EmbeddingService(execution_id)
         self.vector_db_service = VectorDBService(
@@ -93,7 +93,7 @@ class SyncDocumentModuleImpl:
                 )
 
             # Extract text from documents using OCR
-            ocr_results = self.gemini_ocr_service.extract_text_batch(
+            ocr_results = self.ocr_service.extract_text_batch(
                 prepared_docs,
             )
             for item in ocr_results:

@@ -36,7 +36,6 @@ class ChatModuleImpl:
     ) -> RequestContext:
         resolved_context = dict(context)
         resolved_context["execution_id"] = self.execution_id
-        resolved_context.setdefault("trace_id", self.execution_id)
         resolved_context.setdefault("user_id", str(request.user_id))
         return resolved_context
 
@@ -50,7 +49,6 @@ class ChatModuleImpl:
         payload = {
             "target_function_name": "invoke_sync_chat_handler",
             "execution_id": self.execution_id,
-            "trace_id": self.execution_id,
             **request_payload,
             "context": resolved_context,
         }
@@ -60,7 +58,7 @@ class ChatModuleImpl:
         return {
             "status": "queued",
             "message": "Chat request has been queued.",
-            "trace_id": self.execution_id,
+            "execution_id": self.execution_id,
         }
 
     def invoke_sync_chat(
@@ -119,11 +117,7 @@ class ChatModuleImpl:
             return
 
         try:
-            session_id = str(
-                context.get("trace_id")
-                or context.get("execution_id")
-                or self.execution_id
-            ).strip()
+            session_id = str(context.get("execution_id") or self.execution_id).strip()
             self.chat_db_service.save_chat_turn(
                 user_id=request.user_id,
                 question=request.question,

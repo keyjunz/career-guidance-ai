@@ -1,5 +1,6 @@
-import torch
 from pathlib import Path
+
+import torch
 
 EMBEDDING_MODELS = {
     "multilingual-e5-small": {

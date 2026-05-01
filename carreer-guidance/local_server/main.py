@@ -22,6 +22,12 @@ ASSETS_DIR = BASE_DIR / "assets"
 SWAGGER_DIR = ASSETS_DIR / "swagger"
 SWAGGER_HTML_PATH = SWAGGER_DIR / "index.html"
 SWAGGER_JSON_PATH = SWAGGER_DIR / "openapi.json"
+IMAGE_DIR_SETTING = os.getenv("IMAGE_STORAGE_DIR", "database/images")
+IMAGE_DIR = (
+    Path(IMAGE_DIR_SETTING)
+    if Path(IMAGE_DIR_SETTING).is_absolute()
+    else (BASE_DIR / IMAGE_DIR_SETTING)
+)
 
 
 def configure_app_logging() -> None:
@@ -65,7 +71,9 @@ def create_app() -> FastAPI:
 
     ASSETS_DIR.mkdir(parents=True, exist_ok=True)
     SWAGGER_DIR.mkdir(parents=True, exist_ok=True)
+    IMAGE_DIR.mkdir(parents=True, exist_ok=True)
     app.mount("/assets", StaticFiles(directory=str(ASSETS_DIR)), name="assets")
+    app.mount("/images", StaticFiles(directory=str(IMAGE_DIR)), name="images")
 
     def custom_openapi() -> dict:
         if app.openapi_schema:
@@ -120,15 +128,10 @@ def create_app() -> FastAPI:
 
     @app.middleware("http")
     async def add_execution_id(request: Request, call_next):
-        execution_id = request.headers.get(
-            "x-execution-id",
-            request.headers.get("x-trace-id", str(uuid4())),
-        )
+        execution_id = request.headers.get("x-execution-id", str(uuid4()))
         request.state.execution_id = execution_id
-        request.state.trace_id = execution_id
         response = await call_next(request)
         response.headers["x-execution-id"] = execution_id
-        response.headers["x-trace-id"] = execution_id
         return response
 
     @app.exception_handler(RequestValidationError)
@@ -140,7 +143,7 @@ def create_app() -> FastAPI:
             code="VALIDATION_ERROR",
             message="Request validation failed",
             details={"errors": exc.errors()},
-            trace_id=getattr(request.state, "execution_id", None),
+            execution_id=getattr(request.state, "execution_id", None),
         )
         return JSONResponse(status_code=422, content=payload.model_dump())
 
@@ -152,7 +155,7 @@ def create_app() -> FastAPI:
             code="INTERNAL_SERVER_ERROR",
             message="An unexpected error occurred",
             details={"exception_type": exc.__class__.__name__},
-            trace_id=getattr(request.state, "execution_id", None),
+            execution_id=getattr(request.state, "execution_id", None),
         )
         return JSONResponse(status_code=500, content=payload.model_dump())
 

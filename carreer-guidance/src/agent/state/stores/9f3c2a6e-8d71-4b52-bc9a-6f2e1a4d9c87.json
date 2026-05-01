@@ -1,7 +1,7 @@
 {
   "user_id": "9f3c2a6e-8d71-4b52-bc9a-6f2e1a4d9c87",
   "created_at": "2026-04-21T07:33:56.629896+00:00",
-  "updated_at": "2026-04-21T08:13:06.363817+00:00",
+  "updated_at": "2026-04-25T00:36:18.780182+00:00",
   "pending_by_execution": {},
   "status_by_execution": {
     "d0a15ccb-a06b-4d65-aefa-9f4f227ecccf": [
@@ -341,6 +341,250 @@
         "status": "Hoan tat xu ly.",
         "timestamp": "2026-04-21T08:13:06.363817+00:00"
       }
+    ],
+    "chat-e2e-db-dd70333e": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-04-24T16:10:24.490630+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-04-24T16:10:24.493031+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-04-24T16:10:24.494004+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-04-24T16:10:24.494800+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-04-24T16:10:24.495536+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-04-24T16:10:24.496313+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-04-24T16:10:24.497021+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-04-24T16:10:24.498061+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-04-24T16:10:24.499991+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-04-24T16:10:24.501330+00:00"
+      }
+    ],
+    "chat-e2e-db-cec2a453": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-04-24T16:11:41.336074+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-04-24T16:11:41.341053+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-04-24T16:11:41.342696+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-04-24T16:11:41.344362+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-04-24T16:11:41.349938+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-04-24T16:11:41.351936+00:00"
+      }
+    ],
+    "6872c50c-348a-4c96-bcea-f692fef2a153": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-04-25T00:17:36.597135+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-04-25T00:17:36.607127+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-04-25T00:17:36.611475+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-04-25T00:17:36.616883+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-04-25T00:17:36.619883+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-04-25T00:17:36.623647+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-04-25T00:17:57.605374+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-04-25T00:17:57.612112+00:00"
+      },
+      {
+        "status": "Dang sua cau tra loi theo danh gia.",
+        "timestamp": "2026-04-25T00:17:57.616126+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-04-25T00:18:16.000303+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-04-25T00:18:16.010506+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-04-25T00:18:16.015619+00:00"
+      }
+    ],
+    "51ee9a3b-8178-4009-8a0e-289e76c62ef1": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-04-25T00:19:57.363996+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-04-25T00:19:57.381641+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-04-25T00:19:57.390994+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-04-25T00:19:57.397978+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-04-25T00:19:57.403129+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-04-25T00:19:57.410351+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-04-25T00:20:04.859647+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-04-25T00:20:04.864923+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-04-25T00:20:04.875099+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-04-25T00:20:04.883096+00:00"
+      }
+    ],
+    "b971f544-13df-4ef1-8bc2-991fa979e3f9": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-04-25T00:30:17.497061+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-04-25T00:30:17.513686+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-04-25T00:30:17.521698+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-04-25T00:30:17.530798+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-04-25T00:30:17.540057+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-04-25T00:30:17.551679+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-04-25T00:30:52.527958+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-04-25T00:30:52.539666+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-04-25T00:30:52.561445+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-04-25T00:30:52.570166+00:00"
+      }
+    ],
+    "fdcbd747-e012-4558-b771-76778e05eff4": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-04-25T00:35:52.408348+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-04-25T00:35:52.432888+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-04-25T00:35:52.442953+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-04-25T00:35:52.457202+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-04-25T00:35:52.466672+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-04-25T00:35:52.475951+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-04-25T00:36:18.723805+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-04-25T00:36:18.737803+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-04-25T00:36:18.766574+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-04-25T00:36:18.780182+00:00"
+      }
     ]
   },
   "qa_cache": {
@@ -523,6 +767,317 @@
       ],
       "conversation_id": "c84e9da7-d797-49c9-80bf-7eeb89a3c89e",
       "updated_at": "2026-04-21T08:13:06.359207+00:00"
+    },
+    "hello": {
+      "question": "hello",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "conversation_id": "27f46e1a-f42f-4074-909a-94a327f0f331",
+      "updated_at": "2026-04-24T16:11:41.346905+00:00"
+    },
+    "cách cách tiếp cận vector cải thiện kết quả tìm kiếm so với sql và tùn kiếm thêm trên web cho đầy đủ thông tin": {
+      "question": "Cách cách tiếp cận vector cải thiện kết quả tìm kiếm so với SQL và tùn kiếm thêm trên web cho đầy đủ thông tin",
+      "answer": "Web summary:\nDựa trên thông tin được cung cấp, cách tiếp cận vector cải thiện kết quả tìm kiếm so với các phương pháp truyền thống như SQL và tìm kiếm theo từ khóa (keyword search) như sau:\n\n**Ưu điểm của Vector Search so với tìm kiếm truyền thống:**\n\n*   **Hiểu ngữ nghĩa và ý định:**\n    *   Tìm kiếm truyền thống (ví dụ: sử dụng `LIKE` trong SQL) chỉ dựa trên sự trùng khớp ký tự.\n    *   Vector Search chuyển đổi dữ liệu (văn bản, hình ảnh, âm thanh) thành các vector số học. AI \"hiểu\" các mối quan hệ giữa các con số này, từ đó thấu hiểu \"ý định\" và \"ngữ cảnh\" của truy vấn, thay vì chỉ \"mặt chữ\".\n*   **Xử lý dữ liệu phi cấu trúc:**\n    *   Hơn 80% dữ liệu doanh nghiệp hiện nay là phi cấu trúc (văn bản, hình ảnh, âm thanh).\n    *   Các hệ thống tìm kiếm truyền thống gặp hạn chế khi xử lý sự phức tạp của ngôn ngữ con người trong dữ liệu phi cấu trúc. Vector Search được thiết kế để xử lý hiệu quả loại dữ liệu này.\n*   **Tìm kiếm tương tự:**\n    *   Vector Search cho phép tìm kiếm các mục dữ liệu tương tự nhau dựa trên biểu diễn vector của chúng. Mức độ tương đồng có thể được đo bằng các phương pháp như cosine similarity hoặc Euclidean distance.\n\n**Cách Vector Search hoạt động:**\n\n1.  **Biểu diễn Dữ liệu Dưới Dạng Vector (Embedding):** Dữ liệu đầu vào (từ, câu, hình ảnh, âm thanh) được chuyển đổi thành các vector số trong một không gian nhiều chiều. Các mô hình học sâu như Word2Vec, GloVe, BERT hoặc các mô hình học sâu khác được sử dụng để tạo ra các vector này.\n2.  **Tìm kiếm dựa trên Vector:** Các truy vấn cũng được chuyển đổi thành vector. Hệ thống sau đó tìm kiếm các vector dữ liệu gần nhất với vector truy vấn trong không gian này, từ đó trả về kết quả tìm kiếm có liên quan về mặt ngữ nghĩa.\n\n**Kết luận:**\n\nVector Search đại diện cho một cuộc cách mạng trong tư duy tìm kiếm, chuyển từ việc so khớp từ khóa sang việc thấu hiểu ngữ nghĩa và ý định, giúp khai\n\nWeb findings:\n- [![](https://images.viblo.asia/full/9b87c5be-f71f-4e99-a52f-200388a82d5c.png)](https://www.facebook.com/viblo.asia/posts/pfbid02bgJpS8cGpqnesCC49TBEXP69LTBZNwfRG9mwZmCELrqdCqFvuW8JboJKNC43coo7l) +13 Cỡ chữ 18px Độ cao hàng 1.75 Mặc định Toàn màn hình Màu nền Đặt lại - Báo cáo - Thêm vào series của tôi Bài đăng này đã không được cập nhật trong 3 năm **Mục tiêu:** Cải thiện tìm kiếm trong database (...\n- Chào mừng bạn đến với INDA! Hotline: **(HN) (+84) 986-882-818 \\|** **(HCM) (+84) 945-618-746** - [![](https://inda.vn/wp-content/plugins/sitepress-multilingual-cms/res/flags/vi.png)Tiếng Việt](https://inda.vn/vector-search/) - [![](https://inda.vn/wp-content/plugins/sitepress-multilingual-cms/res/flags/en.png)English](https://inda.vn/en/) [![Công Ty TNHH Giải Pháp Phân Tích Dữ Liệu Insight Data](h...\n- ![Vector Database & Semantic Search: Cách AI tìm kiếm không cần từ khóa](https://cdn.advertisingvietnam.com/image/2025/12/15/1765767175308.jpg) [![SEO Dạo](https://advertisingvietnam.com/_next/image?url=https%3A%2F%2Fcdn.advertisingvietnam.com%2Fimage%2F2023%2F09%2F19%2F1695095270036.png&w=3840&q=75)](https://advertisingvietnam.com/author/seodao) Bởi [SEO Dạo](https://advertisingvietnam.com/author...\n- [Facebook](https://www.facebook.com/topdevvietnam/ \"Facebook\")[Linkedin](https://www.linkedin.com/company/topdev-vn/ \"Linkedin\")[Twitter](https://twitter.com/Topdevvn \"Twitter\") - [Tìm việc IT](https://topdev.vn/?src=topdev_blog&medium=navbar&campaign=link) - [Tạo CV Online](https://topdev.vn/tao-cv-online?src=topdev_blog&medium=navbar&campaign=link) - [CÔNG TY TUYỂN DỤNG IT](https://topdev.vn/nha...\n- ![](https://vndigitech.com/search-vector-giai-phap-tim-kiem-thong-minh-dua-tren-vector/search-vector-3/) [Công nghệ](https://training.vndigitech.com/tin-tuc/cong-nghe) Search Vector: Giải Pháp Tìm Kiếm Thông Minh Dựa Trên Vector 12/11/2024 ## 1\\. Search Vector là gì? **Search Vector** là khái niệm trong lĩnh vực tìm kiếm và phân tích dữ liệu, đặc biệt trong các hệ thống tìm kiếm thông minh và AI....\n\nSources:\n- Cải thiện Tìm kiếm trong Database Full-text search - Viblo: https://viblo.asia/p/cai-thien-tim-kiem-trong-database-full-text-search-n1j4l3BGVwl\n- Vector Search: Cách mạng Tìm kiếm Ngữ nghĩa và Chiến lược Khai ...: https://inda.vn/vector-search/\n- Vector Database & Semantic Search: Cách AI tìm kiếm không cần từ ...: https://advertisingvietnam.com/article/vector-database-semantic-search-cach-ai-tim-kiem-khong-can-tu-khoa-p27657\n- Cơ sở dữ liệu vector (Vector Database) - Cách sử dụng chi tiết: https://topdev.vn/blog/co-so-du-lieu-vector-database/\n- Search Vector: Giải Pháp Tìm Kiếm Thông Minh Dựa Trên Vector: https://training.vndigitech.com/chi-tiet-tin-tuc/search-vector-giai-phap-tim-kiem-thong-minh-dua-tren-vector",
+      "sources": [
+        {
+          "title": "Cải thiện Tìm kiếm trong Database Full-text search - Viblo",
+          "url": "https://viblo.asia/p/cai-thien-tim-kiem-trong-database-full-text-search-n1j4l3BGVwl",
+          "snippet": "[![](https://images.viblo.asia/full/9b87c5be-f71f-4e99-a52f-200388a82d5c.png)](https://www.facebook.com/viblo.asia/posts/pfbid02bgJpS8cGpqnesCC49TBEXP69LTBZNwfRG9mwZmCELrqdCqFvuW8JboJKNC43coo7l) +13 Cỡ chữ 18px Độ cao hàng 1.75 Mặc định Toàn màn hình Màu nền Đặt lại - Báo cáo - Thêm vào series của tôi Bài đăng này đã không được cập nhật trong 3 năm **Mục tiêu:** Cải thiện tìm kiếm trong database (...",
+          "score": 0.0
+        },
+        {
+          "title": "Vector Search: Cách mạng Tìm kiếm Ngữ nghĩa và Chiến lược Khai ...",
+          "url": "https://inda.vn/vector-search/",
+          "snippet": "Chào mừng bạn đến với INDA! Hotline: **(HN) (+84) 986-882-818 \\|** **(HCM) (+84) 945-618-746** - [![](https://inda.vn/wp-content/plugins/sitepress-multilingual-cms/res/flags/vi.png)Tiếng Việt](https://inda.vn/vector-search/) - [![](https://inda.vn/wp-content/plugins/sitepress-multilingual-cms/res/flags/en.png)English](https://inda.vn/en/) [![Công Ty TNHH Giải Pháp Phân Tích Dữ Liệu Insight Data](h...",
+          "score": 0.0
+        },
+        {
+          "title": "Vector Database & Semantic Search: Cách AI tìm kiếm không cần từ ...",
+          "url": "https://advertisingvietnam.com/article/vector-database-semantic-search-cach-ai-tim-kiem-khong-can-tu-khoa-p27657",
+          "snippet": "![Vector Database & Semantic Search: Cách AI tìm kiếm không cần từ khóa](https://cdn.advertisingvietnam.com/image/2025/12/15/1765767175308.jpg) [![SEO Dạo](https://advertisingvietnam.com/_next/image?url=https%3A%2F%2Fcdn.advertisingvietnam.com%2Fimage%2F2023%2F09%2F19%2F1695095270036.png&w=3840&q=75)](https://advertisingvietnam.com/author/seodao) Bởi [SEO Dạo](https://advertisingvietnam.com/author...",
+          "score": 0.0
+        },
+        {
+          "title": "Cơ sở dữ liệu vector (Vector Database) - Cách sử dụng chi tiết",
+          "url": "https://topdev.vn/blog/co-so-du-lieu-vector-database/",
+          "snippet": "[Facebook](https://www.facebook.com/topdevvietnam/ \"Facebook\")[Linkedin](https://www.linkedin.com/company/topdev-vn/ \"Linkedin\")[Twitter](https://twitter.com/Topdevvn \"Twitter\") - [Tìm việc IT](https://topdev.vn/?src=topdev_blog&medium=navbar&campaign=link) - [Tạo CV Online](https://topdev.vn/tao-cv-online?src=topdev_blog&medium=navbar&campaign=link) - [CÔNG TY TUYỂN DỤNG IT](https://topdev.vn/nha...",
+          "score": 0.0
+        },
+        {
+          "title": "Search Vector: Giải Pháp Tìm Kiếm Thông Minh Dựa Trên Vector",
+          "url": "https://training.vndigitech.com/chi-tiet-tin-tuc/search-vector-giai-phap-tim-kiem-thong-minh-dua-tren-vector",
+          "snippet": "![](https://vndigitech.com/search-vector-giai-phap-tim-kiem-thong-minh-dua-tren-vector/search-vector-3/) [Công nghệ](https://training.vndigitech.com/tin-tuc/cong-nghe) Search Vector: Giải Pháp Tìm Kiếm Thông Minh Dựa Trên Vector 12/11/2024 ## 1\\. Search Vector là gì? **Search Vector** là khái niệm trong lĩnh vực tìm kiếm và phân tích dữ liệu, đặc biệt trong các hệ thống tìm kiếm thông minh và AI....",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://images.viblo.asia/450be183-d290-4160-a30b-4fbe14a80ad6.jpeg",
+        "https://images.viblo.asia/full/9b87c5be-f71f-4e99-a52f-200388a82d5c.png",
+        "https://images.viblo.asia/avatar/3f5b542e-6833-4cd4-82f0-a78081e917c6.jpg",
+        "https://viblo.asia/favicon-white-128.png",
+        "https://inda.vn/wp-content/uploads/2026/03/image-4.png",
+        "https://inda.vn/wp-content/plugins/sitepress-multilingual-cms/res/flags/vi.png",
+        "https://inda.vn/wp-content/plugins/sitepress-multilingual-cms/res/flags/en.png",
+        "https://inda.vn/wp-content/uploads/2021/04/Logo-INDA-new-size-chuan.png",
+        "https://inda.vn/wp-content/uploads/2026/03/image-5-1024x422.png",
+        "https://inda.vn/wp-content/uploads/2021/04/logo-inda-trang-2.png",
+        "https://inda.vn/wp-content/plugins/button-contact-vr/img/zalo.png",
+        "https://inda.vn/wp-content/plugins/button-contact-vr/img/phone.png",
+        "https://cdn.advertisingvietnam.com/image/2025/12/15/1765767175308.jpg",
+        "https://advertisingvietnam.com/_next/image?url=https%3A%2F%2Fcdn.advertisingvietnam.com%2Fimage%2F2023%2F09%2F19%2F1695095270036.png&w=3840&q=75",
+        "https://seodao.vn/wp-content/uploads/2025/12/vector-database-semantic-seo-ai-01.jpg",
+        "https://seodao.vn/wp-content/uploads/2025/12/vector-database-semantic-seo-ai-03.jpg",
+        "https://seodao.vn/wp-content/uploads/2025/12/vector-database-semantic-seo-ai-06.jpg",
+        "https://advertisingvietnam.com/_next/image?url=https%3A%2F%2Fcdn.advertisingvietnam.com%2Fthumbnail%2F1776873999187-56c7f79c-296e-4aa3-9fc0-1f007112b277-va-n-e-cu-a-google.png&w=3840&q=75",
+        "https://advertisingvietnam.com/_next/image?url=https%3A%2F%2Fcdn.advertisingvietnam.com%2Fimage%2F2026%2F01%2F19%2F1768777061524.png&w=3840&q=75",
+        "https://advertisingvietnam.com/_next/image?url=https%3A%2F%2Fcdn.advertisingvietnam.com%2Fthumbnail%2F1776833154822-5cc98297-0106-4f43-a592-c8455d579758-brand-seo.png&w=3840&q=75",
+        "https://advertisingvietnam.com/_next/image?url=https%3A%2F%2Fcdn.advertisingvietnam.com%2Fimage%2F2025%2F03%2F05%2F1741155762247.JPG&w=3840&q=75",
+        "https://advertisingvietnam.com/_next/image?url=https%3A%2F%2Fcdn.advertisingvietnam.com%2Fthumbnail%2F1776760203335-031bb5f8-7e0b-420b-a05c-33c2729bbae8-commerce-media.png&w=3840&q=75",
+        "https://advertisingvietnam.com/_next/image?url=https%3A%2F%2Fcdn.advertisingvietnam.com%2Fimage%2F2025%2F07%2F14%2F1752466066966.jpg&w=3840&q=75",
+        "https://advertisingvietnam.com/_next/image?url=https%3A%2F%2Fcdn.advertisingvietnam.com%2Fthumbnail%2F1776769152760-603924c2-9528-4111-8d3c-547b3e50fb4a-ADVN_THUMB_2104.jpg&w=3840&q=75",
+        "https://advertisingvietnam.com/_next/image?url=https%3A%2F%2Fcdn.advertisingvietnam.com%2Fcontent%2F1774882100120-5ddad22b-ff99-473c-bb1d-2a7308965f17-photo_2026-03-30-21.45.33.jpeg&w=3840&q=75",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-database-compressed.jpg",
+        "https://topdev.vn/blog/wp-content/uploads/2020/08/logo-new-1.png",
+        "https://topdev.vn/blog/wp-content/uploads/2020/08/logo-mobile.png",
+        "https://c.topdevvn.com/uploads/2024/06/03/convert-cv-200x80.png",
+        "https://c.topdevvn.com/uploads/2024/06/03/login-200x80.png",
+        "https://topdev.vn/blog/wp-content/uploads/2019/03/tao-cv-online-cn.jpg",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-1.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-2.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-3.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-4.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-5.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-6.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-7.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-8.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-9.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-10.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-11.webp",
+        "https://c.topdevvn.com/uploads/2024/05/24/login-post.png",
+        "https://c.topdevvn.com/uploads/2024/05/24/convert-cv-post.png",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/cheatsheet-huu-ich-cho-postgresql-compressed-218x150.jpg",
+        "https://topdev.vn/blog/wp-content/uploads/2024/08/so-sanh-mysql-va-mongodb-nen-chon-csdl-nao-218x150.png",
+        "https://topdev.vn/blog/wp-content/uploads/2024/07/data-nen-luu-vao-database-hay-cache-truoc-218x150.png",
+        "https://topdev.vn/blog/wp-content/uploads/2024/07/on-tap-chi-tiet-ve-database-trong-lap-trinh-php-218x150.jpg",
+        "https://topdev.vn/blog/wp-content/uploads/2024/01/uu-va-nhuoc-diem-cua-cac-loai-database-218x150.png",
+        "https://topdev.vn/blog/wp-content/uploads/2023/06/cau-hoi-phong-van-database-developer-database-administrator-thuong-gap-218x150.png",
+        "https://topdev.vn/blog/wp-content/uploads/2023/02/database-developer-la-gi-ky-nang-can-co-cua-database-developers-218x150.png",
+        "https://topdev.vn/blog/wp-content/uploads/2023/02/thiet-ke-service-co-tai-ghi-cao-khong-gay-tranh-chap-tai-nguyen-218x150.png",
+        "https://topdev.vn/blog/wp-content/uploads/2022/12/lo-trinh-hoc-mysql-218x150.png",
+        "https://topdev.vn/blog/wp-content/uploads/2018/08/backend-developer-2018-218x150.png",
+        "https://topdev.vn/blog/wp-content/uploads/2022/05/thumbnail-postgreSQL-218x150.jpg",
+        "https://topdev.vn/blog/wp-content/uploads/2022/03/co-so-du-lieu-218x150.jpg",
+        "https://vndigitech.com/search-vector-giai-phap-tim-kiem-thong-minh-dua-tren-vector/search-vector-3/",
+        "https://vndigitech.com/wp-content/uploads/2024/11/Search-Vector.jpg",
+        "https://vndigitech.com/wp-content/uploads/2024/11/Phuong-phap-tim-kiem-theo-ngu-nghia-semantic-search-1024x408.png",
+        "https://vndigitech.com/wp-content/uploads/2024/11/Tim-kiem-Tuong-tu-Similarity-Search.jpg",
+        "https://vndigitech.com/wp-content/uploads/2024/11/Phan-Tich-Du-Lieu-Lon-Big-Data-Analytics.jpg",
+        "https://vndigitech.com/wp-content/uploads/2024/11/Tim-kiem-ngu-nghia-Semantic-Search.jpg",
+        "https://vndigitech.com/wp-content/uploads/2024/11/Goi-y-san-pham.jpg",
+        "https://vndigitech.com/wp-content/uploads/2024/11/Kho-khan-trong-viec-giai-thich.jpg",
+        "https://vndigitech.com/wp-content/uploads/2024/11/Chat-luong-du-lieu-1024x576.jpg",
+        "https://vndigitech.com/wp-content/uploads/2024/11/Bao-mat-va-quyen-rieng-tu.jpg",
+        "https://vndigitech.com/he-thong-marketing-tu-dong/quang-cao-ton-tien-nhung-khong-ra-khach-thuc-nhan/",
+        "https://vndigitech.com/marketing-automation-vi-sao-tang-nguoi-ma-hieu-qua-khong-tang/dung-ai-nhieu-nhung-doanh-nghiep-van-chua-thay-hieu-qua/",
+        "https://vndigitech.com/marketing-automation-vi-sao-tang-nguoi-ma-hieu-qua-khong-tang/marketing-ngay-cang-ton-nhieu-nguoi-nhung-hieu-qua-khong-tang/"
+      ],
+      "conversation_id": "cbf71d2e-cfa2-4091-8bcf-362890c58286",
+      "updated_at": "2026-04-25T00:18:16.006507+00:00"
+    },
+    "cách cách tiếp cận vector cải thiện kết quả tìm kiếm so với sql? bạn hãy tìm trong nội bộ và tùn kiếm thêm trên web cho đầy đủ thông tin": {
+      "question": "Cách cách tiếp cận vector cải thiện kết quả tìm kiếm so với SQL? Bạn hãy tìm trong nội bộ và tùn kiếm thêm trên web cho đầy đủ thông tin",
+      "answer": "Web summary:\n## Cách tiếp cận vector cải thiện kết quả tìm kiếm so với SQL\n\nCách tiếp cận vector cải thiện kết quả tìm kiếm bằng cách biểu diễn dữ liệu dưới dạng vector số học trong không gian chiều. Điều này cho phép tìm kiếm các mục tương tự dựa trên ngữ nghĩa, thay vì chỉ dựa trên các từ khóa khớp chính xác như trong SQL truyền thống.\n\n**Ưu điểm của cách tiếp cận vector:**\n\n*   **Tìm kiếm theo ngữ nghĩa:** Các vector biểu diễn ý nghĩa của dữ liệu (văn bản, hình ảnh, âm thanh). Điều này giúp tìm kiếm các kết quả liên quan về mặt ngữ nghĩa, ngay cả khi không có từ khóa trùng khớp hoàn toàn.\n*   **Xử lý dữ liệu phi cấu trúc:** Vector hóa dữ liệu phi cấu trúc như văn bản, hình ảnh, âm thanh giúp chúng có thể được tìm kiếm và phân tích hiệu quả.\n*   **Tối ưu hóa tìm kiếm:** Kỹ thuật này giúp nhanh chóng xác định các mục tương tự trong tập dữ liệu lớn, tối ưu hóa hiệu suất tìm kiếm.\n\n**So sánh với SQL:**\n\n*   **SQL:** Chủ yếu sử dụng các phép so sánh chuỗi (ví dụ: `LIKE`) để tìm kiếm dựa trên từ khóa. Cách này có thể bỏ sót các kết quả liên quan về mặt ngữ nghĩa nhưng không có từ khóa trùng khớp.\n*   **Vector Search:** Sử dụng các phép đo độ tương đồng giữa các vector (ví dụ: cosine similarity, Euclidean distance) để tìm kiếm các mục có biểu diễn vector gần nhau, thể hiện sự tương đồng về ngữ nghĩa.\n\n**Khái niệm cốt lõi:**\n\n*   **Biểu diễn Dữ liệu Dưới Dạng Vector:** Dữ liệu được chuyển đổi thành các vector số trong không gian chiều, thường bằng các mô hình học sâu như Word2Vec, GloVe, BERT.\n*   **Độ tương đồng Vector:** Mức độ tương đồng giữa các đối tượng dữ liệu được đo bằng các phương pháp như cosine similarity hoặc Euclidean distance.\n\n**Kết luận:**\n\nCách tiếp cận vector mang lại khả năng tìm kiếm thông minh và hiệu quả hơn so với các phương pháp truyền thống dựa trên SQL, đặc biệt khi xử lý các loại dữ liệu phức tạp và yêu cầu tìm kiếm theo ngữ nghĩa.\n\nWeb findings:\n- [![](https://images.viblo.asia/full/9b87c5be-f71f-4e99-a52f-200388a82d5c.png)](https://www.facebook.com/viblo.asia/posts/pfbid02bgJpS8cGpqnesCC49TBEXP69LTBZNwfRG9mwZmCELrqdCqFvuW8JboJKNC43coo7l) +13 Cỡ chữ 18px Độ cao hàng 1.75 Mặc định Toàn màn hình Màu nền Đặt lại - Báo cáo - Thêm vào series của tôi Bài đăng này đã không được cập nhật trong 3 năm **Mục tiêu:** Cải thiện tìm kiếm trong database (...\n- [Sitemap](https://medium.com/sitemap/sitemap.xml) [Open in app](https://play.google.com/store/apps/details?id=com.medium.reader&referrer=utm_source%3DmobileNavBar&source=post_page---top_nav_layout_nav-----------------------------------------) Sign up [Sign in](https://medium.com/m/signin?operation=login&redirect=https%3A%2F%2Fmedium.com%2Fh7w%2Fusing-sql-in-vector-databases-what-changes-for-simila...\n- ![](https://vndigitech.com/search-vector-giai-phap-tim-kiem-thong-minh-dua-tren-vector/search-vector-3/) [Công nghệ](https://training.vndigitech.com/tin-tuc/cong-nghe) Search Vector: Giải Pháp Tìm Kiếm Thông Minh Dựa Trên Vector 12/11/2024 ## 1\\. Search Vector là gì? **Search Vector** là khái niệm trong lĩnh vực tìm kiếm và phân tích dữ liệu, đặc biệt trong các hệ thống tìm kiếm thông minh và AI....\n\nSources:\n- Cải thiện Tìm kiếm trong Database Full-text search - Viblo: https://viblo.asia/p/cai-thien-tim-kiem-trong-database-full-text-search-n1j4l3BGVwl\n- Using SQL in Vector Databases: What Changes for Similarity ...: https://medium.com/h7w/using-sql-in-vector-databases-what-changes-for-similarity-embedding-search-d53137b18117\n- Search Vector: Giải Pháp Tìm Kiếm Thông Minh Dựa Trên Vector: https://training.vndigitech.com/chi-tiet-tin-tuc/search-vector-giai-phap-tim-kiem-thong-minh-dua-tren-vector\n- Cơ sở dữ liệu vector (Vector Database) - Cách sử dụng chi tiết: https://topdev.vn/blog/co-so-du-lieu-vector-database/\n- Tìm hiểu sâu về Tìm kiếm vectơ và cách triển khai - LinkedIn: https://vn.linkedin.com/pulse/deep-dive-vector-search-its-implementation-siddharth-asthana-pynee?tl=vi",
+      "sources": [
+        {
+          "title": "Cải thiện Tìm kiếm trong Database Full-text search - Viblo",
+          "url": "https://viblo.asia/p/cai-thien-tim-kiem-trong-database-full-text-search-n1j4l3BGVwl",
+          "snippet": "[![](https://images.viblo.asia/full/9b87c5be-f71f-4e99-a52f-200388a82d5c.png)](https://www.facebook.com/viblo.asia/posts/pfbid02bgJpS8cGpqnesCC49TBEXP69LTBZNwfRG9mwZmCELrqdCqFvuW8JboJKNC43coo7l) +13 Cỡ chữ 18px Độ cao hàng 1.75 Mặc định Toàn màn hình Màu nền Đặt lại - Báo cáo - Thêm vào series của tôi Bài đăng này đã không được cập nhật trong 3 năm **Mục tiêu:** Cải thiện tìm kiếm trong database (...",
+          "score": 0.0
+        },
+        {
+          "title": "Using SQL in Vector Databases: What Changes for Similarity ...",
+          "url": "https://medium.com/h7w/using-sql-in-vector-databases-what-changes-for-similarity-embedding-search-d53137b18117",
+          "snippet": "[Sitemap](https://medium.com/sitemap/sitemap.xml) [Open in app](https://play.google.com/store/apps/details?id=com.medium.reader&referrer=utm_source%3DmobileNavBar&source=post_page---top_nav_layout_nav-----------------------------------------) Sign up [Sign in](https://medium.com/m/signin?operation=login&redirect=https%3A%2F%2Fmedium.com%2Fh7w%2Fusing-sql-in-vector-databases-what-changes-for-simila...",
+          "score": 0.0
+        },
+        {
+          "title": "Search Vector: Giải Pháp Tìm Kiếm Thông Minh Dựa Trên Vector",
+          "url": "https://training.vndigitech.com/chi-tiet-tin-tuc/search-vector-giai-phap-tim-kiem-thong-minh-dua-tren-vector",
+          "snippet": "![](https://vndigitech.com/search-vector-giai-phap-tim-kiem-thong-minh-dua-tren-vector/search-vector-3/) [Công nghệ](https://training.vndigitech.com/tin-tuc/cong-nghe) Search Vector: Giải Pháp Tìm Kiếm Thông Minh Dựa Trên Vector 12/11/2024 ## 1\\. Search Vector là gì? **Search Vector** là khái niệm trong lĩnh vực tìm kiếm và phân tích dữ liệu, đặc biệt trong các hệ thống tìm kiếm thông minh và AI....",
+          "score": 0.0
+        },
+        {
+          "title": "Cơ sở dữ liệu vector (Vector Database) - Cách sử dụng chi tiết",
+          "url": "https://topdev.vn/blog/co-so-du-lieu-vector-database/",
+          "snippet": "[Facebook](https://www.facebook.com/topdevvietnam/ \"Facebook\")[Linkedin](https://www.linkedin.com/company/topdev-vn/ \"Linkedin\")[Twitter](https://twitter.com/Topdevvn \"Twitter\") - [Tìm việc IT](https://topdev.vn/?src=topdev_blog&medium=navbar&campaign=link) - [Tạo CV Online](https://topdev.vn/tao-cv-online?src=topdev_blog&medium=navbar&campaign=link) - [CÔNG TY TUYỂN DỤNG IT](https://topdev.vn/nha...",
+          "score": 0.0
+        },
+        {
+          "title": "Tìm hiểu sâu về Tìm kiếm vectơ và cách triển khai - LinkedIn",
+          "url": "https://vn.linkedin.com/pulse/deep-dive-vector-search-its-implementation-siddharth-asthana-pynee?tl=vi",
+          "snippet": "Đồng ý và tham gia LinkedIn Khi nhấp vào Tiếp tục để tham gia hoặc đăng nhập, bạn đồng ý với [Thỏa thuận người dùng](https://vn.linkedin.com/legal/user-agreement?trk=linkedin-tc_auth-button_user-agreement), [Chính sách quyền riêng tư](https://vn.linkedin.com/legal/privacy-policy?trk=linkedin-tc_auth-button_privacy-policy) và [Chính sách cookie](https://vn.linkedin.com/legal/cookie-policy?trk=linke...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://images.viblo.asia/450be183-d290-4160-a30b-4fbe14a80ad6.jpeg",
+        "https://images.viblo.asia/full/9b87c5be-f71f-4e99-a52f-200388a82d5c.png",
+        "https://images.viblo.asia/avatar/3f5b542e-6833-4cd4-82f0-a78081e917c6.jpg",
+        "https://viblo.asia/favicon-white-128.png",
+        "https://miro.medium.com/v2/resize:fit:1200/1*5kM7i-CaH8D0gsh8duKfqw.jpeg",
+        "https://miro.medium.com/v2/resize:fill:32:32/1*dmbNkD5D-u45r44go_cf0g.png",
+        "https://miro.medium.com/v2/resize:fill:38:38/1*63ToFy3fWtW5kZWd0RfrYg.png",
+        "https://miro.medium.com/v2/resize:fill:32:32/1*GuggiDR-D2TjpdkxMXKG0g.jpeg",
+        "https://miro.medium.com/v2/resize:fit:700/1*5kM7i-CaH8D0gsh8duKfqw.jpeg",
+        "https://miro.medium.com/v2/resize:fill:48:48/1*63ToFy3fWtW5kZWd0RfrYg.png",
+        "https://miro.medium.com/v2/resize:fill:64:64/1*63ToFy3fWtW5kZWd0RfrYg.png",
+        "https://miro.medium.com/v2/resize:fill:48:48/1*GuggiDR-D2TjpdkxMXKG0g.jpeg",
+        "https://miro.medium.com/v2/resize:fill:64:64/1*GuggiDR-D2TjpdkxMXKG0g.jpeg",
+        "https://vndigitech.com/search-vector-giai-phap-tim-kiem-thong-minh-dua-tren-vector/search-vector-3/",
+        "https://vndigitech.com/wp-content/uploads/2024/11/Search-Vector.jpg",
+        "https://vndigitech.com/wp-content/uploads/2024/11/Phuong-phap-tim-kiem-theo-ngu-nghia-semantic-search-1024x408.png",
+        "https://vndigitech.com/wp-content/uploads/2024/11/Tim-kiem-Tuong-tu-Similarity-Search.jpg",
+        "https://vndigitech.com/wp-content/uploads/2024/11/Phan-Tich-Du-Lieu-Lon-Big-Data-Analytics.jpg",
+        "https://vndigitech.com/wp-content/uploads/2024/11/Tim-kiem-ngu-nghia-Semantic-Search.jpg",
+        "https://vndigitech.com/wp-content/uploads/2024/11/Goi-y-san-pham.jpg",
+        "https://vndigitech.com/wp-content/uploads/2024/11/Kho-khan-trong-viec-giai-thich.jpg",
+        "https://vndigitech.com/wp-content/uploads/2024/11/Chat-luong-du-lieu-1024x576.jpg",
+        "https://vndigitech.com/wp-content/uploads/2024/11/Bao-mat-va-quyen-rieng-tu.jpg",
+        "https://vndigitech.com/he-thong-marketing-tu-dong/quang-cao-ton-tien-nhung-khong-ra-khach-thuc-nhan/",
+        "https://vndigitech.com/marketing-automation-vi-sao-tang-nguoi-ma-hieu-qua-khong-tang/dung-ai-nhieu-nhung-doanh-nghiep-van-chua-thay-hieu-qua/",
+        "https://vndigitech.com/marketing-automation-vi-sao-tang-nguoi-ma-hieu-qua-khong-tang/marketing-ngay-cang-ton-nhieu-nguoi-nhung-hieu-qua-khong-tang/",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-database-compressed.jpg",
+        "https://topdev.vn/blog/wp-content/uploads/2020/08/logo-new-1.png",
+        "https://topdev.vn/blog/wp-content/uploads/2020/08/logo-mobile.png",
+        "https://c.topdevvn.com/uploads/2024/06/03/convert-cv-200x80.png",
+        "https://c.topdevvn.com/uploads/2024/06/03/login-200x80.png",
+        "https://topdev.vn/blog/wp-content/uploads/2019/03/tao-cv-online-cn.jpg",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-1.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-2.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-3.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-4.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-5.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-6.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-7.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-8.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-9.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-10.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-11.webp",
+        "https://c.topdevvn.com/uploads/2024/05/24/login-post.png",
+        "https://c.topdevvn.com/uploads/2024/05/24/convert-cv-post.png",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/cheatsheet-huu-ich-cho-postgresql-compressed-218x150.jpg",
+        "https://topdev.vn/blog/wp-content/uploads/2024/08/so-sanh-mysql-va-mongodb-nen-chon-csdl-nao-218x150.png",
+        "https://topdev.vn/blog/wp-content/uploads/2024/07/data-nen-luu-vao-database-hay-cache-truoc-218x150.png",
+        "https://topdev.vn/blog/wp-content/uploads/2024/07/on-tap-chi-tiet-ve-database-trong-lap-trinh-php-218x150.jpg",
+        "https://topdev.vn/blog/wp-content/uploads/2024/01/uu-va-nhuoc-diem-cua-cac-loai-database-218x150.png",
+        "https://topdev.vn/blog/wp-content/uploads/2023/06/cau-hoi-phong-van-database-developer-database-administrator-thuong-gap-218x150.png",
+        "https://topdev.vn/blog/wp-content/uploads/2023/02/database-developer-la-gi-ky-nang-can-co-cua-database-developers-218x150.png",
+        "https://topdev.vn/blog/wp-content/uploads/2023/02/thiet-ke-service-co-tai-ghi-cao-khong-gay-tranh-chap-tai-nguyen-218x150.png",
+        "https://topdev.vn/blog/wp-content/uploads/2022/12/lo-trinh-hoc-mysql-218x150.png",
+        "https://topdev.vn/blog/wp-content/uploads/2018/08/backend-developer-2018-218x150.png",
+        "https://topdev.vn/blog/wp-content/uploads/2022/05/thumbnail-postgreSQL-218x150.jpg",
+        "https://topdev.vn/blog/wp-content/uploads/2022/03/co-so-du-lieu-218x150.jpg",
+        "https://media.licdn.com/dms/image/v2/D4E12AQF6PtADrsEBFA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1723442187805?e=2147483647&v=beta&t=8XHCEnKJNBTTqGItpWNqOuxfqQx9D5KK_xi26X-CaJ0"
+      ],
+      "conversation_id": "e20c6847-127f-4631-aed3-0d26d1279c92",
+      "updated_at": "2026-04-25T00:20:04.870093+00:00"
+    },
+    "what are the differences between cosine similarity and euclidean distance in vector databases, and when should each be used": {
+      "question": "What are the differences between cosine similarity and Euclidean distance in vector databases, and when should each be used",
+      "answer": "The context provides information on Cosine Similarity and Euclidean Distance as similarity metrics used in vector databases, but it does not explicitly detail when each should be used.\n\nHere's a breakdown of what is provided:\n\n**Cosine Similarity**\n*   **What it measures:** The angle between two vectors.\n*   **Interpretation:**\n    *   An angle of 0° indicates that the documents are semantically identical.\n    *   An angle of 90° indicates that the documents are completely unrelated.\n*   **Common Use:** It is the most common metric in Natural Language Processing (NLP).\n\n**Euclidean Distance (L2)**\n*   **What it measures:** The straight-line distance between two points.\n*   **When it's useful:** When the \"magnitude\" of the data matters, such as in image recognition.\n\n**Missing Information:**\nThe context does not specify the exact use cases or scenarios where one metric would be definitively preferred over the other, beyond the general mention of Euclidean distance being useful when magnitude matters.\n\nSources:\n- unknown",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Storage: The vector is stored in the database along with \"Metadata\" (the original text and the\nfilen...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": 4.751766204833984
+        }
+      ],
+      "image_urls": [],
+      "conversation_id": "b97a5d5a-2e98-4001-8310-3e4971f566d9",
+      "updated_at": "2026-04-25T00:30:52.552824+00:00"
+    },
+    "based on my knowledge base, explain vector embeddings, and also give a real-world example of how companies use them in production today.": {
+      "question": "Based on my knowledge base, explain vector embeddings, and also give a real-world example of how companies use them in production today.",
+      "answer": "Vector embeddings represent data, such as text, as arrays of floating-point numbers. This numerical representation captures the contextual meaning of the data. For example, the words \"automobile\" and \"car\" would have mathematically similar vector embeddings because they are close to each other in a high-dimensional space, indicating semantic similarity.\n\n**How Vector Databases Work:**\n\n1.  **Chunking:** Large documents are broken down into smaller \"chunks\" (e.g., 500 words each).\n2.  **Embedding:** Each chunk is processed by an Embedding Model (like BERT) to generate a vector.\n3.  **Storage:** These vectors are stored in a Vector Database, often alongside metadata like the original text and filename.\n\n**Searching with Vector Databases:**\n\nInstead of exact matches, vector databases find the \"Nearest Neighbors\" to a query vector. Common similarity metrics used for this include:\n\n*   **Cosine Similarity:** Measures the angle between vectors, indicating semantic similarity.\n*   **Euclidean Distance (L2):** Measures the straight-line distance between points.\n*   **Dot Product:** A fast calculation that considers both magnitude and angle.\n\nTo handle large datasets efficiently, Vector Databases use Approximate Nearest Neighbor (ANN) algorithms like HNSW (Hierarchical Navigable Small World) and Product Quantization (PQ) for compression.\n\n**Real-World Use Cases:**\n\nWhile the provided context does not offer specific real-world examples of companies using vector databases in production today, it mentions that:\n\n*   **Pinecone** is a fully managed \"Serverless\" database used by large companies for production RAG (Retrieval-Augmented Generation).\n*   **Milvus** is designed for enterprise-grade clusters and billions of vectors, suggesting its use in large-scale production environments.\n\nThe context also highlights **ChromaDB** as an open-source option suitable for students and prototyping, and **pgvector** as an extension for PostgreSQL that allows storing SQL data and vectors together.\n\nWeb summary:\nVector embeddings are a method of converting data, such as words, sentences, and other types of information, into numerical representations. These numerical representations capture the meaning and relationships within the data, allowing machines to process and understand it more effectively. Similar data points are clustered closer together in a multidimensional space.\n\n**Key characteristics of vector embeddings:**\n\n*   **Numerical Representation:** They transform various data types into numbers.\n*   **Meaning and Relationships:** They encode the semantic meaning and connections within the data.\n*   **Multidimensional Space:** Data points are represented as locations in a space where proximity indicates similarity.\n\n**Real-world applications and examples:**\n\nVector embeddings are fundamental to many machine learning algorithms, particularly in areas like Natural Language Processing (NLP), recommendation systems, and search.\n\n*   **Enhanced Search:** Vector databases use vector embeddings to provide high-quality search results that go beyond simple keyword matching. They can understand the user's intent and find relevant information based on meaning.\n    *   **Example:** A library of wine descriptions could use vector embeddings to find a wine suitable for \"seafood\" even if the description only mentions it's \"good with fish,\" demonstrating an understanding of semantic similarity.\n*   **Recommendation Engines:** Systems that suggest products, content, or services often rely on vector embeddings to understand user preferences and identify similar items.\n*   **Voice Assistants and Language Translators:** These technologies utilize vector embeddings to process and understand human language.\n*   **Sentiment Analysis:** Analyzing the emotional tone of text.\n*   **Image Matching:** Image vectors can be used to find visually similar content.\n*   **User Preference Analysis:** User profile vectors can help determine individual preferences.\n*   **Product Similarity:** Product vectors can identify items that are alike.\n\nThe context provided mentions that vector embeddings are central to systems like recommendation engines, voice assistants, and language translators, indicating their widespread use in production today.\n\nWeb findings:\n- [Skip to content](https://www.ibm.com/think/topics/vector-embedding#main-content)[IBM logo](https://www.ibm.com/) Software Infrastructure [Consulting](https://www.ibm.com/consulting?lnk=L0G)Support Support [What's new](https://www.ibm.com/new?lnk=flatitem) - [Overview\\\\ Resolve product issues with self-service tools](https://www.ibm.com/mysupport/s/?language=en_US&lnk=flathl) - [Community\\\\ Share...\n- [Sitemap](https://codefarm0.medium.com/sitemap/sitemap.xml) [Open in app](https://play.google.com/store/apps/details?id=com.medium.reader&referrer=utm_source%3DmobileNavBar&source=post_page---top_nav_layout_nav-----------------------------------------) Sign up [Sign in](https://medium.com/m/signin?operation=login&redirect=https%3A%2F%2Fcodefarm0.medium.com%2Fvector-embeddings-101-the-ultimate-begi...\n- ![](https://static.scarf.sh/a.png?x-pxid=a41b0758-a3a9-4874-a880-8b5d5a363d40)![](https://px.ads.linkedin.com/collect/?pid=6758089&fmt=gif) [← Back to Blogs](https://weaviate.io/blog) [Skip to main content](https://weaviate.io/blog/vector-embeddings-explained#__docusaurus_skipToContent_fallback) [Introducing Weaviate Agent Skills – Read our Blog](https://weaviate.io/blog/weaviate-agent-skills) ![h...\n\nSources:\n- unknown\n- What is Vector Embedding? | IBM: https://www.ibm.com/think/topics/vector-embedding\n- Vector Embeddings 101: The Ultimate Beginner's Guide with Real ...: https://codefarm0.medium.com/vector-embeddings-101-the-ultimate-beginners-guide-with-real-world-use-cases-fdba8c7692cf\n- Vector Embeddings Explained - Weaviate: https://weaviate.io/blog/vector-embeddings-explained\n- What are Vector Embeddings? - Elastic: https://www.elastic.co/what-is/vector-embedding",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "I. THE LIMITATION OF TRADITIONAL DATABASES\nTraditional databases (SQL like PostgreSQL or NoSQL like ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -5.0019073486328125
+        },
+        {
+          "title": "What is Vector Embedding? | IBM",
+          "url": "https://www.ibm.com/think/topics/vector-embedding",
+          "snippet": "[Skip to content](https://www.ibm.com/think/topics/vector-embedding#main-content)[IBM logo](https://www.ibm.com/) Software Infrastructure [Consulting](https://www.ibm.com/consulting?lnk=L0G)Support Support [What's new](https://www.ibm.com/new?lnk=flatitem) - [Overview\\\\ Resolve product issues with self-service tools](https://www.ibm.com/mysupport/s/?language=en_US&lnk=flathl) - [Community\\\\ Share...",
+          "score": 0.0
+        },
+        {
+          "title": "Vector Embeddings 101: The Ultimate Beginner's Guide with Real ...",
+          "url": "https://codefarm0.medium.com/vector-embeddings-101-the-ultimate-beginners-guide-with-real-world-use-cases-fdba8c7692cf",
+          "snippet": "[Sitemap](https://codefarm0.medium.com/sitemap/sitemap.xml) [Open in app](https://play.google.com/store/apps/details?id=com.medium.reader&referrer=utm_source%3DmobileNavBar&source=post_page---top_nav_layout_nav-----------------------------------------) Sign up [Sign in](https://medium.com/m/signin?operation=login&redirect=https%3A%2F%2Fcodefarm0.medium.com%2Fvector-embeddings-101-the-ultimate-begi...",
+          "score": 0.0
+        },
+        {
+          "title": "Vector Embeddings Explained - Weaviate",
+          "url": "https://weaviate.io/blog/vector-embeddings-explained",
+          "snippet": "![](https://static.scarf.sh/a.png?x-pxid=a41b0758-a3a9-4874-a880-8b5d5a363d40)![](https://px.ads.linkedin.com/collect/?pid=6758089&fmt=gif) [← Back to Blogs](https://weaviate.io/blog) [Skip to main content](https://weaviate.io/blog/vector-embeddings-explained#__docusaurus_skipToContent_fallback) [Introducing Weaviate Agent Skills – Read our Blog](https://weaviate.io/blog/weaviate-agent-skills) ![h...",
+          "score": 0.0
+        },
+        {
+          "title": "What are Vector Embeddings? - Elastic",
+          "url": "https://www.elastic.co/what-is/vector-embedding",
+          "snippet": "[Skip to main content](https://www.elastic.co/what-is/vector-embedding#main-content) # What are vector embeddings? [Explore vector database](https://www.elastic.co/elasticsearch/vector-database) ### Vector embeddings definition **Vector embeddings are a way to convert words and sentences and other data into numbers that capture their meaning and relationships.** They represent different data types...",
+          "score": 0.0
+        },
+        {
+          "title": "What are Vector Embeddings | Pinecone",
+          "url": "https://www.pinecone.io/learn/vector-embeddings/",
+          "snippet": "[🚀 Dedicated Read Nodes are now GA. Fixed hourly pricing and dedicated capacity for large-scale workloads — up to 97% lower costs.-Learn more](https://www.pinecone.io/blog/dedicated-read-nodes-ga/) Dismiss [←Learn](https://www.pinecone.io/learn/) # What are Vector Embeddings ![Rajat Tripathi](https://www.pinecone.io/_next/image/?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fvr8gru94%2Fproduction%2Fc5...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://www.ibm.com/content/dam/worldwide-content/stock-assets/adb-stk/ul/g/89/38/adobestock_594715939.jpeg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg",
+        "https://assets.ibm.com/is/image/ibm/dave-bergmann-crop-2x?wid=128",
+        "https://www.ibm.com/adobe/dynamicmedia/deliver/dm-aid--6ffe6fc8-d405-4a89-ad05-780d6960d862/cole-stryker-2x.jpg?preferwebp=true&width=128",
+        "https://cdnsecakmi.kaltura.com/p/1773841/thumbnail/entry_id/1_p1wtyfmb/width/1180",
+        "https://assets.ibm.com/is/image/ibm/similarity-metrics-for-vector-search-i-zilliz:16x9?fmt=png-alpha&dpr=on%2C1&wid=320&hei=180",
+        "https://assets.ibm.com/is/image/ibm/vector-embedding:16x9?fmt=png-alpha&dpr=on%2C1&wid=320&hei=180",
+        "https://consent.trustarc.com/get?name=ibm_close_icon.svg",
+        "https://miro.medium.com/v2/da:true/resize:fit:1024/0*BkZg2ooH3xODnL20",
+        "https://miro.medium.com/v2/resize:fill:32:32/1*dmbNkD5D-u45r44go_cf0g.png",
+        "https://miro.medium.com/v2/resize:fill:32:32/1*qLgT62h04Vn1WA1vdYL9lg.png",
+        "https://miro.medium.com/v2/resize:fit:700/0*BkZg2ooH3xODnL20",
+        "https://miro.medium.com/v2/resize:fit:700/0*UXLiwYXl2qd4s6vS",
+        "https://miro.medium.com/v2/resize:fit:640/1*dtFpXgrnEat5_UxOhUfjSw.png",
+        "https://miro.medium.com/v2/resize:fill:48:48/1*qLgT62h04Vn1WA1vdYL9lg.png",
+        "https://miro.medium.com/v2/resize:fill:64:64/1*qLgT62h04Vn1WA1vdYL9lg.png",
+        "https://weaviate.io/assets/images/hero-e87859049d8769d974b67509ae99cf91.png",
+        "https://static.scarf.sh/a.png?x-pxid=a41b0758-a3a9-4874-a880-8b5d5a363d40",
+        "https://px.ads.linkedin.com/collect/?pid=6758089&fmt=gif",
+        "https://weaviate.io/assets/images/vector-embeddings-example-3f50aa2d6cdd8308c09505fba3b140c0.png",
+        "https://weaviate.io/assets/images/vector-embeddings-visualization-487385a07b9d2595031520e877abbbd0.png",
+        "https://weaviate.io/assets/images/image10-ebe747ac9f2e03dba758f1ed3ea7e82c.jpg",
+        "https://weaviate.io/img/site/weaviate-logo-w.png",
+        "https://www.elastic.co/static-res/images/social_media_default.png",
+        "https://images.contentstack.io/v3/assets/bltefdd0b53724fa2ce/bltf21aa7ceeb3a8512/66cf7e13651b1469ce2973b4/vector-database-architecture-infographic-2-vector-search.jpg",
+        "https://www.pinecone.io/api/og/?title=What%20are%20Vector%20Embeddings&category=Learn",
+        "https://www.pinecone.io/_next/image/?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fvr8gru94%2Fproduction%2Fc555739cf15124cc66a57ee6ca69ffa8a30abff5-263x263.png&w=3840&q=75",
+        "https://www.pinecone.io/_next/image/?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fvr8gru94%2Fproduction%2Fe016bbd4d7d57ff27e261adf1e254d2d3c609aac-2447x849.png&w=3840&q=75",
+        "https://www.pinecone.io/_next/image/?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fvr8gru94%2Fproduction%2Fec6f20344b056465a17d98cc98b834eb364f93ce-1432x504.png&w=3840&q=75",
+        "https://www.pinecone.io/_next/image/?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fvr8gru94%2Fproduction%2F31a1950de10f80473b43530795d034917a43f366-704x290.png&w=1920&q=75",
+        "https://www.pinecone.io/_next/image/?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fvr8gru94%2Fproduction%2Fca4f41cd19b9e78e35b355ee015d57757cdd0e4d-1040x320.png&w=3840&q=75",
+        "https://www.pinecone.io/_next/image/?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fvr8gru94%2Fproduction%2Fd40a0725580d36beb6f450397333ad929557bc46-512x512.jpg&w=3840&q=75",
+        "https://www.pinecone.io/_next/image/?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fvr8gru94%2Fproduction%2F4bde7bca90f3120a7e7a199c71ffd6b445bd325d-512x512.jpg&w=3840&q=75",
+        "https://www.pinecone.io/_next/image/?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fvr8gru94%2Fproduction%2F62d5319461cc2459c3055d00c56048f7cf4b67fd-1170x1170.png&w=3840&q=75"
+      ],
+      "conversation_id": "7eeda6c7-abd5-4b51-8d20-dcd5e83bd9b3",
+      "updated_at": "2026-04-25T00:36:18.753109+00:00"
     }
   },
   "history": [
@@ -1019,6 +1574,337 @@
       ],
       "cache_hit": true,
       "timestamp": "2026-04-21T08:13:06.359207+00:00"
+    },
+    {
+      "execution_id": "chat-e2e-db-dd70333e",
+      "conversation_id": "feba180b-af24-4047-a1b9-160bf2abf849",
+      "question": "hello",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-04-24T16:10:24.498951+00:00"
+    },
+    {
+      "execution_id": "chat-e2e-db-cec2a453",
+      "conversation_id": "27f46e1a-f42f-4074-909a-94a327f0f331",
+      "question": "hello",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-04-24T16:11:41.346951+00:00"
+    },
+    {
+      "execution_id": "6872c50c-348a-4c96-bcea-f692fef2a153",
+      "conversation_id": "cbf71d2e-cfa2-4091-8bcf-362890c58286",
+      "question": "Cách cách tiếp cận vector cải thiện kết quả tìm kiếm so với SQL và tùn kiếm thêm trên web cho đầy đủ thông tin",
+      "answer": "Web summary:\nDựa trên thông tin được cung cấp, cách tiếp cận vector cải thiện kết quả tìm kiếm so với các phương pháp truyền thống như SQL và tìm kiếm theo từ khóa (keyword search) như sau:\n\n**Ưu điểm của Vector Search so với tìm kiếm truyền thống:**\n\n*   **Hiểu ngữ nghĩa và ý định:**\n    *   Tìm kiếm truyền thống (ví dụ: sử dụng `LIKE` trong SQL) chỉ dựa trên sự trùng khớp ký tự.\n    *   Vector Search chuyển đổi dữ liệu (văn bản, hình ảnh, âm thanh) thành các vector số học. AI \"hiểu\" các mối quan hệ giữa các con số này, từ đó thấu hiểu \"ý định\" và \"ngữ cảnh\" của truy vấn, thay vì chỉ \"mặt chữ\".\n*   **Xử lý dữ liệu phi cấu trúc:**\n    *   Hơn 80% dữ liệu doanh nghiệp hiện nay là phi cấu trúc (văn bản, hình ảnh, âm thanh).\n    *   Các hệ thống tìm kiếm truyền thống gặp hạn chế khi xử lý sự phức tạp của ngôn ngữ con người trong dữ liệu phi cấu trúc. Vector Search được thiết kế để xử lý hiệu quả loại dữ liệu này.\n*   **Tìm kiếm tương tự:**\n    *   Vector Search cho phép tìm kiếm các mục dữ liệu tương tự nhau dựa trên biểu diễn vector của chúng. Mức độ tương đồng có thể được đo bằng các phương pháp như cosine similarity hoặc Euclidean distance.\n\n**Cách Vector Search hoạt động:**\n\n1.  **Biểu diễn Dữ liệu Dưới Dạng Vector (Embedding):** Dữ liệu đầu vào (từ, câu, hình ảnh, âm thanh) được chuyển đổi thành các vector số trong một không gian nhiều chiều. Các mô hình học sâu như Word2Vec, GloVe, BERT hoặc các mô hình học sâu khác được sử dụng để tạo ra các vector này.\n2.  **Tìm kiếm dựa trên Vector:** Các truy vấn cũng được chuyển đổi thành vector. Hệ thống sau đó tìm kiếm các vector dữ liệu gần nhất với vector truy vấn trong không gian này, từ đó trả về kết quả tìm kiếm có liên quan về mặt ngữ nghĩa.\n\n**Kết luận:**\n\nVector Search đại diện cho một cuộc cách mạng trong tư duy tìm kiếm, chuyển từ việc so khớp từ khóa sang việc thấu hiểu ngữ nghĩa và ý định, giúp khai\n\nWeb findings:\n- [![](https://images.viblo.asia/full/9b87c5be-f71f-4e99-a52f-200388a82d5c.png)](https://www.facebook.com/viblo.asia/posts/pfbid02bgJpS8cGpqnesCC49TBEXP69LTBZNwfRG9mwZmCELrqdCqFvuW8JboJKNC43coo7l) +13 Cỡ chữ 18px Độ cao hàng 1.75 Mặc định Toàn màn hình Màu nền Đặt lại - Báo cáo - Thêm vào series của tôi Bài đăng này đã không được cập nhật trong 3 năm **Mục tiêu:** Cải thiện tìm kiếm trong database (...\n- Chào mừng bạn đến với INDA! Hotline: **(HN) (+84) 986-882-818 \\|** **(HCM) (+84) 945-618-746** - [![](https://inda.vn/wp-content/plugins/sitepress-multilingual-cms/res/flags/vi.png)Tiếng Việt](https://inda.vn/vector-search/) - [![](https://inda.vn/wp-content/plugins/sitepress-multilingual-cms/res/flags/en.png)English](https://inda.vn/en/) [![Công Ty TNHH Giải Pháp Phân Tích Dữ Liệu Insight Data](h...\n- ![Vector Database & Semantic Search: Cách AI tìm kiếm không cần từ khóa](https://cdn.advertisingvietnam.com/image/2025/12/15/1765767175308.jpg) [![SEO Dạo](https://advertisingvietnam.com/_next/image?url=https%3A%2F%2Fcdn.advertisingvietnam.com%2Fimage%2F2023%2F09%2F19%2F1695095270036.png&w=3840&q=75)](https://advertisingvietnam.com/author/seodao) Bởi [SEO Dạo](https://advertisingvietnam.com/author...\n- [Facebook](https://www.facebook.com/topdevvietnam/ \"Facebook\")[Linkedin](https://www.linkedin.com/company/topdev-vn/ \"Linkedin\")[Twitter](https://twitter.com/Topdevvn \"Twitter\") - [Tìm việc IT](https://topdev.vn/?src=topdev_blog&medium=navbar&campaign=link) - [Tạo CV Online](https://topdev.vn/tao-cv-online?src=topdev_blog&medium=navbar&campaign=link) - [CÔNG TY TUYỂN DỤNG IT](https://topdev.vn/nha...\n- ![](https://vndigitech.com/search-vector-giai-phap-tim-kiem-thong-minh-dua-tren-vector/search-vector-3/) [Công nghệ](https://training.vndigitech.com/tin-tuc/cong-nghe) Search Vector: Giải Pháp Tìm Kiếm Thông Minh Dựa Trên Vector 12/11/2024 ## 1\\. Search Vector là gì? **Search Vector** là khái niệm trong lĩnh vực tìm kiếm và phân tích dữ liệu, đặc biệt trong các hệ thống tìm kiếm thông minh và AI....\n\nSources:\n- Cải thiện Tìm kiếm trong Database Full-text search - Viblo: https://viblo.asia/p/cai-thien-tim-kiem-trong-database-full-text-search-n1j4l3BGVwl\n- Vector Search: Cách mạng Tìm kiếm Ngữ nghĩa và Chiến lược Khai ...: https://inda.vn/vector-search/\n- Vector Database & Semantic Search: Cách AI tìm kiếm không cần từ ...: https://advertisingvietnam.com/article/vector-database-semantic-search-cach-ai-tim-kiem-khong-can-tu-khoa-p27657\n- Cơ sở dữ liệu vector (Vector Database) - Cách sử dụng chi tiết: https://topdev.vn/blog/co-so-du-lieu-vector-database/\n- Search Vector: Giải Pháp Tìm Kiếm Thông Minh Dựa Trên Vector: https://training.vndigitech.com/chi-tiet-tin-tuc/search-vector-giai-phap-tim-kiem-thong-minh-dua-tren-vector",
+      "sources": [
+        {
+          "title": "Cải thiện Tìm kiếm trong Database Full-text search - Viblo",
+          "url": "https://viblo.asia/p/cai-thien-tim-kiem-trong-database-full-text-search-n1j4l3BGVwl",
+          "snippet": "[![](https://images.viblo.asia/full/9b87c5be-f71f-4e99-a52f-200388a82d5c.png)](https://www.facebook.com/viblo.asia/posts/pfbid02bgJpS8cGpqnesCC49TBEXP69LTBZNwfRG9mwZmCELrqdCqFvuW8JboJKNC43coo7l) +13 Cỡ chữ 18px Độ cao hàng 1.75 Mặc định Toàn màn hình Màu nền Đặt lại - Báo cáo - Thêm vào series của tôi Bài đăng này đã không được cập nhật trong 3 năm **Mục tiêu:** Cải thiện tìm kiếm trong database (...",
+          "score": 0.0
+        },
+        {
+          "title": "Vector Search: Cách mạng Tìm kiếm Ngữ nghĩa và Chiến lược Khai ...",
+          "url": "https://inda.vn/vector-search/",
+          "snippet": "Chào mừng bạn đến với INDA! Hotline: **(HN) (+84) 986-882-818 \\|** **(HCM) (+84) 945-618-746** - [![](https://inda.vn/wp-content/plugins/sitepress-multilingual-cms/res/flags/vi.png)Tiếng Việt](https://inda.vn/vector-search/) - [![](https://inda.vn/wp-content/plugins/sitepress-multilingual-cms/res/flags/en.png)English](https://inda.vn/en/) [![Công Ty TNHH Giải Pháp Phân Tích Dữ Liệu Insight Data](h...",
+          "score": 0.0
+        },
+        {
+          "title": "Vector Database & Semantic Search: Cách AI tìm kiếm không cần từ ...",
+          "url": "https://advertisingvietnam.com/article/vector-database-semantic-search-cach-ai-tim-kiem-khong-can-tu-khoa-p27657",
+          "snippet": "![Vector Database & Semantic Search: Cách AI tìm kiếm không cần từ khóa](https://cdn.advertisingvietnam.com/image/2025/12/15/1765767175308.jpg) [![SEO Dạo](https://advertisingvietnam.com/_next/image?url=https%3A%2F%2Fcdn.advertisingvietnam.com%2Fimage%2F2023%2F09%2F19%2F1695095270036.png&w=3840&q=75)](https://advertisingvietnam.com/author/seodao) Bởi [SEO Dạo](https://advertisingvietnam.com/author...",
+          "score": 0.0
+        },
+        {
+          "title": "Cơ sở dữ liệu vector (Vector Database) - Cách sử dụng chi tiết",
+          "url": "https://topdev.vn/blog/co-so-du-lieu-vector-database/",
+          "snippet": "[Facebook](https://www.facebook.com/topdevvietnam/ \"Facebook\")[Linkedin](https://www.linkedin.com/company/topdev-vn/ \"Linkedin\")[Twitter](https://twitter.com/Topdevvn \"Twitter\") - [Tìm việc IT](https://topdev.vn/?src=topdev_blog&medium=navbar&campaign=link) - [Tạo CV Online](https://topdev.vn/tao-cv-online?src=topdev_blog&medium=navbar&campaign=link) - [CÔNG TY TUYỂN DỤNG IT](https://topdev.vn/nha...",
+          "score": 0.0
+        },
+        {
+          "title": "Search Vector: Giải Pháp Tìm Kiếm Thông Minh Dựa Trên Vector",
+          "url": "https://training.vndigitech.com/chi-tiet-tin-tuc/search-vector-giai-phap-tim-kiem-thong-minh-dua-tren-vector",
+          "snippet": "![](https://vndigitech.com/search-vector-giai-phap-tim-kiem-thong-minh-dua-tren-vector/search-vector-3/) [Công nghệ](https://training.vndigitech.com/tin-tuc/cong-nghe) Search Vector: Giải Pháp Tìm Kiếm Thông Minh Dựa Trên Vector 12/11/2024 ## 1\\. Search Vector là gì? **Search Vector** là khái niệm trong lĩnh vực tìm kiếm và phân tích dữ liệu, đặc biệt trong các hệ thống tìm kiếm thông minh và AI....",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://images.viblo.asia/450be183-d290-4160-a30b-4fbe14a80ad6.jpeg",
+        "https://images.viblo.asia/full/9b87c5be-f71f-4e99-a52f-200388a82d5c.png",
+        "https://images.viblo.asia/avatar/3f5b542e-6833-4cd4-82f0-a78081e917c6.jpg",
+        "https://viblo.asia/favicon-white-128.png",
+        "https://inda.vn/wp-content/uploads/2026/03/image-4.png",
+        "https://inda.vn/wp-content/plugins/sitepress-multilingual-cms/res/flags/vi.png",
+        "https://inda.vn/wp-content/plugins/sitepress-multilingual-cms/res/flags/en.png",
+        "https://inda.vn/wp-content/uploads/2021/04/Logo-INDA-new-size-chuan.png",
+        "https://inda.vn/wp-content/uploads/2026/03/image-5-1024x422.png",
+        "https://inda.vn/wp-content/uploads/2021/04/logo-inda-trang-2.png",
+        "https://inda.vn/wp-content/plugins/button-contact-vr/img/zalo.png",
+        "https://inda.vn/wp-content/plugins/button-contact-vr/img/phone.png",
+        "https://cdn.advertisingvietnam.com/image/2025/12/15/1765767175308.jpg",
+        "https://advertisingvietnam.com/_next/image?url=https%3A%2F%2Fcdn.advertisingvietnam.com%2Fimage%2F2023%2F09%2F19%2F1695095270036.png&w=3840&q=75",
+        "https://seodao.vn/wp-content/uploads/2025/12/vector-database-semantic-seo-ai-01.jpg",
+        "https://seodao.vn/wp-content/uploads/2025/12/vector-database-semantic-seo-ai-03.jpg",
+        "https://seodao.vn/wp-content/uploads/2025/12/vector-database-semantic-seo-ai-06.jpg",
+        "https://advertisingvietnam.com/_next/image?url=https%3A%2F%2Fcdn.advertisingvietnam.com%2Fthumbnail%2F1776873999187-56c7f79c-296e-4aa3-9fc0-1f007112b277-va-n-e-cu-a-google.png&w=3840&q=75",
+        "https://advertisingvietnam.com/_next/image?url=https%3A%2F%2Fcdn.advertisingvietnam.com%2Fimage%2F2026%2F01%2F19%2F1768777061524.png&w=3840&q=75",
+        "https://advertisingvietnam.com/_next/image?url=https%3A%2F%2Fcdn.advertisingvietnam.com%2Fthumbnail%2F1776833154822-5cc98297-0106-4f43-a592-c8455d579758-brand-seo.png&w=3840&q=75",
+        "https://advertisingvietnam.com/_next/image?url=https%3A%2F%2Fcdn.advertisingvietnam.com%2Fimage%2F2025%2F03%2F05%2F1741155762247.JPG&w=3840&q=75",
+        "https://advertisingvietnam.com/_next/image?url=https%3A%2F%2Fcdn.advertisingvietnam.com%2Fthumbnail%2F1776760203335-031bb5f8-7e0b-420b-a05c-33c2729bbae8-commerce-media.png&w=3840&q=75",
+        "https://advertisingvietnam.com/_next/image?url=https%3A%2F%2Fcdn.advertisingvietnam.com%2Fimage%2F2025%2F07%2F14%2F1752466066966.jpg&w=3840&q=75",
+        "https://advertisingvietnam.com/_next/image?url=https%3A%2F%2Fcdn.advertisingvietnam.com%2Fthumbnail%2F1776769152760-603924c2-9528-4111-8d3c-547b3e50fb4a-ADVN_THUMB_2104.jpg&w=3840&q=75",
+        "https://advertisingvietnam.com/_next/image?url=https%3A%2F%2Fcdn.advertisingvietnam.com%2Fcontent%2F1774882100120-5ddad22b-ff99-473c-bb1d-2a7308965f17-photo_2026-03-30-21.45.33.jpeg&w=3840&q=75",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-database-compressed.jpg",
+        "https://topdev.vn/blog/wp-content/uploads/2020/08/logo-new-1.png",
+        "https://topdev.vn/blog/wp-content/uploads/2020/08/logo-mobile.png",
+        "https://c.topdevvn.com/uploads/2024/06/03/convert-cv-200x80.png",
+        "https://c.topdevvn.com/uploads/2024/06/03/login-200x80.png",
+        "https://topdev.vn/blog/wp-content/uploads/2019/03/tao-cv-online-cn.jpg",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-1.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-2.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-3.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-4.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-5.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-6.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-7.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-8.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-9.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-10.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-11.webp",
+        "https://c.topdevvn.com/uploads/2024/05/24/login-post.png",
+        "https://c.topdevvn.com/uploads/2024/05/24/convert-cv-post.png",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/cheatsheet-huu-ich-cho-postgresql-compressed-218x150.jpg",
+        "https://topdev.vn/blog/wp-content/uploads/2024/08/so-sanh-mysql-va-mongodb-nen-chon-csdl-nao-218x150.png",
+        "https://topdev.vn/blog/wp-content/uploads/2024/07/data-nen-luu-vao-database-hay-cache-truoc-218x150.png",
+        "https://topdev.vn/blog/wp-content/uploads/2024/07/on-tap-chi-tiet-ve-database-trong-lap-trinh-php-218x150.jpg",
+        "https://topdev.vn/blog/wp-content/uploads/2024/01/uu-va-nhuoc-diem-cua-cac-loai-database-218x150.png",
+        "https://topdev.vn/blog/wp-content/uploads/2023/06/cau-hoi-phong-van-database-developer-database-administrator-thuong-gap-218x150.png",
+        "https://topdev.vn/blog/wp-content/uploads/2023/02/database-developer-la-gi-ky-nang-can-co-cua-database-developers-218x150.png",
+        "https://topdev.vn/blog/wp-content/uploads/2023/02/thiet-ke-service-co-tai-ghi-cao-khong-gay-tranh-chap-tai-nguyen-218x150.png",
+        "https://topdev.vn/blog/wp-content/uploads/2022/12/lo-trinh-hoc-mysql-218x150.png",
+        "https://topdev.vn/blog/wp-content/uploads/2018/08/backend-developer-2018-218x150.png",
+        "https://topdev.vn/blog/wp-content/uploads/2022/05/thumbnail-postgreSQL-218x150.jpg",
+        "https://topdev.vn/blog/wp-content/uploads/2022/03/co-so-du-lieu-218x150.jpg",
+        "https://vndigitech.com/search-vector-giai-phap-tim-kiem-thong-minh-dua-tren-vector/search-vector-3/",
+        "https://vndigitech.com/wp-content/uploads/2024/11/Search-Vector.jpg",
+        "https://vndigitech.com/wp-content/uploads/2024/11/Phuong-phap-tim-kiem-theo-ngu-nghia-semantic-search-1024x408.png",
+        "https://vndigitech.com/wp-content/uploads/2024/11/Tim-kiem-Tuong-tu-Similarity-Search.jpg",
+        "https://vndigitech.com/wp-content/uploads/2024/11/Phan-Tich-Du-Lieu-Lon-Big-Data-Analytics.jpg",
+        "https://vndigitech.com/wp-content/uploads/2024/11/Tim-kiem-ngu-nghia-Semantic-Search.jpg",
+        "https://vndigitech.com/wp-content/uploads/2024/11/Goi-y-san-pham.jpg",
+        "https://vndigitech.com/wp-content/uploads/2024/11/Kho-khan-trong-viec-giai-thich.jpg",
+        "https://vndigitech.com/wp-content/uploads/2024/11/Chat-luong-du-lieu-1024x576.jpg",
+        "https://vndigitech.com/wp-content/uploads/2024/11/Bao-mat-va-quyen-rieng-tu.jpg",
+        "https://vndigitech.com/he-thong-marketing-tu-dong/quang-cao-ton-tien-nhung-khong-ra-khach-thuc-nhan/",
+        "https://vndigitech.com/marketing-automation-vi-sao-tang-nguoi-ma-hieu-qua-khong-tang/dung-ai-nhieu-nhung-doanh-nghiep-van-chua-thay-hieu-qua/",
+        "https://vndigitech.com/marketing-automation-vi-sao-tang-nguoi-ma-hieu-qua-khong-tang/marketing-ngay-cang-ton-nhieu-nguoi-nhung-hieu-qua-khong-tang/"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-04-25T00:18:16.006507+00:00"
+    },
+    {
+      "execution_id": "51ee9a3b-8178-4009-8a0e-289e76c62ef1",
+      "conversation_id": "e20c6847-127f-4631-aed3-0d26d1279c92",
+      "question": "Cách cách tiếp cận vector cải thiện kết quả tìm kiếm so với SQL? Bạn hãy tìm trong nội bộ và tùn kiếm thêm trên web cho đầy đủ thông tin",
+      "answer": "Web summary:\n## Cách tiếp cận vector cải thiện kết quả tìm kiếm so với SQL\n\nCách tiếp cận vector cải thiện kết quả tìm kiếm bằng cách biểu diễn dữ liệu dưới dạng vector số học trong không gian chiều. Điều này cho phép tìm kiếm các mục tương tự dựa trên ngữ nghĩa, thay vì chỉ dựa trên các từ khóa khớp chính xác như trong SQL truyền thống.\n\n**Ưu điểm của cách tiếp cận vector:**\n\n*   **Tìm kiếm theo ngữ nghĩa:** Các vector biểu diễn ý nghĩa của dữ liệu (văn bản, hình ảnh, âm thanh). Điều này giúp tìm kiếm các kết quả liên quan về mặt ngữ nghĩa, ngay cả khi không có từ khóa trùng khớp hoàn toàn.\n*   **Xử lý dữ liệu phi cấu trúc:** Vector hóa dữ liệu phi cấu trúc như văn bản, hình ảnh, âm thanh giúp chúng có thể được tìm kiếm và phân tích hiệu quả.\n*   **Tối ưu hóa tìm kiếm:** Kỹ thuật này giúp nhanh chóng xác định các mục tương tự trong tập dữ liệu lớn, tối ưu hóa hiệu suất tìm kiếm.\n\n**So sánh với SQL:**\n\n*   **SQL:** Chủ yếu sử dụng các phép so sánh chuỗi (ví dụ: `LIKE`) để tìm kiếm dựa trên từ khóa. Cách này có thể bỏ sót các kết quả liên quan về mặt ngữ nghĩa nhưng không có từ khóa trùng khớp.\n*   **Vector Search:** Sử dụng các phép đo độ tương đồng giữa các vector (ví dụ: cosine similarity, Euclidean distance) để tìm kiếm các mục có biểu diễn vector gần nhau, thể hiện sự tương đồng về ngữ nghĩa.\n\n**Khái niệm cốt lõi:**\n\n*   **Biểu diễn Dữ liệu Dưới Dạng Vector:** Dữ liệu được chuyển đổi thành các vector số trong không gian chiều, thường bằng các mô hình học sâu như Word2Vec, GloVe, BERT.\n*   **Độ tương đồng Vector:** Mức độ tương đồng giữa các đối tượng dữ liệu được đo bằng các phương pháp như cosine similarity hoặc Euclidean distance.\n\n**Kết luận:**\n\nCách tiếp cận vector mang lại khả năng tìm kiếm thông minh và hiệu quả hơn so với các phương pháp truyền thống dựa trên SQL, đặc biệt khi xử lý các loại dữ liệu phức tạp và yêu cầu tìm kiếm theo ngữ nghĩa.\n\nWeb findings:\n- [![](https://images.viblo.asia/full/9b87c5be-f71f-4e99-a52f-200388a82d5c.png)](https://www.facebook.com/viblo.asia/posts/pfbid02bgJpS8cGpqnesCC49TBEXP69LTBZNwfRG9mwZmCELrqdCqFvuW8JboJKNC43coo7l) +13 Cỡ chữ 18px Độ cao hàng 1.75 Mặc định Toàn màn hình Màu nền Đặt lại - Báo cáo - Thêm vào series của tôi Bài đăng này đã không được cập nhật trong 3 năm **Mục tiêu:** Cải thiện tìm kiếm trong database (...\n- [Sitemap](https://medium.com/sitemap/sitemap.xml) [Open in app](https://play.google.com/store/apps/details?id=com.medium.reader&referrer=utm_source%3DmobileNavBar&source=post_page---top_nav_layout_nav-----------------------------------------) Sign up [Sign in](https://medium.com/m/signin?operation=login&redirect=https%3A%2F%2Fmedium.com%2Fh7w%2Fusing-sql-in-vector-databases-what-changes-for-simila...\n- ![](https://vndigitech.com/search-vector-giai-phap-tim-kiem-thong-minh-dua-tren-vector/search-vector-3/) [Công nghệ](https://training.vndigitech.com/tin-tuc/cong-nghe) Search Vector: Giải Pháp Tìm Kiếm Thông Minh Dựa Trên Vector 12/11/2024 ## 1\\. Search Vector là gì? **Search Vector** là khái niệm trong lĩnh vực tìm kiếm và phân tích dữ liệu, đặc biệt trong các hệ thống tìm kiếm thông minh và AI....\n\nSources:\n- Cải thiện Tìm kiếm trong Database Full-text search - Viblo: https://viblo.asia/p/cai-thien-tim-kiem-trong-database-full-text-search-n1j4l3BGVwl\n- Using SQL in Vector Databases: What Changes for Similarity ...: https://medium.com/h7w/using-sql-in-vector-databases-what-changes-for-similarity-embedding-search-d53137b18117\n- Search Vector: Giải Pháp Tìm Kiếm Thông Minh Dựa Trên Vector: https://training.vndigitech.com/chi-tiet-tin-tuc/search-vector-giai-phap-tim-kiem-thong-minh-dua-tren-vector\n- Cơ sở dữ liệu vector (Vector Database) - Cách sử dụng chi tiết: https://topdev.vn/blog/co-so-du-lieu-vector-database/\n- Tìm hiểu sâu về Tìm kiếm vectơ và cách triển khai - LinkedIn: https://vn.linkedin.com/pulse/deep-dive-vector-search-its-implementation-siddharth-asthana-pynee?tl=vi",
+      "sources": [
+        {
+          "title": "Cải thiện Tìm kiếm trong Database Full-text search - Viblo",
+          "url": "https://viblo.asia/p/cai-thien-tim-kiem-trong-database-full-text-search-n1j4l3BGVwl",
+          "snippet": "[![](https://images.viblo.asia/full/9b87c5be-f71f-4e99-a52f-200388a82d5c.png)](https://www.facebook.com/viblo.asia/posts/pfbid02bgJpS8cGpqnesCC49TBEXP69LTBZNwfRG9mwZmCELrqdCqFvuW8JboJKNC43coo7l) +13 Cỡ chữ 18px Độ cao hàng 1.75 Mặc định Toàn màn hình Màu nền Đặt lại - Báo cáo - Thêm vào series của tôi Bài đăng này đã không được cập nhật trong 3 năm **Mục tiêu:** Cải thiện tìm kiếm trong database (...",
+          "score": 0.0
+        },
+        {
+          "title": "Using SQL in Vector Databases: What Changes for Similarity ...",
+          "url": "https://medium.com/h7w/using-sql-in-vector-databases-what-changes-for-similarity-embedding-search-d53137b18117",
+          "snippet": "[Sitemap](https://medium.com/sitemap/sitemap.xml) [Open in app](https://play.google.com/store/apps/details?id=com.medium.reader&referrer=utm_source%3DmobileNavBar&source=post_page---top_nav_layout_nav-----------------------------------------) Sign up [Sign in](https://medium.com/m/signin?operation=login&redirect=https%3A%2F%2Fmedium.com%2Fh7w%2Fusing-sql-in-vector-databases-what-changes-for-simila...",
+          "score": 0.0
+        },
+        {
+          "title": "Search Vector: Giải Pháp Tìm Kiếm Thông Minh Dựa Trên Vector",
+          "url": "https://training.vndigitech.com/chi-tiet-tin-tuc/search-vector-giai-phap-tim-kiem-thong-minh-dua-tren-vector",
+          "snippet": "![](https://vndigitech.com/search-vector-giai-phap-tim-kiem-thong-minh-dua-tren-vector/search-vector-3/) [Công nghệ](https://training.vndigitech.com/tin-tuc/cong-nghe) Search Vector: Giải Pháp Tìm Kiếm Thông Minh Dựa Trên Vector 12/11/2024 ## 1\\. Search Vector là gì? **Search Vector** là khái niệm trong lĩnh vực tìm kiếm và phân tích dữ liệu, đặc biệt trong các hệ thống tìm kiếm thông minh và AI....",
+          "score": 0.0
+        },
+        {
+          "title": "Cơ sở dữ liệu vector (Vector Database) - Cách sử dụng chi tiết",
+          "url": "https://topdev.vn/blog/co-so-du-lieu-vector-database/",
+          "snippet": "[Facebook](https://www.facebook.com/topdevvietnam/ \"Facebook\")[Linkedin](https://www.linkedin.com/company/topdev-vn/ \"Linkedin\")[Twitter](https://twitter.com/Topdevvn \"Twitter\") - [Tìm việc IT](https://topdev.vn/?src=topdev_blog&medium=navbar&campaign=link) - [Tạo CV Online](https://topdev.vn/tao-cv-online?src=topdev_blog&medium=navbar&campaign=link) - [CÔNG TY TUYỂN DỤNG IT](https://topdev.vn/nha...",
+          "score": 0.0
+        },
+        {
+          "title": "Tìm hiểu sâu về Tìm kiếm vectơ và cách triển khai - LinkedIn",
+          "url": "https://vn.linkedin.com/pulse/deep-dive-vector-search-its-implementation-siddharth-asthana-pynee?tl=vi",
+          "snippet": "Đồng ý và tham gia LinkedIn Khi nhấp vào Tiếp tục để tham gia hoặc đăng nhập, bạn đồng ý với [Thỏa thuận người dùng](https://vn.linkedin.com/legal/user-agreement?trk=linkedin-tc_auth-button_user-agreement), [Chính sách quyền riêng tư](https://vn.linkedin.com/legal/privacy-policy?trk=linkedin-tc_auth-button_privacy-policy) và [Chính sách cookie](https://vn.linkedin.com/legal/cookie-policy?trk=linke...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://images.viblo.asia/450be183-d290-4160-a30b-4fbe14a80ad6.jpeg",
+        "https://images.viblo.asia/full/9b87c5be-f71f-4e99-a52f-200388a82d5c.png",
+        "https://images.viblo.asia/avatar/3f5b542e-6833-4cd4-82f0-a78081e917c6.jpg",
+        "https://viblo.asia/favicon-white-128.png",
+        "https://miro.medium.com/v2/resize:fit:1200/1*5kM7i-CaH8D0gsh8duKfqw.jpeg",
+        "https://miro.medium.com/v2/resize:fill:32:32/1*dmbNkD5D-u45r44go_cf0g.png",
+        "https://miro.medium.com/v2/resize:fill:38:38/1*63ToFy3fWtW5kZWd0RfrYg.png",
+        "https://miro.medium.com/v2/resize:fill:32:32/1*GuggiDR-D2TjpdkxMXKG0g.jpeg",
+        "https://miro.medium.com/v2/resize:fit:700/1*5kM7i-CaH8D0gsh8duKfqw.jpeg",
+        "https://miro.medium.com/v2/resize:fill:48:48/1*63ToFy3fWtW5kZWd0RfrYg.png",
+        "https://miro.medium.com/v2/resize:fill:64:64/1*63ToFy3fWtW5kZWd0RfrYg.png",
+        "https://miro.medium.com/v2/resize:fill:48:48/1*GuggiDR-D2TjpdkxMXKG0g.jpeg",
+        "https://miro.medium.com/v2/resize:fill:64:64/1*GuggiDR-D2TjpdkxMXKG0g.jpeg",
+        "https://vndigitech.com/search-vector-giai-phap-tim-kiem-thong-minh-dua-tren-vector/search-vector-3/",
+        "https://vndigitech.com/wp-content/uploads/2024/11/Search-Vector.jpg",
+        "https://vndigitech.com/wp-content/uploads/2024/11/Phuong-phap-tim-kiem-theo-ngu-nghia-semantic-search-1024x408.png",
+        "https://vndigitech.com/wp-content/uploads/2024/11/Tim-kiem-Tuong-tu-Similarity-Search.jpg",
+        "https://vndigitech.com/wp-content/uploads/2024/11/Phan-Tich-Du-Lieu-Lon-Big-Data-Analytics.jpg",
+        "https://vndigitech.com/wp-content/uploads/2024/11/Tim-kiem-ngu-nghia-Semantic-Search.jpg",
+        "https://vndigitech.com/wp-content/uploads/2024/11/Goi-y-san-pham.jpg",
+        "https://vndigitech.com/wp-content/uploads/2024/11/Kho-khan-trong-viec-giai-thich.jpg",
+        "https://vndigitech.com/wp-content/uploads/2024/11/Chat-luong-du-lieu-1024x576.jpg",
+        "https://vndigitech.com/wp-content/uploads/2024/11/Bao-mat-va-quyen-rieng-tu.jpg",
+        "https://vndigitech.com/he-thong-marketing-tu-dong/quang-cao-ton-tien-nhung-khong-ra-khach-thuc-nhan/",
+        "https://vndigitech.com/marketing-automation-vi-sao-tang-nguoi-ma-hieu-qua-khong-tang/dung-ai-nhieu-nhung-doanh-nghiep-van-chua-thay-hieu-qua/",
+        "https://vndigitech.com/marketing-automation-vi-sao-tang-nguoi-ma-hieu-qua-khong-tang/marketing-ngay-cang-ton-nhieu-nguoi-nhung-hieu-qua-khong-tang/",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-database-compressed.jpg",
+        "https://topdev.vn/blog/wp-content/uploads/2020/08/logo-new-1.png",
+        "https://topdev.vn/blog/wp-content/uploads/2020/08/logo-mobile.png",
+        "https://c.topdevvn.com/uploads/2024/06/03/convert-cv-200x80.png",
+        "https://c.topdevvn.com/uploads/2024/06/03/login-200x80.png",
+        "https://topdev.vn/blog/wp-content/uploads/2019/03/tao-cv-online-cn.jpg",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-1.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-2.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-3.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-4.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-5.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-6.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-7.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-8.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-9.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-10.webp",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/co-so-du-lieu-vector-11.webp",
+        "https://c.topdevvn.com/uploads/2024/05/24/login-post.png",
+        "https://c.topdevvn.com/uploads/2024/05/24/convert-cv-post.png",
+        "https://topdev.vn/blog/wp-content/uploads/2024/10/cheatsheet-huu-ich-cho-postgresql-compressed-218x150.jpg",
+        "https://topdev.vn/blog/wp-content/uploads/2024/08/so-sanh-mysql-va-mongodb-nen-chon-csdl-nao-218x150.png",
+        "https://topdev.vn/blog/wp-content/uploads/2024/07/data-nen-luu-vao-database-hay-cache-truoc-218x150.png",
+        "https://topdev.vn/blog/wp-content/uploads/2024/07/on-tap-chi-tiet-ve-database-trong-lap-trinh-php-218x150.jpg",
+        "https://topdev.vn/blog/wp-content/uploads/2024/01/uu-va-nhuoc-diem-cua-cac-loai-database-218x150.png",
+        "https://topdev.vn/blog/wp-content/uploads/2023/06/cau-hoi-phong-van-database-developer-database-administrator-thuong-gap-218x150.png",
+        "https://topdev.vn/blog/wp-content/uploads/2023/02/database-developer-la-gi-ky-nang-can-co-cua-database-developers-218x150.png",
+        "https://topdev.vn/blog/wp-content/uploads/2023/02/thiet-ke-service-co-tai-ghi-cao-khong-gay-tranh-chap-tai-nguyen-218x150.png",
+        "https://topdev.vn/blog/wp-content/uploads/2022/12/lo-trinh-hoc-mysql-218x150.png",
+        "https://topdev.vn/blog/wp-content/uploads/2018/08/backend-developer-2018-218x150.png",
+        "https://topdev.vn/blog/wp-content/uploads/2022/05/thumbnail-postgreSQL-218x150.jpg",
+        "https://topdev.vn/blog/wp-content/uploads/2022/03/co-so-du-lieu-218x150.jpg",
+        "https://media.licdn.com/dms/image/v2/D4E12AQF6PtADrsEBFA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1723442187805?e=2147483647&v=beta&t=8XHCEnKJNBTTqGItpWNqOuxfqQx9D5KK_xi26X-CaJ0"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-04-25T00:20:04.870093+00:00"
+    },
+    {
+      "execution_id": "b971f544-13df-4ef1-8bc2-991fa979e3f9",
+      "conversation_id": "b97a5d5a-2e98-4001-8310-3e4971f566d9",
+      "question": "What are the differences between cosine similarity and Euclidean distance in vector databases, and when should each be used",
+      "answer": "The context provides information on Cosine Similarity and Euclidean Distance as similarity metrics used in vector databases, but it does not explicitly detail when each should be used.\n\nHere's a breakdown of what is provided:\n\n**Cosine Similarity**\n*   **What it measures:** The angle between two vectors.\n*   **Interpretation:**\n    *   An angle of 0° indicates that the documents are semantically identical.\n    *   An angle of 90° indicates that the documents are completely unrelated.\n*   **Common Use:** It is the most common metric in Natural Language Processing (NLP).\n\n**Euclidean Distance (L2)**\n*   **What it measures:** The straight-line distance between two points.\n*   **When it's useful:** When the \"magnitude\" of the data matters, such as in image recognition.\n\n**Missing Information:**\nThe context does not specify the exact use cases or scenarios where one metric would be definitively preferred over the other, beyond the general mention of Euclidean distance being useful when magnitude matters.\n\nSources:\n- unknown",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Storage: The vector is stored in the database along with \"Metadata\" (the original text and the\nfilen...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": 4.751766204833984
+        }
+      ],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-04-25T00:30:52.552824+00:00"
+    },
+    {
+      "execution_id": "fdcbd747-e012-4558-b771-76778e05eff4",
+      "conversation_id": "7eeda6c7-abd5-4b51-8d20-dcd5e83bd9b3",
+      "question": "Based on my knowledge base, explain vector embeddings, and also give a real-world example of how companies use them in production today.",
+      "answer": "Vector embeddings represent data, such as text, as arrays of floating-point numbers. This numerical representation captures the contextual meaning of the data. For example, the words \"automobile\" and \"car\" would have mathematically similar vector embeddings because they are close to each other in a high-dimensional space, indicating semantic similarity.\n\n**How Vector Databases Work:**\n\n1.  **Chunking:** Large documents are broken down into smaller \"chunks\" (e.g., 500 words each).\n2.  **Embedding:** Each chunk is processed by an Embedding Model (like BERT) to generate a vector.\n3.  **Storage:** These vectors are stored in a Vector Database, often alongside metadata like the original text and filename.\n\n**Searching with Vector Databases:**\n\nInstead of exact matches, vector databases find the \"Nearest Neighbors\" to a query vector. Common similarity metrics used for this include:\n\n*   **Cosine Similarity:** Measures the angle between vectors, indicating semantic similarity.\n*   **Euclidean Distance (L2):** Measures the straight-line distance between points.\n*   **Dot Product:** A fast calculation that considers both magnitude and angle.\n\nTo handle large datasets efficiently, Vector Databases use Approximate Nearest Neighbor (ANN) algorithms like HNSW (Hierarchical Navigable Small World) and Product Quantization (PQ) for compression.\n\n**Real-World Use Cases:**\n\nWhile the provided context does not offer specific real-world examples of companies using vector databases in production today, it mentions that:\n\n*   **Pinecone** is a fully managed \"Serverless\" database used by large companies for production RAG (Retrieval-Augmented Generation).\n*   **Milvus** is designed for enterprise-grade clusters and billions of vectors, suggesting its use in large-scale production environments.\n\nThe context also highlights **ChromaDB** as an open-source option suitable for students and prototyping, and **pgvector** as an extension for PostgreSQL that allows storing SQL data and vectors together.\n\nWeb summary:\nVector embeddings are a method of converting data, such as words, sentences, and other types of information, into numerical representations. These numerical representations capture the meaning and relationships within the data, allowing machines to process and understand it more effectively. Similar data points are clustered closer together in a multidimensional space.\n\n**Key characteristics of vector embeddings:**\n\n*   **Numerical Representation:** They transform various data types into numbers.\n*   **Meaning and Relationships:** They encode the semantic meaning and connections within the data.\n*   **Multidimensional Space:** Data points are represented as locations in a space where proximity indicates similarity.\n\n**Real-world applications and examples:**\n\nVector embeddings are fundamental to many machine learning algorithms, particularly in areas like Natural Language Processing (NLP), recommendation systems, and search.\n\n*   **Enhanced Search:** Vector databases use vector embeddings to provide high-quality search results that go beyond simple keyword matching. They can understand the user's intent and find relevant information based on meaning.\n    *   **Example:** A library of wine descriptions could use vector embeddings to find a wine suitable for \"seafood\" even if the description only mentions it's \"good with fish,\" demonstrating an understanding of semantic similarity.\n*   **Recommendation Engines:** Systems that suggest products, content, or services often rely on vector embeddings to understand user preferences and identify similar items.\n*   **Voice Assistants and Language Translators:** These technologies utilize vector embeddings to process and understand human language.\n*   **Sentiment Analysis:** Analyzing the emotional tone of text.\n*   **Image Matching:** Image vectors can be used to find visually similar content.\n*   **User Preference Analysis:** User profile vectors can help determine individual preferences.\n*   **Product Similarity:** Product vectors can identify items that are alike.\n\nThe context provided mentions that vector embeddings are central to systems like recommendation engines, voice assistants, and language translators, indicating their widespread use in production today.\n\nWeb findings:\n- [Skip to content](https://www.ibm.com/think/topics/vector-embedding#main-content)[IBM logo](https://www.ibm.com/) Software Infrastructure [Consulting](https://www.ibm.com/consulting?lnk=L0G)Support Support [What's new](https://www.ibm.com/new?lnk=flatitem) - [Overview\\\\ Resolve product issues with self-service tools](https://www.ibm.com/mysupport/s/?language=en_US&lnk=flathl) - [Community\\\\ Share...\n- [Sitemap](https://codefarm0.medium.com/sitemap/sitemap.xml) [Open in app](https://play.google.com/store/apps/details?id=com.medium.reader&referrer=utm_source%3DmobileNavBar&source=post_page---top_nav_layout_nav-----------------------------------------) Sign up [Sign in](https://medium.com/m/signin?operation=login&redirect=https%3A%2F%2Fcodefarm0.medium.com%2Fvector-embeddings-101-the-ultimate-begi...\n- ![](https://static.scarf.sh/a.png?x-pxid=a41b0758-a3a9-4874-a880-8b5d5a363d40)![](https://px.ads.linkedin.com/collect/?pid=6758089&fmt=gif) [← Back to Blogs](https://weaviate.io/blog) [Skip to main content](https://weaviate.io/blog/vector-embeddings-explained#__docusaurus_skipToContent_fallback) [Introducing Weaviate Agent Skills – Read our Blog](https://weaviate.io/blog/weaviate-agent-skills) ![h...\n\nSources:\n- unknown\n- What is Vector Embedding? | IBM: https://www.ibm.com/think/topics/vector-embedding\n- Vector Embeddings 101: The Ultimate Beginner's Guide with Real ...: https://codefarm0.medium.com/vector-embeddings-101-the-ultimate-beginners-guide-with-real-world-use-cases-fdba8c7692cf\n- Vector Embeddings Explained - Weaviate: https://weaviate.io/blog/vector-embeddings-explained\n- What are Vector Embeddings? - Elastic: https://www.elastic.co/what-is/vector-embedding",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "I. THE LIMITATION OF TRADITIONAL DATABASES\nTraditional databases (SQL like PostgreSQL or NoSQL like ...",
+          "source": "unknown",
+          "title": "",
+          "rerank_score": -5.0019073486328125
+        },
+        {
+          "title": "What is Vector Embedding? | IBM",
+          "url": "https://www.ibm.com/think/topics/vector-embedding",
+          "snippet": "[Skip to content](https://www.ibm.com/think/topics/vector-embedding#main-content)[IBM logo](https://www.ibm.com/) Software Infrastructure [Consulting](https://www.ibm.com/consulting?lnk=L0G)Support Support [What's new](https://www.ibm.com/new?lnk=flatitem) - [Overview\\\\ Resolve product issues with self-service tools](https://www.ibm.com/mysupport/s/?language=en_US&lnk=flathl) - [Community\\\\ Share...",
+          "score": 0.0
+        },
+        {
+          "title": "Vector Embeddings 101: The Ultimate Beginner's Guide with Real ...",
+          "url": "https://codefarm0.medium.com/vector-embeddings-101-the-ultimate-beginners-guide-with-real-world-use-cases-fdba8c7692cf",
+          "snippet": "[Sitemap](https://codefarm0.medium.com/sitemap/sitemap.xml) [Open in app](https://play.google.com/store/apps/details?id=com.medium.reader&referrer=utm_source%3DmobileNavBar&source=post_page---top_nav_layout_nav-----------------------------------------) Sign up [Sign in](https://medium.com/m/signin?operation=login&redirect=https%3A%2F%2Fcodefarm0.medium.com%2Fvector-embeddings-101-the-ultimate-begi...",
+          "score": 0.0
+        },
+        {
+          "title": "Vector Embeddings Explained - Weaviate",
+          "url": "https://weaviate.io/blog/vector-embeddings-explained",
+          "snippet": "![](https://static.scarf.sh/a.png?x-pxid=a41b0758-a3a9-4874-a880-8b5d5a363d40)![](https://px.ads.linkedin.com/collect/?pid=6758089&fmt=gif) [← Back to Blogs](https://weaviate.io/blog) [Skip to main content](https://weaviate.io/blog/vector-embeddings-explained#__docusaurus_skipToContent_fallback) [Introducing Weaviate Agent Skills – Read our Blog](https://weaviate.io/blog/weaviate-agent-skills) ![h...",
+          "score": 0.0
+        },
+        {
+          "title": "What are Vector Embeddings? - Elastic",
+          "url": "https://www.elastic.co/what-is/vector-embedding",
+          "snippet": "[Skip to main content](https://www.elastic.co/what-is/vector-embedding#main-content) # What are vector embeddings? [Explore vector database](https://www.elastic.co/elasticsearch/vector-database) ### Vector embeddings definition **Vector embeddings are a way to convert words and sentences and other data into numbers that capture their meaning and relationships.** They represent different data types...",
+          "score": 0.0
+        },
+        {
+          "title": "What are Vector Embeddings | Pinecone",
+          "url": "https://www.pinecone.io/learn/vector-embeddings/",
+          "snippet": "[🚀 Dedicated Read Nodes are now GA. Fixed hourly pricing and dedicated capacity for large-scale workloads — up to 97% lower costs.-Learn more](https://www.pinecone.io/blog/dedicated-read-nodes-ga/) Dismiss [←Learn](https://www.pinecone.io/learn/) # What are Vector Embeddings ![Rajat Tripathi](https://www.pinecone.io/_next/image/?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fvr8gru94%2Fproduction%2Fc5...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://www.ibm.com/content/dam/worldwide-content/stock-assets/adb-stk/ul/g/89/38/adobestock_594715939.jpeg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg",
+        "https://assets.ibm.com/is/image/ibm/dave-bergmann-crop-2x?wid=128",
+        "https://www.ibm.com/adobe/dynamicmedia/deliver/dm-aid--6ffe6fc8-d405-4a89-ad05-780d6960d862/cole-stryker-2x.jpg?preferwebp=true&width=128",
+        "https://cdnsecakmi.kaltura.com/p/1773841/thumbnail/entry_id/1_p1wtyfmb/width/1180",
+        "https://assets.ibm.com/is/image/ibm/similarity-metrics-for-vector-search-i-zilliz:16x9?fmt=png-alpha&dpr=on%2C1&wid=320&hei=180",
+        "https://assets.ibm.com/is/image/ibm/vector-embedding:16x9?fmt=png-alpha&dpr=on%2C1&wid=320&hei=180",
+        "https://consent.trustarc.com/get?name=ibm_close_icon.svg",
+        "https://miro.medium.com/v2/da:true/resize:fit:1024/0*BkZg2ooH3xODnL20",
+        "https://miro.medium.com/v2/resize:fill:32:32/1*dmbNkD5D-u45r44go_cf0g.png",
+        "https://miro.medium.com/v2/resize:fill:32:32/1*qLgT62h04Vn1WA1vdYL9lg.png",
+        "https://miro.medium.com/v2/resize:fit:700/0*BkZg2ooH3xODnL20",
+        "https://miro.medium.com/v2/resize:fit:700/0*UXLiwYXl2qd4s6vS",
+        "https://miro.medium.com/v2/resize:fit:640/1*dtFpXgrnEat5_UxOhUfjSw.png",
+        "https://miro.medium.com/v2/resize:fill:48:48/1*qLgT62h04Vn1WA1vdYL9lg.png",
+        "https://miro.medium.com/v2/resize:fill:64:64/1*qLgT62h04Vn1WA1vdYL9lg.png",
+        "https://weaviate.io/assets/images/hero-e87859049d8769d974b67509ae99cf91.png",
+        "https://static.scarf.sh/a.png?x-pxid=a41b0758-a3a9-4874-a880-8b5d5a363d40",
+        "https://px.ads.linkedin.com/collect/?pid=6758089&fmt=gif",
+        "https://weaviate.io/assets/images/vector-embeddings-example-3f50aa2d6cdd8308c09505fba3b140c0.png",
+        "https://weaviate.io/assets/images/vector-embeddings-visualization-487385a07b9d2595031520e877abbbd0.png",
+        "https://weaviate.io/assets/images/image10-ebe747ac9f2e03dba758f1ed3ea7e82c.jpg",
+        "https://weaviate.io/img/site/weaviate-logo-w.png",
+        "https://www.elastic.co/static-res/images/social_media_default.png",
+        "https://images.contentstack.io/v3/assets/bltefdd0b53724fa2ce/bltf21aa7ceeb3a8512/66cf7e13651b1469ce2973b4/vector-database-architecture-infographic-2-vector-search.jpg",
+        "https://www.pinecone.io/api/og/?title=What%20are%20Vector%20Embeddings&category=Learn",
+        "https://www.pinecone.io/_next/image/?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fvr8gru94%2Fproduction%2Fc555739cf15124cc66a57ee6ca69ffa8a30abff5-263x263.png&w=3840&q=75",
+        "https://www.pinecone.io/_next/image/?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fvr8gru94%2Fproduction%2Fe016bbd4d7d57ff27e261adf1e254d2d3c609aac-2447x849.png&w=3840&q=75",
+        "https://www.pinecone.io/_next/image/?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fvr8gru94%2Fproduction%2Fec6f20344b056465a17d98cc98b834eb364f93ce-1432x504.png&w=3840&q=75",
+        "https://www.pinecone.io/_next/image/?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fvr8gru94%2Fproduction%2F31a1950de10f80473b43530795d034917a43f366-704x290.png&w=1920&q=75",
+        "https://www.pinecone.io/_next/image/?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fvr8gru94%2Fproduction%2Fca4f41cd19b9e78e35b355ee015d57757cdd0e4d-1040x320.png&w=3840&q=75",
+        "https://www.pinecone.io/_next/image/?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fvr8gru94%2Fproduction%2Fd40a0725580d36beb6f450397333ad929557bc46-512x512.jpg&w=3840&q=75",
+        "https://www.pinecone.io/_next/image/?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fvr8gru94%2Fproduction%2F4bde7bca90f3120a7e7a199c71ffd6b445bd325d-512x512.jpg&w=3840&q=75",
+        "https://www.pinecone.io/_next/image/?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fvr8gru94%2Fproduction%2F62d5319461cc2459c3055d00c56048f7cf4b67fd-1170x1170.png&w=3840&q=75"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-04-25T00:36:18.753109+00:00"
     }
   ]
 }

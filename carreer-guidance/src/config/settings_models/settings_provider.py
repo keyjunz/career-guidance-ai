@@ -26,7 +26,7 @@ def validate_startup_config(settings: Settings | None = None) -> None:
         "CHROMA_HOST": cfg.vector_store.chroma_host,
         "CHROMA_PORT": cfg.vector_store.chroma_port,
         "REDIS_URL": cfg.redis.redis_url,
-        "WEB_SEARCH_API_KEY": cfg.web_search.api_key,
+        "FIRECRAWL_API_KEY": cfg.web_search.api_key,
     }
 
     missing = [

@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 
 @dataclass(slots=True)
@@ -10,3 +10,4 @@ class SourceInfo:
     source: str
     title: str
     rerank_score: float
+    image_urls: list[str] = field(default_factory=list)

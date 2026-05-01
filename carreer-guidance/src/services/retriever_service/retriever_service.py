@@ -156,7 +156,8 @@ class RetrieverService:
                 }
                 if results.get("metadatas") and results["metadatas"][0]:
                     meta = results["metadatas"][0][i]
-                    doc["source"] = meta.get("source", "unknown")
+                    doc["metadata"] = meta
+                    doc["source"] = meta.get("source", meta.get("file_path", "unknown"))
                     doc["title"] = meta.get("title", "")
                 docs.append(doc)
         return docs
@@ -175,7 +176,11 @@ class RetrieverService:
                     "chunk_id": self._doc_ids[idx_int],
                     "text": self._doc_texts[idx_int],
                     "bm25_score": float(score),
-                    "source": self._doc_metadatas[idx_int].get("source", "unknown"),
+                    "metadata": self._doc_metadatas[idx_int],
+                    "source": self._doc_metadatas[idx_int].get(
+                        "source",
+                        self._doc_metadatas[idx_int].get("file_path", "unknown"),
+                    ),
                     "title": self._doc_metadatas[idx_int].get("title", ""),
                 }
             )

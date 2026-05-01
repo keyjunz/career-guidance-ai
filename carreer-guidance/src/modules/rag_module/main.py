@@ -7,7 +7,10 @@ Rules:
 """
 
 import logging
+import os
 import time
+from pathlib import Path
+from typing import Any
 from importlib import import_module
 from importlib.util import find_spec
 
@@ -15,9 +18,9 @@ langdetect = import_module("langdetect") if find_spec("langdetect") else None
 
 from src.modules.rag_module.schema_models import RAGQuery, RAGResult, SourceInfo
 from src.services.embedding_service.main import EmbeddingService
-from src.services.retriever_service.main import RetrieverService
-from src.services.reranker_service.main import RerankerService
 from src.services.llm_service.main import LLMService
+from src.services.reranker_service.main import RerankerService
+from src.services.retriever_service.main import RetrieverService
 
 
 class RAGModuleImpl:
@@ -55,6 +58,9 @@ class RAGModuleImpl:
             execution_id=self.execution_id
         )
         self.llm_service = llm_service
+
+        self.image_base_url = os.getenv("IMAGE_BASE_URL", "").strip()
+        self.image_storage_dir = self._resolve_image_storage_dir()
 
         self.logger.info("RAG module initialized.")
 
@@ -103,7 +109,10 @@ class RAGModuleImpl:
         # Step 5: Build context ───────────────────────────────────
         context_parts = []
         sources = []
+        image_urls_set: list[str] = []
         for i, doc in enumerate(reranked):
+            metadata = doc.get("metadata") or {}
+            image_urls = self._build_image_urls(metadata)
             context_parts.append(f"[{i + 1}] {doc['text']}")
             sources.append(
                 SourceInfo(
@@ -112,8 +121,12 @@ class RAGModuleImpl:
                     source=doc.get("source", "unknown"),
                     title=doc.get("title", ""),
                     rerank_score=doc.get("rerank_score", 0.0),
+                    image_urls=image_urls,
                 )
             )
+            for url in image_urls:
+                if url not in image_urls_set:
+                    image_urls_set.append(url)
         context = "\n\n".join(context_parts)
 
         # Step 6: LLM Generate ────────────────────────────────────
@@ -138,6 +151,7 @@ class RAGModuleImpl:
             question=question,
             answer=answer,
             sources=sources,
+            image_urls=image_urls_set,
             language=language,
             latency_ms=total_ms,
             tokens_generated=tokens_generated,
@@ -155,3 +169,30 @@ class RAGModuleImpl:
             )
         except Exception:
             return False
+
+    def _resolve_image_storage_dir(self) -> Path:
+        base = Path(os.getenv("IMAGE_STORAGE_DIR", "database/images"))
+        if base.is_absolute():
+            return base
+        base_dir = Path(__file__).resolve().parents[4]
+        return (base_dir / base).resolve()
+
+    def _build_image_urls(self, metadata: dict[str, Any]) -> list[str]:
+        if not self.image_base_url:
+            return []
+        image_paths = metadata.get("image_paths") or []
+        urls: list[str] = []
+        for raw_path in image_paths:
+            if not raw_path:
+                continue
+            path = Path(str(raw_path))
+            if path.is_absolute():
+                try:
+                    rel = path.relative_to(self.image_storage_dir)
+                except ValueError:
+                    rel = path.name
+            else:
+                rel = path
+            url = f"{self.image_base_url.rstrip('/')}/images/{str(rel).replace('\\\\', '/')}"
+            urls.append(url)
+        return urls

@@ -9,5 +9,6 @@ def save_final_answer(state: AgentRuntimeState, store: UserStore) -> None:
         question=state.question,
         answer=state.answer,
         sources=state.sources,
+        image_urls=state.image_urls,
         cache_hit=state.cache_hit,
     )

@@ -1,4 +1,5 @@
 import json
+
 from fastapi import APIRouter, Query, Request
 from fastapi.responses import JSONResponse, StreamingResponse
 
@@ -27,7 +28,7 @@ async def chat_endpoint(
     invocation_type: str = Query(default="sync", pattern="^(sync|async)$"),
 ) -> JSONResponse:
     try:
-        handler = ChatHandler(execution_id=request.state.trace_id)
+        handler = ChatHandler(execution_id=request.state.execution_id)
         response_payload = await handler.execute(
             payload, invocation_type=invocation_type
         )
@@ -51,12 +52,12 @@ async def chat_stream_endpoint(
     request: Request,
 ) -> StreamingResponse | JSONResponse:
     try:
-        handler = ChatHandler(execution_id=request.state.trace_id)
+        handler = ChatHandler(execution_id=request.state.execution_id)
 
         async def event_stream():
             try:
                 async for token in handler.stream_tokens(payload):
-                    yield f"data: {json.dumps({'token': token, 'trace_id': request.state.trace_id})}\\n\\n"
+                    yield f"data: {json.dumps({'token': token, 'execution_id': request.state.execution_id})}\\n\\n"
 
                 yield "event: done\\ndata: {}\\n\\n"
             except ValueError as exc:

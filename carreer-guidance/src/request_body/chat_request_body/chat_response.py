@@ -14,6 +14,6 @@ class ChatResponse(BaseModel):
     type: Literal["text", "image", "mixed"]
     content: list[ContentItem] = Field(default_factory=list)
     conversation_id: UUID
-    trace_id: str
+    execution_id: str
     statuses: list[str] = Field(default_factory=list)
     cached: bool = False

@@ -22,7 +22,6 @@ class ChatHandler:
     def _build_context(self, request: ChatRequest) -> RequestContext:
         return {
             "execution_id": self.execution_id,
-            "trace_id": self.execution_id,
             "user_id": str(request.user_id),
         }
 

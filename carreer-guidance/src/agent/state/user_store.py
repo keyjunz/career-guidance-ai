@@ -94,6 +94,7 @@ class UserStore:
         answer: str,
         *,
         sources: list[dict[str, Any]] | None = None,
+        image_urls: list[str] | None = None,
         cache_hit: bool = False,
     ) -> None:
         with self._lock:
@@ -112,6 +113,7 @@ class UserStore:
                 "question": resolved_question,
                 "answer": answer,
                 "sources": sources or [],
+                "image_urls": image_urls or [],
                 "conversation_id": str(conversation_id),
                 "updated_at": utc_now(),
             }
@@ -123,6 +125,7 @@ class UserStore:
                     "question": resolved_question,
                     "answer": answer,
                     "sources": sources or [],
+                    "image_urls": image_urls or [],
                     "cache_hit": cache_hit,
                     "timestamp": utc_now(),
                 }

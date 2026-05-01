@@ -10,6 +10,7 @@ class RAGResult:
     question: str
     answer: str
     sources: list[SourceInfo] = field(default_factory=list)
+    image_urls: list[str] = field(default_factory=list)
     language: str = "en"
     latency_ms: float = 0.0
     tokens_generated: int = 0

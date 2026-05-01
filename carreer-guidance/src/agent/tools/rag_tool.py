@@ -57,9 +57,11 @@ class RAGTool:
                     "source": src.source,
                     "title": src.title,
                     "rerank_score": src.rerank_score,
+                    "image_urls": src.image_urls,
                 }
                 for src in result.sources
             ],
+            "images": result.image_urls,
             "language": result.language,
             "latency_ms": result.latency_ms,
         }

@@ -3,7 +3,7 @@ fastapi==0.135.2
 uvicorn==0.42.0
 python-multipart==0.0.20
 
-# Configuration and models
+# Config
 pydantic==2.12.5
 pydantic-settings==2.13.1
 typing-extensions==4.15.0
@@ -14,19 +14,30 @@ sqlalchemy==2.0.48
 alembic==1.18.4
 psycopg2-binary==2.9.11
 
-# Queue/cache
+# Cache
 redis==5.0.1
 
-# Vector DB and retrieval
+# Vector DB
 chromadb==0.4.24
-numpy==1.26.4
+numpy==1.24.4   # 🔥 downgrade để tránh crash
 rank-bm25==0.2.2
 
-# Embedding / reranking
+# Embedding
 sentence-transformers==5.4.1
-torch
+torch==2.1.2     # 🔒 pin version cho ổn định
 
-# LLM providers
+# LLM
 groq==1.2.0
 google-generativeai
 langdetect==1.0.9
+
+# OCR stack (QUAN TRỌNG NHẤT)
+paddlepaddle==2.6.2
+paddleocr==2.7.3
+opencv-python==4.6.0.66
+opencv-contrib-python==4.6.0.66
+protobuf==3.20.2
+
+# PDF / image
+pymupdf==1.24.9
+Pillow==10.4.0

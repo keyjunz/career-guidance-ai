@@ -7,6 +7,7 @@ from typing import Any, Dict, Optional
 
 from src.config.settings_models import get_settings
 from src.prompts.rag_prompts import RAG_PROMPT_TEMPLATE, RAG_PROMPT_TEMPLATE_VI
+from src.prompts.translation_prompts import build_vi_to_en_translation_prompt
 
 MAX_ANSWER_WORDS = 500
 
@@ -213,7 +214,7 @@ class LLMService:
             return query
         if not self._loaded:
             self.load()
-        prompt = f"Translate the following Vietnamese question to American English accurately. Return ONLY the English translation, without any quotes, explanations, or Markdown formatting.\n\nVietnamese: {query}\nEnglish:"
+        prompt = build_vi_to_en_translation_prompt(query)
         start = time.perf_counter()
         try:
             if self.provider == "groq":

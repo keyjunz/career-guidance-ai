@@ -1,6 +1,5 @@
 """Message repository."""
 
-
 from uuid import UUID
 
 from sqlalchemy import select

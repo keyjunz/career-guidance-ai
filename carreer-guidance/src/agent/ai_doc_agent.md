@@ -9,7 +9,7 @@ Agent la runtime xu ly chat logic khi ChatHandler chay sync mode.
 - ChatHandler.stream_tokens goi src.agent.main.invoke_stream.
 
 ## 3. Rule
-- Agent phai ton trong execution_id/trace_id tu context.
+- Agent phai ton trong execution_id tu context.
 - Khong duoc can thiep workflow sync-document status.
 - Neu dung tool, phai qua module/service boundary, tranh query DB truc tiep.
 
