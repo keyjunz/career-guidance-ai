@@ -3,12 +3,13 @@ import logging
 import os
 import time
 from pathlib import Path
-from uuid import UUID
 
-from fastapi import APIRouter, File, Form, Request, UploadFile
+from fastapi import APIRouter, Depends, File, Form, Request, UploadFile
 from fastapi.responses import JSONResponse
 
+from src.database.models import User
 from src.handlers.sync_doc_handler import SyncDataHandler
+from src.services.auth_service.dependencies import get_current_user, require_roles
 from src.utils.api_response import BadRequest, InternalServerError, Ok, TooManyRequests
 
 logger = logging.getLogger(__name__)
@@ -19,9 +20,15 @@ RequestContext = dict[str, str]
 
 router = APIRouter(prefix="/api/sync-documents", tags=["sync-documents"])
 
+_BASE_DIR = Path(__file__).resolve().parents[3]
 DOWNLOAD_STORAGE_DIR = Path(
-    r"C:\Users\Nitro 5\OneDrive\Documents\nckh\kltn\career-guidance-ai\carreer-guidance\src\database\file_downloaded"
+    os.getenv(
+        "DOWNLOAD_STORAGE_DIR",
+        str(_BASE_DIR / "src" / "database" / "file_downloaded"),
+    )
 )
+
+_sync_doc_role_guard = require_roles("admin", "employee")
 
 
 def _to_json_response(payload: dict) -> JSONResponse:
@@ -35,6 +42,33 @@ def _to_json_response(payload: dict) -> JSONResponse:
     return JSONResponse(status_code=status_code, content=body, headers=headers)
 
 
+async def _save_uploaded_files(
+    files: list[UploadFile],
+    user_id: str,
+) -> list[str]:
+    """Save uploaded files to disk and return file paths."""
+    upload_dir = DOWNLOAD_STORAGE_DIR / user_id
+    upload_dir.mkdir(parents=True, exist_ok=True)
+
+    file_paths: list[str] = []
+    for file in files:
+        if not file.filename:
+            raise ValueError("File name is required")
+
+        file_path = str(upload_dir / file.filename)
+        content = await file.read()
+        with open(file_path, "wb") as f:
+            f.write(content)
+        file_paths.append(file_path)
+        logger.info(
+            "sync upload file saved: user_id=%s file_name=%s size_bytes=%d",
+            user_id,
+            str(file.filename),
+            len(content),
+        )
+    return file_paths
+
+
 @router.post(
     "/upload",
     summary="Upload and process documents",
@@ -44,17 +78,11 @@ def _to_json_response(payload: dict) -> JSONResponse:
 async def upload_documents_endpoint(
     request: Request,
     files: list[UploadFile] = File(...),
-    user_id: str = Form(...),
     industry_type: str | None = Form(default=None),
+    current_user: User = Depends(_sync_doc_role_guard),
 ) -> JSONResponse:
     try:
-        # Validate user_id is a valid UUID
-        try:
-            user_uuid = UUID(user_id)
-        except ValueError:
-            return _to_json_response(
-                BadRequest(f"Invalid user_id format: {user_id}").get_response()
-            )
+        user_uuid = current_user.id
 
         if not files:
             return _to_json_response(BadRequest("No files uploaded").get_response())
@@ -66,38 +94,12 @@ async def upload_documents_endpoint(
             str(industry_type or ""),
         )
 
-        # Create directory for storing uploaded files
-        upload_dir = DOWNLOAD_STORAGE_DIR / str(user_uuid)
-        upload_dir.mkdir(parents=True, exist_ok=True)
+        file_paths = await _save_uploaded_files(files, str(user_uuid))
 
-        file_paths = []
-
-        # Save uploaded files
-        for file in files:
-            if not file.filename:
-                return _to_json_response(
-                    BadRequest("File name is required").get_response()
-                )
-
-            file_path = str(upload_dir / file.filename)
-            content = await file.read()
-            with open(file_path, "wb") as f:
-                f.write(content)
-            file_paths.append(file_path)
-            logger.info(
-                "sync upload file saved: user_id=%s file_name=%s file_path=%s size_bytes=%d",
-                str(user_uuid),
-                str(file.filename),
-                file_path,
-                len(content),
-            )
-
-        # Generate execution_id from timestamp and client host
         client_host = request.client.host if request and request.client else "unknown"
         execution_id = f"{int(time.time())}_{client_host}"
         logger.info("sync upload execution id generated: execution_id=%s", execution_id)
 
-        # Process files
         context: RequestContext = {
             "execution_id": execution_id,
             "user_id": str(user_uuid),
@@ -140,16 +142,11 @@ async def upload_documents_endpoint(
 async def upload_documents_gemini_endpoint(
     request: Request,
     files: list[UploadFile] = File(...),
-    user_id: str = Form(...),
     industry_type: str | None = Form(default=None),
+    current_user: User = Depends(_sync_doc_role_guard),
 ) -> JSONResponse:
     try:
-        try:
-            user_uuid = UUID(user_id)
-        except ValueError:
-            return _to_json_response(
-                BadRequest(f"Invalid user_id format: {user_id}").get_response()
-            )
+        user_uuid = current_user.id
 
         if not files:
             return _to_json_response(BadRequest("No files uploaded").get_response())
@@ -161,29 +158,7 @@ async def upload_documents_gemini_endpoint(
             str(industry_type or ""),
         )
 
-        upload_dir = DOWNLOAD_STORAGE_DIR / str(user_uuid)
-        upload_dir.mkdir(parents=True, exist_ok=True)
-
-        file_paths = []
-
-        for file in files:
-            if not file.filename:
-                return _to_json_response(
-                    BadRequest("File name is required").get_response()
-                )
-
-            file_path = str(upload_dir / file.filename)
-            content = await file.read()
-            with open(file_path, "wb") as f:
-                f.write(content)
-            file_paths.append(file_path)
-            logger.info(
-                "sync upload (gemini) file saved: user_id=%s file_name=%s file_path=%s size_bytes=%d",
-                str(user_uuid),
-                str(file.filename),
-                file_path,
-                len(content),
-            )
+        file_paths = await _save_uploaded_files(files, str(user_uuid))
 
         client_host = request.client.host if request and request.client else "unknown"
         execution_id = f"{int(time.time())}_{client_host}"
@@ -236,6 +211,7 @@ async def upload_documents_gemini_endpoint(
 async def get_sync_status_endpoint(
     request: Request,
     ingestion_job_id: str,
+    current_user: User = Depends(get_current_user),
 ) -> JSONResponse:
     try:
         if not ingestion_job_id.strip():
@@ -251,6 +227,7 @@ async def get_sync_status_endpoint(
         )
         context: RequestContext = {
             "execution_id": execution_id,
+            "user_id": str(current_user.id),
         }
 
         handler = SyncDataHandler(execution_id=execution_id)

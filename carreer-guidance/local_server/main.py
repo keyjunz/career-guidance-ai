@@ -1,6 +1,7 @@
 import json
 import logging
 import os
+import time
 from pathlib import Path
 from uuid import uuid4
 
@@ -11,6 +12,8 @@ from fastapi.openapi.utils import get_openapi
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 
+from local_server.routes.admin.router import router as admin_router
+from local_server.routes.auth.router import router as auth_router
 from local_server.routes.chat.router import router as chat_router
 from local_server.routes.sync_doc.router import router as sync_doc_router
 from src.utils.common import ErrorResponse
@@ -18,6 +21,7 @@ from src.utils.common import ErrorResponse
 APP_NAME = "career-guidance-ai"
 APP_VERSION = "0.1.0"
 BASE_DIR = Path(__file__).resolve().parent.parent
+DEBUG_LOG_PATH = Path("debug-8bc2e9.log")
 ASSETS_DIR = BASE_DIR / "assets"
 SWAGGER_DIR = ASSETS_DIR / "swagger"
 SWAGGER_HTML_PATH = SWAGGER_DIR / "index.html"
@@ -57,6 +61,21 @@ def create_app() -> FastAPI:
     """Create and configure FastAPI application."""
 
     configure_app_logging()
+    logger = logging.getLogger(__name__)
+
+    # #region agent log
+    def _agent_append(payload: dict) -> None:
+        payload.setdefault("sessionId", "8bc2e9")
+        payload.setdefault("runId", "pre-fix")
+        payload.setdefault("timestamp", int(time.time() * 1000))
+        try:
+            with open(DEBUG_LOG_PATH, "a", encoding="utf-8") as f:
+                f.write(json.dumps(payload, ensure_ascii=False) + "\n")
+        except Exception as agent_exc:
+            # Ensure we see failures even when debug logs are hidden
+            logger.warning("agent debug log failed: %s", agent_exc)
+
+    # #endregion
 
     app = FastAPI(
         title="Career Guidance AI Local Server",
@@ -66,8 +85,10 @@ def create_app() -> FastAPI:
         redoc_url=None,
     )
 
+    app.include_router(auth_router)
     app.include_router(chat_router)
     app.include_router(sync_doc_router)
+    app.include_router(admin_router)
 
     ASSETS_DIR.mkdir(parents=True, exist_ok=True)
     SWAGGER_DIR.mkdir(parents=True, exist_ok=True)
@@ -139,6 +160,24 @@ def create_app() -> FastAPI:
         request: Request,
         exc: RequestValidationError,
     ) -> JSONResponse:
+        raw_body = await request.body()
+        body_preview = raw_body[:300].decode("utf-8", errors="replace")
+        errors = exc.errors()
+        _agent_append(
+            {
+                "hypothesisId": "H1,H2,H3,H4",
+                "location": "local_server/main.py:validation_exception_handler",
+                "message": "422 validation error captured",
+                "data": {
+                    "path": str(request.url.path),
+                    "method": request.method,
+                    "content_type": request.headers.get("content-type"),
+                    "error_count": len(errors),
+                    "errors": errors[:5],
+                    "body_preview": body_preview,
+                },
+            }
+        )
         payload = ErrorResponse(
             code="VALIDATION_ERROR",
             message="Request validation failed",
