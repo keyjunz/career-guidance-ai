@@ -1,4 +1,4 @@
-import { useId, useState } from 'react'
+import { useEffect, useId, useRef, useState } from 'react'
 
 export function ChatInputDock({
   placeholder,
@@ -10,7 +10,21 @@ export function ChatInputDock({
   disabled?: boolean
 }) {
   const inputId = useId()
+  const inputRef = useRef<HTMLInputElement | null>(null)
   const [value, setValue] = useState('')
+
+  useEffect(() => {
+    if (!disabled) {
+      inputRef.current?.focus()
+    }
+  }, [disabled])
+
+  const submitMessage = () => {
+    const text = value.trim()
+    if (!text || disabled) return
+    setValue('')
+    onSend(text)
+  }
 
   return (
     <div className="pointer-events-none absolute bottom-8 left-1/2 w-full max-w-3xl -translate-x-1/2 px-6 z-30">
@@ -30,6 +44,7 @@ export function ChatInputDock({
         </label>
         <input
           id={inputId}
+          ref={inputRef}
           className="flex-1 bg-transparent px-2 py-3 font-body text-sm text-on-surface outline-none placeholder:text-on-surface/40"
           placeholder={placeholder}
           value={value}
@@ -38,9 +53,7 @@ export function ChatInputDock({
           onKeyDown={(e) => {
             if (e.key === 'Enter' && !e.shiftKey) {
               e.preventDefault()
-              const text = value
-              setValue('')
-              onSend(text)
+              submitMessage()
             }
           }}
         />
@@ -50,11 +63,7 @@ export function ChatInputDock({
           className="relative flex-shrink-0 overflow-hidden rounded-xl bg-gradient-to-br from-primary to-primary-container p-3 text-surface-container-lowest shadow-[0_0_20px_rgba(59,191,250,0.20)] transition-all hover:shadow-[0_0_30px_rgba(59,191,250,0.40)]"
           aria-label="Send message"
           disabled={disabled}
-          onClick={() => {
-            const text = value
-            setValue('')
-            onSend(text)
-          }}
+          onClick={submitMessage}
         >
           <div className="absolute left-0 right-0 top-0 h-[2px] bg-white/20" />
           <span

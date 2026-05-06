@@ -17,6 +17,7 @@ export type ChatMessage = {
   role: ChatRole
   authorLabel: string
   text: string
+  imageUrls?: string[]
   createdAtLabel?: string
   variant?: 'standard' | 'luminary'
   title?: string
@@ -24,9 +25,18 @@ export type ChatMessage = {
   bento?: ChatBentoItem[]
   meta?: {
     traceId?: string
+    executionId?: string
     conversationId?: string
     cached?: boolean
     statuses?: string[]
   }
+}
+
+export type ChatConversation = {
+  id: string
+  title: string
+  createdAt: string
+  messages: ChatMessage[]
+  conversationIdFromApi?: string
 }
 

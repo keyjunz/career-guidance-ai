@@ -1,145 +1,110 @@
 import type { ChatMessage } from '../../types/chat'
 
-function Avatar({ role }: { role: ChatMessage['role'] }) {
-  if (role === 'user') {
-    return (
-      <div className="h-10 w-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center flex-shrink-0">
-        <span className="material-symbols-outlined text-primary text-[20px]">
-          person
-        </span>
-      </div>
-    )
-  }
-
+function BotLoadingDots() {
   return (
-    <div className="h-10 w-10 rounded-xl bg-surface-container-highest border border-outline-variant/10 shadow-[0_4px_30px_rgba(0,0,0,0.20)] flex items-center justify-center flex-shrink-0">
+    <div className="flex items-center gap-[5px] py-1">
       <span
-        className="material-symbols-outlined text-primary text-[20px]"
+        className="h-[7px] w-[7px] rounded-full bg-primary/70 animate-bounce"
+        style={{ animationDelay: '0ms', animationDuration: '900ms' }}
+      />
+      <span
+        className="h-[7px] w-[7px] rounded-full bg-primary/70 animate-bounce"
+        style={{ animationDelay: '180ms', animationDuration: '900ms' }}
+      />
+      <span
+        className="h-[7px] w-[7px] rounded-full bg-primary/70 animate-bounce"
+        style={{ animationDelay: '360ms', animationDuration: '900ms' }}
+      />
+    </div>
+  )
+}
+
+function BotResponseIcon() {
+  return (
+    <div className="mt-1 flex h-6 w-6 items-center justify-center rounded-full border border-outline-variant/30 bg-surface-container-highest/60 text-primary">
+      <span
+        className="material-symbols-outlined text-[15px]"
         style={{ fontVariationSettings: "'FILL' 1" }}
       >
-        generating_tokens
+        auto_awesome
       </span>
     </div>
   )
 }
 
-function ActionButton({
-  icon,
-  label,
-  right,
-}: {
-  icon: string
-  label: string
-  right?: boolean
-}) {
-  return (
-    <button
-      className={[
-        'text-[11px] font-semibold uppercase tracking-wider transition-colors flex items-center gap-1',
-        right
-          ? 'text-on-surface/60 hover:text-on-surface ml-auto'
-          : 'text-primary hover:text-primary-dim',
-      ].join(' ')}
-      type="button"
-    >
-      <span className="material-symbols-outlined text-[14px]">{icon}</span>
-      {label}
-    </button>
-  )
-}
-
 export function MessageBubble({ message }: { message: ChatMessage }) {
   const isUser = message.role === 'user'
-  const isLuminary = message.variant === 'luminary'
+  const hasImages = !isUser && (message.imageUrls?.length ?? 0) > 0
+  const isEmpty = !isUser && message.text === '' && !hasImages
+  const isStatusStream =
+    !isUser && !isEmpty && message.text.startsWith('Dang xu ly:')
+  const statusLabel = isStatusStream
+    ? message.text.replace('Dang xu ly:', '').trim()
+    : ''
 
+  // ── User message ──────────────────────────────────────────────────
+  if (isUser) {
+    return (
+      <div className="flex justify-end">
+        <div className="max-w-[72%] rounded-3xl rounded-tr-md border border-outline-variant/35 bg-surface-container-high px-5 py-3.5 text-sm leading-relaxed shadow-sm">
+          {message.text}
+        </div>
+      </div>
+    )
+  }
+
+  // ── Bot: loading (empty text, waiting for first token/status) ──────
+  if (isEmpty) {
+    return (
+      <div className="flex items-start gap-2.5">
+        <BotResponseIcon />
+        <BotLoadingDots />
+      </div>
+    )
+  }
+
+  // ── Bot: status stream ("Dang xu ly: …") ──────────────────────────
+  if (isStatusStream) {
+    return (
+      <div className="flex items-center gap-2.5 text-sm text-on-surface/55">
+        <BotResponseIcon />
+        <BotLoadingDots />
+        <span className="font-medium">{statusLabel}</span>
+      </div>
+    )
+  }
+
+  // ── Bot: real content ─────────────────────────────────────────────
   return (
-    <div
-      className={[
-        'flex gap-4',
-        isUser ? 'self-end flex-row-reverse max-w-3xl' : 'max-w-4xl',
-      ].join(' ')}
-    >
-      <Avatar role={message.role} />
-
-      <div
-        className={[
-          'flex flex-col gap-1.5 mt-1',
-          isUser ? 'items-end' : 'w-full',
-        ].join(' ')}
-      >
-        <span
-          className={[
-            'text-[11px] font-semibold uppercase tracking-wider text-on-surface/60',
-            isUser ? 'pr-1' : 'pl-1',
-          ].join(' ')}
-        >
-          {message.authorLabel}
-        </span>
-
-        {!isLuminary && (
-          <div
-            className={[
-              'rounded-2xl px-6 py-4 text-sm leading-relaxed',
-              isUser
-                ? 'bg-surface-container-high rounded-tr-sm shadow-[0_4px_30px_rgba(0,0,0,0.30)]'
-                : 'bg-surface-container-low rounded-tl-sm',
-            ].join(' ')}
-          >
+    <div className="flex items-start gap-2.5">
+      <BotResponseIcon />
+      <div className="flex max-w-4xl flex-col gap-3">
+        {!!message.text && (
+          <div className="text-sm leading-[1.75] text-on-surface whitespace-pre-wrap">
             {message.text}
           </div>
         )}
-
-        {isLuminary && (
-          <div className="relative overflow-hidden rounded-2xl rounded-tl-sm bg-surface-container-highest border border-outline-variant/10">
-            <div className="pointer-events-none absolute left-0 top-0 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/10 blur-[60px]" />
-
-            <div className="relative z-10 p-6">
-              <h3 className="mb-4 flex items-center gap-2 font-headline text-lg font-bold text-on-surface">
-                <span className="material-symbols-outlined text-primary text-[18px]">
-                  hub
-                </span>
-                {message.title ?? 'Synthesis Complete'}
-              </h3>
-
-              <p className="mb-6 text-sm leading-relaxed text-on-surface/80">
-                {message.text}
-              </p>
-
-              {!!message.bento?.length && (
-                <div className="grid grid-cols-2 gap-4">
-                  {message.bento.slice(0, 2).map((item) => (
-                    <div
-                      key={item.label}
-                      className="rounded-xl bg-surface-container-low p-4 border border-outline-variant/5"
-                    >
-                      <span className="mb-1 block text-[10px] font-semibold uppercase tracking-widest text-on-surface/60">
-                        {item.label}
-                      </span>
-                      <span className="text-sm font-medium text-on-surface">
-                        {item.value}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {!!message.actions?.length && (
-              <div className="relative z-10 flex gap-3 bg-surface-container-low/50 px-6 py-3 border-t border-outline-variant/5">
-                {message.actions.map((a) => (
-                  <ActionButton
-                    key={a.id}
-                    icon={a.icon}
-                    label={a.label}
-                    right={a.align === 'right'}
-                  />
-                ))}
-              </div>
-            )}
+        {hasImages && (
+          <div className="grid gap-2 sm:grid-cols-2">
+            {message.imageUrls?.map((imageUrl) => (
+              <a
+                key={imageUrl}
+                href={imageUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="group block overflow-hidden rounded-xl border border-outline-variant/25 bg-surface-container-low"
+              >
+                <img
+                  src={imageUrl}
+                  alt="Bot response visual"
+                  className="h-full max-h-72 w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                  loading="lazy"
+                />
+              </a>
+            ))}
           </div>
         )}
       </div>
     </div>
   )
 }
-

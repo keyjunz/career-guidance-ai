@@ -1,7 +1,5 @@
 export type ApiChatRequest = {
-  user_id: string
-  message: string
-  conversation_id?: string
+  question: string
 }
 
 export type ApiChatContentItem = {
@@ -14,9 +12,10 @@ export type ApiChatPayload = {
   type: 'text' | 'image' | 'mixed'
   content: ApiChatContentItem[]
   conversation_id: string
-  trace_id: string
-  statuses: string[]
-  cached: boolean
+  execution_id?: string
+  trace_id?: string
+  statuses?: string[]
+  cached?: boolean
 }
 
 export type ApiEnvelope<T> = {
@@ -24,5 +23,35 @@ export type ApiEnvelope<T> = {
   message?: string
   data?: T
   trace_id?: string
+}
+
+export type AuthUser = {
+  id: string
+  user_name: string
+  email: string
+  phone: string | null
+  is_active: boolean
+  role: string
+  created_at: string
+  updated_at: string
+}
+
+export type LoginRequest = {
+  email: string
+  password: string
+}
+
+export type RegisterRequest = {
+  user_name: string
+  email: string
+  password: string
+  phone?: string | null
+}
+
+export type TokenResponse = {
+  access_token: string
+  refresh_token: string
+  token_type: string
+  user: AuthUser
 }
 

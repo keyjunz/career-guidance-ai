@@ -1,73 +1,49 @@
-# React + TypeScript + Vite
+# Frontend - Career Guidance AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend su dung React + TypeScript + Vite.
 
-Currently, two official plugins are available:
+## 1) Cai dat va chay local
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```powershell
+cd frontend
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Mac dinh FE chay tai `http://localhost:5173`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 2) Cau hinh API base url
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Tao file `.env` tu `.env.example`:
+
+```env
+VITE_API_BASE_URL=http://localhost:8000
 ```
+
+Luu y: backend can chay truoc va dung host/port trong bien nay.
+
+## 3) Luong test co ban (auth + chat)
+
+1. Mo FE (`/login`)
+2. Dang ky account moi tai `/register` (hoac login bang account co san)
+3. Login thanh cong se redirect sang `/chat`
+4. Gui cau hoi tren chat
+
+Frontend da duoc rap API that:
+
+- `POST /api/auth/login`
+- `POST /api/auth/register`
+- `GET /api/auth/me`
+- `POST /api/chat?invocation_type=sync`
+
+## 4) Build/Lint
+
+```powershell
+npm run lint
+npm run build
+```
+
+## 5) Ghi chu
+
+- Neu backend tra `401`, hay login lai de lay access token moi.
+- Neu chat tra loi lien quan ChromaDB connection, do la van de hạ tang BE/vector store, khong phai loi UI.

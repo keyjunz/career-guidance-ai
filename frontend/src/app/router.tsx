@@ -1,13 +1,15 @@
 import { Navigate, createBrowserRouter } from 'react-router-dom'
 
-import { PlaceholderPage } from './PlaceholderPage'
 import { ChatPage } from '../pages/chat/ChatPage'
+import { LoginPage } from '../pages/auth/LoginPage'
+import { RegisterPage } from '../pages/auth/RegisterPage'
+import { SyncDocPage } from '../pages/sync/SyncDocPage'
 
 export const router = createBrowserRouter([
   { path: '/', element: <Navigate to="/chat" replace /> },
   { path: '/chat', element: <ChatPage /> },
-  { path: '/login', element: <PlaceholderPage title="Login" /> },
-  { path: '/register', element: <PlaceholderPage title="Register" /> },
-  { path: '/sync', element: <PlaceholderPage title="Sync" /> },
+  { path: '/login', element: <LoginPage /> },
+  { path: '/register', element: <RegisterPage /> },
+  { path: '/sync', element: <SyncDocPage /> },
 ])
 

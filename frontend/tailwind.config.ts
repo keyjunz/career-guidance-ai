@@ -1,29 +1,31 @@
 import type { Config } from 'tailwindcss'
 
+const tokenColor = (token: string) => `rgb(var(${token}) / <alpha-value>)`
+
 export default {
   content: ['./index.html', './src/**/*.{ts,tsx}'],
   theme: {
     extend: {
       colors: {
-        'surface': '#080e1d',
-        'background': '#080e1d',
-        'on-surface': '#e0e5fb',
-        'on-background': '#e0e5fb',
-        'surface-container-lowest': '#000000',
-        'surface-container-low': '#0c1324',
-        'surface-container': '#12192b',
-        'surface-container-high': '#171f33',
-        'surface-container-highest': '#1d253b',
-        'surface-variant': '#1d253b',
-        'surface-bright': '#222c43',
-        'outline': '#6f7588',
-        'outline-variant': '#424859',
-        'primary': '#3bbffa',
-        'primary-container': '#22b1ec',
-        'primary-dim': '#05a9e3',
-        'secondary': '#9492ff',
-        'tertiary': '#e0ecff',
-        'error': '#ff716c',
+        'surface': tokenColor('--color-surface'),
+        'background': tokenColor('--color-background'),
+        'on-surface': tokenColor('--color-on-surface'),
+        'on-background': tokenColor('--color-on-background'),
+        'surface-container-lowest': tokenColor('--color-surface-container-lowest'),
+        'surface-container-low': tokenColor('--color-surface-container-low'),
+        'surface-container': tokenColor('--color-surface-container'),
+        'surface-container-high': tokenColor('--color-surface-container-high'),
+        'surface-container-highest': tokenColor('--color-surface-container-highest'),
+        'surface-variant': tokenColor('--color-surface-variant'),
+        'surface-bright': tokenColor('--color-surface-bright'),
+        'outline': tokenColor('--color-outline'),
+        'outline-variant': tokenColor('--color-outline-variant'),
+        'primary': tokenColor('--color-primary'),
+        'primary-container': tokenColor('--color-primary-container'),
+        'primary-dim': tokenColor('--color-primary-dim'),
+        'secondary': tokenColor('--color-secondary'),
+        'tertiary': tokenColor('--color-tertiary'),
+        'error': tokenColor('--color-error'),
       },
       borderRadius: {
         md: '0.75rem',

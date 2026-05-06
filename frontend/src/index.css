@@ -1,11 +1,53 @@
 @import "tailwindcss";
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --color-surface: 245 248 255;
+  --color-background: 238 244 253;
+  --color-on-surface: 17 32 52;
+  --color-on-background: 17 32 52;
+  --color-surface-container-lowest: 255 255 255;
+  --color-surface-container-low: 236 242 252;
+  --color-surface-container: 226 236 248;
+  --color-surface-container-high: 217 229 244;
+  --color-surface-container-highest: 203 219 240;
+  --color-surface-variant: 213 225 242;
+  --color-surface-bright: 233 241 253;
+  --color-outline: 120 142 173;
+  --color-outline-variant: 156 176 203;
+  --color-primary: 21 116 216;
+  --color-primary-container: 13 97 190;
+  --color-primary-dim: 40 130 228;
+  --color-secondary: 79 106 189;
+  --color-tertiary: 13 35 82;
+  --color-error: 198 63 63;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --color-surface: 8 14 29;
+  --color-background: 8 14 29;
+  --color-on-surface: 224 229 251;
+  --color-on-background: 224 229 251;
+  --color-surface-container-lowest: 0 0 0;
+  --color-surface-container-low: 12 19 36;
+  --color-surface-container: 18 25 43;
+  --color-surface-container-high: 23 31 51;
+  --color-surface-container-highest: 29 37 59;
+  --color-surface-variant: 29 37 59;
+  --color-surface-bright: 34 44 67;
+  --color-outline: 111 117 136;
+  --color-outline-variant: 66 72 89;
+  --color-primary: 59 191 250;
+  --color-primary-container: 34 177 236;
+  --color-primary-dim: 5 169 227;
+  --color-secondary: 148 146 255;
+  --color-tertiary: 224 236 255;
+  --color-error: 255 113 108;
 }
 
 html,
@@ -16,8 +58,8 @@ body {
 body {
   margin: 0;
   font-family: Inter, system-ui, sans-serif;
-  background: #080e1d;
-  color: #e0e5fb;
+  background: rgb(var(--color-background));
+  color: rgb(var(--color-on-background));
   overflow: hidden;
 }
 
@@ -34,6 +76,63 @@ body {
   z-index: 0;
 }
 
+.chat-new-button {
+  background: linear-gradient(
+    135deg,
+    rgb(var(--color-primary)),
+    rgb(var(--color-primary-container))
+  );
+  border: 1px solid rgb(var(--color-primary-container) / 0.42);
+  box-shadow: 0 10px 24px rgb(var(--color-primary) / 0.28);
+}
+
+.chat-new-button:hover {
+  filter: brightness(1.04);
+}
+
+:root[data-theme='light'] .chat-new-button {
+  border-color: rgb(var(--color-primary-container) / 0.55);
+  box-shadow:
+    0 12px 26px rgb(var(--color-primary) / 0.35),
+    inset 0 1px 0 rgb(255 255 255 / 0.3);
+}
+
+.auth-submit-button {
+  background: linear-gradient(
+    135deg,
+    rgb(var(--color-primary)),
+    rgb(var(--color-primary-container))
+  );
+  border: 1px solid rgb(var(--color-primary-container) / 0.45);
+  box-shadow: 0 10px 24px rgb(var(--color-primary) / 0.28);
+}
+
+.auth-submit-button:hover {
+  filter: brightness(1.03);
+}
+
+.auth-submit-button:disabled {
+  opacity: 1;
+}
+
+:root[data-theme='light'] .auth-submit-button:disabled {
+  background: linear-gradient(135deg, rgb(144 182 223), rgb(126 167 213));
+  border-color: rgb(107 150 201 / 0.72);
+  color: rgb(246 250 255);
+  box-shadow: none;
+}
+
+:root[data-theme='dark'] .auth-submit-button:disabled {
+  background: linear-gradient(
+    135deg,
+    rgb(var(--color-primary) / 0.62),
+    rgb(var(--color-primary-container) / 0.62)
+  );
+  border-color: rgb(var(--color-primary-container) / 0.35);
+  color: rgb(255 255 255 / 0.92);
+  box-shadow: none;
+}
+
 /* Custom scrollbar */
 *::-webkit-scrollbar {
   width: 6px;
@@ -42,9 +141,9 @@ body {
   background: transparent;
 }
 *::-webkit-scrollbar-thumb {
-  background: #1d253b;
+  background: rgb(var(--color-outline-variant));
   border-radius: 10px;
 }
 *::-webkit-scrollbar-thumb:hover {
-  background: #424859;
+  background: rgb(var(--color-outline));
 }
