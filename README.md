@@ -1,60 +1,96 @@
 # Career Guidance AI
 
-Career Guidance AI la du an tro ly huong nghiep su dung AI, ho tro hoi dap theo boi canh nguoi dung va mo rong duoc voi cac module nhu RAG, web search, sinh anh va dong bo tai lieu.
+Career Guidance AI la du an tro ly huong nghiep su dung AI, ho tro hoi dap theo boi canh nguoi dung va mo rong voi cac module nhu RAG va dong bo tai lieu.
 
-## Setup va chay du an
-Version: python 3.11.*
-### Create .env:
-    Giong voi .env.example 
-### 1. Di chuyen vao thu muc backend
+## Setup backend
+
+Version de xuat: Python 3.10+ (da test on Windows voi conda env).
+
+### 1) Di chuyen vao backend
+
 ```powershell
 cd carreer-guidance
 ```
 
-### 2. Tao va kich hoat moi truong ao
+### 2) Tao/kich hoat moi truong ao
+
 ```powershell
 py -3 -m venv .venv
 .\.venv\Scripts\activate
 ```
 
-### 3. Cai dat thu vien can thiet
+### 3) Cai thu vien
+
 ```powershell
 pip install -r requirements.txt
 ```
 
-### 4. Setup database tu migration version co san
-#### 4.1 Tao database PostgreSQL
-```powershell
-psql -U postgres -h localhost -p 5432 -c "CREATE DATABASE career_guidance;"
-```
+### 4) Cau hinh `.env`
 
-#### 4.2 Cau hinh DATABASE_URL trong file .env
-Vi du cho sync driver:
+Copy tu `.env.example` va dien gia tri that.
+
+Luu y quan trong:
+
+- `DATABASE_URL` nen dung sync PostgreSQL driver:
+
 ```env
 DATABASE_URL=postgresql+psycopg2://postgres:postgres@localhost:5432/career_guidance
 ```
 
-#### 4.3 Chay migration tu version co san
-Migration init da co san trong thu muc alembic/versions (revision 20260326_0001).
+- Neu muon su dung RAG/sync day du, can cau hinh ChromaDB dung mode/port dang chay.
+
+### 5) Migration database
+
 ```powershell
 alembic upgrade head
-```
-
-#### 4.4 Kiem tra version migration hien tai
-```powershell
 alembic current
 ```
 
-Neu gap loi thieu driver psycopg2:
+### 6) Chay local server
+
 ```powershell
-pip install psycopg2-binary
+uvicorn local_server.main:app --reload --host 127.0.0.1 --port 8000
 ```
 
-### 5. Chay local server
-```powershell
-uvicorn local_server.main:app --reload --host 127.0.0.1 --port 8010
+Neu port 8000 bi chiem, doi sang port khac (vd: 8010).
+
+### 7) Kiem tra server
+
+- Healthcheck: `http://127.0.0.1:8000/health`
+- Swagger UI: `http://127.0.0.1:8000/docs`
+
+## Auth quick test
+
+1. `POST /api/auth/login` de lay `access_token`
+2. Bấm `Authorize` trong Swagger (HTTP Bearer), dan token
+3. Test `GET /api/auth/me`
+
+Note:
+
+- `GET /api/auth/me` se tra `401 Not authenticated` neu khong gui Bearer token.
+- Neu token het han, cac API protected (admin/sync) se tra `401 Could not validate credentials`.
+
+## Chat quick test
+
+Dung body:
+
+```json
+{
+  "question": "hello, ban giup gi duoc cho toi?"
+}
 ```
 
-### 6. Kiem tra server
-- Healthcheck: `http://127.0.0.1:8010/health`
-- Swagger UI: `http://127.0.0.1:8010/docs`
+`user_id` khong can gui tu client (duoc inject tu JWT trong server).
+
+## Sync/RAG note
+
+Neu gap loi ket noi ChromaDB nhu:
+
+`Cannot connect to ChromaDB at localhost:8001`
+
+thi day la loi ha tang vector store, khong phai loi auth/request body.
+
+Can dam bao:
+
+- Chroma server dang chay dung host/port trong `.env`, hoac
+- Cau hinh mode persistent phu hop voi may local.
