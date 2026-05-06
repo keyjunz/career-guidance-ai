@@ -2,6 +2,7 @@ from pydantic import Field
 from pydantic_settings import BaseSettings
 
 from src.config.settings_models.app_settings import AppSettings
+from src.config.settings_models.auth_settings import AuthSettings
 from src.config.settings_models.common import COMMON_SETTINGS_CONFIG
 from src.config.settings_models.database_settings import DatabaseSettings
 from src.config.settings_models.llm_settings import LLMSettings
@@ -16,6 +17,7 @@ class Settings(BaseSettings):
     model_config = COMMON_SETTINGS_CONFIG
 
     app: AppSettings = Field(default_factory=AppSettings)
+    auth: AuthSettings = Field(default_factory=AuthSettings)
     db: DatabaseSettings = Field(default_factory=DatabaseSettings)
     llm: LLMSettings = Field(default_factory=LLMSettings)
     vector_store: VectorStoreSettings = Field(default_factory=VectorStoreSettings)

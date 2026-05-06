@@ -61,8 +61,21 @@ def _resolve_database_url() -> str:
         "DATABASE_URL is missing. Set DATABASE_URL in environment or .env file."
     )
 
+def _coerce_sync_database_url(url: str) -> str:
+    """
+    Alembic migrations file is configured for *sync* SQLAlchemy engines.
+    If the app uses an async driver (e.g. postgresql+asyncpg://), we must
+    coerce it to a sync driver (postgresql+psycopg2://) for migrations.
+    """
 
-config.set_main_option("sqlalchemy.url", _resolve_database_url())
+    async_prefix = "postgresql+asyncpg://"
+    sync_prefix = "postgresql+psycopg2://"
+    if url.startswith(async_prefix):
+        return url.replace(async_prefix, sync_prefix, 1)
+    return url
+
+
+config.set_main_option("sqlalchemy.url", _coerce_sync_database_url(_resolve_database_url()))
 
 target_metadata = Base.metadata
 

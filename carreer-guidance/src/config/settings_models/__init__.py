@@ -1,4 +1,5 @@
 from src.config.settings_models.app_settings import AppSettings
+from src.config.settings_models.auth_settings import AuthSettings
 from src.config.settings_models.database_settings import DatabaseSettings
 from src.config.settings_models.llm_settings import LLMSettings
 from src.config.settings_models.redis_settings import RedisSettings
@@ -12,6 +13,7 @@ from src.config.settings_models.web_search_settings import WebSearchSettings
 
 __all__ = [
     "AppSettings",
+    "AuthSettings",
     "DatabaseSettings",
     "LLMSettings",
     "VectorStoreSettings",

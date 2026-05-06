@@ -193,6 +193,8 @@ class RAGModuleImpl:
                     rel = path.name
             else:
                 rel = path
-            url = f"{self.image_base_url.rstrip('/')}/images/{str(rel).replace('\\\\', '/')}"
+            # Avoid backslash inside f-string expression (Python limitation).
+            rel_str = str(rel).replace("\\", "/")
+            url = f"{self.image_base_url.rstrip('/')}/images/{rel_str}"
             urls.append(url)
         return urls

@@ -22,9 +22,12 @@ chromadb==0.4.24
 numpy==1.24.4   # 🔥 downgrade để tránh crash
 rank-bm25==0.2.2
 
-# Embedding
+# Embedding (torch 2.4+ avoids "PyTorch >= 2.4 required" when deps bump transformers; 4.46.x avoids 5.x accelerate nn NameError)
 sentence-transformers==5.4.1
-torch==2.1.2     # 🔒 pin version cho ổn định
+torch==2.4.1
+transformers==4.46.3
+tokenizers>=0.20,<0.21
+huggingface-hub>=0.23.0,<1.0
 
 # LLM
 groq==1.2.0
@@ -41,3 +44,9 @@ protobuf==3.20.2
 # PDF / image
 pymupdf==1.24.9
 Pillow==10.4.0
+
+# Auth
+passlib[bcrypt]==1.7.4
+PyJWT==2.9.0
+bcrypt==4.2.1
+email-validator==2.2.0
