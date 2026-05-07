@@ -66,14 +66,25 @@ async def chat_stream_endpoint(
 
         async def event_stream():
             try:
-                async for token in handler.stream_tokens(payload):
-                    if token.startswith("[STATUS]"):
-                        status_text = token.removeprefix("[STATUS] ")
+                async for stream_event in handler.stream_tokens(payload):
+                    event_type = str(stream_event.get("type") or "")
+                    if event_type == "status":
+                        status_text = str(stream_event.get("status") or "")
                         yield f"event: status\ndata: {json.dumps({'status': status_text, 'execution_id': request.state.execution_id})}\n\n"
-                    else:
+                    elif event_type == "token":
+                        token = str(stream_event.get("token") or "")
                         yield f"event: token\ndata: {json.dumps({'token': token, 'execution_id': request.state.execution_id})}\n\n"
+                    elif event_type == "final_payload":
+                        payload_data = stream_event.get("payload")
+                        if isinstance(payload_data, dict):
+                            yield f"event: final_payload\ndata: {json.dumps(payload_data)}\n\n"
+                    elif event_type == "done":
+                        execution_id = str(
+                            stream_event.get("execution_id")
+                            or request.state.execution_id
+                        )
+                        yield f"event: done\ndata: {json.dumps({'execution_id': execution_id})}\n\n"
 
-                yield f"event: done\ndata: {json.dumps({'execution_id': request.state.execution_id})}\n\n"
             except ValueError as exc:
                 error_response = BadRequest(str(exc)).get_response()
                 yield f"event: error\ndata: {json.dumps(error_response)}\n\n"

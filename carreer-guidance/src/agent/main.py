@@ -77,6 +77,7 @@ def _to_chat_response(state: AgentRuntimeState) -> ChatResponse:
         conversation_id=state.conversation_id,
         execution_id=state.execution_id,
         statuses=state.status_history,
+        sources=state.sources,
         cached=state.cache_hit,
     )
 
@@ -128,7 +129,7 @@ def _iter_answer_tokens(answer: str) -> list[str]:
 async def invoke_stream(
     request: ChatRequest,
     context: dict[str, Any] | None = None,
-) -> AsyncIterator[str]:
+) -> AsyncIterator[dict[str, Any]]:
     started_at = perf_counter()
     state = _build_state(request, context)
     logger.info(
@@ -151,7 +152,7 @@ async def invoke_stream(
             queue.put_nowait,
             {
                 "type": "status",
-                "value": status,
+                "status": status,
             },
         )
 
@@ -194,7 +195,7 @@ async def invoke_stream(
         payload_type = payload.get("type")
 
         if payload_type == "status":
-            yield f"[STATUS] {payload.get('value', '')}"
+            yield {"type": "status", "status": str(payload.get("status") or "")}
             continue
 
         if payload_type == "error":
@@ -213,7 +214,17 @@ async def invoke_stream(
                 raise RuntimeError("invalid final state in stream pipeline")
 
             for token in _iter_answer_tokens(final_state.answer):
-                yield token
+                yield {"type": "token", "token": token}
+
+            final_payload = _to_chat_response(final_state).model_dump(mode="json")
+            yield {
+                "type": "final_payload",
+                "payload": final_payload,
+            }
+            yield {
+                "type": "done",
+                "execution_id": final_state.execution_id,
+            }
 
             logger.info(
                 "[agent-main] stream done execution_id=%s answer_len=%d token_count=%d",

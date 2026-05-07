@@ -1,7 +1,9 @@
 from collections.abc import Callable
 import logging
 from time import perf_counter
-from typing import Any
+from typing import Any, TypedDict
+
+from langgraph.graph import END, StateGraph
 
 from src.agent.nodes.cache_node import try_cached_answer
 from src.agent.nodes.draft_node import compose_draft_answer
@@ -18,6 +20,13 @@ from src.agent.state.user_store import UserStore
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
+
+
+class PipelineContext(TypedDict):
+    state: AgentRuntimeState
+    store: UserStore
+    status_callback: Callable[[str], None] | None
+    passed: bool | None
 
 
 def _run_step(
@@ -72,6 +81,180 @@ def _push_status(
         status_callback(text)
 
 
+def _init_status(ctx: PipelineContext) -> dict[str, Any]:
+    _push_status(ctx["state"], ctx["store"], "received", ctx.get("status_callback"))
+    return {}
+
+
+def _prepare(ctx: PipelineContext) -> dict[str, Any]:
+    _run_step(
+        "prepare_request", ctx["state"], prepare_request, ctx["state"], ctx["store"]
+    )
+    _push_status(
+        ctx["state"],
+        ctx["store"],
+        "question_stored",
+        ctx.get("status_callback"),
+    )
+    return {}
+
+
+def _cache_check(ctx: PipelineContext) -> dict[str, Any]:
+    _push_status(
+        ctx["state"],
+        ctx["store"],
+        "cache_checking",
+        ctx.get("status_callback"),
+    )
+    cached = _run_step(
+        "try_cached_answer", ctx["state"], try_cached_answer, ctx["state"], ctx["store"]
+    )
+    if cached is not None:
+        ctx["state"].cache_hit = True
+        ctx["state"].answer = str(cached.get("answer") or "")
+        ctx["state"].sources = list(cached.get("sources") or [])
+        ctx["state"].image_urls = list(cached.get("image_urls") or [])
+        logger.info(
+            "[agent-pipeline] cache hit execution_id=%s answer_len=%d sources=%d images=%d",
+            ctx["state"].execution_id,
+            len(ctx["state"].answer),
+            len(ctx["state"].sources),
+            len(ctx["state"].image_urls),
+        )
+        _push_status(
+            ctx["state"],
+            ctx["store"],
+            "cache_hit",
+            ctx.get("status_callback"),
+        )
+    return {}
+
+
+def _guardrails(ctx: PipelineContext) -> dict[str, Any]:
+    _push_status(
+        ctx["state"],
+        ctx["store"],
+        "guardrails_running",
+        ctx.get("status_callback"),
+    )
+    _run_step("apply_guardrails", ctx["state"], apply_guardrails, ctx["state"])
+    return {}
+
+
+def _planner(ctx: PipelineContext) -> dict[str, Any]:
+    _push_status(
+        ctx["state"],
+        ctx["store"],
+        "planner_running",
+        ctx.get("status_callback"),
+    )
+    _run_step("choose_plan", ctx["state"], choose_plan, ctx["state"])
+    logger.info(
+        "[agent-pipeline] planner selected execution_id=%s plan=%s",
+        ctx["state"].execution_id,
+        ctx["state"].plan,
+    )
+    return {}
+
+
+def _tools(ctx: PipelineContext) -> dict[str, Any]:
+    _push_status(
+        ctx["state"],
+        ctx["store"],
+        "tools_running",
+        ctx.get("status_callback"),
+    )
+    _run_step("execute_tools", ctx["state"], execute_tools, ctx["state"])
+    logger.info(
+        "[agent-pipeline] tools completed execution_id=%s tool_count=%d",
+        ctx["state"].execution_id,
+        len(ctx["state"].tool_results),
+    )
+    return {}
+
+
+def _draft(ctx: PipelineContext) -> dict[str, Any]:
+    _push_status(
+        ctx["state"],
+        ctx["store"],
+        "draft_running",
+        ctx.get("status_callback"),
+    )
+    _run_step("compose_draft_answer", ctx["state"], compose_draft_answer, ctx["state"])
+    return {}
+
+
+def _evaluate(ctx: PipelineContext) -> dict[str, Any]:
+    _push_status(
+        ctx["state"],
+        ctx["store"],
+        "evaluator_running",
+        ctx.get("status_callback"),
+    )
+    passed = _run_step("evaluate_draft", ctx["state"], evaluate_draft, ctx["state"])
+    logger.info(
+        "[agent-pipeline] evaluator result execution_id=%s passed=%s score=%.4f retry_count=%d",
+        ctx["state"].execution_id,
+        passed,
+        ctx["state"].evaluation_score,
+        ctx["state"].retry_count,
+    )
+    return {"passed": bool(passed)}
+
+
+def _fixer(ctx: PipelineContext) -> dict[str, Any]:
+    _push_status(
+        ctx["state"],
+        ctx["store"],
+        "fixer_running",
+        ctx.get("status_callback"),
+    )
+    _run_step("run_fixer", ctx["state"], run_fixer, ctx["state"])
+    return {}
+
+
+def _ensure_answer(ctx: PipelineContext) -> dict[str, Any]:
+    if not ctx["state"].answer.strip():
+        ctx["state"].answer = ctx["state"].draft_answer.strip()
+        logger.info(
+            "[agent-pipeline] fallback draft answer execution_id=%s answer_len=%d",
+            ctx["state"].execution_id,
+            len(ctx["state"].answer),
+        )
+    return {}
+
+
+def _finalize(ctx: PipelineContext) -> dict[str, Any]:
+    _run_step(
+        "save_final_answer", ctx["state"], save_final_answer, ctx["state"], ctx["store"]
+    )
+    _push_status(
+        ctx["state"],
+        ctx["store"],
+        "answer_stored",
+        ctx.get("status_callback"),
+    )
+    _push_status(
+        ctx["state"],
+        ctx["store"],
+        "done",
+        ctx.get("status_callback"),
+    )
+    return {}
+
+
+def _route_after_cache(ctx: PipelineContext) -> str:
+    return "finalize" if ctx["state"].cache_hit else "guardrails"
+
+
+def _route_after_evaluate(ctx: PipelineContext) -> str:
+    if ctx.get("passed"):
+        return "ensure_answer"
+    if ctx["state"].retry_count < ctx["state"].max_retry_count:
+        return "fixer"
+    return "ensure_answer"
+
+
 def run_pipeline(
     state: AgentRuntimeState,
     store: UserStore,
@@ -84,90 +267,57 @@ def run_pipeline(
         state.execution_id,
         state.user_id,
     )
-    _push_status(state, store, "received", status_callback)
 
-    _run_step("prepare_request", state, prepare_request, state, store)
-    _push_status(state, store, "question_stored", status_callback)
+    graph = StateGraph(PipelineContext)
+    graph.add_node("init_status", _init_status)
+    graph.add_node("prepare", _prepare)
+    graph.add_node("cache_check", _cache_check)
+    graph.add_node("guardrails", _guardrails)
+    graph.add_node("planner", _planner)
+    graph.add_node("tools", _tools)
+    graph.add_node("draft", _draft)
+    graph.add_node("evaluator", _evaluate)
+    graph.add_node("fixer", _fixer)
+    graph.add_node("ensure_answer", _ensure_answer)
+    graph.add_node("finalize", _finalize)
 
-    _push_status(state, store, "cache_checking", status_callback)
-    cached = _run_step("try_cached_answer", state, try_cached_answer, state, store)
-    if cached is not None:
-        state.cache_hit = True
-        state.answer = str(cached.get("answer") or "")
-        state.sources = list(cached.get("sources") or [])
-        state.image_urls = list(cached.get("image_urls") or [])
-        logger.info(
-            "[agent-pipeline] cache hit execution_id=%s answer_len=%d sources=%d images=%d",
-            state.execution_id,
-            len(state.answer),
-            len(state.sources),
-            len(state.image_urls),
-        )
-        _push_status(state, store, "cache_hit", status_callback)
-    else:
-        _push_status(state, store, "guardrails_running", status_callback)
-        _run_step("apply_guardrails", state, apply_guardrails, state)
+    graph.set_entry_point("init_status")
+    graph.add_edge("init_status", "prepare")
+    graph.add_edge("prepare", "cache_check")
+    graph.add_conditional_edges(
+        "cache_check",
+        _route_after_cache,
+        {
+            "guardrails": "guardrails",
+            "finalize": "finalize",
+        },
+    )
+    graph.add_edge("guardrails", "planner")
+    graph.add_edge("planner", "tools")
+    graph.add_edge("tools", "draft")
+    graph.add_edge("draft", "evaluator")
+    graph.add_conditional_edges(
+        "evaluator",
+        _route_after_evaluate,
+        {
+            "fixer": "fixer",
+            "ensure_answer": "ensure_answer",
+        },
+    )
+    graph.add_edge("fixer", "evaluator")
+    graph.add_edge("ensure_answer", "finalize")
+    graph.add_edge("finalize", END)
 
-        _push_status(state, store, "planner_running", status_callback)
-        _run_step("choose_plan", state, choose_plan, state)
-        logger.info(
-            "[agent-pipeline] planner selected execution_id=%s plan=%s",
-            state.execution_id,
-            state.plan,
-        )
+    compiled = graph.compile()
+    compiled.invoke(
+        {
+            "state": state,
+            "store": store,
+            "status_callback": status_callback,
+            "passed": None,
+        }
+    )
 
-        _push_status(state, store, "tools_running", status_callback)
-        _run_step("execute_tools", state, execute_tools, state)
-        logger.info(
-            "[agent-pipeline] tools completed execution_id=%s tool_count=%d",
-            state.execution_id,
-            len(state.tool_results),
-        )
-
-        _push_status(state, store, "draft_running", status_callback)
-        _run_step("compose_draft_answer", state, compose_draft_answer, state)
-
-        _push_status(state, store, "evaluator_running", status_callback)
-        passed = _run_step("evaluate_draft", state, evaluate_draft, state)
-        logger.info(
-            "[agent-pipeline] evaluator result execution_id=%s passed=%s score=%.4f retry_count=%d",
-            state.execution_id,
-            passed,
-            state.evaluation_score,
-            state.retry_count,
-        )
-
-        while not passed and state.retry_count < state.max_retry_count:
-            logger.info(
-                "[agent-pipeline] retry round execution_id=%s retry_count=%d max_retry=%d",
-                state.execution_id,
-                state.retry_count,
-                state.max_retry_count,
-            )
-            _push_status(state, store, "fixer_running", status_callback)
-            _run_step("run_fixer", state, run_fixer, state)
-
-            _push_status(state, store, "evaluator_running", status_callback)
-            passed = _run_step("evaluate_draft", state, evaluate_draft, state)
-            logger.info(
-                "[agent-pipeline] evaluator retry result execution_id=%s passed=%s score=%.4f retry_count=%d",
-                state.execution_id,
-                passed,
-                state.evaluation_score,
-                state.retry_count,
-            )
-
-        if not state.answer.strip():
-            state.answer = state.draft_answer.strip()
-            logger.info(
-                "[agent-pipeline] fallback draft answer execution_id=%s answer_len=%d",
-                state.execution_id,
-                len(state.answer),
-            )
-
-    _run_step("save_final_answer", state, save_final_answer, state, store)
-    _push_status(state, store, "answer_stored", status_callback)
-    _push_status(state, store, "done", status_callback)
     total_elapsed_ms = (perf_counter() - pipeline_started_at) * 1000
     logger.info(
         "[agent-pipeline] run finished execution_id=%s cache_hit=%s status_count=%d source_count=%d image_count=%d elapsed_ms=%.2f",

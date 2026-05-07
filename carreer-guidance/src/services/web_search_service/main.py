@@ -1,6 +1,7 @@
 import json
 import logging
 import re
+import socket
 import time
 from typing import Any
 from urllib.error import HTTPError, URLError
@@ -34,7 +35,10 @@ class WebSearchService:
         self.endpoint = endpoint
         self.timeout_s = timeout_s
         self.logger = logging.getLogger(f"{__name__}[{execution_id}]")
-        self.llm_service = llm_service or LLMService(execution_id=execution_id)
+        self.llm_service = llm_service or LLMService(
+            execution_id=execution_id,
+            api_key_env_override="GEMINI_AGENT_API_KEY",
+        )
 
     def search(self, *, query: str, max_results: int = 5) -> dict[str, Any]:
         question = query.strip()
@@ -101,20 +105,36 @@ class WebSearchService:
         }
 
     def _fetch_json(self, request: Request, *, timeout_s: int) -> dict[str, Any]:
-        try:
-            with urlopen(request, timeout=timeout_s) as response:
-                raw = response.read().decode("utf-8")
-                return json.loads(raw)
-        except HTTPError as exc:
-            details = exc.read().decode("utf-8", errors="ignore")
-            self.logger.warning("Web search HTTP error: %s", details)
-            raise RuntimeError(f"web search failed with status {exc.code}") from exc
-        except URLError as exc:
-            self.logger.warning("Web search network error: %s", exc)
-            raise RuntimeError("web search network error") from exc
-        except json.JSONDecodeError as exc:
-            self.logger.warning("Web search returned invalid JSON")
-            raise RuntimeError("web search returned invalid response") from exc
+        max_attempts = 2
+        for attempt in range(1, max_attempts + 1):
+            try:
+                with urlopen(request, timeout=timeout_s) as response:
+                    raw = response.read().decode("utf-8")
+                    return json.loads(raw)
+            except HTTPError as exc:
+                details = exc.read().decode("utf-8", errors="ignore")
+                self.logger.warning("Web search HTTP error: %s", details)
+                raise RuntimeError(f"web search failed with status {exc.code}") from exc
+            except (TimeoutError, socket.timeout) as exc:
+                self.logger.warning(
+                    "Web search timeout (attempt %d/%d): %s",
+                    attempt,
+                    max_attempts,
+                    exc,
+                )
+                if attempt == max_attempts:
+                    raise RuntimeError("web search timeout") from exc
+                continue
+            except URLError as exc:
+                self.logger.warning("Web search network error: %s", exc)
+                if attempt == max_attempts:
+                    raise RuntimeError("web search network error") from exc
+                continue
+            except json.JSONDecodeError as exc:
+                self.logger.warning("Web search returned invalid JSON")
+                raise RuntimeError("web search returned invalid response") from exc
+
+        raise RuntimeError("web search failed")
 
     def _extract_sources(
         self,

@@ -3,6 +3,22 @@ from typing import Any
 from src.agent.state.agent_state import AgentRuntimeState
 
 
+def _is_insufficient_answer(text: str) -> bool:
+    normalized = str(text or "").strip().lower()
+    if not normalized:
+        return True
+    weak_signals = (
+        "provided context does not contain",
+        "cannot answer your question",
+        "khong tim thay",
+        "không tìm thấy",
+        "khong co thong tin",
+        "không có thông tin",
+        "context is insufficient",
+    )
+    return any(signal in normalized for signal in weak_signals)
+
+
 def _collect_sources(state: AgentRuntimeState) -> list[dict[str, Any]]:
     rag_sources = list(state.tool_results.get("rag", {}).get("sources") or [])
     web_sources = list(state.tool_results.get("web", {}).get("sources") or [])
@@ -52,24 +68,8 @@ def _collect_images(state: AgentRuntimeState) -> list[str]:
     return urls[:2]
 
 
-def _build_source_lines(sources: list[dict[str, Any]]) -> str:
-    lines: list[str] = []
-    for source in sources[:5]:
-        url = str(source.get("url") or source.get("source") or "").strip()
-        if not url:
-            continue
-        title = str(source.get("title") or "").strip()
-        if title:
-            lines.append(f"- {title}: {url}")
-        else:
-            lines.append(f"- {url}")
-    return "\n".join(lines)
-
-
 def compose_draft_answer(
     state: AgentRuntimeState,
-    *,
-    max_web_snippets: int = 3,
 ) -> str:
     if state.plan == "direct_answer":
         direct_answer = str(
@@ -84,28 +84,25 @@ def compose_draft_answer(
     rag_payload = state.tool_results.get("rag", {})
     web_payload = state.tool_results.get("web", {})
 
-    sections: list[str] = []
-
     rag_answer = str(rag_payload.get("answer") or "").strip()
-    if rag_payload.get("success") and rag_answer:
-        sections.append(rag_answer)
-
     web_answer = str(web_payload.get("answer") or "").strip()
-    if web_payload.get("success") and web_answer:
-        sections.append(f"Web summary:\n{web_answer}")
+    rag_ok = bool(rag_payload.get("success")) and not _is_insufficient_answer(rag_answer)
+    web_ok = bool(web_payload.get("success")) and not _is_insufficient_answer(web_answer)
 
-    web_snippets = [
-        str(item).strip()
-        for item in list(web_payload.get("snippets") or [])
-        if str(item).strip()
-    ]
-    if web_payload.get("success") and web_snippets:
-        snippet_lines = "\n".join(
-            f"- {snippet}" for snippet in web_snippets[:max_web_snippets]
-        )
-        sections.append(f"Web findings:\n{snippet_lines}")
+    final_answer = ""
+    if rag_ok and web_ok:
+        # Prefer web answer when rag is weak/insufficient; otherwise prefer rag.
+        final_answer = web_answer if _is_insufficient_answer(rag_answer) else rag_answer
+    elif rag_ok:
+        final_answer = rag_answer
+    elif web_ok:
+        final_answer = web_answer
 
-    if not sections:
+    if not final_answer:
+        if bool(rag_payload.get("success")) and rag_answer:
+            final_answer = rag_answer
+
+    if not final_answer:
         errors: list[str] = []
         rag_error = str(rag_payload.get("error") or "").strip()
         web_error = str(web_payload.get("error") or "").strip()
@@ -117,17 +114,11 @@ def compose_draft_answer(
         fallback = "Khong tim thay du lieu phu hop de tra loi cau hoi nay."
         if errors:
             fallback = f"{fallback}\n\nChi tiet:\n- " + "\n- ".join(errors)
-        sections.append(fallback)
+        final_answer = fallback
 
     state.sources = _collect_sources(state)
     state.image_urls = _collect_images(state)
 
-    source_lines = _build_source_lines(state.sources)
-    if source_lines:
-        sections.append(f"Sources:\n{source_lines}")
-
-    state.draft_answer = "\n\n".join(
-        section.strip() for section in sections if section.strip()
-    )
+    state.draft_answer = final_answer.strip()
     state.answer = state.draft_answer
     return state.draft_answer

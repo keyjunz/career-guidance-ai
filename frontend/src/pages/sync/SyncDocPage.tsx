@@ -334,26 +334,35 @@ export function SyncDocPage() {
 
               {/* OCR method + industry type */}
               <div className="mt-6 grid grid-cols-2 gap-4">
-                <label className="flex flex-col gap-2 text-sm font-semibold text-on-surface/80">
-                  OCR Method
+                <div className="flex flex-col gap-2 text-sm font-semibold text-on-surface/80">
+                  <p>OCR Method</p>
                   <div className="flex gap-2">
                     {(['gemini', 'paddle'] as OcrMethod[]).map((method) => (
                       <button
                         key={method}
+                        aria-pressed={ocrMethod === method}
                         className={[
-                          'flex-1 rounded-xl px-4 py-2.5 text-xs font-bold uppercase tracking-wider transition border',
+                          'flex-1 rounded-xl px-4 py-2.5 text-xs font-bold uppercase tracking-wider transition border relative overflow-hidden',
                           ocrMethod === method
-                            ? 'bg-primary/15 text-primary border-primary/30'
-                            : 'bg-surface-container text-on-surface/60 border-outline-variant/15 hover:border-primary/30',
+                            ? 'bg-primary/15 text-primary border-primary/40 shadow-[0_0_0_1px_rgba(59,191,250,0.25),0_10px_30px_rgba(59,191,250,0.18)] scale-[1.02]'
+                            : 'bg-surface-container text-on-surface/60 border-outline-variant/15 hover:border-primary/30 hover:text-on-surface/80',
                         ].join(' ')}
                         onClick={() => setOcrMethod(method)}
                         type="button"
                       >
-                        {method === 'gemini' ? 'Gemini OCR' : 'Paddle OCR'}
+                        <span className="relative z-10 inline-flex items-center justify-center gap-2">
+                          {ocrMethod === method && (
+                            <span className="material-symbols-outlined text-[16px]">check_circle</span>
+                          )}
+                          {method === 'gemini' ? 'Gemini OCR' : 'Paddle OCR'}
+                        </span>
+                        {ocrMethod === method && (
+                          <span className="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent via-primary/15 to-transparent" />
+                        )}
                       </button>
                     ))}
                   </div>
-                </label>
+                </div>
                 <label className="flex flex-col gap-2 text-sm font-semibold text-on-surface/80">
                   Industry Type
                   <input

@@ -33,6 +33,7 @@ export async function sendChatMessage(
 type StreamHandlers = {
   onToken: (token: string) => void
   onStatus?: (status: string) => void
+  onFinalPayload?: (payload: ApiChatPayload) => void
   onDone?: (executionId?: string) => void
 }
 
@@ -102,6 +103,14 @@ export async function streamChatMessage(
       handlers.onDone?.(
         payload.execution_id ? String(payload.execution_id) : undefined,
       )
+      return
+    }
+    if (eventName === 'final_payload') {
+      try {
+        handlers.onFinalPayload?.(extractPayload(payload as ApiChatPayload))
+      } catch {
+        // ignore malformed final payload events
+      }
     }
   }
 

@@ -33,7 +33,10 @@ class RAGTool:
         )
         self.retriever_service.connect()
 
-        self.llm_service = LLMService(execution_id=execution_id)
+        self.llm_service = LLMService(
+            execution_id=execution_id,
+            api_key_env_override="GEMINI_AGENT_API_KEY",
+        )
         self.module = RAGModuleImpl(
             execution_id=execution_id,
             user_id=user_id,
@@ -45,7 +48,12 @@ class RAGTool:
         if not question.strip():
             raise ValueError("question is required for RAG tool")
 
-        query = RAGQuery(question=question, language="auto")
+        query = RAGQuery(
+            question=question,
+            language="auto",
+            retrieve_k=20,
+            rerank_k=8,
+        )
         result = self.module.query(query)
 
         return {

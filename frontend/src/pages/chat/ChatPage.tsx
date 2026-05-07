@@ -193,6 +193,11 @@ export function ChatPage() {
       try {
         let streamedText = ''
         let streamedExecutionId: string | undefined
+        let streamedConversationId: string | undefined
+        let streamedImageUrls: string[] | undefined
+        let streamedSources: Array<Record<string, unknown>> | undefined
+        let streamedStatuses: string[] | undefined
+        let streamedCached: boolean | undefined
         let latestStatus = ''
         await streamChatMessage(
           { question: trimmed },
@@ -236,6 +241,19 @@ export function ChatPage() {
             onDone: (executionId) => {
               streamedExecutionId = executionId
             },
+            onFinalPayload: (payload) => {
+              streamedConversationId = payload.conversation_id
+              streamedStatuses = payload.statuses
+              streamedCached = payload.cached
+              streamedSources = payload.sources
+              const images = payload.content
+                .filter((item) => item.type === 'image' && item.image_url)
+                .map((item) => item.image_url?.trim() || '')
+                .filter((item) => item.length > 0)
+              if (images.length > 0) {
+                streamedImageUrls = images
+              }
+            },
           },
         )
 
@@ -244,6 +262,8 @@ export function ChatPage() {
             conversation.id === activeConversationId
               ? {
                   ...conversation,
+                  conversationIdFromApi:
+                    streamedConversationId ?? conversation.conversationIdFromApi,
                   messages: conversation.messages.map((message) =>
                     message.id === streamingAssistantId
                       ? {
@@ -255,7 +275,12 @@ export function ChatPage() {
                               : 'No text response from server.'),
                           meta: {
                             executionId: streamedExecutionId,
+                            conversationId: streamedConversationId,
+                            statuses: streamedStatuses,
+                            cached: streamedCached,
+                            sources: streamedSources,
                           },
+                          imageUrls: streamedImageUrls,
                         }
                       : message,
                   ),

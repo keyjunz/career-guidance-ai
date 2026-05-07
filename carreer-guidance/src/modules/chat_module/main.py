@@ -80,13 +80,18 @@ class ChatModuleImpl:
         self,
         request: ChatRequest,
         context: RequestContext,
-    ) -> AsyncIterator[str]:
+    ) -> AsyncIterator[dict[str, Any]]:
         resolved_context = self._build_context(request, context)
         answer_chunks: list[str] = []
-        async for token in agent_main.invoke_stream(request, context=resolved_context):
-            if not token.startswith("[STATUS]"):
-                answer_chunks.append(token)
-            yield token
+        conversation_id = None
+        async for event in agent_main.invoke_stream(request, context=resolved_context):
+            if event.get("type") == "token":
+                answer_chunks.append(str(event.get("token") or ""))
+            elif event.get("type") == "final_payload":
+                payload = event.get("payload")
+                if isinstance(payload, dict):
+                    conversation_id = payload.get("conversation_id")
+            yield event
 
         answer_text = "".join(answer_chunks).strip()
         if answer_text:
@@ -94,7 +99,7 @@ class ChatModuleImpl:
                 self._persist_chat_turn,
                 request=request,
                 answer=answer_text,
-                conversation_id=None,
+                conversation_id=conversation_id,
                 context=resolved_context,
             )
 

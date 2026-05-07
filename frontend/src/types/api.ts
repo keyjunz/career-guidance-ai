@@ -15,6 +15,7 @@ export type ApiChatPayload = {
   execution_id?: string
   trace_id?: string
   statuses?: string[]
+  sources?: Array<Record<string, unknown>>
   cached?: boolean
 }
 

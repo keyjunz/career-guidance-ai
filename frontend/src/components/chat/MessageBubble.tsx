@@ -1,4 +1,7 @@
 import type { ChatMessage } from '../../types/chat'
+import ReactMarkdown from 'react-markdown'
+import rehypeSanitize from 'rehype-sanitize'
+import remarkGfm from 'remark-gfm'
 
 function BotLoadingDots() {
   return (
@@ -32,6 +35,41 @@ function BotResponseIcon() {
   )
 }
 
+function SourceList({ sources }: { sources: Array<Record<string, unknown>> }) {
+  const normalized = sources
+    .map((source) => {
+      const title = String(source.title ?? '').trim()
+      const url = String(source.url ?? source.source ?? '').trim()
+      if (!url) return null
+      return { title: title || url, url }
+    })
+    .filter((item): item is { title: string; url: string } => item !== null)
+
+  if (normalized.length === 0) return null
+
+  return (
+    <div className="rounded-xl border border-outline-variant/20 bg-surface-container-low px-3 py-2.5">
+      <p className="mb-2 text-xs font-semibold tracking-wide text-on-surface/70 uppercase">
+        Sources
+      </p>
+      <ul className="space-y-1 text-xs">
+        {normalized.slice(0, 6).map((item) => (
+          <li key={`${item.url}-${item.title}`}>
+            <a
+              href={item.url}
+              target="_blank"
+              rel="noreferrer"
+              className="text-primary underline underline-offset-2 break-all"
+            >
+              {item.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
 export function MessageBubble({ message }: { message: ChatMessage }) {
   const isUser = message.role === 'user'
   const hasImages = !isUser && (message.imageUrls?.length ?? 0) > 0
@@ -41,6 +79,7 @@ export function MessageBubble({ message }: { message: ChatMessage }) {
   const statusLabel = isStatusStream
     ? message.text.replace('Dang xu ly:', '').trim()
     : ''
+  const sources = message.meta?.sources ?? []
 
   // ── User message ──────────────────────────────────────────────────
   if (isUser) {
@@ -80,8 +119,42 @@ export function MessageBubble({ message }: { message: ChatMessage }) {
       <BotResponseIcon />
       <div className="flex max-w-4xl flex-col gap-3">
         {!!message.text && (
-          <div className="text-sm leading-[1.75] text-on-surface whitespace-pre-wrap">
-            {message.text}
+          <div className="text-sm leading-[1.75] text-on-surface">
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              rehypePlugins={[rehypeSanitize]}
+              components={{
+                p: ({ children }) => <p className="mb-3 last:mb-0">{children}</p>,
+                ul: ({ children }) => (
+                  <ul className="mb-3 list-disc pl-5 last:mb-0">{children}</ul>
+                ),
+                ol: ({ children }) => (
+                  <ol className="mb-3 list-decimal pl-5 last:mb-0">{children}</ol>
+                ),
+                a: ({ href, children }) => (
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-primary underline underline-offset-2"
+                  >
+                    {children}
+                  </a>
+                ),
+                code: ({ children }) => (
+                  <code className="rounded bg-surface-container-high px-1.5 py-0.5 text-[13px]">
+                    {children}
+                  </code>
+                ),
+                pre: ({ children }) => (
+                  <pre className="mb-3 overflow-x-auto rounded-xl border border-outline-variant/20 bg-surface-container-high p-3 last:mb-0">
+                    {children}
+                  </pre>
+                ),
+              }}
+            >
+              {message.text}
+            </ReactMarkdown>
           </div>
         )}
         {hasImages && (
@@ -104,6 +177,7 @@ export function MessageBubble({ message }: { message: ChatMessage }) {
             ))}
           </div>
         )}
+        {sources.length > 0 && <SourceList sources={sources} />}
       </div>
     </div>
   )

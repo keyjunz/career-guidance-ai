@@ -13,6 +13,31 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
 
+def _is_insufficient_rag(payload: dict[str, Any]) -> bool:
+    if not payload.get("success"):
+        return True
+
+    answer = str(payload.get("answer") or "").strip().lower()
+    sources = list(payload.get("sources") or [])
+    snippets = list(payload.get("snippets") or [])
+    weak_signals = (
+        "khong tim thay",
+        "không tìm thấy",
+        "khong co thong tin",
+        "không có thông tin",
+        "context is insufficient",
+        "does not contain",
+    )
+
+    if not answer:
+        return True
+    if any(signal in answer for signal in weak_signals):
+        return True
+    if not sources and not snippets:
+        return True
+    return False
+
+
 def _safe_execute(
     state: AgentRuntimeState,
     tool_name: str,
@@ -95,7 +120,15 @@ def execute_tools(state: AgentRuntimeState) -> dict[str, dict[str, Any]]:
         return state.tool_results
 
     if state.plan == "rag_only":
-        state.tool_results = {"rag": _safe_execute(state, "rag", run_rag)}
+        rag_payload = _safe_execute(state, "rag", run_rag)
+        state.tool_results = {"rag": rag_payload}
+        if _is_insufficient_rag(rag_payload):
+            logger.info(
+                "[agent-tools] rag insufficient, fallback web execution_id=%s",
+                state.execution_id,
+            )
+            state.tool_results["web"] = _safe_execute(state, "web", run_web)
+            state.plan = "rag_web_parallel"
         logger.info(
             "[agent-tools] dispatch finished execution_id=%s tool_count=%d",
             state.execution_id,

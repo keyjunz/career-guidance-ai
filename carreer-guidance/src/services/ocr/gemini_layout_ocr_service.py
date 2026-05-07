@@ -9,6 +9,7 @@ import fitz
 from PIL import Image
 import google.generativeai as genai
 
+from src.config.settings_models import get_settings
 from src.prompts.ocr_prompt import GEMINI_LAYOUT_OCR_PROMPT
 
 logger = logging.getLogger(__name__)
@@ -32,15 +33,38 @@ class GeminiLayoutOCRService:
         timeout_s: int | None = None,
     ) -> None:
         self.execution_id = execution_id
-        self.model_name = model_name or os.getenv("GEMINI_MODEL_NAME", "").strip()
-        self.api_key = api_key or os.getenv("GEMINI_API_KEY", "").strip()
+        settings_api_key = ""
+        settings_model_name = ""
+        try:
+            settings = get_settings()
+            settings_api_key = str(settings.llm.gemini_api_key or "").strip()
+            settings_model_name = str(settings.llm.gemini_model_name or "").strip()
+        except Exception:
+            logger.warning(
+                "Gemini OCR cannot load settings for execution_id=%s. Falling back to environment variables.",
+                self.execution_id,
+            )
+
+        self.model_name = (
+            model_name
+            or settings_model_name
+            or os.getenv("GEMINI_MODEL_NAME", "").strip()
+        )
+        self.api_key = (
+            api_key
+            or settings_api_key
+            or os.getenv("GEMINI_OCR_API_KEY", "").strip()
+            or os.getenv("GEMINI_API_KEY", "").strip()
+        )
         self.pdf_zoom = pdf_zoom or float(os.getenv("PDF_RENDER_ZOOM", "1.5"))
         self.max_pages = max_pages or int(os.getenv("GEMINI_OCR_MAX_PAGES", "0"))
         self.timeout_s = timeout_s or int(os.getenv("GEMINI_OCR_TIMEOUT", "120"))
         self.image_storage_dir = self._resolve_image_dir(image_storage_dir)
 
         if not self.api_key:
-            raise ValueError("GEMINI_API_KEY is required for Gemini OCR")
+            raise ValueError(
+                "Gemini OCR API key is missing. Set GEMINI_OCR_API_KEY or GEMINI_API_KEY."
+            )
         if not self.model_name:
             raise ValueError("GEMINI_MODEL_NAME is required for Gemini OCR")
 

@@ -1,0 +1,843 @@
+{
+  "user_id": "1e2a1486-ac74-4741-af73-bcd429c5f953",
+  "created_at": "2026-05-06T17:18:00.624920+00:00",
+  "updated_at": "2026-05-06T18:13:02.915136+00:00",
+  "pending_by_execution": {},
+  "status_by_execution": {
+    "e62e2576-4046-46e0-b44b-d2301fd63330": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T17:18:00.749469+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T17:18:00.756531+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T17:18:00.759950+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-05-06T17:18:00.765786+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-05-06T17:18:00.771308+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-05-06T17:18:00.777037+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-05-06T17:18:33.755016+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-06T17:18:33.757027+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T17:18:33.762656+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T17:18:33.764656+00:00"
+      }
+    ],
+    "71ce0728-3d88-4ace-a18d-fafdff7c44b2": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T17:21:45.188764+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T17:21:45.193476+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T17:21:45.195477+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-05-06T17:21:45.198742+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-05-06T17:21:45.201399+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-05-06T17:21:45.205195+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-05-06T17:22:11.262833+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-06T17:22:11.271373+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T17:22:11.282557+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T17:22:11.284945+00:00"
+      }
+    ],
+    "8f4a4dc9-eccc-4ab2-8995-fcfa11350d10": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T17:32:46.116865+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T17:32:46.121867+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T17:32:46.123362+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T17:32:46.125380+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T17:32:46.131251+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T17:32:46.133554+00:00"
+      }
+    ],
+    "4ba4756f-9982-47cf-80f0-1629e3868c29": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T17:33:13.224014+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T17:33:13.230818+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T17:33:13.234338+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-05-06T17:33:13.240745+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-05-06T17:33:13.246385+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-05-06T17:33:13.252940+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-05-06T17:33:53.575607+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-06T17:33:53.578606+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T17:33:53.588958+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T17:33:53.589961+00:00"
+      }
+    ],
+    "66c1b72e-86bf-42d9-852f-86cfd5bcc699": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T17:51:38.692715+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T17:51:38.701993+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T17:51:38.707401+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T17:51:38.711855+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T17:51:38.722014+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T17:51:38.725154+00:00"
+      }
+    ],
+    "411a48fd-fd70-4b50-b650-f7b4f85f0d9a": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T17:57:56.773232+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T17:57:56.789902+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T17:57:56.801646+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-05-06T17:57:56.818221+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-05-06T17:57:56.828646+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-05-06T17:58:06.482265+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-05-06T17:58:22.467570+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-06T17:58:22.475768+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T17:58:22.488038+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T17:58:22.491364+00:00"
+      }
+    ],
+    "0cbdf7ea-bf05-4f2c-98b3-5fa699c0bb77": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T18:08:03.232989+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T18:08:03.242180+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T18:08:03.247620+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T18:08:03.251956+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T18:08:03.264062+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T18:08:03.269951+00:00"
+      }
+    ],
+    "619c68d3-831f-485e-a65f-14bf1fd4da6d": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T18:08:32.526888+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T18:08:32.537195+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T18:08:32.543351+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-05-06T18:08:32.548877+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-05-06T18:08:32.555218+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-05-06T18:08:44.844334+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-05-06T18:09:22.753423+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-06T18:09:22.757863+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T18:09:22.767443+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T18:09:22.769683+00:00"
+      }
+    ],
+    "92e6a91d-6d54-41cd-8bd6-b1ae880c4d7a": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T18:11:58.069332+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T18:11:58.076344+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T18:11:58.083946+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-05-06T18:11:58.091571+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-05-06T18:11:58.099925+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-05-06T18:12:20.387105+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-05-06T18:13:02.893797+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-06T18:13:02.899314+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T18:13:02.911375+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T18:13:02.915136+00:00"
+      }
+    ]
+  },
+  "qa_cache": {
+    "để nắm bắt được những cơ hội của cuộc cách mạng công nghệ thông tin đang diễn ra, lực lượng lao động chất lượng cao của việt nam cần được trang bị thêm những gì?": {
+      "question": "Để nắm bắt được những cơ hội của cuộc cách mạng công nghệ thông tin đang diễn ra, lực lượng lao động chất lượng cao của Việt Nam cần được trang bị thêm những gì?",
+      "answer": "Dựa trên ngữ cảnh được cung cấp, không có thông tin nào đề cập đến \"cuộc cách mạng công nghệ thông tin đang diễn ra\" hay \"lực lượng lao động chất lượng cao của Việt Nam\".\n\nNgữ cảnh chỉ chứa các thông tin rời rạc liên quan đến:\n*   **Cơ hội trong Kỹ thuật Phần mềm** (opportunities in Software Engineering).\n*   **Mức lương trong Kỹ thuật Phần mềm** (Salary in Software Engineering).\n*   Các khái niệm liên quan đến **SQL** như `AVG(salary)`, `INNER JOIN`, `FULL JOIN`, `Indexing`, `Triggers`.\n\nDo đó, không thể trả lời câu hỏi về việc lực lượng lao động Việt Nam cần trang bị thêm những gì để nắm bắt cơ hội công nghệ thông tin dựa trên ngữ cảnh này.\n\n**Thiếu thông tin về:**\n*   Các cơ hội cụ thể trong cuộc cách mạng công nghệ thông tin.\n*   Nhu cầu về kỹ năng và kiến thức cho lực lượng lao động Việt Nam.\n\nSources:\n- 01_Introduction_to_Software_Engineering_and_Career_Overview.pdf: C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\01_Introduction_to_Software_Engineering_and_Career_Overview.pdf\n- 30_Advanced_SQL_and_Database_Optimization.pdf: C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\30_Advanced_SQL_and_Database_Optimization.pdf",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "s3\n2 031\nEERSE\neropportunitiesinSoftwareEngineerin\nSalaryinSoftwareEngineeringtoday\nfwae\n组\ny...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\01_Introduction_to_Software_Engineering_and_Career_Overview.pdf",
+          "title": "01_Introduction_to_Software_Engineering_and_Career_Overview.pdf",
+          "rerank_score": -10.195261001586914,
+          "image_urls": []
+        },
+        {
+          "rank": 2,
+          "text": "SELECT AVG(salary）FROMemployees\n)；\nNASS\n--INNERJOIN\nFULLJOIN\nSQL Joins CheatSheet\n5.Indexing\na\nRETUR...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\30_Advanced_SQL_and_Database_Optimization.pdf",
+          "title": "30_Advanced_SQL_and_Database_Optimization.pdf",
+          "rerank_score": -11.346768379211426,
+          "image_urls": []
+        }
+      ],
+      "image_urls": [],
+      "conversation_id": "39fccc15-4b7d-4c51-a447-77a251044bb9",
+      "updated_at": "2026-05-06T17:18:33.760094+00:00"
+    },
+    "tại sao \"đam mê công nghệ\" (passion for technology) lại được xem là phẩm chất quan trọng đối với sinh viên ngành kỹ thuật phần mềm?": {
+      "question": "Tại sao \"Đam mê công nghệ\" (Passion for technology) lại được xem là phẩm chất quan trọng đối với sinh viên ngành Kỹ thuật phần mềm?",
+      "answer": "Dựa trên ngữ cảnh được cung cấp, không có thông tin nào giải thích tại sao \"Đam mê công nghệ\" lại được xem là phẩm chất quan trọng đối với sinh viên ngành Kỹ thuật phần mềm.\n\nNgữ cảnh chỉ đề cập đến các chủ đề như:\n*   Cơ hội nghề nghiệp trong Kỹ thuật phần mềm.\n*   Mức lương trong Kỹ thuật phần mềm.\n*   Các khái niệm liên quan đến SQL (ví dụ: `AVG(salary)`, `INNER JOIN`, `FULL JOIN`, `Indexing`, `Triggers`).\n\nĐể trả lời câu hỏi của bạn, cần có thêm thông tin giải thích mối liên hệ giữa đam mê công nghệ và ngành Kỹ thuật phần mềm.\n\nSources:\n- 01_Introduction_to_Software_Engineering_and_Career_Overview.pdf: C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\01_Introduction_to_Software_Engineering_and_Career_Overview.pdf\n- 30_Advanced_SQL_and_Database_Optimization.pdf: C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\30_Advanced_SQL_and_Database_Optimization.pdf",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "s3\n2 031\nEERSE\neropportunitiesinSoftwareEngineerin\nSalaryinSoftwareEngineeringtoday\nfwae\n组\ny...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\01_Introduction_to_Software_Engineering_and_Career_Overview.pdf",
+          "title": "01_Introduction_to_Software_Engineering_and_Career_Overview.pdf",
+          "rerank_score": -10.146306991577148,
+          "image_urls": []
+        },
+        {
+          "rank": 2,
+          "text": "SELECT AVG(salary）FROMemployees\n)；\nNASS\n--INNERJOIN\nFULLJOIN\nSQL Joins CheatSheet\n5.Indexing\na\nRETUR...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\30_Advanced_SQL_and_Database_Optimization.pdf",
+          "title": "30_Advanced_SQL_and_Database_Optimization.pdf",
+          "rerank_score": -11.35318660736084,
+          "image_urls": []
+        }
+      ],
+      "image_urls": [],
+      "conversation_id": "e62d619b-6dcd-45fe-9108-9ea8b2b83a6e",
+      "updated_at": "2026-05-06T17:51:38.718663+00:00"
+    },
+    "tài liệu liệt kê những vị trí công việc tiêu biểu (typical job positions) nào mà một kỹ sư phần mềm có thể đảm nhận?": {
+      "question": "Tài liệu liệt kê những vị trí công việc tiêu biểu (Typical job positions) nào mà một kỹ sư phần mềm có thể đảm nhận?",
+      "answer": "Dựa trên ngữ cảnh được cung cấp, tài liệu không liệt kê cụ thể những vị trí công việc tiêu biểu mà một kỹ sư phần mềm có thể đảm nhận.\n\nNgữ cảnh chỉ đề cập đến:\n*   \"opportunities in Software Engineering\" (cơ hội trong Kỹ thuật Phần mềm)\n*   \"Salary in Software Engineering today\" (lương trong Kỹ thuật Phần mềm ngày nay)\n*   Các khái niệm liên quan đến cơ sở dữ liệu như `AVG(salary)`, `SQL Joins`, `Indexing`, `Triggers`.\n\nĐể trả lời câu hỏi này, cần có thông tin chi tiết hơn về các vị trí công việc cụ thể trong lĩnh vực Kỹ thuật Phần mềm.\n\nSources:\n- 01_Introduction_to_Software_Engineering_and_Career_Overview.pdf: C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\01_Introduction_to_Software_Engineering_and_Career_Overview.pdf\n- 30_Advanced_SQL_and_Database_Optimization.pdf: C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\30_Advanced_SQL_and_Database_Optimization.pdf",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "s3\n2 031\nEERSE\neropportunitiesinSoftwareEngineerin\nSalaryinSoftwareEngineeringtoday\nfwae\n组\ny...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\01_Introduction_to_Software_Engineering_and_Career_Overview.pdf",
+          "title": "01_Introduction_to_Software_Engineering_and_Career_Overview.pdf",
+          "rerank_score": -10.657179832458496,
+          "image_urls": []
+        },
+        {
+          "rank": 2,
+          "text": "SELECT AVG(salary）FROMemployees\n)；\nNASS\n--INNERJOIN\nFULLJOIN\nSQL Joins CheatSheet\n5.Indexing\na\nRETUR...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\30_Advanced_SQL_and_Database_Optimization.pdf",
+          "title": "30_Advanced_SQL_and_Database_Optimization.pdf",
+          "rerank_score": -11.327568054199219,
+          "image_urls": []
+        }
+      ],
+      "image_urls": [],
+      "conversation_id": "603d3ed2-cf0d-4ef3-97f3-e33eb8593f93",
+      "updated_at": "2026-05-06T17:33:53.582116+00:00"
+    },
+    "what is the definition of \"soft skills\"?": {
+      "question": "what is the definition of \"soft skills\"?",
+      "answer": "The provided context does not contain a definition for \"soft skills.\"\n\nSources:\n- 19_DevOps_and_CI_CD_Pipeline.pdf: C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\19_DevOps_and_CI_CD_Pipeline.pdf\n- 01_Introduction_to_Software_Engineering_and_Career_Overview.pdf: C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\01_Introduction_to_Software_Engineering_and_Career_Overview.pdf\n- 30_Advanced_SQL_and_Database_Optimization.pdf: C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\30_Advanced_SQL_and_Database_Optimization.pdf",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Jenkins\nE\nENTRYPOINT[\"java\",\"-jar\",\"app.jar\"]\n国\nJDK\nThePipeline\n福\n工\nvopsexamplesSfenvBULD NU\"Mskr ru...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\19_DevOps_and_CI_CD_Pipeline.pdf",
+          "title": "19_DevOps_and_CI_CD_Pipeline.pdf",
+          "rerank_score": -10.938674926757812,
+          "image_urls": []
+        },
+        {
+          "rank": 2,
+          "text": "s3\n2 031\nEERSE\neropportunitiesinSoftwareEngineerin\nSalaryinSoftwareEngineeringtoday\nfwae\n组\ny...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\01_Introduction_to_Software_Engineering_and_Career_Overview.pdf",
+          "title": "01_Introduction_to_Software_Engineering_and_Career_Overview.pdf",
+          "rerank_score": -11.051196098327637,
+          "image_urls": []
+        },
+        {
+          "rank": 3,
+          "text": "SELECT AVG(salary）FROMemployees\n)；\nNASS\n--INNERJOIN\nFULLJOIN\nSQL Joins CheatSheet\n5.Indexing\na\nRETUR...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\30_Advanced_SQL_and_Database_Optimization.pdf",
+          "title": "30_Advanced_SQL_and_Database_Optimization.pdf",
+          "rerank_score": -11.372072219848633,
+          "image_urls": []
+        }
+      ],
+      "image_urls": [],
+      "conversation_id": "ea93da4f-c14e-4413-adfc-400ffd0c7470",
+      "updated_at": "2026-05-06T18:08:03.258103+00:00"
+    },
+    ": why does the author believe soft skills are just as important as coding skills for a programmer?": {
+      "question": ": Why does the author believe soft skills are just as important as coding skills for a programmer?",
+      "answer": "The provided context does not contain information about the author's beliefs on the importance of soft skills versus coding skills for a programmer. Therefore, I cannot answer your question.\n\nWeb summary:\nThe author believes that developing soft skills is just as important as technical skills for a fulfilling and prosperous career in technology. Enhancing soft skills such as communication, teamwork, and conflict resolution is essential for:\n\n*   Differentiating oneself in the job market.\n*   Successfully applying technical skills.\n*   Improving overall quality of life.\n\nWeb findings:\n- [Pluralsight](https://www.pluralsight.com/) [Sign in](https://app.pluralsight.com/id) - [Explore](https://www.pluralsight.com/resources/blog) - [Software dev](https://www.pluralsight.com/resources/blog/software-development) - [Cloud](https://www.pluralsight.com/resources/blog/cloud) - [Tech Operations](https://www.pluralsight.com/resources/blog/tech-operations) - [AI & Data](https://www.pluralsigh...\n- Agree & Join LinkedIn By clicking Continue to join or sign in, you agree to LinkedIn’s [User Agreement](https://www.linkedin.com/legal/user-agreement?trk=linkedin-tc_auth-button_user-agreement), [Privacy Policy](https://www.linkedin.com/legal/privacy-policy?trk=linkedin-tc_auth-button_privacy-policy), and [Cookie Policy](https://www.linkedin.com/legal/cookie-policy?trk=linkedin-tc_auth-button_cook...\n- [Sitemap](https://medium.com/sitemap/sitemap.xml) [Open in app](https://play.google.com/store/apps/details?id=com.medium.reader&referrer=utm_source%3DmobileNavBar&source=post_page---top_nav_layout_nav-----------------------------------------) Sign up [Sign in](https://medium.com/m/signin?operation=login&redirect=https%3A%2F%2Fmedium.com%2F%40sanchitvarshney%2Fthe-importance-of-soft-skills-for-deve...",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "s3\n2 031\nEERSE\neropportunitiesinSoftwareEngineerin\nSalaryinSoftwareEngineeringtoday\nfwae\n组\ny...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\01_Introduction_to_Software_Engineering_and_Career_Overview.pdf",
+          "title": "01_Introduction_to_Software_Engineering_and_Career_Overview.pdf",
+          "rerank_score": -9.856030464172363,
+          "image_urls": []
+        },
+        {
+          "rank": 2,
+          "text": "Jenkins\nE\nENTRYPOINT[\"java\",\"-jar\",\"app.jar\"]\n国\nJDK\nThePipeline\n福\n工\nvopsexamplesSfenvBULD NU\"Mskr ru...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\19_DevOps_and_CI_CD_Pipeline.pdf",
+          "title": "19_DevOps_and_CI_CD_Pipeline.pdf",
+          "rerank_score": -10.65375804901123,
+          "image_urls": []
+        },
+        {
+          "rank": 3,
+          "text": "SELECT AVG(salary）FROMemployees\n)；\nNASS\n--INNERJOIN\nFULLJOIN\nSQL Joins CheatSheet\n5.Indexing\na\nRETUR...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\30_Advanced_SQL_and_Database_Optimization.pdf",
+          "title": "30_Advanced_SQL_and_Database_Optimization.pdf",
+          "rerank_score": -11.218276023864746,
+          "image_urls": []
+        },
+        {
+          "title": "Why soft skills matter more than coding in tech careers | Pluralsight",
+          "url": "https://www.pluralsight.com/resources/blog/business-and-leadership/tech-careers-soft-skills-matter",
+          "snippet": "[Pluralsight](https://www.pluralsight.com/) [Sign in](https://app.pluralsight.com/id) - [Explore](https://www.pluralsight.com/resources/blog) - [Software dev](https://www.pluralsight.com/resources/blog/software-development) - [Cloud](https://www.pluralsight.com/resources/blog/cloud) - [Tech Operations](https://www.pluralsight.com/resources/blog/tech-operations) - [AI & Data](https://www.pluralsigh...",
+          "score": 0.0
+        },
+        {
+          "title": "Beyond Code: Why Soft Skills Matter for Software Engineers - LinkedIn",
+          "url": "https://www.linkedin.com/pulse/beyond-code-why-soft-skills-matter-software-engineers-chris-andrade-va5nf",
+          "snippet": "Agree & Join LinkedIn By clicking Continue to join or sign in, you agree to LinkedIn’s [User Agreement](https://www.linkedin.com/legal/user-agreement?trk=linkedin-tc_auth-button_user-agreement), [Privacy Policy](https://www.linkedin.com/legal/privacy-policy?trk=linkedin-tc_auth-button_privacy-policy), and [Cookie Policy](https://www.linkedin.com/legal/cookie-policy?trk=linkedin-tc_auth-button_cook...",
+          "score": 0.0
+        },
+        {
+          "title": "The Importance of Soft Skills for Developers - Medium",
+          "url": "https://medium.com/render-beyond/the-importance-of-soft-skills-for-developers-87d531c5cbef",
+          "snippet": "[Sitemap](https://medium.com/sitemap/sitemap.xml) [Open in app](https://play.google.com/store/apps/details?id=com.medium.reader&referrer=utm_source%3DmobileNavBar&source=post_page---top_nav_layout_nav-----------------------------------------) Sign up [Sign in](https://medium.com/m/signin?operation=login&redirect=https%3A%2F%2Fmedium.com%2F%40sanchitvarshney%2Fthe-importance-of-soft-skills-for-deve...",
+          "score": 0.0
+        },
+        {
+          "title": "Why does almost everyone keep saying soft skills are more ... - Quora",
+          "url": "https://www.quora.com/Why-does-almost-everyone-keep-saying-soft-skills-are-more-important-than-coding-skills",
+          "snippet": "Something went wrong. Wait a moment and try again. Try again Skip to content Skip to search [Go to Quora Home](https://www.quora.com/) Sign In [Employment](https://www.quora.com/topic/Employment) [Career Development Plans](https://www.quora.com/topic/Career-Development-Plans) [Coding Skills](https://www.quora.com/topic/Coding-Skills) [Soft Skills](https://www.quora.com/topic/Soft-Skills) [Job Mark...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://www.pluralsight.com/content/dam/ps/images/resource-center/blog/header-hero-images/GreatIdea.jpg"
+      ],
+      "conversation_id": "cce3d649-1f3b-4aea-ad2a-daa5b3d7c168",
+      "updated_at": "2026-05-06T18:09:22.763848+00:00"
+    },
+    "why do programmers often feel like a personal attack when their code is criticized?": {
+      "question": "Why do programmers often feel like a personal attack when their code is criticized?",
+      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- Web error: The read operation timed out",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "s3\n2 031\nEERSE\neropportunitiesinSoftwareEngineerin\nSalaryinSoftwareEngineeringtoday\nfwae\n组\ny...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\01_Introduction_to_Software_Engineering_and_Career_Overview.pdf",
+          "title": "01_Introduction_to_Software_Engineering_and_Career_Overview.pdf",
+          "rerank_score": -10.750717163085938,
+          "image_urls": []
+        },
+        {
+          "rank": 2,
+          "text": "Jenkins\nE\nENTRYPOINT[\"java\",\"-jar\",\"app.jar\"]\n国\nJDK\nThePipeline\n福\n工\nvopsexamplesSfenvBULD NU\"Mskr ru...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\19_DevOps_and_CI_CD_Pipeline.pdf",
+          "title": "19_DevOps_and_CI_CD_Pipeline.pdf",
+          "rerank_score": -11.149309158325195,
+          "image_urls": []
+        },
+        {
+          "rank": 3,
+          "text": "SELECT AVG(salary）FROMemployees\n)；\nNASS\n--INNERJOIN\nFULLJOIN\nSQL Joins CheatSheet\n5.Indexing\na\nRETUR...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\30_Advanced_SQL_and_Database_Optimization.pdf",
+          "title": "30_Advanced_SQL_and_Database_Optimization.pdf",
+          "rerank_score": -11.35912036895752,
+          "image_urls": []
+        }
+      ],
+      "image_urls": [],
+      "conversation_id": "2e3d6b88-575a-4098-92ca-e7af08d80f6e",
+      "updated_at": "2026-05-06T18:13:02.908093+00:00"
+    }
+  },
+  "history": [
+    {
+      "execution_id": "e62e2576-4046-46e0-b44b-d2301fd63330",
+      "conversation_id": "39fccc15-4b7d-4c51-a447-77a251044bb9",
+      "question": "Để nắm bắt được những cơ hội của cuộc cách mạng công nghệ thông tin đang diễn ra, lực lượng lao động chất lượng cao của Việt Nam cần được trang bị thêm những gì?",
+      "answer": "Dựa trên ngữ cảnh được cung cấp, không có thông tin nào đề cập đến \"cuộc cách mạng công nghệ thông tin đang diễn ra\" hay \"lực lượng lao động chất lượng cao của Việt Nam\".\n\nNgữ cảnh chỉ chứa các thông tin rời rạc liên quan đến:\n*   **Cơ hội trong Kỹ thuật Phần mềm** (opportunities in Software Engineering).\n*   **Mức lương trong Kỹ thuật Phần mềm** (Salary in Software Engineering).\n*   Các khái niệm liên quan đến **SQL** như `AVG(salary)`, `INNER JOIN`, `FULL JOIN`, `Indexing`, `Triggers`.\n\nDo đó, không thể trả lời câu hỏi về việc lực lượng lao động Việt Nam cần trang bị thêm những gì để nắm bắt cơ hội công nghệ thông tin dựa trên ngữ cảnh này.\n\n**Thiếu thông tin về:**\n*   Các cơ hội cụ thể trong cuộc cách mạng công nghệ thông tin.\n*   Nhu cầu về kỹ năng và kiến thức cho lực lượng lao động Việt Nam.\n\nSources:\n- 01_Introduction_to_Software_Engineering_and_Career_Overview.pdf: C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\01_Introduction_to_Software_Engineering_and_Career_Overview.pdf\n- 30_Advanced_SQL_and_Database_Optimization.pdf: C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\30_Advanced_SQL_and_Database_Optimization.pdf",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "s3\n2 031\nEERSE\neropportunitiesinSoftwareEngineerin\nSalaryinSoftwareEngineeringtoday\nfwae\n组\ny...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\01_Introduction_to_Software_Engineering_and_Career_Overview.pdf",
+          "title": "01_Introduction_to_Software_Engineering_and_Career_Overview.pdf",
+          "rerank_score": -10.195261001586914,
+          "image_urls": []
+        },
+        {
+          "rank": 2,
+          "text": "SELECT AVG(salary）FROMemployees\n)；\nNASS\n--INNERJOIN\nFULLJOIN\nSQL Joins CheatSheet\n5.Indexing\na\nRETUR...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\30_Advanced_SQL_and_Database_Optimization.pdf",
+          "title": "30_Advanced_SQL_and_Database_Optimization.pdf",
+          "rerank_score": -11.346768379211426,
+          "image_urls": []
+        }
+      ],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-06T17:18:33.760094+00:00"
+    },
+    {
+      "execution_id": "71ce0728-3d88-4ace-a18d-fafdff7c44b2",
+      "conversation_id": "c7dcdb44-19c6-464d-b6bd-45b461c3480e",
+      "question": "Tại sao \"Đam mê công nghệ\" (Passion for technology) lại được xem là phẩm chất quan trọng đối với sinh viên ngành Kỹ thuật phần mềm?",
+      "answer": "Dựa trên ngữ cảnh được cung cấp, không có thông tin nào giải thích tại sao \"Đam mê công nghệ\" lại được xem là phẩm chất quan trọng đối với sinh viên ngành Kỹ thuật phần mềm.\n\nNgữ cảnh chỉ đề cập đến các chủ đề như:\n*   Cơ hội nghề nghiệp trong Kỹ thuật phần mềm.\n*   Mức lương trong Kỹ thuật phần mềm.\n*   Các khái niệm liên quan đến SQL (ví dụ: `AVG(salary)`, `INNER JOIN`, `FULL JOIN`, `Indexing`, `Triggers`).\n\nĐể trả lời câu hỏi của bạn, cần có thêm thông tin giải thích mối liên hệ giữa đam mê công nghệ và ngành Kỹ thuật phần mềm.\n\nSources:\n- 01_Introduction_to_Software_Engineering_and_Career_Overview.pdf: C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\01_Introduction_to_Software_Engineering_and_Career_Overview.pdf\n- 30_Advanced_SQL_and_Database_Optimization.pdf: C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\30_Advanced_SQL_and_Database_Optimization.pdf",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "s3\n2 031\nEERSE\neropportunitiesinSoftwareEngineerin\nSalaryinSoftwareEngineeringtoday\nfwae\n组\ny...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\01_Introduction_to_Software_Engineering_and_Career_Overview.pdf",
+          "title": "01_Introduction_to_Software_Engineering_and_Career_Overview.pdf",
+          "rerank_score": -10.146306991577148,
+          "image_urls": []
+        },
+        {
+          "rank": 2,
+          "text": "SELECT AVG(salary）FROMemployees\n)；\nNASS\n--INNERJOIN\nFULLJOIN\nSQL Joins CheatSheet\n5.Indexing\na\nRETUR...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\30_Advanced_SQL_and_Database_Optimization.pdf",
+          "title": "30_Advanced_SQL_and_Database_Optimization.pdf",
+          "rerank_score": -11.35318660736084,
+          "image_urls": []
+        }
+      ],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-06T17:22:11.281051+00:00"
+    },
+    {
+      "execution_id": "8f4a4dc9-eccc-4ab2-8995-fcfa11350d10",
+      "conversation_id": "be1d27c7-7a7c-4642-955c-9e61e228d1dd",
+      "question": "Tại sao \"Đam mê công nghệ\" (Passion for technology) lại được xem là phẩm chất quan trọng đối với sinh viên ngành Kỹ thuật phần mềm?",
+      "answer": "Dựa trên ngữ cảnh được cung cấp, không có thông tin nào giải thích tại sao \"Đam mê công nghệ\" lại được xem là phẩm chất quan trọng đối với sinh viên ngành Kỹ thuật phần mềm.\n\nNgữ cảnh chỉ đề cập đến các chủ đề như:\n*   Cơ hội nghề nghiệp trong Kỹ thuật phần mềm.\n*   Mức lương trong Kỹ thuật phần mềm.\n*   Các khái niệm liên quan đến SQL (ví dụ: `AVG(salary)`, `INNER JOIN`, `FULL JOIN`, `Indexing`, `Triggers`).\n\nĐể trả lời câu hỏi của bạn, cần có thêm thông tin giải thích mối liên hệ giữa đam mê công nghệ và ngành Kỹ thuật phần mềm.\n\nSources:\n- 01_Introduction_to_Software_Engineering_and_Career_Overview.pdf: C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\01_Introduction_to_Software_Engineering_and_Career_Overview.pdf\n- 30_Advanced_SQL_and_Database_Optimization.pdf: C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\30_Advanced_SQL_and_Database_Optimization.pdf",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "s3\n2 031\nEERSE\neropportunitiesinSoftwareEngineerin\nSalaryinSoftwareEngineeringtoday\nfwae\n组\ny...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\01_Introduction_to_Software_Engineering_and_Career_Overview.pdf",
+          "title": "01_Introduction_to_Software_Engineering_and_Career_Overview.pdf",
+          "rerank_score": -10.146306991577148,
+          "image_urls": []
+        },
+        {
+          "rank": 2,
+          "text": "SELECT AVG(salary）FROMemployees\n)；\nNASS\n--INNERJOIN\nFULLJOIN\nSQL Joins CheatSheet\n5.Indexing\na\nRETUR...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\30_Advanced_SQL_and_Database_Optimization.pdf",
+          "title": "30_Advanced_SQL_and_Database_Optimization.pdf",
+          "rerank_score": -11.35318660736084,
+          "image_urls": []
+        }
+      ],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T17:32:46.128840+00:00"
+    },
+    {
+      "execution_id": "4ba4756f-9982-47cf-80f0-1629e3868c29",
+      "conversation_id": "603d3ed2-cf0d-4ef3-97f3-e33eb8593f93",
+      "question": "Tài liệu liệt kê những vị trí công việc tiêu biểu (Typical job positions) nào mà một kỹ sư phần mềm có thể đảm nhận?",
+      "answer": "Dựa trên ngữ cảnh được cung cấp, tài liệu không liệt kê cụ thể những vị trí công việc tiêu biểu mà một kỹ sư phần mềm có thể đảm nhận.\n\nNgữ cảnh chỉ đề cập đến:\n*   \"opportunities in Software Engineering\" (cơ hội trong Kỹ thuật Phần mềm)\n*   \"Salary in Software Engineering today\" (lương trong Kỹ thuật Phần mềm ngày nay)\n*   Các khái niệm liên quan đến cơ sở dữ liệu như `AVG(salary)`, `SQL Joins`, `Indexing`, `Triggers`.\n\nĐể trả lời câu hỏi này, cần có thông tin chi tiết hơn về các vị trí công việc cụ thể trong lĩnh vực Kỹ thuật Phần mềm.\n\nSources:\n- 01_Introduction_to_Software_Engineering_and_Career_Overview.pdf: C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\01_Introduction_to_Software_Engineering_and_Career_Overview.pdf\n- 30_Advanced_SQL_and_Database_Optimization.pdf: C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\30_Advanced_SQL_and_Database_Optimization.pdf",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "s3\n2 031\nEERSE\neropportunitiesinSoftwareEngineerin\nSalaryinSoftwareEngineeringtoday\nfwae\n组\ny...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\01_Introduction_to_Software_Engineering_and_Career_Overview.pdf",
+          "title": "01_Introduction_to_Software_Engineering_and_Career_Overview.pdf",
+          "rerank_score": -10.657179832458496,
+          "image_urls": []
+        },
+        {
+          "rank": 2,
+          "text": "SELECT AVG(salary）FROMemployees\n)；\nNASS\n--INNERJOIN\nFULLJOIN\nSQL Joins CheatSheet\n5.Indexing\na\nRETUR...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\30_Advanced_SQL_and_Database_Optimization.pdf",
+          "title": "30_Advanced_SQL_and_Database_Optimization.pdf",
+          "rerank_score": -11.327568054199219,
+          "image_urls": []
+        }
+      ],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-06T17:33:53.582116+00:00"
+    },
+    {
+      "execution_id": "66c1b72e-86bf-42d9-852f-86cfd5bcc699",
+      "conversation_id": "e62d619b-6dcd-45fe-9108-9ea8b2b83a6e",
+      "question": "Tại sao \"Đam mê công nghệ\" (Passion for technology) lại được xem là phẩm chất quan trọng đối với sinh viên ngành Kỹ thuật phần mềm?",
+      "answer": "Dựa trên ngữ cảnh được cung cấp, không có thông tin nào giải thích tại sao \"Đam mê công nghệ\" lại được xem là phẩm chất quan trọng đối với sinh viên ngành Kỹ thuật phần mềm.\n\nNgữ cảnh chỉ đề cập đến các chủ đề như:\n*   Cơ hội nghề nghiệp trong Kỹ thuật phần mềm.\n*   Mức lương trong Kỹ thuật phần mềm.\n*   Các khái niệm liên quan đến SQL (ví dụ: `AVG(salary)`, `INNER JOIN`, `FULL JOIN`, `Indexing`, `Triggers`).\n\nĐể trả lời câu hỏi của bạn, cần có thêm thông tin giải thích mối liên hệ giữa đam mê công nghệ và ngành Kỹ thuật phần mềm.\n\nSources:\n- 01_Introduction_to_Software_Engineering_and_Career_Overview.pdf: C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\01_Introduction_to_Software_Engineering_and_Career_Overview.pdf\n- 30_Advanced_SQL_and_Database_Optimization.pdf: C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\30_Advanced_SQL_and_Database_Optimization.pdf",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "s3\n2 031\nEERSE\neropportunitiesinSoftwareEngineerin\nSalaryinSoftwareEngineeringtoday\nfwae\n组\ny...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\01_Introduction_to_Software_Engineering_and_Career_Overview.pdf",
+          "title": "01_Introduction_to_Software_Engineering_and_Career_Overview.pdf",
+          "rerank_score": -10.146306991577148,
+          "image_urls": []
+        },
+        {
+          "rank": 2,
+          "text": "SELECT AVG(salary）FROMemployees\n)；\nNASS\n--INNERJOIN\nFULLJOIN\nSQL Joins CheatSheet\n5.Indexing\na\nRETUR...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\30_Advanced_SQL_and_Database_Optimization.pdf",
+          "title": "30_Advanced_SQL_and_Database_Optimization.pdf",
+          "rerank_score": -11.35318660736084,
+          "image_urls": []
+        }
+      ],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T17:51:38.718663+00:00"
+    },
+    {
+      "execution_id": "411a48fd-fd70-4b50-b650-f7b4f85f0d9a",
+      "conversation_id": "749b7176-cc79-447d-8cf0-557a56af1086",
+      "question": "what is the definition of \"soft skills\"?",
+      "answer": "The provided context does not contain a definition for \"soft skills.\"\n\nSources:\n- 19_DevOps_and_CI_CD_Pipeline.pdf: C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\19_DevOps_and_CI_CD_Pipeline.pdf\n- 01_Introduction_to_Software_Engineering_and_Career_Overview.pdf: C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\01_Introduction_to_Software_Engineering_and_Career_Overview.pdf\n- 30_Advanced_SQL_and_Database_Optimization.pdf: C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\30_Advanced_SQL_and_Database_Optimization.pdf",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Jenkins\nE\nENTRYPOINT[\"java\",\"-jar\",\"app.jar\"]\n国\nJDK\nThePipeline\n福\n工\nvopsexamplesSfenvBULD NU\"Mskr ru...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\19_DevOps_and_CI_CD_Pipeline.pdf",
+          "title": "19_DevOps_and_CI_CD_Pipeline.pdf",
+          "rerank_score": -10.938674926757812,
+          "image_urls": []
+        },
+        {
+          "rank": 2,
+          "text": "s3\n2 031\nEERSE\neropportunitiesinSoftwareEngineerin\nSalaryinSoftwareEngineeringtoday\nfwae\n组\ny...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\01_Introduction_to_Software_Engineering_and_Career_Overview.pdf",
+          "title": "01_Introduction_to_Software_Engineering_and_Career_Overview.pdf",
+          "rerank_score": -11.051196098327637,
+          "image_urls": []
+        },
+        {
+          "rank": 3,
+          "text": "SELECT AVG(salary）FROMemployees\n)；\nNASS\n--INNERJOIN\nFULLJOIN\nSQL Joins CheatSheet\n5.Indexing\na\nRETUR...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\30_Advanced_SQL_and_Database_Optimization.pdf",
+          "title": "30_Advanced_SQL_and_Database_Optimization.pdf",
+          "rerank_score": -11.372072219848633,
+          "image_urls": []
+        }
+      ],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-06T17:58:22.484029+00:00"
+    },
+    {
+      "execution_id": "0cbdf7ea-bf05-4f2c-98b3-5fa699c0bb77",
+      "conversation_id": "ea93da4f-c14e-4413-adfc-400ffd0c7470",
+      "question": "what is the definition of \"soft skills\"?",
+      "answer": "The provided context does not contain a definition for \"soft skills.\"\n\nSources:\n- 19_DevOps_and_CI_CD_Pipeline.pdf: C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\19_DevOps_and_CI_CD_Pipeline.pdf\n- 01_Introduction_to_Software_Engineering_and_Career_Overview.pdf: C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\01_Introduction_to_Software_Engineering_and_Career_Overview.pdf\n- 30_Advanced_SQL_and_Database_Optimization.pdf: C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\30_Advanced_SQL_and_Database_Optimization.pdf",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Jenkins\nE\nENTRYPOINT[\"java\",\"-jar\",\"app.jar\"]\n国\nJDK\nThePipeline\n福\n工\nvopsexamplesSfenvBULD NU\"Mskr ru...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\19_DevOps_and_CI_CD_Pipeline.pdf",
+          "title": "19_DevOps_and_CI_CD_Pipeline.pdf",
+          "rerank_score": -10.938674926757812,
+          "image_urls": []
+        },
+        {
+          "rank": 2,
+          "text": "s3\n2 031\nEERSE\neropportunitiesinSoftwareEngineerin\nSalaryinSoftwareEngineeringtoday\nfwae\n组\ny...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\01_Introduction_to_Software_Engineering_and_Career_Overview.pdf",
+          "title": "01_Introduction_to_Software_Engineering_and_Career_Overview.pdf",
+          "rerank_score": -11.051196098327637,
+          "image_urls": []
+        },
+        {
+          "rank": 3,
+          "text": "SELECT AVG(salary）FROMemployees\n)；\nNASS\n--INNERJOIN\nFULLJOIN\nSQL Joins CheatSheet\n5.Indexing\na\nRETUR...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\30_Advanced_SQL_and_Database_Optimization.pdf",
+          "title": "30_Advanced_SQL_and_Database_Optimization.pdf",
+          "rerank_score": -11.372072219848633,
+          "image_urls": []
+        }
+      ],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T18:08:03.258103+00:00"
+    },
+    {
+      "execution_id": "619c68d3-831f-485e-a65f-14bf1fd4da6d",
+      "conversation_id": "cce3d649-1f3b-4aea-ad2a-daa5b3d7c168",
+      "question": ": Why does the author believe soft skills are just as important as coding skills for a programmer?",
+      "answer": "The provided context does not contain information about the author's beliefs on the importance of soft skills versus coding skills for a programmer. Therefore, I cannot answer your question.\n\nWeb summary:\nThe author believes that developing soft skills is just as important as technical skills for a fulfilling and prosperous career in technology. Enhancing soft skills such as communication, teamwork, and conflict resolution is essential for:\n\n*   Differentiating oneself in the job market.\n*   Successfully applying technical skills.\n*   Improving overall quality of life.\n\nWeb findings:\n- [Pluralsight](https://www.pluralsight.com/) [Sign in](https://app.pluralsight.com/id) - [Explore](https://www.pluralsight.com/resources/blog) - [Software dev](https://www.pluralsight.com/resources/blog/software-development) - [Cloud](https://www.pluralsight.com/resources/blog/cloud) - [Tech Operations](https://www.pluralsight.com/resources/blog/tech-operations) - [AI & Data](https://www.pluralsigh...\n- Agree & Join LinkedIn By clicking Continue to join or sign in, you agree to LinkedIn’s [User Agreement](https://www.linkedin.com/legal/user-agreement?trk=linkedin-tc_auth-button_user-agreement), [Privacy Policy](https://www.linkedin.com/legal/privacy-policy?trk=linkedin-tc_auth-button_privacy-policy), and [Cookie Policy](https://www.linkedin.com/legal/cookie-policy?trk=linkedin-tc_auth-button_cook...\n- [Sitemap](https://medium.com/sitemap/sitemap.xml) [Open in app](https://play.google.com/store/apps/details?id=com.medium.reader&referrer=utm_source%3DmobileNavBar&source=post_page---top_nav_layout_nav-----------------------------------------) Sign up [Sign in](https://medium.com/m/signin?operation=login&redirect=https%3A%2F%2Fmedium.com%2F%40sanchitvarshney%2Fthe-importance-of-soft-skills-for-deve...",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "s3\n2 031\nEERSE\neropportunitiesinSoftwareEngineerin\nSalaryinSoftwareEngineeringtoday\nfwae\n组\ny...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\01_Introduction_to_Software_Engineering_and_Career_Overview.pdf",
+          "title": "01_Introduction_to_Software_Engineering_and_Career_Overview.pdf",
+          "rerank_score": -9.856030464172363,
+          "image_urls": []
+        },
+        {
+          "rank": 2,
+          "text": "Jenkins\nE\nENTRYPOINT[\"java\",\"-jar\",\"app.jar\"]\n国\nJDK\nThePipeline\n福\n工\nvopsexamplesSfenvBULD NU\"Mskr ru...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\19_DevOps_and_CI_CD_Pipeline.pdf",
+          "title": "19_DevOps_and_CI_CD_Pipeline.pdf",
+          "rerank_score": -10.65375804901123,
+          "image_urls": []
+        },
+        {
+          "rank": 3,
+          "text": "SELECT AVG(salary）FROMemployees\n)；\nNASS\n--INNERJOIN\nFULLJOIN\nSQL Joins CheatSheet\n5.Indexing\na\nRETUR...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\30_Advanced_SQL_and_Database_Optimization.pdf",
+          "title": "30_Advanced_SQL_and_Database_Optimization.pdf",
+          "rerank_score": -11.218276023864746,
+          "image_urls": []
+        },
+        {
+          "title": "Why soft skills matter more than coding in tech careers | Pluralsight",
+          "url": "https://www.pluralsight.com/resources/blog/business-and-leadership/tech-careers-soft-skills-matter",
+          "snippet": "[Pluralsight](https://www.pluralsight.com/) [Sign in](https://app.pluralsight.com/id) - [Explore](https://www.pluralsight.com/resources/blog) - [Software dev](https://www.pluralsight.com/resources/blog/software-development) - [Cloud](https://www.pluralsight.com/resources/blog/cloud) - [Tech Operations](https://www.pluralsight.com/resources/blog/tech-operations) - [AI & Data](https://www.pluralsigh...",
+          "score": 0.0
+        },
+        {
+          "title": "Beyond Code: Why Soft Skills Matter for Software Engineers - LinkedIn",
+          "url": "https://www.linkedin.com/pulse/beyond-code-why-soft-skills-matter-software-engineers-chris-andrade-va5nf",
+          "snippet": "Agree & Join LinkedIn By clicking Continue to join or sign in, you agree to LinkedIn’s [User Agreement](https://www.linkedin.com/legal/user-agreement?trk=linkedin-tc_auth-button_user-agreement), [Privacy Policy](https://www.linkedin.com/legal/privacy-policy?trk=linkedin-tc_auth-button_privacy-policy), and [Cookie Policy](https://www.linkedin.com/legal/cookie-policy?trk=linkedin-tc_auth-button_cook...",
+          "score": 0.0
+        },
+        {
+          "title": "The Importance of Soft Skills for Developers - Medium",
+          "url": "https://medium.com/render-beyond/the-importance-of-soft-skills-for-developers-87d531c5cbef",
+          "snippet": "[Sitemap](https://medium.com/sitemap/sitemap.xml) [Open in app](https://play.google.com/store/apps/details?id=com.medium.reader&referrer=utm_source%3DmobileNavBar&source=post_page---top_nav_layout_nav-----------------------------------------) Sign up [Sign in](https://medium.com/m/signin?operation=login&redirect=https%3A%2F%2Fmedium.com%2F%40sanchitvarshney%2Fthe-importance-of-soft-skills-for-deve...",
+          "score": 0.0
+        },
+        {
+          "title": "Why does almost everyone keep saying soft skills are more ... - Quora",
+          "url": "https://www.quora.com/Why-does-almost-everyone-keep-saying-soft-skills-are-more-important-than-coding-skills",
+          "snippet": "Something went wrong. Wait a moment and try again. Try again Skip to content Skip to search [Go to Quora Home](https://www.quora.com/) Sign In [Employment](https://www.quora.com/topic/Employment) [Career Development Plans](https://www.quora.com/topic/Career-Development-Plans) [Coding Skills](https://www.quora.com/topic/Coding-Skills) [Soft Skills](https://www.quora.com/topic/Soft-Skills) [Job Mark...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://www.pluralsight.com/content/dam/ps/images/resource-center/blog/header-hero-images/GreatIdea.jpg"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-06T18:09:22.763848+00:00"
+    },
+    {
+      "execution_id": "92e6a91d-6d54-41cd-8bd6-b1ae880c4d7a",
+      "conversation_id": "2e3d6b88-575a-4098-92ca-e7af08d80f6e",
+      "question": "Why do programmers often feel like a personal attack when their code is criticized?",
+      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- Web error: The read operation timed out",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "s3\n2 031\nEERSE\neropportunitiesinSoftwareEngineerin\nSalaryinSoftwareEngineeringtoday\nfwae\n组\ny...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\01_Introduction_to_Software_Engineering_and_Career_Overview.pdf",
+          "title": "01_Introduction_to_Software_Engineering_and_Career_Overview.pdf",
+          "rerank_score": -10.750717163085938,
+          "image_urls": []
+        },
+        {
+          "rank": 2,
+          "text": "Jenkins\nE\nENTRYPOINT[\"java\",\"-jar\",\"app.jar\"]\n国\nJDK\nThePipeline\n福\n工\nvopsexamplesSfenvBULD NU\"Mskr ru...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\19_DevOps_and_CI_CD_Pipeline.pdf",
+          "title": "19_DevOps_and_CI_CD_Pipeline.pdf",
+          "rerank_score": -11.149309158325195,
+          "image_urls": []
+        },
+        {
+          "rank": 3,
+          "text": "SELECT AVG(salary）FROMemployees\n)；\nNASS\n--INNERJOIN\nFULLJOIN\nSQL Joins CheatSheet\n5.Indexing\na\nRETUR...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\1e2a1486-ac74-4741-af73-bcd429c5f953\\30_Advanced_SQL_and_Database_Optimization.pdf",
+          "title": "30_Advanced_SQL_and_Database_Optimization.pdf",
+          "rerank_score": -11.35912036895752,
+          "image_urls": []
+        }
+      ],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-06T18:13:02.908093+00:00"
+    }
+  ]
+}

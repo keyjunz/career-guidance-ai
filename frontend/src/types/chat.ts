@@ -29,6 +29,7 @@ export type ChatMessage = {
     conversationId?: string
     cached?: boolean
     statuses?: string[]
+    sources?: Array<Record<string, unknown>>
   }
 }
 

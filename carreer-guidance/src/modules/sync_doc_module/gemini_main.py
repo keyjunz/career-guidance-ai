@@ -10,6 +10,7 @@ from src.services.database_service.main import DatabaseSyncService
 from src.services.document_service.main import DocumentService
 from src.services.embedding_service.main import EmbeddingService
 from src.services.ocr.gemini_layout_ocr_service import GeminiLayoutOCRService
+from src.services.ocr.paddle_ocr_service import PaddleOCRService
 from src.services.vector_db_service.main import VectorDBService
 
 RequestContext = dict[str, Any]
@@ -92,6 +93,10 @@ class SyncDocumentModuleGeminiImpl:
                 )
 
             ocr_results = self.ocr_service.extract_text_batch(prepared_docs)
+            ocr_results = self._fallback_ocr_when_needed(
+                prepared_docs=prepared_docs,
+                ocr_results=ocr_results,
+            )
             for item in ocr_results:
                 success = bool(item.get("success"))
                 file_path = str(item.get("file_path") or "")
@@ -209,3 +214,39 @@ class SyncDocumentModuleGeminiImpl:
             if isinstance(exc, ValueError):
                 raise
             raise RuntimeError("Internal server error") from exc
+
+    def _fallback_ocr_when_needed(
+        self,
+        *,
+        prepared_docs: list[dict[str, str]],
+        ocr_results: list[dict[str, Any]],
+    ) -> list[dict[str, Any]]:
+        fallback_docs: list[dict[str, str]] = []
+        fallback_indices: list[int] = []
+        for idx, item in enumerate(ocr_results):
+            if bool(item.get("success")):
+                continue
+            err = str(item.get("error") or "").lower()
+            if any(
+                signal in err
+                for signal in ("quota", "rate limit", "429", "timeout", "timed out")
+            ):
+                fallback_docs.append(prepared_docs[idx])
+                fallback_indices.append(idx)
+
+        if not fallback_docs:
+            return ocr_results
+
+        logger.warning(
+            "sync_documents_gemini fallback to paddle OCR: execution_id=%s files=%d",
+            self.execution_id,
+            len(fallback_docs),
+        )
+        paddle_service = PaddleOCRService(self.execution_id)
+        fallback_results = paddle_service.extract_text_batch(fallback_docs)
+
+        for offset, result in enumerate(fallback_results):
+            original_index = fallback_indices[offset]
+            ocr_results[original_index] = result
+
+        return ocr_results

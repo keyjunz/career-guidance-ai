@@ -66,9 +66,9 @@ class ChatHandler:
         response = await asyncio.to_thread(module.invoke_sync_chat, request, context)
         return response.model_dump(mode="json")
 
-    async def stream_tokens(self, request: ChatRequest) -> AsyncIterator[str]:
+    async def stream_tokens(self, request: ChatRequest) -> AsyncIterator[dict[str, Any]]:
         request = self._inject_user_id(request)
         module = self._build_module()
         context = self._build_context()
-        async for token in module.stream_tokens(request, context=context):
-            yield token
+        async for event in module.stream_tokens(request, context=context):
+            yield event

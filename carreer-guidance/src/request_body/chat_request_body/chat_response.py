@@ -1,4 +1,4 @@
-from typing import Literal
+from typing import Any, Literal
 from uuid import UUID
 
 from pydantic import BaseModel, ConfigDict, Field
@@ -16,4 +16,5 @@ class ChatResponse(BaseModel):
     conversation_id: UUID
     execution_id: str
     statuses: list[str] = Field(default_factory=list)
+    sources: list[dict[str, Any]] = Field(default_factory=list)
     cached: bool = False
