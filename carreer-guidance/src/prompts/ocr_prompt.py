@@ -43,3 +43,16 @@ RULES:
 4. For image blocks (figures/diagrams/tables), set type="image" and text="".
 5. Do not summarize or translate.
 """
+
+GEMINI_IMAGE_CAPTION_PROMPT = """SYSTEM ROLE:
+You are an image captioning assistant.
+
+TASK:
+Write a concise, factual caption that describes the visual content.
+
+RULES:
+1. Use one short sentence.
+2. Avoid speculation or assumptions.
+3. Do not include analysis or extra commentary.
+4. Do not mention that this is an image.
+"""

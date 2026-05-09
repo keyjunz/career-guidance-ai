@@ -24,7 +24,6 @@ TEXT_LABELS = {
     "aside_text",
     "reference_content",
 }
-CAPTION_LABELS = {"figure_title"}
 IMAGE_LABELS = {"image", "chart", "table"}
 
 
@@ -149,10 +148,7 @@ class DocumentService:
         pages = result.get("pages") or []
         text_blocks = self._collect_text_blocks(pages)
         image_blocks = self._collect_image_blocks(pages)
-        caption_blocks = self._collect_caption_blocks(pages)
-
         image_links = self._link_images_to_text(image_blocks, text_blocks)
-        image_captions = self._link_images_to_captions(image_blocks, caption_blocks)
 
         current_blocks: list[dict[str, Any]] = []
         current_text_parts: list[str] = []
@@ -174,7 +170,6 @@ class DocumentService:
                     chunk_index=chunk_index,
                     text_blocks=current_blocks,
                     image_links=image_links,
-                    image_captions=image_captions,
                 )
                 chunks.append(chunk)
                 chunk_index += 1
@@ -195,7 +190,6 @@ class DocumentService:
                 chunk_index=chunk_index,
                 text_blocks=current_blocks,
                 image_links=image_links,
-                image_captions=image_captions,
             )
             chunks.append(chunk)
 
@@ -218,7 +212,6 @@ class DocumentService:
         chunk_index: int,
         text_blocks: list[dict[str, Any]],
         image_links: dict[str, dict[str, Any]],
-        image_captions: dict[str, str],
     ) -> dict:
         page_number = int(text_blocks[0].get("page_number") or 1)
         chunk_text = "\n".join(
@@ -228,7 +221,6 @@ class DocumentService:
         linked_images = self._collect_linked_images(text_blocks, image_links)
         image_paths = []
         image_ids = []
-        image_sentences = []
         image_bboxes = []
 
         for image in linked_images:
@@ -240,16 +232,6 @@ class DocumentService:
             if image_id:
                 image_ids.append(image_id)
             image_bboxes.append(image.get("bbox"))
-
-            caption = image_captions.get(image_id, "")
-            sentence = self._build_image_sentence(caption, image.get("linked_text"))
-            if sentence:
-                image_sentences.append(sentence)
-
-        if image_sentences:
-            chunk_text = f"{chunk_text}\n\n" + "\n".join(
-                f"[Image] {sentence}" for sentence in image_sentences
-            )
 
         metadata: dict[str, Any] = {
             "execution_id": self.execution_id,
@@ -269,7 +251,6 @@ class DocumentService:
                 {
                     "image_paths": image_paths,
                     "image_ids": image_ids,
-                    "image_sentences": image_sentences,
                     "image_bboxes": image_bboxes,
                 }
             )
@@ -294,16 +275,6 @@ class DocumentService:
                 (b.get("bbox") or [0, 0, 0, 0])[0],
             )
         )
-        return blocks
-
-    def _collect_caption_blocks(
-        self, pages: list[dict[str, Any]]
-    ) -> list[dict[str, Any]]:
-        blocks: list[dict[str, Any]] = []
-        for page in pages:
-            for block in page.get("blocks", []):
-                if str(block.get("type") or "") in CAPTION_LABELS:
-                    blocks.append(block)
         return blocks
 
     def _collect_image_blocks(
@@ -337,21 +308,6 @@ class DocumentService:
                 "linked_block_id": best.get("block_id"),
             }
         return links
-
-    def _link_images_to_captions(
-        self,
-        image_blocks: list[dict[str, Any]],
-        caption_blocks: list[dict[str, Any]],
-    ) -> dict[str, str]:
-        captions: dict[str, str] = {}
-        for image in image_blocks:
-            image_id = str(image.get("image_id") or "")
-            if not image_id:
-                continue
-            nearest = self._nearest_block(image, caption_blocks)
-            if nearest and str(nearest.get("text") or "").strip():
-                captions[image_id] = str(nearest.get("text") or "").strip()
-        return captions
 
     def _collect_linked_images(
         self,
@@ -392,16 +348,6 @@ class DocumentService:
         bx = (bbox_b[0] + bbox_b[2]) / 2
         by = (bbox_b[1] + bbox_b[3]) / 2
         return abs(ax - bx) + abs(ay - by)
-
-    def _build_image_sentence(self, caption: str, linked_text: str | None) -> str:
-        cleaned_caption = caption.strip()
-        if cleaned_caption:
-            return f"Figure: {cleaned_caption}"
-        if linked_text:
-            snippet = str(linked_text).strip()[:160]
-            if snippet:
-                return f"Image related to: {snippet}"
-        return ""
 
     def count_pages(self, text: str, file_path: str | None = None) -> int:
         """Count pages, preferring direct PDF file analysis when possible."""

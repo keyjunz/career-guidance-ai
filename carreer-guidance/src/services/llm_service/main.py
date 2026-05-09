@@ -29,7 +29,7 @@ API_LLM_MODELS = {
     "gemini-flash": {
         "provider": "gemini",
         "name": "gemini-2.0-flash",
-        "api_key_env": "GEMINI_API_KEY",
+        "api_key_env": "GEMINI_AGENT_API_KEY",
         "max_tokens": 1024,
         "temperature": 0.3,
     },
@@ -123,6 +123,10 @@ class LLMService:
                     return settings_key
             except Exception:
                 return ""
+
+            fallback_key = os.getenv("GEMINI_API_KEY", "").strip()
+            if fallback_key:
+                return fallback_key
 
         key = os.getenv(model_config["api_key_env"], "").strip()
         if key:

@@ -53,19 +53,17 @@ def _pick_first_image_url(images: list[Any]) -> str | None:
 
 
 def _collect_images(state: AgentRuntimeState) -> list[str]:
-    urls: list[str] = []
-
     rag_payload = state.tool_results.get("rag", {})
     rag_url = _pick_first_image_url(list(rag_payload.get("images") or []))
     if rag_url:
-        urls.append(rag_url)
+        return [rag_url]
 
     web_payload = state.tool_results.get("web", {})
     web_url = _pick_first_image_url(list(web_payload.get("images") or []))
-    if web_url and web_url not in urls:
-        urls.append(web_url)
+    if web_url:
+        return [web_url]
 
-    return urls[:2]
+    return []
 
 
 def compose_draft_answer(
@@ -86,8 +84,12 @@ def compose_draft_answer(
 
     rag_answer = str(rag_payload.get("answer") or "").strip()
     web_answer = str(web_payload.get("answer") or "").strip()
-    rag_ok = bool(rag_payload.get("success")) and not _is_insufficient_answer(rag_answer)
-    web_ok = bool(web_payload.get("success")) and not _is_insufficient_answer(web_answer)
+    rag_ok = bool(rag_payload.get("success")) and not _is_insufficient_answer(
+        rag_answer
+    )
+    web_ok = bool(web_payload.get("success")) and not _is_insufficient_answer(
+        web_answer
+    )
 
     final_answer = ""
     if rag_ok and web_ok:

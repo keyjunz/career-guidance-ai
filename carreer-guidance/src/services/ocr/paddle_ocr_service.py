@@ -41,11 +41,13 @@ class PaddleOCRService:
         rec_model_dir: str | None = None,
         image_storage_dir: str | None = None,
         pdf_zoom: float | None = None,
+        pdf_render_dpi: int | None = None,
         layout_score_threshold: float | None = None,
         use_gpu: bool | None = None,
     ) -> None:
         self.execution_id = execution_id
         self.pdf_zoom = pdf_zoom or float(os.getenv("PDF_RENDER_ZOOM", "1.5"))
+        self.pdf_render_dpi = pdf_render_dpi or int(os.getenv("PDF_RENDER_DPI", "200"))
         self.layout_score_threshold = layout_score_threshold or float(
             os.getenv("LAYOUT_SCORE_THRESHOLD", "0.5")
         )
@@ -159,11 +161,129 @@ class PaddleOCRService:
         with fitz.open(path) as doc:
             for page_index in range(doc.page_count):
                 page = doc.load_page(page_index)
-                matrix = fitz.Matrix(self.pdf_zoom, self.pdf_zoom)
-                pix = page.get_pixmap(matrix=matrix, alpha=False)
-                image = Image.frombytes("RGB", (pix.width, pix.height), pix.samples)
-                pages.append(self._extract_from_image(image, page_index + 1, doc_id))
+                page_number = page_index + 1
+                image_blocks = self._extract_image_objects(
+                    page=page,
+                    doc=doc,
+                    doc_id=doc_id,
+                    page_number=page_number,
+                )
+
+                if image_blocks:
+                    text = page.get_text("text").strip()
+                    text_block = self._build_text_block(page, page_number, text)
+                    blocks = image_blocks
+                    if text_block:
+                        blocks.append(text_block)
+                    pages.append(
+                        {
+                            "page_number": page_number,
+                            "width": float(page.rect.width),
+                            "height": float(page.rect.height),
+                            "blocks": blocks,
+                        }
+                    )
+                    continue
+
+                image = self._render_page_image(page)
+                pages.append(self._extract_from_image(image, page_number, doc_id))
         return pages
+
+    def _render_page_image(self, page: fitz.Page) -> Image.Image:
+        scale = max(self.pdf_render_dpi / 72.0, 0.1)
+        matrix = fitz.Matrix(scale, scale)
+        pix = page.get_pixmap(matrix=matrix, alpha=False)
+        return Image.frombytes("RGB", (pix.width, pix.height), pix.samples)
+
+    def _build_text_block(
+        self, page: fitz.Page, page_number: int, text: str
+    ) -> dict[str, Any] | None:
+        if not text:
+            return None
+
+        rect = page.rect
+        return {
+            "block_id": f"p{page_number}-b000",
+            "type": "text",
+            "bbox": [
+                int(rect.x0),
+                int(rect.y0),
+                int(rect.x1),
+                int(rect.y1),
+            ],
+            "score": 1.0,
+            "page_number": page_number,
+            "text": text,
+        }
+
+    def _extract_image_objects(
+        self,
+        *,
+        page: fitz.Page,
+        doc: fitz.Document,
+        doc_id: str,
+        page_number: int,
+    ) -> list[dict[str, Any]]:
+        blocks: list[dict[str, Any]] = []
+        image_infos = page.get_image_info(xrefs=True) or []
+        bbox_by_xref: dict[int, list[int]] = {}
+        for info in image_infos:
+            xref = int(info.get("xref") or 0)
+            bbox = info.get("bbox")
+            if xref and bbox and len(bbox) == 4:
+                bbox_by_xref[xref] = [int(b) for b in bbox]
+
+        image_index = 0
+        for img in page.get_images(full=True):
+            if not img:
+                continue
+            xref = int(img[0])
+            extracted = doc.extract_image(xref)
+            if not extracted:
+                continue
+            image_bytes = extracted.get("image")
+            ext = str(extracted.get("ext") or "png").lower()
+            if not image_bytes:
+                continue
+
+            image_index += 1
+            image_path = self._save_raw_image(
+                image_bytes=image_bytes,
+                extension=ext,
+                doc_id=doc_id,
+                page_number=page_number,
+                image_index=image_index,
+            )
+
+            block = {
+                "block_id": f"p{page_number}-img{image_index:03d}",
+                "type": "image",
+                "bbox": bbox_by_xref.get(xref) or [0, 0, 0, 0],
+                "score": 1.0,
+                "page_number": page_number,
+                "image_path": image_path,
+                "image_id": f"{doc_id}-p{page_number}-img{image_index:03d}",
+            }
+            blocks.append(block)
+
+        return blocks
+
+    def _save_raw_image(
+        self,
+        *,
+        image_bytes: bytes,
+        extension: str,
+        doc_id: str,
+        page_number: int,
+        image_index: int,
+    ) -> str:
+        target_dir = self.image_storage_dir / doc_id / f"p{page_number}"
+        target_dir.mkdir(parents=True, exist_ok=True)
+        safe_ext = extension if extension.isalnum() else "png"
+        image_name = f"img{image_index:03d}.{safe_ext}"
+        image_path = target_dir / image_name
+        image_path.write_bytes(image_bytes)
+        return str(image_path)
 
     def _extract_from_image(
         self,

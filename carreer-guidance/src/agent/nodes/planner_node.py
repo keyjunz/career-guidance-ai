@@ -50,7 +50,10 @@ def choose_plan(state: AgentRuntimeState) -> str:
     prompt = _build_router_prompt(state.question.strip())
 
     try:
-        llm = LLMService(execution_id=state.execution_id)
+        llm = LLMService(
+            execution_id=state.execution_id,
+            api_key_env_override="GEMINI_AGENT_API_KEY",
+        )
         result = llm.generate_raw(prompt=prompt, max_tokens=120, temperature=0.0)
         routed_plan = _parse_plan(result.get("answer", ""))
         llm.unload()

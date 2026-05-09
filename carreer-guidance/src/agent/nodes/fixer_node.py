@@ -51,4 +51,4 @@ def run_fixer(state: AgentRuntimeState) -> None:
         if not web_payload.get("success"):
             state.tool_results["web"] = _retry_tool("web", state)
 
-    compose_draft_answer(state, max_web_snippets=5)
+    compose_draft_answer(state)

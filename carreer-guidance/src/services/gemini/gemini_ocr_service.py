@@ -2,6 +2,7 @@ import base64
 import json
 import logging
 import mimetypes
+import os
 from pathlib import Path
 from urllib import error, parse, request
 
@@ -19,7 +20,11 @@ class GeminiOCRService:
         self.execution_id = execution_id
         self.timeout_seconds = timeout_seconds
         settings = get_settings()
-        self.api_key = settings.llm.gemini_api_key
+        self.api_key = (
+            os.getenv("GEMINI_OCR_API_KEY", "").strip()
+            or str(settings.llm.gemini_api_key or "").strip()
+            or os.getenv("GEMINI_API_KEY", "").strip()
+        )
         self.model_name = settings.llm.gemini_model_name
         self.base_url = "https://generativelanguage.googleapis.com/v1beta"
 

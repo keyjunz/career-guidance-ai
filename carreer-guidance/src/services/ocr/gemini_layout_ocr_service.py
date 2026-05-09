@@ -63,7 +63,7 @@ class GeminiLayoutOCRService:
 
         if not self.api_key:
             raise ValueError(
-                "Gemini OCR API key is missing. Set GEMINI_OCR_API_KEY or GEMINI_API_KEY."
+                "Gemini OCR API key is missing. Set GEMINI_OCR_API_KEY (or GEMINI_API_KEY)."
             )
         if not self.model_name:
             raise ValueError("GEMINI_MODEL_NAME is required for Gemini OCR")

@@ -1,8 +1,19 @@
 {
   "user_id": "4d64496c-be06-4d05-892a-dce083e37c32",
   "created_at": "2026-05-06T18:27:31.298236+00:00",
-  "updated_at": "2026-05-07T01:44:18.945333+00:00",
-  "pending_by_execution": {},
+  "updated_at": "2026-05-09T16:13:30.354211+00:00",
+  "pending_by_execution": {
+    "5de44c2f-4e1e-41f5-9e4d-65d0f3789138": {
+      "conversation_id": "aa471aa6-efc4-47a8-bccc-51f56e3a808a",
+      "question": "What are the main similarities between GraphQL and REST?",
+      "timestamp": "2026-05-09T15:35:17.983996+00:00"
+    },
+    "afccd35a-12aa-425a-bd91-a6234f6e6ea6": {
+      "conversation_id": "98381606-625a-4ff8-9494-d49da56dca81",
+      "question": "What are the main similarities between GraphQL and REST?",
+      "timestamp": "2026-05-09T15:35:44.989533+00:00"
+    }
+  },
   "status_by_execution": {
     "c092bd38-30c4-4b92-bca3-04f7115df8da": [
       {
@@ -265,6 +276,662 @@
         "status": "Hoan tat xu ly.",
         "timestamp": "2026-05-07T01:44:18.944332+00:00"
       }
+    ],
+    "242e3e69-b4fd-47d6-aef5-964008d04dbe": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-09T15:28:08.792241+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-09T15:28:08.803529+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-09T15:28:08.810533+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-05-09T15:28:08.818011+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-05-09T15:28:08.828448+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-05-09T15:28:12.223636+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-05-09T15:28:48.276443+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-09T15:28:48.280451+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-09T15:28:49.912844+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-09T15:28:49.915844+00:00"
+      }
+    ],
+    "5de44c2f-4e1e-41f5-9e4d-65d0f3789138": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-09T15:35:17.974453+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-09T15:35:17.990961+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-09T15:35:18.001330+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-05-09T15:35:18.013390+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-05-09T15:35:18.023391+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-05-09T15:35:19.657487+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-05-09T15:35:43.482863+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-09T15:35:43.487868+00:00"
+      },
+      {
+        "status": "Dang sua cau tra loi theo danh gia.",
+        "timestamp": "2026-05-09T15:35:44.859813+00:00"
+      }
+    ],
+    "afccd35a-12aa-425a-bd91-a6234f6e6ea6": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-09T15:35:44.985532+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-09T15:35:44.992532+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-09T15:35:44.996016+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-05-09T15:35:44.999796+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-05-09T15:35:45.003590+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-05-09T15:35:47.321248+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-05-09T15:36:06.410223+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-09T15:36:06.414225+00:00"
+      },
+      {
+        "status": "Dang sua cau tra loi theo danh gia.",
+        "timestamp": "2026-05-09T15:36:08.372955+00:00"
+      }
+    ],
+    "a93460a8-9a7b-46d2-be69-e6d89190dc60": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-09T15:37:06.934125+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-09T15:37:06.940514+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-09T15:37:06.943837+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-05-09T15:37:06.949837+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-05-09T15:37:06.955550+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-05-09T15:37:10.726866+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-05-09T15:37:29.695167+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-09T15:37:29.700171+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-09T15:37:34.629173+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-09T15:37:34.632410+00:00"
+      }
+    ],
+    "7b5a4a4f-9612-4b8f-8992-2666b6e84ac1": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-09T15:47:42.889366+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-09T15:47:42.897569+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-09T15:47:42.902692+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-05-09T15:47:42.911312+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-05-09T15:47:42.923765+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-05-09T15:47:48.245686+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-05-09T15:48:07.081153+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-09T15:48:07.088110+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-09T15:48:12.141794+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-09T15:48:12.144880+00:00"
+      }
+    ],
+    "ba77ce1e-06f6-4d1b-86a2-6549412872bc": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-09T15:49:53.481143+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-09T15:49:53.490766+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-09T15:49:53.495801+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-09T15:49:53.500802+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-09T15:49:53.510393+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-09T15:49:53.514863+00:00"
+      }
+    ],
+    "f21a9a6d-0417-4ac3-b43a-5f6fdf181ae9": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-09T15:50:24.889557+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-09T15:50:24.903571+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-09T15:50:24.911169+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-05-09T15:50:24.919595+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-05-09T15:50:24.929047+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-05-09T15:50:26.149134+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-05-09T15:50:51.436383+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-09T15:50:51.448047+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-09T15:50:52.800238+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-09T15:50:52.806663+00:00"
+      }
+    ],
+    "b2280009-d3d8-45b0-9075-383db26bb233": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-09T15:51:58.123689+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-09T15:51:58.134256+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-09T15:51:58.142146+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-05-09T15:51:58.151329+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-05-09T15:51:58.159940+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-05-09T15:51:59.461050+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-05-09T15:52:20.374107+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-09T15:52:20.379110+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-09T15:52:22.709384+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-09T15:52:22.713381+00:00"
+      }
+    ],
+    "32693962-834d-4e6e-bc65-c6df6ecd076e": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-09T15:55:23.106502+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-09T15:55:23.117195+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-09T15:55:23.123153+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-05-09T15:55:23.129584+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-05-09T15:55:23.135384+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-05-09T15:55:24.401835+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-05-09T15:55:44.303209+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-09T15:55:44.310223+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-09T15:55:45.525829+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-09T15:55:45.529085+00:00"
+      }
+    ],
+    "d2ac306b-0f90-4ff2-8d57-94227be06d6f": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-09T15:56:35.342426+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-09T15:56:35.358162+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-09T15:56:35.368243+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-05-09T15:56:35.375650+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-05-09T15:56:35.383125+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-05-09T15:56:37.151081+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-05-09T15:57:04.070323+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-09T15:57:04.079348+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-09T15:57:06.750653+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-09T15:57:06.755650+00:00"
+      }
+    ],
+    "29983b7c-78ec-4b1f-8711-b8193c43db4e": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-09T15:57:20.341168+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-09T15:57:20.349821+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-09T15:57:20.358723+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-05-09T15:57:20.365741+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-05-09T15:57:20.372875+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-05-09T15:57:21.463568+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-05-09T15:57:46.600732+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-09T15:57:46.608761+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-09T15:57:48.529901+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-09T15:57:48.533930+00:00"
+      }
+    ],
+    "e7a862cb-f4ad-45fd-9101-f0e04e1d3098": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-09T16:03:57.760031+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-09T16:03:57.776964+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-09T16:03:57.788386+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-05-09T16:03:57.800804+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-05-09T16:03:57.815802+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-05-09T16:04:00.192938+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-05-09T16:04:30.145483+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-09T16:04:30.159505+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-09T16:04:35.094627+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-09T16:04:35.106520+00:00"
+      }
+    ],
+    "68396b03-8baa-4347-9aba-5258d5ee027d": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-09T16:06:56.889548+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-09T16:06:56.899312+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-09T16:06:56.904314+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-05-09T16:06:56.911314+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-05-09T16:06:56.919320+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-05-09T16:07:04.780081+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-05-09T16:07:33.856890+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-09T16:07:33.861890+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-09T16:07:36.513957+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-09T16:07:36.519940+00:00"
+      }
+    ],
+    "3a86ce1a-4be9-470b-979e-e1b40bfd12ed": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-09T16:08:30.336938+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-09T16:08:30.355271+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-09T16:08:30.365085+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-05-09T16:08:30.377744+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-05-09T16:08:30.387930+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-05-09T16:08:34.069555+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-05-09T16:08:58.763916+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-09T16:08:58.771653+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-09T16:09:02.140605+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-09T16:09:02.148123+00:00"
+      }
+    ],
+    "e1a0837b-c85f-4d9a-9d1d-ea569e59e15b": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-09T16:11:19.544419+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-09T16:11:19.561703+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-09T16:11:19.574956+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-05-09T16:11:19.589757+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-05-09T16:11:19.603794+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-05-09T16:11:27.548536+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-05-09T16:12:03.658614+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-09T16:12:03.664987+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-09T16:12:08.514261+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-09T16:12:08.521220+00:00"
+      }
+    ],
+    "78b015d2-94d5-401b-8537-06816ff4f190": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-09T16:12:26.934618+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-09T16:12:26.949431+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-09T16:12:26.960454+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-05-09T16:12:26.971630+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-05-09T16:12:26.987516+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-05-09T16:12:32.635291+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-05-09T16:12:32.643558+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-09T16:12:32.652393+00:00"
+      },
+      {
+        "status": "Dang sua cau tra loi theo danh gia.",
+        "timestamp": "2026-05-09T16:12:40.149501+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-09T16:12:40.158938+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-09T16:13:30.347124+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-09T16:13:30.354211+00:00"
+      }
     ]
   },
   "qa_cache": {
@@ -468,6 +1135,546 @@
       ],
       "conversation_id": "626a9de6-5f1a-43f2-bf42-9773d4a08b3b",
       "updated_at": "2026-05-07T01:44:18.927103+00:00"
+    },
+    "how does ai help improve software products beyond basic functionality?": {
+      "question": "How does AI help improve software products beyond basic functionality?",
+      "answer": "AI can enhance software products beyond basic functionality by:\n\n*   **Improving User Experience:**\n    *   **Personalization:** AI can tailor the software experience to individual user preferences and behaviors, offering customized content, recommendations, and interfaces.\n    *   **Intelligent Assistance:** AI-powered chatbots and virtual assistants can provide proactive support, answer complex queries, and guide users through tasks, making the software more intuitive and user-friendly.\n    *   **Predictive Features:** AI can anticipate user needs and actions, offering suggestions or automating steps before the user even initiates them.\n\n*   **Enhancing Performance and Efficiency:**\n    *   **Resource Optimization:** AI can dynamically manage system resources (e.g., memory, processing power) to ensure optimal performance and responsiveness, even under heavy load.\n    *   **Automated Testing and Debugging:** AI can identify and even suggest fixes for bugs and performance bottlenecks, leading to more robust and stable software.\n    *   **Predictive Maintenance:** AI can analyze usage patterns to predict potential issues or failures, allowing for proactive maintenance and minimizing downtime.\n\n*   **Enabling New Capabilities:**\n    *   **Advanced Data Analysis:** AI can process and analyze vast amounts of data to extract insights, identify trends, and support data-driven decision-making within the software.\n    *   **Natural Language Processing (NLP):** AI enables software to understand, interpret, and generate human language, facilitating features like sentiment analysis, text summarization, and voice control.\n    *   **Computer Vision:** AI can enable software to \"see\" and interpret images and videos, powering features such as object recognition, facial detection, and image analysis.\n\nThe context provided does not detail specific AI techniques or algorithms used for these improvements, nor does it offer examples of software products that have been enhanced in these ways.",
+      "sources": [
+        {
+          "title": "AI in Software Development | IBM",
+          "url": "https://www.ibm.com/think/topics/ai-in-software-development",
+          "snippet": "[Skip to content](https://www.ibm.com/think/topics/ai-in-software-development#main-content)[IBM logo](https://www.ibm.com/) Software Infrastructure [Consulting](https://www.ibm.com/consulting?lnk=L0G)Support Support [What's new](https://www.ibm.com/new?lnk=flatitem) - [Overview\\\\ Resolve product issues with self-service tools](https://www.ibm.com/mysupport/s/?language=en_US&lnk=flathl) - [Communit...",
+          "score": 0.0
+        },
+        {
+          "title": "AI-enabled software development fuels innovation - McKinsey",
+          "url": "https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/how-an-ai-enabled-software-product-development-life-cycle-will-fuel-innovation",
+          "snippet": "# Access Denied You don't have permission to access \"http://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/how-an-ai-enabled-software-product-development-life-cycle-will-fuel-innovation\" on this server. Reference #18.990c0317.1778340526.226d2c4b https://errors.edgesuite.net/18.990c0317.1778340526.226d2c4b",
+          "score": 0.0
+        },
+        {
+          "title": "How AI Accelerates Every Stage of the Software Development ...",
+          "url": "https://advantailabs.com/blog/how-ai-accelerates-every-stage-of-the-software-development-lifecycle",
+          "snippet": "Technology software development lifecycle'software development # How AI Accelerates Every Stage of the Software Development Lifecycle ![Author Avatar](https://advantailabs.com/assets/logo.svg)Shreyansh Rane March 13, 2026 ![How AI Accelerates Every Stage of the Software Development Lifecycle](https://advantailabs.com/_next/image?url=https%3A%2F%2Faxucctxcobicbfnplbme.supabase.co%2Fstorage%2Fv1%2Fo...",
+          "score": 0.0
+        },
+        {
+          "title": "How AI Improves Software Development Process - JetRuby Agency",
+          "url": "https://jetruby.com/blog/ai-usage-for-software-development-improvement/",
+          "snippet": "Table of Contents As an [IT company](https://jetruby.com/company-profile/), we constantly explore ways to make our work productive and free from repetitive tasks. In line with this vision, developers must be liberated from mundane, routine tasks to contribute their best to the code creation process. This approach prevents developer burnout and yields the best results for the development process. I...",
+          "score": 0.0
+        },
+        {
+          "title": "Top 9 Ways AI is Revolutionizing Modern Software Development",
+          "url": "https://manaosoftware.com/the-role-of-ai-in-modern-software-development/",
+          "snippet": "# Top 9 Ways AI is Revolutionizing Modern Software Development [Contact us](https://manaosoftware.com/contact/) ![](https://manaosoftware.com/wp-content/uploads/2023/08/AIblog-scaled-1-1024x576.jpg) #### Table of Contents In the fast-paced world of [software development](https://manaosoftware.com/services/), technology continuously evolves to meet the ever-growing demands of businesses and consume...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://www.ibm.com/content/dam/connectedassets-adobe-cms/worldwide-content/stock-assets/getty/image/photography/6a/80/1w3a2773.jpg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg"
+      ],
+      "conversation_id": "79770cb7-bef5-44f8-b9ed-ee7264e68143",
+      "updated_at": "2026-05-09T15:28:49.909828+00:00"
+    },
+    "what are the main similarities between graphql and rest?": {
+      "question": "What are the main similarities between GraphQL and REST?",
+      "answer": "[API Error] Failed after 3 retries: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash-lite\nPlease retry in 29.165696124s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.5-flash-lite\"\n  }\n  quota_value: 20\n}\n, retry_delay {\n  seconds: 29\n}\n]",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Bt\n医\n二\n一...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\18_RESTful_API_and_GraphQL_Design.pdf",
+          "title": "18_RESTful_API_and_GraphQL_Design.pdf",
+          "rerank_score": -11.034971237182617,
+          "image_urls": []
+        }
+      ],
+      "image_urls": [],
+      "conversation_id": "b1579248-8b64-4e8e-98fb-0a7f1981dec0",
+      "updated_at": "2026-05-09T15:37:34.625163+00:00"
+    },
+    "what is microsoft azure and what does it provide?": {
+      "question": "What is Microsoft Azure and what does it provide?",
+      "answer": "[API Error] Failed after 3 retries: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash-lite\nPlease retry in 51.800680902s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.5-flash-lite\"\n  }\n  quota_value: 20\n}\n, retry_delay {\n  seconds: 51\n}\n]",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "E\nTheimportanceoflanguage\nAcceptcriticismandbeopentochange...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\27_Soft_Skills_for_Software_Engineers.pdf",
+          "title": "27_Soft_Skills_for_Software_Engineers.pdf",
+          "rerank_score": -11.005861282348633,
+          "image_urls": []
+        },
+        {
+          "rank": 2,
+          "text": "Bt\n医\n二\n一...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\18_RESTful_API_and_GraphQL_Design.pdf",
+          "title": "18_RESTful_API_and_GraphQL_Design.pdf",
+          "rerank_score": -11.014693260192871,
+          "image_urls": []
+        },
+        {
+          "rank": 3,
+          "text": "SELECT AVG(salary）FROMemployees\n)；\nNASS\n--INNERJOIN\nFULLJOIN\nSQL Joins CheatSheet\n5.Indexing\na\nRETUR...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\30_Advanced_SQL_and_Database_Optimization.pdf",
+          "title": "30_Advanced_SQL_and_Database_Optimization.pdf",
+          "rerank_score": -11.45163631439209,
+          "image_urls": []
+        },
+        {
+          "title": "Microsoft Azure: Cloud Computing Services",
+          "url": "https://azure.microsoft.com/en-us",
+          "snippet": "This is the Trace Id: 61a38ef19e4f20a6b753b88939be39fd Skip to main content ![](https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/3229800-Hero-Background-1600x580?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=2000&hei=725&qlt=100&fit=constrain) AZURE. YOUR INTELLIGENT CLOUD. # Now shipping: Microsoft Build 2026 Be part of Microsoft Build and learn how tech leaders train and fine-tune models, d...",
+          "score": 0.0
+        },
+        {
+          "title": "Microsoft Azure - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Microsoft_Azure",
+          "snippet": "[Jump to content](https://en.wikipedia.org/wiki/Microsoft_Azure#bodyContent) From Wikipedia, the free encyclopedia Cloud computing platform by Microsoft Not to be confused with [Mozilla Azure](https://en.wikipedia.org/wiki/Gecko_(software)#Azure \"Gecko (software)\"). | | | | --- | --- | | ![](https://upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/40px-Ambox_important.svg.png) | hi...",
+          "score": 0.0
+        },
+        {
+          "title": "Microsoft Azure Explained: A Beginner's Guide to Cloud Computing",
+          "url": "https://www.youtube.com/watch?v=nr-HQN9nIxM",
+          "snippet": "Error 403 (Forbidden)!!1 **403.** That’s an error. We're sorry, but you do not have access to this page. That’s all we know. Back [![](https://www.youtube.com/watch?v=nr-HQN9nIxM)](https://www.youtube.com/ \"YouTube Home\") Skip navigation Search Search with your voice [Sign in](https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsig...",
+          "score": 0.0
+        },
+        {
+          "title": "What is Microsoft Azure and How Does It Work? - TechTarget",
+          "url": "https://www.techtarget.com/searchcloudcomputing/definition/Windows-Azure",
+          "snippet": "![](https://cdn.ttgtmedia.com/visuals/pillar/Pillar_2020_06June_b.jpg) Tech Accelerator [What is public cloud? A definition and in-depth guide](https://www.techtarget.com/searchcloudcomputing/definition/public-cloud) [Prev](https://www.techtarget.com/whatis/definition/multi-tenancy \"What is multi-tenancy (multi-tenant architecture)?\") [Next](https://www.techtarget.com/searchcloudcomputing/answer/W...",
+          "score": 0.0
+        },
+        {
+          "title": "Microsoft Azure Explained: What It Is and Why It Matters",
+          "url": "https://ccbtechnology.com/what-microsoft-azure-is-and-why-it-matters/",
+          "snippet": "![](<Base64-Image-Removed>) Close Search Search for:Search [Skip to content](https://ccbtechnology.com/what-microsoft-azure-is-and-why-it-matters/#content) Microsoft Azure is usually described as having “limitless potential” and “unlimited possibilities,” but **what does Azure actually _do_ and what can it do for your business?** In this blog, I’ll answer these questions and show you the value wit...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/3229800-Hero-Background-1600x580?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=2000&hei=725&qlt=100&fit=constrain"
+      ],
+      "conversation_id": "c70c71dd-1ed2-4d96-bdb2-2bc21132233d",
+      "updated_at": "2026-05-09T15:49:53.505811+00:00"
+    },
+    "when was microsoft azure released?": {
+      "question": "When was Microsoft Azure released?",
+      "answer": "Microsoft Azure was generally available on February 1, 2010. It was initially announced as \"Windows Azure\" in 2008 at The Professional Developers Conference (PDC).",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Bt\n医\n二\n一...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\18_RESTful_API_and_GraphQL_Design.pdf",
+          "title": "18_RESTful_API_and_GraphQL_Design.pdf",
+          "rerank_score": -10.700211524963379,
+          "image_urls": []
+        },
+        {
+          "rank": 2,
+          "text": "E\nTheimportanceoflanguage\nAcceptcriticismandbeopentochange...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\27_Soft_Skills_for_Software_Engineers.pdf",
+          "title": "27_Soft_Skills_for_Software_Engineers.pdf",
+          "rerank_score": -10.9107027053833,
+          "image_urls": []
+        },
+        {
+          "rank": 3,
+          "text": "SELECT AVG(salary）FROMemployees\n)；\nNASS\n--INNERJOIN\nFULLJOIN\nSQL Joins CheatSheet\n5.Indexing\na\nRETUR...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\30_Advanced_SQL_and_Database_Optimization.pdf",
+          "title": "30_Advanced_SQL_and_Database_Optimization.pdf",
+          "rerank_score": -11.397439002990723,
+          "image_urls": []
+        },
+        {
+          "title": "Microsoft Azure - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Microsoft_Azure",
+          "snippet": "[Jump to content](https://en.wikipedia.org/wiki/Microsoft_Azure#bodyContent) From Wikipedia, the free encyclopedia Cloud computing platform by Microsoft Not to be confused with [Mozilla Azure](https://en.wikipedia.org/wiki/Gecko_(software)#Azure \"Gecko (software)\"). | | | | --- | --- | | ![](https://upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/40px-Ambox_important.svg.png) | hi...",
+          "score": 0.0
+        },
+        {
+          "title": "History of Microsoft Azure",
+          "url": "https://techcommunity.microsoft.com/blog/educatordeveloperblog/the-history-of-microsoft-azure/3574204",
+          "snippet": "## Blog Post Educator Developer Blog 5 MIN READ # The History of Microsoft Azure [![Roosevelt_Abandy's avatar](https://techcommunity.microsoft.com/t5/s/gxcuf89792/images/dS0xNDU1MzY4LTM4ODA0NWkwODFCQjkyOTZENUUyRDM3?image-dimensions=50x50)](https://techcommunity.microsoft.com/users/roosevelt_abandy/1455368) [Roosevelt\\_Abandy](https://techcommunity.microsoft.com/users/roosevelt_abandy/1455368) Copp...",
+          "score": 0.0
+        },
+        {
+          "title": "A Look Back At Ten Years Of Microsoft Azure - Forbes",
+          "url": "https://www.forbes.com/sites/janakirammsv/2020/02/03/a-look-back-at-ten-years-of-microsoft-azure/",
+          "snippet": "BETA This is a BETA experience. opt-out here [Innovation](https://www.forbes.com/innovation/)[Cloud](https://www.forbes.com/cloud/) # A Look Back At Ten Years Of Microsoft Azure By [Janakiram MSV](https://www.forbes.com/sites/janakirammsv/ \"https://www.forbes.com/sites/janakirammsv/\"), Senior Contributor. Forbes contributors publish independent expert analyses and insights. I cover emerging techno...",
+          "score": 0.0
+        },
+        {
+          "title": "What is Microsoft Azure? The cloud platform explained. - Pluralsight",
+          "url": "https://www.pluralsight.com/resources/blog/cloud/what-is-microsoft-azure",
+          "snippet": "filter\\_drama Build workforce capabilities that drive cloud ROI. [Explore Cloud Ready](https://www.pluralsight.com/solutions/cloud-ready) filter\\_drama Cloud Ready: Drive cloud ROI. Upskill your workforce. Live webinar on May 28. [Register now.](https://www.pluralsight.com/resources/webinars/universal/cloudready) [Pluralsight](https://www.pluralsight.com/) [Sign in](https://app.pluralsight.com/id)...",
+          "score": 0.0
+        },
+        {
+          "title": "A Decade of Microsoft Azure: From its Creation to its Many ...",
+          "url": "https://abouttmc.com/blog/a-decade-of-microsoft-azure-from-its-creation-to-its-many-successful-transformations/",
+          "snippet": "[Skip to content](https://abouttmc.com/blog/a-decade-of-microsoft-azure-from-its-creation-to-its-many-successful-transformations/#content) # A Decade of Microsoft Azure: From its Creation to its Many Successful Transformations Search for: A Decade of Microsoft Azure: From its Creation to its Many Successful Transformations ![a-decade-of-microsoft-azure-from-its-creation-to-its-many-successful-tran...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_Azure.svg/1280px-Microsoft_Azure.svg.png"
+      ],
+      "conversation_id": "025aec09-8a73-41b0-a201-c73da44d438c",
+      "updated_at": "2026-05-09T15:50:52.795525+00:00"
+    },
+    "what do users need in order to access azure services and resources?": {
+      "question": "What do users need in order to access Azure services and resources?",
+      "answer": "To access Azure services and resources, users need an Azure account. A free Azure account can be created if one does not already exist.\n\nAdditionally, access to certain Azure pages and functionalities may require authorization, which can be obtained by signing in or changing directories.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Bt\n医\n二\n一...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\18_RESTful_API_and_GraphQL_Design.pdf",
+          "title": "18_RESTful_API_and_GraphQL_Design.pdf",
+          "rerank_score": -10.47714900970459,
+          "image_urls": []
+        },
+        {
+          "rank": 2,
+          "text": "E\nTheimportanceoflanguage\nAcceptcriticismandbeopentochange...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\27_Soft_Skills_for_Software_Engineers.pdf",
+          "title": "27_Soft_Skills_for_Software_Engineers.pdf",
+          "rerank_score": -10.643604278564453,
+          "image_urls": []
+        },
+        {
+          "rank": 3,
+          "text": "SELECT AVG(salary）FROMemployees\n)；\nNASS\n--INNERJOIN\nFULLJOIN\nSQL Joins CheatSheet\n5.Indexing\na\nRETUR...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\30_Advanced_SQL_and_Database_Optimization.pdf",
+          "title": "30_Advanced_SQL_and_Database_Optimization.pdf",
+          "rerank_score": -11.422102928161621,
+          "image_urls": []
+        },
+        {
+          "title": "Tutorial: Grant a user access to Azure resources using the Azure portal",
+          "url": "https://learn.microsoft.com/en-us/azure/role-based-access-control/quickstart-assign-role-user-portal",
+          "snippet": "Table of contents Exit editor mode Ask LearnAsk Learn Reading modeTable of contents[Read in English](https://learn.microsoft.com/en-us/azure/role-based-access-control/quickstart-assign-role-user-portal)Add to CollectionsAdd to plan[Edit](https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/role-based-access-control/quickstart-assign-role-user-portal.md) * * * Copy MarkdownPrint * * * Not...",
+          "score": 0.0
+        },
+        {
+          "title": "Azure permissions - Azure RBAC | Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/azure/role-based-access-control/resource-provider-operations",
+          "snippet": "Table of contents Exit editor mode Ask LearnAsk Learn Reading modeTable of contents[Read in English](https://learn.microsoft.com/en-us/azure/role-based-access-control/resource-provider-operations)Add to CollectionsAdd to plan[Edit](https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/role-based-access-control/resource-provider-operations.md) * * * Copy MarkdownPrint * * * Note Access to...",
+          "score": 0.0
+        },
+        {
+          "title": "Manage access to resources in Azure - Cloud Adoption Framework",
+          "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/manage-access",
+          "snippet": "Table of contents Exit editor mode Ask LearnAsk Learn Reading modeTable of contents[Read in English](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/manage-access)Add to CollectionsAdd to plan[Edit](https://github.com/MicrosoftDocs/cloud-adoption-framework/blob/main/docs/ready/azure-setup-guide/manage-access.md) * * * Copy MarkdownPrint * * * Note Access to...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://learn.microsoft.com/en-us/media/open-graph-image.png"
+      ],
+      "conversation_id": "dd4e7773-f293-452a-a062-fd89adcfd4c2",
+      "updated_at": "2026-05-09T15:52:22.705378+00:00"
+    },
+    "what is microsoft azure": {
+      "question": "What is Microsoft Azure",
+      "answer": "Based on the provided context, there is no information about Microsoft Azure. The context includes snippets related to:\n\n*   General advice on accepting criticism and being open to change.\n*   What appears to be a fragment of SQL code for calculating average salary and information about SQL Joins, indexing, and triggers.\n*   An image with Chinese characters and numbers.\n\nTherefore, I cannot answer what Microsoft Azure is using only the supplied context.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "E\nTheimportanceoflanguage\nAcceptcriticismandbeopentochange...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\27_Soft_Skills_for_Software_Engineers.pdf",
+          "title": "27_Soft_Skills_for_Software_Engineers.pdf",
+          "rerank_score": -11.130281448364258,
+          "image_urls": []
+        },
+        {
+          "rank": 2,
+          "text": "Bt\n医\n二\n一...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\18_RESTful_API_and_GraphQL_Design.pdf",
+          "title": "18_RESTful_API_and_GraphQL_Design.pdf",
+          "rerank_score": -11.176385879516602,
+          "image_urls": []
+        },
+        {
+          "rank": 3,
+          "text": "SELECT AVG(salary）FROMemployees\n)；\nNASS\n--INNERJOIN\nFULLJOIN\nSQL Joins CheatSheet\n5.Indexing\na\nRETUR...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\30_Advanced_SQL_and_Database_Optimization.pdf",
+          "title": "30_Advanced_SQL_and_Database_Optimization.pdf",
+          "rerank_score": -11.428619384765625,
+          "image_urls": []
+        }
+      ],
+      "image_urls": [],
+      "conversation_id": "cdaa11f6-b2ff-4390-a060-379f6e7347d6",
+      "updated_at": "2026-05-09T15:55:45.521824+00:00"
+    },
+    "what is azure": {
+      "question": "What is Azure",
+      "answer": "Microsoft Azure is a cloud computing platform launched in 2010. It offers a global network of datacenters managed by Microsoft, aiming to reduce the time and expense associated with maintaining on-premises infrastructure. Azure provides a unified approach to cloud computing with comprehensive AI, data, and application services. It is designed to be an open and flexible platform that supports various business strategies and stages of AI transformation. Azure offers more than 200 products and services.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "E\nTheimportanceoflanguage\nAcceptcriticismandbeopentochange...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\27_Soft_Skills_for_Software_Engineers.pdf",
+          "title": "27_Soft_Skills_for_Software_Engineers.pdf",
+          "rerank_score": -10.993948936462402,
+          "image_urls": []
+        },
+        {
+          "rank": 2,
+          "text": "Bt\n医\n二\n一...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\18_RESTful_API_and_GraphQL_Design.pdf",
+          "title": "18_RESTful_API_and_GraphQL_Design.pdf",
+          "rerank_score": -11.208651542663574,
+          "image_urls": []
+        },
+        {
+          "rank": 3,
+          "text": "SELECT AVG(salary）FROMemployees\n)；\nNASS\n--INNERJOIN\nFULLJOIN\nSQL Joins CheatSheet\n5.Indexing\na\nRETUR...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\30_Advanced_SQL_and_Database_Optimization.pdf",
+          "title": "30_Advanced_SQL_and_Database_Optimization.pdf",
+          "rerank_score": -11.450023651123047,
+          "image_urls": []
+        },
+        {
+          "title": "What is Azure? | Microsoft Azure",
+          "url": "https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-azure",
+          "snippet": "This is the Trace Id: efd5f3bdc4a7ff7d1e0584ef67ef1617 Skip to main content # What is Azure? Azure is a trusted cloud platform for building, deploying, and managing innovative solutions. [Get to know Azure](https://azure.microsoft.com/en-us/explore/) [Get started with Azure](https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account) ![Decorative](https://cdn-dynmedia-1.microsoft.com...",
+          "score": 0.0
+        },
+        {
+          "title": "Microsoft Azure: Cloud Computing Services",
+          "url": "https://azure.microsoft.com/en-us",
+          "snippet": "This is the Trace Id: 61a38ef19e4f20a6b753b88939be39fd Skip to main content ![](https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/3229800-Hero-Background-1600x580?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=2000&hei=725&qlt=100&fit=constrain) AZURE. YOUR INTELLIGENT CLOUD. # Now shipping: Microsoft Build 2026 Be part of Microsoft Build and learn how tech leaders train and fine-tune models, d...",
+          "score": 0.0
+        },
+        {
+          "title": "Microsoft Azure - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Microsoft_Azure",
+          "snippet": "[Jump to content](https://en.wikipedia.org/wiki/Microsoft_Azure#bodyContent) From Wikipedia, the free encyclopedia Cloud computing platform by Microsoft Not to be confused with [Mozilla Azure](https://en.wikipedia.org/wiki/Gecko_(software)#Azure \"Gecko (software)\"). | | | | --- | --- | | ![](https://upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/40px-Ambox_important.svg.png) | hi...",
+          "score": 0.0
+        },
+        {
+          "title": "Microsoft Azure Explained: A Beginner's Guide to Cloud Computing",
+          "url": "https://www.youtube.com/watch?v=nr-HQN9nIxM",
+          "snippet": "Error 403 (Forbidden)!!1 **403.** That’s an error. We're sorry, but you do not have access to this page. That’s all we know. Back [![](https://www.youtube.com/watch?v=nr-HQN9nIxM)](https://www.youtube.com/ \"YouTube Home\") Skip navigation Search Search with your voice [Sign in](https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsig...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/vn33r8vd-WhatIsAzure-hero-photo-752x580?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=2000&hei=1543&qlt=100&fit=constrain"
+      ],
+      "conversation_id": "f9041f30-38bc-4fc6-ab04-5b2d6f5fa7ae",
+      "updated_at": "2026-05-09T15:57:06.743623+00:00"
+    },
+    "why should you use azure?": {
+      "question": "Why should you use Azure?",
+      "answer": "Microsoft Azure offers several benefits for enterprises:\n\n*   **Scalability and Security:** Azure supports scalability, collaboration, and top-tier security, helping organizations stay productive and secure.\n*   **Cost Reduction:** It can help reduce IT costs.\n*   **Infrastructure and Platform as a Service (IaaS & PaaS):** Azure provides both IaaS, allowing enterprises to outsource infrastructure and pay for usage, and PaaS, enabling the creation of web apps and solutions without managing underlying infrastructure.\n*   **Wide Technology Support:** Azure supports a broad range of programming languages, frameworks, operating systems, databases, and devices, allowing the use of trusted tools and technologies.\n*   **Enterprise Adoption:** Globally, 90% of Fortune 500 companies use Microsoft Azure.\n*   **Application Development:** It enables enterprises to rapidly build, deploy, and manage applications of varying complexity using integrated cloud services.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Bt\n医\n二\n一...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\18_RESTful_API_and_GraphQL_Design.pdf",
+          "title": "18_RESTful_API_and_GraphQL_Design.pdf",
+          "rerank_score": -11.042516708374023,
+          "image_urls": []
+        },
+        {
+          "rank": 2,
+          "text": "E\nTheimportanceoflanguage\nAcceptcriticismandbeopentochange...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\27_Soft_Skills_for_Software_Engineers.pdf",
+          "title": "27_Soft_Skills_for_Software_Engineers.pdf",
+          "rerank_score": -11.118268013000488,
+          "image_urls": []
+        },
+        {
+          "rank": 3,
+          "text": "SELECT AVG(salary）FROMemployees\n)；\nNASS\n--INNERJOIN\nFULLJOIN\nSQL Joins CheatSheet\n5.Indexing\na\nRETUR...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\30_Advanced_SQL_and_Database_Optimization.pdf",
+          "title": "30_Advanced_SQL_and_Database_Optimization.pdf",
+          "rerank_score": -11.464920997619629,
+          "image_urls": []
+        },
+        {
+          "title": "10 reasons why to choose Azure for your Enterprise",
+          "url": "https://www.saviantconsulting.com/blog/10-reasons-why-choose-microsoft-azure.aspx",
+          "snippet": "# Why Choose Microsoft Azure? 10 Enterprise-Proven Benefits That Drive Growth 1. [Home](https://www.saviantconsulting.com/) 2. [Blog](https://www.saviantconsulting.com/blog.aspx) ![Reasons why to choose Microsoft Azure for your Enterprise](https://www.saviantconsulting.com/images/blog/10-reasons-why-choose-azure-for-your-enterprise.png) Enterprises across the globe are realizing great success with...",
+          "score": 0.0
+        },
+        {
+          "title": "The Benefits of Microsoft Azure: What You Need to Know - YouTube",
+          "url": "https://www.youtube.com/watch?v=pzui_2L7dBI",
+          "snippet": "![Thumbnail (1920x1080)](https://i.ytimg.com/vi/pzui_2L7dBI/maxresdefault.jpg) # [The Benefits of Microsoft Azure: What You Need to Know](https://www.youtube.com/watch?v=pzui_2L7dBI) **Visibility**: Public **Uploaded by**: [Stoneridge Software](https://www.youtube.com/@StoneridgeSoftware) **Uploaded at**: 2025-05-14 **Published at**: **Length**: 12:49 **Views**: 341 **Likes**: 2 **Category**: Scie...",
+          "score": 0.0
+        },
+        {
+          "title": "Why should you recommend Microsoft Azure to your customers?",
+          "url": "https://www.quora.com/Why-should-you-recommend-Microsoft-Azure-to-your-customers",
+          "snippet": "Something went wrong. Wait a moment and try again. Try again Skip to content Skip to search [Go to Quora Home](https://www.quora.com/) Sign In [Cloud Computing](https://www.quora.com/topic/Cloud-Computing) [Product Recommendations](https://www.quora.com/topic/Product-Recommendations) [Microsoft (company)](https://www.quora.com/topic/Microsoft-company-1) [Cloud Infrastructure Serv...](https://www.q...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://www.saviantconsulting.com/images/blog/10-reasons-why-choose-azure-for-your-enterprise.png"
+      ],
+      "conversation_id": "1a4b73c1-e931-4d90-a00b-d6747737348d",
+      "updated_at": "2026-05-09T15:57:48.523902+00:00"
+    },
+    "what are the similarities between hadoop and spark?": {
+      "question": "What are the similarities between Hadoop and Spark?",
+      "answer": "## Select your cookie preferences We use essential cookies and similar tools that are necessary to provide our site and services. We use performance cookies to collect anonymous statistics, so we can understand how customers use our site and make improvements. Essential cookies cannot be deactivated, but you can choose “Customize” or “Decline” to decline performance cookies. If you agree, AWS and... [Skip to main content](https://www.openlogic.com/blog/spark-vs-hadoop#main-content) Blog January 14, 2025 # Spark vs. Hadoop: Key Differences and Use Cases [![William Crowell](https://www.openlogic.com/sites/default/files/2025-06/Screenshot%202025-06-30%20at%202.27.27%E2%80%AFPM.png)](https://www.openlogic.com/author/william-crowell) [William Crowell](https://www.openlogic.com/author/william-crowe... # Hadoop vs. Spark: What’s the Difference? Written by Coursera Staff • Updated on Feb 21, 2026 Share Hadoop and Spark are both smart options for big-scale data processing. Learn more about the similarities and differences between Hadoop and Spark, when to use Spark versus Hadoop, and how to choose between Apache Hadoop and Apache Spark. ![[Featured Image] Two colleagues sit at a computer and discu...",
+      "sources": [
+        {
+          "title": "Hadoop vs Spark - Difference Between Apache Frameworks - AWS",
+          "url": "https://aws.amazon.com/compare/the-difference-between-hadoop-vs-spark/",
+          "snippet": "## Select your cookie preferences We use essential cookies and similar tools that are necessary to provide our site and services. We use performance cookies to collect anonymous statistics, so we can understand how customers use our site and make improvements. Essential cookies cannot be deactivated, but you can choose “Customize” or “Decline” to decline performance cookies. If you agree, AWS and...",
+          "score": 0.0
+        },
+        {
+          "title": "Spark vs. Hadoop: Key Differences and Use Cases | OpenLogic",
+          "url": "https://www.openlogic.com/blog/spark-vs-hadoop",
+          "snippet": "[Skip to main content](https://www.openlogic.com/blog/spark-vs-hadoop#main-content) Blog January 14, 2025 # Spark vs. Hadoop: Key Differences and Use Cases [![William Crowell](https://www.openlogic.com/sites/default/files/2025-06/Screenshot%202025-06-30%20at%202.27.27%E2%80%AFPM.png)](https://www.openlogic.com/author/william-crowell) [William Crowell](https://www.openlogic.com/author/william-crowe...",
+          "score": 0.0
+        },
+        {
+          "title": "Hadoop vs. Spark: What's the Difference? - Coursera",
+          "url": "https://www.coursera.org/articles/hadoop-vs-spark",
+          "snippet": "# Hadoop vs. Spark: What’s the Difference? Written by Coursera Staff • Updated on Feb 21, 2026 Share Hadoop and Spark are both smart options for big-scale data processing. Learn more about the similarities and differences between Hadoop and Spark, when to use Spark versus Hadoop, and how to choose between Apache Hadoop and Apache Spark. ![[Featured Image] Two colleagues sit at a computer and discu...",
+          "score": 0.0
+        },
+        {
+          "title": "What are the differences and similarities between Spark and ... - Quora",
+          "url": "https://www.quora.com/What-are-the-differences-and-similarities-between-Spark-and-Hadoop-MapReduce",
+          "snippet": "Something went wrong. Wait a moment and try again. Try again Skip to content Skip to search [Go to Quora Home](https://www.quora.com/) Sign In [Computer Science](https://www.quora.com/topic/Computer-Science) [Apache Spark](https://www.quora.com/topic/Apache-Spark) [Data Engineering Solution...](https://www.quora.com/topic/Data-Engineering-Solutions-1) [Big Data Analytics](https://www.quora.com/top...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://www.openlogic.com/sites/default/files/image-blog-openlogic-spark-vs-hadoop-400-600.png"
+      ],
+      "conversation_id": "d9a2217d-92c4-4a4f-b7c9-98dfc113b658",
+      "updated_at": "2026-05-09T16:04:35.088971+00:00"
+    },
+    "apache hadoop and apache spark are ?": {
+      "question": "Apache Hadoop and Apache Spark are ?",
+      "answer": "Apache Hadoop and Apache Spark are both open-source frameworks for big data processing.\n\n*   **Apache Hadoop:** Primarily known for its distributed storage (HDFS) and batch processing capabilities (MapReduce). It's designed for large-scale data storage and processing of massive datasets.\n*   **Apache Spark:** An in-memory processing engine that is generally faster than Hadoop's MapReduce for many workloads, especially iterative algorithms and interactive data analysis. Spark can run on top of Hadoop (using HDFS for storage) or independently.",
+      "sources": [
+        {
+          "title": "Hadoop vs. Spark: What's the Difference? | IBM",
+          "url": "https://www.ibm.com/think/insights/hadoop-vs-spark",
+          "snippet": "[Skip to content](https://www.ibm.com/think/insights/hadoop-vs-spark#main-content)[IBM logo](https://www.ibm.com/) Software Infrastructure [Consulting](https://www.ibm.com/consulting?lnk=L0G)Support Support [What's new](https://www.ibm.com/new?lnk=flatitem) - [Overview\\\\ Resolve product issues with self-service tools](https://www.ibm.com/mysupport/s/?language=en_US&lnk=flathl) - [Community\\\\ Share...",
+          "score": 0.0
+        },
+        {
+          "title": "Apache Hadoop vs Apache Spark: What are the Differences?",
+          "url": "https://www.starburst.io/blog/apache-hadoop-vs-apache-spark/",
+          "snippet": "# Apache Hadoop vs Apache Spark: What are the Differences? StrategyApril 30, 2024 [![Cindy Ng](https://live-starburst.pantheonsite.io/wp-content/uploads/2022/05/TBP_1081-scaled-e1658069238668-150x150.jpg)\\\\ \\\\ Cindy Ng\\\\ \\\\ Sr. Manager, Content\\\\ \\\\ Starburst](https://www.starburst.io/blog/author/cindy-ng/) [![Cindy Ng](https://live-starburst.pantheonsite.io/wp-content/uploads/2022/05/TBP_1081-sca...",
+          "score": 0.0
+        },
+        {
+          "title": "Difference Between Hadoop and Spark - GeeksforGeeks",
+          "url": "https://www.geeksforgeeks.org/cloud-computing/difference-between-hadoop-and-spark/",
+          "snippet": "[![geeksforgeeks](https://media.geeksforgeeks.org/gfg-gg-logo.svg)](https://www.geeksforgeeks.org/) - Courses - Tutorials - Interview Prep Switch to Dark Mode Sign In - [DSA](https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/) - [Practice Problems](https://www.geeksforgeeks.org/explore) - [C](https://www.geeksforgeeks.org/c/c-programming-language/) - [C++](https:/...",
+          "score": 0.0
+        },
+        {
+          "title": "Spark vs. Hadoop: Key Differences and Use Cases | OpenLogic",
+          "url": "https://www.openlogic.com/blog/spark-vs-hadoop",
+          "snippet": "[Skip to main content](https://www.openlogic.com/blog/spark-vs-hadoop#main-content) Blog January 14, 2025 # Spark vs. Hadoop: Key Differences and Use Cases [![William Crowell](https://www.openlogic.com/sites/default/files/2025-06/Screenshot%202025-06-30%20at%202.27.27%E2%80%AFPM.png)](https://www.openlogic.com/author/william-crowell) [William Crowell](https://www.openlogic.com/author/william-crowe...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://www.ibm.com/content/dam/connectedassets-adobe-cms/worldwide-content/stock-assets/getty/image/others/6a/4e/6a4eb9e7-c90d-4ad5-906518178fe2f785.jpg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg"
+      ],
+      "conversation_id": "8001ab26-5f2e-45c9-97e7-11aa3a089465",
+      "updated_at": "2026-05-09T16:07:36.507958+00:00"
+    },
+    "what are apache hadoop and apache spark mainly used for?": {
+      "question": "What are Apache Hadoop and Apache Spark mainly used for?",
+      "answer": "Apache Hadoop and Apache Spark are both open-source frameworks used for big data processing.\n\n**Apache Hadoop** is mainly used for:\n\n*   **Distributed Storage:** It provides a distributed file system (HDFS) that stores large datasets across multiple machines.\n*   **Distributed Processing:** It enables parallel processing of these large datasets using frameworks like MapReduce.\n\n**Apache Spark** is mainly used for:\n\n*   **Faster Data Processing:** Spark is known for its speed, often processing data much faster than Hadoop MapReduce. It achieves this through in-memory computation.\n*   **Versatile Workloads:** Spark supports a wide range of big data workloads, including:\n    *   Batch processing\n    *   Interactive queries\n    *   Real-time streaming\n    *   Machine learning\n    *   Graph processing\n\nIn essence, while Hadoop provides the foundational infrastructure for storing and processing big data, Spark offers a more advanced and faster engine for a broader set of data processing tasks, often leveraging Hadoop's storage capabilities.",
+      "sources": [
+        {
+          "title": "Hadoop vs. Spark: What's the Difference? - IBM",
+          "url": "https://www.ibm.com/think/insights/hadoop-vs-spark",
+          "snippet": "[Skip to content](https://www.ibm.com/think/insights/hadoop-vs-spark#main-content)[IBM logo](https://www.ibm.com/) Software Infrastructure [Consulting](https://www.ibm.com/consulting?lnk=L0G)Support Support [What's new](https://www.ibm.com/new?lnk=flatitem) - [Overview\\\\ Resolve product issues with self-service tools](https://www.ibm.com/mysupport/s/?language=en_US&lnk=flathl) - [Community\\\\ Share...",
+          "score": 0.0
+        },
+        {
+          "title": "Apache Hadoop vs Apache Spark: What are the Differences?",
+          "url": "https://www.starburst.io/blog/apache-hadoop-vs-apache-spark/",
+          "snippet": "# Apache Hadoop vs Apache Spark: What are the Differences? StrategyApril 30, 2024 [![Cindy Ng](https://live-starburst.pantheonsite.io/wp-content/uploads/2022/05/TBP_1081-scaled-e1658069238668-150x150.jpg)\\\\ \\\\ Cindy Ng\\\\ \\\\ Sr. Manager, Content\\\\ \\\\ Starburst](https://www.starburst.io/blog/author/cindy-ng/) [![Cindy Ng](https://live-starburst.pantheonsite.io/wp-content/uploads/2022/05/TBP_1081-sca...",
+          "score": 0.0
+        },
+        {
+          "title": "Apache Hadoop and Apache Spark for Big Data Analysis - Medium",
+          "url": "https://medium.com/data-science/apache-hadoop-and-apache-spark-for-big-data-analysis-daaf659fd0ee",
+          "snippet": "[Sitemap](https://medium.com/sitemap/sitemap.xml) [Open in app](https://play.google.com/store/apps/details?id=com.medium.reader&referrer=utm_source%3DmobileNavBar&source=post_page---top_nav_layout_nav-----------------------------------------) Sign up [Sign in](https://medium.com/m/signin?operation=login&redirect=https%3A%2F%2Fmedium.com%2Fdata-science%2Fapache-hadoop-and-apache-spark-for-big-data-...",
+          "score": 0.0
+        },
+        {
+          "title": "Apache Spark vs Apache Hadoop: 10 crucial differences (2026)",
+          "url": "https://www.flexera.com/blog/finops/apache-spark-vs-apache-hadoop/",
+          "snippet": "### [FinOps](https://www.flexera.com/blog/finops/) Subscribe Topics SaaS ManagementFinOpsIT VisibilityIT Asset ManagementProduct NewsApplication ReadinessSecurityPerspectives [FinOps](https://www.flexera.com/blog/finops/) # Apache Spark vs Apache Hadoop: 10 crucial differences (2026) [Pramit Marattha](https://www.flexera.com/blog/author/pramit/ \"Pramit Marattha\") [Pramit Marattha](https://www.flex...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://www.ibm.com/content/dam/connectedassets-adobe-cms/worldwide-content/stock-assets/getty/image/others/6a/4e/6a4eb9e7-c90d-4ad5-906518178fe2f785.jpg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg"
+      ],
+      "conversation_id": "6b60a968-f0d1-4aa1-9a76-f6e06f504ab2",
+      "updated_at": "2026-05-09T16:09:02.135088+00:00"
+    },
+    "what is software testing?": {
+      "question": "what is Software testing?",
+      "answer": "Software testing is the process of evaluating a software application to identify defects and ensure it meets specified requirements. The goal is to improve the quality of the software and reduce the risk of failures in production.\n\nKey aspects of software testing include:\n\n*   **Defect Identification:** Finding bugs, errors, or flaws in the software.\n*   **Quality Assurance:** Verifying that the software functions as intended and meets user expectations.\n*   **Risk Reduction:** Minimizing the likelihood of software failures and their impact.\n\nThe context provided does not detail specific methodologies, types of testing, or the roles involved in software testing.",
+      "sources": [
+        {
+          "title": "What is Software Testing? - IBM",
+          "url": "https://www.ibm.com/think/topics/software-testing",
+          "snippet": "[Skip to content](https://www.ibm.com/think/topics/software-testing#main-content)[IBM logo](https://www.ibm.com/) Software Infrastructure [Consulting](https://www.ibm.com/consulting?lnk=L0G)Support Support [What's new](https://www.ibm.com/new?lnk=flatitem) - [Overview\\\\ Resolve product issues with self-service tools](https://www.ibm.com/mysupport/s/?language=en_US&lnk=flathl) - [Community\\\\ Share...",
+          "score": 0.0
+        },
+        {
+          "title": "Introduction to Software Testing - GeeksforGeeks",
+          "url": "https://www.geeksforgeeks.org/software-testing/software-testing-basics/",
+          "snippet": "[![geeksforgeeks](https://media.geeksforgeeks.org/gfg-gg-logo.svg)](https://www.geeksforgeeks.org/) - Courses - Tutorials - Interview Prep Switch to Dark Mode Sign In - [DSA](https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/) - [Practice Problems](https://www.geeksforgeeks.org/explore) - [C](https://www.geeksforgeeks.org/c/c-programming-language/) - [C++](https:/...",
+          "score": 0.0
+        },
+        {
+          "title": "What Is Software Testing? - PTC",
+          "url": "https://www.ptc.com/en/technologies/application-lifecycle-management/test-management/software-testing?srsltid=AfmBOorehico4z7q2jgjkYhBRhLHWkjahBSHadHQ6hl-A7jBA98952kn",
+          "snippet": "[Skip to Main Content](https://www.ptc.com/en/technologies/application-lifecycle-management/test-management/software-testing) [PTC Header](https://www.ptc.com/en/technologies/application-lifecycle-management/test-management/software-testing#) Selected Language Unavailable This experience is not available in the language you selected. To view this experience, please continue in your current languag...",
+          "score": 0.0
+        },
+        {
+          "title": "Software Testing: Complete Beginner's Guide - Splunk",
+          "url": "https://www.splunk.com/en_us/blog/learn/software-testing.html",
+          "snippet": "[Learn](https://www.splunk.com/en_us/blog/learn.html) JUNE 03, 2025\\|8 MINUTE READ # Software Testing: Complete Beginner's Guide By [Austin Chia](https://www.splunk.com/en_us/blog/author/austin-chia.html) - [![Share on X](https://www.splunk.com/icons/x-social.svg)](https://twitter.com/intent/tweet?text=Found%20this%20useful%20link%20for%20you.%20%23splunk&url=https%3A%2F%2Fwww.splunk.com%2Fen_us%2...",
+          "score": 0.0
+        },
+        {
+          "title": "Software testing - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Software_testing",
+          "snippet": "[Jump to content](https://en.wikipedia.org/wiki/Software_testing#bodyContent) From Wikipedia, the free encyclopedia Checking software against a standard [![](https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/TestingCup-Polish-Championship-in-Software-Testing-Katowice-2016.jpg/250px-TestingCup-Polish-Championship-in-Software-Testing-Katowice-2016.jpg)](https://en.wikipedia.org/wiki/File:Tes...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://www.ibm.com/content/dam/worldwide-content/stock-assets/adb-stk/ul/g/71/ca/adobestock_463710214.jpeg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg"
+      ],
+      "conversation_id": "5cf0f266-4ee6-4781-8896-b25d7e1def07",
+      "updated_at": "2026-05-09T16:12:08.509234+00:00"
+    },
+    "the stages of software testing are:": {
+      "question": "The stages of software testing are:",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "conversation_id": "3d5af0b2-b3e5-4c7e-8d1e-642f890bf9fa",
+      "updated_at": "2026-05-09T16:13:30.340104+00:00"
     }
   },
   "history": [
@@ -755,6 +1962,639 @@
       ],
       "cache_hit": false,
       "timestamp": "2026-05-07T01:44:18.927103+00:00"
+    },
+    {
+      "execution_id": "242e3e69-b4fd-47d6-aef5-964008d04dbe",
+      "conversation_id": "79770cb7-bef5-44f8-b9ed-ee7264e68143",
+      "question": "How does AI help improve software products beyond basic functionality?",
+      "answer": "AI can enhance software products beyond basic functionality by:\n\n*   **Improving User Experience:**\n    *   **Personalization:** AI can tailor the software experience to individual user preferences and behaviors, offering customized content, recommendations, and interfaces.\n    *   **Intelligent Assistance:** AI-powered chatbots and virtual assistants can provide proactive support, answer complex queries, and guide users through tasks, making the software more intuitive and user-friendly.\n    *   **Predictive Features:** AI can anticipate user needs and actions, offering suggestions or automating steps before the user even initiates them.\n\n*   **Enhancing Performance and Efficiency:**\n    *   **Resource Optimization:** AI can dynamically manage system resources (e.g., memory, processing power) to ensure optimal performance and responsiveness, even under heavy load.\n    *   **Automated Testing and Debugging:** AI can identify and even suggest fixes for bugs and performance bottlenecks, leading to more robust and stable software.\n    *   **Predictive Maintenance:** AI can analyze usage patterns to predict potential issues or failures, allowing for proactive maintenance and minimizing downtime.\n\n*   **Enabling New Capabilities:**\n    *   **Advanced Data Analysis:** AI can process and analyze vast amounts of data to extract insights, identify trends, and support data-driven decision-making within the software.\n    *   **Natural Language Processing (NLP):** AI enables software to understand, interpret, and generate human language, facilitating features like sentiment analysis, text summarization, and voice control.\n    *   **Computer Vision:** AI can enable software to \"see\" and interpret images and videos, powering features such as object recognition, facial detection, and image analysis.\n\nThe context provided does not detail specific AI techniques or algorithms used for these improvements, nor does it offer examples of software products that have been enhanced in these ways.",
+      "sources": [
+        {
+          "title": "AI in Software Development | IBM",
+          "url": "https://www.ibm.com/think/topics/ai-in-software-development",
+          "snippet": "[Skip to content](https://www.ibm.com/think/topics/ai-in-software-development#main-content)[IBM logo](https://www.ibm.com/) Software Infrastructure [Consulting](https://www.ibm.com/consulting?lnk=L0G)Support Support [What's new](https://www.ibm.com/new?lnk=flatitem) - [Overview\\\\ Resolve product issues with self-service tools](https://www.ibm.com/mysupport/s/?language=en_US&lnk=flathl) - [Communit...",
+          "score": 0.0
+        },
+        {
+          "title": "AI-enabled software development fuels innovation - McKinsey",
+          "url": "https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/how-an-ai-enabled-software-product-development-life-cycle-will-fuel-innovation",
+          "snippet": "# Access Denied You don't have permission to access \"http://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/how-an-ai-enabled-software-product-development-life-cycle-will-fuel-innovation\" on this server. Reference #18.990c0317.1778340526.226d2c4b https://errors.edgesuite.net/18.990c0317.1778340526.226d2c4b",
+          "score": 0.0
+        },
+        {
+          "title": "How AI Accelerates Every Stage of the Software Development ...",
+          "url": "https://advantailabs.com/blog/how-ai-accelerates-every-stage-of-the-software-development-lifecycle",
+          "snippet": "Technology software development lifecycle'software development # How AI Accelerates Every Stage of the Software Development Lifecycle ![Author Avatar](https://advantailabs.com/assets/logo.svg)Shreyansh Rane March 13, 2026 ![How AI Accelerates Every Stage of the Software Development Lifecycle](https://advantailabs.com/_next/image?url=https%3A%2F%2Faxucctxcobicbfnplbme.supabase.co%2Fstorage%2Fv1%2Fo...",
+          "score": 0.0
+        },
+        {
+          "title": "How AI Improves Software Development Process - JetRuby Agency",
+          "url": "https://jetruby.com/blog/ai-usage-for-software-development-improvement/",
+          "snippet": "Table of Contents As an [IT company](https://jetruby.com/company-profile/), we constantly explore ways to make our work productive and free from repetitive tasks. In line with this vision, developers must be liberated from mundane, routine tasks to contribute their best to the code creation process. This approach prevents developer burnout and yields the best results for the development process. I...",
+          "score": 0.0
+        },
+        {
+          "title": "Top 9 Ways AI is Revolutionizing Modern Software Development",
+          "url": "https://manaosoftware.com/the-role-of-ai-in-modern-software-development/",
+          "snippet": "# Top 9 Ways AI is Revolutionizing Modern Software Development [Contact us](https://manaosoftware.com/contact/) ![](https://manaosoftware.com/wp-content/uploads/2023/08/AIblog-scaled-1-1024x576.jpg) #### Table of Contents In the fast-paced world of [software development](https://manaosoftware.com/services/), technology continuously evolves to meet the ever-growing demands of businesses and consume...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://www.ibm.com/content/dam/connectedassets-adobe-cms/worldwide-content/stock-assets/getty/image/photography/6a/80/1w3a2773.jpg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-09T15:28:49.909828+00:00"
+    },
+    {
+      "execution_id": "a93460a8-9a7b-46d2-be69-e6d89190dc60",
+      "conversation_id": "b1579248-8b64-4e8e-98fb-0a7f1981dec0",
+      "question": "What are the main similarities between GraphQL and REST?",
+      "answer": "[API Error] Failed after 3 retries: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash-lite\nPlease retry in 29.165696124s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.5-flash-lite\"\n  }\n  quota_value: 20\n}\n, retry_delay {\n  seconds: 29\n}\n]",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Bt\n医\n二\n一...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\18_RESTful_API_and_GraphQL_Design.pdf",
+          "title": "18_RESTful_API_and_GraphQL_Design.pdf",
+          "rerank_score": -11.034971237182617,
+          "image_urls": []
+        }
+      ],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-09T15:37:34.625163+00:00"
+    },
+    {
+      "execution_id": "7b5a4a4f-9612-4b8f-8992-2666b6e84ac1",
+      "conversation_id": "73af47e1-2efa-4b6c-abe3-e30413edd04b",
+      "question": "What is Microsoft Azure and what does it provide?",
+      "answer": "[API Error] Failed after 3 retries: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash-lite\nPlease retry in 51.800680902s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.5-flash-lite\"\n  }\n  quota_value: 20\n}\n, retry_delay {\n  seconds: 51\n}\n]",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "E\nTheimportanceoflanguage\nAcceptcriticismandbeopentochange...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\27_Soft_Skills_for_Software_Engineers.pdf",
+          "title": "27_Soft_Skills_for_Software_Engineers.pdf",
+          "rerank_score": -11.005861282348633,
+          "image_urls": []
+        },
+        {
+          "rank": 2,
+          "text": "Bt\n医\n二\n一...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\18_RESTful_API_and_GraphQL_Design.pdf",
+          "title": "18_RESTful_API_and_GraphQL_Design.pdf",
+          "rerank_score": -11.014693260192871,
+          "image_urls": []
+        },
+        {
+          "rank": 3,
+          "text": "SELECT AVG(salary）FROMemployees\n)；\nNASS\n--INNERJOIN\nFULLJOIN\nSQL Joins CheatSheet\n5.Indexing\na\nRETUR...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\30_Advanced_SQL_and_Database_Optimization.pdf",
+          "title": "30_Advanced_SQL_and_Database_Optimization.pdf",
+          "rerank_score": -11.45163631439209,
+          "image_urls": []
+        },
+        {
+          "title": "Microsoft Azure: Cloud Computing Services",
+          "url": "https://azure.microsoft.com/en-us",
+          "snippet": "This is the Trace Id: 61a38ef19e4f20a6b753b88939be39fd Skip to main content ![](https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/3229800-Hero-Background-1600x580?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=2000&hei=725&qlt=100&fit=constrain) AZURE. YOUR INTELLIGENT CLOUD. # Now shipping: Microsoft Build 2026 Be part of Microsoft Build and learn how tech leaders train and fine-tune models, d...",
+          "score": 0.0
+        },
+        {
+          "title": "Microsoft Azure - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Microsoft_Azure",
+          "snippet": "[Jump to content](https://en.wikipedia.org/wiki/Microsoft_Azure#bodyContent) From Wikipedia, the free encyclopedia Cloud computing platform by Microsoft Not to be confused with [Mozilla Azure](https://en.wikipedia.org/wiki/Gecko_(software)#Azure \"Gecko (software)\"). | | | | --- | --- | | ![](https://upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/40px-Ambox_important.svg.png) | hi...",
+          "score": 0.0
+        },
+        {
+          "title": "Microsoft Azure Explained: A Beginner's Guide to Cloud Computing",
+          "url": "https://www.youtube.com/watch?v=nr-HQN9nIxM",
+          "snippet": "Error 403 (Forbidden)!!1 **403.** That’s an error. We're sorry, but you do not have access to this page. That’s all we know. Back [![](https://www.youtube.com/watch?v=nr-HQN9nIxM)](https://www.youtube.com/ \"YouTube Home\") Skip navigation Search Search with your voice [Sign in](https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsig...",
+          "score": 0.0
+        },
+        {
+          "title": "What is Microsoft Azure and How Does It Work? - TechTarget",
+          "url": "https://www.techtarget.com/searchcloudcomputing/definition/Windows-Azure",
+          "snippet": "![](https://cdn.ttgtmedia.com/visuals/pillar/Pillar_2020_06June_b.jpg) Tech Accelerator [What is public cloud? A definition and in-depth guide](https://www.techtarget.com/searchcloudcomputing/definition/public-cloud) [Prev](https://www.techtarget.com/whatis/definition/multi-tenancy \"What is multi-tenancy (multi-tenant architecture)?\") [Next](https://www.techtarget.com/searchcloudcomputing/answer/W...",
+          "score": 0.0
+        },
+        {
+          "title": "Microsoft Azure Explained: What It Is and Why It Matters",
+          "url": "https://ccbtechnology.com/what-microsoft-azure-is-and-why-it-matters/",
+          "snippet": "![](<Base64-Image-Removed>) Close Search Search for:Search [Skip to content](https://ccbtechnology.com/what-microsoft-azure-is-and-why-it-matters/#content) Microsoft Azure is usually described as having “limitless potential” and “unlimited possibilities,” but **what does Azure actually _do_ and what can it do for your business?** In this blog, I’ll answer these questions and show you the value wit...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/3229800-Hero-Background-1600x580?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=2000&hei=725&qlt=100&fit=constrain"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-09T15:48:12.137538+00:00"
+    },
+    {
+      "execution_id": "ba77ce1e-06f6-4d1b-86a2-6549412872bc",
+      "conversation_id": "c70c71dd-1ed2-4d96-bdb2-2bc21132233d",
+      "question": "What is Microsoft Azure and what does it provide?",
+      "answer": "[API Error] Failed after 3 retries: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash-lite\nPlease retry in 51.800680902s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.5-flash-lite\"\n  }\n  quota_value: 20\n}\n, retry_delay {\n  seconds: 51\n}\n]",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "E\nTheimportanceoflanguage\nAcceptcriticismandbeopentochange...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\27_Soft_Skills_for_Software_Engineers.pdf",
+          "title": "27_Soft_Skills_for_Software_Engineers.pdf",
+          "rerank_score": -11.005861282348633,
+          "image_urls": []
+        },
+        {
+          "rank": 2,
+          "text": "Bt\n医\n二\n一...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\18_RESTful_API_and_GraphQL_Design.pdf",
+          "title": "18_RESTful_API_and_GraphQL_Design.pdf",
+          "rerank_score": -11.014693260192871,
+          "image_urls": []
+        },
+        {
+          "rank": 3,
+          "text": "SELECT AVG(salary）FROMemployees\n)；\nNASS\n--INNERJOIN\nFULLJOIN\nSQL Joins CheatSheet\n5.Indexing\na\nRETUR...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\30_Advanced_SQL_and_Database_Optimization.pdf",
+          "title": "30_Advanced_SQL_and_Database_Optimization.pdf",
+          "rerank_score": -11.45163631439209,
+          "image_urls": []
+        },
+        {
+          "title": "Microsoft Azure: Cloud Computing Services",
+          "url": "https://azure.microsoft.com/en-us",
+          "snippet": "This is the Trace Id: 61a38ef19e4f20a6b753b88939be39fd Skip to main content ![](https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/3229800-Hero-Background-1600x580?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=2000&hei=725&qlt=100&fit=constrain) AZURE. YOUR INTELLIGENT CLOUD. # Now shipping: Microsoft Build 2026 Be part of Microsoft Build and learn how tech leaders train and fine-tune models, d...",
+          "score": 0.0
+        },
+        {
+          "title": "Microsoft Azure - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Microsoft_Azure",
+          "snippet": "[Jump to content](https://en.wikipedia.org/wiki/Microsoft_Azure#bodyContent) From Wikipedia, the free encyclopedia Cloud computing platform by Microsoft Not to be confused with [Mozilla Azure](https://en.wikipedia.org/wiki/Gecko_(software)#Azure \"Gecko (software)\"). | | | | --- | --- | | ![](https://upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/40px-Ambox_important.svg.png) | hi...",
+          "score": 0.0
+        },
+        {
+          "title": "Microsoft Azure Explained: A Beginner's Guide to Cloud Computing",
+          "url": "https://www.youtube.com/watch?v=nr-HQN9nIxM",
+          "snippet": "Error 403 (Forbidden)!!1 **403.** That’s an error. We're sorry, but you do not have access to this page. That’s all we know. Back [![](https://www.youtube.com/watch?v=nr-HQN9nIxM)](https://www.youtube.com/ \"YouTube Home\") Skip navigation Search Search with your voice [Sign in](https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsig...",
+          "score": 0.0
+        },
+        {
+          "title": "What is Microsoft Azure and How Does It Work? - TechTarget",
+          "url": "https://www.techtarget.com/searchcloudcomputing/definition/Windows-Azure",
+          "snippet": "![](https://cdn.ttgtmedia.com/visuals/pillar/Pillar_2020_06June_b.jpg) Tech Accelerator [What is public cloud? A definition and in-depth guide](https://www.techtarget.com/searchcloudcomputing/definition/public-cloud) [Prev](https://www.techtarget.com/whatis/definition/multi-tenancy \"What is multi-tenancy (multi-tenant architecture)?\") [Next](https://www.techtarget.com/searchcloudcomputing/answer/W...",
+          "score": 0.0
+        },
+        {
+          "title": "Microsoft Azure Explained: What It Is and Why It Matters",
+          "url": "https://ccbtechnology.com/what-microsoft-azure-is-and-why-it-matters/",
+          "snippet": "![](<Base64-Image-Removed>) Close Search Search for:Search [Skip to content](https://ccbtechnology.com/what-microsoft-azure-is-and-why-it-matters/#content) Microsoft Azure is usually described as having “limitless potential” and “unlimited possibilities,” but **what does Azure actually _do_ and what can it do for your business?** In this blog, I’ll answer these questions and show you the value wit...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/3229800-Hero-Background-1600x580?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=2000&hei=725&qlt=100&fit=constrain"
+      ],
+      "cache_hit": true,
+      "timestamp": "2026-05-09T15:49:53.505811+00:00"
+    },
+    {
+      "execution_id": "f21a9a6d-0417-4ac3-b43a-5f6fdf181ae9",
+      "conversation_id": "025aec09-8a73-41b0-a201-c73da44d438c",
+      "question": "When was Microsoft Azure released?",
+      "answer": "Microsoft Azure was generally available on February 1, 2010. It was initially announced as \"Windows Azure\" in 2008 at The Professional Developers Conference (PDC).",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Bt\n医\n二\n一...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\18_RESTful_API_and_GraphQL_Design.pdf",
+          "title": "18_RESTful_API_and_GraphQL_Design.pdf",
+          "rerank_score": -10.700211524963379,
+          "image_urls": []
+        },
+        {
+          "rank": 2,
+          "text": "E\nTheimportanceoflanguage\nAcceptcriticismandbeopentochange...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\27_Soft_Skills_for_Software_Engineers.pdf",
+          "title": "27_Soft_Skills_for_Software_Engineers.pdf",
+          "rerank_score": -10.9107027053833,
+          "image_urls": []
+        },
+        {
+          "rank": 3,
+          "text": "SELECT AVG(salary）FROMemployees\n)；\nNASS\n--INNERJOIN\nFULLJOIN\nSQL Joins CheatSheet\n5.Indexing\na\nRETUR...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\30_Advanced_SQL_and_Database_Optimization.pdf",
+          "title": "30_Advanced_SQL_and_Database_Optimization.pdf",
+          "rerank_score": -11.397439002990723,
+          "image_urls": []
+        },
+        {
+          "title": "Microsoft Azure - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Microsoft_Azure",
+          "snippet": "[Jump to content](https://en.wikipedia.org/wiki/Microsoft_Azure#bodyContent) From Wikipedia, the free encyclopedia Cloud computing platform by Microsoft Not to be confused with [Mozilla Azure](https://en.wikipedia.org/wiki/Gecko_(software)#Azure \"Gecko (software)\"). | | | | --- | --- | | ![](https://upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/40px-Ambox_important.svg.png) | hi...",
+          "score": 0.0
+        },
+        {
+          "title": "History of Microsoft Azure",
+          "url": "https://techcommunity.microsoft.com/blog/educatordeveloperblog/the-history-of-microsoft-azure/3574204",
+          "snippet": "## Blog Post Educator Developer Blog 5 MIN READ # The History of Microsoft Azure [![Roosevelt_Abandy's avatar](https://techcommunity.microsoft.com/t5/s/gxcuf89792/images/dS0xNDU1MzY4LTM4ODA0NWkwODFCQjkyOTZENUUyRDM3?image-dimensions=50x50)](https://techcommunity.microsoft.com/users/roosevelt_abandy/1455368) [Roosevelt\\_Abandy](https://techcommunity.microsoft.com/users/roosevelt_abandy/1455368) Copp...",
+          "score": 0.0
+        },
+        {
+          "title": "A Look Back At Ten Years Of Microsoft Azure - Forbes",
+          "url": "https://www.forbes.com/sites/janakirammsv/2020/02/03/a-look-back-at-ten-years-of-microsoft-azure/",
+          "snippet": "BETA This is a BETA experience. opt-out here [Innovation](https://www.forbes.com/innovation/)[Cloud](https://www.forbes.com/cloud/) # A Look Back At Ten Years Of Microsoft Azure By [Janakiram MSV](https://www.forbes.com/sites/janakirammsv/ \"https://www.forbes.com/sites/janakirammsv/\"), Senior Contributor. Forbes contributors publish independent expert analyses and insights. I cover emerging techno...",
+          "score": 0.0
+        },
+        {
+          "title": "What is Microsoft Azure? The cloud platform explained. - Pluralsight",
+          "url": "https://www.pluralsight.com/resources/blog/cloud/what-is-microsoft-azure",
+          "snippet": "filter\\_drama Build workforce capabilities that drive cloud ROI. [Explore Cloud Ready](https://www.pluralsight.com/solutions/cloud-ready) filter\\_drama Cloud Ready: Drive cloud ROI. Upskill your workforce. Live webinar on May 28. [Register now.](https://www.pluralsight.com/resources/webinars/universal/cloudready) [Pluralsight](https://www.pluralsight.com/) [Sign in](https://app.pluralsight.com/id)...",
+          "score": 0.0
+        },
+        {
+          "title": "A Decade of Microsoft Azure: From its Creation to its Many ...",
+          "url": "https://abouttmc.com/blog/a-decade-of-microsoft-azure-from-its-creation-to-its-many-successful-transformations/",
+          "snippet": "[Skip to content](https://abouttmc.com/blog/a-decade-of-microsoft-azure-from-its-creation-to-its-many-successful-transformations/#content) # A Decade of Microsoft Azure: From its Creation to its Many Successful Transformations Search for: A Decade of Microsoft Azure: From its Creation to its Many Successful Transformations ![a-decade-of-microsoft-azure-from-its-creation-to-its-many-successful-tran...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_Azure.svg/1280px-Microsoft_Azure.svg.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-09T15:50:52.795525+00:00"
+    },
+    {
+      "execution_id": "b2280009-d3d8-45b0-9075-383db26bb233",
+      "conversation_id": "dd4e7773-f293-452a-a062-fd89adcfd4c2",
+      "question": "What do users need in order to access Azure services and resources?",
+      "answer": "To access Azure services and resources, users need an Azure account. A free Azure account can be created if one does not already exist.\n\nAdditionally, access to certain Azure pages and functionalities may require authorization, which can be obtained by signing in or changing directories.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Bt\n医\n二\n一...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\18_RESTful_API_and_GraphQL_Design.pdf",
+          "title": "18_RESTful_API_and_GraphQL_Design.pdf",
+          "rerank_score": -10.47714900970459,
+          "image_urls": []
+        },
+        {
+          "rank": 2,
+          "text": "E\nTheimportanceoflanguage\nAcceptcriticismandbeopentochange...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\27_Soft_Skills_for_Software_Engineers.pdf",
+          "title": "27_Soft_Skills_for_Software_Engineers.pdf",
+          "rerank_score": -10.643604278564453,
+          "image_urls": []
+        },
+        {
+          "rank": 3,
+          "text": "SELECT AVG(salary）FROMemployees\n)；\nNASS\n--INNERJOIN\nFULLJOIN\nSQL Joins CheatSheet\n5.Indexing\na\nRETUR...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\30_Advanced_SQL_and_Database_Optimization.pdf",
+          "title": "30_Advanced_SQL_and_Database_Optimization.pdf",
+          "rerank_score": -11.422102928161621,
+          "image_urls": []
+        },
+        {
+          "title": "Tutorial: Grant a user access to Azure resources using the Azure portal",
+          "url": "https://learn.microsoft.com/en-us/azure/role-based-access-control/quickstart-assign-role-user-portal",
+          "snippet": "Table of contents Exit editor mode Ask LearnAsk Learn Reading modeTable of contents[Read in English](https://learn.microsoft.com/en-us/azure/role-based-access-control/quickstart-assign-role-user-portal)Add to CollectionsAdd to plan[Edit](https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/role-based-access-control/quickstart-assign-role-user-portal.md) * * * Copy MarkdownPrint * * * Not...",
+          "score": 0.0
+        },
+        {
+          "title": "Azure permissions - Azure RBAC | Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/azure/role-based-access-control/resource-provider-operations",
+          "snippet": "Table of contents Exit editor mode Ask LearnAsk Learn Reading modeTable of contents[Read in English](https://learn.microsoft.com/en-us/azure/role-based-access-control/resource-provider-operations)Add to CollectionsAdd to plan[Edit](https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/role-based-access-control/resource-provider-operations.md) * * * Copy MarkdownPrint * * * Note Access to...",
+          "score": 0.0
+        },
+        {
+          "title": "Manage access to resources in Azure - Cloud Adoption Framework",
+          "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/manage-access",
+          "snippet": "Table of contents Exit editor mode Ask LearnAsk Learn Reading modeTable of contents[Read in English](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/manage-access)Add to CollectionsAdd to plan[Edit](https://github.com/MicrosoftDocs/cloud-adoption-framework/blob/main/docs/ready/azure-setup-guide/manage-access.md) * * * Copy MarkdownPrint * * * Note Access to...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://learn.microsoft.com/en-us/media/open-graph-image.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-09T15:52:22.705378+00:00"
+    },
+    {
+      "execution_id": "32693962-834d-4e6e-bc65-c6df6ecd076e",
+      "conversation_id": "cdaa11f6-b2ff-4390-a060-379f6e7347d6",
+      "question": "What is Microsoft Azure",
+      "answer": "Based on the provided context, there is no information about Microsoft Azure. The context includes snippets related to:\n\n*   General advice on accepting criticism and being open to change.\n*   What appears to be a fragment of SQL code for calculating average salary and information about SQL Joins, indexing, and triggers.\n*   An image with Chinese characters and numbers.\n\nTherefore, I cannot answer what Microsoft Azure is using only the supplied context.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "E\nTheimportanceoflanguage\nAcceptcriticismandbeopentochange...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\27_Soft_Skills_for_Software_Engineers.pdf",
+          "title": "27_Soft_Skills_for_Software_Engineers.pdf",
+          "rerank_score": -11.130281448364258,
+          "image_urls": []
+        },
+        {
+          "rank": 2,
+          "text": "Bt\n医\n二\n一...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\18_RESTful_API_and_GraphQL_Design.pdf",
+          "title": "18_RESTful_API_and_GraphQL_Design.pdf",
+          "rerank_score": -11.176385879516602,
+          "image_urls": []
+        },
+        {
+          "rank": 3,
+          "text": "SELECT AVG(salary）FROMemployees\n)；\nNASS\n--INNERJOIN\nFULLJOIN\nSQL Joins CheatSheet\n5.Indexing\na\nRETUR...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\30_Advanced_SQL_and_Database_Optimization.pdf",
+          "title": "30_Advanced_SQL_and_Database_Optimization.pdf",
+          "rerank_score": -11.428619384765625,
+          "image_urls": []
+        }
+      ],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-09T15:55:45.521824+00:00"
+    },
+    {
+      "execution_id": "d2ac306b-0f90-4ff2-8d57-94227be06d6f",
+      "conversation_id": "f9041f30-38bc-4fc6-ab04-5b2d6f5fa7ae",
+      "question": "What is Azure",
+      "answer": "Microsoft Azure is a cloud computing platform launched in 2010. It offers a global network of datacenters managed by Microsoft, aiming to reduce the time and expense associated with maintaining on-premises infrastructure. Azure provides a unified approach to cloud computing with comprehensive AI, data, and application services. It is designed to be an open and flexible platform that supports various business strategies and stages of AI transformation. Azure offers more than 200 products and services.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "E\nTheimportanceoflanguage\nAcceptcriticismandbeopentochange...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\27_Soft_Skills_for_Software_Engineers.pdf",
+          "title": "27_Soft_Skills_for_Software_Engineers.pdf",
+          "rerank_score": -10.993948936462402,
+          "image_urls": []
+        },
+        {
+          "rank": 2,
+          "text": "Bt\n医\n二\n一...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\18_RESTful_API_and_GraphQL_Design.pdf",
+          "title": "18_RESTful_API_and_GraphQL_Design.pdf",
+          "rerank_score": -11.208651542663574,
+          "image_urls": []
+        },
+        {
+          "rank": 3,
+          "text": "SELECT AVG(salary）FROMemployees\n)；\nNASS\n--INNERJOIN\nFULLJOIN\nSQL Joins CheatSheet\n5.Indexing\na\nRETUR...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\30_Advanced_SQL_and_Database_Optimization.pdf",
+          "title": "30_Advanced_SQL_and_Database_Optimization.pdf",
+          "rerank_score": -11.450023651123047,
+          "image_urls": []
+        },
+        {
+          "title": "What is Azure? | Microsoft Azure",
+          "url": "https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-azure",
+          "snippet": "This is the Trace Id: efd5f3bdc4a7ff7d1e0584ef67ef1617 Skip to main content # What is Azure? Azure is a trusted cloud platform for building, deploying, and managing innovative solutions. [Get to know Azure](https://azure.microsoft.com/en-us/explore/) [Get started with Azure](https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account) ![Decorative](https://cdn-dynmedia-1.microsoft.com...",
+          "score": 0.0
+        },
+        {
+          "title": "Microsoft Azure: Cloud Computing Services",
+          "url": "https://azure.microsoft.com/en-us",
+          "snippet": "This is the Trace Id: 61a38ef19e4f20a6b753b88939be39fd Skip to main content ![](https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/3229800-Hero-Background-1600x580?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=2000&hei=725&qlt=100&fit=constrain) AZURE. YOUR INTELLIGENT CLOUD. # Now shipping: Microsoft Build 2026 Be part of Microsoft Build and learn how tech leaders train and fine-tune models, d...",
+          "score": 0.0
+        },
+        {
+          "title": "Microsoft Azure - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Microsoft_Azure",
+          "snippet": "[Jump to content](https://en.wikipedia.org/wiki/Microsoft_Azure#bodyContent) From Wikipedia, the free encyclopedia Cloud computing platform by Microsoft Not to be confused with [Mozilla Azure](https://en.wikipedia.org/wiki/Gecko_(software)#Azure \"Gecko (software)\"). | | | | --- | --- | | ![](https://upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/40px-Ambox_important.svg.png) | hi...",
+          "score": 0.0
+        },
+        {
+          "title": "Microsoft Azure Explained: A Beginner's Guide to Cloud Computing",
+          "url": "https://www.youtube.com/watch?v=nr-HQN9nIxM",
+          "snippet": "Error 403 (Forbidden)!!1 **403.** That’s an error. We're sorry, but you do not have access to this page. That’s all we know. Back [![](https://www.youtube.com/watch?v=nr-HQN9nIxM)](https://www.youtube.com/ \"YouTube Home\") Skip navigation Search Search with your voice [Sign in](https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsig...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/vn33r8vd-WhatIsAzure-hero-photo-752x580?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=2000&hei=1543&qlt=100&fit=constrain"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-09T15:57:06.743623+00:00"
+    },
+    {
+      "execution_id": "29983b7c-78ec-4b1f-8711-b8193c43db4e",
+      "conversation_id": "1a4b73c1-e931-4d90-a00b-d6747737348d",
+      "question": "Why should you use Azure?",
+      "answer": "Microsoft Azure offers several benefits for enterprises:\n\n*   **Scalability and Security:** Azure supports scalability, collaboration, and top-tier security, helping organizations stay productive and secure.\n*   **Cost Reduction:** It can help reduce IT costs.\n*   **Infrastructure and Platform as a Service (IaaS & PaaS):** Azure provides both IaaS, allowing enterprises to outsource infrastructure and pay for usage, and PaaS, enabling the creation of web apps and solutions without managing underlying infrastructure.\n*   **Wide Technology Support:** Azure supports a broad range of programming languages, frameworks, operating systems, databases, and devices, allowing the use of trusted tools and technologies.\n*   **Enterprise Adoption:** Globally, 90% of Fortune 500 companies use Microsoft Azure.\n*   **Application Development:** It enables enterprises to rapidly build, deploy, and manage applications of varying complexity using integrated cloud services.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Bt\n医\n二\n一...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\18_RESTful_API_and_GraphQL_Design.pdf",
+          "title": "18_RESTful_API_and_GraphQL_Design.pdf",
+          "rerank_score": -11.042516708374023,
+          "image_urls": []
+        },
+        {
+          "rank": 2,
+          "text": "E\nTheimportanceoflanguage\nAcceptcriticismandbeopentochange...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\27_Soft_Skills_for_Software_Engineers.pdf",
+          "title": "27_Soft_Skills_for_Software_Engineers.pdf",
+          "rerank_score": -11.118268013000488,
+          "image_urls": []
+        },
+        {
+          "rank": 3,
+          "text": "SELECT AVG(salary）FROMemployees\n)；\nNASS\n--INNERJOIN\nFULLJOIN\nSQL Joins CheatSheet\n5.Indexing\na\nRETUR...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\30_Advanced_SQL_and_Database_Optimization.pdf",
+          "title": "30_Advanced_SQL_and_Database_Optimization.pdf",
+          "rerank_score": -11.464920997619629,
+          "image_urls": []
+        },
+        {
+          "title": "10 reasons why to choose Azure for your Enterprise",
+          "url": "https://www.saviantconsulting.com/blog/10-reasons-why-choose-microsoft-azure.aspx",
+          "snippet": "# Why Choose Microsoft Azure? 10 Enterprise-Proven Benefits That Drive Growth 1. [Home](https://www.saviantconsulting.com/) 2. [Blog](https://www.saviantconsulting.com/blog.aspx) ![Reasons why to choose Microsoft Azure for your Enterprise](https://www.saviantconsulting.com/images/blog/10-reasons-why-choose-azure-for-your-enterprise.png) Enterprises across the globe are realizing great success with...",
+          "score": 0.0
+        },
+        {
+          "title": "The Benefits of Microsoft Azure: What You Need to Know - YouTube",
+          "url": "https://www.youtube.com/watch?v=pzui_2L7dBI",
+          "snippet": "![Thumbnail (1920x1080)](https://i.ytimg.com/vi/pzui_2L7dBI/maxresdefault.jpg) # [The Benefits of Microsoft Azure: What You Need to Know](https://www.youtube.com/watch?v=pzui_2L7dBI) **Visibility**: Public **Uploaded by**: [Stoneridge Software](https://www.youtube.com/@StoneridgeSoftware) **Uploaded at**: 2025-05-14 **Published at**: **Length**: 12:49 **Views**: 341 **Likes**: 2 **Category**: Scie...",
+          "score": 0.0
+        },
+        {
+          "title": "Why should you recommend Microsoft Azure to your customers?",
+          "url": "https://www.quora.com/Why-should-you-recommend-Microsoft-Azure-to-your-customers",
+          "snippet": "Something went wrong. Wait a moment and try again. Try again Skip to content Skip to search [Go to Quora Home](https://www.quora.com/) Sign In [Cloud Computing](https://www.quora.com/topic/Cloud-Computing) [Product Recommendations](https://www.quora.com/topic/Product-Recommendations) [Microsoft (company)](https://www.quora.com/topic/Microsoft-company-1) [Cloud Infrastructure Serv...](https://www.q...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://www.saviantconsulting.com/images/blog/10-reasons-why-choose-azure-for-your-enterprise.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-09T15:57:48.524902+00:00"
+    },
+    {
+      "execution_id": "e7a862cb-f4ad-45fd-9101-f0e04e1d3098",
+      "conversation_id": "d9a2217d-92c4-4a4f-b7c9-98dfc113b658",
+      "question": "What are the similarities between Hadoop and Spark?",
+      "answer": "## Select your cookie preferences We use essential cookies and similar tools that are necessary to provide our site and services. We use performance cookies to collect anonymous statistics, so we can understand how customers use our site and make improvements. Essential cookies cannot be deactivated, but you can choose “Customize” or “Decline” to decline performance cookies. If you agree, AWS and... [Skip to main content](https://www.openlogic.com/blog/spark-vs-hadoop#main-content) Blog January 14, 2025 # Spark vs. Hadoop: Key Differences and Use Cases [![William Crowell](https://www.openlogic.com/sites/default/files/2025-06/Screenshot%202025-06-30%20at%202.27.27%E2%80%AFPM.png)](https://www.openlogic.com/author/william-crowell) [William Crowell](https://www.openlogic.com/author/william-crowe... # Hadoop vs. Spark: What’s the Difference? Written by Coursera Staff • Updated on Feb 21, 2026 Share Hadoop and Spark are both smart options for big-scale data processing. Learn more about the similarities and differences between Hadoop and Spark, when to use Spark versus Hadoop, and how to choose between Apache Hadoop and Apache Spark. ![[Featured Image] Two colleagues sit at a computer and discu...",
+      "sources": [
+        {
+          "title": "Hadoop vs Spark - Difference Between Apache Frameworks - AWS",
+          "url": "https://aws.amazon.com/compare/the-difference-between-hadoop-vs-spark/",
+          "snippet": "## Select your cookie preferences We use essential cookies and similar tools that are necessary to provide our site and services. We use performance cookies to collect anonymous statistics, so we can understand how customers use our site and make improvements. Essential cookies cannot be deactivated, but you can choose “Customize” or “Decline” to decline performance cookies. If you agree, AWS and...",
+          "score": 0.0
+        },
+        {
+          "title": "Spark vs. Hadoop: Key Differences and Use Cases | OpenLogic",
+          "url": "https://www.openlogic.com/blog/spark-vs-hadoop",
+          "snippet": "[Skip to main content](https://www.openlogic.com/blog/spark-vs-hadoop#main-content) Blog January 14, 2025 # Spark vs. Hadoop: Key Differences and Use Cases [![William Crowell](https://www.openlogic.com/sites/default/files/2025-06/Screenshot%202025-06-30%20at%202.27.27%E2%80%AFPM.png)](https://www.openlogic.com/author/william-crowell) [William Crowell](https://www.openlogic.com/author/william-crowe...",
+          "score": 0.0
+        },
+        {
+          "title": "Hadoop vs. Spark: What's the Difference? - Coursera",
+          "url": "https://www.coursera.org/articles/hadoop-vs-spark",
+          "snippet": "# Hadoop vs. Spark: What’s the Difference? Written by Coursera Staff • Updated on Feb 21, 2026 Share Hadoop and Spark are both smart options for big-scale data processing. Learn more about the similarities and differences between Hadoop and Spark, when to use Spark versus Hadoop, and how to choose between Apache Hadoop and Apache Spark. ![[Featured Image] Two colleagues sit at a computer and discu...",
+          "score": 0.0
+        },
+        {
+          "title": "What are the differences and similarities between Spark and ... - Quora",
+          "url": "https://www.quora.com/What-are-the-differences-and-similarities-between-Spark-and-Hadoop-MapReduce",
+          "snippet": "Something went wrong. Wait a moment and try again. Try again Skip to content Skip to search [Go to Quora Home](https://www.quora.com/) Sign In [Computer Science](https://www.quora.com/topic/Computer-Science) [Apache Spark](https://www.quora.com/topic/Apache-Spark) [Data Engineering Solution...](https://www.quora.com/topic/Data-Engineering-Solutions-1) [Big Data Analytics](https://www.quora.com/top...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://www.openlogic.com/sites/default/files/image-blog-openlogic-spark-vs-hadoop-400-600.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-09T16:04:35.088971+00:00"
+    },
+    {
+      "execution_id": "68396b03-8baa-4347-9aba-5258d5ee027d",
+      "conversation_id": "8001ab26-5f2e-45c9-97e7-11aa3a089465",
+      "question": "Apache Hadoop and Apache Spark are ?",
+      "answer": "Apache Hadoop and Apache Spark are both open-source frameworks for big data processing.\n\n*   **Apache Hadoop:** Primarily known for its distributed storage (HDFS) and batch processing capabilities (MapReduce). It's designed for large-scale data storage and processing of massive datasets.\n*   **Apache Spark:** An in-memory processing engine that is generally faster than Hadoop's MapReduce for many workloads, especially iterative algorithms and interactive data analysis. Spark can run on top of Hadoop (using HDFS for storage) or independently.",
+      "sources": [
+        {
+          "title": "Hadoop vs. Spark: What's the Difference? | IBM",
+          "url": "https://www.ibm.com/think/insights/hadoop-vs-spark",
+          "snippet": "[Skip to content](https://www.ibm.com/think/insights/hadoop-vs-spark#main-content)[IBM logo](https://www.ibm.com/) Software Infrastructure [Consulting](https://www.ibm.com/consulting?lnk=L0G)Support Support [What's new](https://www.ibm.com/new?lnk=flatitem) - [Overview\\\\ Resolve product issues with self-service tools](https://www.ibm.com/mysupport/s/?language=en_US&lnk=flathl) - [Community\\\\ Share...",
+          "score": 0.0
+        },
+        {
+          "title": "Apache Hadoop vs Apache Spark: What are the Differences?",
+          "url": "https://www.starburst.io/blog/apache-hadoop-vs-apache-spark/",
+          "snippet": "# Apache Hadoop vs Apache Spark: What are the Differences? StrategyApril 30, 2024 [![Cindy Ng](https://live-starburst.pantheonsite.io/wp-content/uploads/2022/05/TBP_1081-scaled-e1658069238668-150x150.jpg)\\\\ \\\\ Cindy Ng\\\\ \\\\ Sr. Manager, Content\\\\ \\\\ Starburst](https://www.starburst.io/blog/author/cindy-ng/) [![Cindy Ng](https://live-starburst.pantheonsite.io/wp-content/uploads/2022/05/TBP_1081-sca...",
+          "score": 0.0
+        },
+        {
+          "title": "Difference Between Hadoop and Spark - GeeksforGeeks",
+          "url": "https://www.geeksforgeeks.org/cloud-computing/difference-between-hadoop-and-spark/",
+          "snippet": "[![geeksforgeeks](https://media.geeksforgeeks.org/gfg-gg-logo.svg)](https://www.geeksforgeeks.org/) - Courses - Tutorials - Interview Prep Switch to Dark Mode Sign In - [DSA](https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/) - [Practice Problems](https://www.geeksforgeeks.org/explore) - [C](https://www.geeksforgeeks.org/c/c-programming-language/) - [C++](https:/...",
+          "score": 0.0
+        },
+        {
+          "title": "Spark vs. Hadoop: Key Differences and Use Cases | OpenLogic",
+          "url": "https://www.openlogic.com/blog/spark-vs-hadoop",
+          "snippet": "[Skip to main content](https://www.openlogic.com/blog/spark-vs-hadoop#main-content) Blog January 14, 2025 # Spark vs. Hadoop: Key Differences and Use Cases [![William Crowell](https://www.openlogic.com/sites/default/files/2025-06/Screenshot%202025-06-30%20at%202.27.27%E2%80%AFPM.png)](https://www.openlogic.com/author/william-crowell) [William Crowell](https://www.openlogic.com/author/william-crowe...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://www.ibm.com/content/dam/connectedassets-adobe-cms/worldwide-content/stock-assets/getty/image/others/6a/4e/6a4eb9e7-c90d-4ad5-906518178fe2f785.jpg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-09T16:07:36.507958+00:00"
+    },
+    {
+      "execution_id": "3a86ce1a-4be9-470b-979e-e1b40bfd12ed",
+      "conversation_id": "6b60a968-f0d1-4aa1-9a76-f6e06f504ab2",
+      "question": "What are Apache Hadoop and Apache Spark mainly used for?",
+      "answer": "Apache Hadoop and Apache Spark are both open-source frameworks used for big data processing.\n\n**Apache Hadoop** is mainly used for:\n\n*   **Distributed Storage:** It provides a distributed file system (HDFS) that stores large datasets across multiple machines.\n*   **Distributed Processing:** It enables parallel processing of these large datasets using frameworks like MapReduce.\n\n**Apache Spark** is mainly used for:\n\n*   **Faster Data Processing:** Spark is known for its speed, often processing data much faster than Hadoop MapReduce. It achieves this through in-memory computation.\n*   **Versatile Workloads:** Spark supports a wide range of big data workloads, including:\n    *   Batch processing\n    *   Interactive queries\n    *   Real-time streaming\n    *   Machine learning\n    *   Graph processing\n\nIn essence, while Hadoop provides the foundational infrastructure for storing and processing big data, Spark offers a more advanced and faster engine for a broader set of data processing tasks, often leveraging Hadoop's storage capabilities.",
+      "sources": [
+        {
+          "title": "Hadoop vs. Spark: What's the Difference? - IBM",
+          "url": "https://www.ibm.com/think/insights/hadoop-vs-spark",
+          "snippet": "[Skip to content](https://www.ibm.com/think/insights/hadoop-vs-spark#main-content)[IBM logo](https://www.ibm.com/) Software Infrastructure [Consulting](https://www.ibm.com/consulting?lnk=L0G)Support Support [What's new](https://www.ibm.com/new?lnk=flatitem) - [Overview\\\\ Resolve product issues with self-service tools](https://www.ibm.com/mysupport/s/?language=en_US&lnk=flathl) - [Community\\\\ Share...",
+          "score": 0.0
+        },
+        {
+          "title": "Apache Hadoop vs Apache Spark: What are the Differences?",
+          "url": "https://www.starburst.io/blog/apache-hadoop-vs-apache-spark/",
+          "snippet": "# Apache Hadoop vs Apache Spark: What are the Differences? StrategyApril 30, 2024 [![Cindy Ng](https://live-starburst.pantheonsite.io/wp-content/uploads/2022/05/TBP_1081-scaled-e1658069238668-150x150.jpg)\\\\ \\\\ Cindy Ng\\\\ \\\\ Sr. Manager, Content\\\\ \\\\ Starburst](https://www.starburst.io/blog/author/cindy-ng/) [![Cindy Ng](https://live-starburst.pantheonsite.io/wp-content/uploads/2022/05/TBP_1081-sca...",
+          "score": 0.0
+        },
+        {
+          "title": "Apache Hadoop and Apache Spark for Big Data Analysis - Medium",
+          "url": "https://medium.com/data-science/apache-hadoop-and-apache-spark-for-big-data-analysis-daaf659fd0ee",
+          "snippet": "[Sitemap](https://medium.com/sitemap/sitemap.xml) [Open in app](https://play.google.com/store/apps/details?id=com.medium.reader&referrer=utm_source%3DmobileNavBar&source=post_page---top_nav_layout_nav-----------------------------------------) Sign up [Sign in](https://medium.com/m/signin?operation=login&redirect=https%3A%2F%2Fmedium.com%2Fdata-science%2Fapache-hadoop-and-apache-spark-for-big-data-...",
+          "score": 0.0
+        },
+        {
+          "title": "Apache Spark vs Apache Hadoop: 10 crucial differences (2026)",
+          "url": "https://www.flexera.com/blog/finops/apache-spark-vs-apache-hadoop/",
+          "snippet": "### [FinOps](https://www.flexera.com/blog/finops/) Subscribe Topics SaaS ManagementFinOpsIT VisibilityIT Asset ManagementProduct NewsApplication ReadinessSecurityPerspectives [FinOps](https://www.flexera.com/blog/finops/) # Apache Spark vs Apache Hadoop: 10 crucial differences (2026) [Pramit Marattha](https://www.flexera.com/blog/author/pramit/ \"Pramit Marattha\") [Pramit Marattha](https://www.flex...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://www.ibm.com/content/dam/connectedassets-adobe-cms/worldwide-content/stock-assets/getty/image/others/6a/4e/6a4eb9e7-c90d-4ad5-906518178fe2f785.jpg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-09T16:09:02.135088+00:00"
+    },
+    {
+      "execution_id": "e1a0837b-c85f-4d9a-9d1d-ea569e59e15b",
+      "conversation_id": "5cf0f266-4ee6-4781-8896-b25d7e1def07",
+      "question": "what is Software testing?",
+      "answer": "Software testing is the process of evaluating a software application to identify defects and ensure it meets specified requirements. The goal is to improve the quality of the software and reduce the risk of failures in production.\n\nKey aspects of software testing include:\n\n*   **Defect Identification:** Finding bugs, errors, or flaws in the software.\n*   **Quality Assurance:** Verifying that the software functions as intended and meets user expectations.\n*   **Risk Reduction:** Minimizing the likelihood of software failures and their impact.\n\nThe context provided does not detail specific methodologies, types of testing, or the roles involved in software testing.",
+      "sources": [
+        {
+          "title": "What is Software Testing? - IBM",
+          "url": "https://www.ibm.com/think/topics/software-testing",
+          "snippet": "[Skip to content](https://www.ibm.com/think/topics/software-testing#main-content)[IBM logo](https://www.ibm.com/) Software Infrastructure [Consulting](https://www.ibm.com/consulting?lnk=L0G)Support Support [What's new](https://www.ibm.com/new?lnk=flatitem) - [Overview\\\\ Resolve product issues with self-service tools](https://www.ibm.com/mysupport/s/?language=en_US&lnk=flathl) - [Community\\\\ Share...",
+          "score": 0.0
+        },
+        {
+          "title": "Introduction to Software Testing - GeeksforGeeks",
+          "url": "https://www.geeksforgeeks.org/software-testing/software-testing-basics/",
+          "snippet": "[![geeksforgeeks](https://media.geeksforgeeks.org/gfg-gg-logo.svg)](https://www.geeksforgeeks.org/) - Courses - Tutorials - Interview Prep Switch to Dark Mode Sign In - [DSA](https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/) - [Practice Problems](https://www.geeksforgeeks.org/explore) - [C](https://www.geeksforgeeks.org/c/c-programming-language/) - [C++](https:/...",
+          "score": 0.0
+        },
+        {
+          "title": "What Is Software Testing? - PTC",
+          "url": "https://www.ptc.com/en/technologies/application-lifecycle-management/test-management/software-testing?srsltid=AfmBOorehico4z7q2jgjkYhBRhLHWkjahBSHadHQ6hl-A7jBA98952kn",
+          "snippet": "[Skip to Main Content](https://www.ptc.com/en/technologies/application-lifecycle-management/test-management/software-testing) [PTC Header](https://www.ptc.com/en/technologies/application-lifecycle-management/test-management/software-testing#) Selected Language Unavailable This experience is not available in the language you selected. To view this experience, please continue in your current languag...",
+          "score": 0.0
+        },
+        {
+          "title": "Software Testing: Complete Beginner's Guide - Splunk",
+          "url": "https://www.splunk.com/en_us/blog/learn/software-testing.html",
+          "snippet": "[Learn](https://www.splunk.com/en_us/blog/learn.html) JUNE 03, 2025\\|8 MINUTE READ # Software Testing: Complete Beginner's Guide By [Austin Chia](https://www.splunk.com/en_us/blog/author/austin-chia.html) - [![Share on X](https://www.splunk.com/icons/x-social.svg)](https://twitter.com/intent/tweet?text=Found%20this%20useful%20link%20for%20you.%20%23splunk&url=https%3A%2F%2Fwww.splunk.com%2Fen_us%2...",
+          "score": 0.0
+        },
+        {
+          "title": "Software testing - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Software_testing",
+          "snippet": "[Jump to content](https://en.wikipedia.org/wiki/Software_testing#bodyContent) From Wikipedia, the free encyclopedia Checking software against a standard [![](https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/TestingCup-Polish-Championship-in-Software-Testing-Katowice-2016.jpg/250px-TestingCup-Polish-Championship-in-Software-Testing-Katowice-2016.jpg)](https://en.wikipedia.org/wiki/File:Tes...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://www.ibm.com/content/dam/worldwide-content/stock-assets/adb-stk/ul/g/71/ca/adobestock_463710214.jpeg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-09T16:12:08.509234+00:00"
+    },
+    {
+      "execution_id": "78b015d2-94d5-401b-8537-06816ff4f190",
+      "conversation_id": "3d5af0b2-b3e5-4c7e-8d1e-642f890bf9fa",
+      "question": "The stages of software testing are:",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-09T16:13:30.340104+00:00"
     }
   ]
 }
