@@ -36,6 +36,9 @@ def _build_state(
         conversation_id=conversation_id,
         question=question,
     )
+    if request.plan:
+        state.plan = request.plan
+        state.plan_override = True
     logger.info(
         "[agent-main] state built execution_id=%s user_id=%s conversation_id=%s question_len=%d",
         state.execution_id,

@@ -9,6 +9,7 @@ Rules:
 import logging
 import os
 import time
+import json
 from pathlib import Path
 from typing import Any
 from importlib import import_module
@@ -17,6 +18,7 @@ from importlib.util import find_spec
 langdetect = import_module("langdetect") if find_spec("langdetect") else None
 
 from src.modules.rag_module.schema_models import RAGQuery, RAGResult, SourceInfo
+from src.config.settings_models import get_settings
 from src.services.embedding_service.main import EmbeddingService
 from src.services.llm_service.main import LLMService
 from src.services.reranker_service.main import RerankerService
@@ -59,10 +61,25 @@ class RAGModuleImpl:
         )
         self.llm_service = llm_service
 
-        self.image_base_url = os.getenv("IMAGE_BASE_URL", "").strip()
-        self.image_storage_dir = self._resolve_image_storage_dir()
+        settings = get_settings()
+        configured_base_url = os.getenv("IMAGE_BASE_URL", "").strip()
+        if configured_base_url:
+            self.image_base_url = configured_base_url
+        else:
+            # Keep local image links available even when IMAGE_BASE_URL is not
+            # exported to process env (common when values only live in .env).
+            self.image_base_url = f"http://localhost:{settings.app.port}"
 
-        self.logger.info("RAG module initialized.")
+        configured_storage_dir = (
+            os.getenv("IMAGE_STORAGE_DIR", "").strip() or "database/images"
+        )
+        self.image_storage_dir = self._resolve_image_storage_dir(configured_storage_dir)
+
+        self.logger.info(
+            "RAG module initialized. image_base_url=%s image_storage_dir=%s",
+            self.image_base_url,
+            str(self.image_storage_dir),
+        )
 
     def query(self, request: RAGQuery) -> RAGResult:
         pipeline_start = time.perf_counter()
@@ -110,9 +127,15 @@ class RAGModuleImpl:
         context_parts = []
         sources = []
         image_urls_set: list[str] = []
+        docs_with_image_metadata = 0
+        docs_with_image_urls = 0
         for i, doc in enumerate(reranked):
             metadata = doc.get("metadata") or {}
+            if metadata.get("image_paths"):
+                docs_with_image_metadata += 1
             image_urls = self._build_image_urls(metadata)
+            if image_urls:
+                docs_with_image_urls += 1
             context_parts.append(f"[{i + 1}] {doc['text']}")
             sources.append(
                 SourceInfo(
@@ -128,6 +151,13 @@ class RAGModuleImpl:
                 if url not in image_urls_set:
                     image_urls_set.append(url)
         context = "\n\n".join(context_parts)
+        self.logger.info(
+            "RAG image mapping: reranked=%d docs_with_image_metadata=%d docs_with_image_urls=%d total_unique_image_urls=%d",
+            len(reranked),
+            docs_with_image_metadata,
+            docs_with_image_urls,
+            len(image_urls_set),
+        )
 
         # Step 6: LLM Generate ────────────────────────────────────
         if self.llm_service is not None:
@@ -170,17 +200,35 @@ class RAGModuleImpl:
         except Exception:
             return False
 
-    def _resolve_image_storage_dir(self) -> Path:
-        base = Path(os.getenv("IMAGE_STORAGE_DIR", "database/images"))
+    def _resolve_image_storage_dir(self, storage_dir: str) -> Path:
+        base = Path(storage_dir)
         if base.is_absolute():
             return base
-        base_dir = Path(__file__).resolve().parents[4]
+        base_dir = Path(__file__).resolve().parents[3]
         return (base_dir / base).resolve()
 
     def _build_image_urls(self, metadata: dict[str, Any]) -> list[str]:
         if not self.image_base_url:
             return []
-        image_paths = metadata.get("image_paths") or []
+
+        image_paths_raw = metadata.get("image_paths") or []
+        image_paths: list[str] = []
+        if isinstance(image_paths_raw, list):
+            image_paths = [str(item) for item in image_paths_raw if str(item).strip()]
+        elif isinstance(image_paths_raw, str):
+            raw = image_paths_raw.strip()
+            if raw.startswith("["):
+                try:
+                    parsed = json.loads(raw)
+                    if isinstance(parsed, list):
+                        image_paths = [
+                            str(item) for item in parsed if str(item).strip()
+                        ]
+                except Exception:
+                    image_paths = []
+            elif raw:
+                image_paths = [raw]
+
         urls: list[str] = []
         for raw_path in image_paths:
             if not raw_path:

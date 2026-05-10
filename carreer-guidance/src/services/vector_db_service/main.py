@@ -2,6 +2,7 @@ import json
 import logging
 import os
 import sqlite3
+import json
 from pathlib import Path
 from typing import Any
 
@@ -183,6 +184,21 @@ class VectorDBService:
 
         return [float(value) for value in vector]
 
+    def _sanitize_metadata_value(self, value: Any) -> str | int | float | bool:
+        if isinstance(value, (str, int, float, bool)):
+            return value
+        if value is None:
+            return ""
+        if isinstance(value, (list, dict)):
+            return json.dumps(value, ensure_ascii=False)
+        return str(value)
+
+    def _sanitize_metadata(self, metadata: dict[str, Any]) -> dict[str, Any]:
+        sanitized: dict[str, Any] = {}
+        for key, value in (metadata or {}).items():
+            sanitized[str(key)] = self._sanitize_metadata_value(value)
+        return sanitized
+
     def upsert_chunks(
         self,
         ingestion_job_id: str,
@@ -224,15 +240,17 @@ class VectorDBService:
                 documents.append(text)
                 ids.append(chunk_id)
 
+                sanitized_metadata = self._sanitize_metadata(metadata)
+
                 # Add ingestion metadata
-                metadata.update(
+                sanitized_metadata.update(
                     {
                         "ingestion_job_id": ingestion_job_id,
                         "user_id": user_id,
                         "execution_id": self.execution_id,
                     }
                 )
-                metadatas.append(metadata)
+                metadatas.append(sanitized_metadata)
 
                 if embedding:
                     embeddings.append(embedding)

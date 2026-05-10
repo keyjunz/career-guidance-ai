@@ -168,9 +168,11 @@ class PaddleOCRService:
                     doc_id=doc_id,
                     page_number=page_number,
                 )
+                text = page.get_text("text").strip()
 
-                if image_blocks:
-                    text = page.get_text("text").strip()
+                # Rule-based fast path only when PDF has extractable text.
+                # If page is image-only (scanned), fall back to layout+OCR.
+                if image_blocks and text:
                     text_block = self._build_text_block(page, page_number, text)
                     blocks = image_blocks
                     if text_block:

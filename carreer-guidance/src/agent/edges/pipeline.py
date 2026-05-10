@@ -247,6 +247,10 @@ def _route_after_cache(ctx: PipelineContext) -> str:
     return "finalize" if ctx["state"].cache_hit else "guardrails"
 
 
+def _route_after_guardrails(ctx: PipelineContext) -> str:
+    return "tools" if ctx["state"].plan_override else "planner"
+
+
 def _route_after_evaluate(ctx: PipelineContext) -> str:
     if ctx.get("passed"):
         return "ensure_answer"
@@ -292,7 +296,14 @@ def run_pipeline(
             "finalize": "finalize",
         },
     )
-    graph.add_edge("guardrails", "planner")
+    graph.add_conditional_edges(
+        "guardrails",
+        _route_after_guardrails,
+        {
+            "planner": "planner",
+            "tools": "tools",
+        },
+    )
     graph.add_edge("planner", "tools")
     graph.add_edge("tools", "draft")
     graph.add_edge("draft", "evaluator")

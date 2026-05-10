@@ -694,6 +694,23 @@
             "minLength": 1,
             "title": "Question"
           },
+          "plan": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "direct_answer",
+                  "rag_only",
+                  "web_only",
+                  "rag_web_parallel"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Plan"
+          },
           "user_id": {
             "anyOf": [
               {

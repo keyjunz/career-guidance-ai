@@ -10,6 +10,7 @@ class AgentRuntimeState:
     conversation_id: UUID
     question: str
     plan: str = "rag_only"
+    plan_override: bool = False
     status_history: list[str] = field(default_factory=list)
     cache_hit: bool = False
     answer: str = ""

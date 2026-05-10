@@ -1,7 +1,7 @@
 {
   "user_id": "4d64496c-be06-4d05-892a-dce083e37c32",
   "created_at": "2026-05-06T18:27:31.298236+00:00",
-  "updated_at": "2026-05-09T16:13:30.354211+00:00",
+  "updated_at": "2026-05-10T07:04:52.379759+00:00",
   "pending_by_execution": {
     "5de44c2f-4e1e-41f5-9e4d-65d0f3789138": {
       "conversation_id": "aa471aa6-efc4-47a8-bccc-51f56e3a808a",
@@ -932,6 +932,228 @@
         "status": "Hoan tat xu ly.",
         "timestamp": "2026-05-09T16:13:30.354211+00:00"
       }
+    ],
+    "77616657-5258-49b1-a618-fbefb451573a": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-10T06:41:36.484705+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-10T06:41:36.503820+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-10T06:41:36.513934+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-05-10T06:41:36.525598+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-05-10T06:41:36.537163+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-05-10T06:42:06.672311+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-10T06:42:06.678316+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-10T06:42:08.080239+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-10T06:42:08.085247+00:00"
+      }
+    ],
+    "5b26a84b-2ef8-469e-8d37-6e60e8801408": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-10T06:50:15.793259+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-10T06:50:15.814938+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-10T06:50:15.826961+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-05-10T06:50:15.840463+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-05-10T06:50:15.855553+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-05-10T06:50:17.283450+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-05-10T06:50:34.072857+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-10T06:50:34.079230+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-10T06:50:39.137884+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-10T06:50:39.145024+00:00"
+      }
+    ],
+    "d057c0da-87cd-4020-9b9b-3c144df96660": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-10T06:51:46.821364+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-10T06:51:46.840164+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-10T06:51:46.852359+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-05-10T06:51:46.863801+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-05-10T06:51:46.874949+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-05-10T06:51:48.320811+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-05-10T06:52:07.982988+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-10T06:52:07.992024+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-10T06:52:13.063684+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-10T06:52:13.070469+00:00"
+      }
+    ],
+    "02e90625-8ed7-4970-9af0-7748a06fc819": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-10T06:55:14.106619+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-10T06:55:14.125127+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-10T06:55:14.131015+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-05-10T06:55:14.142629+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-05-10T06:55:14.150284+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-05-10T06:55:15.401782+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-05-10T06:55:37.476625+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-10T06:55:37.483255+00:00"
+      },
+      {
+        "status": "Dang sua cau tra loi theo danh gia.",
+        "timestamp": "2026-05-10T06:55:41.595905+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-10T06:55:41.601905+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-10T06:55:42.982454+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-10T06:55:42.988620+00:00"
+      }
+    ],
+    "9e7440be-6b9d-40fb-92e5-48a0ac2034e9": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-10T07:04:31.992613+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-10T07:04:32.015882+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-10T07:04:32.033230+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-05-10T07:04:32.049930+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-05-10T07:04:32.069211+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-05-10T07:04:33.427072+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-05-10T07:04:49.651036+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-10T07:04:49.658378+00:00"
+      },
+      {
+        "status": "Dang sua cau tra loi theo danh gia.",
+        "timestamp": "2026-05-10T07:04:51.095447+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-10T07:04:51.102543+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-10T07:04:52.374751+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-10T07:04:52.379759+00:00"
+      }
     ]
   },
   "qa_cache": {
@@ -1675,6 +1897,145 @@
       "image_urls": [],
       "conversation_id": "3d5af0b2-b3e5-4c7e-8d1e-642f890bf9fa",
       "updated_at": "2026-05-09T16:13:30.340104+00:00"
+    },
+    "what is software testing ?": {
+      "question": "what is Software  testing  ?",
+      "answer": "Software testing is the process of evaluating a software application to identify defects and ensure it meets specified requirements. It involves executing a program or application with the intent of finding errors.\n\nThe primary goals of software testing include:\n\n*   **Defect Identification:** Discovering bugs, errors, or flaws in the software.\n*   **Quality Assurance:** Verifying that the software functions as intended and meets user expectations.\n*   **Risk Mitigation:** Reducing the likelihood of software failures in production.\n*   **Requirement Validation:** Confirming that the software adheres to all documented requirements.\n\nThe context provided does not elaborate on specific types of software testing, methodologies, or the roles involved in the testing process.",
+      "sources": [
+        {
+          "title": "What is Software Testing? - IBM",
+          "url": "https://www.ibm.com/think/topics/software-testing",
+          "snippet": "[Skip to content](https://www.ibm.com/think/topics/software-testing#main-content)[IBM logo](https://www.ibm.com/) Software Infrastructure [Consulting](https://www.ibm.com/consulting?lnk=L0G)Support Support [What's new](https://www.ibm.com/new?lnk=flatitem) - [Overview\\\\ Resolve product issues with self-service tools](https://www.ibm.com/mysupport/s/?language=en_US&lnk=flathl) - [Community\\\\ Share...",
+          "score": 0.0
+        },
+        {
+          "title": "Introduction to Software Testing - GeeksforGeeks",
+          "url": "https://www.geeksforgeeks.org/software-testing/software-testing-basics/",
+          "snippet": "[![geeksforgeeks](https://media.geeksforgeeks.org/gfg-gg-logo.svg)](https://www.geeksforgeeks.org/) - Courses - Tutorials - Interview Prep Switch to Dark Mode Sign In - [DSA](https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/) - [Practice Problems](https://www.geeksforgeeks.org/explore) - [C](https://www.geeksforgeeks.org/c/c-programming-language/) - [C++](https:/...",
+          "score": 0.0
+        },
+        {
+          "title": "What Is Software Testing? - PTC",
+          "url": "https://www.ptc.com/en/technologies/application-lifecycle-management/test-management/software-testing?srsltid=AfmBOooWfHkID3lxxlqQ8nCEsoC4QkGJzGpzVGSc7QCMsXFQXlwQGS_D",
+          "snippet": "[Skip to Main Content](https://www.ptc.com/en/technologies/application-lifecycle-management/test-management/software-testing) [PTC Header](https://www.ptc.com/en/technologies/application-lifecycle-management/test-management/software-testing#) Selected Language Unavailable This experience is not available in the language you selected. To view this experience, please continue in your current languag...",
+          "score": 0.0
+        },
+        {
+          "title": "Software Testing: Complete Beginner's Guide - Splunk",
+          "url": "https://www.splunk.com/en_us/blog/learn/software-testing.html",
+          "snippet": "[Learn](https://www.splunk.com/en_us/blog/learn.html) JUNE 03, 2025\\|8 MINUTE READ # Software Testing: Complete Beginner's Guide By [Austin Chia](https://www.splunk.com/en_us/blog/author/austin-chia.html) - [![Share on X](https://www.splunk.com/icons/x-social.svg)](https://twitter.com/intent/tweet?text=Found%20this%20useful%20link%20for%20you.%20%23splunk&url=https%3A%2F%2Fwww.splunk.com%2Fen_us%2...",
+          "score": 0.0
+        },
+        {
+          "title": "What is software testing? - GitHub",
+          "url": "https://github.com/resources/articles/what-is-software-testing",
+          "snippet": "[Skip to content](https://github.com/resources/articles/what-is-software-testing#start-of-content) You signed in with another tab or window. [Reload](https://github.com/resources/articles/what-is-software-testing) to refresh your session.You signed out in another tab or window. [Reload](https://github.com/resources/articles/what-is-software-testing) to refresh your session.You switched accounts on...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://www.ibm.com/content/dam/worldwide-content/stock-assets/adb-stk/ul/g/71/ca/adobestock_463710214.jpeg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg"
+      ],
+      "conversation_id": "da6f47ef-af82-489f-9d11-40b0767b0a82",
+      "updated_at": "2026-05-10T06:42:08.075244+00:00"
+    },
+    "timeline software engineer career ?": {
+      "question": "Timeline Software engineer career ?",
+      "answer": "The provided context outlines a hierarchical sequence for software engineer career progression, but it does not specify timelines for reaching each level.\n\nThe levels mentioned are:\n*   Level 1: Software Engineer Intern\n*   Level 2: Junior Software Engineer\n*   Level 3: Software Engineer\n*   Level 4: Senior Software Engineer\n\nUpon reaching Level 4 (Senior Software Engineer), two paths are presented:\n*   A path for experienced software engineers (with a note indicating \"7 years of experience\" for this path, though the specific level it pertains to is unclear).\n*   Management-level Software Engineer.\n\nThe context does not provide specific timeframes for progressing through these levels or for accumulating the necessary experience.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": 3.4641289710998535,
+          "image_urls": []
+        },
+        {
+          "title": "Software Engineer Timeline: From Starting Out To Managing A Team",
+          "url": "https://www.institutedata.com/us/blog/software-engineer-timeline-from-starting-out-to-managing-a-team/",
+          "snippet": "![Software engineer timeline.](https://www.institutedata.com/wp-content/uploads/2024/03/Software-engineer-timeline.png) #### Stay Informed With Our Weekly Newsletter Receive crucial updates on the ever-evolving landscape of technology and innovation. By clicking 'Sign Up', I acknowledge that my information will be used in accordance with the Institute of Data's [Privacy Policy](https://www.institu...",
+          "score": 0.0
+        },
+        {
+          "title": "The Ultimate Software Engineer Career Path Guide for 2023",
+          "url": "https://www.wearedevelopers.com/en/magazine/146/career-path-for-software-engineer-guide",
+          "snippet": "January 20, 2023 10 min read # The Ultimate Software Engineer Career Path Guide for 2023 By [Pat Zawadzki](https://www.wearedevelopers.com/en/magazine?q=Pat%20Zawadzki) ![The Ultimate Software Engineer Career Path Guide for 2023](https://wearedevelopers.imgix.net/public/magazine/articles/146/images/hero/63cfb8ec6889733c10976282_software_engineer_career.png?w=984&ar=2&fit=crop&crop=entropy&auto=com...",
+          "score": 0.0
+        },
+        {
+          "title": "A quick timeline of how I landed my first software developer job in 1 ...",
+          "url": "https://www.linkedin.com/pulse/quick-timeline-how-i-landed-my-first-software-job-1-year-birajdar",
+          "snippet": "Agree & Join LinkedIn By clicking Continue to join or sign in, you agree to LinkedIn’s [User Agreement](https://www.linkedin.com/legal/user-agreement?trk=linkedin-tc_auth-button_user-agreement), [Privacy Policy](https://www.linkedin.com/legal/privacy-policy?trk=linkedin-tc_auth-button_privacy-policy), and [Cookie Policy](https://www.linkedin.com/legal/cookie-policy?trk=linkedin-tc_auth-button_cook...",
+          "score": 0.0
+        },
+        {
+          "title": "8 Career Paths for Software Engineers [2025 Career Guide]",
+          "url": "https://www.springboard.com/blog/software-engineering/software-engineer-career-path/",
+          "snippet": "[Back to Blog](https://www.springboard.com/blog/) ![software engineer career path](https://www.springboard.com/blog/wp-content/uploads/2022/10/career-paths-for-software-engineers.png) [Coding](https://www.springboard.com/blog/category/software-engineering/) # 8 Career Paths for Software Engineers \\[2025 Career Guide\\] 15 minute read \\| December 22, 2023 ![Sakshi Gupta](https://secure.gravatar.com/...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://www.institutedata.com/wp-content/uploads/2024/03/Software-engineer-timeline.png"
+      ],
+      "conversation_id": "8f7bb351-0853-4de7-b319-801d26653df4",
+      "updated_at": "2026-05-10T06:50:39.132725+00:00"
+    },
+    "timeline of software engineer career": {
+      "question": "timeline of Software engineer career",
+      "answer": "[API Error] Failed after 3 retries: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash-lite\nPlease retry in 52.280317441s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.5-flash-lite\"\n  }\n  quota_value: 20\n}\n, retry_delay {\n  seconds: 52\n}\n]",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": 4.607609272003174,
+          "image_urls": []
+        }
+      ],
+      "image_urls": [],
+      "conversation_id": "eedde1bf-c146-48e4-9700-d7349793966d",
+      "updated_at": "2026-05-10T06:52:13.058680+00:00"
+    },
+    "timeline of software engineer career ?": {
+      "question": "timeline of Software engineer career ?",
+      "answer": "The provided context outlines a hierarchical sequence for a software engineer's career progression, but it does not offer a specific timeline in terms of years for each level.\n\nThe career path is presented as follows:\n\n*   **Level 1:** Software Engineer Intern\n*   **Level 2:** Junior Software Engineer\n*   **Level 3:** Software Engineer\n*   **Level 4:** Senior Software Engineer\n\nUpon reaching Level 4 (Senior Software Engineer), two further paths are mentioned:\n\n*   A path for experienced software engineers (with a note indicating \"7 years of experience\" associated with this, though the specific role title is cut off).\n*   Management-level Software Engineer.\n\nThe context does not provide the duration or years required to advance from one level to the next.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": 3.633483409881592,
+          "image_urls": []
+        }
+      ],
+      "image_urls": [],
+      "conversation_id": "c97bc4bb-f6d0-4347-ac95-0a9be1743274",
+      "updated_at": "2026-05-10T06:55:42.978466+00:00"
+    },
+    "timeline of software engineer career?": {
+      "question": "timeline of Software engineer career?",
+      "answer": "Based on the provided context, here is a timeline of a software engineer's career progression:\n\n*   **Level 1: Software Engineer Intern**\n*   **Level 2: Junior Software Engineer**\n*   **Level 3: Software Engineer**\n*   **Level 4: Senior Software Engineer**\n\nUpon reaching the Senior Software Engineer level (Level 4), two distinct career paths emerge:\n\n1.  **Management-level Software Engineer**\n2.  **Individual Contributor path** (The context mentions \"Nmerfyearexperntyafwrk exrth\" and \"Nmerfyeafexpre:7-yarofexper Iearsfx\" which appear to be incomplete or corrupted descriptions related to experience for this path, but do not provide a clear timeline.)\n\nThe context states that software engineering is a highly sought-after profession with generous salaries and clear career advancement opportunities. The level of skill, experience, and specific responsibilities are assessed based on different skill levels and experience. Higher ranks generally come with greater benefits and power.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": 3.633483409881592,
+          "image_urls": [
+            "http://localhost:8010/images/26_Software_Engineer_Career_Path_and_Advancement-86befb25/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "http://localhost:8010/images/26_Software_Engineer_Career_Path_and_Advancement-86befb25/p1/img001.png"
+      ],
+      "conversation_id": "3b9e5bc1-2332-4a2c-bcdf-f028d065944b",
+      "updated_at": "2026-05-10T07:04:52.369230+00:00"
     }
   },
   "history": [
@@ -2595,6 +2956,155 @@
       "image_urls": [],
       "cache_hit": false,
       "timestamp": "2026-05-09T16:13:30.340104+00:00"
+    },
+    {
+      "execution_id": "77616657-5258-49b1-a618-fbefb451573a",
+      "conversation_id": "da6f47ef-af82-489f-9d11-40b0767b0a82",
+      "question": "what is Software  testing  ?",
+      "answer": "Software testing is the process of evaluating a software application to identify defects and ensure it meets specified requirements. It involves executing a program or application with the intent of finding errors.\n\nThe primary goals of software testing include:\n\n*   **Defect Identification:** Discovering bugs, errors, or flaws in the software.\n*   **Quality Assurance:** Verifying that the software functions as intended and meets user expectations.\n*   **Risk Mitigation:** Reducing the likelihood of software failures in production.\n*   **Requirement Validation:** Confirming that the software adheres to all documented requirements.\n\nThe context provided does not elaborate on specific types of software testing, methodologies, or the roles involved in the testing process.",
+      "sources": [
+        {
+          "title": "What is Software Testing? - IBM",
+          "url": "https://www.ibm.com/think/topics/software-testing",
+          "snippet": "[Skip to content](https://www.ibm.com/think/topics/software-testing#main-content)[IBM logo](https://www.ibm.com/) Software Infrastructure [Consulting](https://www.ibm.com/consulting?lnk=L0G)Support Support [What's new](https://www.ibm.com/new?lnk=flatitem) - [Overview\\\\ Resolve product issues with self-service tools](https://www.ibm.com/mysupport/s/?language=en_US&lnk=flathl) - [Community\\\\ Share...",
+          "score": 0.0
+        },
+        {
+          "title": "Introduction to Software Testing - GeeksforGeeks",
+          "url": "https://www.geeksforgeeks.org/software-testing/software-testing-basics/",
+          "snippet": "[![geeksforgeeks](https://media.geeksforgeeks.org/gfg-gg-logo.svg)](https://www.geeksforgeeks.org/) - Courses - Tutorials - Interview Prep Switch to Dark Mode Sign In - [DSA](https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/) - [Practice Problems](https://www.geeksforgeeks.org/explore) - [C](https://www.geeksforgeeks.org/c/c-programming-language/) - [C++](https:/...",
+          "score": 0.0
+        },
+        {
+          "title": "What Is Software Testing? - PTC",
+          "url": "https://www.ptc.com/en/technologies/application-lifecycle-management/test-management/software-testing?srsltid=AfmBOooWfHkID3lxxlqQ8nCEsoC4QkGJzGpzVGSc7QCMsXFQXlwQGS_D",
+          "snippet": "[Skip to Main Content](https://www.ptc.com/en/technologies/application-lifecycle-management/test-management/software-testing) [PTC Header](https://www.ptc.com/en/technologies/application-lifecycle-management/test-management/software-testing#) Selected Language Unavailable This experience is not available in the language you selected. To view this experience, please continue in your current languag...",
+          "score": 0.0
+        },
+        {
+          "title": "Software Testing: Complete Beginner's Guide - Splunk",
+          "url": "https://www.splunk.com/en_us/blog/learn/software-testing.html",
+          "snippet": "[Learn](https://www.splunk.com/en_us/blog/learn.html) JUNE 03, 2025\\|8 MINUTE READ # Software Testing: Complete Beginner's Guide By [Austin Chia](https://www.splunk.com/en_us/blog/author/austin-chia.html) - [![Share on X](https://www.splunk.com/icons/x-social.svg)](https://twitter.com/intent/tweet?text=Found%20this%20useful%20link%20for%20you.%20%23splunk&url=https%3A%2F%2Fwww.splunk.com%2Fen_us%2...",
+          "score": 0.0
+        },
+        {
+          "title": "What is software testing? - GitHub",
+          "url": "https://github.com/resources/articles/what-is-software-testing",
+          "snippet": "[Skip to content](https://github.com/resources/articles/what-is-software-testing#start-of-content) You signed in with another tab or window. [Reload](https://github.com/resources/articles/what-is-software-testing) to refresh your session.You signed out in another tab or window. [Reload](https://github.com/resources/articles/what-is-software-testing) to refresh your session.You switched accounts on...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://www.ibm.com/content/dam/worldwide-content/stock-assets/adb-stk/ul/g/71/ca/adobestock_463710214.jpeg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-10T06:42:08.076239+00:00"
+    },
+    {
+      "execution_id": "5b26a84b-2ef8-469e-8d37-6e60e8801408",
+      "conversation_id": "8f7bb351-0853-4de7-b319-801d26653df4",
+      "question": "Timeline Software engineer career ?",
+      "answer": "The provided context outlines a hierarchical sequence for software engineer career progression, but it does not specify timelines for reaching each level.\n\nThe levels mentioned are:\n*   Level 1: Software Engineer Intern\n*   Level 2: Junior Software Engineer\n*   Level 3: Software Engineer\n*   Level 4: Senior Software Engineer\n\nUpon reaching Level 4 (Senior Software Engineer), two paths are presented:\n*   A path for experienced software engineers (with a note indicating \"7 years of experience\" for this path, though the specific level it pertains to is unclear).\n*   Management-level Software Engineer.\n\nThe context does not provide specific timeframes for progressing through these levels or for accumulating the necessary experience.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": 3.4641289710998535,
+          "image_urls": []
+        },
+        {
+          "title": "Software Engineer Timeline: From Starting Out To Managing A Team",
+          "url": "https://www.institutedata.com/us/blog/software-engineer-timeline-from-starting-out-to-managing-a-team/",
+          "snippet": "![Software engineer timeline.](https://www.institutedata.com/wp-content/uploads/2024/03/Software-engineer-timeline.png) #### Stay Informed With Our Weekly Newsletter Receive crucial updates on the ever-evolving landscape of technology and innovation. By clicking 'Sign Up', I acknowledge that my information will be used in accordance with the Institute of Data's [Privacy Policy](https://www.institu...",
+          "score": 0.0
+        },
+        {
+          "title": "The Ultimate Software Engineer Career Path Guide for 2023",
+          "url": "https://www.wearedevelopers.com/en/magazine/146/career-path-for-software-engineer-guide",
+          "snippet": "January 20, 2023 10 min read # The Ultimate Software Engineer Career Path Guide for 2023 By [Pat Zawadzki](https://www.wearedevelopers.com/en/magazine?q=Pat%20Zawadzki) ![The Ultimate Software Engineer Career Path Guide for 2023](https://wearedevelopers.imgix.net/public/magazine/articles/146/images/hero/63cfb8ec6889733c10976282_software_engineer_career.png?w=984&ar=2&fit=crop&crop=entropy&auto=com...",
+          "score": 0.0
+        },
+        {
+          "title": "A quick timeline of how I landed my first software developer job in 1 ...",
+          "url": "https://www.linkedin.com/pulse/quick-timeline-how-i-landed-my-first-software-job-1-year-birajdar",
+          "snippet": "Agree & Join LinkedIn By clicking Continue to join or sign in, you agree to LinkedIn’s [User Agreement](https://www.linkedin.com/legal/user-agreement?trk=linkedin-tc_auth-button_user-agreement), [Privacy Policy](https://www.linkedin.com/legal/privacy-policy?trk=linkedin-tc_auth-button_privacy-policy), and [Cookie Policy](https://www.linkedin.com/legal/cookie-policy?trk=linkedin-tc_auth-button_cook...",
+          "score": 0.0
+        },
+        {
+          "title": "8 Career Paths for Software Engineers [2025 Career Guide]",
+          "url": "https://www.springboard.com/blog/software-engineering/software-engineer-career-path/",
+          "snippet": "[Back to Blog](https://www.springboard.com/blog/) ![software engineer career path](https://www.springboard.com/blog/wp-content/uploads/2022/10/career-paths-for-software-engineers.png) [Coding](https://www.springboard.com/blog/category/software-engineering/) # 8 Career Paths for Software Engineers \\[2025 Career Guide\\] 15 minute read \\| December 22, 2023 ![Sakshi Gupta](https://secure.gravatar.com/...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://www.institutedata.com/wp-content/uploads/2024/03/Software-engineer-timeline.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-10T06:50:39.132725+00:00"
+    },
+    {
+      "execution_id": "d057c0da-87cd-4020-9b9b-3c144df96660",
+      "conversation_id": "eedde1bf-c146-48e4-9700-d7349793966d",
+      "question": "timeline of Software engineer career",
+      "answer": "[API Error] Failed after 3 retries: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash-lite\nPlease retry in 52.280317441s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.5-flash-lite\"\n  }\n  quota_value: 20\n}\n, retry_delay {\n  seconds: 52\n}\n]",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": 4.607609272003174,
+          "image_urls": []
+        }
+      ],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-10T06:52:13.058680+00:00"
+    },
+    {
+      "execution_id": "02e90625-8ed7-4970-9af0-7748a06fc819",
+      "conversation_id": "c97bc4bb-f6d0-4347-ac95-0a9be1743274",
+      "question": "timeline of Software engineer career ?",
+      "answer": "The provided context outlines a hierarchical sequence for a software engineer's career progression, but it does not offer a specific timeline in terms of years for each level.\n\nThe career path is presented as follows:\n\n*   **Level 1:** Software Engineer Intern\n*   **Level 2:** Junior Software Engineer\n*   **Level 3:** Software Engineer\n*   **Level 4:** Senior Software Engineer\n\nUpon reaching Level 4 (Senior Software Engineer), two further paths are mentioned:\n\n*   A path for experienced software engineers (with a note indicating \"7 years of experience\" associated with this, though the specific role title is cut off).\n*   Management-level Software Engineer.\n\nThe context does not provide the duration or years required to advance from one level to the next.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": 3.633483409881592,
+          "image_urls": []
+        }
+      ],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-10T06:55:42.978466+00:00"
+    },
+    {
+      "execution_id": "9e7440be-6b9d-40fb-92e5-48a0ac2034e9",
+      "conversation_id": "3b9e5bc1-2332-4a2c-bcdf-f028d065944b",
+      "question": "timeline of Software engineer career?",
+      "answer": "Based on the provided context, here is a timeline of a software engineer's career progression:\n\n*   **Level 1: Software Engineer Intern**\n*   **Level 2: Junior Software Engineer**\n*   **Level 3: Software Engineer**\n*   **Level 4: Senior Software Engineer**\n\nUpon reaching the Senior Software Engineer level (Level 4), two distinct career paths emerge:\n\n1.  **Management-level Software Engineer**\n2.  **Individual Contributor path** (The context mentions \"Nmerfyearexperntyafwrk exrth\" and \"Nmerfyeafexpre:7-yarofexper Iearsfx\" which appear to be incomplete or corrupted descriptions related to experience for this path, but do not provide a clear timeline.)\n\nThe context states that software engineering is a highly sought-after profession with generous salaries and clear career advancement opportunities. The level of skill, experience, and specific responsibilities are assessed based on different skill levels and experience. Higher ranks generally come with greater benefits and power.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": 3.633483409881592,
+          "image_urls": [
+            "http://localhost:8010/images/26_Software_Engineer_Career_Path_and_Advancement-86befb25/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "http://localhost:8010/images/26_Software_Engineer_Career_Path_and_Advancement-86befb25/p1/img001.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-10T07:04:52.369230+00:00"
     }
   ]
 }

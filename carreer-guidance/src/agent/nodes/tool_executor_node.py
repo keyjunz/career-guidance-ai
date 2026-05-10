@@ -124,11 +124,9 @@ def execute_tools(state: AgentRuntimeState) -> dict[str, dict[str, Any]]:
         state.tool_results = {"rag": rag_payload}
         if _is_insufficient_rag(rag_payload):
             logger.info(
-                "[agent-tools] rag insufficient, fallback web execution_id=%s",
+                "[agent-tools] rag_only mode keeps internal retrieval only execution_id=%s",
                 state.execution_id,
             )
-            state.tool_results["web"] = _safe_execute(state, "web", run_web)
-            state.plan = "rag_web_parallel"
         logger.info(
             "[agent-tools] dispatch finished execution_id=%s tool_count=%d",
             state.execution_id,
