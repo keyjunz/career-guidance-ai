@@ -11,4 +11,5 @@ def save_final_answer(state: AgentRuntimeState, store: UserStore) -> None:
         sources=state.sources,
         image_urls=state.image_urls,
         cache_hit=state.cache_hit,
+        cacheable=state.cacheable and not state.has_tool_errors,
     )

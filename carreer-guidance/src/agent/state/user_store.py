@@ -5,6 +5,19 @@ from uuid import UUID
 
 from src.agent.state.store_helpers import STORE_ROOT, normalize_question, utc_now
 
+MAX_HISTORY_ITEMS = 200
+MAX_QA_CACHE_ITEMS = 200
+MAX_STATUS_EXECUTIONS = 100
+NON_CACHEABLE_ANSWER_MARKERS = (
+    "no relevant data found",
+    "không tìm thấy dữ liệu phù hợp",
+    "i could not access the required data source",
+    "hiện hệ thống chưa truy cập được nguồn dữ liệu phù hợp",
+    "web search authentication failed",
+    "cannot connect to chromadb",
+    "quota exceeded",
+)
+
 
 class UserStore:
     def __init__(self, user_id: str) -> None:
@@ -38,11 +51,46 @@ class UserStore:
             return payload
 
     def _save(self) -> None:
+        self._prune()
         self._data["updated_at"] = utc_now()
         self.path.write_text(
             json.dumps(self._data, ensure_ascii=False, indent=2),
             encoding="utf-8",
         )
+
+    def _prune(self) -> None:
+        history = self._data.get("history")
+        if isinstance(history, list) and len(history) > MAX_HISTORY_ITEMS:
+            self._data["history"] = history[-MAX_HISTORY_ITEMS:]
+
+        status_by_execution = self._data.get("status_by_execution")
+        if (
+            isinstance(status_by_execution, dict)
+            and len(status_by_execution) > MAX_STATUS_EXECUTIONS
+        ):
+            items = list(status_by_execution.items())[-MAX_STATUS_EXECUTIONS:]
+            self._data["status_by_execution"] = dict(items)
+
+        cache = self._data.get("qa_cache")
+        if isinstance(cache, dict):
+            for key in list(cache.keys()):
+                item = cache.get(key)
+                answer = ""
+                if isinstance(item, dict):
+                    answer = str(item.get("answer") or "").lower()
+                if not isinstance(item, dict) or any(
+                    marker in answer for marker in NON_CACHEABLE_ANSWER_MARKERS
+                ):
+                    cache.pop(key, None)
+
+            if len(cache) > MAX_QA_CACHE_ITEMS:
+                sorted_items = sorted(
+                    cache.items(),
+                    key=lambda pair: str(pair[1].get("updated_at", ""))
+                    if isinstance(pair[1], dict)
+                    else "",
+                )
+                self._data["qa_cache"] = dict(sorted_items[-MAX_QA_CACHE_ITEMS:])
 
     def append_status(self, execution_id: str, status: str) -> None:
         with self._lock:
@@ -96,6 +144,7 @@ class UserStore:
         sources: list[dict[str, Any]] | None = None,
         image_urls: list[str] | None = None,
         cache_hit: bool = False,
+        cacheable: bool = True,
     ) -> None:
         with self._lock:
             pending = self._data.setdefault("pending_by_execution", {}).pop(
@@ -109,14 +158,21 @@ class UserStore:
             )
 
             normalized = normalize_question(resolved_question)
-            self._data.setdefault("qa_cache", {})[normalized] = {
-                "question": resolved_question,
-                "answer": answer,
-                "sources": sources or [],
-                "image_urls": image_urls or [],
-                "conversation_id": str(conversation_id),
-                "updated_at": utc_now(),
-            }
+            normalized_answer = str(answer or "").strip().lower()
+            should_cache = cacheable and bool(normalized_answer) and not any(
+                marker in normalized_answer for marker in NON_CACHEABLE_ANSWER_MARKERS
+            )
+            if should_cache:
+                self._data.setdefault("qa_cache", {})[normalized] = {
+                    "question": resolved_question,
+                    "answer": answer,
+                    "sources": sources or [],
+                    "image_urls": image_urls or [],
+                    "conversation_id": str(conversation_id),
+                    "updated_at": utc_now(),
+                }
+            else:
+                self._data.setdefault("qa_cache", {}).pop(normalized, None)
 
             self._data.setdefault("history", []).append(
                 {

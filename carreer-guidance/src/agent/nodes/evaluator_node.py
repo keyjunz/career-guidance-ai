@@ -15,15 +15,39 @@ logger.setLevel(logging.INFO)
 def _build_eval_prompt(state: AgentRuntimeState) -> str:
     sources = list(state.sources or [])
     source_count = len(sources)
+
+    source_excerpts = ""
+    if sources:
+        excerpts = []
+        for i, src in enumerate(sources[:5], 1):
+            title = str(src.get("title") or src.get("source") or "").strip()
+            url = str(src.get("url") or "").strip()
+            label = title or url or f"Source {i}"
+            excerpts.append(f"  {i}. {label}")
+        source_excerpts = "\n".join(excerpts)
+
     return (
-        "You are an evaluator. Score answer quality for the given question.\n"
-        'Return STRICT JSON only: {"score":0.0-1.0,"notes":["..."]}.\n'
-        "Criteria: correctness, completeness, groundedness to sources, clarity.\n"
-        "If sources are missing but plan expects them, score lower.\n\n"
+        "You are a strict answer-quality evaluator for a career-guidance chatbot.\n\n"
+        "SCORING RUBRIC (0.0 to 1.0):\n"
+        "- 0.9-1.0: Accurate, complete, well-structured, grounded in sources, directly answers the question.\n"
+        "- 0.7-0.89: Mostly correct with minor gaps or slight vagueness.\n"
+        "- 0.5-0.69: Partially correct but missing key information or poorly structured.\n"
+        "- 0.0-0.49: Incorrect, fabricated, off-topic, or empty.\n\n"
+        "CRITERIA:\n"
+        "1. Correctness — Are claims accurate and not fabricated?\n"
+        "2. Completeness — Does the answer address all parts of the question?\n"
+        "3. Groundedness — Is the answer supported by the provided sources?\n"
+        "4. Clarity — Is the answer well-organized and easy to understand?\n"
+        "5. Relevance — Does the answer stay on topic?\n\n"
+        "RULES:\n"
+        "- If the plan requires sources (rag_only, web_only, rag_web_parallel) but none are provided, cap score at 0.5.\n"
+        "- If the answer is empty or under 20 characters, score 0.0.\n\n"
+        'OUTPUT FORMAT — Return STRICT JSON only: {"score":0.0-1.0,"notes":["..."]}\n\n'
         f"Question:\n{state.question.strip()}\n\n"
         f"Plan: {state.plan}\n"
-        f"Source count: {source_count}\n\n"
-        f"Answer:\n{state.draft_answer.strip()}\n"
+        f"Source count: {source_count}\n"
+        + (f"Sources:\n{source_excerpts}\n\n" if source_excerpts else "\n")
+        + f"Answer:\n{state.draft_answer.strip()}\n"
     )
 
 

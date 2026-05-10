@@ -166,6 +166,20 @@ function AdminSyncButton() {
   )
 }
 
+function AdminViewDocsButton() {
+  const navigate = useNavigate()
+  return (
+    <button
+      className="mx-2 mb-2 flex w-[calc(100%-1rem)] items-center gap-3 rounded-xl bg-surface-container px-4 py-3 border border-outline-variant/10 text-on-surface/70 transition hover:bg-surface-container-high hover:text-on-surface"
+      onClick={() => navigate('/admin/documents')}
+      type="button"
+    >
+      <span className="material-symbols-outlined text-[20px] text-primary/70">folder_open</span>
+      <span className="text-sm font-semibold">View Documents</span>
+    </button>
+  )
+}
+
 export function SideNav({
   conversations,
   activeConversationId,
@@ -226,6 +240,7 @@ export function SideNav({
         <div className="absolute left-8 right-8 top-0 h-px bg-outline-variant/10" />
 
         {userRole === 'admin' && <AdminSyncButton />}
+        {userRole === 'admin' && <AdminViewDocsButton />}
 
         <div className="mt-4 mx-2 flex items-center gap-3 rounded-xl bg-surface-container-high px-4 py-3 border border-outline-variant/10">
           <div className="w-8 h-8 rounded-full bg-primary-container/20 flex items-center justify-center flex-shrink-0 text-primary">

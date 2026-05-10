@@ -15,6 +15,12 @@ from src.prompts.web_search_prompts import (
 from src.services.llm_service import LLMService
 
 DEFAULT_WEB_SEARCH_ENDPOINT = "https://api.firecrawl.dev/v1/search"
+PLACEHOLDER_API_KEYS = {
+    "your_firecrawl_api_key",
+    "your_web_search_api_key",
+    "change-me",
+    "changeme",
+}
 IMAGE_MARKDOWN_PATTERN = re.compile(
     r"!\[(?P<alt>[^\]]*)\]\((?P<url>https?://[^\s)]+)\)",
     flags=re.IGNORECASE,
@@ -47,8 +53,11 @@ class WebSearchService:
 
         settings = get_settings()
         api_key = str(settings.web_search.api_key).strip()
-        if not api_key:
-            raise ValueError("FIRECRAWL_API_KEY (or WEB_SEARCH_API_KEY) is required")
+        if not api_key or api_key.lower() in PLACEHOLDER_API_KEYS:
+            raise ValueError(
+                "A valid Firecrawl API key is required. Configure FIRECRAWL_API_KEY "
+                "or WEB_SEARCH_API_KEY in the backend .env file."
+            )
 
         endpoint = (
             str(self.endpoint or "").strip()
@@ -114,6 +123,11 @@ class WebSearchService:
             except HTTPError as exc:
                 details = exc.read().decode("utf-8", errors="ignore")
                 self.logger.warning("Web search HTTP error: %s", details)
+                if exc.code in {401, 403}:
+                    raise RuntimeError(
+                        "web search authentication failed. Please verify "
+                        "FIRECRAWL_API_KEY or WEB_SEARCH_API_KEY."
+                    ) from exc
                 raise RuntimeError(f"web search failed with status {exc.code}") from exc
             except (TimeoutError, socket.timeout) as exc:
                 self.logger.warning(

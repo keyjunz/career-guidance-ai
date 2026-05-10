@@ -10,20 +10,68 @@ DEFAULT_PLAN = "rag_web_parallel"
 logger = logging.getLogger(__name__)
 
 
+def is_direct_answer_question(question: str) -> bool:
+    normalized = " ".join(str(question or "").strip().lower().split())
+    if not normalized:
+        return False
+
+    direct_phrases = {
+        "hi",
+        "hi",
+        "hello",
+        "hey",
+        "thanks",
+        "thank you",
+        "chào",
+        "xin chào",
+        "chao",
+        "xin chao",
+        "cảm ơn",
+        "cam on",
+        "cám ơn",
+    }
+    if normalized in direct_phrases:
+        return True
+
+    if len(normalized) <= 20 and any(
+        phrase in normalized
+        for phrase in ("chào", "xin chao", "xin chào", "hello", "hi")
+    ):
+        return True
+
+    return False
+
+
 def _build_router_prompt(question: str) -> str:
-    return f"""You are a tool router in a LangGraph pipeline.
-Choose exactly one plan for the user question.
+    return f"""You are a tool router in a LangGraph-based career-guidance chatbot pipeline.
+Your job is to choose exactly ONE plan for the user question.
 
-Available plans:
-- direct_answer: greeting, thanks, or small-talk that needs no retrieval
-- rag_only: answer should come from internal knowledge base/documents
-- web_only: answer needs fresh/public web information
-- rag_web_parallel: needs both internal docs and web, or uncertainty exists
+DOMAIN CONTEXT:
+This chatbot assists students and professionals with AI/Computer Science career guidance,
+university programs, course recommendations, and technical skill development.
+The internal knowledge base contains academic documents, curricula, research papers, and career resources.
 
-Routing rules:
-1) Prefer precision over speed.
-2) If uncertain between choices, return rag_web_parallel.
-3) Return STRICT JSON only: {{"plan":"<one_of_valid_plans>","confidence":0.0-1.0,"reason":"short"}}
+AVAILABLE PLANS:
+- direct_answer : greeting, thanks, small-talk, or meta-questions about the bot itself — NO retrieval needed.
+- rag_only      : question is about internal knowledge (courses, curricula, university info, academic content, career paths already covered by documents).
+- web_only      : question needs fresh, public, or real-time web information (job market trends, latest tools, external company info).
+- rag_web_parallel : question likely needs both internal docs AND web info, or you are uncertain which single source is sufficient.
+
+ROUTING RULES:
+1. Questions about university-specific programs, internal documents, or academic curricula → rag_only.
+2. Questions about current industry trends, salary data, external companies, or breaking news → web_only.
+3. Questions mixing internal academic content with external context → rag_web_parallel.
+4. If the question is in Vietnamese, still route correctly — language does not affect plan choice.
+5. When uncertain, default to rag_web_parallel.
+
+OUTPUT FORMAT — Return STRICT JSON only, no extra text:
+{{"plan":"<one_of_valid_plans>","confidence":0.0-1.0,"reason":"short explanation"}}
+
+EXAMPLES:
+- "Chương trình học AI của trường gồm những môn gì?" → rag_only (university curriculum)
+- "Mức lương trung bình của AI engineer năm 2025?" → web_only (real-time salary data)
+- "So sánh chương trình CMU với xu hướng ngành hiện tại" → rag_web_parallel (internal + external)
+- "Xin chào" → direct_answer (greeting)
 
 User question:
 {question}
@@ -47,7 +95,16 @@ def _parse_plan(raw_answer: str) -> str | None:
 
 
 def choose_plan(state: AgentRuntimeState) -> str:
-    prompt = _build_router_prompt(state.question.strip())
+    question = state.question.strip()
+    if is_direct_answer_question(question):
+        state.plan = "direct_answer"
+        logger.info(
+            "[agent-planner] heuristic direct answer execution_id=%s",
+            state.execution_id,
+        )
+        return state.plan
+
+    prompt = _build_router_prompt(question)
 
     try:
         llm = LLMService(

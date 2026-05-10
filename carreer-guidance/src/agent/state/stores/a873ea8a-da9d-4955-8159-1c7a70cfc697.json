@@ -1,0 +1,184 @@
+{
+  "user_id": "a873ea8a-da9d-4955-8159-1c7a70cfc697",
+  "created_at": "2026-05-06T06:47:00.469726+00:00",
+  "updated_at": "2026-05-06T07:06:11.397484+00:00",
+  "pending_by_execution": {},
+  "status_by_execution": {
+    "f5c1458f-3288-4f6b-9ab0-250d2b3e6719": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T06:47:00.471237+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T06:47:00.475243+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T06:47:00.476752+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-05-06T06:47:00.480795+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-05-06T06:47:00.482391+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-05-06T06:47:00.484485+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-05-06T06:47:00.529143+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-06T06:47:00.532448+00:00"
+      },
+      {
+        "status": "Dang sua cau tra loi theo danh gia.",
+        "timestamp": "2026-05-06T06:47:00.533969+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-06T06:47:00.542722+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T06:47:00.548460+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T06:47:00.549498+00:00"
+      }
+    ],
+    "d367b657-ffaa-4542-8020-ee114778a575": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T06:57:18.109009+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T06:57:18.115597+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T06:57:18.118265+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T06:57:18.122113+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T06:57:18.129161+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T06:57:18.131360+00:00"
+      }
+    ],
+    "2315cb2d-76b2-42df-9767-d6d9aee2e5a6": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T07:05:59.738024+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T07:05:59.750542+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T07:05:59.753849+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-05-06T07:05:59.757346+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-05-06T07:05:59.761354+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-05-06T07:05:59.763237+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-05-06T07:06:07.296356+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-06T07:06:07.305239+00:00"
+      },
+      {
+        "status": "Dang sua cau tra loi theo danh gia.",
+        "timestamp": "2026-05-06T07:06:07.307288+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-06T07:06:11.391387+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T07:06:11.396475+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T07:06:11.397484+00:00"
+      }
+    ]
+  },
+  "qa_cache": {
+    "hello, bạn giúp gì được cho tôi nhỉ?": {
+      "question": "hello, bạn giúp gì được cho tôi nhỉ?",
+      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- RAG error: f-string expression part cannot include a backslash (main.py, line 196)",
+      "sources": [],
+      "image_urls": [],
+      "conversation_id": "446eb5fe-2426-49bd-9a0e-392fbacc556e",
+      "updated_at": "2026-05-06T06:57:18.125121+00:00"
+    },
+    "công việc nào phù hợp cho người mới học dữ liệu?": {
+      "question": "Công việc nào phù hợp cho người mới học dữ liệu?",
+      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?",
+      "sources": [],
+      "image_urls": [],
+      "conversation_id": "543dfa11-e06e-44c2-a510-69dc7b9ebd24",
+      "updated_at": "2026-05-06T07:06:11.394965+00:00"
+    }
+  },
+  "history": [
+    {
+      "execution_id": "f5c1458f-3288-4f6b-9ab0-250d2b3e6719",
+      "conversation_id": "a4555ab7-9a0a-45e0-9b75-5a107962e9d7",
+      "question": "hello, bạn giúp gì được cho tôi nhỉ?",
+      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- RAG error: f-string expression part cannot include a backslash (main.py, line 196)",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-06T06:47:00.546328+00:00"
+    },
+    {
+      "execution_id": "d367b657-ffaa-4542-8020-ee114778a575",
+      "conversation_id": "446eb5fe-2426-49bd-9a0e-392fbacc556e",
+      "question": "hello, bạn giúp gì được cho tôi nhỉ?",
+      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- RAG error: f-string expression part cannot include a backslash (main.py, line 196)",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T06:57:18.125121+00:00"
+    },
+    {
+      "execution_id": "2315cb2d-76b2-42df-9767-d6d9aee2e5a6",
+      "conversation_id": "543dfa11-e06e-44c2-a510-69dc7b9ebd24",
+      "question": "Công việc nào phù hợp cho người mới học dữ liệu?",
+      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-06T07:06:11.394965+00:00"
+    }
+  ]
+}

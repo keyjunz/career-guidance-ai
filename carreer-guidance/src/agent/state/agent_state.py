@@ -22,3 +22,5 @@ class AgentRuntimeState:
     evaluation_notes: list[str] = field(default_factory=list)
     retry_count: int = 0
     max_retry_count: int = 1
+    has_tool_errors: bool = False
+    cacheable: bool = True

@@ -13,6 +13,27 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
 
+def _looks_vietnamese(text: str) -> bool:
+    normalized = str(text or "").lower()
+    vi_markers = (
+        "ă",
+        "â",
+        "đ",
+        "ê",
+        "ô",
+        "ơ",
+        "ư",
+        "chào",
+        "chao",
+        "xin chao",
+        "cảm ơn",
+        "cam on",
+        "nghề nghiệp",
+        "tư vấn",
+    )
+    return any(marker in normalized for marker in vi_markers)
+
+
 def _is_insufficient_rag(payload: dict[str, Any]) -> bool:
     if not payload.get("success"):
         return True
@@ -21,12 +42,15 @@ def _is_insufficient_rag(payload: dict[str, Any]) -> bool:
     sources = list(payload.get("sources") or [])
     snippets = list(payload.get("snippets") or [])
     weak_signals = (
+        "no relevant data found",
+        "context is insufficient",
+        "does not contain",
+        "cannot answer",
+        "i don't have enough information",
         "khong tim thay",
         "không tìm thấy",
         "khong co thong tin",
         "không có thông tin",
-        "context is insufficient",
-        "does not contain",
     )
 
     if not answer:
@@ -101,11 +125,16 @@ def execute_tools(state: AgentRuntimeState) -> dict[str, dict[str, Any]]:
         state.plan,
     )
     if state.plan == "direct_answer":
+        direct_answer = (
+            "Tôi có thể hỗ trợ bạn về định hướng nghề nghiệp, phát triển kỹ năng và thông tin tham khảo từ web khi cần."
+            if _looks_vietnamese(state.question)
+            else "I can help you with career guidance, skills development, and web-sourced references when needed."
+        )
         state.tool_results = {
             "direct": {
                 "tool_name": "direct",
                 "success": True,
-                "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+                "answer": direct_answer,
                 "sources": [],
                 "images": [],
                 "snippets": [],

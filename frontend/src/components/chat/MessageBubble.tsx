@@ -75,9 +75,9 @@ export function MessageBubble({ message }: { message: ChatMessage }) {
   const hasImages = !isUser && (message.imageUrls?.length ?? 0) > 0
   const isEmpty = !isUser && message.text === '' && !hasImages
   const isStatusStream =
-    !isUser && !isEmpty && message.text.startsWith('Dang xu ly:')
+    !isUser && !isEmpty && message.text.startsWith('Processing:')
   const statusLabel = isStatusStream
-    ? message.text.replace('Dang xu ly:', '').trim()
+    ? message.text.replace('Processing:', '').trim()
     : ''
   const sources = message.meta?.sources ?? []
 

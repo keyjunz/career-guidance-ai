@@ -351,3 +351,27 @@ class VectorDBService:
         except Exception as exc:
             logger.error("ChromaDB query failed: query=%s error=%s", query_text, exc)
             return []
+
+    def delete_by_ingestion_job(self, ingestion_job_id: str) -> int:
+        """Delete all chunks from ChromaDB matching the given ingestion_job_id."""
+        if self.collection is None:
+            logger.warning("ChromaDB collection not available, cannot delete")
+            return 0
+
+        try:
+            self.collection.delete(
+                where={"ingestion_job_id": {"$eq": ingestion_job_id}}
+            )
+            logger.info(
+                "Deleted chunks from ChromaDB: ingestion_job_id=%s collection=%s",
+                ingestion_job_id,
+                self.collection_name,
+            )
+            return 1
+        except Exception as exc:
+            logger.error(
+                "ChromaDB delete failed: ingestion_job_id=%s error=%s",
+                ingestion_job_id,
+                exc,
+            )
+            return 0

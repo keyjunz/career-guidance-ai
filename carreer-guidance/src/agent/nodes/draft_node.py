@@ -3,6 +3,37 @@ from typing import Any
 from src.agent.state.agent_state import AgentRuntimeState
 
 
+FRIENDLY_TOOL_ERROR_EN = (
+    "I could not access the required data source right now. "
+    "Please try again later or switch to another chat mode."
+)
+FRIENDLY_TOOL_ERROR_VI = (
+    "Hiện hệ thống chưa truy cập được nguồn dữ liệu phù hợp. "
+    "Vui lòng thử lại sau hoặc chuyển sang chế độ chat khác."
+)
+
+
+def _looks_vietnamese(text: str) -> bool:
+    normalized = str(text or "").lower()
+    vi_markers = (
+        "ă",
+        "â",
+        "đ",
+        "ê",
+        "ô",
+        "ơ",
+        "ư",
+        "chào",
+        "chao",
+        "xin chao",
+        "cảm ơn",
+        "cam on",
+        "nghề nghiệp",
+        "tư vấn",
+    )
+    return any(marker in normalized for marker in vi_markers)
+
+
 def _is_insufficient_answer(text: str) -> bool:
     normalized = str(text or "").strip().lower()
     if not normalized:
@@ -10,11 +41,13 @@ def _is_insufficient_answer(text: str) -> bool:
     weak_signals = (
         "provided context does not contain",
         "cannot answer your question",
+        "no relevant data found",
+        "context is insufficient",
+        "i don't have enough information",
         "khong tim thay",
         "không tìm thấy",
         "khong co thong tin",
         "không có thông tin",
-        "context is insufficient",
     )
     return any(signal in normalized for signal in weak_signals)
 
@@ -113,9 +146,21 @@ def compose_draft_answer(
         if web_error:
             errors.append(f"Web error: {web_error}")
 
-        fallback = "Khong tim thay du lieu phu hop de tra loi cau hoi nay."
         if errors:
-            fallback = f"{fallback}\n\nChi tiet:\n- " + "\n- ".join(errors)
+            state.has_tool_errors = True
+            state.cacheable = False
+            fallback = (
+                FRIENDLY_TOOL_ERROR_VI
+                if _looks_vietnamese(state.question)
+                else FRIENDLY_TOOL_ERROR_EN
+            )
+        else:
+            state.cacheable = False
+            fallback = (
+                "Không tìm thấy dữ liệu phù hợp để trả lời câu hỏi này."
+                if _looks_vietnamese(state.question)
+                else "No relevant data found to answer this question."
+            )
         final_answer = fallback
 
     state.sources = _collect_sources(state)

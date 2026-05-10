@@ -6,7 +6,7 @@ import { ChatHeader } from '../../components/layout/ChatHeader'
 import { ChatThread } from '../../components/chat/ChatThread'
 import { ChatInputDock } from '../../components/chat/ChatInputDock'
 import type { ChatConversation, ChatMessage } from '../../types/chat'
-import type { AuthUser } from '../../types/api'
+import type { AuthUser, ChatMode } from '../../types/api'
 import { sendChatMessage, streamChatMessage } from '../../services/chatApi'
 import { mapApiPayloadToAssistantMessage } from '../../mappers/chatMapper'
 import { clearAuthTokens, getAccessToken } from '../../services/authStorage'
@@ -37,6 +37,7 @@ export function ChatPage() {
   const [isCheckingAuth, setIsCheckingAuth] = useState(true)
   const [errorMessage, setErrorMessage] = useState<string>('')
   const [currentUser, setCurrentUser] = useState<AuthUser | null>(null)
+  const [chatMode, setChatMode] = useState<ChatMode>('auto')
   const [conversations, setConversations] = useState<ChatConversation[]>([])
   const [activeConversationId, setActiveConversationId] = useState<string>('')
   const [apiTypingConversationId, setApiTypingConversationId] = useState<string | null>(
@@ -199,8 +200,11 @@ export function ChatPage() {
         let streamedStatuses: string[] | undefined
         let streamedCached: boolean | undefined
         let latestStatus = ''
+        const planValue = chatMode === 'rag' ? 'rag_only' as const
+          : chatMode === 'web' ? 'web_only' as const
+          : undefined
         await streamChatMessage(
-          { question: trimmed },
+          { question: trimmed, ...(planValue ? { plan: planValue } : {}) },
           {
             onToken: (token) => {
               streamedText += token
@@ -222,7 +226,7 @@ export function ChatPage() {
             onStatus: (status) => {
               latestStatus = status
               if (streamedText.trim()) return
-              const statusText = `Dang xu ly: ${status}`
+              const statusText = `Processing: ${status}`
               setConversations((prev) =>
                 prev.map((conversation) =>
                   conversation.id === activeConversationId
@@ -271,7 +275,7 @@ export function ChatPage() {
                           text:
                             message.text.trim() ||
                             (latestStatus
-                              ? `Dang xu ly: ${latestStatus}`
+                              ? `Processing: ${latestStatus}`
                               : 'No text response from server.'),
                           meta: {
                             executionId: streamedExecutionId,
@@ -308,6 +312,7 @@ export function ChatPage() {
       try {
         const payload = await sendChatMessage({
           question: trimmed,
+          ...(planValue ? { plan: planValue } : {}),
         })
 
         const assistantMessage = mapApiPayloadToAssistantMessage(payload)
@@ -376,6 +381,8 @@ export function ChatPage() {
           placeholder="Ask about career guidance..."
           onSend={handleSend}
           disabled={isTyping}
+          chatMode={chatMode}
+          onChatModeChange={setChatMode}
         />
       </main>
     </div>

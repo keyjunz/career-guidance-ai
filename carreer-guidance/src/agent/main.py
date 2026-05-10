@@ -63,7 +63,7 @@ def _to_chat_response(state: AgentRuntimeState) -> ChatResponse:
 
     if not content:
         content.append(
-            ContentItem(type="text", text="Khong tim thay cau tra loi phu hop.")
+            ContentItem(type="text", text="Không tìm thấy câu trả lời phù hợp.")
         )
 
     response_type = "text"

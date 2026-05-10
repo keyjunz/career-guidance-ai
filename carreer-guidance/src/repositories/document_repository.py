@@ -3,7 +3,7 @@
 from collections.abc import Sequence
 from uuid import UUID
 
-from sqlalchemy import select
+from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
 from src.database.models import Document
@@ -13,6 +13,24 @@ from src.repositories.repository_factory import RepositoryFactory
 class DocumentRepository(RepositoryFactory[Document, dict, dict]):
     def __init__(self, session: Session) -> None:
         super().__init__(session=session, model=Document)
+
+    def get_all_paginated(
+        self,
+        *,
+        limit: int = 50,
+        offset: int = 0,
+    ) -> list[Document]:
+        stmt = (
+            select(Document)
+            .order_by(Document.created_at.desc())
+            .offset(max(offset, 0))
+            .limit(max(limit, 1))
+        )
+        return list(self.session.scalars(stmt).all())
+
+    def count_all(self) -> int:
+        stmt = select(func.count(Document.id))
+        return int(self.session.scalar(stmt) or 0)
 
     def get_by_user(
         self,

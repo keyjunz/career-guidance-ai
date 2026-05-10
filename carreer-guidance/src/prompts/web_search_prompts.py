@@ -9,35 +9,52 @@ CONSTRAINTS:
 2. Do not fabricate facts, links, or claims.
 3. If evidence is insufficient, clearly state the uncertainty.
 4. Keep the answer concise, factual, and directly relevant.
-5. Prefer structured output (short bullets or sections) when useful.
+
+RESPONSE FORMAT (Markdown):
+- Use **bold** for key terms, names, and important findings.
+- Use ### headings to separate distinct topics when the answer is multi-part.
+- Use bullet lists (- item) for enumerations or comparisons.
+- Use numbered lists (1. step) for sequential processes or rankings.
+- Cite source URLs in markdown links when available: [title](url).
+- Separate sections with a blank line for readability.
+- Answer in the same language the user asked in.
+- If the user writes Vietnamese without diacritics, answer in proper Vietnamese with diacritics.
 
 USER QUESTION:
 {user_question}
 
 FINAL SUMMARY:"""
 
-WEB_SUMMARY_QUESTION_TEMPLATE_VI = """VAI TRO HE THONG:
-Ban la tro ly tong hop nghien cuu web cap cao.
+WEB_SUMMARY_QUESTION_TEMPLATE_VI = """VAI TRÒ HỆ THỐNG:
+Bạn là trợ lý tổng hợp nghiên cứu web cấp cao.
 
-NHIEM VU:
-Tong hop noi dung web da crawl de tra loi cau hoi cua nguoi dung.
+NHIỆM VỤ:
+Tổng hợp nội dung web đã crawl để trả lời câu hỏi của người dùng.
 
-RANG BUOC:
-1. Chi duoc su dung noi dung web duoc cung cap.
-2. Khong bia su kien, lien ket, hoac ket luan khong co bang chung.
-3. Neu bang chung chua du, noi ro muc do khong chac chan.
-4. Tra loi ngan gon, dung trong tam, va de kiem chung.
-5. Uu tien cau truc ro rang (muc ngan, bullet) khi can.
+RÀNG BUỘC:
+1. Chỉ được sử dụng nội dung web được cung cấp.
+2. Không bịa sự kiện, liên kết, hoặc kết luận không có bằng chứng.
+3. Nếu bằng chứng chưa đủ, nói rõ mức độ không chắc chắn.
+4. Trả lời ngắn gọn, đúng trọng tâm, và dễ kiểm chứng.
 
-CAU HOI NGUOI DUNG:
+ĐỊNH DẠNG TRẢ LỜI (Markdown):
+- Dùng **in đậm** cho thuật ngữ quan trọng, tên riêng, phát hiện chính.
+- Dùng ### tiêu đề để phân tách khi câu trả lời bao gồm nhiều chủ đề.
+- Dùng danh sách gạch đầu dòng (- mục) khi liệt kê hoặc so sánh.
+- Dùng danh sách đánh số (1. bước) cho quy trình tuần tự hoặc xếp hạng.
+- Trích dẫn URL nguồn dạng markdown link khi có: [tiêu đề](url).
+- Cách dòng giữa các phần để dễ đọc.
+- Nếu người dùng viết tiếng Việt không dấu, hãy trả lời bằng tiếng Việt có dấu tự nhiên.
+
+CÂU HỎI NGƯỜI DÙNG:
 {user_question}
 
-TOM TAT CUOI CUNG:"""
+TÓM TẮT CUỐI CÙNG:"""
 
 WEB_CONTEXT_BLOCK_TEMPLATE_EN = """WEB SOURCE {index}:
 {content}"""
 
-WEB_CONTEXT_BLOCK_TEMPLATE_VI = """NGUON WEB {index}:
+WEB_CONTEXT_BLOCK_TEMPLATE_VI = """NGUỒN WEB {index}:
 {content}"""
 
 

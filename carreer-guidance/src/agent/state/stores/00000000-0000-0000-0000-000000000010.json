@@ -1,0 +1,3120 @@
+{
+  "user_id": "00000000-0000-0000-0000-000000000010",
+  "created_at": "2026-05-06T09:56:47.867875+00:00",
+  "updated_at": "2026-05-10T13:43:25.216775+00:00",
+  "pending_by_execution": {},
+  "status_by_execution": {
+    "e4e8388b-8905-4fdc-b747-67014679cba5": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T09:56:47.874138+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T09:56:47.877222+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T09:56:47.879992+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-05-06T09:56:47.885504+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-05-06T09:56:47.889595+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-05-06T09:56:47.892144+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-05-06T09:56:47.901732+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-06T09:56:47.906351+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T09:56:47.910080+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T09:56:47.913336+00:00"
+      }
+    ],
+    "1eb50a06-3d51-4e6c-836f-0612e3b087ba": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T09:57:23.113789+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T09:57:23.121064+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T09:57:23.122092+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T09:57:23.125569+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T09:57:23.140748+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T09:57:23.142289+00:00"
+      }
+    ],
+    "bdebe616-7ce6-491b-a317-def6dd14d5dd": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T11:24:53.330344+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T11:24:53.347670+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T11:24:53.349670+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T11:24:53.352096+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T11:24:53.352420+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T11:24:53.352420+00:00"
+      }
+    ],
+    "f204aec0-ab6f-46e0-aa3d-7bc818db2a78": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T11:25:04.649120+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T11:25:04.649120+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T11:25:04.660961+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T11:25:04.662961+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T11:25:04.667421+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T11:25:04.672176+00:00"
+      }
+    ],
+    "944f8937-112a-4400-9547-beba9eef3f50": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T12:28:56.138739+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T12:28:56.141766+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T12:28:56.142768+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T12:28:56.144777+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T12:28:56.147775+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T12:28:56.148778+00:00"
+      }
+    ],
+    "c18ffce6-599b-4665-b31c-c5e26fcae089": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T12:29:18.813169+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T12:29:18.816176+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T12:29:18.818190+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-05-06T12:29:18.819181+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-05-06T12:29:18.821698+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-05-06T12:29:18.826783+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-05-06T12:29:25.138041+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-06T12:29:25.140043+00:00"
+      },
+      {
+        "status": "Dang sua cau tra loi theo danh gia.",
+        "timestamp": "2026-05-06T12:29:25.141042+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-06T12:29:30.001015+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T12:29:30.004014+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T12:29:30.005019+00:00"
+      }
+    ],
+    "3fa290e1-7dda-4514-becb-a8f80240fb43": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T13:05:03.848449+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T13:05:03.856576+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T13:05:03.859590+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-05-06T13:05:03.859590+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-05-06T13:05:03.859590+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-05-06T13:05:03.859590+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-05-06T13:05:07.960925+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-06T13:05:07.971217+00:00"
+      },
+      {
+        "status": "Dang sua cau tra loi theo danh gia.",
+        "timestamp": "2026-05-06T13:05:07.971217+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-06T13:05:12.050019+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T13:05:12.053216+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T13:05:12.056539+00:00"
+      }
+    ],
+    "a3ac4aed-0ab7-4553-98f6-6619590b72df": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T13:08:36.097957+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T13:08:36.107507+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T13:08:36.110508+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-05-06T13:08:36.114505+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-05-06T13:08:36.117506+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-05-06T13:08:36.122676+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-05-06T13:08:40.191719+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-06T13:08:40.195422+00:00"
+      },
+      {
+        "status": "Dang sua cau tra loi theo danh gia.",
+        "timestamp": "2026-05-06T13:08:40.198421+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-06T13:08:44.270059+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T13:08:44.270059+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T13:08:44.270059+00:00"
+      }
+    ],
+    "91015fbf-8390-464b-9c8c-0b00e177adaa": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T13:09:12.849311+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T13:09:12.857375+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T13:09:12.859369+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T13:09:12.862882+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T13:09:12.866884+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T13:09:12.868881+00:00"
+      }
+    ],
+    "11b0ac53-1809-4574-85b8-0cf6cd314cb7": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T13:09:26.379967+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T13:09:26.384976+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T13:09:26.388984+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T13:09:26.393977+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T13:09:26.400498+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T13:09:26.402497+00:00"
+      }
+    ],
+    "594d2b9f-a222-47c7-b5d1-e878c8e8e2f4": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T13:12:08.898731+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T13:12:08.907138+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T13:12:08.910642+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T13:12:08.913652+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T13:12:08.918650+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T13:12:08.921164+00:00"
+      }
+    ],
+    "ffbfc3c5-9cb7-4bbf-8c09-a56f5949ad1f": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T13:14:05.312410+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T13:14:05.323876+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T13:14:05.326877+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-05-06T13:14:05.329999+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-05-06T13:14:05.335299+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-05-06T13:14:05.338680+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-05-06T13:14:05.343237+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-06T13:14:05.348647+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T13:14:05.357275+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T13:14:05.365321+00:00"
+      }
+    ],
+    "9ec6cedd-c465-4a31-a18f-8c80934f1755": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T13:14:59.700224+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T13:14:59.712268+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T13:14:59.718285+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T13:14:59.722482+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T13:14:59.733529+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T13:14:59.738527+00:00"
+      }
+    ],
+    "cb1e9b05-745d-4c0c-8604-c72b8f83c5f4": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T13:19:20.220185+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T13:19:20.234969+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T13:19:20.238279+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T13:19:20.244280+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T13:19:20.255297+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T13:19:20.272197+00:00"
+      }
+    ],
+    "00c06899-7c46-4690-b856-cda8e768539b": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T13:19:24.773485+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T13:19:24.788485+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T13:19:24.794494+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T13:19:24.811016+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T13:19:24.819018+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T13:19:24.822015+00:00"
+      }
+    ],
+    "0531e5ae-aa17-4122-8c98-a7acca5c59f1": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T13:19:39.089928+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T13:19:39.096376+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T13:19:39.099382+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T13:19:39.102903+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T13:19:39.108914+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T13:19:39.111423+00:00"
+      }
+    ],
+    "a7f96789-e757-4140-862a-098c6c3ba1b4": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:01:41.205231+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:01:41.226332+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:01:41.230851+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:01:41.238882+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:01:41.246574+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:01:41.272339+00:00"
+      }
+    ],
+    "b32ffb80-fc4b-4e15-baf0-a8158747b13c": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:01:46.517094+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:01:46.528206+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:01:46.533881+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:01:46.541228+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:01:46.551531+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:01:46.556568+00:00"
+      }
+    ],
+    "e228dd07-cc63-40d5-b0d8-7eb0293668b5": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:01:49.824468+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:01:49.834510+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:01:49.840021+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:01:49.849042+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:01:49.859857+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:01:49.871344+00:00"
+      }
+    ],
+    "4537eaaa-fedb-474c-a9b9-cadb7b34aaac": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:01:55.629047+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:01:55.648096+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:01:55.650611+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:01:55.654128+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:01:55.659150+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:01:55.663691+00:00"
+      }
+    ],
+    "93474d6b-5683-4910-8cae-90733dcf32d9": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:04:46.666333+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:04:46.674157+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:04:46.678670+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:04:46.687705+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:04:46.697402+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:04:46.704900+00:00"
+      }
+    ],
+    "6903e720-638e-44d4-922e-cfc19a29fda7": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:04:53.297596+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:04:53.306177+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:04:53.310697+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:04:53.316235+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:04:53.325258+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:04:53.330774+00:00"
+      }
+    ],
+    "4a3be8cf-5dc9-47e4-9351-1abab84ba72e": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:04:56.838151+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:04:56.845189+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:04:56.850702+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:04:56.856219+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:04:56.864253+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:04:56.866958+00:00"
+      }
+    ],
+    "1c69d2b5-dd75-4ed2-bb99-d45751abdb3e": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:04:59.788732+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:04:59.798265+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:04:59.802287+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:04:59.807300+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:04:59.816431+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:04:59.820444+00:00"
+      }
+    ],
+    "3dba22ad-3556-4b19-8ff8-ead3bddc1df8": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:08:06.588505+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:08:06.598030+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:08:06.604033+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:08:06.609211+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:08:06.631806+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:08:06.635817+00:00"
+      }
+    ],
+    "3137eace-6c71-4691-a328-1916f730fb8b": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:08:10.369729+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:08:10.377774+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:08:10.381787+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:08:10.385816+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:08:10.393881+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:08:10.399420+00:00"
+      }
+    ],
+    "62b20249-aeea-475e-aac6-7f1574942ba4": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:08:13.120134+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:08:13.127142+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:08:13.130660+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:08:13.136202+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:08:13.146237+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:08:13.150759+00:00"
+      }
+    ],
+    "0aededdc-16e1-4753-aa23-d7f045ffb049": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:13:08.332043+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:13:08.349620+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:13:08.369216+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:13:08.387311+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:13:08.403380+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:13:08.420970+00:00"
+      }
+    ],
+    "ac5962b1-28c6-452f-b01a-95b36109b4da": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:14:14.499734+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:14:14.514805+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:14:14.519827+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:14:14.534881+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:14:14.550970+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:14:14.565044+00:00"
+      }
+    ],
+    "e7cba72c-a337-44d4-b52e-3798325c3b1f": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:14:16.921808+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:14:16.934843+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:14:16.941888+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:14:16.949919+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:14:16.961968+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:14:16.965974+00:00"
+      }
+    ],
+    "9a594d18-2e32-44c8-8b16-77afeda31266": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:14:25.705325+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:14:25.721915+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:14:25.727981+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:14:25.739037+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:14:25.749104+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:14:25.755138+00:00"
+      }
+    ],
+    "2d0d9673-b9cc-4841-8070-87ba82ae7c6c": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:14:32.061195+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:14:32.071261+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:14:32.077820+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-05-06T14:14:32.083843+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-05-06T14:14:32.099485+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-05-06T14:14:32.107065+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-05-06T14:14:36.207787+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-06T14:14:36.214306+00:00"
+      },
+      {
+        "status": "Dang sua cau tra loi theo danh gia.",
+        "timestamp": "2026-05-06T14:14:36.219833+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-06T14:14:40.253791+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:14:40.261826+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:14:40.267363+00:00"
+      }
+    ],
+    "5ea1e6ae-bda2-4cc9-9366-34b91884e632": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:14:49.826835+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:14:49.840896+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:14:49.847442+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:14:49.855993+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:14:49.866020+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:14:49.871050+00:00"
+      }
+    ],
+    "d6918f6a-150c-4852-a002-901a68c2a972": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:14:59.477554+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:14:59.492646+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:14:59.502960+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-05-06T14:14:59.510998+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-05-06T14:14:59.525045+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-05-06T14:14:59.535102+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-05-06T14:15:03.583329+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-06T14:15:03.590883+00:00"
+      },
+      {
+        "status": "Dang sua cau tra loi theo danh gia.",
+        "timestamp": "2026-05-06T14:15:03.619621+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-06T14:15:07.670830+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:15:07.681410+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:15:07.687453+00:00"
+      }
+    ],
+    "e83fac08-1f52-4199-9946-842e810fe569": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:24:43.153955+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:24:43.163469+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:24:43.169486+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:24:43.173710+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:24:43.180226+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:24:43.185756+00:00"
+      }
+    ],
+    "846a72ad-f72d-4760-9d5e-7deebdb1520f": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:24:51.190497+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:24:51.201073+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:24:51.206611+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:24:51.212645+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:24:51.221171+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:24:51.225274+00:00"
+      }
+    ],
+    "c24b2b38-c4dc-4850-a340-4c1ddfaa5a0c": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:24:56.758180+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:24:56.770450+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:24:56.775654+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:24:56.787195+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:24:56.804640+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:24:56.812172+00:00"
+      }
+    ],
+    "092745b1-b2d4-43b3-9e70-b56fbab0008e": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:29:30.624407+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:29:30.643510+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:29:30.653548+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:29:30.665075+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:29:30.681678+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:29:30.688709+00:00"
+      }
+    ],
+    "f881cfcf-64f4-48a3-bfd3-28fb607b8290": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:29:35.644329+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:29:35.663447+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:29:35.679556+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:29:35.695632+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:29:35.724811+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:29:35.732864+00:00"
+      }
+    ],
+    "9eb0bccd-3f70-47ca-8b0e-479e746e5872": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:29:40.474026+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:29:40.504154+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:29:40.515229+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:29:40.546932+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:29:40.578245+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:29:40.591819+00:00"
+      }
+    ],
+    "5a529d86-e544-468c-9945-6695bfa86ec9": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:32:53.773920+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:32:53.787985+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:32:53.796025+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:32:53.804060+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:32:53.825681+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:32:53.834777+00:00"
+      }
+    ],
+    "203e5ca5-98a3-404d-bc17-eaf1f5d4470c": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:32:58.118069+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:32:58.156356+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:32:58.166428+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:32:58.195207+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:32:58.210223+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:32:58.222796+00:00"
+      }
+    ],
+    "c6272f06-53b7-4691-af9e-346846c80e83": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:33:03.562832+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:33:03.580934+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:33:03.597042+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:33:03.604559+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:33:03.629177+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:33:03.637792+00:00"
+      }
+    ],
+    "0a794cd3-f087-4a7b-8580-dc50098e912a": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:33:06.300163+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:33:06.315252+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:33:06.320784+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:33:06.333364+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:33:06.352038+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:33:06.362639+00:00"
+      }
+    ],
+    "ed4c9676-f3b5-4c44-af13-c8209deda81b": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:33:08.268032+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:33:08.282159+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:33:08.296227+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:33:08.305400+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:33:08.318977+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:33:08.326519+00:00"
+      }
+    ],
+    "73a294ba-13b2-4652-b384-6dcc7b0c1945": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:33:10.226537+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:33:10.243812+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:33:10.252875+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:33:10.263419+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:33:10.284557+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:33:10.292602+00:00"
+      }
+    ],
+    "219bccb9-a29a-4674-916d-f416d8bb776f": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:33:12.385026+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:33:12.404149+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:33:12.414201+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:33:12.434341+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:33:12.456014+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:33:12.463585+00:00"
+      }
+    ],
+    "5f6f6a3c-0013-479c-8089-c56668cd0013": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:33:15.355970+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:33:15.368849+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:33:15.375432+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:33:15.381971+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:33:15.401563+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:33:15.409102+00:00"
+      }
+    ],
+    "929be46a-1ff2-4f5d-a287-23df7024df0a": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:33:18.505075+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:33:18.521794+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:33:18.544957+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:33:18.556735+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:33:18.574692+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:33:18.584840+00:00"
+      }
+    ],
+    "4a92565c-446f-4be2-87b6-c2a61dc604d8": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:33:23.136724+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:33:23.151242+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:33:23.157261+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:33:23.164538+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:33:23.175155+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:33:23.183438+00:00"
+      }
+    ],
+    "5804ca0b-d62d-4243-8c44-27384ea7e6c8": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:39:58.344616+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:39:58.355126+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:39:58.360641+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-05-06T14:39:58.366702+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-05-06T14:39:58.372879+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-05-06T14:39:58.379917+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-05-06T14:40:02.455102+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-06T14:40:02.459615+00:00"
+      },
+      {
+        "status": "Dang sua cau tra loi theo danh gia.",
+        "timestamp": "2026-05-06T14:40:02.467765+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-06T14:40:06.492924+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:40:06.501517+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:40:06.506521+00:00"
+      }
+    ],
+    "5af863df-5da8-4064-bd09-7dee358c2c6a": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:42:33.025200+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:42:33.038271+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:42:33.047495+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:42:33.057550+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:42:33.075711+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:42:33.083254+00:00"
+      }
+    ],
+    "4f57e0a0-2586-4b3b-b55d-b578c3170ea9": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:44:38.868555+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:44:38.886641+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:44:38.895176+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:44:38.906741+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:44:38.932906+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:44:38.939924+00:00"
+      }
+    ],
+    "0b85f20c-2402-4fab-93b2-e0794a794e51": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:44:39.841881+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:44:39.859080+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:44:39.871113+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-05-06T14:44:39.888233+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-05-06T14:44:39.903794+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-05-06T14:44:39.919381+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-05-06T14:44:43.965096+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-06T14:44:43.973098+00:00"
+      },
+      {
+        "status": "Dang sua cau tra loi theo danh gia.",
+        "timestamp": "2026-05-06T14:44:43.986636+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-06T14:44:48.021040+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:44:48.043137+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:44:48.059226+00:00"
+      }
+    ],
+    "d2a5de31-2d10-4033-bdc7-69d69a4b813b": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:44:50.440088+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:44:50.455192+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:44:50.470875+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:44:50.478040+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:44:50.499166+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:44:50.504674+00:00"
+      }
+    ],
+    "faeb090f-3acc-42b3-8413-ca5df57c8235": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:44:51.501800+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:44:51.520864+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:44:51.535842+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:44:51.543839+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:44:51.565993+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:44:51.574512+00:00"
+      }
+    ],
+    "9713836e-4cfb-4e61-88d9-14ec7b866e56": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:44:52.302719+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:44:52.325316+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:44:52.343993+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:44:52.354008+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:44:52.371172+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:44:52.385757+00:00"
+      }
+    ],
+    "f67035a9-503e-4210-9a94-df121c19ebdc": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:44:54.338802+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:44:54.356947+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:44:54.367465+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:44:54.377509+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:44:54.397579+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:44:54.407157+00:00"
+      }
+    ],
+    "b0a06e87-0b9c-4aea-ba1c-e26be2a58d3a": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:44:55.355025+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:44:55.369598+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:44:55.387703+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:44:55.400758+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:44:55.418875+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:44:55.428422+00:00"
+      }
+    ],
+    "9d6526ed-e7fe-4707-841f-1c819b7d6bb9": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:44:56.374609+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:44:56.389677+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:44:56.401212+00:00"
+      },
+      {
+        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
+        "timestamp": "2026-05-06T14:44:56.411110+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:44:56.432215+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:44:56.439825+00:00"
+      }
+    ],
+    "601d3f5e-1c56-4452-abed-d768ceae650b": [
+      {
+        "status": "Da nhan cau hoi.",
+        "timestamp": "2026-05-06T14:44:58.038503+00:00"
+      },
+      {
+        "status": "Da luu cau hoi vao store theo user.",
+        "timestamp": "2026-05-06T14:44:58.053021+00:00"
+      },
+      {
+        "status": "Dang kiem tra cau tra loi trung lap trong store.",
+        "timestamp": "2026-05-06T14:44:58.062081+00:00"
+      },
+      {
+        "status": "Dang kiem tra guardrails cho cau hoi.",
+        "timestamp": "2026-05-06T14:44:58.071104+00:00"
+      },
+      {
+        "status": "Dang lap ke hoach va chon tool.",
+        "timestamp": "2026-05-06T14:44:58.083152+00:00"
+      },
+      {
+        "status": "Dang chay tool theo ke hoach.",
+        "timestamp": "2026-05-06T14:44:58.091926+00:00"
+      },
+      {
+        "status": "Dang tong hop ban nhap cau tra loi.",
+        "timestamp": "2026-05-06T14:45:02.137315+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-06T14:45:02.145006+00:00"
+      },
+      {
+        "status": "Dang sua cau tra loi theo danh gia.",
+        "timestamp": "2026-05-06T14:45:02.152026+00:00"
+      },
+      {
+        "status": "Dang danh gia chat luong cau tra loi.",
+        "timestamp": "2026-05-06T14:45:06.171975+00:00"
+      },
+      {
+        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
+        "timestamp": "2026-05-06T14:45:06.188812+00:00"
+      },
+      {
+        "status": "Hoan tat xu ly.",
+        "timestamp": "2026-05-06T14:45:06.196418+00:00"
+      }
+    ],
+    "670c0b92-2a09-4d08-8c84-6531cc4249b1": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-10T13:12:15.076721+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-10T13:12:15.096886+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-10T13:12:15.104915+00:00"
+      },
+      {
+        "status": "Cache hit — returning fast response.",
+        "timestamp": "2026-05-10T13:12:15.115155+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-10T13:12:15.135016+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-10T13:12:15.142806+00:00"
+      }
+    ],
+    "620b2cb9-0051-40ac-85c7-f8eb5ddde576": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-10T13:12:20.521969+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-10T13:12:20.541427+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-10T13:12:20.557442+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-10T13:12:20.568538+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-10T13:12:20.578573+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-10T13:12:25.896529+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-10T13:12:32.348956+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-10T13:12:32.354956+00:00"
+      },
+      {
+        "status": "Refining answer based on evaluation.",
+        "timestamp": "2026-05-10T13:12:37.513324+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-10T13:12:42.688104+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-10T13:12:47.727505+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-10T13:12:47.734506+00:00"
+      }
+    ],
+    "d7da5989-209c-47bf-ae72-79f96ce0805d": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-10T13:21:00.229347+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-10T13:21:00.243127+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-10T13:21:00.250644+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-10T13:21:00.257945+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-10T13:21:00.262952+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-10T13:21:08.065852+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-10T13:21:12.202016+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-10T13:21:12.207522+00:00"
+      },
+      {
+        "status": "Refining answer based on evaluation.",
+        "timestamp": "2026-05-10T13:21:18.673218+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-10T13:21:23.603738+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-10T13:21:28.741070+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-10T13:21:28.748386+00:00"
+      }
+    ],
+    "810bfdbc-22b6-4ef5-9785-31f47247f8a4": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-10T13:30:44.021631+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-10T13:30:44.031680+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-10T13:30:44.039518+00:00"
+      },
+      {
+        "status": "Cache hit — returning fast response.",
+        "timestamp": "2026-05-10T13:30:44.045179+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-10T13:30:44.059381+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-10T13:30:44.064036+00:00"
+      }
+    ],
+    "59f916f5-2910-4f2e-b06d-f52d3201d01f": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-10T13:35:13.496257+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-10T13:35:13.508502+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-10T13:35:13.516360+00:00"
+      },
+      {
+        "status": "Cache hit — returning fast response.",
+        "timestamp": "2026-05-10T13:35:13.524895+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-10T13:35:13.537388+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-10T13:35:13.547921+00:00"
+      }
+    ],
+    "954c115f-8639-46ea-a024-6f03f6f0296d": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-10T13:35:18.337602+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-10T13:35:18.352316+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-10T13:35:18.361326+00:00"
+      },
+      {
+        "status": "Cache hit — returning fast response.",
+        "timestamp": "2026-05-10T13:35:18.369062+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-10T13:35:18.386302+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-10T13:35:18.395423+00:00"
+      }
+    ],
+    "4add828d-874b-417d-aedf-fe1b1eb85c81": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-10T13:35:20.345099+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-10T13:35:20.355682+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-10T13:35:20.366221+00:00"
+      },
+      {
+        "status": "Cache hit — returning fast response.",
+        "timestamp": "2026-05-10T13:35:20.376157+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-10T13:35:20.393462+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-10T13:35:20.400461+00:00"
+      }
+    ],
+    "6142b0a9-d40b-4c42-ab5f-4899ec1e6db6": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-10T13:36:08.122822+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-10T13:36:08.133489+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-10T13:36:08.140489+00:00"
+      },
+      {
+        "status": "Cache hit — returning fast response.",
+        "timestamp": "2026-05-10T13:36:08.149060+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-10T13:36:08.162071+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-10T13:36:08.173113+00:00"
+      }
+    ],
+    "167f2931-05cd-4ab8-8e47-6653ec1b5b29": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-10T13:36:13.975993+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-10T13:36:13.988297+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-10T13:36:13.996986+00:00"
+      },
+      {
+        "status": "Cache hit — returning fast response.",
+        "timestamp": "2026-05-10T13:36:14.004520+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-10T13:36:14.019250+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-10T13:36:14.025753+00:00"
+      }
+    ],
+    "cb43bddf-34da-43c3-9f3d-e0c4c9ec508b": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-10T13:36:18.294653+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-10T13:36:18.308572+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-10T13:36:18.315242+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-10T13:36:18.322913+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-10T13:36:18.332236+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-10T13:36:23.441051+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-10T13:36:28.053269+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-10T13:36:28.063951+00:00"
+      },
+      {
+        "status": "Refining answer based on evaluation.",
+        "timestamp": "2026-05-10T13:36:33.358068+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-10T13:36:38.822840+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-10T13:36:43.856737+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-10T13:36:43.863983+00:00"
+      }
+    ],
+    "64b6bafc-65ad-4d28-ae4c-bf8784413cb2": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-10T13:37:38.728741+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-10T13:37:38.741910+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-10T13:37:38.749834+00:00"
+      },
+      {
+        "status": "Cache hit — returning fast response.",
+        "timestamp": "2026-05-10T13:37:38.759084+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-10T13:37:38.771966+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-10T13:37:38.778987+00:00"
+      }
+    ],
+    "e8f14515-689c-4b15-b8f9-a28bc1a412e1": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-10T13:42:40.419703+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-10T13:42:40.441009+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-10T13:42:40.453797+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-10T13:42:40.551378+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-10T13:42:40.605425+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-10T13:42:40.635477+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-10T13:42:40.647226+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-10T13:42:40.657253+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-10T13:42:46.229327+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-10T13:42:46.236846+00:00"
+      }
+    ],
+    "2b208f3d-98f4-421f-8457-46abed7c94c9": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-10T13:43:13.245233+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-10T13:43:13.262630+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-10T13:43:13.270847+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-10T13:43:13.280483+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-10T13:43:13.295959+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-10T13:43:14.282183+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-10T13:43:14.291893+00:00"
+      },
+      {
+        "status": "Refining answer based on evaluation.",
+        "timestamp": "2026-05-10T13:43:19.397505+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-10T13:43:20.226585+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-10T13:43:25.210592+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-10T13:43:25.216775+00:00"
+      }
+    ]
+  },
+  "qa_cache": {
+    "hello": {
+      "question": "hello",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "conversation_id": "aac81225-2687-4621-9005-581251615e94",
+      "updated_at": "2026-05-10T13:37:38.766463+00:00"
+    },
+    "bạn có thể trả lời tiếng anh không?": {
+      "question": "Bạn có thể trả lời tiếng anh không?",
+      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?\n- Web error: web search failed with status 401",
+      "sources": [],
+      "image_urls": [],
+      "conversation_id": "39905cdb-ed60-424f-8af4-d702f69c17db",
+      "updated_at": "2026-05-06T12:29:30.002017+00:00"
+    },
+    "ban giup duoc gi cho toi?": {
+      "question": "Ban giup duoc gi cho toi?",
+      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?",
+      "sources": [],
+      "image_urls": [],
+      "conversation_id": "ccb4ad03-8bc5-46a5-8aa9-07d603463926",
+      "updated_at": "2026-05-06T13:05:12.053216+00:00"
+    },
+    "chào": {
+      "question": "Chào",
+      "answer": "Tôi có thể hỗ trợ bạn về định hướng nghề nghiệp, phát triển kỹ năng và thông tin tham khảo từ web khi cần.",
+      "sources": [],
+      "image_urls": [],
+      "conversation_id": "568a77e2-a35b-4ade-b1b0-fa1b71a43026",
+      "updated_at": "2026-05-10T13:42:46.223255+00:00"
+    },
+    "hi": {
+      "question": "hi",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "conversation_id": "d32f53b3-b38c-4380-aa80-ff01bf9fb46e",
+      "updated_at": "2026-05-06T14:44:55.409292+00:00"
+    },
+    "ha": {
+      "question": "ha",
+      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?",
+      "sources": [],
+      "image_urls": [],
+      "conversation_id": "a94e31b7-cf36-4d71-b90d-90bbf81ea0e3",
+      "updated_at": "2026-05-06T14:33:23.169063+00:00"
+    },
+    "hiii": {
+      "question": "Hiii",
+      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?",
+      "sources": [],
+      "image_urls": [],
+      "conversation_id": "50d2e2ca-88a9-44fb-b9ff-30584f0d27e5",
+      "updated_at": "2026-05-06T14:15:07.675889+00:00"
+    },
+    "hằgawgw": {
+      "question": "hằgawgw",
+      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?",
+      "sources": [],
+      "image_urls": [],
+      "conversation_id": "3ff88244-9ba1-48ec-8c1d-782904ec8244",
+      "updated_at": "2026-05-06T14:40:06.497527+00:00"
+    },
+    "hhi": {
+      "question": "hhi",
+      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?",
+      "sources": [],
+      "image_urls": [],
+      "conversation_id": "653edcc5-a13e-4d3a-833f-b8c8d43df147",
+      "updated_at": "2026-05-06T14:44:56.422163+00:00"
+    },
+    "hà": {
+      "question": "hà",
+      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?",
+      "sources": [],
+      "image_urls": [],
+      "conversation_id": "5b3852cf-e5a1-4999-86c1-a95b04903d89",
+      "updated_at": "2026-05-06T14:45:06.181239+00:00"
+    },
+    "xin chào": {
+      "question": "Xin chào",
+      "answer": "No relevant data found to answer this question.\n\nDetails:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?\n- Web error: web search failed with status 401",
+      "sources": [],
+      "image_urls": [],
+      "conversation_id": "457e5fc3-40a2-4643-b4e6-2657f76bd690",
+      "updated_at": "2026-05-10T13:36:14.012740+00:00"
+    },
+    "bạn giúp gì được cho tôi?": {
+      "question": "Bạn giúp gì được cho tôi?",
+      "answer": "No relevant data found to answer this question.\n\nDetails:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?\n- Web error: web search failed with status 401",
+      "sources": [],
+      "image_urls": [],
+      "conversation_id": "6a58a358-efa1-4c1b-b239-4aaa3048e943",
+      "updated_at": "2026-05-10T13:21:28.733775+00:00"
+    },
+    "hii": {
+      "question": "Hii",
+      "answer": "No relevant data found to answer this question.\n\nDetails:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?\n- Web error: web search failed with status 401",
+      "sources": [],
+      "image_urls": [],
+      "conversation_id": "8e022163-0324-4bfb-90cc-2b18fac9962a",
+      "updated_at": "2026-05-10T13:36:43.845007+00:00"
+    },
+    "trường đại học duy tân có ngành học gì?": {
+      "question": "Trường đại học Duy Tân có ngành học gì?",
+      "answer": "Không tìm thấy dữ liệu phù hợp để trả lời câu hỏi này.\n\nChi tiết:\n- Web error: web search failed with status 401",
+      "sources": [],
+      "image_urls": [],
+      "conversation_id": "a4ba2ebc-9293-4951-9ed9-16389e7fb552",
+      "updated_at": "2026-05-10T13:43:25.205923+00:00"
+    }
+  },
+  "history": [
+    {
+      "execution_id": "e4e8388b-8905-4fdc-b747-67014679cba5",
+      "conversation_id": "77ccad57-8396-42d7-acec-43ae125d452c",
+      "question": "hello",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-06T09:56:47.908939+00:00"
+    },
+    {
+      "execution_id": "1eb50a06-3d51-4e6c-836f-0612e3b087ba",
+      "conversation_id": "bd8afab7-008b-445e-9e7a-ba5facc61124",
+      "question": "hello",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T09:57:23.131508+00:00"
+    },
+    {
+      "execution_id": "bdebe616-7ce6-491b-a317-def6dd14d5dd",
+      "conversation_id": "24fe09e7-4aa3-4411-b45a-ee27a39ea4da",
+      "question": "hello",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T11:24:53.352420+00:00"
+    },
+    {
+      "execution_id": "f204aec0-ab6f-46e0-aa3d-7bc818db2a78",
+      "conversation_id": "bcf58991-da2f-4790-a2a2-f9d42977c363",
+      "question": "hello",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T11:25:04.665960+00:00"
+    },
+    {
+      "execution_id": "944f8937-112a-4400-9547-beba9eef3f50",
+      "conversation_id": "78bae9d0-641d-44e6-9a7f-73d765c2a27d",
+      "question": "hello",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T12:28:56.145778+00:00"
+    },
+    {
+      "execution_id": "c18ffce6-599b-4665-b31c-c5e26fcae089",
+      "conversation_id": "39905cdb-ed60-424f-8af4-d702f69c17db",
+      "question": "Bạn có thể trả lời tiếng anh không?",
+      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?\n- Web error: web search failed with status 401",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-06T12:29:30.002017+00:00"
+    },
+    {
+      "execution_id": "3fa290e1-7dda-4514-becb-a8f80240fb43",
+      "conversation_id": "ccb4ad03-8bc5-46a5-8aa9-07d603463926",
+      "question": "Ban giup duoc gi cho toi?",
+      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-06T13:05:12.053216+00:00"
+    },
+    {
+      "execution_id": "a3ac4aed-0ab7-4553-98f6-6619590b72df",
+      "conversation_id": "503febb8-c76a-460e-9c47-7256430c545f",
+      "question": "Chào",
+      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-06T13:08:44.270059+00:00"
+    },
+    {
+      "execution_id": "91015fbf-8390-464b-9c8c-0b00e177adaa",
+      "conversation_id": "a7ad1ad5-d23d-44e1-b327-4020ea51cc25",
+      "question": "Hello",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T13:09:12.864886+00:00"
+    },
+    {
+      "execution_id": "11b0ac53-1809-4574-85b8-0cf6cd314cb7",
+      "conversation_id": "fc62b8ff-4d64-46d5-9ba5-04824af0be19",
+      "question": "hello",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T13:09:26.397508+00:00"
+    },
+    {
+      "execution_id": "594d2b9f-a222-47c7-b5d1-e878c8e8e2f4",
+      "conversation_id": "a9cc97ea-46d4-43ec-a1d6-f5d0045d2532",
+      "question": "Hello",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T13:12:08.916650+00:00"
+    },
+    {
+      "execution_id": "ffbfc3c5-9cb7-4bbf-8c09-a56f5949ad1f",
+      "conversation_id": "7c5f44e4-72b1-4e6d-9fa6-c2e16776b8ed",
+      "question": "Hi",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-06T13:14:05.348647+00:00"
+    },
+    {
+      "execution_id": "9ec6cedd-c465-4a31-a18f-8c80934f1755",
+      "conversation_id": "031b593f-5d18-481d-9786-659ee585c699",
+      "question": "Hi",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T13:14:59.728004+00:00"
+    },
+    {
+      "execution_id": "cb1e9b05-745d-4c0c-8604-c72b8f83c5f4",
+      "conversation_id": "a932eaf0-aadf-4c0e-bea9-02559591918e",
+      "question": "hi",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T13:19:20.250299+00:00"
+    },
+    {
+      "execution_id": "00c06899-7c46-4690-b856-cda8e768539b",
+      "conversation_id": "5e7d90fc-7fb5-41c7-b4b7-6abeaabe7d23",
+      "question": "Chào",
+      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T13:19:24.815015+00:00"
+    },
+    {
+      "execution_id": "0531e5ae-aa17-4122-8c98-a7acca5c59f1",
+      "conversation_id": "25e2ae25-62ec-4c34-a1a2-520e62b9df29",
+      "question": "Hello",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T13:19:39.104914+00:00"
+    },
+    {
+      "execution_id": "a7f96789-e757-4140-862a-098c6c3ba1b4",
+      "conversation_id": "2914f3ee-380c-43dd-b3c1-51b70e03b9ed",
+      "question": "hi",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:01:41.243047+00:00"
+    },
+    {
+      "execution_id": "b32ffb80-fc4b-4e15-baf0-a8158747b13c",
+      "conversation_id": "509c53a9-ee90-4f89-bee7-a09d04726ff8",
+      "question": "hi",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:01:46.547752+00:00"
+    },
+    {
+      "execution_id": "e228dd07-cc63-40d5-b0d8-7eb0293668b5",
+      "conversation_id": "e21d1488-5302-4eb6-acc5-9de5e6ea8a13",
+      "question": "hi",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:01:49.853817+00:00"
+    },
+    {
+      "execution_id": "4537eaaa-fedb-474c-a9b9-cadb7b34aaac",
+      "conversation_id": "ce45cb06-049c-46bc-9268-85d200944f39",
+      "question": "hi",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:01:55.656635+00:00"
+    },
+    {
+      "execution_id": "93474d6b-5683-4910-8cae-90733dcf32d9",
+      "conversation_id": "63830c20-22d4-4aad-a658-cffa27b8635b",
+      "question": "hi",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:04:46.693401+00:00"
+    },
+    {
+      "execution_id": "6903e720-638e-44d4-922e-cfc19a29fda7",
+      "conversation_id": "465a187b-d5ef-4ea2-91e9-9057723d017b",
+      "question": "hi",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:04:53.320733+00:00"
+    },
+    {
+      "execution_id": "4a3be8cf-5dc9-47e4-9351-1abab84ba72e",
+      "conversation_id": "eceb7b1b-58e8-42e8-a89c-d0623b032bb3",
+      "question": "hi",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:04:56.860734+00:00"
+    },
+    {
+      "execution_id": "1c69d2b5-dd75-4ed2-bb99-d45751abdb3e",
+      "conversation_id": "9e5666eb-beb1-4b17-8ade-437a9ee66953",
+      "question": "hi",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:04:59.812422+00:00"
+    },
+    {
+      "execution_id": "3dba22ad-3556-4b19-8ff8-ead3bddc1df8",
+      "conversation_id": "af1be67e-8f92-41b4-9838-868ccbb025bd",
+      "question": "hi",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:08:06.623772+00:00"
+    },
+    {
+      "execution_id": "3137eace-6c71-4691-a328-1916f730fb8b",
+      "conversation_id": "2faac3bc-9653-4686-99c2-7259e4c43b03",
+      "question": "hi",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:08:10.389872+00:00"
+    },
+    {
+      "execution_id": "62b20249-aeea-475e-aac6-7f1574942ba4",
+      "conversation_id": "531eb556-2a39-4cb2-9b08-bb11aba034e1",
+      "question": "hi",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:08:13.141733+00:00"
+    },
+    {
+      "execution_id": "0aededdc-16e1-4753-aa23-d7f045ffb049",
+      "conversation_id": "187c98c1-5e47-40d0-8137-4dc12205912e",
+      "question": "Hi",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:13:08.393347+00:00"
+    },
+    {
+      "execution_id": "ac5962b1-28c6-452f-b01a-95b36109b4da",
+      "conversation_id": "80c6ac0c-0f51-4db1-bd89-816b803b56b4",
+      "question": "Hi",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:14:14.541939+00:00"
+    },
+    {
+      "execution_id": "e7cba72c-a337-44d4-b52e-3798325c3b1f",
+      "conversation_id": "74a9d853-91a6-4d7a-9c30-0452319a892d",
+      "question": "hi",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:14:16.955932+00:00"
+    },
+    {
+      "execution_id": "9a594d18-2e32-44c8-8b16-77afeda31266",
+      "conversation_id": "6aba7db9-857c-4c5b-9f74-794c657b3ef5",
+      "question": "hi",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:14:25.745051+00:00"
+    },
+    {
+      "execution_id": "2d0d9673-b9cc-4841-8070-87ba82ae7c6c",
+      "conversation_id": "768e8ea3-384b-4c89-831c-41c15669f486",
+      "question": "ha",
+      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-06T14:14:40.257822+00:00"
+    },
+    {
+      "execution_id": "5ea1e6ae-bda2-4cc9-9366-34b91884e632",
+      "conversation_id": "a3b5a4b6-b4da-4d7c-86d8-bf3777501a07",
+      "question": "Ha",
+      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:14:49.860003+00:00"
+    },
+    {
+      "execution_id": "d6918f6a-150c-4852-a002-901a68c2a972",
+      "conversation_id": "50d2e2ca-88a9-44fb-b9ff-30584f0d27e5",
+      "question": "Hiii",
+      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-06T14:15:07.675889+00:00"
+    },
+    {
+      "execution_id": "e83fac08-1f52-4199-9946-842e810fe569",
+      "conversation_id": "5e482b66-5720-403d-a94d-497deef5d7d5",
+      "question": "Hi",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:24:43.175707+00:00"
+    },
+    {
+      "execution_id": "846a72ad-f72d-4760-9d5e-7deebdb1520f",
+      "conversation_id": "30394d3f-be5e-4d90-87cc-c35b2bb619b2",
+      "question": "hi",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:24:51.217175+00:00"
+    },
+    {
+      "execution_id": "c24b2b38-c4dc-4850-a340-4c1ddfaa5a0c",
+      "conversation_id": "1d108e67-c9a2-4dc7-af12-c6bb7ecd8b86",
+      "question": "Ha",
+      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:24:56.793503+00:00"
+    },
+    {
+      "execution_id": "092745b1-b2d4-43b3-9e70-b56fbab0008e",
+      "conversation_id": "684f59dc-03a4-436b-a7ac-649963524bcd",
+      "question": "Hi",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:29:30.677161+00:00"
+    },
+    {
+      "execution_id": "f881cfcf-64f4-48a3-bfd3-28fb607b8290",
+      "conversation_id": "ac6fad19-fe0e-41a2-bbb6-d8d183265279",
+      "question": "Hi",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:29:35.713234+00:00"
+    },
+    {
+      "execution_id": "9eb0bccd-3f70-47ca-8b0e-479e746e5872",
+      "conversation_id": "c30066d3-27df-4916-8f06-a5f50fac7ecd",
+      "question": "Ha",
+      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:29:40.570698+00:00"
+    },
+    {
+      "execution_id": "5a529d86-e544-468c-9945-6695bfa86ec9",
+      "conversation_id": "dad7dc3a-9f14-4fbd-95e1-c520654530cc",
+      "question": "Hi",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:32:53.815639+00:00"
+    },
+    {
+      "execution_id": "203e5ca5-98a3-404d-bc17-eaf1f5d4470c",
+      "conversation_id": "50ce2cd0-5d76-4371-a4e0-2fb7e5670513",
+      "question": "Hi",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:32:58.201984+00:00"
+    },
+    {
+      "execution_id": "c6272f06-53b7-4691-af9e-346846c80e83",
+      "conversation_id": "31f9ab79-746b-4966-9cf4-bd0665aac2b4",
+      "question": "Hi",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:33:03.612596+00:00"
+    },
+    {
+      "execution_id": "0a794cd3-f087-4a7b-8580-dc50098e912a",
+      "conversation_id": "cdbade57-6483-40ac-bde6-65cd3ef3836f",
+      "question": "hi",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:33:06.344976+00:00"
+    },
+    {
+      "execution_id": "ed4c9676-f3b5-4c44-af13-c8209deda81b",
+      "conversation_id": "c0fefda5-4c14-4e33-95f8-788fda396ea8",
+      "question": "hi",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:33:08.313964+00:00"
+    },
+    {
+      "execution_id": "73a294ba-13b2-4652-b384-6dcc7b0c1945",
+      "conversation_id": "bb29db2b-9dff-4222-8a90-e77fc04bf7f8",
+      "question": "hi",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:33:10.279019+00:00"
+    },
+    {
+      "execution_id": "219bccb9-a29a-4674-916d-f416d8bb776f",
+      "conversation_id": "c7171218-db7b-4e6a-adf0-624913324916",
+      "question": "hi",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:33:12.443928+00:00"
+    },
+    {
+      "execution_id": "5f6f6a3c-0013-479c-8089-c56668cd0013",
+      "conversation_id": "846cd990-bea6-436f-9509-e67272c96793",
+      "question": "hi",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:33:15.388981+00:00"
+    },
+    {
+      "execution_id": "929be46a-1ff2-4f5d-a287-23df7024df0a",
+      "conversation_id": "528f2d6e-58c6-4be2-8c6d-cdfc418cc6e3",
+      "question": "ha",
+      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:33:18.566291+00:00"
+    },
+    {
+      "execution_id": "4a92565c-446f-4be2-87b6-c2a61dc604d8",
+      "conversation_id": "a94e31b7-cf36-4d71-b90d-90bbf81ea0e3",
+      "question": "ha",
+      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:33:23.169063+00:00"
+    },
+    {
+      "execution_id": "5804ca0b-d62d-4243-8c44-27384ea7e6c8",
+      "conversation_id": "3ff88244-9ba1-48ec-8c1d-782904ec8244",
+      "question": "hằgawgw",
+      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-06T14:40:06.497527+00:00"
+    },
+    {
+      "execution_id": "5af863df-5da8-4064-bd09-7dee358c2c6a",
+      "conversation_id": "b4291fe5-4bb1-4d9f-a99b-bf72608fe9f0",
+      "question": "Hi",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:42:33.068601+00:00"
+    },
+    {
+      "execution_id": "4f57e0a0-2586-4b3b-b55d-b578c3170ea9",
+      "conversation_id": "abdf669e-c549-4cb0-ab99-df952394c2ac",
+      "question": "hi",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:44:38.923848+00:00"
+    },
+    {
+      "execution_id": "0b85f20c-2402-4fab-93b2-e0794a794e51",
+      "conversation_id": "a44001e8-a6ce-473e-b18d-6c4828273b80",
+      "question": "hhi",
+      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-06T14:44:48.034597+00:00"
+    },
+    {
+      "execution_id": "d2a5de31-2d10-4033-bdc7-69d69a4b813b",
+      "conversation_id": "392a4219-2b3e-42f6-bc06-a8cbaa154134",
+      "question": "hi",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:44:50.492083+00:00"
+    },
+    {
+      "execution_id": "faeb090f-3acc-42b3-8413-ca5df57c8235",
+      "conversation_id": "115bdcf2-f8aa-4e06-93cb-e5b6b65fbed8",
+      "question": "hi",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:44:51.555974+00:00"
+    },
+    {
+      "execution_id": "9713836e-4cfb-4e61-88d9-14ec7b866e56",
+      "conversation_id": "ccaf25a9-a8b0-4cba-90a2-61fe242e937f",
+      "question": "hi",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:44:52.364649+00:00"
+    },
+    {
+      "execution_id": "f67035a9-503e-4210-9a94-df121c19ebdc",
+      "conversation_id": "e8ba5270-69d0-47e1-a62b-42311227574e",
+      "question": "hi",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:44:54.388057+00:00"
+    },
+    {
+      "execution_id": "b0a06e87-0b9c-4aea-ba1c-e26be2a58d3a",
+      "conversation_id": "d32f53b3-b38c-4380-aa80-ff01bf9fb46e",
+      "question": "hi",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:44:55.409292+00:00"
+    },
+    {
+      "execution_id": "9d6526ed-e7fe-4707-841f-1c819b7d6bb9",
+      "conversation_id": "653edcc5-a13e-4d3a-833f-b8c8d43df147",
+      "question": "hhi",
+      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-06T14:44:56.422163+00:00"
+    },
+    {
+      "execution_id": "601d3f5e-1c56-4452-abed-d768ceae650b",
+      "conversation_id": "5b3852cf-e5a1-4999-86c1-a95b04903d89",
+      "question": "hà",
+      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-06T14:45:06.181239+00:00"
+    },
+    {
+      "execution_id": "670c0b92-2a09-4d08-8c84-6531cc4249b1",
+      "conversation_id": "3b55a23f-b428-4ee7-abf6-098069ac13e1",
+      "question": "Chào",
+      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-10T13:12:15.125709+00:00"
+    },
+    {
+      "execution_id": "620b2cb9-0051-40ac-85c7-f8eb5ddde576",
+      "conversation_id": "713b42e4-46b3-42b4-8fd9-7005fbe5250a",
+      "question": "Xin chào",
+      "answer": "No relevant data found to answer this question.\n\nDetails:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?\n- Web error: web search failed with status 401",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-10T13:12:47.722439+00:00"
+    },
+    {
+      "execution_id": "d7da5989-209c-47bf-ae72-79f96ce0805d",
+      "conversation_id": "6a58a358-efa1-4c1b-b239-4aaa3048e943",
+      "question": "Bạn giúp gì được cho tôi?",
+      "answer": "No relevant data found to answer this question.\n\nDetails:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?\n- Web error: web search failed with status 401",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-10T13:21:28.733775+00:00"
+    },
+    {
+      "execution_id": "810bfdbc-22b6-4ef5-9785-31f47247f8a4",
+      "conversation_id": "87a88622-2f08-4f84-addb-c727c109be5f",
+      "question": "Hello",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-10T13:30:44.054231+00:00"
+    },
+    {
+      "execution_id": "59f916f5-2910-4f2e-b06d-f52d3201d01f",
+      "conversation_id": "1c969bf8-3917-40bf-bd43-a2dcbdadb136",
+      "question": "Xin chào",
+      "answer": "No relevant data found to answer this question.\n\nDetails:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?\n- Web error: web search failed with status 401",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-10T13:35:13.532387+00:00"
+    },
+    {
+      "execution_id": "954c115f-8639-46ea-a024-6f03f6f0296d",
+      "conversation_id": "62fc00de-f6be-4eda-8a48-9a16cd7dc2c2",
+      "question": "Chào",
+      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-10T13:35:18.377582+00:00"
+    },
+    {
+      "execution_id": "4add828d-874b-417d-aedf-fe1b1eb85c81",
+      "conversation_id": "2810cac4-9c89-4b03-97f6-10b0e8091860",
+      "question": "Hello",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-10T13:35:20.385342+00:00"
+    },
+    {
+      "execution_id": "6142b0a9-d40b-4c42-ab5f-4899ec1e6db6",
+      "conversation_id": "a5634aab-68e8-46f0-98be-12591e268b1e",
+      "question": "Chào",
+      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-10T13:36:08.158985+00:00"
+    },
+    {
+      "execution_id": "167f2931-05cd-4ab8-8e47-6653ec1b5b29",
+      "conversation_id": "457e5fc3-40a2-4643-b4e6-2657f76bd690",
+      "question": "Xin chào",
+      "answer": "No relevant data found to answer this question.\n\nDetails:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?\n- Web error: web search failed with status 401",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-10T13:36:14.012740+00:00"
+    },
+    {
+      "execution_id": "cb43bddf-34da-43c3-9f3d-e0c4c9ec508b",
+      "conversation_id": "8e022163-0324-4bfb-90cc-2b18fac9962a",
+      "question": "Hii",
+      "answer": "No relevant data found to answer this question.\n\nDetails:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?\n- Web error: web search failed with status 401",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-10T13:36:43.845007+00:00"
+    },
+    {
+      "execution_id": "64b6bafc-65ad-4d28-ae4c-bf8784413cb2",
+      "conversation_id": "aac81225-2687-4621-9005-581251615e94",
+      "question": "hello",
+      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-10T13:37:38.766463+00:00"
+    },
+    {
+      "execution_id": "e8f14515-689c-4b15-b8f9-a28bc1a412e1",
+      "conversation_id": "568a77e2-a35b-4ade-b1b0-fa1b71a43026",
+      "question": "Chào",
+      "answer": "Tôi có thể hỗ trợ bạn về định hướng nghề nghiệp, phát triển kỹ năng và thông tin tham khảo từ web khi cần.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-10T13:42:46.223255+00:00"
+    },
+    {
+      "execution_id": "2b208f3d-98f4-421f-8457-46abed7c94c9",
+      "conversation_id": "a4ba2ebc-9293-4951-9ed9-16389e7fb552",
+      "question": "Trường đại học Duy Tân có ngành học gì?",
+      "answer": "Không tìm thấy dữ liệu phù hợp để trả lời câu hỏi này.\n\nChi tiết:\n- Web error: web search failed with status 401",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-10T13:43:25.205923+00:00"
+    }
+  ]
+}
