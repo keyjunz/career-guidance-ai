@@ -2,16 +2,47 @@ import { useEffect, useLayoutEffect, useRef } from 'react'
 import { MessageBubble } from './MessageBubble'
 import type { ChatMessage } from '../../types/chat'
 
+const STARTER_CHIPS: Array<{ icon: string; label: string; prompt: string }> = [
+  {
+    icon: 'work',
+    label: 'Gợi ý hướng nghiệp',
+    prompt:
+      'Dựa trên xu hướng thị trường hiện tại, gợi ý giúp tôi vài hướng nghiệp phù hợp để bắt đầu.',
+  },
+  {
+    icon: 'school',
+    label: 'Kỹ năng nên học',
+    prompt: 'Tôi nên ưu tiên học thêm những kỹ năng nào để tăng cơ hội việc làm?',
+  },
+  {
+    icon: 'compare_arrows',
+    label: 'So sánh ngành học',
+    prompt:
+      'So sánh ngắn gọn các nhóm ngành công nghệ (ví dụ phần mềm, dữ liệu, an ninh) về cơ hội và yêu cầu.',
+  },
+  {
+    icon: 'tips_and_updates',
+    label: 'Chuẩn bị phỏng vấn',
+    prompt: 'Gợi ý cách chuẩn bị phỏng vấn và vài câu hỏi thường gặp cho vị trí entry-level.',
+  },
+]
+
 export function ChatThread({
   messages,
   dayChip,
   isTyping,
   errorMessage,
+  userFirstName,
+  onStarterPrompt,
 }: {
   messages: ChatMessage[]
   dayChip: string
   isTyping: boolean
   errorMessage?: string
+  /** First name or short display name for empty-state greeting */
+  userFirstName?: string
+  /** Fills the composer flow with a preset prompt (same as typing send) */
+  onStarterPrompt?: (text: string) => void
 }) {
   const containerRef = useRef<HTMLDivElement | null>(null)
   const latestTurnUserId = useRef('')
@@ -28,7 +59,6 @@ export function ChatThread({
     const container = containerRef.current
     if (!container) return
 
-    // New user turn: push previous turns up and show latest user turn first.
     if (latestUserMessageId && latestTurnUserId.current !== latestUserMessageId) {
       latestTurnUserId.current = latestUserMessageId
       const latestUserElement = container.querySelector<HTMLElement>(
@@ -45,7 +75,6 @@ export function ChatThread({
     const container = containerRef.current
     if (!container || !isTyping) return
 
-    // While bot streams, keep following new content if user is near the bottom.
     const distanceToBottom =
       container.scrollHeight - (container.scrollTop + container.clientHeight)
     if (distanceToBottom < 120) {
@@ -53,21 +82,66 @@ export function ChatThread({
     }
   }, [isTyping, messages])
 
+  const isEmpty = messages.length === 0
+  const greetName = userFirstName?.trim() || 'bạn'
+  const startersDisabled = isTyping || !onStarterPrompt
+
   return (
     <div
       ref={containerRef}
-      className="flex-1 overflow-y-auto px-6 pb-40"
+      className="flex-1 overflow-y-auto px-4 pb-44 sm:px-6"
     >
-      <div className="mx-auto flex w-full max-w-3xl flex-col gap-3">
+      <div className="mx-auto flex w-full max-w-[46rem] flex-col gap-3">
         {errorMessage ? (
-          <div className="rounded-xl border border-red-400/30 bg-red-500/10 px-4 py-3 text-sm text-red-200">
+          <div className="rounded-2xl bg-red-500/12 px-4 py-3 text-sm text-red-200">
             {errorMessage}
           </div>
         ) : null}
 
-        {messages.length > 0 && (
-          <div className="mb-4 flex justify-center">
-            <span className="bg-surface-container-low px-4 py-1.5 rounded-full text-[10px] font-semibold uppercase tracking-widest text-on-surface/60">
+        {isEmpty && !errorMessage ? (
+          <div className="flex min-h-[calc(100dvh-12.5rem)] flex-col items-center justify-center px-3 py-8 text-center sm:min-h-[calc(100dvh-11.5rem)] sm:px-6">
+            <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-primary/14">
+              <span
+                className="material-symbols-outlined text-[32px] text-primary"
+                style={{ fontVariationSettings: "'FILL' 1, 'wght' 400" }}
+              >
+                auto_awesome
+              </span>
+            </div>
+            <h2 className="font-headline max-w-lg text-[1.35rem] font-semibold leading-snug tracking-tight text-on-surface sm:text-2xl sm:leading-tight">
+              Xin chào {greetName}! Chúng ta bắt đầu từ đâu nhỉ?
+            </h2>
+            <p className="mt-3 max-w-md text-sm leading-relaxed text-on-surface/48">
+              Hỏi về hướng nghiệp, kỹ năng hoặc lộ trình học. Chọn{' '}
+              <span className="font-medium text-on-surface/62">Auto</span>,{' '}
+              <span className="font-medium text-on-surface/62">RAG</span> hoặc{' '}
+              <span className="font-medium text-on-surface/62">Web</span> ở ô nhập
+              để đổi cách trả lời.
+            </p>
+            {onStarterPrompt ? (
+              <div className="mt-8 flex w-full max-w-xl flex-wrap justify-center gap-2 sm:gap-2.5">
+                {STARTER_CHIPS.map((chip) => (
+                  <button
+                    key={chip.label}
+                    type="button"
+                    disabled={startersDisabled}
+                    onClick={() => onStarterPrompt(chip.prompt)}
+                    className="u-focus inline-flex items-center gap-2 rounded-full bg-surface-container-high px-3.5 py-2 text-left text-[13px] font-medium text-on-surface/88 shadow-md transition hover:bg-surface-container disabled:cursor-not-allowed disabled:opacity-45 sm:px-4 sm:py-2.5 dark:shadow-[0_4px_20px_rgb(0_0_0_/0.35)]"
+                  >
+                    <span className="material-symbols-outlined text-[18px] text-primary/90">
+                      {chip.icon}
+                    </span>
+                    <span>{chip.label}</span>
+                  </button>
+                ))}
+              </div>
+            ) : null}
+          </div>
+        ) : null}
+
+        {!isEmpty && (
+          <div className="mb-2 flex justify-center pt-2">
+            <span className="rounded-full bg-surface-container-high/90 px-3 py-1 text-[10px] font-medium uppercase tracking-wider text-on-surface/42">
               {dayChip}
             </span>
           </div>
@@ -79,14 +153,13 @@ export function ChatThread({
           </div>
         ))}
 
-        {/* Show fallback dots only during sync API call (no assistant bubble in list yet) */}
         {isTyping && messages[messages.length - 1]?.role !== 'assistant' && (
-          <div className="flex items-center gap-[5px] py-1">
-            {[0, 180, 360].map((delay) => (
+          <div className="flex items-center gap-1.5 py-2 pl-1">
+            {[0, 160, 320].map((delay) => (
               <span
                 key={delay}
-                className="h-[7px] w-[7px] rounded-full bg-primary/70 animate-bounce"
-                style={{ animationDelay: `${delay}ms`, animationDuration: '900ms' }}
+                className="h-2 w-2 rounded-full bg-on-surface/25 animate-bounce"
+                style={{ animationDelay: `${delay}ms`, animationDuration: '1s' }}
               />
             ))}
           </div>

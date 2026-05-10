@@ -18,7 +18,6 @@ from importlib.util import find_spec
 langdetect = import_module("langdetect") if find_spec("langdetect") else None
 
 from src.modules.rag_module.schema_models import RAGQuery, RAGResult, SourceInfo
-from src.config.settings_models import get_settings
 from src.services.embedding_service.main import EmbeddingService
 from src.services.llm_service.main import LLMService
 from src.services.reranker_service.main import RerankerService
@@ -61,14 +60,9 @@ class RAGModuleImpl:
         )
         self.llm_service = llm_service
 
-        settings = get_settings()
-        configured_base_url = os.getenv("IMAGE_BASE_URL", "").strip()
-        if configured_base_url:
-            self.image_base_url = configured_base_url
-        else:
-            # Keep local image links available even when IMAGE_BASE_URL is not
-            # exported to process env (common when values only live in .env).
-            self.image_base_url = f"http://localhost:{settings.app.port}"
+        # Empty string => emit relative URLs like /images/... so the frontend
+        # can prefix VITE_API_BASE_URL (avoids wrong host/port vs. API server).
+        self.image_base_url = os.getenv("IMAGE_BASE_URL", "").strip()
 
         configured_storage_dir = (
             os.getenv("IMAGE_STORAGE_DIR", "").strip() or "database/images"
@@ -208,9 +202,6 @@ class RAGModuleImpl:
         return (base_dir / base).resolve()
 
     def _build_image_urls(self, metadata: dict[str, Any]) -> list[str]:
-        if not self.image_base_url:
-            return []
-
         image_paths_raw = metadata.get("image_paths") or []
         image_paths: list[str] = []
         if isinstance(image_paths_raw, list):
@@ -243,6 +234,9 @@ class RAGModuleImpl:
                 rel = path
             # Avoid backslash inside f-string expression (Python limitation).
             rel_str = str(rel).replace("\\", "/")
-            url = f"{self.image_base_url.rstrip('/')}/images/{rel_str}"
+            if self.image_base_url:
+                url = f"{self.image_base_url.rstrip('/')}/images/{rel_str}"
+            else:
+                url = f"/images/{rel_str}"
             urls.append(url)
         return urls

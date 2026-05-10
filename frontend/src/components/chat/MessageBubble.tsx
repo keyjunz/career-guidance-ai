@@ -1,32 +1,30 @@
+import { useState } from 'react'
 import type { ChatMessage } from '../../types/chat'
 import ReactMarkdown from 'react-markdown'
 import rehypeSanitize from 'rehype-sanitize'
 import remarkGfm from 'remark-gfm'
+import { resolveApiMediaUrl } from '../../utils/mediaUrl'
+import { normalizeAssistantMarkdown } from '../../utils/normalizeAssistantMarkdown'
 
 function BotLoadingDots() {
   return (
-    <div className="flex items-center gap-[5px] py-1">
-      <span
-        className="h-[7px] w-[7px] rounded-full bg-primary/70 animate-bounce"
-        style={{ animationDelay: '0ms', animationDuration: '900ms' }}
-      />
-      <span
-        className="h-[7px] w-[7px] rounded-full bg-primary/70 animate-bounce"
-        style={{ animationDelay: '180ms', animationDuration: '900ms' }}
-      />
-      <span
-        className="h-[7px] w-[7px] rounded-full bg-primary/70 animate-bounce"
-        style={{ animationDelay: '360ms', animationDuration: '900ms' }}
-      />
+    <div className="flex items-center gap-1 py-1">
+      {[0, 160, 320].map((delay) => (
+        <span
+          key={delay}
+          className="h-2 w-2 rounded-full bg-on-surface/25 animate-bounce"
+          style={{ animationDelay: `${delay}ms`, animationDuration: '1s' }}
+        />
+      ))}
     </div>
   )
 }
 
 function BotResponseIcon() {
   return (
-    <div className="mt-1 flex h-6 w-6 items-center justify-center rounded-full border border-outline-variant/30 bg-surface-container-highest/60 text-primary">
+    <div className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/14 text-primary">
       <span
-        className="material-symbols-outlined text-[15px]"
+        className="material-symbols-outlined text-[17px]"
         style={{ fontVariationSettings: "'FILL' 1" }}
       >
         auto_awesome
@@ -48,8 +46,8 @@ function SourceList({ sources }: { sources: Array<Record<string, unknown>> }) {
   if (normalized.length === 0) return null
 
   return (
-    <div className="rounded-xl border border-outline-variant/20 bg-surface-container-low px-3 py-2.5">
-      <p className="mb-2 text-xs font-semibold tracking-wide text-on-surface/70 uppercase">
+    <div className="rounded-xl bg-surface-container-high/90 px-3 py-2 dark:bg-surface-container-high/75">
+      <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-wider text-on-surface/45">
         Sources
       </p>
       <ul className="space-y-1 text-xs">
@@ -59,7 +57,7 @@ function SourceList({ sources }: { sources: Array<Record<string, unknown>> }) {
               href={item.url}
               target="_blank"
               rel="noreferrer"
-              className="text-primary underline underline-offset-2 break-all"
+              className="break-all text-primary/90 underline decoration-primary/30 underline-offset-2 transition hover:decoration-primary"
             >
               {item.title}
             </a>
@@ -67,6 +65,41 @@ function SourceList({ sources }: { sources: Array<Record<string, unknown>> }) {
         ))}
       </ul>
     </div>
+  )
+}
+
+function BotImageTile({ imageUrl }: { imageUrl: string }) {
+  const resolved = resolveApiMediaUrl(imageUrl)
+  const [broken, setBroken] = useState(false)
+
+  if (broken) {
+    return (
+      <a
+        href={resolved}
+        target="_blank"
+        rel="noreferrer"
+        className="flex min-h-[100px] items-center justify-center rounded-xl bg-surface-container-high px-4 py-5 text-center text-xs font-medium text-primary underline underline-offset-2"
+      >
+        Image unavailable — open link
+      </a>
+    )
+  }
+
+  return (
+    <a
+      href={resolved}
+      target="_blank"
+      rel="noreferrer"
+      className="group block overflow-hidden rounded-xl bg-surface-container-high"
+    >
+      <img
+        src={resolved}
+        alt=""
+        className="max-h-64 w-full object-cover transition duration-300 group-hover:opacity-95"
+        loading="lazy"
+        onError={() => setBroken(true)}
+      />
+    </a>
   )
 }
 
@@ -80,100 +113,95 @@ export function MessageBubble({ message }: { message: ChatMessage }) {
     ? message.text.replace('Processing:', '').trim()
     : ''
   const sources = message.meta?.sources ?? []
+  const markdownText = normalizeAssistantMarkdown(message.text)
 
-  // ── User message ──────────────────────────────────────────────────
   if (isUser) {
     return (
       <div className="flex justify-end">
-        <div className="max-w-[72%] rounded-3xl rounded-tr-md border border-outline-variant/35 bg-surface-container-high px-5 py-3.5 text-sm leading-relaxed shadow-sm">
+        <div className="max-w-[min(88%,38rem)] rounded-[1.35rem] rounded-br-md bg-surface-container-high px-4 py-2.5 text-[15px] leading-relaxed text-on-surface shadow-md dark:shadow-[0_4px_24px_rgb(0_0_0_/0.35)]">
           {message.text}
         </div>
       </div>
     )
   }
 
-  // ── Bot: loading (empty text, waiting for first token/status) ──────
   if (isEmpty) {
     return (
-      <div className="flex items-start gap-2.5">
+      <div className="flex items-start gap-3">
         <BotResponseIcon />
         <BotLoadingDots />
       </div>
     )
   }
 
-  // ── Bot: status stream ("Dang xu ly: …") ──────────────────────────
   if (isStatusStream) {
     return (
-      <div className="flex items-center gap-2.5 text-sm text-on-surface/55">
+      <div className="flex items-center gap-3 text-sm text-on-surface/50">
         <BotResponseIcon />
         <BotLoadingDots />
-        <span className="font-medium">{statusLabel}</span>
+        <span className="text-xs font-medium">{statusLabel}</span>
       </div>
     )
   }
 
-  // ── Bot: real content ─────────────────────────────────────────────
   return (
-    <div className="flex items-start gap-2.5">
+    <div className="flex items-start gap-3">
       <BotResponseIcon />
-      <div className="flex max-w-4xl flex-col gap-3">
+      <div className="min-w-0 flex max-w-[min(92%,44rem)] flex-col gap-2.5">
         {!!message.text && (
-          <div className="text-sm leading-[1.75] text-on-surface">
+          <div className="text-[15px] leading-[1.75] text-on-surface/88">
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
               rehypePlugins={[rehypeSanitize]}
               components={{
-                p: ({ children }) => <p className="mb-3 last:mb-0">{children}</p>,
+                p: ({ children }) => (
+                  <p className="mb-3 last:mb-0">{children}</p>
+                ),
                 ul: ({ children }) => (
-                  <ul className="mb-3 list-disc pl-5 last:mb-0">{children}</ul>
+                  <ul className="mb-3 list-disc space-y-1.5 pl-5 last:mb-0 marker:text-primary/70">
+                    {children}
+                  </ul>
                 ),
                 ol: ({ children }) => (
-                  <ol className="mb-3 list-decimal pl-5 last:mb-0">{children}</ol>
+                  <ol className="mb-3 list-decimal space-y-1.5 pl-5 last:mb-0 marker:font-medium marker:text-on-surface/55">
+                    {children}
+                  </ol>
+                ),
+                li: ({ children }) => (
+                  <li className="leading-relaxed [&>p]:mb-1 [&>p:last-child]:mb-0">
+                    {children}
+                  </li>
                 ),
                 a: ({ href, children }) => (
                   <a
                     href={href}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-primary underline underline-offset-2"
+                    className="font-medium text-primary underline decoration-primary/30 underline-offset-2"
                   >
                     {children}
                   </a>
                 ),
                 code: ({ children }) => (
-                  <code className="rounded bg-surface-container-high px-1.5 py-0.5 text-[13px]">
+                  <code className="rounded-md bg-surface-container-high px-1.5 py-0.5 text-[13px] text-on-surface/90">
                     {children}
                   </code>
                 ),
                 pre: ({ children }) => (
-                  <pre className="mb-3 overflow-x-auto rounded-xl border border-outline-variant/20 bg-surface-container-high p-3 last:mb-0">
+                  <pre className="mb-3 overflow-x-auto rounded-xl bg-surface-container-high p-3 text-[13px] last:mb-0 dark:bg-surface-container">
                     {children}
                   </pre>
                 ),
               }}
             >
-              {message.text}
+              {markdownText}
             </ReactMarkdown>
           </div>
         )}
         {hasImages && (
           <div className="grid gap-2 sm:grid-cols-2">
             {message.imageUrls?.map((imageUrl) => (
-              <a
-                key={imageUrl}
-                href={imageUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="group block overflow-hidden rounded-xl border border-outline-variant/25 bg-surface-container-low"
-              >
-                <img
-                  src={imageUrl}
-                  alt="Bot response visual"
-                  className="h-full max-h-72 w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
-                  loading="lazy"
-                />
-              </a>
+              <BotImageTile key={imageUrl} imageUrl={imageUrl} />
             ))}
           </div>
         )}

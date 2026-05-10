@@ -1,7 +1,7 @@
 {
   "user_id": "00000000-0000-0000-0000-000000000010",
   "created_at": "2026-05-06T09:56:47.867875+00:00",
-  "updated_at": "2026-05-10T13:43:25.216775+00:00",
+  "updated_at": "2026-05-10T16:54:07.700046+00:00",
   "pending_by_execution": {},
   "status_by_execution": {
     "e4e8388b-8905-4fdc-b747-67014679cba5": [
@@ -2259,32 +2259,100 @@
         "status": "Processing complete.",
         "timestamp": "2026-05-10T13:43:25.216775+00:00"
       }
+    ],
+    "5648a26b-c437-416e-aace-5cfbd9fc752b": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-10T16:53:51.012495+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-10T16:53:51.024951+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-10T16:53:51.027903+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-10T16:53:51.035997+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-10T16:53:51.043644+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-10T16:53:51.052860+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-10T16:53:51.061075+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-10T16:53:51.070352+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-10T16:53:56.196588+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-10T16:53:56.203074+00:00"
+      }
+    ],
+    "1382d27f-302c-44f0-87dc-0d2c24baf8b9": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-10T16:54:02.629099+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-10T16:54:02.641602+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-10T16:54:02.649282+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-10T16:54:02.655904+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-10T16:54:02.662971+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-10T16:54:02.672022+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-10T16:54:02.679960+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-10T16:54:02.685978+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-10T16:54:07.693195+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-10T16:54:07.700046+00:00"
+      }
     ]
   },
   "qa_cache": {
     "hello": {
-      "question": "hello",
-      "answer": "Toi co the ho tro ban voi cau hoi nghe nghiep, ky nang, va thong tin tham khao tu web khi can.",
+      "question": "Hello",
+      "answer": "I can help you with career guidance, skills development, and web-sourced references when needed.",
       "sources": [],
       "image_urls": [],
-      "conversation_id": "aac81225-2687-4621-9005-581251615e94",
-      "updated_at": "2026-05-10T13:37:38.766463+00:00"
-    },
-    "bạn có thể trả lời tiếng anh không?": {
-      "question": "Bạn có thể trả lời tiếng anh không?",
-      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?\n- Web error: web search failed with status 401",
-      "sources": [],
-      "image_urls": [],
-      "conversation_id": "39905cdb-ed60-424f-8af4-d702f69c17db",
-      "updated_at": "2026-05-06T12:29:30.002017+00:00"
-    },
-    "ban giup duoc gi cho toi?": {
-      "question": "Ban giup duoc gi cho toi?",
-      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?",
-      "sources": [],
-      "image_urls": [],
-      "conversation_id": "ccb4ad03-8bc5-46a5-8aa9-07d603463926",
-      "updated_at": "2026-05-06T13:05:12.053216+00:00"
+      "conversation_id": "7d58a4a7-edd5-4bad-9fac-2fde1c55b283",
+      "updated_at": "2026-05-10T16:53:56.187176+00:00"
     },
     "chào": {
       "question": "Chào",
@@ -2302,77 +2370,13 @@
       "conversation_id": "d32f53b3-b38c-4380-aa80-ff01bf9fb46e",
       "updated_at": "2026-05-06T14:44:55.409292+00:00"
     },
-    "ha": {
-      "question": "ha",
-      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?",
-      "sources": [],
-      "image_urls": [],
-      "conversation_id": "a94e31b7-cf36-4d71-b90d-90bbf81ea0e3",
-      "updated_at": "2026-05-06T14:33:23.169063+00:00"
-    },
-    "hiii": {
-      "question": "Hiii",
-      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?",
-      "sources": [],
-      "image_urls": [],
-      "conversation_id": "50d2e2ca-88a9-44fb-b9ff-30584f0d27e5",
-      "updated_at": "2026-05-06T14:15:07.675889+00:00"
-    },
-    "hằgawgw": {
-      "question": "hằgawgw",
-      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?",
-      "sources": [],
-      "image_urls": [],
-      "conversation_id": "3ff88244-9ba1-48ec-8c1d-782904ec8244",
-      "updated_at": "2026-05-06T14:40:06.497527+00:00"
-    },
-    "hhi": {
-      "question": "hhi",
-      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?",
-      "sources": [],
-      "image_urls": [],
-      "conversation_id": "653edcc5-a13e-4d3a-833f-b8c8d43df147",
-      "updated_at": "2026-05-06T14:44:56.422163+00:00"
-    },
-    "hà": {
-      "question": "hà",
-      "answer": "Khong tim thay du lieu phu hop de tra loi cau hoi nay.\n\nChi tiet:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?",
-      "sources": [],
-      "image_urls": [],
-      "conversation_id": "5b3852cf-e5a1-4999-86c1-a95b04903d89",
-      "updated_at": "2026-05-06T14:45:06.181239+00:00"
-    },
     "xin chào": {
       "question": "Xin chào",
-      "answer": "No relevant data found to answer this question.\n\nDetails:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?\n- Web error: web search failed with status 401",
+      "answer": "Tôi có thể hỗ trợ bạn về định hướng nghề nghiệp, phát triển kỹ năng và thông tin tham khảo từ web khi cần.",
       "sources": [],
       "image_urls": [],
-      "conversation_id": "457e5fc3-40a2-4643-b4e6-2657f76bd690",
-      "updated_at": "2026-05-10T13:36:14.012740+00:00"
-    },
-    "bạn giúp gì được cho tôi?": {
-      "question": "Bạn giúp gì được cho tôi?",
-      "answer": "No relevant data found to answer this question.\n\nDetails:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?\n- Web error: web search failed with status 401",
-      "sources": [],
-      "image_urls": [],
-      "conversation_id": "6a58a358-efa1-4c1b-b239-4aaa3048e943",
-      "updated_at": "2026-05-10T13:21:28.733775+00:00"
-    },
-    "hii": {
-      "question": "Hii",
-      "answer": "No relevant data found to answer this question.\n\nDetails:\n- RAG error: Cannot connect to ChromaDB at localhost:8001: Could not connect to a Chroma server. Are you sure it is running?\n- Web error: web search failed with status 401",
-      "sources": [],
-      "image_urls": [],
-      "conversation_id": "8e022163-0324-4bfb-90cc-2b18fac9962a",
-      "updated_at": "2026-05-10T13:36:43.845007+00:00"
-    },
-    "trường đại học duy tân có ngành học gì?": {
-      "question": "Trường đại học Duy Tân có ngành học gì?",
-      "answer": "Không tìm thấy dữ liệu phù hợp để trả lời câu hỏi này.\n\nChi tiết:\n- Web error: web search failed with status 401",
-      "sources": [],
-      "image_urls": [],
-      "conversation_id": "a4ba2ebc-9293-4951-9ed9-16389e7fb552",
-      "updated_at": "2026-05-10T13:43:25.205923+00:00"
+      "conversation_id": "cb325806-0634-4b0a-b05a-b4ce0062f1b6",
+      "updated_at": "2026-05-10T16:54:07.688367+00:00"
     }
   },
   "history": [
@@ -3115,6 +3119,26 @@
       "image_urls": [],
       "cache_hit": false,
       "timestamp": "2026-05-10T13:43:25.205923+00:00"
+    },
+    {
+      "execution_id": "5648a26b-c437-416e-aace-5cfbd9fc752b",
+      "conversation_id": "7d58a4a7-edd5-4bad-9fac-2fde1c55b283",
+      "question": "Hello",
+      "answer": "I can help you with career guidance, skills development, and web-sourced references when needed.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-10T16:53:56.187176+00:00"
+    },
+    {
+      "execution_id": "1382d27f-302c-44f0-87dc-0d2c24baf8b9",
+      "conversation_id": "cb325806-0634-4b0a-b05a-b4ce0062f1b6",
+      "question": "Xin chào",
+      "answer": "Tôi có thể hỗ trợ bạn về định hướng nghề nghiệp, phát triển kỹ năng và thông tin tham khảo từ web khi cần.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-10T16:54:07.688367+00:00"
     }
   ]
 }

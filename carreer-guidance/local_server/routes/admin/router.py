@@ -6,6 +6,7 @@ from pathlib import Path
 from uuid import UUID
 
 from fastapi import APIRouter, Depends, HTTPException, Query, status
+from fastapi.responses import FileResponse
 from pydantic import BaseModel
 
 from src.config.database import session_scope
@@ -26,12 +27,49 @@ _IMAGE_DIR = (
     if Path(_IMAGE_DIR_SETTING).is_absolute()
     else (_BASE_DIR / _IMAGE_DIR_SETTING)
 )
-_DOWNLOAD_DIR = Path(
+_DOWNLOAD_DIR_SETTING = Path(
     os.getenv(
         "DOWNLOAD_STORAGE_DIR",
         str(_BASE_DIR / "src" / "database" / "file_downloaded"),
     )
 )
+
+
+def _download_dir_resolved() -> Path:
+    p = _DOWNLOAD_DIR_SETTING.expanduser()
+    if p.is_absolute():
+        return p.resolve()
+    return (_BASE_DIR / p).resolve()
+
+
+def _allowed_document_file_roots() -> list[Path]:
+    roots: list[Path] = []
+    primary = _download_dir_resolved()
+    roots.append(primary)
+    fallback = (_BASE_DIR / "src" / "database" / "file_downloaded").resolve()
+    if fallback not in roots:
+        roots.append(fallback)
+    return roots
+
+
+def _safe_document_file_path(file_path_str: str) -> Path | None:
+    """Return resolved path only if it is a real file under an allowed root."""
+    raw = (file_path_str or "").strip()
+    if not raw:
+        return None
+    try:
+        candidate = Path(raw).expanduser().resolve()
+    except (OSError, ValueError):
+        return None
+    if not candidate.is_file():
+        return None
+    for root in _allowed_document_file_roots():
+        try:
+            candidate.relative_to(root)
+            return candidate
+        except ValueError:
+            continue
+    return None
 
 router = APIRouter(prefix="/api/admin", tags=["admin"])
 
@@ -175,11 +213,20 @@ class DocumentResponse(BaseModel):
     created_at: str
     updated_at: str
     image_urls: list[str]
+    file_available: bool
 
 
 class DocumentListResponse(BaseModel):
     documents: list[DocumentResponse]
     total: int
+
+
+class DocumentDeleteResult(BaseModel):
+    document_deleted: bool
+    vector_deleted: bool
+    file_deleted: bool
+    images_deleted: bool
+    warnings: list[str]
 
 
 def _build_doc_id_from_path(file_path: str) -> str:
@@ -211,6 +258,7 @@ def _collect_image_urls(doc: Document) -> list[str]:
 
 
 def _doc_to_response(doc: Document) -> DocumentResponse:
+    file_path = (doc.content or "").strip()
     return DocumentResponse(
         id=doc.id,
         user_id=doc.user_id,
@@ -221,6 +269,7 @@ def _doc_to_response(doc: Document) -> DocumentResponse:
         created_at=doc.created_at.isoformat() if doc.created_at else "",
         updated_at=doc.updated_at.isoformat() if doc.updated_at else "",
         image_urls=_collect_image_urls(doc),
+        file_available=_safe_document_file_path(file_path) is not None,
     )
 
 
@@ -266,12 +315,12 @@ def get_document(
     return _doc_to_response(doc)
 
 
-@router.delete(
-    "/documents/{document_id}",
-    summary="Delete document (DB + ChromaDB + disk)",
-    status_code=status.HTTP_204_NO_CONTENT,
+@router.get(
+    "/documents/{document_id}/file",
+    summary="Download or preview original synced file (PDF)",
+    response_class=FileResponse,
 )
-def delete_document(
+def get_document_file(
     document_id: UUID,
     _admin: User = Depends(_admin_guard),
 ):
@@ -284,38 +333,81 @@ def delete_document(
                 detail="Document not found",
             )
         file_path = (doc.content or "").strip()
-        ingestion_job_id = doc.ingestion_job_id
+        name = doc.document_name
         session.expunge(doc)
 
-    # 1. Delete from ChromaDB
-    if ingestion_job_id:
-        try:
-            vector_service = VectorDBService(execution_id="admin-delete")
-            vector_service.delete_by_ingestion_job(ingestion_job_id)
-        except Exception as exc:
-            logger.warning(
-                "ChromaDB delete failed for document=%s job=%s: %s",
-                document_id, ingestion_job_id, exc,
+    safe = _safe_document_file_path(file_path)
+    if safe is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="File not found or not accessible",
+        )
+    media = "application/pdf" if safe.suffix.lower() == ".pdf" else None
+    return FileResponse(
+        path=str(safe),
+        filename=name or safe.name,
+        media_type=media,
+    )
+
+
+@router.delete(
+    "/documents/{document_id}",
+    summary="Delete document (DB + ChromaDB + disk)",
+    response_model=DocumentDeleteResult,
+)
+def delete_document(
+    document_id: UUID,
+    _admin: User = Depends(_admin_guard),
+):
+    warnings: list[str] = []
+    vector_deleted = False
+    file_deleted = False
+    images_deleted = False
+
+    with session_scope() as session:
+        repo = DocumentRepository(session)
+        doc = repo.get_by_id(document_id)
+        if doc is None:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="Document not found",
+            )
+        file_path = (doc.content or "").strip()
+        session.expunge(doc)
+
+    chunk_doc_id = _build_doc_id_from_path(file_path) if file_path else ""
+
+    if chunk_doc_id:
+        vector_service = VectorDBService(execution_id="admin-delete")
+        vector_deleted = bool(vector_service.delete_by_doc_id(chunk_doc_id))
+        if not vector_deleted:
+            warnings.append(
+                "Vector database did not confirm deletion "
+                "(ChromaDB may be offline, or chunks were not found for this document)."
             )
 
-    # 2. Delete extracted images from disk
+    # Delete extracted images from disk
     if file_path:
         doc_id = _build_doc_id_from_path(file_path)
         doc_image_dir = _IMAGE_DIR / doc_id
         if doc_image_dir.is_dir():
-            shutil.rmtree(doc_image_dir, ignore_errors=True)
-            logger.info("Removed image dir: %s", doc_image_dir)
+            try:
+                shutil.rmtree(doc_image_dir, ignore_errors=False)
+                images_deleted = True
+                logger.info("Removed image dir: %s", doc_image_dir)
+            except OSError as exc:
+                warnings.append(f"Could not remove extracted images: {exc}")
 
-    # 3. Delete uploaded source file from disk
-    source_path = Path(file_path) if file_path else None
-    if source_path and source_path.is_file():
+    # Delete uploaded source file from disk
+    safe_source = _safe_document_file_path(file_path) if file_path else None
+    if safe_source is not None:
         try:
-            source_path.unlink()
-            logger.info("Removed source file: %s", source_path)
+            safe_source.unlink()
+            file_deleted = True
+            logger.info("Removed source file: %s", safe_source)
         except OSError as exc:
-            logger.warning("Failed to remove source file: %s: %s", source_path, exc)
+            warnings.append(f"Could not remove source file: {exc}")
 
-    # 4. Delete from Postgres
     with session_scope() as session:
         repo = DocumentRepository(session)
         deleted = repo.delete_by_id(document_id)
@@ -326,4 +418,10 @@ def delete_document(
             )
 
     logger.info("Admin deleted document: id=%s", document_id)
-    return None
+    return DocumentDeleteResult(
+        document_deleted=True,
+        vector_deleted=vector_deleted,
+        file_deleted=file_deleted,
+        images_deleted=images_deleted,
+        warnings=warnings,
+    )

@@ -69,96 +69,146 @@ export function ChatInputDock({
   }
 
   return (
-    <div className="absolute bottom-8 left-1/2 w-full max-w-3xl -translate-x-1/2 px-6 z-30">
-      <div className="group flex items-center gap-2 rounded-2xl border border-outline-variant/20 bg-surface-container-high/80 backdrop-blur-2xl p-2 shadow-[0_10px_50px_rgba(0,0,0,0.50)] transition-all duration-300 focus-within:border-primary/30 focus-within:shadow-[0_0_30px_rgba(59,191,250,0.10)]">
-        {onChatModeChange && (
-          <div className="relative flex-shrink-0" ref={modeMenuRef}>
-            <button
-              type="button"
-              disabled={disabled}
-              onClick={() => setIsModeMenuOpen((prev) => !prev)}
-              className="flex items-center gap-2 rounded-xl px-3 py-2 text-on-surface/75 transition-colors hover:bg-surface-container-highest hover:text-on-surface disabled:opacity-50"
-              aria-label="Select chat mode"
-            >
-              <span className="material-symbols-outlined text-[18px]">
-                {selectedMode.icon}
-              </span>
-              <span className="text-sm font-semibold">{selectedMode.label}</span>
-              <span className="material-symbols-outlined text-[16px]">
-                {isModeMenuOpen ? 'expand_less' : 'expand_more'}
-              </span>
-            </button>
+    <div className="pointer-events-none absolute bottom-0 left-0 right-0 z-30 px-4 pb-5 pt-10 sm:px-6">
+      <div className="pointer-events-auto mx-auto w-full max-w-[46rem]">
+        <div className="composer-pill px-1.5 py-1 transition sm:px-2 sm:py-1.5">
+          <div className="flex items-center gap-0.5 sm:gap-1.5">
+            {onChatModeChange && (
+              <div className="relative flex-shrink-0" ref={modeMenuRef}>
+                <button
+                  type="button"
+                  disabled={disabled}
+                  onClick={() => setIsModeMenuOpen((prev) => !prev)}
+                  className={[
+                    'u-focus flex items-center gap-1.5 rounded-full px-2.5 py-2 text-on-surface/75 transition disabled:opacity-45 sm:px-3',
+                    isModeMenuOpen
+                      ? 'bg-surface-container text-on-surface'
+                      : 'hover:bg-surface-container/80',
+                  ].join(' ')}
+                  aria-expanded={isModeMenuOpen}
+                  aria-haspopup="listbox"
+                  aria-label="Chat mode"
+                >
+                  <span
+                    className="material-symbols-outlined text-[19px] text-primary/90"
+                    style={{ fontVariationSettings: "'FILL' 0" }}
+                  >
+                    {selectedMode.icon}
+                  </span>
+                  <span className="hidden text-[13px] font-medium sm:inline">
+                    {selectedMode.label}
+                  </span>
+                  <span className="material-symbols-outlined text-[18px] text-on-surface/38">
+                    {isModeMenuOpen ? 'expand_less' : 'expand_more'}
+                  </span>
+                </button>
 
-            {isModeMenuOpen && (
-              <div className="absolute bottom-[calc(100%+8px)] left-0 min-w-[160px] overflow-hidden rounded-xl border border-outline-variant/20 bg-surface-container-high shadow-[0_12px_40px_rgba(0,0,0,0.40)]">
-                {CHAT_MODE_OPTIONS.map((option) => {
-                  const isSelected = option.value === selectedMode.value
-                  return (
-                    <button
-                      key={option.value}
-                      type="button"
-                      className={`flex w-full items-center gap-2 px-3 py-2 text-left text-sm transition-colors ${
-                        isSelected
-                          ? 'bg-primary/15 text-primary'
-                          : 'text-on-surface/80 hover:bg-surface-container-highest'
-                      }`}
-                      onClick={() => {
-                        onChatModeChange(option.value)
-                        setIsModeMenuOpen(false)
-                      }}
+                {isModeMenuOpen && (
+                  <>
+                    <div
+                      className="fixed inset-0 z-40 bg-black/20 sm:hidden"
+                      aria-hidden
+                      onClick={() => setIsModeMenuOpen(false)}
+                    />
+                    <div
+                      className="chat-mode-menu-popover absolute bottom-[calc(100%+10px)] left-0 z-50 w-[min(calc(100vw-2rem),15.5rem)] p-1.5 sm:left-0 sm:w-[15.5rem]"
+                      role="listbox"
+                      aria-label="Chọn chế độ trả lời"
                     >
-                      <span className="material-symbols-outlined text-[18px]">
-                        {option.icon}
-                      </span>
-                      <span className="font-medium">{option.label}</span>
-                    </button>
-                  )
-                })}
+                      <div className="flex flex-col gap-0.5">
+                        {CHAT_MODE_OPTIONS.map((option) => {
+                          const isSelected = option.value === selectedMode.value
+                          return (
+                            <button
+                              key={option.value}
+                              type="button"
+                              role="option"
+                              aria-selected={isSelected}
+                              className={[
+                                'u-focus flex min-h-[2.75rem] w-full items-center gap-3 rounded-xl px-3 py-2 text-left text-[13px] transition',
+                                isSelected
+                                  ? 'bg-primary/10 font-medium text-on-surface'
+                                  : 'text-on-surface/72 hover:bg-surface-container',
+                              ].join(' ')}
+                              onClick={() => {
+                                onChatModeChange(option.value)
+                                setIsModeMenuOpen(false)
+                              }}
+                            >
+                              <span
+                                className={[
+                                  'material-symbols-outlined shrink-0 text-[20px]',
+                                  isSelected ? 'text-primary' : 'text-on-surface/42',
+                                ].join(' ')}
+                                style={
+                                  isSelected
+                                    ? { fontVariationSettings: "'FILL' 1" }
+                                    : { fontVariationSettings: "'FILL' 0" }
+                                }
+                              >
+                                {option.icon}
+                              </span>
+                              <span className="min-w-0 flex-1 leading-snug">
+                                {option.label}
+                              </span>
+                              {isSelected ? (
+                                <span
+                                  className="material-symbols-outlined shrink-0 text-[18px] text-primary"
+                                  style={{ fontVariationSettings: "'FILL' 1" }}
+                                >
+                                  check
+                                </span>
+                              ) : null}
+                            </button>
+                          )
+                        })}
+                      </div>
+                    </div>
+                  </>
+                )}
               </div>
             )}
+
+            <label className="sr-only" htmlFor={inputId}>
+              Chat message
+            </label>
+            <input
+              id={inputId}
+              ref={inputRef}
+              className="u-focus min-h-[46px] flex-1 bg-transparent px-2 py-2.5 font-body text-[15px] text-on-surface outline-none placeholder:text-on-surface/36 sm:min-h-[48px] sm:px-3"
+              placeholder={placeholder}
+              value={value}
+              disabled={disabled}
+              onChange={(e) => setValue(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                  e.preventDefault()
+                  submitMessage()
+                }
+              }}
+            />
+
+            <button
+              type="button"
+              className="u-focus mr-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-white shadow-md transition hover:opacity-95 disabled:cursor-not-allowed disabled:opacity-38 sm:h-11 sm:w-11"
+              aria-label="Send message"
+              disabled={disabled || !value.trim()}
+              onClick={submitMessage}
+            >
+              <span
+                className="material-symbols-outlined text-[21px]"
+                style={{ fontVariationSettings: "'FILL' 1" }}
+              >
+                arrow_upward
+              </span>
+            </button>
           </div>
-        )}
+        </div>
 
-        <label className="sr-only" htmlFor={inputId}>
-          Chat message
-        </label>
-        <input
-          id={inputId}
-          ref={inputRef}
-          className="flex-1 bg-transparent px-2 py-3 font-body text-sm text-on-surface outline-none placeholder:text-on-surface/40"
-          placeholder={placeholder}
-          value={value}
-          disabled={disabled}
-          onChange={(e) => setValue(e.target.value)}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter' && !e.shiftKey) {
-              e.preventDefault()
-              submitMessage()
-            }
-          }}
-        />
-
-        <button
-          type="button"
-          className="relative flex-shrink-0 overflow-hidden rounded-xl bg-gradient-to-br from-primary to-primary-container p-3 text-surface-container-lowest shadow-[0_0_20px_rgba(59,191,250,0.20)] transition-all hover:shadow-[0_0_30px_rgba(59,191,250,0.40)]"
-          aria-label="Send message"
-          disabled={disabled}
-          onClick={submitMessage}
-        >
-          <div className="absolute left-0 right-0 top-0 h-[2px] bg-white/20" />
-          <span
-            className="material-symbols-outlined text-[20px]"
-            style={{ fontVariationSettings: "'FILL' 1" }}
-          >
-            send
-          </span>
-        </button>
-      </div>
-
-      <div className="mt-3 text-center text-[10px] font-semibold uppercase tracking-widest text-on-surface/30">
-        Kinetic Vault AI generates predictive models. Verify critical outputs.
+        <p className="pointer-events-auto mt-2.5 text-center text-[10px] font-medium leading-snug text-on-surface/32">
+          Trợ lý AI có thể sai — hãy kiểm tra quyết định quan trọng.
+        </p>
       </div>
     </div>
   )
 }
-

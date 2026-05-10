@@ -734,7 +734,55 @@
           }
         ],
         "responses": {
-          "204": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DocumentDeleteResult"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/admin/documents/{document_id}/file": {
+      "get": {
+        "tags": [
+          "admin"
+        ],
+        "summary": "Download or preview original synced file (PDF)",
+        "operationId": "get_document_file_api_admin_documents__document_id__file_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "document_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Document Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
             "description": "Successful Response"
           },
           "422": {
@@ -880,6 +928,42 @@
         "title": "ChatRequest",
         "description": "Incoming request for chat interaction."
       },
+      "DocumentDeleteResult": {
+        "properties": {
+          "document_deleted": {
+            "type": "boolean",
+            "title": "Document Deleted"
+          },
+          "vector_deleted": {
+            "type": "boolean",
+            "title": "Vector Deleted"
+          },
+          "file_deleted": {
+            "type": "boolean",
+            "title": "File Deleted"
+          },
+          "images_deleted": {
+            "type": "boolean",
+            "title": "Images Deleted"
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Warnings"
+          }
+        },
+        "type": "object",
+        "required": [
+          "document_deleted",
+          "vector_deleted",
+          "file_deleted",
+          "images_deleted",
+          "warnings"
+        ],
+        "title": "DocumentDeleteResult"
+      },
       "DocumentListResponse": {
         "properties": {
           "documents": {
@@ -950,6 +1034,10 @@
             },
             "type": "array",
             "title": "Image Urls"
+          },
+          "file_available": {
+            "type": "boolean",
+            "title": "File Available"
           }
         },
         "type": "object",
@@ -962,7 +1050,8 @@
           "status",
           "created_at",
           "updated_at",
-          "image_urls"
+          "image_urls",
+          "file_available"
         ],
         "title": "DocumentResponse"
       },

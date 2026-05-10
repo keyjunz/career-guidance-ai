@@ -37,16 +37,16 @@ function ConversationItem({
 
   if (isEditing) {
     return (
-      <div className="mx-2 my-1 rounded-lg border border-sky-400/30 bg-sky-500/10 px-3 py-3">
+      <div className="my-1 rounded-2xl bg-surface-container-high px-3 py-3 shadow-sm">
         <input
-          className="w-full rounded-md border border-outline-variant/30 bg-surface px-3 py-2 text-sm text-on-surface outline-none focus:border-primary"
+          className="u-focus w-full rounded-xl bg-surface-container-low px-3 py-2 text-sm text-on-surface outline-none"
           onChange={(event) => setDraftTitle(event.target.value)}
           value={draftTitle}
         />
         {itemError && <p className="mt-2 text-xs text-red-300">{itemError}</p>}
         <div className="mt-2 flex justify-end gap-2">
           <button
-            className="rounded-md px-3 py-1 text-xs font-semibold uppercase tracking-wider text-on-surface/70 hover:bg-white/5"
+            className="u-focus rounded-lg px-3 py-1 text-xs font-semibold text-on-surface/65 hover:bg-surface-container"
             onClick={() => {
               setDraftTitle(label)
               setItemError('')
@@ -57,7 +57,7 @@ function ConversationItem({
             Cancel
           </button>
           <button
-            className="rounded-md bg-primary px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white hover:bg-sky-400"
+            className="u-focus rounded-lg bg-primary px-3 py-1 text-xs font-semibold text-white hover:opacity-95"
             onClick={saveRename}
             type="button"
           >
@@ -70,20 +70,20 @@ function ConversationItem({
 
   if (isDeleteConfirming) {
     return (
-      <div className="mx-2 my-1 rounded-lg border border-red-400/30 bg-red-500/10 px-3 py-3">
+      <div className="my-1 rounded-2xl bg-red-500/12 px-3 py-3">
         <p className="text-xs text-red-200">
           Delete <span className="font-semibold">"{label}"</span>?
         </p>
         <div className="mt-2 flex justify-end gap-2">
           <button
-            className="rounded-md px-3 py-1 text-xs font-semibold uppercase tracking-wider text-on-surface/70 hover:bg-white/5"
+            className="u-focus rounded-lg px-3 py-1 text-xs font-semibold text-on-surface/65 hover:bg-white/5"
             onClick={() => setIsDeleteConfirming(false)}
             type="button"
           >
             Cancel
           </button>
           <button
-            className="rounded-md bg-red-500 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white hover:bg-red-400"
+            className="u-focus rounded-lg bg-red-500 px-3 py-1 text-xs font-semibold text-white hover:bg-red-400"
             onClick={() => onDelete(id)}
             type="button"
           >
@@ -97,39 +97,53 @@ function ConversationItem({
   return (
     <div
       className={[
-        'mx-2 my-1 flex items-center gap-2 rounded-lg px-3 py-2 transition-all duration-300 ease-out',
-        active
-          ? 'bg-gradient-to-r from-sky-500 to-sky-600 text-white shadow-[0_0_15px_rgba(56,189,248,0.30)]'
-          : 'text-on-surface/60 hover:text-on-surface hover:bg-surface-container-high',
+        'group flex min-h-[2.5rem] items-center gap-0.5 rounded-xl transition-colors',
+        active ? 'bg-primary/14' : 'hover:bg-surface-container-high/50',
       ].join(' ')}
     >
       <button
-        className="flex min-w-0 flex-1 items-center gap-3 rounded-md px-1 py-1 text-left"
+        className="u-focus flex min-w-0 flex-1 items-center gap-2.5 rounded-xl py-2 pl-2.5 pr-1 text-left"
         onClick={onClick}
+        title={label}
         type="button"
       >
-        <span className="material-symbols-outlined text-[20px]">chat</span>
-        <span className="truncate text-sm font-medium">{label}</span>
+        <span
+          className={[
+            'material-symbols-outlined shrink-0 text-[20px]',
+            active ? 'text-primary' : 'text-on-surface/38',
+          ].join(' ')}
+          style={{ fontVariationSettings: active ? "'FILL' 1" : "'FILL' 0" }}
+        >
+          chat_bubble
+        </span>
+        <span
+          className={[
+            'truncate text-[13px] leading-snug',
+            active ? 'font-medium text-on-surface' : 'text-on-surface/65',
+          ].join(' ')}
+        >
+          {label}
+        </span>
       </button>
 
       <button
         aria-label="Rename conversation"
-        className="rounded-md p-1 transition hover:bg-black/15"
+        className="u-focus mr-0.5 rounded-lg p-1.5 text-on-surface/38 opacity-0 transition hover:bg-surface-container group-hover:opacity-100"
         onClick={() => {
           setDraftTitle(label)
           setIsEditing(true)
         }}
         type="button"
       >
-        <span className="material-symbols-outlined text-[18px]">edit</span>
+        <span className="material-symbols-outlined text-[17px]">edit</span>
       </button>
       <button
         aria-label="Delete conversation"
-        className="rounded-md p-1 transition hover:bg-black/15"
+        className="u-focus mr-0.5 rounded-lg p-1.5 text-on-surface/38 opacity-0 transition hover:bg-red-500/10 hover:text-red-400 group-hover:opacity-100"
         onClick={() => setIsDeleteConfirming(true)}
         type="button"
       >
-        <span className="material-symbols-outlined text-[18px]">delete</span>
+        <span className="material-symbols-outlined text-[17px]">delete</span>
       </button>
     </div>
   )
@@ -156,12 +170,14 @@ function AdminSyncButton() {
   const navigate = useNavigate()
   return (
     <button
-      className="mt-4 mx-2 mb-2 flex w-[calc(100%-1rem)] items-center gap-3 rounded-xl bg-surface-container px-4 py-3 border border-outline-variant/10 text-on-surface/70 transition hover:bg-surface-container-high hover:text-on-surface"
+      className="u-focus flex w-full items-center gap-2.5 rounded-xl bg-surface-container-low px-3 py-2 text-left text-[13px] font-medium text-on-surface/78 transition hover:bg-surface-container"
       onClick={() => navigate('/sync')}
       type="button"
     >
-      <span className="material-symbols-outlined text-[20px] text-primary/70">cloud_upload</span>
-      <span className="text-sm font-semibold">Sync Documents</span>
+      <span className="material-symbols-outlined shrink-0 text-[18px] text-primary/85">
+        cloud_upload
+      </span>
+      <span className="min-w-0 truncate">Sync documents</span>
     </button>
   )
 }
@@ -170,12 +186,14 @@ function AdminViewDocsButton() {
   const navigate = useNavigate()
   return (
     <button
-      className="mx-2 mb-2 flex w-[calc(100%-1rem)] items-center gap-3 rounded-xl bg-surface-container px-4 py-3 border border-outline-variant/10 text-on-surface/70 transition hover:bg-surface-container-high hover:text-on-surface"
+      className="u-focus flex w-full items-center gap-2.5 rounded-xl bg-surface-container-low px-3 py-2 text-left text-[13px] font-medium text-on-surface/78 transition hover:bg-surface-container"
       onClick={() => navigate('/admin/documents')}
       type="button"
     >
-      <span className="material-symbols-outlined text-[20px] text-primary/70">folder_open</span>
-      <span className="text-sm font-semibold">View Documents</span>
+      <span className="material-symbols-outlined shrink-0 text-[18px] text-primary/85">
+        folder_open
+      </span>
+      <span className="min-w-0 truncate">View documents</span>
     </button>
   )
 }
@@ -194,34 +212,29 @@ export function SideNav({
   const initials = getInitials(userName)
 
   return (
-    <nav className="fixed left-0 top-0 z-50 flex h-full w-72 flex-col overflow-y-auto rounded-r-2xl bg-surface-container-low py-8 shadow-[4px_0_40px_rgba(0,0,0,0.18)]">
-      <div className="px-8 mb-8">
-        <h1 className="font-headline text-lg font-bold tracking-tight text-sky-400 mb-1">
+    <nav className="fixed left-0 top-0 z-50 flex h-full w-72 flex-col bg-surface/98 shadow-[4px_0_48px_rgb(0_0_0_/0.12)] backdrop-blur-xl dark:shadow-[6px_0_56px_rgb(0_0_0_/0.45)]">
+      <div className="shrink-0 px-3.5 pb-2 pt-3.5">
+        <h1 className="font-headline text-[0.8125rem] font-semibold leading-tight tracking-tight text-on-surface">
           Kinetic Assistant
         </h1>
-        <p className="font-body text-sm text-on-surface/70">
-          High-Security Sanctuary
+        <p className="mt-1 text-[11px] leading-snug text-on-surface/42">
+          Trợ lý hướng nghiệp
         </p>
-      </div>
-
-      <div className="px-6 mb-8">
         <button
-          className="chat-new-button w-full rounded-xl py-3 px-4 font-headline text-sm font-bold text-white transition-transform duration-200 active:scale-95"
+          className="sidebar-new-convo-btn u-focus mt-3.5 flex h-10 w-full items-center justify-center gap-2 rounded-full px-4 text-[13px] font-medium transition active:scale-[0.99]"
           onClick={onNewChat}
           type="button"
         >
-          <span className="inline-flex items-center justify-center gap-2">
-            <span className="material-symbols-outlined text-[18px]">add</span>
-            New Chat
-          </span>
+          <span className="material-symbols-outlined text-[20px]">add</span>
+          Cuộc trò chuyện mới
         </button>
       </div>
 
-      <div className="flex-1 px-4 flex flex-col gap-6">
-        <div className="flex flex-col gap-1">
-          <p className="px-4 mb-2 text-[10px] font-semibold uppercase tracking-widest text-on-surface/60">
-            Conversations
-          </p>
+      <div className="flex min-h-0 flex-1 flex-col overflow-hidden px-2.5 pb-2 pt-1">
+        <p className="shrink-0 px-1.5 pb-1.5 pt-1 text-[11px] font-medium text-on-surface/36">
+          Gần đây
+        </p>
+        <div className="min-h-0 flex-1 space-y-0.5 overflow-y-auto pr-0.5">
           {conversations.map((conversation) => (
             <ConversationItem
               key={conversation.id}
@@ -236,25 +249,28 @@ export function SideNav({
         </div>
       </div>
 
-      <div className="px-4 mt-auto pt-6 relative">
-        <div className="absolute left-8 right-8 top-0 h-px bg-outline-variant/10" />
-
-        {userRole === 'admin' && <AdminSyncButton />}
-        {userRole === 'admin' && <AdminViewDocsButton />}
-
-        <div className="mt-4 mx-2 flex items-center gap-3 rounded-xl bg-surface-container-high px-4 py-3 border border-outline-variant/10">
-          <div className="w-8 h-8 rounded-full bg-primary-container/20 flex items-center justify-center flex-shrink-0 text-primary">
-            <span className="font-headline text-xs font-bold">{initials}</span>
+      <div className="mt-auto shrink-0 space-y-2 px-3.5 pb-3.5 pt-2">
+        {userRole === 'admin' ? (
+          <div className="flex flex-col gap-1">
+            <AdminSyncButton />
+            <AdminViewDocsButton />
           </div>
-          <div className="flex flex-col">
-            <span className="text-sm font-semibold text-on-surface">{userName}</span>
-            <span className="text-[10px] font-semibold uppercase tracking-wider text-primary-dim">
+        ) : null}
+
+        <div className="flex items-center gap-2.5 rounded-2xl bg-surface-container-high/85 px-2.5 py-2">
+          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary/26 to-primary/10 text-[11px] font-bold text-primary">
+            {initials}
+          </div>
+          <div className="min-w-0 flex-1">
+            <p className="truncate text-[13px] font-medium leading-tight text-on-surface">
+              {userName}
+            </p>
+            <p className="truncate text-[10px] font-medium uppercase tracking-wide text-on-surface/40">
               {userRole}
-            </span>
+            </p>
           </div>
         </div>
       </div>
     </nav>
   )
 }
-

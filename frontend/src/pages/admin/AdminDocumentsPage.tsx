@@ -5,7 +5,11 @@ import type { AuthUser } from '../../types/api'
 import type { AdminDocument } from '../../services/adminApi'
 import { clearAuthTokens, getAccessToken } from '../../services/authStorage'
 import { getMe } from '../../services/authApi'
-import { deleteDocument, fetchDocuments } from '../../services/adminApi'
+import {
+  deleteDocument,
+  fetchDocumentFileBlob,
+  fetchDocuments,
+} from '../../services/adminApi'
 import { API_BASE_URL } from '../../services/apiClient'
 
 const THEME_STORAGE_KEY = 'career_guidance_theme'
@@ -15,7 +19,7 @@ function StatusBadge({ status }: { status: string }) {
   const colorMap: Record<string, string> = {
     completed: 'bg-emerald-500/15 text-emerald-400 border-emerald-500/25',
     failed: 'bg-red-500/15 text-red-400 border-red-500/25',
-    processing: 'bg-sky-500/15 text-sky-400 border-sky-500/25',
+    processing: 'bg-primary/12 text-primary border-primary/25',
     start: 'bg-amber-500/15 text-amber-400 border-amber-500/25',
   }
   const cls =
@@ -24,7 +28,7 @@ function StatusBadge({ status }: { status: string }) {
 
   return (
     <span
-      className={`inline-block rounded-full border px-3 py-0.5 text-[11px] font-bold uppercase tracking-wider ${cls}`}
+      className={`inline-block rounded-full border px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${cls}`}
     >
       {status}
     </span>
@@ -55,7 +59,7 @@ function ImageGallery({
           <button
             key={url}
             type="button"
-            className="group overflow-hidden rounded-lg border border-outline-variant/20 bg-surface-container-low transition-all hover:border-primary/30 hover:shadow-md"
+            className="u-focus group overflow-hidden rounded-lg border border-outline-variant/15 bg-surface-container-low transition hover:border-primary/25 hover:shadow-sm"
             onClick={() => setLightboxSrc(`${API_BASE_URL}${url}`)}
           >
             <img
@@ -70,7 +74,7 @@ function ImageGallery({
 
       {lightboxSrc && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4 backdrop-blur-md"
           onClick={() => setLightboxSrc(null)}
           onKeyDown={(e) => e.key === 'Escape' && setLightboxSrc(null)}
           role="button"
@@ -84,7 +88,7 @@ function ImageGallery({
           />
           <button
             type="button"
-            className="absolute right-6 top-6 rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-white/20"
+            className="u-focus absolute right-4 top-4 rounded-full bg-white/12 p-2 text-white transition-colors hover:bg-white/20 sm:right-6 sm:top-6"
             onClick={() => setLightboxSrc(null)}
           >
             <span className="material-symbols-outlined text-[24px]">close</span>
@@ -98,18 +102,24 @@ function ImageGallery({
 function DocumentCard({
   doc,
   onDelete,
+  onPreviewPdf,
+  onOpenPdf,
+  onDownloadPdf,
   isDeleting,
 }: {
   doc: AdminDocument
   onDelete: (id: string) => void
+  onPreviewPdf: (doc: AdminDocument) => void
+  onOpenPdf: (doc: AdminDocument) => void
+  onDownloadPdf: (doc: AdminDocument) => void
   isDeleting: boolean
 }) {
   const [expanded, setExpanded] = useState(false)
   const [confirmDelete, setConfirmDelete] = useState(false)
 
   return (
-    <div className="rounded-2xl border border-outline-variant/15 bg-surface-container-high/60 backdrop-blur-xl transition-all hover:border-outline-variant/25">
-      <div className="flex items-center gap-4 px-5 py-4">
+    <div className="u-card rounded-2xl transition-colors hover:border-outline-variant/25">
+      <div className="flex flex-wrap items-center gap-3 px-4 py-3.5 sm:flex-nowrap sm:gap-4 sm:px-5 sm:py-4">
         <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
           <span className="material-symbols-outlined text-[22px]">
             {doc.document_type === 'pdf' ? 'picture_as_pdf' : 'description'}
@@ -120,7 +130,7 @@ function DocumentCard({
           <p className="truncate text-sm font-semibold text-on-surface">
             {doc.document_name}
           </p>
-          <div className="mt-1 flex items-center gap-3 text-[11px] text-on-surface/50">
+          <div className="mt-1 flex flex-wrap items-center gap-2 text-[11px] text-on-surface/50">
             <span>{doc.document_type.toUpperCase()}</span>
             <span>·</span>
             <span>{new Date(doc.created_at).toLocaleDateString()}</span>
@@ -130,6 +140,34 @@ function DocumentCard({
                 <span>{doc.image_urls.length} images</span>
               </>
             )}
+            {doc.file_available && (
+              <>
+                <span className="hidden sm:inline">·</span>
+                <span className="flex flex-wrap gap-1">
+                  <button
+                    type="button"
+                    className="u-focus rounded-md bg-primary px-2 py-0.5 text-[11px] font-semibold text-white shadow-sm hover:opacity-95"
+                    onClick={() => onPreviewPdf(doc)}
+                  >
+                    Preview
+                  </button>
+                  <button
+                    type="button"
+                    className="u-focus rounded-md border border-outline-variant/20 bg-surface-container-high px-2 py-0.5 text-[11px] font-medium text-on-surface/75 hover:bg-surface-container-highest"
+                    onClick={() => onOpenPdf(doc)}
+                  >
+                    Open
+                  </button>
+                  <button
+                    type="button"
+                    className="u-focus rounded-md border border-outline-variant/20 bg-transparent px-2 py-0.5 text-[11px] font-medium text-on-surface/60 hover:bg-surface-container-high"
+                    onClick={() => onDownloadPdf(doc)}
+                  >
+                    Download
+                  </button>
+                </span>
+              </>
+            )}
           </div>
         </div>
 
@@ -137,7 +175,7 @@ function DocumentCard({
 
         <button
           type="button"
-          className="rounded-lg p-2 text-on-surface/40 transition-colors hover:bg-surface-container-highest hover:text-on-surface/70"
+          className="u-focus rounded-lg p-2 text-on-surface/40 transition-colors hover:bg-surface-container-highest hover:text-on-surface/70"
           onClick={() => setExpanded(!expanded)}
           title={expanded ? 'Collapse' : 'Show images'}
         >
@@ -149,7 +187,7 @@ function DocumentCard({
         {!confirmDelete ? (
           <button
             type="button"
-            className="rounded-lg p-2 text-on-surface/40 transition-colors hover:bg-red-500/10 hover:text-red-400"
+            className="u-focus rounded-lg p-2 text-on-surface/40 transition-colors hover:bg-red-500/10 hover:text-red-400"
             onClick={() => setConfirmDelete(true)}
             disabled={isDeleting}
             title="Delete document"
@@ -160,7 +198,7 @@ function DocumentCard({
           <div className="flex items-center gap-1">
             <button
               type="button"
-              className="rounded-lg bg-red-500/15 px-3 py-1.5 text-[11px] font-bold text-red-400 transition-colors hover:bg-red-500/25"
+              className="u-focus rounded-lg bg-red-500/15 px-3 py-1.5 text-[11px] font-semibold text-red-300 transition-colors hover:bg-red-500/25"
               onClick={() => {
                 onDelete(doc.id)
                 setConfirmDelete(false)
@@ -171,7 +209,7 @@ function DocumentCard({
             </button>
             <button
               type="button"
-              className="rounded-lg px-2 py-1.5 text-[11px] font-semibold text-on-surface/50 transition-colors hover:bg-surface-container-highest"
+              className="u-focus rounded-lg px-2 py-1.5 text-[11px] font-medium text-on-surface/50 transition-colors hover:bg-surface-container-highest"
               onClick={() => setConfirmDelete(false)}
               disabled={isDeleting}
             >
@@ -182,7 +220,7 @@ function DocumentCard({
       </div>
 
       {expanded && (
-        <div className="border-t border-outline-variant/10 px-5 py-4">
+        <div className="border-t border-outline-variant/10 px-4 py-3.5 sm:px-5 sm:py-4">
           <ImageGallery
             imageUrls={doc.image_urls}
             documentName={doc.document_name}
@@ -203,6 +241,11 @@ export function AdminDocumentsPage() {
   const [isLoading, setIsLoading] = useState(false)
   const [deletingId, setDeletingId] = useState<string | null>(null)
   const [error, setError] = useState('')
+  const [deleteNotice, setDeleteNotice] = useState('')
+  const [pdfPreview, setPdfPreview] = useState<{
+    url: string
+    name: string
+  } | null>(null)
 
   useEffect(() => {
     const stored = window.localStorage.getItem(THEME_STORAGE_KEY)
@@ -241,6 +284,60 @@ export function AdminDocumentsPage() {
     }
   }, [navigate])
 
+  useEffect(() => {
+    return () => {
+      if (pdfPreview?.url) {
+        URL.revokeObjectURL(pdfPreview.url)
+      }
+    }
+  }, [pdfPreview?.url])
+
+  const openPdfModal = useCallback(async (doc: AdminDocument) => {
+    setError('')
+    try {
+      const blob = await fetchDocumentFileBlob(doc.id)
+      const url = URL.createObjectURL(blob)
+      setPdfPreview((prev) => {
+        if (prev?.url) URL.revokeObjectURL(prev.url)
+        return { url, name: doc.document_name }
+      })
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to load PDF')
+    }
+  }, [])
+
+  const openPdfInNewTab = useCallback(async (doc: AdminDocument) => {
+    setError('')
+    try {
+      const blob = await fetchDocumentFileBlob(doc.id)
+      const url = URL.createObjectURL(blob)
+      const w = window.open(url, '_blank', 'noopener,noreferrer')
+      if (!w) {
+        setError('Popup blocked — allow popups or use Preview.')
+        URL.revokeObjectURL(url)
+        return
+      }
+      window.setTimeout(() => URL.revokeObjectURL(url), 60_000)
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to open PDF')
+    }
+  }, [])
+
+  const downloadPdf = useCallback(async (doc: AdminDocument) => {
+    setError('')
+    try {
+      const blob = await fetchDocumentFileBlob(doc.id)
+      const url = URL.createObjectURL(blob)
+      const a = document.createElement('a')
+      a.href = url
+      a.download = doc.document_name || 'document.pdf'
+      a.click()
+      window.setTimeout(() => URL.revokeObjectURL(url), 2000)
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to download PDF')
+    }
+  }, [])
+
   const loadDocuments = useCallback(async (currentOffset: number) => {
     setIsLoading(true)
     setError('')
@@ -263,10 +360,14 @@ export function AdminDocumentsPage() {
 
   const handleDelete = async (docId: string) => {
     setDeletingId(docId)
+    setDeleteNotice('')
     try {
-      await deleteDocument(docId)
+      const result = await deleteDocument(docId)
       setDocuments((prev) => prev.filter((d) => d.id !== docId))
       setTotal((prev) => Math.max(0, prev - 1))
+      if (result.warnings.length > 0) {
+        setDeleteNotice(result.warnings.join(' '))
+      }
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to delete document')
     } finally {
@@ -279,8 +380,8 @@ export function AdminDocumentsPage() {
 
   if (isCheckingAuth) {
     return (
-      <div className="grid h-screen place-items-center bg-surface text-on-surface">
-        <div className="rounded-3xl border border-outline-variant/15 bg-surface-container-high/80 px-8 py-6 text-sm font-semibold text-primary shadow-[0_30px_100px_rgba(0,0,0,0.45)]">
+      <div className="grid h-screen place-items-center bg-background text-on-surface">
+        <div className="u-card rounded-2xl px-8 py-6 text-sm font-medium text-on-surface/70">
           Verifying admin access...
         </div>
       </div>
@@ -288,21 +389,20 @@ export function AdminDocumentsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-surface text-on-surface">
-      {/* Header */}
-      <header className="sticky top-0 z-20 border-b border-outline-variant/10 bg-surface/80 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-6xl items-center gap-4 px-6 py-4">
+    <div className="min-h-screen bg-background text-on-surface kv-texture-overlay">
+      <header className="sticky top-0 z-20 border-b border-outline-variant/10 bg-surface/80 backdrop-blur-md">
+        <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3 sm:px-6 sm:py-3.5">
           <button
             type="button"
-            className="rounded-xl p-2 text-on-surface/60 transition-colors hover:bg-surface-container-high hover:text-on-surface"
+            className="u-focus rounded-xl p-2 text-on-surface/55 transition-colors hover:bg-surface-container-high hover:text-on-surface"
             onClick={() => navigate('/chat')}
           >
             <span className="material-symbols-outlined text-[22px]">
               arrow_back
             </span>
           </button>
-          <div className="flex items-center gap-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary/10 text-primary">
+          <div className="flex min-w-0 items-center gap-3">
+            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-primary/12 text-primary">
               <span
                 className="material-symbols-outlined text-[20px]"
                 style={{ fontVariationSettings: "'FILL' 1" }}
@@ -310,44 +410,52 @@ export function AdminDocumentsPage() {
                 folder_open
               </span>
             </div>
-            <div>
-              <h1 className="text-base font-bold">Synced Documents</h1>
-              <p className="text-[11px] text-on-surface/50">
+            <div className="min-w-0">
+              <h1 className="font-headline truncate text-sm font-semibold sm:text-base">
+                Synced documents
+              </h1>
+              <p className="text-[11px] text-on-surface/45">
                 {total} document{total !== 1 ? 's' : ''} total
               </p>
             </div>
           </div>
-          <div className="ml-auto text-xs text-on-surface/40">
+          <div className="ml-auto hidden truncate text-xs text-on-surface/40 sm:block">
             {currentUser?.user_name}
           </div>
         </div>
       </header>
 
-      {/* Content */}
-      <main className="mx-auto max-w-6xl px-6 py-8">
+      <main className="mx-auto max-w-6xl px-4 py-6 sm:px-6 sm:py-8">
         {error && (
-          <div className="mb-6 rounded-xl border border-red-500/20 bg-red-500/10 px-4 py-3 text-sm text-red-400">
+          <div className="mb-5 rounded-xl border border-red-400/25 bg-red-500/10 px-4 py-3 text-sm text-red-200">
             {error}
+          </div>
+        )}
+        {deleteNotice && (
+          <div className="mb-5 rounded-xl border border-amber-400/25 bg-amber-500/10 px-4 py-3 text-sm text-amber-100/90">
+            {deleteNotice}
           </div>
         )}
 
         {isLoading && documents.length === 0 ? (
-          <div className="flex items-center justify-center py-20">
-            <div className="flex items-center gap-3 text-sm text-on-surface/50">
-              <span className="material-symbols-outlined animate-spin text-[20px]">
+          <div className="flex items-center justify-center py-16 sm:py-20">
+            <div className="u-card flex items-center gap-3 rounded-2xl px-6 py-4 text-sm font-medium text-on-surface/55">
+              <span className="material-symbols-outlined animate-spin text-[20px] text-primary/80">
                 progress_activity
               </span>
-              Loading documents...
+              Loading documents…
             </div>
           </div>
         ) : documents.length === 0 ? (
-          <div className="flex flex-col items-center justify-center py-20 text-on-surface/40">
-            <span className="material-symbols-outlined mb-3 text-[48px]">
+          <div className="u-card mx-auto flex max-w-md flex-col items-center justify-center rounded-2xl px-6 py-12 text-center text-on-surface/45">
+            <span className="material-symbols-outlined mb-3 text-[44px] text-on-surface/30">
               folder_off
             </span>
-            <p className="text-sm font-semibold">No documents found</p>
-            <p className="mt-1 text-xs">
-              Documents will appear here after syncing.
+            <p className="text-sm font-semibold text-on-surface/70">
+              No documents yet
+            </p>
+            <p className="mt-1.5 text-xs leading-relaxed">
+              Documents appear here after you sync from the admin upload page.
             </p>
           </div>
         ) : (
@@ -358,6 +466,9 @@ export function AdminDocumentsPage() {
                   key={doc.id}
                   doc={doc}
                   onDelete={handleDelete}
+                  onPreviewPdf={openPdfModal}
+                  onOpenPdf={openPdfInNewTab}
+                  onDownloadPdf={downloadPdf}
                   isDeleting={deletingId === doc.id}
                 />
               ))}
@@ -368,7 +479,7 @@ export function AdminDocumentsPage() {
               <div className="mt-8 flex items-center justify-center gap-2">
                 <button
                   type="button"
-                  className="rounded-lg px-3 py-1.5 text-xs font-semibold text-on-surface/60 transition-colors hover:bg-surface-container-high disabled:opacity-30"
+                  className="u-focus rounded-lg border border-outline-variant/15 bg-surface-container-high/60 px-3 py-1.5 text-xs font-medium text-on-surface/65 transition-colors hover:bg-surface-container-high disabled:opacity-30"
                   disabled={currentPage <= 1}
                   onClick={() =>
                     setOffset(Math.max(0, offset - PAGE_SIZE))
@@ -376,12 +487,12 @@ export function AdminDocumentsPage() {
                 >
                   Previous
                 </button>
-                <span className="px-3 text-xs text-on-surface/50">
+                <span className="px-3 text-xs text-on-surface/45">
                   Page {currentPage} of {totalPages}
                 </span>
                 <button
                   type="button"
-                  className="rounded-lg px-3 py-1.5 text-xs font-semibold text-on-surface/60 transition-colors hover:bg-surface-container-high disabled:opacity-30"
+                  className="u-focus rounded-lg border border-outline-variant/15 bg-surface-container-high/60 px-3 py-1.5 text-xs font-medium text-on-surface/65 transition-colors hover:bg-surface-container-high disabled:opacity-30"
                   disabled={currentPage >= totalPages}
                   onClick={() => setOffset(offset + PAGE_SIZE)}
                 >
@@ -392,6 +503,40 @@ export function AdminDocumentsPage() {
           </>
         )}
       </main>
+
+      {pdfPreview && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4 backdrop-blur-md"
+          role="dialog"
+          aria-modal="true"
+          aria-label="PDF preview"
+        >
+          <div className="relative flex h-[90vh] w-full max-w-5xl flex-col overflow-hidden rounded-2xl border border-outline-variant/15 bg-surface shadow-2xl">
+            <div className="flex items-center justify-between border-b border-outline-variant/10 px-4 py-3">
+              <p className="truncate pr-4 text-sm font-semibold text-on-surface">
+                {pdfPreview.name}
+              </p>
+              <button
+                type="button"
+                className="u-focus rounded-lg p-2 text-on-surface/60 hover:bg-surface-container-high"
+                onClick={() => {
+                  setPdfPreview((prev) => {
+                    if (prev?.url) URL.revokeObjectURL(prev.url)
+                    return null
+                  })
+                }}
+              >
+                <span className="material-symbols-outlined text-[22px]">close</span>
+              </button>
+            </div>
+            <iframe
+              title={pdfPreview.name}
+              src={pdfPreview.url}
+              className="min-h-0 flex-1 w-full bg-surface-container-low"
+            />
+          </div>
+        </div>
+      )}
     </div>
   )
 }

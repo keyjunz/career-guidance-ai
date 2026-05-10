@@ -29,24 +29,24 @@ export function LoginPage() {
   }
 
   return (
-    <main className="min-h-screen bg-surface text-on-surface kv-texture-overlay">
-      <section className="relative z-10 grid min-h-screen place-items-center px-6">
-        <div className="w-full max-w-md rounded-3xl border border-outline-variant/15 bg-surface-container-high/80 p-8 shadow-[0_30px_100px_rgba(0,0,0,0.45)] backdrop-blur">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.35em] text-primary">
+    <main className="min-h-screen bg-background text-on-surface kv-texture-overlay">
+      <section className="relative z-10 grid min-h-screen place-items-center px-4 py-10 sm:px-6">
+        <div className="u-card w-full max-w-md rounded-2xl p-7 sm:p-8">
+          <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-primary/90">
             Career Guidance AI
           </p>
-          <h1 className="font-headline text-3xl font-extrabold tracking-tight">
+          <h1 className="font-headline text-2xl font-semibold tracking-tight sm:text-3xl">
             Welcome back
           </h1>
-          <p className="mt-2 text-sm text-on-surface/65">
+          <p className="mt-2 text-sm text-on-surface/60">
             Sign in to continue your career guidance chat session.
           </p>
 
-          <form className="mt-8 flex flex-col gap-4" onSubmit={handleSubmit}>
-            <label className="flex flex-col gap-2 text-sm font-semibold text-on-surface/80">
+          <form className="mt-7 flex flex-col gap-3.5 sm:mt-8 sm:gap-4" onSubmit={handleSubmit}>
+            <label className="flex flex-col gap-1.5 text-sm font-medium text-on-surface/75">
               Email
               <input
-                className="rounded-2xl border border-outline-variant/20 bg-surface px-4 py-3 text-on-surface outline-none transition focus:border-primary"
+                className="u-focus rounded-xl border border-outline-variant/18 bg-surface px-4 py-3 text-sm text-on-surface outline-none transition placeholder:text-on-surface/35 focus:border-primary/40"
                 type="email"
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
@@ -54,10 +54,10 @@ export function LoginPage() {
               />
             </label>
 
-            <label className="flex flex-col gap-2 text-sm font-semibold text-on-surface/80">
+            <label className="flex flex-col gap-1.5 text-sm font-medium text-on-surface/75">
               Password
               <input
-                className="rounded-2xl border border-outline-variant/20 bg-surface px-4 py-3 text-on-surface outline-none transition focus:border-primary"
+                className="u-focus rounded-xl border border-outline-variant/18 bg-surface px-4 py-3 text-sm text-on-surface outline-none transition placeholder:text-on-surface/35 focus:border-primary/40"
                 type="password"
                 value={password}
                 onChange={(event) => setPassword(event.target.value)}
@@ -66,13 +66,13 @@ export function LoginPage() {
             </label>
 
             {errorMessage && (
-              <p className="rounded-2xl border border-red-400/20 bg-red-500/10 px-4 py-3 text-sm text-red-200">
+              <p className="rounded-xl border border-red-400/25 bg-red-500/10 px-4 py-3 text-sm text-red-200">
                 {errorMessage}
               </p>
             )}
 
             <button
-              className="auth-submit-button mt-2 rounded-2xl px-5 py-3 font-headline text-sm font-bold text-white transition active:scale-[0.98] disabled:cursor-not-allowed"
+              className="auth-submit-button u-focus mt-1 rounded-xl px-5 py-3 font-headline text-sm font-semibold text-white transition active:scale-[0.99] disabled:cursor-not-allowed sm:mt-2"
               disabled={isSubmitting}
               type="submit"
             >
@@ -80,9 +80,12 @@ export function LoginPage() {
             </button>
           </form>
 
-          <p className="mt-6 text-center text-sm text-on-surface/60">
+          <p className="mt-6 text-center text-sm text-on-surface/55">
             Need an account?{' '}
-            <Link className="font-semibold text-primary hover:text-sky-300" to="/register">
+            <Link
+              className="font-semibold text-primary underline-offset-4 hover:underline"
+              to="/register"
+            >
               Create one
             </Link>
           </p>

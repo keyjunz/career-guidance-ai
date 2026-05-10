@@ -2,7 +2,6 @@ import json
 import logging
 import os
 import sqlite3
-import json
 from pathlib import Path
 from typing import Any
 
@@ -372,6 +371,30 @@ class VectorDBService:
             logger.error(
                 "ChromaDB delete failed: ingestion_job_id=%s error=%s",
                 ingestion_job_id,
+                exc,
+            )
+            return 0
+
+    def delete_by_doc_id(self, doc_id: str) -> int:
+        """Delete chunks whose metadata doc_id matches (one uploaded PDF / OCR job)."""
+        if self.collection is None:
+            logger.warning("ChromaDB collection not available, cannot delete")
+            return 0
+        cleaned = str(doc_id or "").strip()
+        if not cleaned:
+            return 0
+        try:
+            self.collection.delete(where={"doc_id": {"$eq": cleaned}})
+            logger.info(
+                "Deleted chunks from ChromaDB: doc_id=%s collection=%s",
+                cleaned,
+                self.collection_name,
+            )
+            return 1
+        except Exception as exc:
+            logger.error(
+                "ChromaDB delete failed: doc_id=%s error=%s",
+                cleaned,
                 exc,
             )
             return 0

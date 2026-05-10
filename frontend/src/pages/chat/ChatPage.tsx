@@ -8,7 +8,10 @@ import { ChatInputDock } from '../../components/chat/ChatInputDock'
 import type { ChatConversation, ChatMessage } from '../../types/chat'
 import type { AuthUser, ChatMode } from '../../types/api'
 import { sendChatMessage, streamChatMessage } from '../../services/chatApi'
-import { mapApiPayloadToAssistantMessage } from '../../mappers/chatMapper'
+import {
+  collectResolvedImageUrls,
+  mapApiPayloadToAssistantMessage,
+} from '../../mappers/chatMapper'
 import { clearAuthTokens, getAccessToken } from '../../services/authStorage'
 import { getMe } from '../../services/authApi'
 
@@ -26,6 +29,12 @@ function createEmptyConversation(): ChatConversation {
     createdAt: new Date().toISOString(),
     messages: [],
   }
+}
+
+function firstNameFromUserName(name: string): string {
+  const trimmed = name.trim()
+  if (!trimmed) return ''
+  return trimmed.split(/\s+/)[0] ?? ''
 }
 
 export function ChatPage() {
@@ -190,6 +199,13 @@ export function ChatPage() {
       }),
     )
 
+    const planValue =
+      chatMode === 'rag'
+        ? ('rag_only' as const)
+        : chatMode === 'web'
+          ? ('web_only' as const)
+          : undefined
+
     try {
       try {
         let streamedText = ''
@@ -200,9 +216,6 @@ export function ChatPage() {
         let streamedStatuses: string[] | undefined
         let streamedCached: boolean | undefined
         let latestStatus = ''
-        const planValue = chatMode === 'rag' ? 'rag_only' as const
-          : chatMode === 'web' ? 'web_only' as const
-          : undefined
         await streamChatMessage(
           { question: trimmed, ...(planValue ? { plan: planValue } : {}) },
           {
@@ -250,10 +263,7 @@ export function ChatPage() {
               streamedStatuses = payload.statuses
               streamedCached = payload.cached
               streamedSources = payload.sources
-              const images = payload.content
-                .filter((item) => item.type === 'image' && item.image_url)
-                .map((item) => item.image_url?.trim() || '')
-                .filter((item) => item.length > 0)
+              const images = collectResolvedImageUrls(payload)
               if (images.length > 0) {
                 streamedImageUrls = images
               }
@@ -341,8 +351,8 @@ export function ChatPage() {
 
   if (isCheckingAuth) {
     return (
-      <div className="grid h-screen place-items-center bg-surface text-on-surface">
-        <div className="rounded-3xl border border-outline-variant/15 bg-surface-container-high/80 px-8 py-6 text-sm font-semibold text-primary shadow-[0_30px_100px_rgba(0,0,0,0.45)]">
+      <div className="grid h-screen place-items-center bg-background text-on-surface">
+        <div className="u-card rounded-2xl px-8 py-6 text-sm font-medium text-on-surface/70">
           Verifying secure session...
         </div>
       </div>
@@ -350,7 +360,7 @@ export function ChatPage() {
   }
 
   return (
-    <div className="h-screen w-full overflow-hidden bg-surface text-on-surface kv-texture-overlay">
+    <div className="h-screen w-full overflow-hidden bg-background text-on-surface kv-texture-overlay">
       <div className="absolute inset-0 z-0" />
       <SideNav
         conversations={conversations}
@@ -362,9 +372,10 @@ export function ChatPage() {
         onSelectConversation={handleSelectConversation}
       />
 
-      <main className="ml-72 flex h-full flex-col bg-surface relative z-10">
+      <main className="relative z-10 ml-72 flex h-full flex-col bg-background">
         <ChatHeader
           user={currentUser}
+          conversationTitle={activeConversation?.title}
           onLogout={handleLogout}
           onToggleTheme={handleToggleTheme}
           theme={theme}
@@ -375,10 +386,12 @@ export function ChatPage() {
           dayChip={dayChip}
           isTyping={isTyping}
           errorMessage={errorMessage}
+          userFirstName={firstNameFromUserName(currentUser?.user_name ?? '')}
+          onStarterPrompt={handleSend}
         />
 
         <ChatInputDock
-          placeholder="Ask about career guidance..."
+          placeholder="Hỏi về hướng nghiệp hoặc kỹ năng..."
           onSend={handleSend}
           disabled={isTyping}
           chatMode={chatMode}

@@ -1,5 +1,19 @@
 import type { ApiChatPayload } from '../types/api'
 import type { ChatMessage } from '../types/chat'
+import { resolveApiMediaUrl } from '../utils/mediaUrl'
+
+export function collectResolvedImageUrls(payload: ApiChatPayload): string[] {
+  const seen = new Set<string>()
+  const imageUrls: string[] = []
+  for (const item of payload.content) {
+    if (item.type !== 'image' || !item.image_url) continue
+    const resolved = resolveApiMediaUrl(item.image_url.trim())
+    if (!resolved || seen.has(resolved)) continue
+    seen.add(resolved)
+    imageUrls.push(resolved)
+  }
+  return imageUrls
+}
 
 export function mapApiPayloadToAssistantMessage(
   payload: ApiChatPayload,
@@ -9,10 +23,7 @@ export function mapApiPayloadToAssistantMessage(
     .map((item) => item.text?.trim() || '')
     .filter((item) => item.length > 0)
     .join('\n\n')
-  const imageUrls = payload.content
-    .filter((item) => item.type === 'image' && item.image_url)
-    .map((item) => item.image_url?.trim() || '')
-    .filter((url) => url.length > 0)
+  const imageUrls = collectResolvedImageUrls(payload)
 
   return {
     id: `a_${Date.now()}`,

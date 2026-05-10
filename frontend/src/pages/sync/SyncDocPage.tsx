@@ -26,7 +26,7 @@ function StatusBadge({ status }: { status: string }) {
     failed:
       'bg-red-500/15 text-red-400 border-red-500/25',
     processing:
-      'bg-sky-500/15 text-sky-400 border-sky-500/25',
+      'bg-primary/12 text-primary border-primary/25',
   }
   const cls = colorMap[status] ?? 'bg-outline-variant/15 text-on-surface/70 border-outline-variant/25'
 
@@ -161,8 +161,8 @@ export function SyncDocPage() {
 
   if (isCheckingAuth) {
     return (
-      <div className="grid h-screen place-items-center bg-surface text-on-surface">
-        <div className="rounded-3xl border border-outline-variant/15 bg-surface-container-high/80 px-8 py-6 text-sm font-semibold text-primary shadow-[0_30px_100px_rgba(0,0,0,0.45)]">
+      <div className="grid h-screen place-items-center bg-background text-on-surface">
+        <div className="u-card rounded-2xl px-8 py-6 text-sm font-medium text-on-surface/70">
           Verifying admin access...
         </div>
       </div>
@@ -170,48 +170,46 @@ export function SyncDocPage() {
   }
 
   return (
-    <div className="h-screen w-full overflow-hidden bg-surface text-on-surface kv-texture-overlay">
+    <div className="h-screen w-full overflow-hidden bg-background text-on-surface kv-texture-overlay">
       <div className="absolute inset-0 z-0" />
 
-      {/* Minimal sidebar strip */}
-      <nav className="fixed left-0 top-0 z-50 flex h-full w-72 flex-col overflow-y-auto rounded-r-2xl bg-surface-container-low py-8 shadow-[4px_0_40px_rgba(0,0,0,0.18)]">
-        <div className="px-8 mb-8">
-          <h1 className="font-headline text-lg font-bold tracking-tight text-sky-400 mb-1">
+      <nav className="fixed left-0 top-0 z-50 flex h-full w-72 flex-col overflow-y-auto bg-surface/98 shadow-[4px_0_48px_rgb(0_0_0_/0.12)] backdrop-blur-xl dark:shadow-[6px_0_56px_rgb(0_0_0_/0.45)]">
+        <div className="px-4 pb-4 pt-5">
+          <h1 className="font-headline text-[15px] font-bold tracking-tight text-on-surface">
             Kinetic Assistant
           </h1>
-          <p className="font-body text-sm text-on-surface/70">Document Sync Portal</p>
+          <p className="mt-0.5 text-xs text-on-surface/50">Document sync</p>
         </div>
 
-        <div className="px-6 mb-6">
+        <div className="px-3 pb-4">
           <button
-            className="chat-new-button w-full rounded-xl py-3 px-4 font-headline text-sm font-bold text-white transition-transform duration-200 active:scale-95"
+            className="chat-new-button u-focus w-full rounded-xl py-2.5 px-3 font-headline text-sm font-semibold text-white transition active:scale-[0.99]"
             onClick={() => navigate('/chat')}
             type="button"
           >
             <span className="inline-flex items-center justify-center gap-2">
               <span className="material-symbols-outlined text-[18px]">arrow_back</span>
-              Back to Chat
+              Back to chat
             </span>
           </button>
         </div>
 
-        <div className="flex-1 px-4 flex flex-col gap-1">
-          <p className="px-4 mb-2 text-[10px] font-semibold uppercase tracking-widest text-on-surface/60">
-            Admin Tools
+        <div className="flex-1 px-3 pb-3">
+          <p className="px-1 pb-2 text-[10px] font-semibold uppercase tracking-wider text-on-surface/40">
+            Admin
           </p>
-          <div className="mx-2 flex items-center gap-3 rounded-lg bg-gradient-to-r from-sky-500 to-sky-600 px-3 py-2 text-white shadow-[0_0_15px_rgba(56,189,248,0.30)]">
-            <span className="material-symbols-outlined text-[20px]">cloud_upload</span>
-            <span className="text-sm font-medium">Sync Documents</span>
+          <div className="flex items-center gap-2.5 rounded-xl border border-outline-variant/12 bg-surface-container-high px-3 py-2.5">
+            <span className="material-symbols-outlined text-[18px] text-primary/85">
+              cloud_upload
+            </span>
+            <span className="text-sm font-medium text-on-surface/85">Sync documents</span>
           </div>
         </div>
 
-        {/* User info + controls */}
-        <div className="px-4 mt-auto pt-6 relative">
-          <div className="absolute left-8 right-8 top-0 h-px bg-outline-variant/10" />
-
-          <div className="mx-2 mb-3 flex gap-2">
+        <div className="mt-auto border-t border-outline-variant/10 px-3 pb-4 pt-3">
+          <div className="mb-2 flex gap-2">
             <button
-              className="flex-1 flex items-center justify-center gap-2 rounded-lg bg-surface-container-high px-3 py-2 text-xs font-semibold text-on-surface/60 transition hover:bg-surface-container-highest hover:text-on-surface"
+              className="u-focus flex flex-1 items-center justify-center gap-1.5 rounded-lg border border-outline-variant/10 bg-surface-container-high px-2 py-2 text-[11px] font-semibold text-on-surface/65 transition hover:bg-surface-container"
               onClick={handleToggleTheme}
               type="button"
             >
@@ -221,55 +219,48 @@ export function SyncDocPage() {
               Theme
             </button>
             <button
-              className="flex-1 flex items-center justify-center gap-2 rounded-lg bg-surface-container-high px-3 py-2 text-xs font-semibold text-on-surface/60 transition hover:bg-surface-container-highest hover:text-on-surface"
+              className="u-focus flex flex-1 items-center justify-center gap-1.5 rounded-lg border border-outline-variant/10 bg-surface-container-high px-2 py-2 text-[11px] font-semibold text-on-surface/65 transition hover:bg-surface-container"
               onClick={handleLogout}
               type="button"
             >
               <span className="material-symbols-outlined text-[16px]">logout</span>
-              Logout
+              Log out
             </button>
           </div>
 
-          <div className="mx-2 flex items-center gap-3 rounded-xl bg-surface-container-high px-4 py-3 border border-outline-variant/10">
-            <div className="w-8 h-8 rounded-full bg-primary-container/20 flex items-center justify-center flex-shrink-0 text-primary">
-              <span className="font-headline text-xs font-bold">
-                {(currentUser?.user_name ?? 'A')[0].toUpperCase()}
-              </span>
+          <div className="flex items-center gap-3 rounded-xl border border-outline-variant/10 bg-surface-container-high/80 px-3 py-2.5">
+            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/15 text-xs font-bold text-primary">
+              {(currentUser?.user_name ?? 'A')[0].toUpperCase()}
             </div>
-            <div className="flex flex-col">
-              <span className="text-sm font-semibold text-on-surface">{currentUser?.user_name ?? 'Admin'}</span>
-              <span className="text-[10px] font-semibold uppercase tracking-wider text-primary-dim">
+            <div className="min-w-0">
+              <p className="truncate text-sm font-medium text-on-surface">
+                {currentUser?.user_name ?? 'Admin'}
+              </p>
+              <p className="text-[10px] font-medium uppercase tracking-wider text-on-surface/45">
                 {currentUser?.role ?? 'admin'}
-              </span>
+              </p>
             </div>
           </div>
         </div>
       </nav>
 
-      {/* Main content */}
-      <main className="ml-72 flex h-full flex-col relative z-10">
-        <header className="flex-shrink-0 px-10 py-8 flex items-center justify-between z-20">
-          <div className="flex flex-col gap-1">
-            <h2 className="font-headline text-2xl font-extrabold tracking-tight text-on-surface">
-              Sync Documents
+      <main className="relative z-10 ml-72 flex h-full flex-col bg-gradient-to-b from-surface to-background">
+        <header className="sticky top-0 z-20 flex flex-shrink-0 items-center border-b border-outline-variant/10 bg-surface/80 px-6 py-3 backdrop-blur-md">
+          <div className="flex flex-col gap-0.5">
+            <h2 className="font-headline text-base font-semibold tracking-tight text-on-surface">
+              Sync documents
             </h2>
-            <div className="flex items-center gap-2">
-              <span className="relative h-2 w-2 rounded-full bg-primary shadow-[0_0_10px_rgba(59,191,250,0.80)]">
-                <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-50" />
-              </span>
-              <span className="text-xs font-semibold uppercase tracking-widest text-primary-dim">
-                OCR Processing Engine
-              </span>
-            </div>
+            <p className="text-[11px] text-on-surface/45">
+              Upload PDFs or images for OCR and indexing
+            </p>
           </div>
         </header>
 
-        <div className="flex-1 overflow-y-auto px-10 pb-10">
-          <div className="mx-auto max-w-3xl flex flex-col gap-8">
-            {/* Upload card */}
-            <div className="rounded-3xl border border-outline-variant/15 bg-surface-container-high/80 p-8 shadow-[0_30px_100px_rgba(0,0,0,0.45)] backdrop-blur">
-              <h3 className="font-headline text-lg font-bold text-on-surface mb-6">
-                Upload Files
+        <div className="flex-1 overflow-y-auto px-5 pb-10 pt-6 sm:px-8">
+          <div className="mx-auto flex max-w-3xl flex-col gap-6">
+            <div className="u-card rounded-2xl p-6 sm:p-8">
+              <h3 className="font-headline mb-5 text-base font-semibold text-on-surface">
+                Upload files
               </h3>
 
               {/* Drop zone */}
@@ -342,10 +333,10 @@ export function SyncDocPage() {
                         key={method}
                         aria-pressed={ocrMethod === method}
                         className={[
-                          'flex-1 rounded-xl px-4 py-2.5 text-xs font-bold uppercase tracking-wider transition border relative overflow-hidden',
+                          'u-focus relative flex-1 overflow-hidden rounded-xl border px-3 py-2.5 text-xs font-semibold uppercase tracking-wide transition',
                           ocrMethod === method
-                            ? 'bg-primary/15 text-primary border-primary/40 shadow-[0_0_0_1px_rgba(59,191,250,0.25),0_10px_30px_rgba(59,191,250,0.18)] scale-[1.02]'
-                            : 'bg-surface-container text-on-surface/60 border-outline-variant/15 hover:border-primary/30 hover:text-on-surface/80',
+                            ? 'border-primary/35 bg-primary/10 text-primary'
+                            : 'border-outline-variant/15 bg-surface-container text-on-surface/55 hover:border-outline-variant/30 hover:text-on-surface/80',
                         ].join(' ')}
                         onClick={() => setOcrMethod(method)}
                         type="button"
@@ -404,9 +395,9 @@ export function SyncDocPage() {
 
             {/* Job history */}
             {jobs.length > 0 && (
-              <div className="rounded-3xl border border-outline-variant/15 bg-surface-container-high/80 p-8 shadow-[0_30px_100px_rgba(0,0,0,0.45)] backdrop-blur">
-                <h3 className="font-headline text-lg font-bold text-on-surface mb-6">
-                  Processing History
+              <div className="u-card rounded-2xl p-6 sm:p-8">
+                <h3 className="font-headline mb-5 text-base font-semibold text-on-surface">
+                  Processing history
                 </h3>
                 <div className="flex flex-col gap-4">
                   {jobs.map((job) => (

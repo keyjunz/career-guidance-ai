@@ -32,8 +32,8 @@ export default {
         xl: '1.5rem',
       },
       fontFamily: {
-        headline: ['Manrope', 'system-ui', 'sans-serif'],
-        body: ['Inter', 'system-ui', 'sans-serif'],
+        headline: ['Manrope', 'Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+        body: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
         ambient: '0 20px 60px rgba(224, 229, 251, 0.06)',
