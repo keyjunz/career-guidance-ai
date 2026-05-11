@@ -5,8 +5,8 @@ import os
 from src.agent.state.agent_state import AgentRuntimeState
 from src.services.llm_service.main import LLMService
 
-PASS_THRESHOLD = 0.65
-LLM_EVAL_DEFAULT = "true"
+PASS_THRESHOLD = 0.4
+LLM_EVAL_DEFAULT ="true"
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)

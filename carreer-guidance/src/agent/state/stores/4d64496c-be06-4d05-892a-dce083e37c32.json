@@ -1,7 +1,7 @@
 {
   "user_id": "4d64496c-be06-4d05-892a-dce083e37c32",
   "created_at": "2026-05-06T18:27:31.298236+00:00",
-  "updated_at": "2026-05-10T07:04:52.379759+00:00",
+  "updated_at": "2026-05-11T01:59:49.331433+00:00",
   "pending_by_execution": {
     "5de44c2f-4e1e-41f5-9e4d-65d0f3789138": {
       "conversation_id": "aa471aa6-efc4-47a8-bccc-51f56e3a808a",
@@ -12,6 +12,11 @@
       "conversation_id": "98381606-625a-4ff8-9494-d49da56dca81",
       "question": "What are the main similarities between GraphQL and REST?",
       "timestamp": "2026-05-09T15:35:44.989533+00:00"
+    },
+    "8002e7f1-c0bc-431e-b3f3-faaea4869d15": {
+      "conversation_id": "0af88d4c-2958-4cc3-a2d9-0ee49fb68da9",
+      "question": "timeline of software engineer career",
+      "timestamp": "2026-05-10T18:01:16.634729+00:00"
     }
   },
   "status_by_execution": {
@@ -1154,50 +1159,1197 @@
         "status": "Hoan tat xu ly.",
         "timestamp": "2026-05-10T07:04:52.379759+00:00"
       }
+    ],
+    "158427ad-fde2-4863-b16d-2df588032baa": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-10T17:46:56.163265+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-10T17:46:56.183586+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-10T17:46:56.192410+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-10T17:46:56.202578+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-10T17:46:56.212991+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-10T17:46:58.563304+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-10T17:47:14.162372+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-10T17:47:14.172664+00:00"
+      },
+      {
+        "status": "Refining answer based on evaluation.",
+        "timestamp": "2026-05-10T17:47:15.392248+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-10T17:47:15.401317+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-10T17:47:17.146779+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-10T17:47:17.156181+00:00"
+      }
+    ],
+    "f1641501-5e3b-4943-8ab3-e1c989ec2155": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-10T17:50:51.855952+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-10T17:50:51.883793+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-10T17:50:51.896413+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-10T17:50:51.912646+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-10T17:50:51.928441+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-10T17:50:53.208820+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-10T17:51:09.676870+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-10T17:51:09.691883+00:00"
+      },
+      {
+        "status": "Refining answer based on evaluation.",
+        "timestamp": "2026-05-10T17:51:11.965194+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-10T17:51:11.973827+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-10T17:51:13.506813+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-10T17:51:13.514823+00:00"
+      }
+    ],
+    "959241c5-8ea4-4d80-8bfe-979f872cab80": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-10T17:57:27.355245+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-10T17:57:27.373964+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-10T17:57:27.385042+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-10T17:57:27.397572+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-10T17:57:27.408370+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-10T17:57:43.334973+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-10T17:57:43.344022+00:00"
+      },
+      {
+        "status": "Refining answer based on evaluation.",
+        "timestamp": "2026-05-10T17:57:44.461875+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-10T17:57:44.470255+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-10T17:57:46.112682+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-10T17:57:46.120003+00:00"
+      }
+    ],
+    "56780d45-7df6-4ee2-9d37-931ea8e1955a": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-10T18:00:08.916265+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-10T18:00:08.931588+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-10T18:00:08.943887+00:00"
+      },
+      {
+        "status": "Cache hit — returning fast response.",
+        "timestamp": "2026-05-10T18:00:08.950895+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-10T18:00:08.972425+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-10T18:00:08.978426+00:00"
+      }
+    ],
+    "8002e7f1-c0bc-431e-b3f3-faaea4869d15": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-10T18:01:16.625677+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-10T18:01:16.641721+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-10T18:01:16.653936+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-10T18:01:16.664052+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-10T18:01:16.675138+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-10T18:01:18.331372+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-10T18:01:36.303869+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-10T18:01:36.312848+00:00"
+      }
+    ],
+    "3bb8a79a-23ef-4d89-881c-94b8e429b238": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-10T18:03:25.237357+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-10T18:03:25.253672+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-10T18:03:25.264188+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-10T18:03:25.277109+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-10T18:03:25.288823+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-10T18:03:27.004020+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-10T18:03:42.776407+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-10T18:03:42.786414+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-10T18:03:45.380803+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-10T18:03:45.386836+00:00"
+      }
+    ],
+    "0c5cb528-154c-4f48-ba4b-af527ebfb248": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-10T18:06:46.424975+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-10T18:06:46.445643+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-10T18:06:46.458645+00:00"
+      },
+      {
+        "status": "Cache hit — returning fast response.",
+        "timestamp": "2026-05-10T18:06:46.468887+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-10T18:06:46.486327+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-10T18:06:46.501395+00:00"
+      }
+    ],
+    "5d0259fa-1ec0-4e0b-acf4-c828c33d0941": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-10T18:06:51.923493+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-10T18:06:51.941171+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-10T18:06:51.949168+00:00"
+      },
+      {
+        "status": "Cache hit — returning fast response.",
+        "timestamp": "2026-05-10T18:06:51.957457+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-10T18:06:51.973255+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-10T18:06:51.981373+00:00"
+      }
+    ],
+    "da2275f1-1c0d-4411-a9d1-692f8bee288c": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-10T18:06:56.199001+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-10T18:06:56.211012+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-10T18:06:56.218012+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-10T18:06:56.226859+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-10T18:06:56.237458+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-10T18:06:59.111488+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-10T18:07:07.675072+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-10T18:07:07.683386+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-10T18:07:07.700193+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-10T18:07:07.705184+00:00"
+      }
+    ],
+    "f7ec7ce6-6e5d-4c28-8b94-ea21cf47c6be": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-10T18:07:33.890172+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-10T18:07:33.911170+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-10T18:07:33.923588+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-10T18:07:33.938322+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-10T18:07:33.951855+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-10T18:07:51.717982+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-10T18:07:51.727460+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-10T18:07:51.745912+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-10T18:07:51.758247+00:00"
+      }
+    ],
+    "6f179d01-3d31-4448-9db6-e3433b56717a": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-10T18:08:12.791110+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-10T18:08:12.804280+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-10T18:08:12.811154+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-10T18:08:12.818161+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-10T18:08:12.825986+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-10T18:08:28.782454+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-10T18:08:28.791501+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-10T18:08:28.811068+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-10T18:08:28.819852+00:00"
+      }
+    ],
+    "d84d9d90-236d-47c8-95f3-6ad66031b56c": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-10T18:12:50.583061+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-10T18:12:50.601420+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-10T18:12:50.615075+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-10T18:12:50.626467+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-10T18:12:50.640499+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-10T18:13:06.236204+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-10T18:13:06.246231+00:00"
+      },
+      {
+        "status": "Refining answer based on evaluation.",
+        "timestamp": "2026-05-10T18:13:08.921276+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-10T18:13:08.930299+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-10T18:13:10.606839+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-10T18:13:10.613565+00:00"
+      }
+    ],
+    "ba5ac663-da09-42b3-86e1-1825901a0d2f": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-10T18:16:49.108861+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-10T18:16:49.124316+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-10T18:16:49.137759+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-10T18:16:49.148913+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-10T18:16:49.163091+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-10T18:17:04.642863+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-10T18:17:04.655773+00:00"
+      },
+      {
+        "status": "Refining answer based on evaluation.",
+        "timestamp": "2026-05-10T18:17:06.192953+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-10T18:17:06.202374+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-10T18:17:07.617849+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-10T18:17:07.624466+00:00"
+      }
+    ],
+    "fb453059-a4b5-4c52-8fba-d723cc215ec8": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-10T18:23:43.000531+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-10T18:23:43.018229+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-10T18:23:43.025363+00:00"
+      },
+      {
+        "status": "Cache hit — returning fast response.",
+        "timestamp": "2026-05-10T18:23:43.034552+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-10T18:23:43.058298+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-10T18:23:43.065983+00:00"
+      }
+    ],
+    "dc87561c-28ea-4a85-b89b-8abe3b755855": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-10T18:36:48.022072+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-10T18:36:48.048775+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-10T18:36:48.061719+00:00"
+      },
+      {
+        "status": "Cache hit — returning fast response.",
+        "timestamp": "2026-05-10T18:36:48.072149+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-10T18:36:48.101182+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-10T18:36:48.108696+00:00"
+      }
+    ],
+    "48977083-dc55-441a-8b7d-a6d6b878759f": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-10T18:36:57.528961+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-10T18:36:57.543245+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-10T18:36:57.551548+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-10T18:36:57.560217+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-10T18:36:57.589165+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-10T18:36:59.449716+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-10T18:37:15.169915+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-10T18:37:15.183130+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-10T18:37:16.344463+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-10T18:37:16.352924+00:00"
+      }
+    ],
+    "db5f8ced-0af5-4c0c-827b-36226fcacbac": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-10T18:38:37.423459+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-10T18:38:37.446278+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-10T18:38:37.459546+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-10T18:38:37.471547+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-10T18:38:37.482959+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-10T18:38:51.997694+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-10T18:38:52.008465+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-10T18:38:56.948598+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-10T18:38:56.956683+00:00"
+      }
+    ],
+    "45407661-5d33-4cb9-a347-358bc3fb1b58": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-10T18:40:38.498115+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-10T18:40:38.514501+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-10T18:40:38.523203+00:00"
+      },
+      {
+        "status": "Cache hit — returning fast response.",
+        "timestamp": "2026-05-10T18:40:38.536204+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-10T18:40:38.561734+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-10T18:40:38.574021+00:00"
+      }
+    ],
+    "b9a2ebb9-ea90-432d-8345-596714e51e8f": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-10T18:40:45.278786+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-10T18:40:45.294619+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-10T18:40:45.303623+00:00"
+      },
+      {
+        "status": "Cache hit — returning fast response.",
+        "timestamp": "2026-05-10T18:40:45.311917+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-10T18:40:45.343728+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-10T18:40:45.361735+00:00"
+      }
+    ],
+    "e748b6c5-c38e-48c0-a9f4-fa97b15b394d": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-11T00:29:26.638821+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-11T00:29:26.684421+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-11T00:29:26.703223+00:00"
+      },
+      {
+        "status": "Cache hit — returning fast response.",
+        "timestamp": "2026-05-11T00:29:26.724220+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-11T00:29:26.763721+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-11T00:29:26.783122+00:00"
+      }
+    ],
+    "333525b9-737e-47f2-826a-e850315ce358": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-11T00:30:04.666214+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-11T00:30:04.728772+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-11T00:30:04.783997+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-11T00:30:04.819064+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-11T00:30:04.849306+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-11T00:30:28.463090+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-11T00:30:28.489069+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-11T00:30:29.894499+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-11T00:30:29.909570+00:00"
+      }
+    ],
+    "af109621-ee5d-4a2a-8268-839bfb419d2a": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-11T00:36:08.290064+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-11T00:36:08.357617+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-11T00:36:08.398103+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-11T00:36:08.443440+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-11T00:36:08.471933+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-11T00:36:10.045164+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-11T00:36:29.140331+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-11T00:36:29.172718+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-11T00:36:30.401801+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-11T00:36:30.471740+00:00"
+      }
+    ],
+    "6e68d7e3-bdee-4ff2-be2e-66f61a3b8308": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-11T00:39:21.240466+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-11T00:39:21.283557+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-11T00:39:21.307633+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-11T00:39:21.331141+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-11T00:39:21.362027+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-11T00:39:22.711384+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-11T00:39:39.922526+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-11T00:39:39.948639+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-11T00:39:41.449074+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-11T00:39:41.463876+00:00"
+      }
+    ],
+    "c14a1e05-8e5b-40ea-867f-aa9a7171136d": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-11T00:41:16.879687+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-11T00:41:17.008562+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-11T00:41:17.067108+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-11T00:41:17.105381+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-11T00:41:17.137570+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-11T00:41:18.568914+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-11T00:41:31.643019+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-11T00:41:31.672997+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-11T00:41:32.716527+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-11T00:41:32.739362+00:00"
+      }
+    ],
+    "9a7ce83e-f506-4ffa-a3d3-9887ce9a36e8": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-11T00:41:51.401127+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-11T00:41:51.462980+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-11T00:41:51.495362+00:00"
+      },
+      {
+        "status": "Cache hit — returning fast response.",
+        "timestamp": "2026-05-11T00:41:51.520447+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-11T00:41:51.584805+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-11T00:41:51.606688+00:00"
+      }
+    ],
+    "482f36a1-2eb5-4591-9462-b67e807dcede": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-11T00:41:54.481831+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-11T00:41:54.539036+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-11T00:41:54.567883+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-11T00:41:54.599627+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-11T00:41:54.625071+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-11T00:42:10.806611+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-11T00:42:10.833647+00:00"
+      },
+      {
+        "status": "Refining answer based on evaluation.",
+        "timestamp": "2026-05-11T00:42:12.560470+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-11T00:42:12.596378+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-11T00:42:14.364626+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-11T00:42:14.402735+00:00"
+      }
+    ],
+    "c07fbf53-866b-444d-bd97-9666b971bdad": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-11T00:45:45.921232+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-11T00:45:45.995014+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-11T00:45:46.044376+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-11T00:45:46.077027+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-11T00:45:46.104300+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-11T00:46:02.320819+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-11T00:46:02.347723+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-11T00:46:04.371433+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-11T00:46:04.394514+00:00"
+      }
+    ],
+    "2bb304d3-e9e2-4294-ae94-7bc304dc5bbc": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-11T00:46:51.910514+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-11T00:46:51.966149+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-11T00:46:52.003759+00:00"
+      },
+      {
+        "status": "Cache hit — returning fast response.",
+        "timestamp": "2026-05-11T00:46:52.034249+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-11T00:46:52.093509+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-11T00:46:52.115601+00:00"
+      }
+    ],
+    "75d37418-968e-4c3b-989a-4ea9c53e4a88": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-11T00:50:44.394085+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-11T00:50:44.476449+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-11T00:50:44.515169+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-11T00:50:44.554430+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-11T00:50:44.588985+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-11T00:51:01.620545+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-11T00:51:01.656999+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-11T00:51:08.191512+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-11T00:51:08.225398+00:00"
+      }
+    ],
+    "69e01dc0-d096-49ec-878e-b560ca7e5ad4": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-11T01:47:07.122065+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-11T01:47:07.171181+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-11T01:47:07.200695+00:00"
+      },
+      {
+        "status": "Cache hit — returning fast response.",
+        "timestamp": "2026-05-11T01:47:07.224460+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-11T01:47:07.273732+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-11T01:47:07.293658+00:00"
+      }
+    ],
+    "151a9091-9135-4c80-9f23-c7cd2737ae2a": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-11T01:49:27.991723+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-11T01:49:28.045844+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-11T01:49:28.084073+00:00"
+      },
+      {
+        "status": "Cache hit — returning fast response.",
+        "timestamp": "2026-05-11T01:49:28.119091+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-11T01:49:28.174111+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-11T01:49:28.202932+00:00"
+      }
+    ],
+    "339273ad-a240-45c9-8b62-484e51ad130e": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-11T01:49:34.666499+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-11T01:49:34.742568+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-11T01:49:34.797206+00:00"
+      },
+      {
+        "status": "Cache hit — returning fast response.",
+        "timestamp": "2026-05-11T01:49:34.856245+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-11T01:49:34.925684+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-11T01:49:34.956527+00:00"
+      }
+    ],
+    "00661b1b-99e5-4f5f-b5a2-287caabe55e3": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-11T01:58:55.781225+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-11T01:58:55.845520+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-11T01:58:55.879521+00:00"
+      },
+      {
+        "status": "Cache hit — returning fast response.",
+        "timestamp": "2026-05-11T01:58:55.912429+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-11T01:58:55.968711+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-11T01:58:55.996463+00:00"
+      }
+    ],
+    "ab1e96b0-3a1b-4b0e-b471-1409c62a8e32": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-11T01:59:49.060712+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-11T01:59:49.143126+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-11T01:59:49.197003+00:00"
+      },
+      {
+        "status": "Cache hit — returning fast response.",
+        "timestamp": "2026-05-11T01:59:49.230353+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-11T01:59:49.303935+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-11T01:59:49.330380+00:00"
+      }
     ]
   },
   "qa_cache": {
-    ": what is the ai usage rate for devops automation in 2024, and what is the projected usage for 2025?": {
-      "question": ": What is the AI usage rate for DevOps Automation in 2024, and what is the projected usage for 2025?",
-      "answer": "[API Error] Failed after 3 retries: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash-lite\nPlease retry in 3.003387981s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.5-flash-lite\"\n  }\n  quota_value: 20\n}\n, retry_delay {\n  seconds: 3\n}\n]",
-      "sources": [
-        {
-          "title": "Generative AI in DevOps Research Report 2025-2034: Market to ...",
-          "url": "https://finance.yahoo.com/news/generative-ai-devops-research-report-093500859.html",
-          "snippet": "Oops, something went wrong [Skip to navigation](https://finance.yahoo.com/news/generative-ai-devops-research-report-093500859.html#navigation-container) [Skip to main content](https://finance.yahoo.com/news/generative-ai-devops-research-report-093500859.html#nimbus-app) [Skip to right column](https://finance.yahoo.com/news/generative-ai-devops-research-report-093500859.html#right-rail) This is a p...",
-          "score": 0.0
-        },
-        {
-          "title": "AI DevOps Market 2025-2029: Key Trends and Innovations Set",
-          "url": "https://www.globenewswire.com/news-release/2025/07/25/3121639/28124/en/ai-devops-market-2025-2029-key-trends-and-innovations-set-to-propel-market-growth.html",
-          "snippet": "[Accessibility: Skip TopNav](https://www.globenewswire.com/news-release/2025/07/25/3121639/28124/en/ai-devops-market-2025-2029-key-trends-and-innovations-set-to-propel-market-growth.html#maincontainer) [![GlobeNewswire](https://www.globenewswire.com/Home/assests/images/eq-notified-dark.svg)](https://www.globenewswire.com/) - [Newsroom](https://www.globenewswire.com/newsroom) - [Services](https://w...",
-          "score": 0.0
-        },
-        {
-          "title": "AI is Transforming DevOps, New Research Shows",
-          "url": "https://salesforcedevops.net/index.php/2024/08/13/ai-is-transforming-devops-new-research-shows/",
-          "snippet": "Manage Cookie Consent To provide the best experiences, we use technologies like cookies to store and/or access device information. Consenting to these technologies will allow us to process data such as browsing behavior or unique IDs on this site. Not consenting or withdrawing consent, may adversely affect certain features and functions. FunctionalFunctional Always active The technical storage or...",
-          "score": 0.0
-        },
-        {
-          "title": "DevOps Statistics and Facts, By Market, Engineer, Tools, Usage",
-          "url": "https://electroiq.com/stats/devops-statistics/",
-          "snippet": "[Skip to content](https://electroiq.com/stats/devops-statistics/#main) # DevOps Statistics and Facts, By Market, Engineer, Tools, Usage and Growth (2025) ![Priya Bhalla](https://spcdn.shortpixel.ai/spio/ret_img,q_cdnize,to_webp,s_webp/electroiq.com/wp-content/uploads/2025/08/Priya-96x96.jpeg) Written by [Priya Bhalla](https://electroiq.com/author/priyab/) Updated · Aug 27, 2025 Priya Bhalla Conten...",
-          "score": 0.0
-        },
-        {
-          "title": "Survey: Usage of AI Rapidly Expands Once DevOps Teams Adopt",
-          "url": "https://devops.com/survey-usage-of-ai-rapidly-expands-once-devops-teams-adopt/",
-          "snippet": "![Revisit consent button](https://cdn-cookieyes.com/assets/images/revisit.svg) ![](https://cdn-cookieyes.com/assets/images/close.svg) We value your privacy This website or its third-party tools process personal data. You can opt out of the sale of your personal information by clicking on the \"Do Not Sell or Share My Personal Information\" link. Do Not Sell or Share My Personal Information Powered b...",
-          "score": 0.0
-        }
-      ],
-      "image_urls": [
-        "https://s.yimg.com/os/en/globenewswire.com/93d5b27580f67db722dd7c112e43e8bc"
-      ],
-      "conversation_id": "67ef8f40-6e61-41bf-9006-c8d3aba685a8",
-      "updated_at": "2026-05-06T18:27:56.659532+00:00"
-    },
     "according to the document, what specific tasks can ai currently assist programmers with?": {
       "question": "According to the document, what specific tasks can AI currently assist programmers with?",
       "answer": "Based on the provided context, AI can assist programmers with the following:\n\n*   **Speeding up tasks:** Research indicates that AI can speed up some coding tasks by up to 80%.\n*   **Coding assistance:** AI tools like Claude Code are mentioned as having capabilities beyond chatbots, enabling automation options and teamwide sharing of best practices and knowledge.\n*   **Learning to develop software:** AI can help individuals learn to develop software.",
@@ -1398,88 +2550,6 @@
       ],
       "conversation_id": "79770cb7-bef5-44f8-b9ed-ee7264e68143",
       "updated_at": "2026-05-09T15:28:49.909828+00:00"
-    },
-    "what are the main similarities between graphql and rest?": {
-      "question": "What are the main similarities between GraphQL and REST?",
-      "answer": "[API Error] Failed after 3 retries: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash-lite\nPlease retry in 29.165696124s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.5-flash-lite\"\n  }\n  quota_value: 20\n}\n, retry_delay {\n  seconds: 29\n}\n]",
-      "sources": [
-        {
-          "rank": 1,
-          "text": "Bt\n医\n二\n一...",
-          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\18_RESTful_API_and_GraphQL_Design.pdf",
-          "title": "18_RESTful_API_and_GraphQL_Design.pdf",
-          "rerank_score": -11.034971237182617,
-          "image_urls": []
-        }
-      ],
-      "image_urls": [],
-      "conversation_id": "b1579248-8b64-4e8e-98fb-0a7f1981dec0",
-      "updated_at": "2026-05-09T15:37:34.625163+00:00"
-    },
-    "what is microsoft azure and what does it provide?": {
-      "question": "What is Microsoft Azure and what does it provide?",
-      "answer": "[API Error] Failed after 3 retries: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash-lite\nPlease retry in 51.800680902s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.5-flash-lite\"\n  }\n  quota_value: 20\n}\n, retry_delay {\n  seconds: 51\n}\n]",
-      "sources": [
-        {
-          "rank": 1,
-          "text": "E\nTheimportanceoflanguage\nAcceptcriticismandbeopentochange...",
-          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\27_Soft_Skills_for_Software_Engineers.pdf",
-          "title": "27_Soft_Skills_for_Software_Engineers.pdf",
-          "rerank_score": -11.005861282348633,
-          "image_urls": []
-        },
-        {
-          "rank": 2,
-          "text": "Bt\n医\n二\n一...",
-          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\18_RESTful_API_and_GraphQL_Design.pdf",
-          "title": "18_RESTful_API_and_GraphQL_Design.pdf",
-          "rerank_score": -11.014693260192871,
-          "image_urls": []
-        },
-        {
-          "rank": 3,
-          "text": "SELECT AVG(salary）FROMemployees\n)；\nNASS\n--INNERJOIN\nFULLJOIN\nSQL Joins CheatSheet\n5.Indexing\na\nRETUR...",
-          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\30_Advanced_SQL_and_Database_Optimization.pdf",
-          "title": "30_Advanced_SQL_and_Database_Optimization.pdf",
-          "rerank_score": -11.45163631439209,
-          "image_urls": []
-        },
-        {
-          "title": "Microsoft Azure: Cloud Computing Services",
-          "url": "https://azure.microsoft.com/en-us",
-          "snippet": "This is the Trace Id: 61a38ef19e4f20a6b753b88939be39fd Skip to main content ![](https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/3229800-Hero-Background-1600x580?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=2000&hei=725&qlt=100&fit=constrain) AZURE. YOUR INTELLIGENT CLOUD. # Now shipping: Microsoft Build 2026 Be part of Microsoft Build and learn how tech leaders train and fine-tune models, d...",
-          "score": 0.0
-        },
-        {
-          "title": "Microsoft Azure - Wikipedia",
-          "url": "https://en.wikipedia.org/wiki/Microsoft_Azure",
-          "snippet": "[Jump to content](https://en.wikipedia.org/wiki/Microsoft_Azure#bodyContent) From Wikipedia, the free encyclopedia Cloud computing platform by Microsoft Not to be confused with [Mozilla Azure](https://en.wikipedia.org/wiki/Gecko_(software)#Azure \"Gecko (software)\"). | | | | --- | --- | | ![](https://upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/40px-Ambox_important.svg.png) | hi...",
-          "score": 0.0
-        },
-        {
-          "title": "Microsoft Azure Explained: A Beginner's Guide to Cloud Computing",
-          "url": "https://www.youtube.com/watch?v=nr-HQN9nIxM",
-          "snippet": "Error 403 (Forbidden)!!1 **403.** That’s an error. We're sorry, but you do not have access to this page. That’s all we know. Back [![](https://www.youtube.com/watch?v=nr-HQN9nIxM)](https://www.youtube.com/ \"YouTube Home\") Skip navigation Search Search with your voice [Sign in](https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsig...",
-          "score": 0.0
-        },
-        {
-          "title": "What is Microsoft Azure and How Does It Work? - TechTarget",
-          "url": "https://www.techtarget.com/searchcloudcomputing/definition/Windows-Azure",
-          "snippet": "![](https://cdn.ttgtmedia.com/visuals/pillar/Pillar_2020_06June_b.jpg) Tech Accelerator [What is public cloud? A definition and in-depth guide](https://www.techtarget.com/searchcloudcomputing/definition/public-cloud) [Prev](https://www.techtarget.com/whatis/definition/multi-tenancy \"What is multi-tenancy (multi-tenant architecture)?\") [Next](https://www.techtarget.com/searchcloudcomputing/answer/W...",
-          "score": 0.0
-        },
-        {
-          "title": "Microsoft Azure Explained: What It Is and Why It Matters",
-          "url": "https://ccbtechnology.com/what-microsoft-azure-is-and-why-it-matters/",
-          "snippet": "![](<Base64-Image-Removed>) Close Search Search for:Search [Skip to content](https://ccbtechnology.com/what-microsoft-azure-is-and-why-it-matters/#content) Microsoft Azure is usually described as having “limitless potential” and “unlimited possibilities,” but **what does Azure actually _do_ and what can it do for your business?** In this blog, I’ll answer these questions and show you the value wit...",
-          "score": 0.0
-        }
-      ],
-      "image_urls": [
-        "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/3229800-Hero-Background-1600x580?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=2000&hei=725&qlt=100&fit=constrain"
-      ],
-      "conversation_id": "c70c71dd-1ed2-4d96-bdb2-2bc21132233d",
-      "updated_at": "2026-05-09T15:49:53.505811+00:00"
     },
     "when was microsoft azure released?": {
       "question": "When was Microsoft Azure released?",
@@ -1982,25 +3052,8 @@
       "conversation_id": "8f7bb351-0853-4de7-b319-801d26653df4",
       "updated_at": "2026-05-10T06:50:39.132725+00:00"
     },
-    "timeline of software engineer career": {
-      "question": "timeline of Software engineer career",
-      "answer": "[API Error] Failed after 3 retries: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash-lite\nPlease retry in 52.280317441s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-2.5-flash-lite\"\n  }\n  quota_value: 20\n}\n, retry_delay {\n  seconds: 52\n}\n]",
-      "sources": [
-        {
-          "rank": 1,
-          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
-          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
-          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
-          "rerank_score": 4.607609272003174,
-          "image_urls": []
-        }
-      ],
-      "image_urls": [],
-      "conversation_id": "eedde1bf-c146-48e4-9700-d7349793966d",
-      "updated_at": "2026-05-10T06:52:13.058680+00:00"
-    },
     "timeline of software engineer career ?": {
-      "question": "timeline of Software engineer career ?",
+      "question": "timeline of software engineer career ?",
       "answer": "The provided context outlines a hierarchical sequence for a software engineer's career progression, but it does not offer a specific timeline in terms of years for each level.\n\nThe career path is presented as follows:\n\n*   **Level 1:** Software Engineer Intern\n*   **Level 2:** Junior Software Engineer\n*   **Level 3:** Software Engineer\n*   **Level 4:** Senior Software Engineer\n\nUpon reaching Level 4 (Senior Software Engineer), two further paths are mentioned:\n\n*   A path for experienced software engineers (with a note indicating \"7 years of experience\" associated with this, though the specific role title is cut off).\n*   Management-level Software Engineer.\n\nThe context does not provide the duration or years required to advance from one level to the next.",
       "sources": [
         {
@@ -2013,8 +3066,8 @@
         }
       ],
       "image_urls": [],
-      "conversation_id": "c97bc4bb-f6d0-4347-ac95-0a9be1743274",
-      "updated_at": "2026-05-10T06:55:42.978466+00:00"
+      "conversation_id": "2cc3aaa3-a41f-4989-8961-16ea819acca8",
+      "updated_at": "2026-05-11T00:29:26.742542+00:00"
     },
     "timeline of software engineer career?": {
       "question": "timeline of Software engineer career?",
@@ -2034,8 +3087,484 @@
       "image_urls": [
         "http://localhost:8010/images/26_Software_Engineer_Career_Path_and_Advancement-86befb25/p1/img001.png"
       ],
-      "conversation_id": "3b9e5bc1-2332-4a2c-bcdf-f028d065944b",
-      "updated_at": "2026-05-10T07:04:52.369230+00:00"
+      "conversation_id": "1cfb2bbb-da61-432a-90ba-b136d028d46a",
+      "updated_at": "2026-05-10T18:40:45.325576+00:00"
+    },
+    "timeline of software carreer": {
+      "question": "timeline of software carreer",
+      "answer": "The context does not provide a timeline for a software career.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": -10.331316947937012,
+          "image_urls": [
+            "/images/img001.png"
+          ]
+        },
+        {
+          "rank": 2,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": -10.331316947937012,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/img001.png"
+      ],
+      "conversation_id": "c3aa0a7b-0afc-49f1-8484-40c05a352668",
+      "updated_at": "2026-05-10T17:47:17.136899+00:00"
+    },
+    "timeline of software engineer carreer": {
+      "question": "timeline of software engineer carreer",
+      "answer": "The provided context does not contain a timeline for a software engineer's career. It outlines the hierarchical levels of a software engineer's career progression.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": -2.823979139328003,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "conversation_id": "155fa069-9446-435b-be35-affc8e4f0d23",
+      "updated_at": "2026-05-10T18:06:51.965777+00:00"
+    },
+    "timeline of software engineer carreer?": {
+      "question": "timeline of software engineer carreer?",
+      "answer": "The provided context does not contain information about the timeline of a software engineer's career.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": -3.8529627323150635,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "conversation_id": "6f543c48-0238-412e-80aa-74b472c246b7",
+      "updated_at": "2026-05-10T18:06:46.477155+00:00"
+    },
+    "timeline of software engineer career": {
+      "question": "timeline of software engineer career",
+      "answer": "The provided context does not contain a timeline of software engineer career progression. It outlines the hierarchical levels of a software engineer's career path.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": 4.607609272003174,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "conversation_id": "d187f14e-719b-44c9-aa13-dd52814bf295",
+      "updated_at": "2026-05-10T18:03:45.373814+00:00"
+    },
+    "timeline of software engineer carreer???": {
+      "question": "timeline of software engineer carreer???",
+      "answer": "A **software engineer career timeline** generally begins with obtaining a **formal education**, often a **Bachelor's degree in Computer Science** or a related field. This phase focuses on learning programming fundamentals, algorithms, data structures, and software design. Some may pursue a **Master's degree** for specialization in areas like artificial intelligence or cybersecurity.\n\nAfter education, the career progresses through various stages, typically starting as a **contributor** and potentially moving towards a **management position** over time. The specific job titles and levels of seniority can vary by company and industry.\n\nOne specialization path mentioned is **Applied Software Engineering Fundamentals**, which can be completed in as little as **two months** and covers industry-standard tools and languages like Python.",
+      "sources": [
+        {
+          "title": "Software Engineer Timeline: From Starting Out To Managing A Team",
+          "url": "https://www.institutedata.com/us/blog/software-engineer-timeline-from-starting-out-to-managing-a-team/",
+          "snippet": "![Software engineer timeline.](https://www.institutedata.com/wp-content/uploads/2024/03/Software-engineer-timeline.png) #### Stay Informed With Our Weekly Newsletter Receive crucial updates on the ever-evolving landscape of technology and innovation. By clicking 'Sign Up', I acknowledge that my information will be used in accordance with the Institute of Data's [Privacy Policy](https://www.institu...",
+          "score": 0.0
+        },
+        {
+          "title": "Software Engineer Career Path 2026: Overview, Jobs, and Pay",
+          "url": "https://www.coursera.org/articles/software-engineer-career-path",
+          "snippet": "# Software Engineer Career Path 2026: Overview, Jobs, and Pay Written by Jessica Schulze • Updated on Dec 5, 2025 Share Use this article to follow the timeline of a software engineer career path and learn about specializations within the field. ![[Featured Image] A software engineer smiles in front of a computer monitor with code on the screen. ](https://d3njjcbhbojbot.cloudfront.net/api/utilities...",
+          "score": 0.0
+        },
+        {
+          "title": "Understanding the 10 Career Levels for Software Engineers - Indeed",
+          "url": "https://www.indeed.com/career-advice/finding-a-job/engineer-level",
+          "snippet": "# Understanding the 10 Career Levels for Software Engineers Written by Indeed Editorial Team Updated December 19, 2025 ### On this page - [What is a software engineer?](https://www.indeed.com/career-advice/finding-a-job/engineer-level#toc-what-is-a-software-engineer) - [What is an engineering level?](https://www.indeed.com/career-advice/finding-a-job/engineer-level#toc-what-is-an-engineering-level...",
+          "score": 0.0
+        },
+        {
+          "title": "The Ultimate Software Engineer Career Path Guide for 2023",
+          "url": "https://www.wearedevelopers.com/en/magazine/146/career-path-for-software-engineer-guide",
+          "snippet": "January 20, 2023 10 min read # The Ultimate Software Engineer Career Path Guide for 2023 By [Pat Zawadzki](https://www.wearedevelopers.com/en/magazine?q=Pat%20Zawadzki) ![The Ultimate Software Engineer Career Path Guide for 2023](https://wearedevelopers.imgix.net/public/magazine/articles/146/images/hero/63cfb8ec6889733c10976282_software_engineer_career.png?w=984&ar=2&fit=crop&crop=entropy&auto=com...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://www.institutedata.com/wp-content/uploads/2024/03/Software-engineer-timeline.png"
+      ],
+      "conversation_id": "96fdf32e-4d27-43bd-95ae-7a7edaa35259",
+      "updated_at": "2026-05-10T18:07:07.693949+00:00"
+    },
+    "timeline of software engineer carreer??": {
+      "question": "timeline of software engineer carreer??",
+      "answer": "The provided context does not contain a timeline for a software engineer's career. It outlines the hierarchical levels of progression.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": -4.14756965637207,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "conversation_id": "03ff6798-f7bd-4fc0-b2c5-313a67883de1",
+      "updated_at": "2026-05-10T18:07:51.736565+00:00"
+    },
+    "timeline sofware developer carrer": {
+      "question": "timeline sofware developer carrer",
+      "answer": "The provided context does not contain information about the timeline for a software developer career.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": -10.862933158874512,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "conversation_id": "0ab91a8c-06b6-4801-84e0-7023cb5b05f2",
+      "updated_at": "2026-05-10T18:08:28.804073+00:00"
+    },
+    "timeline of sofware developer career?": {
+      "question": "timeline of sofware developer career?",
+      "answer": "The provided context does not contain information about the timeline of a software developer career.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": -6.503374099731445,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "conversation_id": "a68b5f01-9b6d-4960-8fc2-ca507c4299a2",
+      "updated_at": "2026-05-10T18:13:10.598794+00:00"
+    },
+    "timeline of software engineer carreer????": {
+      "question": "timeline of software engineer carreer????",
+      "answer": "The provided context does not contain a timeline for a software engineer's career.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": -3.8498282432556152,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "conversation_id": "c61b79f9-e088-45c0-b090-fb6bdb9e4a99",
+      "updated_at": "2026-05-10T18:17:07.610725+00:00"
+    },
+    "timeline of software engineer career????": {
+      "question": "timeline of Software engineer career????",
+      "answer": "A **software engineer career path** typically begins with an **educational phase**, which often involves obtaining a **Bachelor's degree in Computer Science** or a related field. This phase focuses on learning programming fundamentals, algorithms, data structures, and software design. Some may pursue a **Master's degree** to specialize in areas like artificial intelligence or cybersecurity.\n\nAfter education, the career progresses through various stages. Generally, a software engineer's path starts as a **contributor** and can evolve towards a **management position** over time. The evaluation of roles like **junior** or **senior** can vary by company.\n\nFor those ready to start, credentials like **IBM's Applied Software Engineering Fundamentals Specialization** can be earned in as little as **two months**, teaching industry-standard tools and languages such as **Python**.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": 2.9584014415740967,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        },
+        {
+          "title": "Software Engineer Career Path 2026: Overview, Jobs, and Pay",
+          "url": "https://www.coursera.org/articles/software-engineer-career-path",
+          "snippet": "# Software Engineer Career Path 2026: Overview, Jobs, and Pay Written by Jessica Schulze • Updated on Dec 5, 2025 Share Use this article to follow the timeline of a software engineer career path and learn about specializations within the field. ![[Featured Image] A software engineer smiles in front of a computer monitor with code on the screen. ](https://d3njjcbhbojbot.cloudfront.net/api/utilities...",
+          "score": 0.0
+        },
+        {
+          "title": "Software Engineer Timeline: From Starting Out To Managing A Team",
+          "url": "https://www.institutedata.com/us/blog/software-engineer-timeline-from-starting-out-to-managing-a-team/",
+          "snippet": "![Software engineer timeline.](https://www.institutedata.com/wp-content/uploads/2024/03/Software-engineer-timeline.png) #### Stay Informed With Our Weekly Newsletter Receive crucial updates on the ever-evolving landscape of technology and innovation. By clicking 'Sign Up', I acknowledge that my information will be used in accordance with the Institute of Data's [Privacy Policy](https://www.institu...",
+          "score": 0.0
+        },
+        {
+          "title": "Software Engineers Career Path - Salary and Promotion",
+          "url": "https://www.geeksforgeeks.org/blogs/software-engineers-career-path-salary-and-promotion/",
+          "snippet": "[![geeksforgeeks](https://media.geeksforgeeks.org/gfg-gg-logo.svg)](https://www.geeksforgeeks.org/) - Courses - Tutorials - Interview Prep Switch to Dark Mode Sign In - [DSA](https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/) - [Practice Problems](https://www.geeksforgeeks.org/explore) - [C](https://www.geeksforgeeks.org/c/c-programming-language/) - [C++](https:/...",
+          "score": 0.0
+        },
+        {
+          "title": "The Ultimate Software Engineer Career Path Guide for 2023",
+          "url": "https://www.wearedevelopers.com/en/magazine/146/career-path-for-software-engineer-guide",
+          "snippet": "January 20, 2023 10 min read # The Ultimate Software Engineer Career Path Guide for 2023 By [Pat Zawadzki](https://www.wearedevelopers.com/en/magazine?q=Pat%20Zawadzki) ![The Ultimate Software Engineer Career Path Guide for 2023](https://wearedevelopers.imgix.net/public/magazine/articles/146/images/hero/63cfb8ec6889733c10976282_software_engineer_career.png?w=984&ar=2&fit=crop&crop=entropy&auto=com...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "conversation_id": "53717303-b32a-4e35-8516-8620978e5f01",
+      "updated_at": "2026-05-10T18:37:16.337462+00:00"
+    },
+    "timeline of software engineer career??????": {
+      "question": "timeline of Software engineer career??????",
+      "answer": "The provided context does not contain a timeline for software engineer career progression. It outlines the hierarchical levels but does not specify the time required to advance through them.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": 2.9456264972686768,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "conversation_id": "95c61d2c-0837-4d8b-9b95-9b80a73c756b",
+      "updated_at": "2026-05-10T18:40:38.549728+00:00"
+    },
+    "timeline of software develop career ?": {
+      "question": "timeline of software develop career ?",
+      "answer": "The provided context does not contain a timeline for software development careers. It outlines a hierarchical sequence of career paths for software engineers:\n\n*   **Level 1**: Software Engineer Intern\n*   **Level 2**: Junior Software Engineer\n*   **Level 3**: Software Engineer\n*   **Level 4**: Senior Software Engineer\n\nAfter reaching Senior Software Engineer, two paths are mentioned: **Management-level Software Engineer** and another path that requires 7 years of experience, but the title for this path is not fully provided.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": -2.979102373123169,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "conversation_id": "e73cdea5-3c86-49c9-aa62-955c4091b495",
+      "updated_at": "2026-05-11T00:30:29.870087+00:00"
+    },
+    "timeline of software engineer career ??": {
+      "question": "timeline of software engineer career ??",
+      "answer": "The provided context does not contain a timeline for a software engineer's career progression. It outlines the different levels of a software engineer's career path.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": 3.0110068321228027,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "conversation_id": "206ae466-f67f-41f8-95f2-b3e9c695a4f5",
+      "updated_at": "2026-05-11T00:36:30.374881+00:00"
+    },
+    "why is having a clear career path important for software engineers?": {
+      "question": "Why is having a clear career path important for software engineers?",
+      "answer": "Having a clear career path is important for **software engineers** because it provides a sense of direction and allows them to understand how their **skill level**, **experience**, and **responsibilities** are assessed. The higher the rank in the **hierarchical sequence** of a software engineer's career, the greater the **benefits** and **power**.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": 7.492735862731934,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "conversation_id": "6ee644e2-c688-4f29-984f-0a28533c53cd",
+      "updated_at": "2026-05-11T01:59:49.267034+00:00"
+    },
+    "what can vietnam achieve if its workforce is equipped with global knowledge and skills?": {
+      "question": "What can Vietnam achieve if its workforce is equipped with global knowledge and skills?",
+      "answer": "Vietnam can achieve significant advancements if its workforce is equipped with global knowledge and skills. This includes:\n\n*   Becoming a leading destination for global outsourcing, fueled by strong economic growth and a clear digital transformation strategy.\n*   Projecting its digital economy to reach $45 billion by 2025 and $200 billion by 2030.\n*   Building a deep talent pool in areas like **AI**, **cybersecurity**, and **advanced software development**.\n*   Positioning itself as a key player in the global economy, driving innovation and progress.\n*   Transforming global industries by providing skilled manpower with **technical capabilities** shaped by modern vocational training and **global certifications**.",
+      "sources": [
+        {
+          "title": "How Vietnamese Skilled Manpower Is Transforming Global Industries",
+          "url": "https://hoplucglobal.com.vn/vietnamese-skilled-manpower/",
+          "snippet": "[Skip to content](https://hoplucglobal.com.vn/vietnamese-skilled-manpower/#content) # [How Vietnamese Skilled Manpower Is Transforming Global Industries](https://hoplucglobal.com.vn/vietnamese-skilled-manpower/) - [Author:\\\\ quantri](https://hoplucglobal.com.vn/author/quantri/) - [December 1, 2025](https://hoplucglobal.com.vn/2025/12/01/) - 8:30 am - [No Comments](https://hoplucglobal.com.vn/vietn...",
+          "score": 0.0
+        },
+        {
+          "title": "How Vietnam is bridging the skills gap to boost its digital future",
+          "url": "https://awaydigitalteams.com/blog/vietnam-close-skills-gap-and-power-the-digital-economy/",
+          "snippet": "[Skip to content](https://awaydigitalteams.com/blog/vietnam-close-skills-gap-and-power-the-digital-economy/#content) [![](https://cdn-ilaemkl.nitrocdn.com/IKosleUnuJppFKDhQtmKzsKeSNwYnlXR/assets/images/optimized/rev-32d65b9/awaydigitalteams.com/wp-content/themes/awayteams/assets/img/icon-back.svg)BACK](https://awaydigitalteams.com/insights/) # Vietnam’s journey to close the skills gap and power th...",
+          "score": 0.0
+        },
+        {
+          "title": "Why Vietnam is Emerging as a Top Destination for Global Talent",
+          "url": "https://slasify.com/en/blog/why-vietnam-is-emerging-as-a-top-destination-for-global-talent",
+          "snippet": "# Why Vietnam is Emerging as a Top Destination for Global Talent [Slasify](https://slasify.com/en/blog/author/slasify) Apr 8, 2025 * * * In recent years, Vietnam has steadily risen to prominence as a favored destination for global businesses and professionals. With its vibrant economic landscape, supportive business climate, and dynamic workforce, Vietnam is increasingly becoming a magnet for inte...",
+          "score": 0.0
+        },
+        {
+          "title": "Fostering Success in Vietnam's Knowledge Economy: 7 Essential ...",
+          "url": "https://www.linkedin.com/pulse/fostering-success-vietnams-knowledge-economy-7-skills-nguyen-thanh",
+          "snippet": "Agree & Join LinkedIn By clicking Continue to join or sign in, you agree to LinkedIn’s [User Agreement](https://www.linkedin.com/legal/user-agreement?trk=linkedin-tc_auth-button_user-agreement), [Privacy Policy](https://www.linkedin.com/legal/privacy-policy?trk=linkedin-tc_auth-button_privacy-policy), and [Cookie Policy](https://www.linkedin.com/legal/cookie-policy?trk=linkedin-tc_auth-button_cook...",
+          "score": 0.0
+        },
+        {
+          "title": "Vietnam's Workforce Needs New Skills for A Continued Economic ...",
+          "url": "https://www.worldbank.org/en/news/press-release/2013/11/29/vietnams-workforce-needs-new-skills-for-a-continued-economic-modernization-says-vietnam-development-report2014",
+          "snippet": "[![The World Bank Working for a World Free of Poverty](https://www.worldbank.org/content/dam/wbr/logo/logo-wb-header-en.svg)](https://www.worldbank.org/ext/en/home) [![The World Bank Working for a World Free of Poverty](https://www.worldbank.org/content/dam/wbr/logo/logo-wb-header-en.svg)](https://www.worldbank.org/ext/en/home) Working for a World Free of Poverty 1. [Who We Are](https://www.worldb...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://hoplucglobal.com.vn/wp-content/uploads/2025/11/vietnamese-skilled-manpower-global-industries.jpg"
+      ],
+      "conversation_id": "311bfee7-2681-4575-ad58-ccb085b42b2e",
+      "updated_at": "2026-05-11T00:41:51.554029+00:00"
+    },
+    "what can vietnam achieve if its workforce is equipped with global knowledge and skills??": {
+      "question": "What can Vietnam achieve if its workforce is equipped with global knowledge and skills??",
+      "answer": "The provided context does not contain information about what Vietnam can achieve if its workforce is equipped with global knowledge and skills.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": -10.773208618164062,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "conversation_id": "da48e344-e780-4023-b895-13ab4ae7e2fe",
+      "updated_at": "2026-05-11T00:42:14.341717+00:00"
+    },
+    "what can you do with a software engineering degree?": {
+      "question": "What can you do with a software engineering degree?",
+      "answer": "With a **software engineering degree**, you can pursue various positions based on your abilities and aspirations. Common roles include:\n\n*   **Software Developer / Programmer**: This role involves writing code, designing, and developing software, websites, and mobile applications. Responsibilities include analyzing requirements, building functionality, optimizing code, testing, and maintenance. Programmers often use languages like **Java**, **Python**, **C#**, **PHP**, **JavaScript**, **Kotlin**, and **Swift**. This path is suitable for individuals with logical thinking, creativity, patience, and a passion for technology.\n\nCareer progression in software engineering typically follows these levels:\n\n*   Level 1: **Software Engineer Intern**\n*   Level 2: **Junior Software Engineer**\n*   Level 3: **Software Engineer**\n*   Level 4: **Senior Software Engineer**\n\nUpon reaching the **Senior Software Engineer** level, career paths can diverge into technical or management roles.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "What can you do with a software engineering degree? After graduation, students can \ntake on many dif...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "title": "05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "rerank_score": 10.196949005126953,
+          "image_urls": [
+            "/images/05_Software_Engineering_Career_Opportunities_and_Roles-f0980f4f/p1/img001.png"
+          ]
+        },
+        {
+          "rank": 2,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": 2.1899635791778564,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/05_Software_Engineering_Career_Opportunities_and_Roles-f0980f4f/p1/img001.png"
+      ],
+      "conversation_id": "55ccb8b2-0128-4710-baf4-a74e49eb6cad",
+      "updated_at": "2026-05-11T01:58:55.941865+00:00"
+    },
+    "how many types of programming languages are mentioned based on their level?": {
+      "question": "How many types of programming languages are mentioned based on their level?",
+      "answer": "There are three types of programming languages mentioned based on their level:\n\n*   **Machine language** (low-format language)\n*   **Assembly language**\n*   **High-level programming languages**",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Programming languages ​\nare categorized into three types based on their level: \n●​ Machine languageA...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\10_Programming_Languages_Overview_and_Comparison.pdf",
+          "title": "10_Programming_Languages_Overview_and_Comparison.pdf",
+          "rerank_score": 7.083703994750977,
+          "image_urls": [
+            "/images/10_Programming_Languages_Overview_and_Comparison-1ee844cc/p1/img001.png"
+          ]
+        },
+        {
+          "rank": 3,
+          "text": "What can you do with a software engineering degree? After graduation, students can \ntake on many dif...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "title": "05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "rerank_score": -5.410131454467773,
+          "image_urls": [
+            "/images/05_Software_Engineering_Career_Opportunities_and_Roles-f0980f4f/p1/img001.png"
+          ]
+        },
+        {
+          "rank": 6,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": -8.794187545776367,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/10_Programming_Languages_Overview_and_Comparison-1ee844cc/p1/img001.png"
+      ],
+      "conversation_id": "7062b4df-bbc8-4930-af40-c4c6174e4e30",
+      "updated_at": "2026-05-11T01:49:34.893552+00:00"
     }
   },
   "history": [
@@ -3105,6 +4634,919 @@
       ],
       "cache_hit": false,
       "timestamp": "2026-05-10T07:04:52.369230+00:00"
+    },
+    {
+      "execution_id": "158427ad-fde2-4863-b16d-2df588032baa",
+      "conversation_id": "c3aa0a7b-0afc-49f1-8484-40c05a352668",
+      "question": "timeline of software carreer",
+      "answer": "The context does not provide a timeline for a software career.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": -10.331316947937012,
+          "image_urls": [
+            "/images/img001.png"
+          ]
+        },
+        {
+          "rank": 2,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": -10.331316947937012,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/img001.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-10T17:47:17.136899+00:00"
+    },
+    {
+      "execution_id": "f1641501-5e3b-4943-8ab3-e1c989ec2155",
+      "conversation_id": "6369b340-0733-4209-8cc1-ade00c6f632a",
+      "question": "timeline of software engineer carreer",
+      "answer": "The provided context does not contain a timeline for a software engineer's career. It outlines the hierarchical levels of a software engineer's career progression.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": -2.823979139328003,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-10T17:51:13.500018+00:00"
+    },
+    {
+      "execution_id": "959241c5-8ea4-4d80-8bfe-979f872cab80",
+      "conversation_id": "0261fdb0-ca96-4345-bf1c-c3ca8545872e",
+      "question": "timeline of software engineer carreer?",
+      "answer": "The provided context does not contain information about the timeline of a software engineer's career.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": -3.8529627323150635,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-10T17:57:46.105668+00:00"
+    },
+    {
+      "execution_id": "56780d45-7df6-4ee2-9d37-931ea8e1955a",
+      "conversation_id": "d2fcadde-2021-49cf-80b0-f92d937fcb7c",
+      "question": "timeline of software engineer carreer",
+      "answer": "The provided context does not contain a timeline for a software engineer's career. It outlines the hierarchical levels of a software engineer's career progression.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": -2.823979139328003,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "cache_hit": true,
+      "timestamp": "2026-05-10T18:00:08.961709+00:00"
+    },
+    {
+      "execution_id": "3bb8a79a-23ef-4d89-881c-94b8e429b238",
+      "conversation_id": "d187f14e-719b-44c9-aa13-dd52814bf295",
+      "question": "timeline of software engineer career",
+      "answer": "The provided context does not contain a timeline of software engineer career progression. It outlines the hierarchical levels of a software engineer's career path.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": 4.607609272003174,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-10T18:03:45.373814+00:00"
+    },
+    {
+      "execution_id": "0c5cb528-154c-4f48-ba4b-af527ebfb248",
+      "conversation_id": "6f543c48-0238-412e-80aa-74b472c246b7",
+      "question": "timeline of software engineer carreer?",
+      "answer": "The provided context does not contain information about the timeline of a software engineer's career.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": -3.8529627323150635,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "cache_hit": true,
+      "timestamp": "2026-05-10T18:06:46.477155+00:00"
+    },
+    {
+      "execution_id": "5d0259fa-1ec0-4e0b-acf4-c828c33d0941",
+      "conversation_id": "155fa069-9446-435b-be35-affc8e4f0d23",
+      "question": "timeline of software engineer carreer",
+      "answer": "The provided context does not contain a timeline for a software engineer's career. It outlines the hierarchical levels of a software engineer's career progression.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": -2.823979139328003,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "cache_hit": true,
+      "timestamp": "2026-05-10T18:06:51.965777+00:00"
+    },
+    {
+      "execution_id": "da2275f1-1c0d-4411-a9d1-692f8bee288c",
+      "conversation_id": "96fdf32e-4d27-43bd-95ae-7a7edaa35259",
+      "question": "timeline of software engineer carreer???",
+      "answer": "A **software engineer career timeline** generally begins with obtaining a **formal education**, often a **Bachelor's degree in Computer Science** or a related field. This phase focuses on learning programming fundamentals, algorithms, data structures, and software design. Some may pursue a **Master's degree** for specialization in areas like artificial intelligence or cybersecurity.\n\nAfter education, the career progresses through various stages, typically starting as a **contributor** and potentially moving towards a **management position** over time. The specific job titles and levels of seniority can vary by company and industry.\n\nOne specialization path mentioned is **Applied Software Engineering Fundamentals**, which can be completed in as little as **two months** and covers industry-standard tools and languages like Python.",
+      "sources": [
+        {
+          "title": "Software Engineer Timeline: From Starting Out To Managing A Team",
+          "url": "https://www.institutedata.com/us/blog/software-engineer-timeline-from-starting-out-to-managing-a-team/",
+          "snippet": "![Software engineer timeline.](https://www.institutedata.com/wp-content/uploads/2024/03/Software-engineer-timeline.png) #### Stay Informed With Our Weekly Newsletter Receive crucial updates on the ever-evolving landscape of technology and innovation. By clicking 'Sign Up', I acknowledge that my information will be used in accordance with the Institute of Data's [Privacy Policy](https://www.institu...",
+          "score": 0.0
+        },
+        {
+          "title": "Software Engineer Career Path 2026: Overview, Jobs, and Pay",
+          "url": "https://www.coursera.org/articles/software-engineer-career-path",
+          "snippet": "# Software Engineer Career Path 2026: Overview, Jobs, and Pay Written by Jessica Schulze • Updated on Dec 5, 2025 Share Use this article to follow the timeline of a software engineer career path and learn about specializations within the field. ![[Featured Image] A software engineer smiles in front of a computer monitor with code on the screen. ](https://d3njjcbhbojbot.cloudfront.net/api/utilities...",
+          "score": 0.0
+        },
+        {
+          "title": "Understanding the 10 Career Levels for Software Engineers - Indeed",
+          "url": "https://www.indeed.com/career-advice/finding-a-job/engineer-level",
+          "snippet": "# Understanding the 10 Career Levels for Software Engineers Written by Indeed Editorial Team Updated December 19, 2025 ### On this page - [What is a software engineer?](https://www.indeed.com/career-advice/finding-a-job/engineer-level#toc-what-is-a-software-engineer) - [What is an engineering level?](https://www.indeed.com/career-advice/finding-a-job/engineer-level#toc-what-is-an-engineering-level...",
+          "score": 0.0
+        },
+        {
+          "title": "The Ultimate Software Engineer Career Path Guide for 2023",
+          "url": "https://www.wearedevelopers.com/en/magazine/146/career-path-for-software-engineer-guide",
+          "snippet": "January 20, 2023 10 min read # The Ultimate Software Engineer Career Path Guide for 2023 By [Pat Zawadzki](https://www.wearedevelopers.com/en/magazine?q=Pat%20Zawadzki) ![The Ultimate Software Engineer Career Path Guide for 2023](https://wearedevelopers.imgix.net/public/magazine/articles/146/images/hero/63cfb8ec6889733c10976282_software_engineer_career.png?w=984&ar=2&fit=crop&crop=entropy&auto=com...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://www.institutedata.com/wp-content/uploads/2024/03/Software-engineer-timeline.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-10T18:07:07.695154+00:00"
+    },
+    {
+      "execution_id": "f7ec7ce6-6e5d-4c28-8b94-ea21cf47c6be",
+      "conversation_id": "03ff6798-f7bd-4fc0-b2c5-313a67883de1",
+      "question": "timeline of software engineer carreer??",
+      "answer": "The provided context does not contain a timeline for a software engineer's career. It outlines the hierarchical levels of progression.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": -4.14756965637207,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-10T18:07:51.736565+00:00"
+    },
+    {
+      "execution_id": "6f179d01-3d31-4448-9db6-e3433b56717a",
+      "conversation_id": "0ab91a8c-06b6-4801-84e0-7023cb5b05f2",
+      "question": "timeline sofware developer carrer",
+      "answer": "The provided context does not contain information about the timeline for a software developer career.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": -10.862933158874512,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-10T18:08:28.804073+00:00"
+    },
+    {
+      "execution_id": "d84d9d90-236d-47c8-95f3-6ad66031b56c",
+      "conversation_id": "a68b5f01-9b6d-4960-8fc2-ca507c4299a2",
+      "question": "timeline of sofware developer career?",
+      "answer": "The provided context does not contain information about the timeline of a software developer career.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": -6.503374099731445,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-10T18:13:10.598794+00:00"
+    },
+    {
+      "execution_id": "ba5ac663-da09-42b3-86e1-1825901a0d2f",
+      "conversation_id": "c61b79f9-e088-45c0-b090-fb6bdb9e4a99",
+      "question": "timeline of software engineer carreer????",
+      "answer": "The provided context does not contain a timeline for a software engineer's career.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": -3.8498282432556152,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-10T18:17:07.610725+00:00"
+    },
+    {
+      "execution_id": "fb453059-a4b5-4c52-8fba-d723cc215ec8",
+      "conversation_id": "d37c6b54-413c-406e-85c2-088cf0fe4a19",
+      "question": "timeline of Software engineer career?",
+      "answer": "Based on the provided context, here is a timeline of a software engineer's career progression:\n\n*   **Level 1: Software Engineer Intern**\n*   **Level 2: Junior Software Engineer**\n*   **Level 3: Software Engineer**\n*   **Level 4: Senior Software Engineer**\n\nUpon reaching the Senior Software Engineer level (Level 4), two distinct career paths emerge:\n\n1.  **Management-level Software Engineer**\n2.  **Individual Contributor path** (The context mentions \"Nmerfyearexperntyafwrk exrth\" and \"Nmerfyeafexpre:7-yarofexper Iearsfx\" which appear to be incomplete or corrupted descriptions related to experience for this path, but do not provide a clear timeline.)\n\nThe context states that software engineering is a highly sought-after profession with generous salaries and clear career advancement opportunities. The level of skill, experience, and specific responsibilities are assessed based on different skill levels and experience. Higher ranks generally come with greater benefits and power.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": 3.633483409881592,
+          "image_urls": [
+            "http://localhost:8010/images/26_Software_Engineer_Career_Path_and_Advancement-86befb25/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "http://localhost:8010/images/26_Software_Engineer_Career_Path_and_Advancement-86befb25/p1/img001.png"
+      ],
+      "cache_hit": true,
+      "timestamp": "2026-05-10T18:23:43.049338+00:00"
+    },
+    {
+      "execution_id": "dc87561c-28ea-4a85-b89b-8abe3b755855",
+      "conversation_id": "edd692a3-e3c0-4ad7-9c7d-e05be065050b",
+      "question": "timeline of Software engineer career?",
+      "answer": "Based on the provided context, here is a timeline of a software engineer's career progression:\n\n*   **Level 1: Software Engineer Intern**\n*   **Level 2: Junior Software Engineer**\n*   **Level 3: Software Engineer**\n*   **Level 4: Senior Software Engineer**\n\nUpon reaching the Senior Software Engineer level (Level 4), two distinct career paths emerge:\n\n1.  **Management-level Software Engineer**\n2.  **Individual Contributor path** (The context mentions \"Nmerfyearexperntyafwrk exrth\" and \"Nmerfyeafexpre:7-yarofexper Iearsfx\" which appear to be incomplete or corrupted descriptions related to experience for this path, but do not provide a clear timeline.)\n\nThe context states that software engineering is a highly sought-after profession with generous salaries and clear career advancement opportunities. The level of skill, experience, and specific responsibilities are assessed based on different skill levels and experience. Higher ranks generally come with greater benefits and power.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": 3.633483409881592,
+          "image_urls": [
+            "http://localhost:8010/images/26_Software_Engineer_Career_Path_and_Advancement-86befb25/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "http://localhost:8010/images/26_Software_Engineer_Career_Path_and_Advancement-86befb25/p1/img001.png"
+      ],
+      "cache_hit": true,
+      "timestamp": "2026-05-10T18:36:48.088812+00:00"
+    },
+    {
+      "execution_id": "48977083-dc55-441a-8b7d-a6d6b878759f",
+      "conversation_id": "53717303-b32a-4e35-8516-8620978e5f01",
+      "question": "timeline of Software engineer career????",
+      "answer": "A **software engineer career path** typically begins with an **educational phase**, which often involves obtaining a **Bachelor's degree in Computer Science** or a related field. This phase focuses on learning programming fundamentals, algorithms, data structures, and software design. Some may pursue a **Master's degree** to specialize in areas like artificial intelligence or cybersecurity.\n\nAfter education, the career progresses through various stages. Generally, a software engineer's path starts as a **contributor** and can evolve towards a **management position** over time. The evaluation of roles like **junior** or **senior** can vary by company.\n\nFor those ready to start, credentials like **IBM's Applied Software Engineering Fundamentals Specialization** can be earned in as little as **two months**, teaching industry-standard tools and languages such as **Python**.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": 2.9584014415740967,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        },
+        {
+          "title": "Software Engineer Career Path 2026: Overview, Jobs, and Pay",
+          "url": "https://www.coursera.org/articles/software-engineer-career-path",
+          "snippet": "# Software Engineer Career Path 2026: Overview, Jobs, and Pay Written by Jessica Schulze • Updated on Dec 5, 2025 Share Use this article to follow the timeline of a software engineer career path and learn about specializations within the field. ![[Featured Image] A software engineer smiles in front of a computer monitor with code on the screen. ](https://d3njjcbhbojbot.cloudfront.net/api/utilities...",
+          "score": 0.0
+        },
+        {
+          "title": "Software Engineer Timeline: From Starting Out To Managing A Team",
+          "url": "https://www.institutedata.com/us/blog/software-engineer-timeline-from-starting-out-to-managing-a-team/",
+          "snippet": "![Software engineer timeline.](https://www.institutedata.com/wp-content/uploads/2024/03/Software-engineer-timeline.png) #### Stay Informed With Our Weekly Newsletter Receive crucial updates on the ever-evolving landscape of technology and innovation. By clicking 'Sign Up', I acknowledge that my information will be used in accordance with the Institute of Data's [Privacy Policy](https://www.institu...",
+          "score": 0.0
+        },
+        {
+          "title": "Software Engineers Career Path - Salary and Promotion",
+          "url": "https://www.geeksforgeeks.org/blogs/software-engineers-career-path-salary-and-promotion/",
+          "snippet": "[![geeksforgeeks](https://media.geeksforgeeks.org/gfg-gg-logo.svg)](https://www.geeksforgeeks.org/) - Courses - Tutorials - Interview Prep Switch to Dark Mode Sign In - [DSA](https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/) - [Practice Problems](https://www.geeksforgeeks.org/explore) - [C](https://www.geeksforgeeks.org/c/c-programming-language/) - [C++](https:/...",
+          "score": 0.0
+        },
+        {
+          "title": "The Ultimate Software Engineer Career Path Guide for 2023",
+          "url": "https://www.wearedevelopers.com/en/magazine/146/career-path-for-software-engineer-guide",
+          "snippet": "January 20, 2023 10 min read # The Ultimate Software Engineer Career Path Guide for 2023 By [Pat Zawadzki](https://www.wearedevelopers.com/en/magazine?q=Pat%20Zawadzki) ![The Ultimate Software Engineer Career Path Guide for 2023](https://wearedevelopers.imgix.net/public/magazine/articles/146/images/hero/63cfb8ec6889733c10976282_software_engineer_career.png?w=984&ar=2&fit=crop&crop=entropy&auto=com...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-10T18:37:16.337462+00:00"
+    },
+    {
+      "execution_id": "db5f8ced-0af5-4c0c-827b-36226fcacbac",
+      "conversation_id": "e7696a7e-d1b4-4319-9acc-eebc88ef212b",
+      "question": "timeline of Software engineer career??????",
+      "answer": "The provided context does not contain a timeline for software engineer career progression. It outlines the hierarchical levels but does not specify the time required to advance through them.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": 2.9456264972686768,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-10T18:38:56.941589+00:00"
+    },
+    {
+      "execution_id": "45407661-5d33-4cb9-a347-358bc3fb1b58",
+      "conversation_id": "95c61d2c-0837-4d8b-9b95-9b80a73c756b",
+      "question": "timeline of Software engineer career??????",
+      "answer": "The provided context does not contain a timeline for software engineer career progression. It outlines the hierarchical levels but does not specify the time required to advance through them.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": 2.9456264972686768,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "cache_hit": true,
+      "timestamp": "2026-05-10T18:40:38.549728+00:00"
+    },
+    {
+      "execution_id": "b9a2ebb9-ea90-432d-8345-596714e51e8f",
+      "conversation_id": "1cfb2bbb-da61-432a-90ba-b136d028d46a",
+      "question": "timeline of Software engineer career?",
+      "answer": "Based on the provided context, here is a timeline of a software engineer's career progression:\n\n*   **Level 1: Software Engineer Intern**\n*   **Level 2: Junior Software Engineer**\n*   **Level 3: Software Engineer**\n*   **Level 4: Senior Software Engineer**\n\nUpon reaching the Senior Software Engineer level (Level 4), two distinct career paths emerge:\n\n1.  **Management-level Software Engineer**\n2.  **Individual Contributor path** (The context mentions \"Nmerfyearexperntyafwrk exrth\" and \"Nmerfyeafexpre:7-yarofexper Iearsfx\" which appear to be incomplete or corrupted descriptions related to experience for this path, but do not provide a clear timeline.)\n\nThe context states that software engineering is a highly sought-after profession with generous salaries and clear career advancement opportunities. The level of skill, experience, and specific responsibilities are assessed based on different skill levels and experience. Higher ranks generally come with greater benefits and power.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": 3.633483409881592,
+          "image_urls": [
+            "http://localhost:8010/images/26_Software_Engineer_Career_Path_and_Advancement-86befb25/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "http://localhost:8010/images/26_Software_Engineer_Career_Path_and_Advancement-86befb25/p1/img001.png"
+      ],
+      "cache_hit": true,
+      "timestamp": "2026-05-10T18:40:45.326828+00:00"
+    },
+    {
+      "execution_id": "e748b6c5-c38e-48c0-a9f4-fa97b15b394d",
+      "conversation_id": "2cc3aaa3-a41f-4989-8961-16ea819acca8",
+      "question": "timeline of software engineer career ?",
+      "answer": "The provided context outlines a hierarchical sequence for a software engineer's career progression, but it does not offer a specific timeline in terms of years for each level.\n\nThe career path is presented as follows:\n\n*   **Level 1:** Software Engineer Intern\n*   **Level 2:** Junior Software Engineer\n*   **Level 3:** Software Engineer\n*   **Level 4:** Senior Software Engineer\n\nUpon reaching Level 4 (Senior Software Engineer), two further paths are mentioned:\n\n*   A path for experienced software engineers (with a note indicating \"7 years of experience\" associated with this, though the specific role title is cut off).\n*   Management-level Software Engineer.\n\nThe context does not provide the duration or years required to advance from one level to the next.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\kltn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": 3.633483409881592,
+          "image_urls": []
+        }
+      ],
+      "image_urls": [],
+      "cache_hit": true,
+      "timestamp": "2026-05-11T00:29:26.743549+00:00"
+    },
+    {
+      "execution_id": "333525b9-737e-47f2-826a-e850315ce358",
+      "conversation_id": "e73cdea5-3c86-49c9-aa62-955c4091b495",
+      "question": "timeline of software develop career ?",
+      "answer": "The provided context does not contain a timeline for software development careers. It outlines a hierarchical sequence of career paths for software engineers:\n\n*   **Level 1**: Software Engineer Intern\n*   **Level 2**: Junior Software Engineer\n*   **Level 3**: Software Engineer\n*   **Level 4**: Senior Software Engineer\n\nAfter reaching Senior Software Engineer, two paths are mentioned: **Management-level Software Engineer** and another path that requires 7 years of experience, but the title for this path is not fully provided.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": -2.979102373123169,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-11T00:30:29.870087+00:00"
+    },
+    {
+      "execution_id": "af109621-ee5d-4a2a-8268-839bfb419d2a",
+      "conversation_id": "206ae466-f67f-41f8-95f2-b3e9c695a4f5",
+      "question": "timeline of software engineer career ??",
+      "answer": "The provided context does not contain a timeline for a software engineer's career progression. It outlines the different levels of a software engineer's career path.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": 3.0110068321228027,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-11T00:36:30.374881+00:00"
+    },
+    {
+      "execution_id": "6e68d7e3-bdee-4ff2-be2e-66f61a3b8308",
+      "conversation_id": "49342f0d-929f-4f58-8a13-fb69c392ad88",
+      "question": "Why is having a clear career path important for software engineers?",
+      "answer": "Having a clear career path is important for **software engineers** because it provides a sense of direction and allows them to understand how their **skill level**, **experience**, and **responsibilities** are assessed. The higher the rank in the **hierarchical sequence** of a software engineer's career, the greater the **benefits** and **power**.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": 7.492735862731934,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-11T00:39:41.436013+00:00"
+    },
+    {
+      "execution_id": "c14a1e05-8e5b-40ea-867f-aa9a7171136d",
+      "conversation_id": "a3aeb71b-789b-4497-98dc-d87717789eb8",
+      "question": "What can Vietnam achieve if its workforce is equipped with global knowledge and skills?",
+      "answer": "Vietnam can achieve significant advancements if its workforce is equipped with global knowledge and skills. This includes:\n\n*   Becoming a leading destination for global outsourcing, fueled by strong economic growth and a clear digital transformation strategy.\n*   Projecting its digital economy to reach $45 billion by 2025 and $200 billion by 2030.\n*   Building a deep talent pool in areas like **AI**, **cybersecurity**, and **advanced software development**.\n*   Positioning itself as a key player in the global economy, driving innovation and progress.\n*   Transforming global industries by providing skilled manpower with **technical capabilities** shaped by modern vocational training and **global certifications**.",
+      "sources": [
+        {
+          "title": "How Vietnamese Skilled Manpower Is Transforming Global Industries",
+          "url": "https://hoplucglobal.com.vn/vietnamese-skilled-manpower/",
+          "snippet": "[Skip to content](https://hoplucglobal.com.vn/vietnamese-skilled-manpower/#content) # [How Vietnamese Skilled Manpower Is Transforming Global Industries](https://hoplucglobal.com.vn/vietnamese-skilled-manpower/) - [Author:\\\\ quantri](https://hoplucglobal.com.vn/author/quantri/) - [December 1, 2025](https://hoplucglobal.com.vn/2025/12/01/) - 8:30 am - [No Comments](https://hoplucglobal.com.vn/vietn...",
+          "score": 0.0
+        },
+        {
+          "title": "How Vietnam is bridging the skills gap to boost its digital future",
+          "url": "https://awaydigitalteams.com/blog/vietnam-close-skills-gap-and-power-the-digital-economy/",
+          "snippet": "[Skip to content](https://awaydigitalteams.com/blog/vietnam-close-skills-gap-and-power-the-digital-economy/#content) [![](https://cdn-ilaemkl.nitrocdn.com/IKosleUnuJppFKDhQtmKzsKeSNwYnlXR/assets/images/optimized/rev-32d65b9/awaydigitalteams.com/wp-content/themes/awayteams/assets/img/icon-back.svg)BACK](https://awaydigitalteams.com/insights/) # Vietnam’s journey to close the skills gap and power th...",
+          "score": 0.0
+        },
+        {
+          "title": "Why Vietnam is Emerging as a Top Destination for Global Talent",
+          "url": "https://slasify.com/en/blog/why-vietnam-is-emerging-as-a-top-destination-for-global-talent",
+          "snippet": "# Why Vietnam is Emerging as a Top Destination for Global Talent [Slasify](https://slasify.com/en/blog/author/slasify) Apr 8, 2025 * * * In recent years, Vietnam has steadily risen to prominence as a favored destination for global businesses and professionals. With its vibrant economic landscape, supportive business climate, and dynamic workforce, Vietnam is increasingly becoming a magnet for inte...",
+          "score": 0.0
+        },
+        {
+          "title": "Fostering Success in Vietnam's Knowledge Economy: 7 Essential ...",
+          "url": "https://www.linkedin.com/pulse/fostering-success-vietnams-knowledge-economy-7-skills-nguyen-thanh",
+          "snippet": "Agree & Join LinkedIn By clicking Continue to join or sign in, you agree to LinkedIn’s [User Agreement](https://www.linkedin.com/legal/user-agreement?trk=linkedin-tc_auth-button_user-agreement), [Privacy Policy](https://www.linkedin.com/legal/privacy-policy?trk=linkedin-tc_auth-button_privacy-policy), and [Cookie Policy](https://www.linkedin.com/legal/cookie-policy?trk=linkedin-tc_auth-button_cook...",
+          "score": 0.0
+        },
+        {
+          "title": "Vietnam's Workforce Needs New Skills for A Continued Economic ...",
+          "url": "https://www.worldbank.org/en/news/press-release/2013/11/29/vietnams-workforce-needs-new-skills-for-a-continued-economic-modernization-says-vietnam-development-report2014",
+          "snippet": "[![The World Bank Working for a World Free of Poverty](https://www.worldbank.org/content/dam/wbr/logo/logo-wb-header-en.svg)](https://www.worldbank.org/ext/en/home) [![The World Bank Working for a World Free of Poverty](https://www.worldbank.org/content/dam/wbr/logo/logo-wb-header-en.svg)](https://www.worldbank.org/ext/en/home) Working for a World Free of Poverty 1. [Who We Are](https://www.worldb...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://hoplucglobal.com.vn/wp-content/uploads/2025/11/vietnamese-skilled-manpower-global-industries.jpg"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-11T00:41:32.695373+00:00"
+    },
+    {
+      "execution_id": "9a7ce83e-f506-4ffa-a3d3-9887ce9a36e8",
+      "conversation_id": "311bfee7-2681-4575-ad58-ccb085b42b2e",
+      "question": "What can Vietnam achieve if its workforce is equipped with global knowledge and skills?",
+      "answer": "Vietnam can achieve significant advancements if its workforce is equipped with global knowledge and skills. This includes:\n\n*   Becoming a leading destination for global outsourcing, fueled by strong economic growth and a clear digital transformation strategy.\n*   Projecting its digital economy to reach $45 billion by 2025 and $200 billion by 2030.\n*   Building a deep talent pool in areas like **AI**, **cybersecurity**, and **advanced software development**.\n*   Positioning itself as a key player in the global economy, driving innovation and progress.\n*   Transforming global industries by providing skilled manpower with **technical capabilities** shaped by modern vocational training and **global certifications**.",
+      "sources": [
+        {
+          "title": "How Vietnamese Skilled Manpower Is Transforming Global Industries",
+          "url": "https://hoplucglobal.com.vn/vietnamese-skilled-manpower/",
+          "snippet": "[Skip to content](https://hoplucglobal.com.vn/vietnamese-skilled-manpower/#content) # [How Vietnamese Skilled Manpower Is Transforming Global Industries](https://hoplucglobal.com.vn/vietnamese-skilled-manpower/) - [Author:\\\\ quantri](https://hoplucglobal.com.vn/author/quantri/) - [December 1, 2025](https://hoplucglobal.com.vn/2025/12/01/) - 8:30 am - [No Comments](https://hoplucglobal.com.vn/vietn...",
+          "score": 0.0
+        },
+        {
+          "title": "How Vietnam is bridging the skills gap to boost its digital future",
+          "url": "https://awaydigitalteams.com/blog/vietnam-close-skills-gap-and-power-the-digital-economy/",
+          "snippet": "[Skip to content](https://awaydigitalteams.com/blog/vietnam-close-skills-gap-and-power-the-digital-economy/#content) [![](https://cdn-ilaemkl.nitrocdn.com/IKosleUnuJppFKDhQtmKzsKeSNwYnlXR/assets/images/optimized/rev-32d65b9/awaydigitalteams.com/wp-content/themes/awayteams/assets/img/icon-back.svg)BACK](https://awaydigitalteams.com/insights/) # Vietnam’s journey to close the skills gap and power th...",
+          "score": 0.0
+        },
+        {
+          "title": "Why Vietnam is Emerging as a Top Destination for Global Talent",
+          "url": "https://slasify.com/en/blog/why-vietnam-is-emerging-as-a-top-destination-for-global-talent",
+          "snippet": "# Why Vietnam is Emerging as a Top Destination for Global Talent [Slasify](https://slasify.com/en/blog/author/slasify) Apr 8, 2025 * * * In recent years, Vietnam has steadily risen to prominence as a favored destination for global businesses and professionals. With its vibrant economic landscape, supportive business climate, and dynamic workforce, Vietnam is increasingly becoming a magnet for inte...",
+          "score": 0.0
+        },
+        {
+          "title": "Fostering Success in Vietnam's Knowledge Economy: 7 Essential ...",
+          "url": "https://www.linkedin.com/pulse/fostering-success-vietnams-knowledge-economy-7-skills-nguyen-thanh",
+          "snippet": "Agree & Join LinkedIn By clicking Continue to join or sign in, you agree to LinkedIn’s [User Agreement](https://www.linkedin.com/legal/user-agreement?trk=linkedin-tc_auth-button_user-agreement), [Privacy Policy](https://www.linkedin.com/legal/privacy-policy?trk=linkedin-tc_auth-button_privacy-policy), and [Cookie Policy](https://www.linkedin.com/legal/cookie-policy?trk=linkedin-tc_auth-button_cook...",
+          "score": 0.0
+        },
+        {
+          "title": "Vietnam's Workforce Needs New Skills for A Continued Economic ...",
+          "url": "https://www.worldbank.org/en/news/press-release/2013/11/29/vietnams-workforce-needs-new-skills-for-a-continued-economic-modernization-says-vietnam-development-report2014",
+          "snippet": "[![The World Bank Working for a World Free of Poverty](https://www.worldbank.org/content/dam/wbr/logo/logo-wb-header-en.svg)](https://www.worldbank.org/ext/en/home) [![The World Bank Working for a World Free of Poverty](https://www.worldbank.org/content/dam/wbr/logo/logo-wb-header-en.svg)](https://www.worldbank.org/ext/en/home) Working for a World Free of Poverty 1. [Who We Are](https://www.worldb...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://hoplucglobal.com.vn/wp-content/uploads/2025/11/vietnamese-skilled-manpower-global-industries.jpg"
+      ],
+      "cache_hit": true,
+      "timestamp": "2026-05-11T00:41:51.555042+00:00"
+    },
+    {
+      "execution_id": "482f36a1-2eb5-4591-9462-b67e807dcede",
+      "conversation_id": "da48e344-e780-4023-b895-13ab4ae7e2fe",
+      "question": "What can Vietnam achieve if its workforce is equipped with global knowledge and skills??",
+      "answer": "The provided context does not contain information about what Vietnam can achieve if its workforce is equipped with global knowledge and skills.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": -10.773208618164062,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-11T00:42:14.341717+00:00"
+    },
+    {
+      "execution_id": "c07fbf53-866b-444d-bd97-9666b971bdad",
+      "conversation_id": "15a62d5b-3e69-4376-b187-5dfbb53cfedb",
+      "question": "What can you do with a software engineering degree?",
+      "answer": "With a **software engineering degree**, you can pursue various positions based on your abilities and aspirations. Common roles include:\n\n*   **Software Developer / Programmer**: This role involves writing code, designing, and developing software, websites, and mobile applications. Responsibilities include analyzing requirements, building functionality, optimizing code, testing, and maintenance. Programmers often use languages like **Java**, **Python**, **C#**, **PHP**, **JavaScript**, **Kotlin**, and **Swift**. This path is suitable for individuals with logical thinking, creativity, patience, and a passion for technology.\n\nCareer progression in software engineering typically follows these levels:\n\n*   Level 1: **Software Engineer Intern**\n*   Level 2: **Junior Software Engineer**\n*   Level 3: **Software Engineer**\n*   Level 4: **Senior Software Engineer**\n\nUpon reaching the **Senior Software Engineer** level, career paths can diverge into technical or management roles.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "What can you do with a software engineering degree? After graduation, students can \ntake on many dif...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "title": "05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "rerank_score": 10.196949005126953,
+          "image_urls": [
+            "/images/05_Software_Engineering_Career_Opportunities_and_Roles-f0980f4f/p1/img001.png"
+          ]
+        },
+        {
+          "rank": 2,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": 2.1899635791778564,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/05_Software_Engineering_Career_Opportunities_and_Roles-f0980f4f/p1/img001.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-11T00:46:04.343372+00:00"
+    },
+    {
+      "execution_id": "2bb304d3-e9e2-4294-ae94-7bc304dc5bbc",
+      "conversation_id": "9bd45d10-6c3b-4054-a98f-706b98d043b6",
+      "question": "Why is having a clear career path important for software engineers?",
+      "answer": "Having a clear career path is important for **software engineers** because it provides a sense of direction and allows them to understand how their **skill level**, **experience**, and **responsibilities** are assessed. The higher the rank in the **hierarchical sequence** of a software engineer's career, the greater the **benefits** and **power**.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": 7.492735862731934,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "cache_hit": true,
+      "timestamp": "2026-05-11T00:46:52.060045+00:00"
+    },
+    {
+      "execution_id": "75d37418-968e-4c3b-989a-4ea9c53e4a88",
+      "conversation_id": "63b77d99-d0a6-4313-b6ca-5513d7a22ebc",
+      "question": "How many types of programming languages are mentioned based on their level?",
+      "answer": "There are three types of programming languages mentioned based on their level:\n\n*   **Machine language** (low-format language)\n*   **Assembly language**\n*   **High-level programming languages**",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Programming languages ​\nare categorized into three types based on their level: \n●​ Machine languageA...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\10_Programming_Languages_Overview_and_Comparison.pdf",
+          "title": "10_Programming_Languages_Overview_and_Comparison.pdf",
+          "rerank_score": 7.083703994750977,
+          "image_urls": [
+            "/images/10_Programming_Languages_Overview_and_Comparison-1ee844cc/p1/img001.png"
+          ]
+        },
+        {
+          "rank": 3,
+          "text": "What can you do with a software engineering degree? After graduation, students can \ntake on many dif...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "title": "05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "rerank_score": -5.410131454467773,
+          "image_urls": [
+            "/images/05_Software_Engineering_Career_Opportunities_and_Roles-f0980f4f/p1/img001.png"
+          ]
+        },
+        {
+          "rank": 6,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": -8.794187545776367,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/10_Programming_Languages_Overview_and_Comparison-1ee844cc/p1/img001.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-11T00:51:08.163737+00:00"
+    },
+    {
+      "execution_id": "69e01dc0-d096-49ec-878e-b560ca7e5ad4",
+      "conversation_id": "90d7655d-90e6-4413-8d39-d83be15631f3",
+      "question": "What can you do with a software engineering degree?",
+      "answer": "With a **software engineering degree**, you can pursue various positions based on your abilities and aspirations. Common roles include:\n\n*   **Software Developer / Programmer**: This role involves writing code, designing, and developing software, websites, and mobile applications. Responsibilities include analyzing requirements, building functionality, optimizing code, testing, and maintenance. Programmers often use languages like **Java**, **Python**, **C#**, **PHP**, **JavaScript**, **Kotlin**, and **Swift**. This path is suitable for individuals with logical thinking, creativity, patience, and a passion for technology.\n\nCareer progression in software engineering typically follows these levels:\n\n*   Level 1: **Software Engineer Intern**\n*   Level 2: **Junior Software Engineer**\n*   Level 3: **Software Engineer**\n*   Level 4: **Senior Software Engineer**\n\nUpon reaching the **Senior Software Engineer** level, career paths can diverge into technical or management roles.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "What can you do with a software engineering degree? After graduation, students can \ntake on many dif...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "title": "05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "rerank_score": 10.196949005126953,
+          "image_urls": [
+            "/images/05_Software_Engineering_Career_Opportunities_and_Roles-f0980f4f/p1/img001.png"
+          ]
+        },
+        {
+          "rank": 2,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": 2.1899635791778564,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/05_Software_Engineering_Career_Opportunities_and_Roles-f0980f4f/p1/img001.png"
+      ],
+      "cache_hit": true,
+      "timestamp": "2026-05-11T01:47:07.250407+00:00"
+    },
+    {
+      "execution_id": "151a9091-9135-4c80-9f23-c7cd2737ae2a",
+      "conversation_id": "3b0958fa-e80a-4568-b746-2e9a5799070b",
+      "question": "Why is having a clear career path important for software engineers?",
+      "answer": "Having a clear career path is important for **software engineers** because it provides a sense of direction and allows them to understand how their **skill level**, **experience**, and **responsibilities** are assessed. The higher the rank in the **hierarchical sequence** of a software engineer's career, the greater the **benefits** and **power**.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": 7.492735862731934,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "cache_hit": true,
+      "timestamp": "2026-05-11T01:49:28.153108+00:00"
+    },
+    {
+      "execution_id": "339273ad-a240-45c9-8b62-484e51ad130e",
+      "conversation_id": "7062b4df-bbc8-4930-af40-c4c6174e4e30",
+      "question": "How many types of programming languages are mentioned based on their level?",
+      "answer": "There are three types of programming languages mentioned based on their level:\n\n*   **Machine language** (low-format language)\n*   **Assembly language**\n*   **High-level programming languages**",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Programming languages ​\nare categorized into three types based on their level: \n●​ Machine languageA...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\10_Programming_Languages_Overview_and_Comparison.pdf",
+          "title": "10_Programming_Languages_Overview_and_Comparison.pdf",
+          "rerank_score": 7.083703994750977,
+          "image_urls": [
+            "/images/10_Programming_Languages_Overview_and_Comparison-1ee844cc/p1/img001.png"
+          ]
+        },
+        {
+          "rank": 3,
+          "text": "What can you do with a software engineering degree? After graduation, students can \ntake on many dif...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "title": "05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "rerank_score": -5.410131454467773,
+          "image_urls": [
+            "/images/05_Software_Engineering_Career_Opportunities_and_Roles-f0980f4f/p1/img001.png"
+          ]
+        },
+        {
+          "rank": 6,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": -8.794187545776367,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/10_Programming_Languages_Overview_and_Comparison-1ee844cc/p1/img001.png"
+      ],
+      "cache_hit": true,
+      "timestamp": "2026-05-11T01:49:34.893552+00:00"
+    },
+    {
+      "execution_id": "00661b1b-99e5-4f5f-b5a2-287caabe55e3",
+      "conversation_id": "55ccb8b2-0128-4710-baf4-a74e49eb6cad",
+      "question": "What can you do with a software engineering degree?",
+      "answer": "With a **software engineering degree**, you can pursue various positions based on your abilities and aspirations. Common roles include:\n\n*   **Software Developer / Programmer**: This role involves writing code, designing, and developing software, websites, and mobile applications. Responsibilities include analyzing requirements, building functionality, optimizing code, testing, and maintenance. Programmers often use languages like **Java**, **Python**, **C#**, **PHP**, **JavaScript**, **Kotlin**, and **Swift**. This path is suitable for individuals with logical thinking, creativity, patience, and a passion for technology.\n\nCareer progression in software engineering typically follows these levels:\n\n*   Level 1: **Software Engineer Intern**\n*   Level 2: **Junior Software Engineer**\n*   Level 3: **Software Engineer**\n*   Level 4: **Senior Software Engineer**\n\nUpon reaching the **Senior Software Engineer** level, career paths can diverge into technical or management roles.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "What can you do with a software engineering degree? After graduation, students can \ntake on many dif...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "title": "05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "rerank_score": 10.196949005126953,
+          "image_urls": [
+            "/images/05_Software_Engineering_Career_Opportunities_and_Roles-f0980f4f/p1/img001.png"
+          ]
+        },
+        {
+          "rank": 2,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": 2.1899635791778564,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/05_Software_Engineering_Career_Opportunities_and_Roles-f0980f4f/p1/img001.png"
+      ],
+      "cache_hit": true,
+      "timestamp": "2026-05-11T01:58:55.941865+00:00"
+    },
+    {
+      "execution_id": "ab1e96b0-3a1b-4b0e-b471-1409c62a8e32",
+      "conversation_id": "6ee644e2-c688-4f29-984f-0a28533c53cd",
+      "question": "Why is having a clear career path important for software engineers?",
+      "answer": "Having a clear career path is important for **software engineers** because it provides a sense of direction and allows them to understand how their **skill level**, **experience**, and **responsibilities** are assessed. The higher the rank in the **hierarchical sequence** of a software engineer's career, the greater the **benefits** and **power**.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": 7.492735862731934,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "cache_hit": true,
+      "timestamp": "2026-05-11T01:59:49.267034+00:00"
     }
   ]
 }

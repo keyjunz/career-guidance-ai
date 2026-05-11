@@ -153,6 +153,28 @@ class RAGModuleImpl:
             len(image_urls_set),
         )
 
+        # Debug: log reranked documents and built context summary to trace missing info
+        try:
+            self.logger.debug("Reranked documents (top %d):", len(reranked))
+            for j, d in enumerate(reranked[:10], 1):
+                text_preview = (d.get("text") or "").strip()[:300].replace("\n", " ")
+                self.logger.debug(
+                    "  %d. id=%s source=%s len=%d preview=%s",
+                    j,
+                    str(d.get("chunk_id") or ""),
+                    str(d.get("source") or d.get("title") or "unknown"),
+                    len(d.get("text") or ""),
+                    text_preview,
+                )
+            self.logger.info(
+                "Built context length=%d chars; parts=%d",
+                len(context),
+                len(context_parts),
+            )
+            self.logger.debug("Context preview:\n%s", context[:2000])
+        except Exception:
+            self.logger.exception("Failed to log reranked/context debug info")
+
         # Step 6: LLM Generate ────────────────────────────────────
         if self.llm_service is not None:
             llm_result = self.llm_service.generate(
@@ -160,6 +182,15 @@ class RAGModuleImpl:
                 context=context,
                 language=language,
             )
+            # Debug: log raw LLM result for tracing
+            try:
+                self.logger.info("LLM generate result keys=%s", list(llm_result.keys()))
+                self.logger.debug(
+                    "LLM generate raw answer preview:\n%s",
+                    str(llm_result.get("answer") or "")[:2000],
+                )
+            except Exception:
+                self.logger.exception("Failed to log llm_result")
             answer = llm_result["answer"]
             tokens_generated = llm_result["tokens_generated"]
             tokens_per_second = llm_result["tokens_per_second"]
