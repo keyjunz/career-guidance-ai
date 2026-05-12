@@ -180,8 +180,12 @@ body {
   z-index: 0;
   border-radius: 9999px;
   background:
-    radial-gradient(circle, rgb(56 189 248 / 0.24), transparent 58%),
-    radial-gradient(circle at 75% 25%, rgb(236 72 153 / 0.18), transparent 42%);
+    radial-gradient(circle, rgb(var(--color-primary) / 0.2), transparent 56%),
+    radial-gradient(
+      circle at 72% 28%,
+      rgb(var(--color-primary-dim) / 0.16),
+      transparent 44%
+    );
   animation: agent-status-breathe 1.6s ease-in-out infinite;
   pointer-events: none;
 }
@@ -191,24 +195,19 @@ body {
   inset: 0;
   z-index: 1;
   border-radius: 9999px;
-  animation:
-    agent-status-spin 0.95s linear infinite,
-    agent-status-hue 3.2s linear infinite;
-  background:
-    conic-gradient(
-      from 0deg,
-      #38bdf8 0deg 34deg,
-      transparent 42deg 78deg,
-      #6366f1 88deg 142deg,
-      transparent 150deg 185deg,
-      #ec4899 196deg 260deg,
-      transparent 268deg 310deg,
-      #facc15 322deg 350deg,
-      transparent 356deg 360deg
-    );
-  box-shadow: 0 0 18px rgb(99 102 241 / 0.36);
+  animation: agent-status-spin 1s linear infinite;
+  background: conic-gradient(
+    from 0deg,
+    rgb(var(--color-primary)) 0deg 52deg,
+    transparent 58deg 128deg,
+    rgb(var(--color-primary-container) / 0.95) 138deg 218deg,
+    transparent 226deg 292deg,
+    rgb(var(--color-secondary) / 0.92) 300deg 352deg,
+    transparent 358deg 360deg
+  );
+  box-shadow: 0 0 16px rgb(var(--color-primary) / 0.28);
   transform-origin: 50% 50%;
-  will-change: transform, filter;
+  will-change: transform;
   backface-visibility: hidden;
 }
 
@@ -226,10 +225,19 @@ body {
 .agent-status-orbit-trail {
   inset: 5px;
   z-index: 2;
-  opacity: 0.72;
-  animation-duration: 1.45s, 3.7s;
-  animation-direction: reverse, normal;
+  opacity: 0.48;
+  animation: agent-status-spin 1.28s linear infinite reverse;
   filter: blur(0.2px);
+  background: conic-gradient(
+    from 72deg,
+    rgb(var(--color-primary-dim) / 0.95) 0deg 44deg,
+    transparent 50deg 150deg,
+    rgb(var(--color-primary) / 0.75) 162deg 230deg,
+    transparent 238deg 320deg,
+    rgb(var(--color-primary-container) / 0.85) 332deg 350deg,
+    transparent 356deg 360deg
+  );
+  box-shadow: 0 0 12px rgb(var(--color-primary) / 0.18);
 }
 
 .agent-status-orbit-trail::before {
@@ -240,7 +248,7 @@ body {
   background: rgb(var(--color-background));
   box-shadow:
     inset 0 0 0 1px rgb(255 255 255 / 0.08),
-    0 0 22px rgb(99 102 241 / 0.2);
+    0 0 18px rgb(var(--color-primary) / 0.18);
 }
 
 .agent-status-icon {
@@ -250,13 +258,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #38bdf8;
-  filter: drop-shadow(0 0 6px rgb(56 189 248 / 0.55));
+  color: rgb(var(--color-primary));
+  filter: drop-shadow(0 0 5px rgb(var(--color-primary) / 0.35));
 }
 
 :root[data-theme='dark'] .agent-status-icon {
-  color: #7dd3fc;
-  filter: drop-shadow(0 0 8px rgb(96 165 250 / 0.5));
+  color: rgb(var(--color-primary));
+  filter: drop-shadow(0 0 7px rgb(var(--color-primary) / 0.42));
 }
 
 @keyframes agent-status-spin {
@@ -265,15 +273,6 @@ body {
   }
   to {
     transform: rotate(360deg);
-  }
-}
-
-@keyframes agent-status-hue {
-  from {
-    filter: hue-rotate(0deg) saturate(1.15);
-  }
-  to {
-    filter: hue-rotate(360deg) saturate(1.15);
   }
 }
 
