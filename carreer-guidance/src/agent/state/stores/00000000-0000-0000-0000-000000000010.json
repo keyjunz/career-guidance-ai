@@ -1,7 +1,7 @@
 {
   "user_id": "00000000-0000-0000-0000-000000000010",
   "created_at": "2026-05-06T09:56:47.867875+00:00",
-  "updated_at": "2026-05-12T14:37:27.886862+00:00",
+  "updated_at": "2026-05-12T14:41:00.084016+00:00",
   "pending_by_execution": {},
   "status_by_execution": {
     "e4e8388b-8905-4fdc-b747-67014679cba5": [
@@ -3085,6 +3085,52 @@
         "status": "Processing complete.",
         "timestamp": "2026-05-12T14:37:27.886862+00:00"
       }
+    ],
+    "c0d5a8cd-9dfc-4f60-9c3d-2eda388c7432": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-12T14:40:14.022664+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-12T14:40:14.052506+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-12T14:40:14.060702+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-12T14:40:14.072422+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-12T14:40:14.085735+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-12T14:40:55.593494+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-12T14:40:55.606186+00:00"
+      },
+      {
+        "status": "Refining answer based on evaluation.",
+        "timestamp": "2026-05-12T14:40:56.157454+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-12T14:40:59.272737+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-12T14:41:00.067798+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-12T14:41:00.084016+00:00"
+      }
     ]
   },
   "qa_cache": {
@@ -4661,6 +4707,37 @@
       ],
       "cache_hit": false,
       "timestamp": "2026-05-12T14:37:27.859184+00:00"
+    },
+    {
+      "execution_id": "c0d5a8cd-9dfc-4f60-9c3d-2eda388c7432",
+      "conversation_id": "7e4ebbf3-e570-4312-94fe-ce49c60c89e6",
+      "question": "Đại học Duy Tân thì sao?",
+      "answer": "**Đại học Duy Tân** là một trường đại học tư thục tại Việt Nam. \n- Địa chỉ: 254 Nguyễn Văn Linh, phường Thanh Khê, Đà Nẵng, Việt Nam.\n- Loại: Tư thục.\n- Khẩu hiệu: \"Bản lĩnh Việt Nam – Đổi mới, Sáng tạo, Vươn tới những tầm cao!\".\n- Thành lập: 11/11/1994.\n- Giám đốc: TS. Lê Nguyên Bảo.\n- Số nhân viên: 1.238.\n- Màu sắc: Màu nâu thẫm đỏ.\n- Linh vật: Con Cò.\n- Website: [www.dtu.edu.vn](http://www.dtu.edu.vn/).\n- Xếp hạng quốc gia: Xếp hạng 5 trong bảng xếp hạng 100 trường đại học Việt Nam (VNUR) năm 2023.",
+      "sources": [
+        {
+          "title": "TẠI SAO BẠN CHỌN ĐẠI HỌC DUY TÂN?",
+          "url": "https://www.youtube.com/watch?v=GWcPnEBlPcA",
+          "snippet": "TẠI SAO BẠN CHỌN ĐẠI HỌC DUY TÂN? Tap to unmute 2x Search Copy link Info Shopping ![](https://i.ytimg.com/an/3TQxAKJTRngbX89sX_wcIg/featured_channel.jpg?v=5ee190a5) If playback doesn't begin shortly, try restarting your device. • You're signed out Videos you watch may be added to the TV's watch history and influence TV recommendations. To avoid this, cancel and sign in to YouTube on your computer....",
+          "score": 0.0
+        },
+        {
+          "title": "Chuyên trang Tuyển sinh - Đại học Duy Tân, Đà Nẵng, Việt ...",
+          "url": "https://duytan.edu.vn/tuyen-sinh/",
+          "snippet": "[![muốn có việc làm](https://duytan.edu.vn/tuyen-sinh/Upload/banner/Baner_Web_02-04-5203.jpg)![muốn có việc làm](https://duytan.edu.vn/tuyen-sinh/Upload/banner/Baner_Web_01_Mobile-copy-7845.jpg)](https://duytan.edu.vn/tuyen-sinh/Page/EducationView.aspx) [![Thông tin tuyển sinh](https://duytan.edu.vn/tuyen-sinh/Upload/banner/Baner_Web_02-01-8.3-2706.jpg)![Thông tin tuyển sinh](https://duytan.edu.vn...",
+          "score": 0.0
+        },
+        {
+          "title": "Đại học Duy Tân – Wikipedia tiếng Việt",
+          "url": "https://vi.wikipedia.org/wiki/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Duy_T%C3%A2n",
+          "snippet": "# Đại học Duy Tân Đại học Duy Tân | Đại học Duy Tân | | --- | | Duy Tan University | | [![](https://upload.wikimedia.org/wikipedia/vi/thumb/1/12/Logo_dtu_footer.png/500px-Logo_dtu_footer.png)](https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_dtu_footer.png) | | Địa chỉ | | ![](https://vi.wikipedia.org/wiki/270x200@2x.png?lang=vi&domain=vi.wikipedia.org&title=%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Duy_T%C3...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://i.ytimg.com/vi/GWcPnEBlPcA/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgXShCMA8=&rs=AOn4CLCn42HDLZqEvSDmplkjcAmFl7YNUQ"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-12T14:41:00.058562+00:00"
     }
   ]
 }
