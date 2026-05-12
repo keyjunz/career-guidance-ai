@@ -6,6 +6,10 @@ from typing import Any, Dict, List
 import numpy as np
 
 from src.services.retriever_service.bm25_index import BM25Index
+from src.services.retriever_service.retrieval_cache import (
+    HybridRetrievalCache,
+    make_retrieval_cache_key,
+)
 
 RETRIEVER_TOP_K = 20
 RETRIEVER_FINAL_K = 10
@@ -42,6 +46,7 @@ class RetrieverService:
         self._doc_ids: list[str] = []
         self._doc_texts: list[str] = []
         self._doc_metadatas: list[dict] = []
+        self._last_search_cache_hit: bool = False
 
     def connect(self) -> None:
         try:
@@ -117,9 +122,45 @@ class RetrieverService:
     ) -> List[Dict]:
         if not self.is_ready:
             raise RuntimeError("RetrieverService not connected. Call connect() first.")
+        self._last_search_cache_hit = False
+        cache_enabled = (
+            os.getenv("RETRIEVAL_CACHE_ENABLED", "true").strip().lower() == "true"
+        )
+        if cache_enabled:
+            cache_key = make_retrieval_cache_key(
+                query=query,
+                top_k=top_k,
+                dense_k=dense_k,
+                sparse_k=sparse_k,
+                where=where,
+            )
+            cached = HybridRetrievalCache.get_instance().get(cache_key)
+            if cached is not None:
+                self._last_search_cache_hit = True
+                self.logger.info(
+                    "Hybrid retrieval cache HIT | query_len=%d top_k=%d",
+                    len(query or ""),
+                    top_k,
+                )
+                return cached
+
         dense_results = self._chroma_search(query_embedding, dense_k, where)
         sparse_results = self._bm25_search(query, sparse_k)
-        return self._rrf_fusion(dense_results, sparse_results, top_k)
+        fused = self._rrf_fusion(dense_results, sparse_results, top_k)
+        if cache_enabled:
+            cache_key = make_retrieval_cache_key(
+                query=query,
+                top_k=top_k,
+                dense_k=dense_k,
+                sparse_k=sparse_k,
+                where=where,
+            )
+            HybridRetrievalCache.get_instance().set(cache_key, fused)
+        return fused
+
+    @property
+    def last_search_cache_hit(self) -> bool:
+        return self._last_search_cache_hit
 
     def _chroma_search(
         self,

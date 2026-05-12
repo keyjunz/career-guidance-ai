@@ -12,12 +12,16 @@ export function ChatInputDock({
   placeholder,
   onSend,
   disabled = false,
+  isStreaming = false,
+  onStop,
   chatMode = 'auto',
   onChatModeChange,
 }: {
   placeholder: string
   onSend: (text: string) => void
   disabled?: boolean
+  isStreaming?: boolean
+  onStop?: () => void
   chatMode?: ChatMode
   onChatModeChange?: (mode: ChatMode) => void
 }) {
@@ -187,6 +191,22 @@ export function ChatInputDock({
                 }
               }}
             />
+
+            {isStreaming && onStop ? (
+              <button
+                type="button"
+                className="u-focus mr-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-on-surface/14 bg-surface-container-high text-on-surface shadow-sm transition hover:bg-surface-container sm:h-11 sm:w-11"
+                aria-label="Dừng tạo câu trả lời"
+                onClick={onStop}
+              >
+                <span
+                  className="material-symbols-outlined text-[22px]"
+                  style={{ fontVariationSettings: "'FILL' 1" }}
+                >
+                  stop
+                </span>
+              </button>
+            ) : null}
 
             <button
               type="button"

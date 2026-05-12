@@ -24,6 +24,48 @@ from src.services.reranker_service.main import RerankerService
 from src.services.retriever_service.main import RetrieverService
 
 
+def _source_snippet(text: str, max_len: int = 360) -> str:
+    t = (text or "").strip().replace("\n", " ")
+    if len(t) <= max_len:
+        return t
+    return t[: max_len - 1].rstrip() + "…"
+
+
+def _http_source_url(metadata: dict[str, Any]) -> str:
+    s = str(metadata.get("source_url") or "").strip()
+    if s.startswith("http://") or s.startswith("https://"):
+        return s
+    return ""
+
+
+def _filesystem_path_like(s: str) -> bool:
+    t = s.strip()
+    if not t:
+        return False
+    tl = t.lower()
+    if tl.startswith("http://") or tl.startswith("https://"):
+        return False
+    if len(t) >= 3 and t[1] == ":" and t[2] in "/\\":
+        return True
+    if t.startswith("\\\\"):
+        return True
+    if t.startswith("/") and not t.startswith("//"):
+        return True
+    return False
+
+
+def _display_source_title(raw_title: str, raw_source: str) -> str:
+    rt = (raw_title or "").strip()
+    rs = (raw_source or "").strip()
+    if rt and not _filesystem_path_like(rt):
+        return rt
+    if rs:
+        return Path(rs).name or "document"
+    if rt:
+        return Path(rt).name if _filesystem_path_like(rt) else rt
+    return "document"
+
+
 class RAGModuleImpl:
     """RAG module orchestration class.
 
@@ -131,14 +173,18 @@ class RAGModuleImpl:
             if image_urls:
                 docs_with_image_urls += 1
             context_parts.append(f"[{i + 1}] {doc['text']}")
+            raw_title = str(doc.get("title") or metadata.get("title") or "").strip()
+            raw_source = str(doc.get("source") or metadata.get("file_path") or "").strip()
+            display_title = _display_source_title(raw_title, raw_source)
             sources.append(
                 SourceInfo(
                     rank=i + 1,
-                    text=doc["text"][:100] + "...",
+                    text=_source_snippet(str(doc.get("text") or "")),
                     source=doc.get("source", "unknown"),
-                    title=doc.get("title", ""),
+                    title=display_title,
                     rerank_score=doc.get("rerank_score", 0.0),
                     image_urls=image_urls,
+                    url=_http_source_url(metadata),
                 )
             )
             for url in image_urls:

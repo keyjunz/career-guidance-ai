@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import { SideNav } from '../../components/layout/SideNav'
@@ -7,7 +7,11 @@ import { ChatThread } from '../../components/chat/ChatThread'
 import { ChatInputDock } from '../../components/chat/ChatInputDock'
 import type { ChatConversation, ChatMessage } from '../../types/chat'
 import type { AuthUser, ChatMode } from '../../types/api'
-import { sendChatMessage, streamChatMessage } from '../../services/chatApi'
+import {
+  isStreamAbortError,
+  sendChatMessage,
+  streamChatMessage,
+} from '../../services/chatApi'
 import {
   collectResolvedImageUrls,
   mapApiPayloadToAssistantMessage,
@@ -69,6 +73,24 @@ export function ChatPage() {
   )
 
   const isTyping = activeConversationId === apiTypingConversationId
+  const streamAbortRef = useRef<AbortController | null>(null)
+
+  const handleStopStream = () => {
+    streamAbortRef.current?.abort()
+  }
+
+  useEffect(() => {
+    if (!isTyping) return
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key !== 'Escape') return
+      e.preventDefault()
+      streamAbortRef.current?.abort()
+    }
+
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [isTyping])
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
@@ -206,16 +228,22 @@ export function ChatPage() {
           ? ('web_only' as const)
           : undefined
 
+    const streamController = new AbortController()
+    streamAbortRef.current = streamController
+
+    let streamedText = ''
+    let latestStatus = ''
+
     try {
       try {
-        let streamedText = ''
         let streamedExecutionId: string | undefined
         let streamedConversationId: string | undefined
         let streamedImageUrls: string[] | undefined
         let streamedSources: Array<Record<string, unknown>> | undefined
         let streamedStatuses: string[] | undefined
         let streamedCached: boolean | undefined
-        let latestStatus = ''
+        let streamedRetrievalCacheHit: boolean | undefined
+        let streamedAnswerSections: Array<Record<string, unknown>> | undefined
         await streamChatMessage(
           { question: trimmed, ...(planValue ? { plan: planValue } : {}) },
           {
@@ -262,6 +290,8 @@ export function ChatPage() {
               streamedConversationId = payload.conversation_id
               streamedStatuses = payload.statuses
               streamedCached = payload.cached
+              streamedRetrievalCacheHit = payload.retrieval_cache_hit
+              streamedAnswerSections = payload.answer_sections ?? undefined
               streamedSources = payload.sources
               const images = collectResolvedImageUrls(payload)
               if (images.length > 0) {
@@ -269,6 +299,7 @@ export function ChatPage() {
               }
             },
           },
+          { signal: streamController.signal },
         )
 
         setConversations((prev) =>
@@ -292,6 +323,8 @@ export function ChatPage() {
                             conversationId: streamedConversationId,
                             statuses: streamedStatuses,
                             cached: streamedCached,
+                            retrieval_cache_hit: streamedRetrievalCacheHit,
+                            answer_sections: streamedAnswerSections,
                             sources: streamedSources,
                           },
                           imageUrls: streamedImageUrls,
@@ -303,7 +336,36 @@ export function ChatPage() {
           ),
         )
         return
-      } catch {
+      } catch (streamErr) {
+        if (isStreamAbortError(streamErr)) {
+          const stoppedSuffix = '\n\n*(Đã dừng.)*'
+          const base =
+            streamedText.trim() ||
+            (latestStatus.trim() ? `Processing: ${latestStatus}` : '')
+          const finalStoppedText = base ? `${base}${stoppedSuffix}` : stoppedSuffix.trim()
+          setConversations((prev) =>
+            prev.map((conversation) =>
+              conversation.id === activeConversationId
+                ? {
+                    ...conversation,
+                    messages: conversation.messages.map((message) =>
+                      message.id === streamingAssistantId
+                        ? {
+                            ...message,
+                            text: finalStoppedText,
+                            meta: {
+                              ...message.meta,
+                              stopped: true,
+                            },
+                          }
+                        : message,
+                    ),
+                  }
+                : conversation,
+            ),
+          )
+          return
+        }
         // Remove temporary stream bubble before sync fallback.
         setConversations((prev) =>
           prev.map((conversation) =>
@@ -343,6 +405,7 @@ export function ChatPage() {
         setErrorMessage(message)
       }
     } finally {
+      streamAbortRef.current = null
       setApiTypingConversationId((prev) =>
         prev === activeConversationId ? null : prev,
       )
@@ -394,6 +457,8 @@ export function ChatPage() {
           placeholder="Hỏi về hướng nghiệp hoặc kỹ năng..."
           onSend={handleSend}
           disabled={isTyping}
+          isStreaming={isTyping}
+          onStop={handleStopStream}
           chatMode={chatMode}
           onChatModeChange={setChatMode}
         />

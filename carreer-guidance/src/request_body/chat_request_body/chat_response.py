@@ -18,3 +18,5 @@ class ChatResponse(BaseModel):
     statuses: list[str] = Field(default_factory=list)
     sources: list[dict[str, Any]] = Field(default_factory=list)
     cached: bool = False
+    retrieval_cache_hit: bool = False
+    answer_sections: list[dict[str, Any]] | None = None

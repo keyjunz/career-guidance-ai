@@ -37,8 +37,10 @@ export function mapApiPayloadToAssistantMessage(
       executionId: payload.execution_id,
       conversationId: payload.conversation_id,
       cached: payload.cached,
+      retrieval_cache_hit: payload.retrieval_cache_hit,
       statuses: payload.statuses,
       sources: payload.sources,
+      answer_sections: payload.answer_sections ?? undefined,
     },
   }
 }

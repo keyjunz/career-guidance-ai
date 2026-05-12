@@ -99,9 +99,79 @@ def _collect_images(state: AgentRuntimeState) -> list[str]:
     return []
 
 
+def _dedupe_sources(sources: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    deduped: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for source in sources:
+        if not isinstance(source, dict):
+            continue
+        key = str(
+            source.get("url") or source.get("source") or source.get("title") or ""
+        ).strip()
+        if not key:
+            key = f"source-{len(deduped) + 1}"
+        if key in seen:
+            continue
+        seen.add(key)
+        deduped.append(source)
+    return deduped
+
+
+def _compose_multi_intent_answer(state: AgentRuntimeState) -> str:
+    sections: list[dict[str, Any]] = []
+    all_sources: list[dict[str, Any]] = []
+    all_images: list[str] = []
+
+    for idx, sub in enumerate(state.sub_queries, 1):
+        iid = str(sub.get("intent_id") or "").strip()
+        bundle = state.tool_results_by_intent.get(iid) or {}
+        title = str(sub.get("section_title") or f"Ý {idx}").strip()
+        sub_q = str(sub.get("query") or "").strip()
+        answer = str(bundle.get("answer") or "").strip()
+        sources = list(bundle.get("sources") or [])
+        all_sources.extend(sources)
+        for img in list(bundle.get("images") or []):
+            u = str(img).strip()
+            if u and u not in all_images:
+                all_images.append(u)
+
+        sections.append(
+            {
+                "intent_id": iid,
+                "intent_title": title,
+                "query": sub_q,
+                "answer": answer,
+                "sources": sources,
+            }
+        )
+
+    state.answer_sections = sections
+    parts: list[str] = []
+    for i, sec in enumerate(sections, 1):
+        parts.append(f"## {i}. {sec['intent_title']}\n")
+        parts.append(f"**Câu hỏi:** {sec['query']}\n")
+        if sec["answer"]:
+            parts.append(f"{sec['answer']}\n")
+        else:
+            parts.append(
+                "_Không có phản hồi từ công cụ cho ý này._\n"
+                if _looks_vietnamese(state.question)
+                else "_No tool response for this part._\n"
+            )
+    merged = "\n".join(parts).strip()
+    state.sources = _dedupe_sources(all_sources)
+    state.image_urls = all_images[:3]
+    state.draft_answer = merged
+    state.answer = merged
+    return merged
+
+
 def compose_draft_answer(
     state: AgentRuntimeState,
 ) -> str:
+    if state.plan == "multi_intent":
+        return _compose_multi_intent_answer(state)
+
     if state.plan == "direct_answer":
         direct_answer = str(
             state.tool_results.get("direct", {}).get("answer") or ""
@@ -110,6 +180,7 @@ def compose_draft_answer(
         state.answer = direct_answer
         state.sources = []
         state.image_urls = []
+        state.answer_sections = []
         return state.draft_answer
 
     rag_payload = state.tool_results.get("rag", {})

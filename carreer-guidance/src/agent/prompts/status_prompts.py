@@ -4,6 +4,7 @@ STATUS_MESSAGES = {
     "cache_checking": "Checking for cached answers.",
     "cache_hit": "Cache hit — returning fast response.",
     "guardrails_running": "Running guardrails check.",
+    "decompose_running": "Analyzing question structure.",
     "planner_running": "Planning and selecting tools.",
     "tools_running": "Executing tools.",
     "draft_running": "Composing draft answer.",

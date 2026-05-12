@@ -3,6 +3,7 @@ from typing import Any
 from src.agent.nodes.draft_node import compose_draft_answer
 from src.agent.nodes.rag_node import run_rag
 from src.agent.nodes.web_node import run_web
+from src.agent.nodes.tool_executor_node import _run_single_intent
 from src.agent.state.agent_state import AgentRuntimeState
 
 
@@ -21,6 +22,7 @@ def _retry_tool(tool_name: str, state: AgentRuntimeState) -> dict[str, Any]:
         payload.setdefault("images", [])
         payload.setdefault("snippets", [])
         payload.setdefault("latency_ms", 0.0)
+        payload.setdefault("retrieval_cache_hit", False)
         payload["success"] = True
         payload["tool_name"] = tool_name
         payload["error"] = ""
@@ -35,11 +37,24 @@ def _retry_tool(tool_name: str, state: AgentRuntimeState) -> dict[str, Any]:
             "snippets": [],
             "latency_ms": 0.0,
             "error": str(exc),
+            "retrieval_cache_hit": False,
         }
 
 
 def run_fixer(state: AgentRuntimeState) -> None:
     state.retry_count += 1
+
+    if state.plan == "multi_intent":
+        for sub in list(state.sub_queries or []):
+            iid = str(sub.get("intent_id") or "").strip()
+            if not iid:
+                continue
+            bundle = state.tool_results_by_intent.get(iid) or {}
+            if bundle.get("success"):
+                continue
+            state.tool_results_by_intent[iid] = _run_single_intent(state, sub)
+        compose_draft_answer(state)
+        return
 
     if state.plan in {"rag_only", "rag_web_parallel"}:
         rag_payload = state.tool_results.get("rag", {})

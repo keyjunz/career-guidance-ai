@@ -4,7 +4,13 @@ import logging
 from src.agent.state.agent_state import AgentRuntimeState
 from src.services.llm_service.main import LLMService
 
-VALID_PLANS = {"direct_answer", "rag_only", "web_only", "rag_web_parallel"}
+VALID_PLANS = {
+    "direct_answer",
+    "rag_only",
+    "web_only",
+    "rag_web_parallel",
+    "multi_intent",
+}
 DEFAULT_PLAN = "rag_web_parallel"
 
 logger = logging.getLogger(__name__)
@@ -101,6 +107,15 @@ def choose_plan(state: AgentRuntimeState) -> str:
         logger.info(
             "[agent-planner] heuristic direct answer execution_id=%s",
             state.execution_id,
+        )
+        return state.plan
+
+    if getattr(state, "multi_intent", False) and state.sub_queries:
+        state.plan = "multi_intent"
+        logger.info(
+            "[agent-planner] multi_intent plan execution_id=%s intents=%d",
+            state.execution_id,
+            len(state.sub_queries),
         )
         return state.plan
 

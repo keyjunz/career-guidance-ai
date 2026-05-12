@@ -82,6 +82,8 @@ def _to_chat_response(state: AgentRuntimeState) -> ChatResponse:
         statuses=state.status_history,
         sources=state.sources,
         cached=state.cache_hit,
+        retrieval_cache_hit=bool(getattr(state, "retrieval_cache_hit", False)),
+        answer_sections=list(state.answer_sections) if state.answer_sections else None,
     )
 
 

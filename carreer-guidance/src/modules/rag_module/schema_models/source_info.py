@@ -11,3 +11,4 @@ class SourceInfo:
     title: str
     rerank_score: float
     image_urls: list[str] = field(default_factory=list)
+    url: str = ""

@@ -56,6 +56,10 @@ class RAGTool:
         )
         result = self.module.query(query)
 
+        retrieval_cache_hit = bool(
+            getattr(self.retriever_service, "last_search_cache_hit", False)
+        )
+
         return {
             "answer": result.answer,
             "sources": [
@@ -64,6 +68,7 @@ class RAGTool:
                     "text": src.text,
                     "source": src.source,
                     "title": src.title,
+                    "url": src.url or "",
                     "rerank_score": src.rerank_score,
                     "image_urls": src.image_urls,
                 }
@@ -72,4 +77,5 @@ class RAGTool:
             "images": result.image_urls,
             "language": result.language,
             "latency_ms": result.latency_ms,
+            "retrieval_cache_hit": retrieval_cache_hit,
         }

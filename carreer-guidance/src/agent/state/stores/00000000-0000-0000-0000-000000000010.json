@@ -1,7 +1,7 @@
 {
   "user_id": "00000000-0000-0000-0000-000000000010",
   "created_at": "2026-05-06T09:56:47.867875+00:00",
-  "updated_at": "2026-05-10T16:54:07.700046+00:00",
+  "updated_at": "2026-05-12T14:37:27.886862+00:00",
   "pending_by_execution": {},
   "status_by_execution": {
     "e4e8388b-8905-4fdc-b747-67014679cba5": [
@@ -2343,6 +2343,748 @@
         "status": "Processing complete.",
         "timestamp": "2026-05-10T16:54:07.700046+00:00"
       }
+    ],
+    "8418bd21-f009-4f2b-8db0-5865b659a0ae": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-11T13:56:42.231958+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-11T13:56:42.249491+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-11T13:56:42.255924+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-11T13:56:42.259793+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-11T13:56:42.269954+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-11T13:56:46.615053+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-11T13:56:46.623427+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-11T13:56:51.946532+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-11T13:56:51.956691+00:00"
+      }
+    ],
+    "4e6b6873-7ea9-4c19-bebc-a79234e861b7": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-11T13:57:02.893092+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-11T13:57:02.910101+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-11T13:57:02.915265+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-11T13:57:02.927769+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-11T13:57:02.935946+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-11T13:57:08.159998+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-11T13:57:12.273410+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-11T13:57:12.278611+00:00"
+      },
+      {
+        "status": "Refining answer based on evaluation.",
+        "timestamp": "2026-05-11T13:57:17.552122+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-11T13:57:21.641273+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-11T13:57:26.895444+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-11T13:57:26.905099+00:00"
+      }
+    ],
+    "02c9482b-78ce-4481-94e3-04c27b2e2591": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-11T13:59:36.965075+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-11T13:59:36.984979+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-11T13:59:36.992973+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-11T13:59:36.995724+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-11T13:59:37.008763+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-11T13:59:41.090870+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-11T13:59:41.098578+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-11T13:59:46.484527+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-11T13:59:46.491443+00:00"
+      }
+    ],
+    "b11e1084-1575-49e7-bdda-6db4364e3556": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-11T14:00:14.985465+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-11T14:00:14.993530+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-11T14:00:15.007940+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-11T14:00:15.014463+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-11T14:00:15.028939+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-11T14:00:19.111396+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-11T14:00:19.117513+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-11T14:00:24.429666+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-11T14:00:24.435658+00:00"
+      }
+    ],
+    "df66d109-180a-4b5b-85b5-e47891d2c6f8": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-11T14:20:27.457449+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-11T14:20:27.487042+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-11T14:20:27.499115+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-11T14:20:27.510473+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-11T14:20:27.526384+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-11T14:20:29.210104+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-11T14:20:29.220784+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-11T14:20:29.241594+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-11T14:20:29.961098+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-11T14:20:29.970620+00:00"
+      }
+    ],
+    "f7c0ee55-d8df-426b-921a-59b9ba181c93": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-11T14:20:52.741481+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-11T14:20:52.768586+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-11T14:20:52.769696+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-11T14:20:52.794901+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-11T14:20:52.804942+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-11T14:20:53.448785+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-11T14:20:53.478657+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-11T14:20:53.502358+00:00"
+      },
+      {
+        "status": "Refining answer based on evaluation.",
+        "timestamp": "2026-05-11T14:20:54.160112+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-11T14:20:54.192049+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-11T14:20:54.920892+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-11T14:20:54.929009+00:00"
+      }
+    ],
+    "10eb68e1-582b-4536-9bbf-82c7e45669dc": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-11T14:21:26.332382+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-11T14:21:26.352761+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-11T14:21:26.364245+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-11T14:21:26.370133+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-11T14:21:26.388088+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-11T14:21:27.100781+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-11T14:21:27.159264+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-11T14:21:27.172804+00:00"
+      },
+      {
+        "status": "Refining answer based on evaluation.",
+        "timestamp": "2026-05-11T14:21:27.876103+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-11T14:21:27.904495+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-11T14:21:29.680775+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-11T14:21:29.699459+00:00"
+      }
+    ],
+    "81056119-0578-44af-be4c-be01b0189846": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-11T14:21:43.585827+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-11T14:21:43.609787+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-11T14:21:43.616737+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-11T14:21:43.637406+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-11T14:21:43.649159+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-11T14:22:03.724012+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-11T14:22:03.749917+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-11T14:22:04.808308+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-11T14:22:04.824923+00:00"
+      }
+    ],
+    "b58d2833-ee42-4b62-b9da-68559c23e5bb": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-12T13:00:29.020463+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-12T13:00:29.038829+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-12T13:00:29.057811+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-12T13:00:29.068281+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-12T13:00:29.083215+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-12T13:00:47.855331+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-12T13:00:47.876116+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-12T13:00:48.728824+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-12T13:00:48.736902+00:00"
+      }
+    ],
+    "1e3ac700-47e2-4753-9b7b-0b657ede4c87": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-12T13:27:58.365190+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-12T13:27:58.376671+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-12T13:27:58.394527+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-12T13:27:58.407898+00:00"
+      },
+      {
+        "status": "Analyzing question structure.",
+        "timestamp": "2026-05-12T13:27:58.417353+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-12T13:28:00.141495+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-12T13:28:00.153700+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-12T13:28:42.534440+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-12T13:28:42.551829+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-12T13:28:47.954551+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-12T13:28:47.968354+00:00"
+      }
+    ],
+    "3b51cbdf-6557-44ee-be3d-2e4c430e5daf": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-12T13:48:15.580163+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-12T13:48:15.630601+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-12T13:48:15.637699+00:00"
+      },
+      {
+        "status": "Cache hit — returning fast response.",
+        "timestamp": "2026-05-12T13:48:15.664551+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-12T13:48:15.696686+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-12T13:48:15.706662+00:00"
+      }
+    ],
+    "ae0ab7fb-0192-40d4-b95e-93e955be95a9": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-12T13:48:28.314501+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-12T13:48:28.334172+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-12T13:48:28.342624+00:00"
+      },
+      {
+        "status": "Cache hit — returning fast response.",
+        "timestamp": "2026-05-12T13:48:28.355174+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-12T13:48:28.376990+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-12T13:48:28.383987+00:00"
+      }
+    ],
+    "8daeb30d-2502-4fae-96eb-4eefaffdac73": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-12T13:49:07.304349+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-12T13:49:07.325900+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-12T13:49:07.338392+00:00"
+      },
+      {
+        "status": "Cache hit — returning fast response.",
+        "timestamp": "2026-05-12T13:49:07.348540+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-12T13:49:07.367422+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-12T13:49:07.375484+00:00"
+      }
+    ],
+    "38aee944-252b-48ce-bf62-9eda906503e8": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-12T13:54:54.956845+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-12T13:54:54.979087+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-12T13:54:54.988215+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-12T13:54:54.999416+00:00"
+      },
+      {
+        "status": "Analyzing question structure.",
+        "timestamp": "2026-05-12T13:54:55.006365+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-12T13:54:56.371638+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-12T13:54:56.388566+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-12T13:55:24.457405+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-12T13:55:24.472864+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-12T13:55:33.631666+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-12T13:55:33.644745+00:00"
+      }
+    ],
+    "6ac54548-da66-42ee-9229-4776d8d0cad0": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-12T14:10:50.047923+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-12T14:10:50.058501+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-12T14:10:50.074423+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-12T14:10:50.086607+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-12T14:10:50.095471+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-12T14:11:09.311109+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-12T14:11:09.518134+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-12T14:11:10.218269+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-12T14:11:10.230790+00:00"
+      }
+    ],
+    "a6d07855-399d-489b-9f1f-f814ca634385": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-12T14:15:49.953409+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-12T14:15:49.976828+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-12T14:15:49.983046+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-12T14:15:50.000139+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-12T14:15:50.011022+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-12T14:16:04.670407+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-12T14:16:04.702144+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-12T14:16:05.584110+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-12T14:16:05.593730+00:00"
+      }
+    ],
+    "57ed1cb9-f18f-44db-a116-ff2c25359f59": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-12T14:31:27.644592+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-12T14:31:27.665688+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-12T14:31:27.680861+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-12T14:31:27.691335+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-12T14:31:27.705736+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-12T14:31:35.819654+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-12T14:31:35.831031+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-12T14:31:36.719201+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-12T14:31:36.728773+00:00"
+      }
+    ],
+    "23e27386-8632-43d4-9912-7d2b331bff70": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-12T14:34:03.074254+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-12T14:34:03.098486+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-12T14:34:03.111614+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-12T14:34:03.120942+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-12T14:34:03.134866+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-12T14:34:19.480679+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-12T14:34:19.492935+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-12T14:34:20.367558+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-12T14:34:20.379585+00:00"
+      }
+    ],
+    "3062d5ad-5ea3-4f2e-a91a-2223bf1b9b4d": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-12T14:37:05.680626+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-12T14:37:05.705164+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-12T14:37:05.715260+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-12T14:37:05.729836+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-12T14:37:05.740111+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-12T14:37:27.100053+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-12T14:37:27.132495+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-12T14:37:27.871737+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-12T14:37:27.886862+00:00"
+      }
     ]
   },
   "qa_cache": {
@@ -2370,13 +3112,327 @@
       "conversation_id": "d32f53b3-b38c-4380-aa80-ff01bf9fb46e",
       "updated_at": "2026-05-06T14:44:55.409292+00:00"
     },
-    "xin chào": {
-      "question": "Xin chào",
+    "xin chào, bạn giúp được gì cho tôi nhỉ?": {
+      "question": "Xin chào, bạn giúp được gì cho tôi nhỉ?",
       "answer": "Tôi có thể hỗ trợ bạn về định hướng nghề nghiệp, phát triển kỹ năng và thông tin tham khảo từ web khi cần.",
       "sources": [],
       "image_urls": [],
-      "conversation_id": "cb325806-0634-4b0a-b05a-b4ce0062f1b6",
-      "updated_at": "2026-05-10T16:54:07.688367+00:00"
+      "conversation_id": "bde14b55-2014-4dc6-9a8c-68d51013ef90",
+      "updated_at": "2026-05-11T14:20:29.939428+00:00"
+    },
+    "cho tôi thông tin sinh viên nguyễn văn phi hùng": {
+      "question": "Cho tôi thông tin sinh viên Nguyễn Văn Phi Hùng",
+      "answer": "Tôi có thể hỗ trợ bạn về định hướng nghề nghiệp, phát triển kỹ năng và thông tin tham khảo từ web khi cần.",
+      "sources": [],
+      "image_urls": [],
+      "conversation_id": "f68fc12e-c1d6-4412-a751-e30d8cbaf9d1",
+      "updated_at": "2026-05-11T14:20:54.896955+00:00"
+    },
+    "cho tôi biết các thông tin mà bạn đang có": {
+      "question": "Cho tôi biết các thông tin mà bạn đang có",
+      "answer": "Tôi không có thông tin cụ thể nào ngoài những gì được cung cấp trong ngữ cảnh.",
+      "sources": [],
+      "image_urls": [],
+      "conversation_id": "7bac394d-b729-498a-9e88-cef4a0fe78c1",
+      "updated_at": "2026-05-11T14:22:04.776639+00:00"
+    },
+    "traffic flow reconstruction from limited collected data là gì và model của nó?": {
+      "question": "Traffic Flow Reconstruction from Limited Collected Data là gì và model của nó?",
+      "answer": "**Traffic Flow Reconstruction from Limited Collected Data** là một phương pháp sử dụng dữ liệu thu thập được từ các phương tiện giao thông để tái tạo lại dòng chảy giao thông. \n\nModel của nó kết hợp giữa mô hình truyền thống về dòng chảy giao thông và phương pháp học máy (machine learning) để ước tính và tái tạo lại mật độ giao thông từ dữ liệu thu thập được. \n\nCụ thể, mô hình này sử dụng **mô hình FtL (Follow-the-Leader)** và **phương pháp học sâu (deep learning)** để ước tính mật độ giao thông và tái tạo lại dòng chảy giao thông.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "(a) N = 2000, T = 0.1\n(b) N = 4000, T = 0.2\nFig. 5: Reconstructed final traffic density\n(a) NN learn...",
+          "source": "D:\\Documents\\rag-module\\carreer-guidance\\src\\database\\file_downloaded\\00000000-0000-0000-0000-000000000010\\Traffic Flow Reconstruction from Limited Collected Data.pdf",
+          "title": "Traffic Flow Reconstruction from Limited Collected Data.pdf",
+          "rerank_score": -1.1304566860198975,
+          "image_urls": [
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img001.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img002.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img003.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img004.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img005.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img006.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img007.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img008.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img001.png"
+      ],
+      "conversation_id": "2a7d7fd5-f37b-44e4-b7a3-3319ac71109d",
+      "updated_at": "2026-05-12T13:00:48.719153+00:00"
+    },
+    "theo tài liệu traffic flow reconstruction from limited collected data, bài toán tái tạo luồng giao thông từ dữ liệu thu thập hạn chế được định nghĩa / mô hình hóa như thế nào? trong pdf đó, phương pháp / pipeline chính để reconstruct traffic flow là gì (các bước hoặc module)? tài liệu dùng metric hoặc dataset nào để đánh giá (nếu có nêu tên)? hạn chế của dữ liệu “limited” được tác giả nói rõ ở đâu và xử lý ra sao? so sánh ngắn: đóng góp chính của paper/tài liệu so với các hướng tiếp cận truyền thống (theo nội dung trong file).": {
+      "question": "Theo tài liệu Traffic Flow Reconstruction from Limited Collected Data, bài toán tái tạo luồng giao thông từ dữ liệu thu thập hạn chế được định nghĩa / mô hình hóa như thế nào? Trong PDF đó, phương pháp / pipeline chính để reconstruct traffic flow là gì (các bước hoặc module)? Tài liệu dùng metric hoặc dataset nào để đánh giá (nếu có nêu tên)? Hạn chế của dữ liệu “limited” được tác giả nói rõ ở đâu và xử lý ra sao? So sánh ngắn: đóng góp chính của paper/tài liệu so với các hướng tiếp cận truyền thống (theo nội dung trong file).",
+      "answer": "## 1. Định nghĩa và mô hình hóa\n\n**Câu hỏi:** Bài toán tái tạo luồng giao thông từ dữ liệu thu thập hạn chế được định nghĩa / mô hình hóa như thế nào?\n\nBài toán tái tạo luồng giao thông từ dữ liệu thu thập hạn chế được định nghĩa và mô hình hóa thông qua việc kết hợp các mô hình truyền thống về luồng giao thông với phương pháp tiếp cận dựa trên dữ liệu. Cụ thể, nó liên quan đến việc sử dụng các mô hình như **LWR (Lighthill-Whitham-Richards)** và phương pháp học máy để ước tính và tái tạo mật độ giao thông từ dữ liệu thu thập được từ các cảm biến hoặc phương tiện khác. Mục tiêu là phát triển một mô hình có thể hoạt động hiệu quả với dữ liệu hạn chế và thông tin cảm biến thưa thớt trong khi vẫn duy trì độ phức tạp tính toán thấp.\n\n## 2. Phương pháp tái tạo luồng giao thông\n\n**Câu hỏi:** Phương pháp / pipeline chính để reconstruct traffic flow là gì?\n\n**Phương pháp** chính để reconstruct traffic flow là kết hợp giữa **mô hình truyền thống** về lưu lượng giao thông và **phương pháp học dữ liệu** (data-driven approach). Cụ thể, mô hình này sử dụng **học sâu** (deep learning) và **phương pháp giải tích** để ước lượng và tái tạo mật độ lưu lượng giao thông.\n\n## 3. Đánh giá và metric\n\n**Câu hỏi:** Tài liệu dùng metric hoặc dataset nào để đánh giá?\n\n- Tài liệu sử dụng các metric như **MSE** (Mean Squared Error) và **RE** (Relative Error) để đánh giá kết quả của mô hình.\n- Ngoài ra, tài liệu cũng sử dụng **Wasserstein distance** để đánh giá sự hội tụ của chuỗi mật độ rời rạc.\n- Các kết quả cũng được so sánh với **Godunov scheme density** và **ground truth initial density** để đánh giá độ chính xác của mô hình.\n\n## 4. Hạn chế và đóng góp\n\n**Câu hỏi:** Hạn chế của dữ liệu “limited” được tác giả nói rõ ở đâu và xử lý ra sao? Đóng góp chính của paper/tài liệu so với các hướng tiếp cận truyền thống?\n\nHạn chế của dữ liệu \"limited\" được tác giả nói rõ ở phần VII. CONCLUSIONS AND PERSPECTIVES, nơi họ đề cập đến việc sử dụng dữ liệu mô phỏng thay vì dữ liệu thực tế do hạn chế về khả năng thu thập và xử lý dữ liệu.\n\nĐóng góp chính của paper/tài liệu so với các hướng tiếp cận truyền thống là việc đề xuất một phương pháp học máy (machine learning) để ước lượng mật độ giao thông từ dữ liệu hạn chế, đồng thời kết hợp với mô hình truyền thống để cải thiện độ chính xác và hiệu suất. Phương pháp này cho phép xử lý dữ liệu hạn chế và đạt được kết quả tốt hơn so với các phương pháp truyền thống.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Nail Baloul, Amaury Hayat, Thibault Liard and Pierre Lissy (1) trafhLghilhiamRichadsdlde R ra (2) (2) We consider the ODE system with finite time T (3) 福 (4) (5) B.Globalexistenceanduniqueness We assume that the velocity satisfies asumptions aethen frdfonbtwbmatixW th (9) whereMhm (10) wherebtasfsfo (11) (7) wecanrewritesystem(3)as E25235 (12) p\"(tn)=()xa()…",
+          "source": "D:\\Documents\\rag-module\\carreer-guidance\\src\\database\\file_downloaded\\00000000-0000-0000-0000-000000000010\\Traffic Flow Reconstruction from Limited Collected Data.pdf",
+          "title": "Traffic Flow Reconstruction from Limited Collected Data.pdf",
+          "url": "",
+          "rerank_score": -10.928130149841309,
+          "image_urls": []
+        }
+      ],
+      "image_urls": [
+        "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img001.png",
+        "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img002.png",
+        "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img003.png"
+      ],
+      "conversation_id": "9864885a-d365-45bb-9a7e-032716468c02",
+      "updated_at": "2026-05-12T13:49:07.357854+00:00"
+    },
+    "xuất classifier pooling để làm gì và khác gì so với pooling thông thường cho bài toán ordinal? đồng thời, từ năm 2024–2026 có survey hoặc benchmark nào nổi bật về ordinal classification trên ảnh y tế / computer vision không? trong pdf đó, thiết lập thực nghiệm chính (dataset, metric ordinal, backbone) được mô tả thế nào? so sánh ngắn với xu hướng hiện tại khi người ta fine-tune vit / clip cho tác vụ có thứ tự — theo các bài/blog hoặc repo github gần đây bạn tìm được. paper của tôi có nhắc tới mất mát / ràng buộc đặc thù cho ordinal không? bên cạnh đó, tìm giúp định nghĩa và ứng dụng của ordinal regression trong thực tế (ví dụ grading, risk scores) theo nguồn ngoài paper (web). tóm tắt đóng góp chính của classifier pooling for modern ordinal classification theo nội dung file. cập nhật thêm từ web: có implementation (pytorch) hoặc thảo luận (twitter/x, reddit, papers with code) nào về ordinal pooling / classifier pooling tương tự không?": {
+      "question": "xuất classifier pooling để làm gì và khác gì so với pooling thông thường cho bài toán ordinal? Đồng thời, từ năm 2024–2026 có survey hoặc benchmark nào nổi bật về ordinal classification trên ảnh y tế / computer vision không? Trong PDF đó, thiết lập thực nghiệm chính (dataset, metric ordinal, backbone) được mô tả thế nào? So sánh ngắn với xu hướng hiện tại khi người ta fine-tune ViT / CLIP cho tác vụ có thứ tự — theo các bài/blog hoặc repo GitHub gần đây bạn tìm được.  Paper của tôi có nhắc tới mất mát / ràng buộc đặc thù cho ordinal không? Bên cạnh đó, tìm giúp định nghĩa và ứng dụng của ordinal regression trong thực tế (ví dụ grading, risk scores) theo nguồn ngoài paper (web).  Tóm tắt đóng góp chính của Classifier Pooling for Modern Ordinal Classification theo nội dung file. Cập nhật thêm từ web: có implementation (PyTorch) hoặc thảo luận (Twitter/X, Reddit, Papers With Code) nào về ordinal pooling / classifier pooling tương tự không?",
+      "answer": "## 1. Classifier Pooling\n\n**Câu hỏi:** xuất classifier pooling để làm gì và khác gì so với pooling thông thường cho bài toán ordinal\n\n**Classifier Pooling** là một kỹ thuật được sử dụng trong các mô hình học sâu, đặc biệt là trong các bài toán phân loại thứ tự (ordinal classification). Mục đích của kỹ thuật này là để cải thiện khả năng dự đoán của mô hình bằng cách kết hợp các thông tin từ các lớp phân loại khác nhau.\n\nTrong bài toán ordinal classification, mục tiêu là dự đoán một giá trị thứ tự (ví dụ: đánh giá mức độ hài lòng từ 1 đến 5) thay vì một nhãn phân loại thông thường. Classifier Pooling được sử dụng để kết hợp các thông tin từ các lớp phân loại khác nhau để cải thiện khả năng dự đoán của mô hình.\n\nKhác với **pooling thông thường**, Classifier Pooling không chỉ đơn giản là lấy giá trị trung bình hoặc tối đa của các tính năng, mà nó còn sử dụng các thông tin từ các lớp phân loại khác nhau để tạo ra một biểu diễn tổng hợp. Điều này giúp mô hình có thể học được các mối quan hệ phức tạp giữa các lớp phân loại và cải thiện khả năng dự đoán.\n\nClassifier Pooling thường được sử dụng trong các mô hình học sâu như **Convolutional Neural Networks (CNNs)** và **Recurrent Neural Networks (RNNs)**. Kỹ thuật này đã được chứng minh là có hiệu quả trong các bài toán ordinal classification như phân loại hình ảnh, phân loại văn bản và phân loại tín hiệu thời gian.\n\n## 2. Ordinal Classification Surveys\n\n**Câu hỏi:** có survey hoặc benchmark nào nổi bật về ordinal classification trên ảnh y tế / computer vision từ năm 2024–2026 không\n\n_Không có phản hồi từ công cụ cho ý này._\n\n## 3. Experimental Setup\n\n**Câu hỏi:** thiết lập thực nghiệm chính (dataset, metric ordinal, backbone) được mô tả thế nào trong PDF\n\nThiết lập thực nghiệm chính trong PDF bao gồm:\n- **Dataset**: Dữ liệu được tạo ra từ mô hình traffic FtL (1) thay vì dữ liệu thực tế.\n- **Metric**: Các chỉ số đánh giá như MSE (Mean Squared Error) và RE (Relative Error) được sử dụng để đánh giá hiệu suất của mô hình.\n- **Backbone**: Mô hình học sâu (NN - Neural Network) được sử dụng với 5,000 epochs để học và dự đoán mật độ giao thông.\n\n## 4. Ordinal Regression Applications\n\n**Câu hỏi:** so sánh xu hướng hiện tại khi người ta fine-tune ViT / CLIP cho tác vụ có thứ tự và tìm định nghĩa và ứng dụng của ordinal regression trong thực tế\n\n**Ordinal Regression** là một kỹ thuật học máy được sử dụng để dự đoán các giá trị có thứ tự. Trong **Ordinal Regression**, mục tiêu là dự đoán một giá trị nằm trong một tập hợp các giá trị có thứ tự, chẳng hạn như đánh giá mức độ hài lòng (thấp, trung bình, cao) hoặc xếp hạng sản phẩm (1, 2, 3, ...).\n\nỨng dụng của **Ordinal Regression** trong thực tế bao gồm:\n\n- Đánh giá mức độ hài lòng của khách hàng\n- Xếp hạng sản phẩm hoặc dịch vụ\n- Dự đoán mức độ nghiêm trọng của một tình huống\n- Phân loại hình ảnh hoặc văn bản theo mức độ liên quan\n\nVề xu hướng hiện tại, **fine-tune** các mô hình như **ViT (Vision Transformer)** và **CLIP (Contrastive Language-Image Pre-training)** cho các tác vụ có thứ tự đang trở nên phổ biến. Các mô hình này được thiết kế ban đầu cho các tác vụ phân loại hình ảnh hoặc văn bản, nhưng chúng cũng có thể được điều chỉnh cho các tác vụ có thứ tự bằng cách sử dụng **Ordinal Regression**.\n\nKhi **fine-tune** các mô hình này, người ta thường sử dụng các kỹ thuật như:\n\n- Thêm một lớp **Ordinal Regression** vào mô hình\n- Sử dụng các hàm mất mát đặc biệt cho **Ordinal Regression**, chẳng hạn như **Mean Absolute Error (MAE)** hoặc **Mean Squared Error (MSE)**\n- Điều chỉnh mô hình để dự đoán các giá trị có thứ tự thay vì các nhãn phân loại\n\nTóm lại, **Ordinal Regression** là một kỹ thuật học máy quan trọng cho các tác vụ có thứ tự, và việc **fine-tune** các mô hình như **ViT** và **CLIP** cho các tác vụ này đang trở nên phổ biến trong lĩnh vực học máy và trí tuệ nhân tạo.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "(a) N = 2000, T = 0.1 (b) N = 4000, T = 0.2 Fig. 5: Reconstructed final traffic density (a) NN learning using 5,000 epochs (b) Testing using predicted density Fig. 6: Comparison between predictions and data with N = 3000 initial position. Let ρ(0, x) = ( 0.4ρmax, 0 ≤x < 0.5, 0.9ρmax, 0.5 < x ≤1. The learning procedure applied to N = 3000 cars yields results…",
+          "source": "D:\\Documents\\rag-module\\carreer-guidance\\src\\database\\file_downloaded\\00000000-0000-0000-0000-000000000010\\Traffic Flow Reconstruction from Limited Collected Data.pdf",
+          "title": "Traffic Flow Reconstruction from Limited Collected Data.pdf",
+          "url": "",
+          "rerank_score": -10.307355880737305,
+          "image_urls": [
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img001.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img002.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img003.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img004.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img005.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img006.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img007.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img008.png"
+          ]
+        },
+        {
+          "rank": 4,
+          "text": "Contriba 2 whichsestexwiththmaxlaveragecoreacrosfvaldatos wh dt (1) (1) 3 4 5 324 4 33452 227 525267 6 Table 1: Summary of Ecperiments 1 through 3 Ea 2e 3eaMms 7 E 8 囍 9 The authors report no competing interests. 10 1 11 12",
+          "source": "D:\\Documents\\rag-module\\carreer-guidance\\src\\database\\file_downloaded\\00000000-0000-0000-0000-000000000010\\Classifier Pooling for Modern Ordinal Classification.pdf",
+          "title": "Classifier Pooling for Modern Ordinal Classification.pdf",
+          "url": "",
+          "rerank_score": -11.279557228088379,
+          "image_urls": [
+            "http://localhost:8010/images/Classifier Pooling for Modern Ordinal Classification-fb6802c0/p3/img001.png",
+            "http://localhost:8010/images/Classifier Pooling for Modern Ordinal Classification-fb6802c0/p7/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img001.png",
+        "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img002.png",
+        "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img003.png"
+      ],
+      "conversation_id": "6bdc0275-67ba-4914-8a4c-becf054d2573",
+      "updated_at": "2026-05-12T13:55:33.624494+00:00"
+    },
+    "computer vision là gì": {
+      "question": "Computer vision là gì",
+      "answer": "**Computer Vision** (Thị giác máy tính) là một lĩnh vực của **trí tuệ nhân tạo** và **khoa học máy tính**, cho phép máy tính xử lý, phân tích và hiểu thông tin từ hình ảnh và video như con người. \n\nNó bao gồm các phương pháp thu nhận, xử lý ảnh kỹ thuật số, phân tích và nhận dạng các hình ảnh và dữ liệu đa chiều từ thế giới thực để cho ra các thông tin số hoặc biểu tượng. \n\nMột số ứng dụng nổi bật của **Computer Vision** bao gồm:\n- Nhận diện khuôn mặt\n- Xe tự lái\n- Phân tích hình ảnh y khoa\n- Thương mại điện tử\n\nNguồn: [VNPT AI](https://vnptai.io/), [200Lab](https://200lab.io/), [Wikipedia](https://vi.wikipedia.org/), [TheGioiMayChu](https://thegioimaychu.vn/)",
+      "sources": [
+        {
+          "title": "Computer Vision là gì? Lợi ích và ứng dụng của thị giác máy tính",
+          "url": "https://vnptai.io/vi/blog/detail/computer-vision-la-gi",
+          "snippet": "![Back](https://vnptai.io/img/arrow-left.svg) ## Trợ lý VNPT AI ![Close](https://vnptai.io/img/close-chat.svg) ![mic](https://vnptai.io/img/microphone-2.png) ![send](https://vnptai.io/img/send-blue.svg) [Trang chủ](https://vnptai.io/) [Bài viết](https://vnptai.io/vi/blog)Computer Vision là gì? Lợi ích và ứng dụng nổi bật của thị giác máy tính Chia sẻ # Computer Vision là gì? Lợi ích và ứng dụng nổ...",
+          "score": 0.0
+        },
+        {
+          "title": "Thị giác máy tính là gì? - Giải thích về AI/ML nhận dạng hình ảnh",
+          "url": "https://aws.amazon.com/vi/what-is/computer-vision/",
+          "snippet": "## Chọn tùy chọn cookie của bạn Chúng tôi sử dụng các cookie thiết yếu và công cụ tương tự cần thiết để cung cấp trang web và dịch vụ của chúng tôi. Chúng tôi sử dụng cookie hiệu năng để thu thập số liệu thống kê ẩn danh, qua đó hiểu rõ cách khách hàng sử dụng trang web của chúng tôi và tiến hành cải tiến. Bạn không thể vô hiệu hóa cookie thiết yếu, nhưng có thể nhấp vào “Tùy chỉnh” hoặc “Từ chối”...",
+          "score": 0.0
+        },
+        {
+          "title": "Computer Vision là gì? Những Ứng dụng của Thị giác máy tính",
+          "url": "https://200lab.io/blog/computer-vision-la-gi/",
+          "snippet": "# Computer Vision là gì? Những Ứng dụng của Thị giác máy tính 06 Sep, 2024 [Data Science](https://200lab.io/blog/tag/data-science) ![Avatar](https://statics.cdn.200lab.io/2024/09/z4883554292049_46abbd0a83ffdaccd6d6586b1946b883.jpg?width=60&quality=100) [Vo Chi Truong](https://200lab.io/blog/author/chuongit) Author Computer Vision là một lĩnh vực khoa học máy tính tập trung vào việc cho phép máy tí...",
+          "score": 0.0
+        },
+        {
+          "title": "Thị giác máy tính – Wikipedia tiếng Việt",
+          "url": "https://vi.wikipedia.org/wiki/Th%E1%BB%8B_gi%C3%A1c_m%C3%A1y_t%C3%ADnh",
+          "snippet": "# Thị giác máy tính Thị giác máy tính **Thị giác máy tính** ( [tiếng Anh](https://vi.wikipedia.org/wiki/Ti%E1%BA%BFng_Anh \"Tiếng Anh\"): **computer vision**) là một lĩnh vực bao gồm các phương pháp thu nhận, [xử lý ảnh kỹ thuật số](https://vi.wikipedia.org/wiki/X%E1%BB%AD_l%C3%BD_%E1%BA%A3nh_k%E1%BB%B9_thu%E1%BA%ADt_s%E1%BB%91?action=edit&redlink=1 \"Xử lý ảnh kỹ thuật số\"), phân tích và nhận dạng c...",
+          "score": 0.0
+        },
+        {
+          "title": "Computer Vision - Thị giác máy tính là gì? - Blog - Thegioimaychu.vn",
+          "url": "https://thegioimaychu.vn/blog/ai-hpc/computer-vision-thi-giac-may-tinh-la-gi-p5951/",
+          "snippet": "Search for: Search [Skip to content](https://thegioimaychu.vn/blog/ai-hpc/computer-vision-thi-giac-may-tinh-la-gi-p5951/#content) ![](https://thegioimaychu.vn/blog/wp-content/uploads/2020/06/TheGioiMayChu-Blog-Computer-Vision-e1638752019907.jpg) [Thị giác máy tính](https://thegioimaychu.vn/blog/tag/computer-vision/?utm_source=tmblog&utm_medium=inlinekwd) ( [Computer Vision](https://thegioimaychu.v...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://vnptai.io/img/logoVNPT.png"
+      ],
+      "conversation_id": "7527cad3-c62f-480e-82f8-3e2eafd09f94",
+      "updated_at": "2026-05-12T14:11:10.200495+00:00"
+    },
+    "deep learrning là gì": {
+      "question": "Deep Learrning là gì",
+      "answer": "**Deep Learning** là một chức năng của **trí tuệ nhân tạo (AI)**, bắt chước cách bộ não con người hoạt động để xử lí dữ liệu, tạo ra các mẫu để sử dụng cho việc đưa ra quyết định. Nó là một lĩnh vực con của **Machine Learning (học máy)**, nơi các máy tính sẽ học và cải thiện chính nó thông qua các thuật toán. **Deep Learning** được xây dựng dựa trên các khái niệm phức tạp hơn rất nhiều, chủ yếu hoạt động với các **mạng nơ-ron nhân tạo** để bắt chước khả năng tư duy và suy nghĩ của bộ não con người.",
+      "sources": [
+        {
+          "title": "Deep Learning là gì? Ứng dụng và xu hướng tương lai của học sâu",
+          "url": "https://vnptai.io/vi/blog/detail/deep-learning-la-gi",
+          "snippet": "![Back](https://vnptai.io/img/arrow-left.svg) ## Trợ lý VNPT AI ![Close](https://vnptai.io/img/close-chat.svg) ![mic](https://vnptai.io/img/microphone-2.png) ![send](https://vnptai.io/img/send-blue.svg) [Trang chủ](https://vnptai.io/) [Bài viết](https://vnptai.io/vi/blog)Deep Learning là gì? Ứng dụng và xu hướng tương lai của học sâu Chia sẻ # Deep Learning là gì? Ứng dụng và xu hướng tương lai củ...",
+          "score": 0.0
+        },
+        {
+          "title": "Deep Learning là gì? Tìm hiểu từ định nghĩa đến ứng dụng thực tế",
+          "url": "https://fptshop.com.vn/tin-tuc/danh-gia/deep-learning-la-gi-175780",
+          "snippet": "- [Nổi bật](https://fptshop.com.vn/tin-tuc) - [Tin mới](https://fptshop.com.vn/tin-tuc/tin-moi) - [Điện máy - Gia dụng](https://fptshop.com.vn/tin-tuc/dien-may) - [Khuyến mãi](https://fptshop.com.vn/tin-tuc/tin-khuyen-mai) - [Đánh giá - Tư vấn](https://fptshop.com.vn/tin-tuc/danh-gia) - [Thủ thuật](https://fptshop.com.vn/tin-tuc/thu-thuat) - [Video hot](https://fptshop.com.vn/tin-tuc/video-hot) -...",
+          "score": 0.0
+        },
+        {
+          "title": "Giới thiệu về Deep Learning, Deep Learning hoạt động như thế nào?",
+          "url": "https://viblo.asia/p/gioi-thieu-ve-deep-learning-deep-learning-hoat-dong-nhu-the-nao-3Q75w2nDlWb",
+          "snippet": "[![](https://images-stg.viblo.asia/full/febac246-5d8f-4d92-8b57-a52ae34ee068.png)](https://viblo.asia/announcements/chinh-thuc-bat-dau-viblo-mayfest-2026-uncode-the-mindset-lZL9XqYWJQK) +13 Cỡ chữ 18px Độ cao hàng 1.75 Mặc định Toàn màn hình Màu nền Đặt lại [Editors' Choice](https://viblo.asia/editors-choice) - Báo cáo - Thêm vào series của tôi Bài đăng này đã không được cập nhật trong 8 năm ![Mạn...",
+          "score": 0.0
+        },
+        {
+          "title": "Học sâu – Wikipedia tiếng Việt",
+          "url": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_s%C3%A2u",
+          "snippet": "[Bước tới nội dung](https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_s%C3%A2u#bodyContent) | | | | --- | --- | | **Biểu quyết xóa** **[Xóa bài](https://vi.wikipedia.org/wiki/Wikipedia:Bi%E1%BB%83u_quy%E1%BA%BFt_xo%C3%A1_b%C3%A0i \"Wikipedia:Biểu quyết xoá bài\")**: [Giao Heo](https://vi.wikipedia.org/wiki/Wikipedia:Bi%E1%BB%83u_quy%E1%BA%BFt_xo%C3%A1_b%C3%A0i/Giao_Heo \"Wikipedia:Biểu quyết xoá bài/Giao Heo...",
+          "score": 0.0
+        },
+        {
+          "title": "Deep Learning là gì? Tổng quan về Deep Learning từ A-Z",
+          "url": "https://is.duytan.edu.vn/study-corner/deep-learning-la-gi-tong-quan-ve-deep-learnin-8cj1d",
+          "snippet": "startwitterfacebookenvelopelinkedinyoutubealert-redalerthomeleft-quotechevronhamburgerminusplussearchtrianglex [![](https://is.duytan.edu.vn/study-corner/639042323872572545-logovn2.png)](https://is.duytan.edu.vn/ \"KHOA ĐÀO TẠO QUỐC TẾ - ĐẠI HỌC DUY TÂN\") ## Deep Learning là gì? Tổng quan về Deep Learning từ A-Z * * * nguồn: vietnix.vn Deep Learning là một chức năng của trí tuệ nhân tạo (AI), bắt c...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://vnptai.io/img/logoVNPT.png"
+      ],
+      "conversation_id": "d44ec693-ff44-42fd-bb06-6140f638af22",
+      "updated_at": "2026-05-12T14:16:05.578704+00:00"
+    },
+    "deep learning là gì": {
+      "question": "Deep learning là gì",
+      "answer": "**Deep Learning** là một chức năng của **trí tuệ nhân tạo (AI)**, bắt chước cách bộ não con người hoạt động để xử lí dữ liệu, tạo ra các mẫu để sử dụng cho việc đưa ra quyết định. Nó là một lĩnh vực con của **Machine Learning (học máy)**, nơi các máy tính sẽ học và cải thiện chính nó thông qua các thuật toán. \n\nDeep Learning được xây dựng dựa trên các khái niệm phức tạp hơn rất nhiều, chủ yếu hoạt động với các **mạng nơ-ron nhân tạo** để bắt chước khả năng tư duy và suy nghĩ của bộ não con người. \n\nNó có nhiều ứng dụng trong đời sống, bao gồm nhận dạng hình ảnh, xử lý ngôn ngữ tự nhiên, và nhiều lĩnh vực khác.",
+      "sources": [
+        {
+          "title": "Deep Learning là gì? Ứng dụng và xu hướng tương lai của học sâu",
+          "url": "https://vnptai.io/vi/blog/detail/deep-learning-la-gi",
+          "snippet": "![Back](https://vnptai.io/img/arrow-left.svg) ## Trợ lý VNPT AI ![Close](https://vnptai.io/img/close-chat.svg) ![mic](https://vnptai.io/img/microphone-2.png) ![send](https://vnptai.io/img/send-blue.svg) [Trang chủ](https://vnptai.io/) [Bài viết](https://vnptai.io/vi/blog)Deep Learning là gì? Ứng dụng và xu hướng tương lai của học sâu Chia sẻ # Deep Learning là gì? Ứng dụng và xu hướng tương lai củ...",
+          "score": 0.0
+        },
+        {
+          "title": "Deep Learning là gì? Tìm hiểu từ định nghĩa đến ứng dụng thực tế",
+          "url": "https://fptshop.com.vn/tin-tuc/danh-gia/deep-learning-la-gi-175780",
+          "snippet": "- [Nổi bật](https://fptshop.com.vn/tin-tuc) - [Tin mới](https://fptshop.com.vn/tin-tuc/tin-moi) - [Điện máy - Gia dụng](https://fptshop.com.vn/tin-tuc/dien-may) - [Khuyến mãi](https://fptshop.com.vn/tin-tuc/tin-khuyen-mai) - [Đánh giá - Tư vấn](https://fptshop.com.vn/tin-tuc/danh-gia) - [Thủ thuật](https://fptshop.com.vn/tin-tuc/thu-thuat) - [Video hot](https://fptshop.com.vn/tin-tuc/video-hot) -...",
+          "score": 0.0
+        },
+        {
+          "title": "Giới thiệu về Deep Learning, Deep Learning hoạt động như thế nào?",
+          "url": "https://viblo.asia/p/gioi-thieu-ve-deep-learning-deep-learning-hoat-dong-nhu-the-nao-3Q75w2nDlWb",
+          "snippet": "[![](https://images-stg.viblo.asia/full/febac246-5d8f-4d92-8b57-a52ae34ee068.png)](https://viblo.asia/announcements/chinh-thuc-bat-dau-viblo-mayfest-2026-uncode-the-mindset-lZL9XqYWJQK) +13 Cỡ chữ 18px Độ cao hàng 1.75 Mặc định Toàn màn hình Màu nền Đặt lại [Editors' Choice](https://viblo.asia/editors-choice) - Báo cáo - Thêm vào series của tôi Bài đăng này đã không được cập nhật trong 8 năm ![Mạn...",
+          "score": 0.0
+        },
+        {
+          "title": "Học sâu – Wikipedia tiếng Việt",
+          "url": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_s%C3%A2u",
+          "snippet": "[Bước tới nội dung](https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_s%C3%A2u#bodyContent) | | | | --- | --- | | **Biểu quyết xóa** **[Xóa bài](https://vi.wikipedia.org/wiki/Wikipedia:Bi%E1%BB%83u_quy%E1%BA%BFt_xo%C3%A1_b%C3%A0i \"Wikipedia:Biểu quyết xoá bài\")**: [Giao Heo](https://vi.wikipedia.org/wiki/Wikipedia:Bi%E1%BB%83u_quy%E1%BA%BFt_xo%C3%A1_b%C3%A0i/Giao_Heo \"Wikipedia:Biểu quyết xoá bài/Giao Heo...",
+          "score": 0.0
+        },
+        {
+          "title": "Deep Learning là gì? Tổng quan về Deep Learning từ A-Z",
+          "url": "https://is.duytan.edu.vn/study-corner/deep-learning-la-gi-tong-quan-ve-deep-learnin-8cj1d",
+          "snippet": "startwitterfacebookenvelopelinkedinyoutubealert-redalerthomeleft-quotechevronhamburgerminusplussearchtrianglex [![](https://is.duytan.edu.vn/study-corner/639042323872572545-logovn2.png)](https://is.duytan.edu.vn/ \"KHOA ĐÀO TẠO QUỐC TẾ - ĐẠI HỌC DUY TÂN\") ## Deep Learning là gì? Tổng quan về Deep Learning từ A-Z * * * nguồn: vietnix.vn Deep Learning là một chức năng của trí tuệ nhân tạo (AI), bắt c...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://vnptai.io/img/logoVNPT.png"
+      ],
+      "conversation_id": "52d33be9-f825-45bd-994f-20c21f077310",
+      "updated_at": "2026-05-12T14:31:36.708940+00:00"
+    },
+    "machine learning là gì?": {
+      "question": "Machine Learning là gì?",
+      "answer": "**Machine Learning** là một lĩnh vực của **trí tuệ nhân tạo** (AI), hướng tới việc xây dựng các thuật toán và mô hình có khả năng \"học\" từ dữ liệu huấn luyện. Từ đó, các mô hình này có thể đưa ra dự đoán hoặc quyết định mà không cần được lập trình chi tiết cho từng tình huống cụ thể.\n\nTheo định nghĩa của [Wikipedia](https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_m%C3%A1y), học máy là một tập con của **trí tuệ nhân tạo**. Học máy có liên hệ mật thiết với **thống kê**, vì cả hai lĩnh vực đều xây dựng mô hình từ dữ liệu để đưa ra suy luận.\n\nMột số ứng dụng của **Machine Learning** bao gồm:\n- Xe tự hành của Google và Tesla\n- Hệ thống tự tag khuôn mặt trong ảnh của Facebook\n- Trợ lý ảo Siri của Apple\n- Hệ thống gợi ý sản phẩm của Amazon\n- Hệ thống gợi ý phim của Netflix\n- Máy chơi cờ vây AlphaGo của Google DeepMind\n\nNguồn: \n- [Machine Learning là gì?](https://vnptai.io/vi/blog/detail/machine-learning-la-gi)\n- [Học máy](https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_m%C3%A1y)\n- [Bài 1: Giới thiệu về Machine Learning](https://machinelearningcoban.com/2016/12/27/categories/)",
+      "sources": [
+        {
+          "title": "Machine learning là gì? Nguyên lý và ứng dụng thực tế của học máy",
+          "url": "https://vnptai.io/vi/blog/detail/machine-learning-la-gi",
+          "snippet": "![Back](https://vnptai.io/img/arrow-left.svg) ## Trợ lý VNPT AI ![Close](https://vnptai.io/img/close-chat.svg) ![mic](https://vnptai.io/img/microphone-2.png) ![send](https://vnptai.io/img/send-blue.svg) [Trang chủ](https://vnptai.io/) [Bài viết](https://vnptai.io/vi/blog)Machine Learning là gì? Nguyên lý và ứng dụng thực tế của học máy Chia sẻ # Machine Learning là gì? Nguyên lý và ứng dụng thực t...",
+          "score": 0.0
+        },
+        {
+          "title": "Machine learning là gì? - TopDev",
+          "url": "https://topdev.vn/blog/machine-learning-la-gi/",
+          "snippet": "[Facebook](https://www.facebook.com/topdevvietnam/ \"Facebook\")[Linkedin](https://www.linkedin.com/company/topdev-vn/ \"Linkedin\")[Twitter](https://twitter.com/Topdevvn \"Twitter\") - [Tìm việc IT](https://topdev.vn/?src=topdev_blog&medium=navbar&campaign=link) - [Tạo CV Online](https://topdev.vn/tao-cv-online?src=topdev_blog&medium=navbar&campaign=link) - [CÔNG TY TUYỂN DỤNG IT](https://topdev.vn/nha...",
+          "score": 0.0
+        },
+        {
+          "title": "Máy học là gì? – Giải thích về công nghệ ML - AWS",
+          "url": "https://aws.amazon.com/vi/what-is/machine-learning/",
+          "snippet": "## Chọn tùy chọn cookie của bạn Chúng tôi sử dụng các cookie thiết yếu và công cụ tương tự cần thiết để cung cấp trang web và dịch vụ của chúng tôi. Chúng tôi sử dụng cookie hiệu năng để thu thập số liệu thống kê ẩn danh, qua đó hiểu rõ cách khách hàng sử dụng trang web của chúng tôi và tiến hành cải tiến. Bạn không thể vô hiệu hóa cookie thiết yếu, nhưng có thể nhấp vào “Tùy chỉnh” hoặc “Từ chối”...",
+          "score": 0.0
+        },
+        {
+          "title": "Bài 1: Giới thiệu về Machine Learning",
+          "url": "https://machinelearningcoban.com/2016/12/26/introduce/",
+          "snippet": "[![](https://machinelearningcoban.com/assets/latex/new_logo92.png)](https://machinelearningcoban.com/) [![](https://machinelearningcoban.com/images/Buymeacoffee_blue.png)](https://machinelearningcoban.com/buymeacoffee)[![](https://machinelearningcoban.com/images/ebook_logo.png)](https://machinelearningcoban.com/ebook) [Bài 2: Phân nhóm các thuật toán Machine Learning »](https://machinelearningcoba...",
+          "score": 0.0
+        },
+        {
+          "title": "Học máy – Wikipedia tiếng Việt",
+          "url": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_m%C3%A1y",
+          "snippet": "# Học máy Học máy **Học máy** (tiếng Anh: _Machine learning_) là một lĩnh vực của [trí tuệ nhân tạo](https://vi.wikipedia.org/wiki/Tr%C3%AD_tu%E1%BB%87_nh%C3%A2n_t%E1%BA%A1o \"Trí tuệ nhân tạo\") (AI), hướng tới việc xây dựng các thuật toán và mô hình có khả năng \"học\" từ dữ liệu huấn luyện. Từ đó, các mô hình này có thể đưa ra dự đoán hoặc quyết định mà không cần được lập trình chi tiết cho từng tì...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://vnptai.io/img/logoVNPT.png"
+      ],
+      "conversation_id": "5db803ae-9f80-4518-832d-d458d13fc354",
+      "updated_at": "2026-05-12T14:34:20.348520+00:00"
+    },
+    "dtu là trường nào ở việt nam": {
+      "question": "DTU là trường nào ở Việt nam",
+      "answer": "Đại học Đà Nẵng (tiền thân là Đại học Tổng hợp Đà Nẵng) có một trường thành viên là **Đại học Bách khoa - Đại học Đà Nẵng (ĐHBK)**, không có thông tin về trường **DTU** trong ngữ cảnh đã cho.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Contriba 2 whichsestexwiththmaxlaveragecoreacrosfvaldatos wh dt (1) (1) 3 4 5 324 4 33452 227 525267 6 Table 1: Summary of Ecperiments 1 through 3 Ea 2e 3eaMms 7 E 8 囍 9 The authors report no competing interests. 10 1 11 12",
+          "source": "D:\\Documents\\rag-module\\carreer-guidance\\src\\database\\file_downloaded\\00000000-0000-0000-0000-000000000010\\Classifier Pooling for Modern Ordinal Classification.pdf",
+          "title": "Classifier Pooling for Modern Ordinal Classification.pdf",
+          "url": "",
+          "rerank_score": -10.826075553894043,
+          "image_urls": [
+            "http://localhost:8010/images/Classifier Pooling for Modern Ordinal Classification-fb6802c0/p3/img001.png",
+            "http://localhost:8010/images/Classifier Pooling for Modern Ordinal Classification-fb6802c0/p7/img001.png"
+          ]
+        },
+        {
+          "rank": 2,
+          "text": "(a) N = 2000, T = 0.1 (b) N = 4000, T = 0.2 Fig. 5: Reconstructed final traffic density (a) NN learning using 5,000 epochs (b) Testing using predicted density Fig. 6: Comparison between predictions and data with N = 3000 initial position. Let ρ(0, x) = ( 0.4ρmax, 0 ≤x < 0.5, 0.9ρmax, 0.5 < x ≤1. The learning procedure applied to N = 3000 cars yields results…",
+          "source": "D:\\Documents\\rag-module\\carreer-guidance\\src\\database\\file_downloaded\\00000000-0000-0000-0000-000000000010\\Traffic Flow Reconstruction from Limited Collected Data.pdf",
+          "title": "Traffic Flow Reconstruction from Limited Collected Data.pdf",
+          "url": "",
+          "rerank_score": -10.887474060058594,
+          "image_urls": [
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img001.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img002.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img003.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img004.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img005.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img006.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img007.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img008.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "http://localhost:8010/images/Classifier Pooling for Modern Ordinal Classification-fb6802c0/p3/img001.png"
+      ],
+      "conversation_id": "51f399c5-b035-414a-9300-da3f0652df90",
+      "updated_at": "2026-05-12T14:37:27.859184+00:00"
     }
   },
   "history": [
@@ -3139,6 +4195,472 @@
       "image_urls": [],
       "cache_hit": false,
       "timestamp": "2026-05-10T16:54:07.688367+00:00"
+    },
+    {
+      "execution_id": "8418bd21-f009-4f2b-8db0-5865b659a0ae",
+      "conversation_id": "f58f7fca-f6c1-4989-9467-6605be5d3e9b",
+      "question": "Chào bạn, bạn có thể giúp gì được cho tôi nhỉ?",
+      "answer": "Hiện hệ thống chưa truy cập được nguồn dữ liệu phù hợp. Vui lòng thử lại sau hoặc chuyển sang chế độ chat khác.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-11T13:56:51.930682+00:00"
+    },
+    {
+      "execution_id": "4e6b6873-7ea9-4c19-bebc-a79234e861b7",
+      "conversation_id": "68352aab-4a0a-432f-886c-6883f407543a",
+      "question": "Chào bạn, bạn có thể giúp gì được cho tôi nhỉ?",
+      "answer": "Hiện hệ thống chưa truy cập được nguồn dữ liệu phù hợp. Vui lòng thử lại sau hoặc chuyển sang chế độ chat khác.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-11T13:57:26.884622+00:00"
+    },
+    {
+      "execution_id": "02c9482b-78ce-4481-94e3-04c27b2e2591",
+      "conversation_id": "4fff8e19-49ee-4343-8c2b-39b6a69f5d3c",
+      "question": "Thông tin sinh viên Nguyễn Văn Phi Hùng?",
+      "answer": "Hiện hệ thống chưa truy cập được nguồn dữ liệu phù hợp. Vui lòng thử lại sau hoặc chuyển sang chế độ chat khác.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-11T13:59:46.474195+00:00"
+    },
+    {
+      "execution_id": "b11e1084-1575-49e7-bdda-6db4364e3556",
+      "conversation_id": "15ea0335-5403-4a71-863a-ee6bf934a4b1",
+      "question": "Xin chào",
+      "answer": "Hiện hệ thống chưa truy cập được nguồn dữ liệu phù hợp. Vui lòng thử lại sau hoặc chuyển sang chế độ chat khác.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-11T14:00:24.421750+00:00"
+    },
+    {
+      "execution_id": "df66d109-180a-4b5b-85b5-e47891d2c6f8",
+      "conversation_id": "bde14b55-2014-4dc6-9a8c-68d51013ef90",
+      "question": "Xin chào, bạn giúp được gì cho tôi nhỉ?",
+      "answer": "Tôi có thể hỗ trợ bạn về định hướng nghề nghiệp, phát triển kỹ năng và thông tin tham khảo từ web khi cần.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-11T14:20:29.939428+00:00"
+    },
+    {
+      "execution_id": "f7c0ee55-d8df-426b-921a-59b9ba181c93",
+      "conversation_id": "f68fc12e-c1d6-4412-a751-e30d8cbaf9d1",
+      "question": "Cho tôi thông tin sinh viên Nguyễn Văn Phi Hùng",
+      "answer": "Tôi có thể hỗ trợ bạn về định hướng nghề nghiệp, phát triển kỹ năng và thông tin tham khảo từ web khi cần.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-11T14:20:54.896955+00:00"
+    },
+    {
+      "execution_id": "10eb68e1-582b-4536-9bbf-82c7e45669dc",
+      "conversation_id": "44223e04-1da4-4538-8b15-b1d2f7326d81",
+      "question": "Cho tôi thông tin CV Nguyen Van Phi Hung",
+      "answer": "Hiện hệ thống chưa truy cập được nguồn dữ liệu phù hợp. Vui lòng thử lại sau hoặc chuyển sang chế độ chat khác.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-11T14:21:29.659588+00:00"
+    },
+    {
+      "execution_id": "81056119-0578-44af-be4c-be01b0189846",
+      "conversation_id": "7bac394d-b729-498a-9e88-cef4a0fe78c1",
+      "question": "Cho tôi biết các thông tin mà bạn đang có",
+      "answer": "Tôi không có thông tin cụ thể nào ngoài những gì được cung cấp trong ngữ cảnh.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-11T14:22:04.776639+00:00"
+    },
+    {
+      "execution_id": "b58d2833-ee42-4b62-b9da-68559c23e5bb",
+      "conversation_id": "2a7d7fd5-f37b-44e4-b7a3-3319ac71109d",
+      "question": "Traffic Flow Reconstruction from Limited Collected Data là gì và model của nó?",
+      "answer": "**Traffic Flow Reconstruction from Limited Collected Data** là một phương pháp sử dụng dữ liệu thu thập được từ các phương tiện giao thông để tái tạo lại dòng chảy giao thông. \n\nModel của nó kết hợp giữa mô hình truyền thống về dòng chảy giao thông và phương pháp học máy (machine learning) để ước tính và tái tạo lại mật độ giao thông từ dữ liệu thu thập được. \n\nCụ thể, mô hình này sử dụng **mô hình FtL (Follow-the-Leader)** và **phương pháp học sâu (deep learning)** để ước tính mật độ giao thông và tái tạo lại dòng chảy giao thông.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "(a) N = 2000, T = 0.1\n(b) N = 4000, T = 0.2\nFig. 5: Reconstructed final traffic density\n(a) NN learn...",
+          "source": "D:\\Documents\\rag-module\\carreer-guidance\\src\\database\\file_downloaded\\00000000-0000-0000-0000-000000000010\\Traffic Flow Reconstruction from Limited Collected Data.pdf",
+          "title": "Traffic Flow Reconstruction from Limited Collected Data.pdf",
+          "rerank_score": -1.1304566860198975,
+          "image_urls": [
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img001.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img002.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img003.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img004.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img005.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img006.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img007.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img008.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img001.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-12T13:00:48.719153+00:00"
+    },
+    {
+      "execution_id": "1e3ac700-47e2-4753-9b7b-0b657ede4c87",
+      "conversation_id": "510ccc28-746b-42e2-9824-7945cd72f279",
+      "question": "Theo tài liệu Traffic Flow Reconstruction from Limited Collected Data, bài toán tái tạo luồng giao thông từ dữ liệu thu thập hạn chế được định nghĩa / mô hình hóa như thế nào? Trong PDF đó, phương pháp / pipeline chính để reconstruct traffic flow là gì (các bước hoặc module)? Tài liệu dùng metric hoặc dataset nào để đánh giá (nếu có nêu tên)? Hạn chế của dữ liệu “limited” được tác giả nói rõ ở đâu và xử lý ra sao? So sánh ngắn: đóng góp chính của paper/tài liệu so với các hướng tiếp cận truyền thống (theo nội dung trong file).",
+      "answer": "## 1. Định nghĩa và mô hình hóa\n\n**Câu hỏi:** Bài toán tái tạo luồng giao thông từ dữ liệu thu thập hạn chế được định nghĩa / mô hình hóa như thế nào?\n\nBài toán tái tạo luồng giao thông từ dữ liệu thu thập hạn chế được định nghĩa và mô hình hóa thông qua việc kết hợp các mô hình truyền thống về luồng giao thông với phương pháp tiếp cận dựa trên dữ liệu. Cụ thể, nó liên quan đến việc sử dụng các mô hình như **LWR (Lighthill-Whitham-Richards)** và phương pháp học máy để ước tính và tái tạo mật độ giao thông từ dữ liệu thu thập được từ các cảm biến hoặc phương tiện khác. Mục tiêu là phát triển một mô hình có thể hoạt động hiệu quả với dữ liệu hạn chế và thông tin cảm biến thưa thớt trong khi vẫn duy trì độ phức tạp tính toán thấp.\n\n## 2. Phương pháp tái tạo luồng giao thông\n\n**Câu hỏi:** Phương pháp / pipeline chính để reconstruct traffic flow là gì?\n\n**Phương pháp** chính để reconstruct traffic flow là kết hợp giữa **mô hình truyền thống** về lưu lượng giao thông và **phương pháp học dữ liệu** (data-driven approach). Cụ thể, mô hình này sử dụng **học sâu** (deep learning) và **phương pháp giải tích** để ước lượng và tái tạo mật độ lưu lượng giao thông.\n\n## 3. Đánh giá và metric\n\n**Câu hỏi:** Tài liệu dùng metric hoặc dataset nào để đánh giá?\n\n- Tài liệu sử dụng các metric như **MSE** (Mean Squared Error) và **RE** (Relative Error) để đánh giá kết quả của mô hình.\n- Ngoài ra, tài liệu cũng sử dụng **Wasserstein distance** để đánh giá sự hội tụ của chuỗi mật độ rời rạc.\n- Các kết quả cũng được so sánh với **Godunov scheme density** và **ground truth initial density** để đánh giá độ chính xác của mô hình.\n\n## 4. Hạn chế và đóng góp\n\n**Câu hỏi:** Hạn chế của dữ liệu “limited” được tác giả nói rõ ở đâu và xử lý ra sao? Đóng góp chính của paper/tài liệu so với các hướng tiếp cận truyền thống?\n\nHạn chế của dữ liệu \"limited\" được tác giả nói rõ ở phần VII. CONCLUSIONS AND PERSPECTIVES, nơi họ đề cập đến việc sử dụng dữ liệu mô phỏng thay vì dữ liệu thực tế do hạn chế về khả năng thu thập và xử lý dữ liệu.\n\nĐóng góp chính của paper/tài liệu so với các hướng tiếp cận truyền thống là việc đề xuất một phương pháp học máy (machine learning) để ước lượng mật độ giao thông từ dữ liệu hạn chế, đồng thời kết hợp với mô hình truyền thống để cải thiện độ chính xác và hiệu suất. Phương pháp này cho phép xử lý dữ liệu hạn chế và đạt được kết quả tốt hơn so với các phương pháp truyền thống.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Nail Baloul, Amaury Hayat, Thibault Liard and Pierre Lissy (1) trafhLghilhiamRichadsdlde R ra (2) (2) We consider the ODE system with finite time T (3) 福 (4) (5) B.Globalexistenceanduniqueness We assume that the velocity satisfies asumptions aethen frdfonbtwbmatixW th (9) whereMhm (10) wherebtasfsfo (11) (7) wecanrewritesystem(3)as E25235 (12) p\"(tn)=()xa()…",
+          "source": "D:\\Documents\\rag-module\\carreer-guidance\\src\\database\\file_downloaded\\00000000-0000-0000-0000-000000000010\\Traffic Flow Reconstruction from Limited Collected Data.pdf",
+          "title": "Traffic Flow Reconstruction from Limited Collected Data.pdf",
+          "url": "",
+          "rerank_score": -10.928130149841309,
+          "image_urls": []
+        }
+      ],
+      "image_urls": [
+        "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img001.png",
+        "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img002.png",
+        "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img003.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-12T13:28:47.943135+00:00"
+    },
+    {
+      "execution_id": "3b51cbdf-6557-44ee-be3d-2e4c430e5daf",
+      "conversation_id": "adb1bcfc-bbe5-457b-bab6-e0f2f2f03f50",
+      "question": "Theo tài liệu Traffic Flow Reconstruction from Limited Collected Data, bài toán tái tạo luồng giao thông từ dữ liệu thu thập hạn chế được định nghĩa / mô hình hóa như thế nào? Trong PDF đó, phương pháp / pipeline chính để reconstruct traffic flow là gì (các bước hoặc module)? Tài liệu dùng metric hoặc dataset nào để đánh giá (nếu có nêu tên)? Hạn chế của dữ liệu “limited” được tác giả nói rõ ở đâu và xử lý ra sao? So sánh ngắn: đóng góp chính của paper/tài liệu so với các hướng tiếp cận truyền thống (theo nội dung trong file).",
+      "answer": "## 1. Định nghĩa và mô hình hóa\n\n**Câu hỏi:** Bài toán tái tạo luồng giao thông từ dữ liệu thu thập hạn chế được định nghĩa / mô hình hóa như thế nào?\n\nBài toán tái tạo luồng giao thông từ dữ liệu thu thập hạn chế được định nghĩa và mô hình hóa thông qua việc kết hợp các mô hình truyền thống về luồng giao thông với phương pháp tiếp cận dựa trên dữ liệu. Cụ thể, nó liên quan đến việc sử dụng các mô hình như **LWR (Lighthill-Whitham-Richards)** và phương pháp học máy để ước tính và tái tạo mật độ giao thông từ dữ liệu thu thập được từ các cảm biến hoặc phương tiện khác. Mục tiêu là phát triển một mô hình có thể hoạt động hiệu quả với dữ liệu hạn chế và thông tin cảm biến thưa thớt trong khi vẫn duy trì độ phức tạp tính toán thấp.\n\n## 2. Phương pháp tái tạo luồng giao thông\n\n**Câu hỏi:** Phương pháp / pipeline chính để reconstruct traffic flow là gì?\n\n**Phương pháp** chính để reconstruct traffic flow là kết hợp giữa **mô hình truyền thống** về lưu lượng giao thông và **phương pháp học dữ liệu** (data-driven approach). Cụ thể, mô hình này sử dụng **học sâu** (deep learning) và **phương pháp giải tích** để ước lượng và tái tạo mật độ lưu lượng giao thông.\n\n## 3. Đánh giá và metric\n\n**Câu hỏi:** Tài liệu dùng metric hoặc dataset nào để đánh giá?\n\n- Tài liệu sử dụng các metric như **MSE** (Mean Squared Error) và **RE** (Relative Error) để đánh giá kết quả của mô hình.\n- Ngoài ra, tài liệu cũng sử dụng **Wasserstein distance** để đánh giá sự hội tụ của chuỗi mật độ rời rạc.\n- Các kết quả cũng được so sánh với **Godunov scheme density** và **ground truth initial density** để đánh giá độ chính xác của mô hình.\n\n## 4. Hạn chế và đóng góp\n\n**Câu hỏi:** Hạn chế của dữ liệu “limited” được tác giả nói rõ ở đâu và xử lý ra sao? Đóng góp chính của paper/tài liệu so với các hướng tiếp cận truyền thống?\n\nHạn chế của dữ liệu \"limited\" được tác giả nói rõ ở phần VII. CONCLUSIONS AND PERSPECTIVES, nơi họ đề cập đến việc sử dụng dữ liệu mô phỏng thay vì dữ liệu thực tế do hạn chế về khả năng thu thập và xử lý dữ liệu.\n\nĐóng góp chính của paper/tài liệu so với các hướng tiếp cận truyền thống là việc đề xuất một phương pháp học máy (machine learning) để ước lượng mật độ giao thông từ dữ liệu hạn chế, đồng thời kết hợp với mô hình truyền thống để cải thiện độ chính xác và hiệu suất. Phương pháp này cho phép xử lý dữ liệu hạn chế và đạt được kết quả tốt hơn so với các phương pháp truyền thống.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Nail Baloul, Amaury Hayat, Thibault Liard and Pierre Lissy (1) trafhLghilhiamRichadsdlde R ra (2) (2) We consider the ODE system with finite time T (3) 福 (4) (5) B.Globalexistenceanduniqueness We assume that the velocity satisfies asumptions aethen frdfonbtwbmatixW th (9) whereMhm (10) wherebtasfsfo (11) (7) wecanrewritesystem(3)as E25235 (12) p\"(tn)=()xa()…",
+          "source": "D:\\Documents\\rag-module\\carreer-guidance\\src\\database\\file_downloaded\\00000000-0000-0000-0000-000000000010\\Traffic Flow Reconstruction from Limited Collected Data.pdf",
+          "title": "Traffic Flow Reconstruction from Limited Collected Data.pdf",
+          "url": "",
+          "rerank_score": -10.928130149841309,
+          "image_urls": []
+        }
+      ],
+      "image_urls": [
+        "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img001.png",
+        "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img002.png",
+        "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img003.png"
+      ],
+      "cache_hit": true,
+      "timestamp": "2026-05-12T13:48:15.683437+00:00"
+    },
+    {
+      "execution_id": "ae0ab7fb-0192-40d4-b95e-93e955be95a9",
+      "conversation_id": "2c816abe-9010-4cba-a379-53d9021894e8",
+      "question": "Theo tài liệu Traffic Flow Reconstruction from Limited Collected Data, bài toán tái tạo luồng giao thông từ dữ liệu thu thập hạn chế được định nghĩa / mô hình hóa như thế nào? Trong PDF đó, phương pháp / pipeline chính để reconstruct traffic flow là gì (các bước hoặc module)? Tài liệu dùng metric hoặc dataset nào để đánh giá (nếu có nêu tên)? Hạn chế của dữ liệu “limited” được tác giả nói rõ ở đâu và xử lý ra sao? So sánh ngắn: đóng góp chính của paper/tài liệu so với các hướng tiếp cận truyền thống (theo nội dung trong file).",
+      "answer": "## 1. Định nghĩa và mô hình hóa\n\n**Câu hỏi:** Bài toán tái tạo luồng giao thông từ dữ liệu thu thập hạn chế được định nghĩa / mô hình hóa như thế nào?\n\nBài toán tái tạo luồng giao thông từ dữ liệu thu thập hạn chế được định nghĩa và mô hình hóa thông qua việc kết hợp các mô hình truyền thống về luồng giao thông với phương pháp tiếp cận dựa trên dữ liệu. Cụ thể, nó liên quan đến việc sử dụng các mô hình như **LWR (Lighthill-Whitham-Richards)** và phương pháp học máy để ước tính và tái tạo mật độ giao thông từ dữ liệu thu thập được từ các cảm biến hoặc phương tiện khác. Mục tiêu là phát triển một mô hình có thể hoạt động hiệu quả với dữ liệu hạn chế và thông tin cảm biến thưa thớt trong khi vẫn duy trì độ phức tạp tính toán thấp.\n\n## 2. Phương pháp tái tạo luồng giao thông\n\n**Câu hỏi:** Phương pháp / pipeline chính để reconstruct traffic flow là gì?\n\n**Phương pháp** chính để reconstruct traffic flow là kết hợp giữa **mô hình truyền thống** về lưu lượng giao thông và **phương pháp học dữ liệu** (data-driven approach). Cụ thể, mô hình này sử dụng **học sâu** (deep learning) và **phương pháp giải tích** để ước lượng và tái tạo mật độ lưu lượng giao thông.\n\n## 3. Đánh giá và metric\n\n**Câu hỏi:** Tài liệu dùng metric hoặc dataset nào để đánh giá?\n\n- Tài liệu sử dụng các metric như **MSE** (Mean Squared Error) và **RE** (Relative Error) để đánh giá kết quả của mô hình.\n- Ngoài ra, tài liệu cũng sử dụng **Wasserstein distance** để đánh giá sự hội tụ của chuỗi mật độ rời rạc.\n- Các kết quả cũng được so sánh với **Godunov scheme density** và **ground truth initial density** để đánh giá độ chính xác của mô hình.\n\n## 4. Hạn chế và đóng góp\n\n**Câu hỏi:** Hạn chế của dữ liệu “limited” được tác giả nói rõ ở đâu và xử lý ra sao? Đóng góp chính của paper/tài liệu so với các hướng tiếp cận truyền thống?\n\nHạn chế của dữ liệu \"limited\" được tác giả nói rõ ở phần VII. CONCLUSIONS AND PERSPECTIVES, nơi họ đề cập đến việc sử dụng dữ liệu mô phỏng thay vì dữ liệu thực tế do hạn chế về khả năng thu thập và xử lý dữ liệu.\n\nĐóng góp chính của paper/tài liệu so với các hướng tiếp cận truyền thống là việc đề xuất một phương pháp học máy (machine learning) để ước lượng mật độ giao thông từ dữ liệu hạn chế, đồng thời kết hợp với mô hình truyền thống để cải thiện độ chính xác và hiệu suất. Phương pháp này cho phép xử lý dữ liệu hạn chế và đạt được kết quả tốt hơn so với các phương pháp truyền thống.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Nail Baloul, Amaury Hayat, Thibault Liard and Pierre Lissy (1) trafhLghilhiamRichadsdlde R ra (2) (2) We consider the ODE system with finite time T (3) 福 (4) (5) B.Globalexistenceanduniqueness We assume that the velocity satisfies asumptions aethen frdfonbtwbmatixW th (9) whereMhm (10) wherebtasfsfo (11) (7) wecanrewritesystem(3)as E25235 (12) p\"(tn)=()xa()…",
+          "source": "D:\\Documents\\rag-module\\carreer-guidance\\src\\database\\file_downloaded\\00000000-0000-0000-0000-000000000010\\Traffic Flow Reconstruction from Limited Collected Data.pdf",
+          "title": "Traffic Flow Reconstruction from Limited Collected Data.pdf",
+          "url": "",
+          "rerank_score": -10.928130149841309,
+          "image_urls": []
+        }
+      ],
+      "image_urls": [
+        "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img001.png",
+        "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img002.png",
+        "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img003.png"
+      ],
+      "cache_hit": true,
+      "timestamp": "2026-05-12T13:48:28.363721+00:00"
+    },
+    {
+      "execution_id": "8daeb30d-2502-4fae-96eb-4eefaffdac73",
+      "conversation_id": "9864885a-d365-45bb-9a7e-032716468c02",
+      "question": "Theo tài liệu Traffic Flow Reconstruction from Limited Collected Data, bài toán tái tạo luồng giao thông từ dữ liệu thu thập hạn chế được định nghĩa / mô hình hóa như thế nào? Trong PDF đó, phương pháp / pipeline chính để reconstruct traffic flow là gì (các bước hoặc module)? Tài liệu dùng metric hoặc dataset nào để đánh giá (nếu có nêu tên)? Hạn chế của dữ liệu “limited” được tác giả nói rõ ở đâu và xử lý ra sao? So sánh ngắn: đóng góp chính của paper/tài liệu so với các hướng tiếp cận truyền thống (theo nội dung trong file).",
+      "answer": "## 1. Định nghĩa và mô hình hóa\n\n**Câu hỏi:** Bài toán tái tạo luồng giao thông từ dữ liệu thu thập hạn chế được định nghĩa / mô hình hóa như thế nào?\n\nBài toán tái tạo luồng giao thông từ dữ liệu thu thập hạn chế được định nghĩa và mô hình hóa thông qua việc kết hợp các mô hình truyền thống về luồng giao thông với phương pháp tiếp cận dựa trên dữ liệu. Cụ thể, nó liên quan đến việc sử dụng các mô hình như **LWR (Lighthill-Whitham-Richards)** và phương pháp học máy để ước tính và tái tạo mật độ giao thông từ dữ liệu thu thập được từ các cảm biến hoặc phương tiện khác. Mục tiêu là phát triển một mô hình có thể hoạt động hiệu quả với dữ liệu hạn chế và thông tin cảm biến thưa thớt trong khi vẫn duy trì độ phức tạp tính toán thấp.\n\n## 2. Phương pháp tái tạo luồng giao thông\n\n**Câu hỏi:** Phương pháp / pipeline chính để reconstruct traffic flow là gì?\n\n**Phương pháp** chính để reconstruct traffic flow là kết hợp giữa **mô hình truyền thống** về lưu lượng giao thông và **phương pháp học dữ liệu** (data-driven approach). Cụ thể, mô hình này sử dụng **học sâu** (deep learning) và **phương pháp giải tích** để ước lượng và tái tạo mật độ lưu lượng giao thông.\n\n## 3. Đánh giá và metric\n\n**Câu hỏi:** Tài liệu dùng metric hoặc dataset nào để đánh giá?\n\n- Tài liệu sử dụng các metric như **MSE** (Mean Squared Error) và **RE** (Relative Error) để đánh giá kết quả của mô hình.\n- Ngoài ra, tài liệu cũng sử dụng **Wasserstein distance** để đánh giá sự hội tụ của chuỗi mật độ rời rạc.\n- Các kết quả cũng được so sánh với **Godunov scheme density** và **ground truth initial density** để đánh giá độ chính xác của mô hình.\n\n## 4. Hạn chế và đóng góp\n\n**Câu hỏi:** Hạn chế của dữ liệu “limited” được tác giả nói rõ ở đâu và xử lý ra sao? Đóng góp chính của paper/tài liệu so với các hướng tiếp cận truyền thống?\n\nHạn chế của dữ liệu \"limited\" được tác giả nói rõ ở phần VII. CONCLUSIONS AND PERSPECTIVES, nơi họ đề cập đến việc sử dụng dữ liệu mô phỏng thay vì dữ liệu thực tế do hạn chế về khả năng thu thập và xử lý dữ liệu.\n\nĐóng góp chính của paper/tài liệu so với các hướng tiếp cận truyền thống là việc đề xuất một phương pháp học máy (machine learning) để ước lượng mật độ giao thông từ dữ liệu hạn chế, đồng thời kết hợp với mô hình truyền thống để cải thiện độ chính xác và hiệu suất. Phương pháp này cho phép xử lý dữ liệu hạn chế và đạt được kết quả tốt hơn so với các phương pháp truyền thống.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Nail Baloul, Amaury Hayat, Thibault Liard and Pierre Lissy (1) trafhLghilhiamRichadsdlde R ra (2) (2) We consider the ODE system with finite time T (3) 福 (4) (5) B.Globalexistenceanduniqueness We assume that the velocity satisfies asumptions aethen frdfonbtwbmatixW th (9) whereMhm (10) wherebtasfsfo (11) (7) wecanrewritesystem(3)as E25235 (12) p\"(tn)=()xa()…",
+          "source": "D:\\Documents\\rag-module\\carreer-guidance\\src\\database\\file_downloaded\\00000000-0000-0000-0000-000000000010\\Traffic Flow Reconstruction from Limited Collected Data.pdf",
+          "title": "Traffic Flow Reconstruction from Limited Collected Data.pdf",
+          "url": "",
+          "rerank_score": -10.928130149841309,
+          "image_urls": []
+        }
+      ],
+      "image_urls": [
+        "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img001.png",
+        "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img002.png",
+        "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img003.png"
+      ],
+      "cache_hit": true,
+      "timestamp": "2026-05-12T13:49:07.357854+00:00"
+    },
+    {
+      "execution_id": "38aee944-252b-48ce-bf62-9eda906503e8",
+      "conversation_id": "6bdc0275-67ba-4914-8a4c-becf054d2573",
+      "question": "xuất classifier pooling để làm gì và khác gì so với pooling thông thường cho bài toán ordinal? Đồng thời, từ năm 2024–2026 có survey hoặc benchmark nào nổi bật về ordinal classification trên ảnh y tế / computer vision không? Trong PDF đó, thiết lập thực nghiệm chính (dataset, metric ordinal, backbone) được mô tả thế nào? So sánh ngắn với xu hướng hiện tại khi người ta fine-tune ViT / CLIP cho tác vụ có thứ tự — theo các bài/blog hoặc repo GitHub gần đây bạn tìm được.  Paper của tôi có nhắc tới mất mát / ràng buộc đặc thù cho ordinal không? Bên cạnh đó, tìm giúp định nghĩa và ứng dụng của ordinal regression trong thực tế (ví dụ grading, risk scores) theo nguồn ngoài paper (web).  Tóm tắt đóng góp chính của Classifier Pooling for Modern Ordinal Classification theo nội dung file. Cập nhật thêm từ web: có implementation (PyTorch) hoặc thảo luận (Twitter/X, Reddit, Papers With Code) nào về ordinal pooling / classifier pooling tương tự không?",
+      "answer": "## 1. Classifier Pooling\n\n**Câu hỏi:** xuất classifier pooling để làm gì và khác gì so với pooling thông thường cho bài toán ordinal\n\n**Classifier Pooling** là một kỹ thuật được sử dụng trong các mô hình học sâu, đặc biệt là trong các bài toán phân loại thứ tự (ordinal classification). Mục đích của kỹ thuật này là để cải thiện khả năng dự đoán của mô hình bằng cách kết hợp các thông tin từ các lớp phân loại khác nhau.\n\nTrong bài toán ordinal classification, mục tiêu là dự đoán một giá trị thứ tự (ví dụ: đánh giá mức độ hài lòng từ 1 đến 5) thay vì một nhãn phân loại thông thường. Classifier Pooling được sử dụng để kết hợp các thông tin từ các lớp phân loại khác nhau để cải thiện khả năng dự đoán của mô hình.\n\nKhác với **pooling thông thường**, Classifier Pooling không chỉ đơn giản là lấy giá trị trung bình hoặc tối đa của các tính năng, mà nó còn sử dụng các thông tin từ các lớp phân loại khác nhau để tạo ra một biểu diễn tổng hợp. Điều này giúp mô hình có thể học được các mối quan hệ phức tạp giữa các lớp phân loại và cải thiện khả năng dự đoán.\n\nClassifier Pooling thường được sử dụng trong các mô hình học sâu như **Convolutional Neural Networks (CNNs)** và **Recurrent Neural Networks (RNNs)**. Kỹ thuật này đã được chứng minh là có hiệu quả trong các bài toán ordinal classification như phân loại hình ảnh, phân loại văn bản và phân loại tín hiệu thời gian.\n\n## 2. Ordinal Classification Surveys\n\n**Câu hỏi:** có survey hoặc benchmark nào nổi bật về ordinal classification trên ảnh y tế / computer vision từ năm 2024–2026 không\n\n_Không có phản hồi từ công cụ cho ý này._\n\n## 3. Experimental Setup\n\n**Câu hỏi:** thiết lập thực nghiệm chính (dataset, metric ordinal, backbone) được mô tả thế nào trong PDF\n\nThiết lập thực nghiệm chính trong PDF bao gồm:\n- **Dataset**: Dữ liệu được tạo ra từ mô hình traffic FtL (1) thay vì dữ liệu thực tế.\n- **Metric**: Các chỉ số đánh giá như MSE (Mean Squared Error) và RE (Relative Error) được sử dụng để đánh giá hiệu suất của mô hình.\n- **Backbone**: Mô hình học sâu (NN - Neural Network) được sử dụng với 5,000 epochs để học và dự đoán mật độ giao thông.\n\n## 4. Ordinal Regression Applications\n\n**Câu hỏi:** so sánh xu hướng hiện tại khi người ta fine-tune ViT / CLIP cho tác vụ có thứ tự và tìm định nghĩa và ứng dụng của ordinal regression trong thực tế\n\n**Ordinal Regression** là một kỹ thuật học máy được sử dụng để dự đoán các giá trị có thứ tự. Trong **Ordinal Regression**, mục tiêu là dự đoán một giá trị nằm trong một tập hợp các giá trị có thứ tự, chẳng hạn như đánh giá mức độ hài lòng (thấp, trung bình, cao) hoặc xếp hạng sản phẩm (1, 2, 3, ...).\n\nỨng dụng của **Ordinal Regression** trong thực tế bao gồm:\n\n- Đánh giá mức độ hài lòng của khách hàng\n- Xếp hạng sản phẩm hoặc dịch vụ\n- Dự đoán mức độ nghiêm trọng của một tình huống\n- Phân loại hình ảnh hoặc văn bản theo mức độ liên quan\n\nVề xu hướng hiện tại, **fine-tune** các mô hình như **ViT (Vision Transformer)** và **CLIP (Contrastive Language-Image Pre-training)** cho các tác vụ có thứ tự đang trở nên phổ biến. Các mô hình này được thiết kế ban đầu cho các tác vụ phân loại hình ảnh hoặc văn bản, nhưng chúng cũng có thể được điều chỉnh cho các tác vụ có thứ tự bằng cách sử dụng **Ordinal Regression**.\n\nKhi **fine-tune** các mô hình này, người ta thường sử dụng các kỹ thuật như:\n\n- Thêm một lớp **Ordinal Regression** vào mô hình\n- Sử dụng các hàm mất mát đặc biệt cho **Ordinal Regression**, chẳng hạn như **Mean Absolute Error (MAE)** hoặc **Mean Squared Error (MSE)**\n- Điều chỉnh mô hình để dự đoán các giá trị có thứ tự thay vì các nhãn phân loại\n\nTóm lại, **Ordinal Regression** là một kỹ thuật học máy quan trọng cho các tác vụ có thứ tự, và việc **fine-tune** các mô hình như **ViT** và **CLIP** cho các tác vụ này đang trở nên phổ biến trong lĩnh vực học máy và trí tuệ nhân tạo.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "(a) N = 2000, T = 0.1 (b) N = 4000, T = 0.2 Fig. 5: Reconstructed final traffic density (a) NN learning using 5,000 epochs (b) Testing using predicted density Fig. 6: Comparison between predictions and data with N = 3000 initial position. Let ρ(0, x) = ( 0.4ρmax, 0 ≤x < 0.5, 0.9ρmax, 0.5 < x ≤1. The learning procedure applied to N = 3000 cars yields results…",
+          "source": "D:\\Documents\\rag-module\\carreer-guidance\\src\\database\\file_downloaded\\00000000-0000-0000-0000-000000000010\\Traffic Flow Reconstruction from Limited Collected Data.pdf",
+          "title": "Traffic Flow Reconstruction from Limited Collected Data.pdf",
+          "url": "",
+          "rerank_score": -10.307355880737305,
+          "image_urls": [
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img001.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img002.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img003.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img004.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img005.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img006.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img007.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img008.png"
+          ]
+        },
+        {
+          "rank": 4,
+          "text": "Contriba 2 whichsestexwiththmaxlaveragecoreacrosfvaldatos wh dt (1) (1) 3 4 5 324 4 33452 227 525267 6 Table 1: Summary of Ecperiments 1 through 3 Ea 2e 3eaMms 7 E 8 囍 9 The authors report no competing interests. 10 1 11 12",
+          "source": "D:\\Documents\\rag-module\\carreer-guidance\\src\\database\\file_downloaded\\00000000-0000-0000-0000-000000000010\\Classifier Pooling for Modern Ordinal Classification.pdf",
+          "title": "Classifier Pooling for Modern Ordinal Classification.pdf",
+          "url": "",
+          "rerank_score": -11.279557228088379,
+          "image_urls": [
+            "http://localhost:8010/images/Classifier Pooling for Modern Ordinal Classification-fb6802c0/p3/img001.png",
+            "http://localhost:8010/images/Classifier Pooling for Modern Ordinal Classification-fb6802c0/p7/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img001.png",
+        "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img002.png",
+        "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img003.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-12T13:55:33.624494+00:00"
+    },
+    {
+      "execution_id": "6ac54548-da66-42ee-9229-4776d8d0cad0",
+      "conversation_id": "7527cad3-c62f-480e-82f8-3e2eafd09f94",
+      "question": "Computer vision là gì",
+      "answer": "**Computer Vision** (Thị giác máy tính) là một lĩnh vực của **trí tuệ nhân tạo** và **khoa học máy tính**, cho phép máy tính xử lý, phân tích và hiểu thông tin từ hình ảnh và video như con người. \n\nNó bao gồm các phương pháp thu nhận, xử lý ảnh kỹ thuật số, phân tích và nhận dạng các hình ảnh và dữ liệu đa chiều từ thế giới thực để cho ra các thông tin số hoặc biểu tượng. \n\nMột số ứng dụng nổi bật của **Computer Vision** bao gồm:\n- Nhận diện khuôn mặt\n- Xe tự lái\n- Phân tích hình ảnh y khoa\n- Thương mại điện tử\n\nNguồn: [VNPT AI](https://vnptai.io/), [200Lab](https://200lab.io/), [Wikipedia](https://vi.wikipedia.org/), [TheGioiMayChu](https://thegioimaychu.vn/)",
+      "sources": [
+        {
+          "title": "Computer Vision là gì? Lợi ích và ứng dụng của thị giác máy tính",
+          "url": "https://vnptai.io/vi/blog/detail/computer-vision-la-gi",
+          "snippet": "![Back](https://vnptai.io/img/arrow-left.svg) ## Trợ lý VNPT AI ![Close](https://vnptai.io/img/close-chat.svg) ![mic](https://vnptai.io/img/microphone-2.png) ![send](https://vnptai.io/img/send-blue.svg) [Trang chủ](https://vnptai.io/) [Bài viết](https://vnptai.io/vi/blog)Computer Vision là gì? Lợi ích và ứng dụng nổi bật của thị giác máy tính Chia sẻ # Computer Vision là gì? Lợi ích và ứng dụng nổ...",
+          "score": 0.0
+        },
+        {
+          "title": "Thị giác máy tính là gì? - Giải thích về AI/ML nhận dạng hình ảnh",
+          "url": "https://aws.amazon.com/vi/what-is/computer-vision/",
+          "snippet": "## Chọn tùy chọn cookie của bạn Chúng tôi sử dụng các cookie thiết yếu và công cụ tương tự cần thiết để cung cấp trang web và dịch vụ của chúng tôi. Chúng tôi sử dụng cookie hiệu năng để thu thập số liệu thống kê ẩn danh, qua đó hiểu rõ cách khách hàng sử dụng trang web của chúng tôi và tiến hành cải tiến. Bạn không thể vô hiệu hóa cookie thiết yếu, nhưng có thể nhấp vào “Tùy chỉnh” hoặc “Từ chối”...",
+          "score": 0.0
+        },
+        {
+          "title": "Computer Vision là gì? Những Ứng dụng của Thị giác máy tính",
+          "url": "https://200lab.io/blog/computer-vision-la-gi/",
+          "snippet": "# Computer Vision là gì? Những Ứng dụng của Thị giác máy tính 06 Sep, 2024 [Data Science](https://200lab.io/blog/tag/data-science) ![Avatar](https://statics.cdn.200lab.io/2024/09/z4883554292049_46abbd0a83ffdaccd6d6586b1946b883.jpg?width=60&quality=100) [Vo Chi Truong](https://200lab.io/blog/author/chuongit) Author Computer Vision là một lĩnh vực khoa học máy tính tập trung vào việc cho phép máy tí...",
+          "score": 0.0
+        },
+        {
+          "title": "Thị giác máy tính – Wikipedia tiếng Việt",
+          "url": "https://vi.wikipedia.org/wiki/Th%E1%BB%8B_gi%C3%A1c_m%C3%A1y_t%C3%ADnh",
+          "snippet": "# Thị giác máy tính Thị giác máy tính **Thị giác máy tính** ( [tiếng Anh](https://vi.wikipedia.org/wiki/Ti%E1%BA%BFng_Anh \"Tiếng Anh\"): **computer vision**) là một lĩnh vực bao gồm các phương pháp thu nhận, [xử lý ảnh kỹ thuật số](https://vi.wikipedia.org/wiki/X%E1%BB%AD_l%C3%BD_%E1%BA%A3nh_k%E1%BB%B9_thu%E1%BA%ADt_s%E1%BB%91?action=edit&redlink=1 \"Xử lý ảnh kỹ thuật số\"), phân tích và nhận dạng c...",
+          "score": 0.0
+        },
+        {
+          "title": "Computer Vision - Thị giác máy tính là gì? - Blog - Thegioimaychu.vn",
+          "url": "https://thegioimaychu.vn/blog/ai-hpc/computer-vision-thi-giac-may-tinh-la-gi-p5951/",
+          "snippet": "Search for: Search [Skip to content](https://thegioimaychu.vn/blog/ai-hpc/computer-vision-thi-giac-may-tinh-la-gi-p5951/#content) ![](https://thegioimaychu.vn/blog/wp-content/uploads/2020/06/TheGioiMayChu-Blog-Computer-Vision-e1638752019907.jpg) [Thị giác máy tính](https://thegioimaychu.vn/blog/tag/computer-vision/?utm_source=tmblog&utm_medium=inlinekwd) ( [Computer Vision](https://thegioimaychu.v...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://vnptai.io/img/logoVNPT.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-12T14:11:10.200495+00:00"
+    },
+    {
+      "execution_id": "a6d07855-399d-489b-9f1f-f814ca634385",
+      "conversation_id": "d44ec693-ff44-42fd-bb06-6140f638af22",
+      "question": "Deep Learrning là gì",
+      "answer": "**Deep Learning** là một chức năng của **trí tuệ nhân tạo (AI)**, bắt chước cách bộ não con người hoạt động để xử lí dữ liệu, tạo ra các mẫu để sử dụng cho việc đưa ra quyết định. Nó là một lĩnh vực con của **Machine Learning (học máy)**, nơi các máy tính sẽ học và cải thiện chính nó thông qua các thuật toán. **Deep Learning** được xây dựng dựa trên các khái niệm phức tạp hơn rất nhiều, chủ yếu hoạt động với các **mạng nơ-ron nhân tạo** để bắt chước khả năng tư duy và suy nghĩ của bộ não con người.",
+      "sources": [
+        {
+          "title": "Deep Learning là gì? Ứng dụng và xu hướng tương lai của học sâu",
+          "url": "https://vnptai.io/vi/blog/detail/deep-learning-la-gi",
+          "snippet": "![Back](https://vnptai.io/img/arrow-left.svg) ## Trợ lý VNPT AI ![Close](https://vnptai.io/img/close-chat.svg) ![mic](https://vnptai.io/img/microphone-2.png) ![send](https://vnptai.io/img/send-blue.svg) [Trang chủ](https://vnptai.io/) [Bài viết](https://vnptai.io/vi/blog)Deep Learning là gì? Ứng dụng và xu hướng tương lai của học sâu Chia sẻ # Deep Learning là gì? Ứng dụng và xu hướng tương lai củ...",
+          "score": 0.0
+        },
+        {
+          "title": "Deep Learning là gì? Tìm hiểu từ định nghĩa đến ứng dụng thực tế",
+          "url": "https://fptshop.com.vn/tin-tuc/danh-gia/deep-learning-la-gi-175780",
+          "snippet": "- [Nổi bật](https://fptshop.com.vn/tin-tuc) - [Tin mới](https://fptshop.com.vn/tin-tuc/tin-moi) - [Điện máy - Gia dụng](https://fptshop.com.vn/tin-tuc/dien-may) - [Khuyến mãi](https://fptshop.com.vn/tin-tuc/tin-khuyen-mai) - [Đánh giá - Tư vấn](https://fptshop.com.vn/tin-tuc/danh-gia) - [Thủ thuật](https://fptshop.com.vn/tin-tuc/thu-thuat) - [Video hot](https://fptshop.com.vn/tin-tuc/video-hot) -...",
+          "score": 0.0
+        },
+        {
+          "title": "Giới thiệu về Deep Learning, Deep Learning hoạt động như thế nào?",
+          "url": "https://viblo.asia/p/gioi-thieu-ve-deep-learning-deep-learning-hoat-dong-nhu-the-nao-3Q75w2nDlWb",
+          "snippet": "[![](https://images-stg.viblo.asia/full/febac246-5d8f-4d92-8b57-a52ae34ee068.png)](https://viblo.asia/announcements/chinh-thuc-bat-dau-viblo-mayfest-2026-uncode-the-mindset-lZL9XqYWJQK) +13 Cỡ chữ 18px Độ cao hàng 1.75 Mặc định Toàn màn hình Màu nền Đặt lại [Editors' Choice](https://viblo.asia/editors-choice) - Báo cáo - Thêm vào series của tôi Bài đăng này đã không được cập nhật trong 8 năm ![Mạn...",
+          "score": 0.0
+        },
+        {
+          "title": "Học sâu – Wikipedia tiếng Việt",
+          "url": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_s%C3%A2u",
+          "snippet": "[Bước tới nội dung](https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_s%C3%A2u#bodyContent) | | | | --- | --- | | **Biểu quyết xóa** **[Xóa bài](https://vi.wikipedia.org/wiki/Wikipedia:Bi%E1%BB%83u_quy%E1%BA%BFt_xo%C3%A1_b%C3%A0i \"Wikipedia:Biểu quyết xoá bài\")**: [Giao Heo](https://vi.wikipedia.org/wiki/Wikipedia:Bi%E1%BB%83u_quy%E1%BA%BFt_xo%C3%A1_b%C3%A0i/Giao_Heo \"Wikipedia:Biểu quyết xoá bài/Giao Heo...",
+          "score": 0.0
+        },
+        {
+          "title": "Deep Learning là gì? Tổng quan về Deep Learning từ A-Z",
+          "url": "https://is.duytan.edu.vn/study-corner/deep-learning-la-gi-tong-quan-ve-deep-learnin-8cj1d",
+          "snippet": "startwitterfacebookenvelopelinkedinyoutubealert-redalerthomeleft-quotechevronhamburgerminusplussearchtrianglex [![](https://is.duytan.edu.vn/study-corner/639042323872572545-logovn2.png)](https://is.duytan.edu.vn/ \"KHOA ĐÀO TẠO QUỐC TẾ - ĐẠI HỌC DUY TÂN\") ## Deep Learning là gì? Tổng quan về Deep Learning từ A-Z * * * nguồn: vietnix.vn Deep Learning là một chức năng của trí tuệ nhân tạo (AI), bắt c...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://vnptai.io/img/logoVNPT.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-12T14:16:05.578704+00:00"
+    },
+    {
+      "execution_id": "57ed1cb9-f18f-44db-a116-ff2c25359f59",
+      "conversation_id": "52d33be9-f825-45bd-994f-20c21f077310",
+      "question": "Deep learning là gì",
+      "answer": "**Deep Learning** là một chức năng của **trí tuệ nhân tạo (AI)**, bắt chước cách bộ não con người hoạt động để xử lí dữ liệu, tạo ra các mẫu để sử dụng cho việc đưa ra quyết định. Nó là một lĩnh vực con của **Machine Learning (học máy)**, nơi các máy tính sẽ học và cải thiện chính nó thông qua các thuật toán. \n\nDeep Learning được xây dựng dựa trên các khái niệm phức tạp hơn rất nhiều, chủ yếu hoạt động với các **mạng nơ-ron nhân tạo** để bắt chước khả năng tư duy và suy nghĩ của bộ não con người. \n\nNó có nhiều ứng dụng trong đời sống, bao gồm nhận dạng hình ảnh, xử lý ngôn ngữ tự nhiên, và nhiều lĩnh vực khác.",
+      "sources": [
+        {
+          "title": "Deep Learning là gì? Ứng dụng và xu hướng tương lai của học sâu",
+          "url": "https://vnptai.io/vi/blog/detail/deep-learning-la-gi",
+          "snippet": "![Back](https://vnptai.io/img/arrow-left.svg) ## Trợ lý VNPT AI ![Close](https://vnptai.io/img/close-chat.svg) ![mic](https://vnptai.io/img/microphone-2.png) ![send](https://vnptai.io/img/send-blue.svg) [Trang chủ](https://vnptai.io/) [Bài viết](https://vnptai.io/vi/blog)Deep Learning là gì? Ứng dụng và xu hướng tương lai của học sâu Chia sẻ # Deep Learning là gì? Ứng dụng và xu hướng tương lai củ...",
+          "score": 0.0
+        },
+        {
+          "title": "Deep Learning là gì? Tìm hiểu từ định nghĩa đến ứng dụng thực tế",
+          "url": "https://fptshop.com.vn/tin-tuc/danh-gia/deep-learning-la-gi-175780",
+          "snippet": "- [Nổi bật](https://fptshop.com.vn/tin-tuc) - [Tin mới](https://fptshop.com.vn/tin-tuc/tin-moi) - [Điện máy - Gia dụng](https://fptshop.com.vn/tin-tuc/dien-may) - [Khuyến mãi](https://fptshop.com.vn/tin-tuc/tin-khuyen-mai) - [Đánh giá - Tư vấn](https://fptshop.com.vn/tin-tuc/danh-gia) - [Thủ thuật](https://fptshop.com.vn/tin-tuc/thu-thuat) - [Video hot](https://fptshop.com.vn/tin-tuc/video-hot) -...",
+          "score": 0.0
+        },
+        {
+          "title": "Giới thiệu về Deep Learning, Deep Learning hoạt động như thế nào?",
+          "url": "https://viblo.asia/p/gioi-thieu-ve-deep-learning-deep-learning-hoat-dong-nhu-the-nao-3Q75w2nDlWb",
+          "snippet": "[![](https://images-stg.viblo.asia/full/febac246-5d8f-4d92-8b57-a52ae34ee068.png)](https://viblo.asia/announcements/chinh-thuc-bat-dau-viblo-mayfest-2026-uncode-the-mindset-lZL9XqYWJQK) +13 Cỡ chữ 18px Độ cao hàng 1.75 Mặc định Toàn màn hình Màu nền Đặt lại [Editors' Choice](https://viblo.asia/editors-choice) - Báo cáo - Thêm vào series của tôi Bài đăng này đã không được cập nhật trong 8 năm ![Mạn...",
+          "score": 0.0
+        },
+        {
+          "title": "Học sâu – Wikipedia tiếng Việt",
+          "url": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_s%C3%A2u",
+          "snippet": "[Bước tới nội dung](https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_s%C3%A2u#bodyContent) | | | | --- | --- | | **Biểu quyết xóa** **[Xóa bài](https://vi.wikipedia.org/wiki/Wikipedia:Bi%E1%BB%83u_quy%E1%BA%BFt_xo%C3%A1_b%C3%A0i \"Wikipedia:Biểu quyết xoá bài\")**: [Giao Heo](https://vi.wikipedia.org/wiki/Wikipedia:Bi%E1%BB%83u_quy%E1%BA%BFt_xo%C3%A1_b%C3%A0i/Giao_Heo \"Wikipedia:Biểu quyết xoá bài/Giao Heo...",
+          "score": 0.0
+        },
+        {
+          "title": "Deep Learning là gì? Tổng quan về Deep Learning từ A-Z",
+          "url": "https://is.duytan.edu.vn/study-corner/deep-learning-la-gi-tong-quan-ve-deep-learnin-8cj1d",
+          "snippet": "startwitterfacebookenvelopelinkedinyoutubealert-redalerthomeleft-quotechevronhamburgerminusplussearchtrianglex [![](https://is.duytan.edu.vn/study-corner/639042323872572545-logovn2.png)](https://is.duytan.edu.vn/ \"KHOA ĐÀO TẠO QUỐC TẾ - ĐẠI HỌC DUY TÂN\") ## Deep Learning là gì? Tổng quan về Deep Learning từ A-Z * * * nguồn: vietnix.vn Deep Learning là một chức năng của trí tuệ nhân tạo (AI), bắt c...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://vnptai.io/img/logoVNPT.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-12T14:31:36.708940+00:00"
+    },
+    {
+      "execution_id": "23e27386-8632-43d4-9912-7d2b331bff70",
+      "conversation_id": "5db803ae-9f80-4518-832d-d458d13fc354",
+      "question": "Machine Learning là gì?",
+      "answer": "**Machine Learning** là một lĩnh vực của **trí tuệ nhân tạo** (AI), hướng tới việc xây dựng các thuật toán và mô hình có khả năng \"học\" từ dữ liệu huấn luyện. Từ đó, các mô hình này có thể đưa ra dự đoán hoặc quyết định mà không cần được lập trình chi tiết cho từng tình huống cụ thể.\n\nTheo định nghĩa của [Wikipedia](https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_m%C3%A1y), học máy là một tập con của **trí tuệ nhân tạo**. Học máy có liên hệ mật thiết với **thống kê**, vì cả hai lĩnh vực đều xây dựng mô hình từ dữ liệu để đưa ra suy luận.\n\nMột số ứng dụng của **Machine Learning** bao gồm:\n- Xe tự hành của Google và Tesla\n- Hệ thống tự tag khuôn mặt trong ảnh của Facebook\n- Trợ lý ảo Siri của Apple\n- Hệ thống gợi ý sản phẩm của Amazon\n- Hệ thống gợi ý phim của Netflix\n- Máy chơi cờ vây AlphaGo của Google DeepMind\n\nNguồn: \n- [Machine Learning là gì?](https://vnptai.io/vi/blog/detail/machine-learning-la-gi)\n- [Học máy](https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_m%C3%A1y)\n- [Bài 1: Giới thiệu về Machine Learning](https://machinelearningcoban.com/2016/12/27/categories/)",
+      "sources": [
+        {
+          "title": "Machine learning là gì? Nguyên lý và ứng dụng thực tế của học máy",
+          "url": "https://vnptai.io/vi/blog/detail/machine-learning-la-gi",
+          "snippet": "![Back](https://vnptai.io/img/arrow-left.svg) ## Trợ lý VNPT AI ![Close](https://vnptai.io/img/close-chat.svg) ![mic](https://vnptai.io/img/microphone-2.png) ![send](https://vnptai.io/img/send-blue.svg) [Trang chủ](https://vnptai.io/) [Bài viết](https://vnptai.io/vi/blog)Machine Learning là gì? Nguyên lý và ứng dụng thực tế của học máy Chia sẻ # Machine Learning là gì? Nguyên lý và ứng dụng thực t...",
+          "score": 0.0
+        },
+        {
+          "title": "Machine learning là gì? - TopDev",
+          "url": "https://topdev.vn/blog/machine-learning-la-gi/",
+          "snippet": "[Facebook](https://www.facebook.com/topdevvietnam/ \"Facebook\")[Linkedin](https://www.linkedin.com/company/topdev-vn/ \"Linkedin\")[Twitter](https://twitter.com/Topdevvn \"Twitter\") - [Tìm việc IT](https://topdev.vn/?src=topdev_blog&medium=navbar&campaign=link) - [Tạo CV Online](https://topdev.vn/tao-cv-online?src=topdev_blog&medium=navbar&campaign=link) - [CÔNG TY TUYỂN DỤNG IT](https://topdev.vn/nha...",
+          "score": 0.0
+        },
+        {
+          "title": "Máy học là gì? – Giải thích về công nghệ ML - AWS",
+          "url": "https://aws.amazon.com/vi/what-is/machine-learning/",
+          "snippet": "## Chọn tùy chọn cookie của bạn Chúng tôi sử dụng các cookie thiết yếu và công cụ tương tự cần thiết để cung cấp trang web và dịch vụ của chúng tôi. Chúng tôi sử dụng cookie hiệu năng để thu thập số liệu thống kê ẩn danh, qua đó hiểu rõ cách khách hàng sử dụng trang web của chúng tôi và tiến hành cải tiến. Bạn không thể vô hiệu hóa cookie thiết yếu, nhưng có thể nhấp vào “Tùy chỉnh” hoặc “Từ chối”...",
+          "score": 0.0
+        },
+        {
+          "title": "Bài 1: Giới thiệu về Machine Learning",
+          "url": "https://machinelearningcoban.com/2016/12/26/introduce/",
+          "snippet": "[![](https://machinelearningcoban.com/assets/latex/new_logo92.png)](https://machinelearningcoban.com/) [![](https://machinelearningcoban.com/images/Buymeacoffee_blue.png)](https://machinelearningcoban.com/buymeacoffee)[![](https://machinelearningcoban.com/images/ebook_logo.png)](https://machinelearningcoban.com/ebook) [Bài 2: Phân nhóm các thuật toán Machine Learning »](https://machinelearningcoba...",
+          "score": 0.0
+        },
+        {
+          "title": "Học máy – Wikipedia tiếng Việt",
+          "url": "https://vi.wikipedia.org/wiki/H%E1%BB%8Dc_m%C3%A1y",
+          "snippet": "# Học máy Học máy **Học máy** (tiếng Anh: _Machine learning_) là một lĩnh vực của [trí tuệ nhân tạo](https://vi.wikipedia.org/wiki/Tr%C3%AD_tu%E1%BB%87_nh%C3%A2n_t%E1%BA%A1o \"Trí tuệ nhân tạo\") (AI), hướng tới việc xây dựng các thuật toán và mô hình có khả năng \"học\" từ dữ liệu huấn luyện. Từ đó, các mô hình này có thể đưa ra dự đoán hoặc quyết định mà không cần được lập trình chi tiết cho từng tì...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://vnptai.io/img/logoVNPT.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-12T14:34:20.348520+00:00"
+    },
+    {
+      "execution_id": "3062d5ad-5ea3-4f2e-a91a-2223bf1b9b4d",
+      "conversation_id": "51f399c5-b035-414a-9300-da3f0652df90",
+      "question": "DTU là trường nào ở Việt nam",
+      "answer": "Đại học Đà Nẵng (tiền thân là Đại học Tổng hợp Đà Nẵng) có một trường thành viên là **Đại học Bách khoa - Đại học Đà Nẵng (ĐHBK)**, không có thông tin về trường **DTU** trong ngữ cảnh đã cho.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Contriba 2 whichsestexwiththmaxlaveragecoreacrosfvaldatos wh dt (1) (1) 3 4 5 324 4 33452 227 525267 6 Table 1: Summary of Ecperiments 1 through 3 Ea 2e 3eaMms 7 E 8 囍 9 The authors report no competing interests. 10 1 11 12",
+          "source": "D:\\Documents\\rag-module\\carreer-guidance\\src\\database\\file_downloaded\\00000000-0000-0000-0000-000000000010\\Classifier Pooling for Modern Ordinal Classification.pdf",
+          "title": "Classifier Pooling for Modern Ordinal Classification.pdf",
+          "url": "",
+          "rerank_score": -10.826075553894043,
+          "image_urls": [
+            "http://localhost:8010/images/Classifier Pooling for Modern Ordinal Classification-fb6802c0/p3/img001.png",
+            "http://localhost:8010/images/Classifier Pooling for Modern Ordinal Classification-fb6802c0/p7/img001.png"
+          ]
+        },
+        {
+          "rank": 2,
+          "text": "(a) N = 2000, T = 0.1 (b) N = 4000, T = 0.2 Fig. 5: Reconstructed final traffic density (a) NN learning using 5,000 epochs (b) Testing using predicted density Fig. 6: Comparison between predictions and data with N = 3000 initial position. Let ρ(0, x) = ( 0.4ρmax, 0 ≤x < 0.5, 0.9ρmax, 0.5 < x ≤1. The learning procedure applied to N = 3000 cars yields results…",
+          "source": "D:\\Documents\\rag-module\\carreer-guidance\\src\\database\\file_downloaded\\00000000-0000-0000-0000-000000000010\\Traffic Flow Reconstruction from Limited Collected Data.pdf",
+          "title": "Traffic Flow Reconstruction from Limited Collected Data.pdf",
+          "url": "",
+          "rerank_score": -10.887474060058594,
+          "image_urls": [
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img001.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img002.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img003.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img004.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img005.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img006.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img007.png",
+            "http://localhost:8010/images/Traffic Flow Reconstruction from Limited Collected Data-6414adcb/p6/img008.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "http://localhost:8010/images/Classifier Pooling for Modern Ordinal Classification-fb6802c0/p3/img001.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-12T14:37:27.859184+00:00"
     }
   ]
 }

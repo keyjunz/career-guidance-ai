@@ -86,6 +86,10 @@ export function ChatThread({
   const greetName = userFirstName?.trim() || 'bạn'
   const startersDisabled = isTyping || !onStarterPrompt
 
+  const lastMessage = messages.length > 0 ? messages[messages.length - 1] : undefined
+  const streamingMessageId =
+    isTyping && lastMessage?.role === 'assistant' ? lastMessage.id : null
+
   return (
     <div
       ref={containerRef}
@@ -149,7 +153,7 @@ export function ChatThread({
 
         {messages.map((m) => (
           <div key={m.id} data-message-id={m.id}>
-            <MessageBubble message={m} />
+            <MessageBubble message={m} isStreaming={streamingMessageId === m.id} />
           </div>
         ))}
 

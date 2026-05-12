@@ -24,3 +24,13 @@ class AgentRuntimeState:
     max_retry_count: int = 1
     has_tool_errors: bool = False
     cacheable: bool = True
+    # Reuse RAG / Web tool clients within one pipeline run (multi-intent + fixer).
+    rag_tool_client: Any | None = None
+    web_tool_client: Any | None = None
+    # Hybrid retrieval cache hit for any RAG call in this execution (UI + metrics).
+    retrieval_cache_hit: bool = False
+    # Multi-intent decomposition
+    multi_intent: bool = False
+    sub_queries: list[dict[str, Any]] = field(default_factory=list)
+    tool_results_by_intent: dict[str, dict[str, Any]] = field(default_factory=dict)
+    answer_sections: list[dict[str, Any]] = field(default_factory=list)

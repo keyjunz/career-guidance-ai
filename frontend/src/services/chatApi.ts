@@ -37,14 +37,28 @@ type StreamHandlers = {
   onDone?: (executionId?: string) => void
 }
 
+export type StreamChatOptions = {
+  signal?: AbortSignal
+}
+
+/** True when fetch/read was aborted (user stop or navigation). */
+export function isStreamAbortError(error: unknown): boolean {
+  if (error instanceof DOMException && error.name === 'AbortError') return true
+  if (error instanceof Error && error.name === 'AbortError') return true
+  return false
+}
+
 export async function streamChatMessage(
   body: ApiChatRequest,
   handlers: StreamHandlers,
+  options?: StreamChatOptions,
 ): Promise<void> {
   const token = getAccessToken()
   if (!token) {
     throw new Error('Not authenticated')
   }
+
+  const signal = options?.signal
 
   const response = await fetch(`${API_BASE_URL}/api/chat/stream`, {
     method: 'POST',
@@ -53,6 +67,7 @@ export async function streamChatMessage(
       Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify(body),
+    signal,
   })
 
   if (!response.ok || !response.body) {
@@ -114,21 +129,29 @@ export async function streamChatMessage(
     }
   }
 
-  while (true) {
-    const { done, value } = await reader.read()
-    if (done) break
+  try {
+    while (true) {
+      const { done, value } = await reader.read()
+      if (done) break
 
-    buffer += decoder.decode(value, { stream: true })
+      buffer += decoder.decode(value, { stream: true })
 
-    let eventBoundary = buffer.indexOf('\n\n')
-    while (eventBoundary >= 0) {
-      const rawEvent = buffer.slice(0, eventBoundary).trim()
-      buffer = buffer.slice(eventBoundary + 2)
-      if (rawEvent) {
-        processEvent(rawEvent)
+      let eventBoundary = buffer.indexOf('\n\n')
+      while (eventBoundary >= 0) {
+        const rawEvent = buffer.slice(0, eventBoundary).trim()
+        buffer = buffer.slice(eventBoundary + 2)
+        if (rawEvent) {
+          processEvent(rawEvent)
+        }
+        eventBoundary = buffer.indexOf('\n\n')
       }
-      eventBoundary = buffer.indexOf('\n\n')
     }
+  } catch (err) {
+    await reader.cancel().catch(() => {})
+    if (isStreamAbortError(err)) {
+      throw err
+    }
+    throw err
   }
 }
 

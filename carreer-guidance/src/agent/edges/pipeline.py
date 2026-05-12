@@ -13,6 +13,7 @@ from src.agent.nodes.fixer_node import run_fixer
 from src.agent.nodes.guardrails_node import apply_guardrails
 from src.agent.nodes.planner_node import choose_plan
 from src.agent.nodes.prepare_node import prepare_request
+from src.agent.nodes.query_decomposer_node import run_decompose_query
 from src.agent.nodes.tool_executor_node import execute_tools
 from src.agent.prompts.status_prompts import STATUS_MESSAGES
 from src.agent.state.agent_state import AgentRuntimeState
@@ -127,6 +128,17 @@ def _cache_check(ctx: PipelineContext) -> dict[str, Any]:
             "cache_hit",
             ctx.get("status_callback"),
         )
+    return {}
+
+
+def _decompose(ctx: PipelineContext) -> dict[str, Any]:
+    _push_status(
+        ctx["state"],
+        ctx["store"],
+        "decompose_running",
+        ctx.get("status_callback"),
+    )
+    _run_step("decompose_query", ctx["state"], run_decompose_query, ctx["state"])
     return {}
 
 
@@ -248,7 +260,7 @@ def _route_after_cache(ctx: PipelineContext) -> str:
 
 
 def _route_after_guardrails(ctx: PipelineContext) -> str:
-    return "tools" if ctx["state"].plan_override else "planner"
+    return "tools" if ctx["state"].plan_override else "decompose"
 
 
 def _route_after_evaluate(ctx: PipelineContext) -> str:
@@ -277,6 +289,7 @@ def run_pipeline(
     graph.add_node("prepare", _prepare)
     graph.add_node("cache_check", _cache_check)
     graph.add_node("guardrails", _guardrails)
+    graph.add_node("decompose", _decompose)
     graph.add_node("planner", _planner)
     graph.add_node("tools", _tools)
     graph.add_node("draft", _draft)
@@ -300,10 +313,11 @@ def run_pipeline(
         "guardrails",
         _route_after_guardrails,
         {
-            "planner": "planner",
+            "decompose": "decompose",
             "tools": "tools",
         },
     )
+    graph.add_edge("decompose", "planner")
     graph.add_edge("planner", "tools")
     graph.add_edge("tools", "draft")
     graph.add_edge("draft", "evaluator")

@@ -45,7 +45,12 @@ def _build_eval_prompt(state: AgentRuntimeState) -> str:
         'OUTPUT FORMAT — Return STRICT JSON only: {"score":0.0-1.0,"notes":["..."]}\n\n'
         f"Question:\n{state.question.strip()}\n\n"
         f"Plan: {state.plan}\n"
-        f"Source count: {source_count}\n"
+        + (
+            f"Sections: {len(state.answer_sections)}\n"
+            if state.plan == "multi_intent"
+            else ""
+        )
+        + f"Source count: {source_count}\n"
         + (f"Sources:\n{source_excerpts}\n\n" if source_excerpts else "\n")
         + f"Answer:\n{state.draft_answer.strip()}\n"
     )
@@ -108,32 +113,46 @@ def evaluate_draft(state: AgentRuntimeState) -> bool:
         score -= 0.30
         notes.append("draft answer is too short")
 
-    if state.plan in {"rag_only", "rag_web_parallel"}:
-        rag_ok = bool(state.tool_results.get("rag", {}).get("success"))
-        if not rag_ok:
-            score -= 0.35
-            notes.append("rag tool failed")
+    if state.plan == "multi_intent":
+        bundles = list(state.tool_results_by_intent.values())
+        if not bundles:
+            score -= 0.45
+            notes.append("multi_intent produced no bundles")
+        for bundle in bundles:
+            if not bundle.get("success"):
+                score -= 0.22
+                notes.append(f"intent {bundle.get('intent_id')} tool failed")
+            if not list(bundle.get("sources") or []):
+                score -= 0.08
+                notes.append(f"intent {bundle.get('intent_id')} has no sources")
 
-    if state.plan in {"web_only", "rag_web_parallel"}:
-        web_payload = state.tool_results.get("web", {})
-        web_ok = bool(web_payload.get("success"))
-        if not web_ok:
-            score -= 0.35
-            notes.append("web tool failed")
-        elif not list(web_payload.get("sources") or []):
-            score -= 0.15
-            notes.append("web tool returned no sources")
+    if state.plan not in {"multi_intent"}:
+        if state.plan in {"rag_only", "rag_web_parallel"}:
+            rag_ok = bool(state.tool_results.get("rag", {}).get("success"))
+            if not rag_ok:
+                score -= 0.35
+                notes.append("rag tool failed")
 
-    if not state.sources and state.plan != "direct_answer":
-        score -= 0.10
-        notes.append("no sources attached")
+        if state.plan in {"web_only", "rag_web_parallel"}:
+            web_payload = state.tool_results.get("web", {})
+            web_ok = bool(web_payload.get("success"))
+            if not web_ok:
+                score -= 0.35
+                notes.append("web tool failed")
+            elif not list(web_payload.get("sources") or []):
+                score -= 0.15
+                notes.append("web tool returned no sources")
 
-    if state.plan == "rag_web_parallel":
-        rag_ok = bool(state.tool_results.get("rag", {}).get("success"))
-        web_ok = bool(state.tool_results.get("web", {}).get("success"))
-        if not rag_ok and not web_ok:
-            score = 0.0
-            notes.append("both rag and web failed")
+        if not state.sources and state.plan != "direct_answer":
+            score -= 0.10
+            notes.append("no sources attached")
+
+        if state.plan == "rag_web_parallel":
+            rag_ok = bool(state.tool_results.get("rag", {}).get("success"))
+            web_ok = bool(state.tool_results.get("web", {}).get("success"))
+            if not rag_ok and not web_ok:
+                score = 0.0
+                notes.append("both rag and web failed")
 
     llm_score, llm_notes = _try_llm_eval(state)
     if llm_score is not None:

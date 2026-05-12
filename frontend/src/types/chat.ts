@@ -28,8 +28,11 @@ export type ChatMessage = {
     executionId?: string
     conversationId?: string
     cached?: boolean
+    retrieval_cache_hit?: boolean
     statuses?: string[]
     sources?: Array<Record<string, unknown>>
+    answer_sections?: Array<Record<string, unknown>>
+    stopped?: boolean
   }
 }
 

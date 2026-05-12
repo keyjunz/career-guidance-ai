@@ -20,6 +20,8 @@ export type ApiChatPayload = {
   statuses?: string[]
   sources?: Array<Record<string, unknown>>
   cached?: boolean
+  retrieval_cache_hit?: boolean
+  answer_sections?: Array<Record<string, unknown>> | null
 }
 
 export type ApiEnvelope<T> = {

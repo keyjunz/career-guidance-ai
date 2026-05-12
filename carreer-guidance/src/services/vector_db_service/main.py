@@ -9,6 +9,35 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
 
+def _chroma_config_from_env_or_settings() -> tuple[str, int, str, str, str]:
+    """Prefer process env (K8s/CI/leader) first; else Pydantic (.env file).
+
+    Production almost always sets CHROMA_* in the real environment — behavior
+    matches the old os.getenv-only logic. Pydantic fallback only helps when
+    values exist in .env but were never exported to os.environ.
+    """
+    env_h = os.environ.get("CHROMA_HOST")
+    env_p = os.environ.get("CHROMA_PORT")
+    env_mode = os.environ.get("CHROMA_CLIENT_MODE")
+    env_persist = os.environ.get("CHROMA_PERSIST_DIR")
+    env_coll = os.environ.get("CHROMA_COLLECTION_NAME")
+    try:
+        from src.config.settings_models import get_settings
+
+        cfg = get_settings().vector_store
+    except Exception:
+        cfg = None
+
+    host = (env_h or (cfg.chroma_host if cfg else None) or "localhost").strip()
+    # Last-resort port/mode match legacy VectorDBService (pre-Pydantic fallback)
+    port_raw = env_p or (str(cfg.chroma_port) if cfg else None) or "8001"
+    port = int(str(port_raw).strip())
+    mode = (env_mode or (cfg.chroma_client_mode if cfg else None) or "persistent").strip().lower()
+    persist = (env_persist or (cfg.chroma_persist_dir if cfg else None) or "./chroma_data").strip()
+    coll = (env_coll or "career_guidance_documents").strip()
+    return host, port, mode, persist, coll
+
+
 class VectorDBService:
     """Ingest chunks into ChromaDB with semantic embeddings."""
 
@@ -23,14 +52,13 @@ class VectorDBService:
         self.chroma_client = chroma_client
         self.collection = None
 
-        # ChromaDB configuration
-        self.chroma_host = os.getenv("CHROMA_HOST", "localhost")
-        self.chroma_port = int(os.getenv("CHROMA_PORT", "8001"))
-        self.collection_name = os.getenv(
-            "CHROMA_COLLECTION_NAME", "career_guidance_documents"
-        )
-        self.persist_dir = os.getenv("CHROMA_PERSIST_DIR", "./chroma_data")
-        self.client_mode = os.getenv("CHROMA_CLIENT_MODE", "persistent").strip().lower()
+        # ChromaDB — align with .env via Pydantic (see _chroma_config_from_env_or_settings)
+        h, p, mode, persist, coll = _chroma_config_from_env_or_settings()
+        self.chroma_host = h
+        self.chroma_port = p
+        self.collection_name = coll
+        self.persist_dir = persist
+        self.client_mode = mode
 
         self._initialize_chroma()
 
@@ -146,7 +174,8 @@ class VectorDBService:
                 ) from collection_exc
 
             logger.info(
-                "ChromaDB initialized: collection=%s, host=%s, port=%s",
+                "ChromaDB initialized: mode=%s collection=%s host=%s port=%s",
+                self.client_mode,
                 self.collection_name,
                 self.chroma_host,
                 self.chroma_port,
