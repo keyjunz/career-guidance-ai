@@ -1,7 +1,7 @@
 {
   "user_id": "4d64496c-be06-4d05-892a-dce083e37c32",
   "created_at": "2026-05-06T18:27:31.298236+00:00",
-  "updated_at": "2026-05-11T01:59:49.331433+00:00",
+  "updated_at": "2026-05-13T10:15:47.396206+00:00",
   "pending_by_execution": {
     "5de44c2f-4e1e-41f5-9e4d-65d0f3789138": {
       "conversation_id": "aa471aa6-efc4-47a8-bccc-51f56e3a808a",
@@ -2347,6 +2347,288 @@
         "status": "Processing complete.",
         "timestamp": "2026-05-11T01:59:49.330380+00:00"
       }
+    ],
+    "6486b8e9-4df7-4429-880e-48c3eef409af": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-13T09:59:41.340422+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-13T09:59:41.362919+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-13T09:59:41.375714+00:00"
+      },
+      {
+        "status": "Cache hit — returning fast response.",
+        "timestamp": "2026-05-13T09:59:41.387248+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-13T09:59:41.409249+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-13T09:59:41.423256+00:00"
+      }
+    ],
+    "be7afac3-5494-484e-a948-fcc7983bf99f": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-13T10:00:12.305074+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-13T10:00:12.332764+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-13T10:00:12.349483+00:00"
+      },
+      {
+        "status": "Cache hit — returning fast response.",
+        "timestamp": "2026-05-13T10:00:12.364061+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-13T10:00:12.393750+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-13T10:00:12.408588+00:00"
+      }
+    ],
+    "389cb37e-33f9-4815-923b-08b84f773f85": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-13T10:01:02.937182+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-13T10:01:02.956048+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-13T10:01:02.964076+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-13T10:01:02.975127+00:00"
+      },
+      {
+        "status": "Analyzing question structure.",
+        "timestamp": "2026-05-13T10:01:02.985167+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-13T10:01:04.092177+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-13T10:01:04.102825+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-13T10:01:20.259613+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-13T10:01:20.274765+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-13T10:01:21.080669+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-13T10:01:21.089384+00:00"
+      }
+    ],
+    "1a314183-0b2d-4774-be7a-bea826952a51": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-13T10:02:28.179508+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-13T10:02:28.214302+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-13T10:02:28.229304+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-13T10:02:28.261822+00:00"
+      },
+      {
+        "status": "Analyzing question structure.",
+        "timestamp": "2026-05-13T10:02:28.281505+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-13T10:02:29.066167+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-13T10:02:29.087601+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-13T10:02:47.610304+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-13T10:02:47.622679+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-13T10:02:48.483964+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-13T10:02:48.496532+00:00"
+      }
+    ],
+    "d24a92aa-892d-431a-a1f5-6f4dd1f88954": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-13T10:04:57.019480+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-13T10:04:57.066769+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-13T10:04:57.087920+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-13T10:04:57.112739+00:00"
+      },
+      {
+        "status": "Analyzing question structure.",
+        "timestamp": "2026-05-13T10:04:57.139056+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-13T10:04:57.160656+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-13T10:04:57.616139+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-13T10:05:13.524734+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-13T10:05:13.537856+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-13T10:05:14.308878+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-13T10:05:14.318285+00:00"
+      }
+    ],
+    "a04bab6d-5ff3-423a-a07f-528bcea93a8a": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-13T10:14:21.048870+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-13T10:14:21.071289+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-13T10:14:21.083588+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-13T10:14:21.098092+00:00"
+      },
+      {
+        "status": "Analyzing question structure.",
+        "timestamp": "2026-05-13T10:14:21.111110+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-13T10:14:21.126490+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-13T10:14:22.007340+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-13T10:15:03.442430+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-13T10:15:03.462131+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-13T10:15:04.334251+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-13T10:15:04.346376+00:00"
+      }
+    ],
+    "6995ba3b-88f5-478b-9187-4a40bea43d88": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-13T10:15:43.570120+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-13T10:15:43.600254+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-13T10:15:43.621006+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-13T10:15:43.652893+00:00"
+      },
+      {
+        "status": "Analyzing question structure.",
+        "timestamp": "2026-05-13T10:15:43.670073+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-13T10:15:44.442453+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-13T10:15:44.962564+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-13T10:15:46.582872+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-13T10:15:46.601901+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-13T10:15:47.370525+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-13T10:15:47.396206+00:00"
+      }
     ]
   },
   "qa_cache": {
@@ -3429,8 +3711,8 @@
       "image_urls": [
         "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
       ],
-      "conversation_id": "6ee644e2-c688-4f29-984f-0a28533c53cd",
-      "updated_at": "2026-05-11T01:59:49.267034+00:00"
+      "conversation_id": "ea95aba2-160a-4a26-8614-4ba8f3f4be35",
+      "updated_at": "2026-05-13T10:00:12.379550+00:00"
     },
     "what can vietnam achieve if its workforce is equipped with global knowledge and skills?": {
       "question": "What can Vietnam achieve if its workforce is equipped with global knowledge and skills?",
@@ -3522,8 +3804,8 @@
       "image_urls": [
         "/images/05_Software_Engineering_Career_Opportunities_and_Roles-f0980f4f/p1/img001.png"
       ],
-      "conversation_id": "55ccb8b2-0128-4710-baf4-a74e49eb6cad",
-      "updated_at": "2026-05-11T01:58:55.941865+00:00"
+      "conversation_id": "af6779fb-02ae-426b-87c5-7035b105e32f",
+      "updated_at": "2026-05-13T09:59:41.401248+00:00"
     },
     "how many types of programming languages are mentioned based on their level?": {
       "question": "How many types of programming languages are mentioned based on their level?",
@@ -3565,6 +3847,181 @@
       ],
       "conversation_id": "7062b4df-bbc8-4930-af40-c4c6174e4e30",
       "updated_at": "2026-05-11T01:49:34.893552+00:00"
+    },
+    "why is having a clear career path important for software engineers? how many types of programming languages are mentioned based on their level?": {
+      "question": "Why is having a clear career path important for software engineers? How many types of programming languages are mentioned based on their level?",
+      "answer": "## 1. Career Importance\n\n**Câu hỏi:** Why is having a clear career path important for software engineers?\n\nHaving a clear career path is important for software engineers because **it provides a sense of direction and progression**. \n- It allows them to strive for higher ranks, such as **Senior Software Engineer**, which offers greater benefits and power.\n- A clear career path enables software engineers to **set goals and work towards achieving them**, ultimately leading to career advancement opportunities.\n- This clarity also helps software engineers to **develop the necessary skills and experience** required for each level, making them more competitive in the job market.\n\n## 2. Programming Language Types\n\n**Câu hỏi:** How many types of programming languages are mentioned based on their level?\n\nThere are **8** programming languages mentioned: \n- Java\n- Python\n- C# \n- PHP\n- JavaScript\n- Kotlin\n- Swift \nNo levels of programming languages are mentioned, only types.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous  salary and broad, clear career advancement opportunities. The level of skill,  experience, and specific responsibilities are assessed based on different skill levels  and experience.   LSoftware engineer career progression    Having a clear career path is something ever…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "url": "",
+          "rerank_score": 7.492739677429199,
+          "image_urls": [
+            "http://localhost:8010/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        },
+        {
+          "rank": 2,
+          "text": "What can you do with a software engineering degree? After graduation, students can  take on many different positions depending on their abilities and career aspirations.  Below are some of the most common jobs in the software engineering field.    Software Developer / Programmer  Programmers are individuals who directly write code, design, and develop softw…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "title": "05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "url": "",
+          "rerank_score": 1.1442701816558838,
+          "image_urls": [
+            "http://localhost:8010/images/05_Software_Engineering_Career_Opportunities_and_Roles-f0980f4f/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "http://localhost:8010/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png",
+        "http://localhost:8010/images/05_Software_Engineering_Career_Opportunities_and_Roles-f0980f4f/p1/img001.png"
+      ],
+      "conversation_id": "997c9b43-0a2b-490d-83d3-564eea5e09d9",
+      "updated_at": "2026-05-13T10:01:21.070445+00:00"
+    },
+    "tại sao việc có lộ trình sự nghiệp rõ ràng lại quan trọng đối với các kỹ sư phần mềm? có bao nhiêu loại ngôn ngữ lập trình được đề cập dựa trên cấp độ của chúng?": {
+      "question": "Tại sao việc có lộ trình sự nghiệp rõ ràng lại quan trọng đối với các kỹ sư phần mềm? Có bao nhiêu loại ngôn ngữ lập trình được đề cập dựa trên cấp độ của chúng?",
+      "answer": "## 1. Lộ trình sự nghiệp\n\n**Câu hỏi:** Tại sao việc có lộ trình sự nghiệp rõ ràng lại quan trọng đối với các kỹ sư phần mềm?\n\nViệc có **lộ trình sự nghiệp** rõ ràng lại quan trọng đối với các **kỹ sư phần mềm** vì nó giúp họ hiểu được các cấp bậc sự nghiệp, từ **Software Engineer Intern** đến **Senior Software Engineer**, và các cơ hội phát triển sự nghiệp tiếp theo. Điều này cho phép họ lên kế hoạch và phấn đấu để đạt được các mục tiêu sự nghiệp, tận dụng được các **lợi ích** và **quyền lực** ngày càng tăng khi thăng tiến trong sự nghiệp.\n\n## 2. Ngôn ngữ lập trình\n\n**Câu hỏi:** Có bao nhiêu loại ngôn ngữ lập trình được đề cập dựa trên cấp độ của chúng?\n\nKhông có thông tin về cấp độ ngôn ngữ lập trình, chỉ có danh sách các ngôn ngữ lập trình phổ biến như **Java**, **Python**, **C#**, **PHP**, **JavaScript**, **Kotlin**, **Swift**.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous  salary and broad, clear career advancement opportunities. The level of skill,  experience, and specific responsibilities are assessed based on different skill levels  and experience.   LSoftware engineer career progression    Having a clear career path is something ever…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "url": "",
+          "rerank_score": 7.492739677429199,
+          "image_urls": [
+            "http://localhost:8010/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        },
+        {
+          "rank": 2,
+          "text": "What can you do with a software engineering degree? After graduation, students can  take on many different positions depending on their abilities and career aspirations.  Below are some of the most common jobs in the software engineering field.    Software Developer / Programmer  Programmers are individuals who directly write code, design, and develop softw…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "title": "05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "url": "",
+          "rerank_score": 1.1442701816558838,
+          "image_urls": [
+            "http://localhost:8010/images/05_Software_Engineering_Career_Opportunities_and_Roles-f0980f4f/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "http://localhost:8010/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png",
+        "http://localhost:8010/images/05_Software_Engineering_Career_Opportunities_and_Roles-f0980f4f/p1/img001.png"
+      ],
+      "conversation_id": "d5f5821e-0e27-480b-a323-df6b178fc3d3",
+      "updated_at": "2026-05-13T10:02:48.471949+00:00"
+    },
+    "dựa trên xu hướng thị trường hiện tại, gợi ý giúp tôi vài hướng nghiệp phù hợp để bắt đầu.": {
+      "question": "Dựa trên xu hướng thị trường hiện tại, gợi ý giúp tôi vài hướng nghiệp phù hợp để bắt đầu.",
+      "answer": "Dựa trên thông tin từ các nguồn web, có một số hướng nghiệp phù hợp với xu hướng thị trường hiện tại:\n\n- **Công nghệ thông tin**: Là một trong những ngành nghề hot nhất hiện nay, với sự phát triển không ngừng của công nghệ, nhu cầu về nhân lực trong lĩnh vực này là rất cao.\n- **Marketing kỹ thuật số**: Với sự phát triển của internet và mạng xã hội, marketing kỹ thuật số trở thành một phần quan trọng trong chiến lược kinh doanh của nhiều doanh nghiệp.\n- **Y tế – chăm sóc sức khỏe**: Là một ngành nghề luôn có nhu cầu cao, đặc biệt là trong bối cảnh đại dịch COVID-19 vừa qua.\n- **Năng lượng tái tạo**: Là một ngành nghề đang phát triển mạnh mẽ, với nhu cầu về nguồn năng lượng sạch và bảo vệ môi trường ngày càng tăng.\n- **Giáo dục trực tuyến**: Là một hình thức giáo dục đang trở nên phổ biến, đặc biệt là trong bối cảnh đại dịch COVID-19 vừa qua.\n- **Kỹ thuật – công nghệ**: Là một ngành nghề luôn có nhu cầu cao, với sự phát triển không ngừng của công nghệ và kỹ thuật.\n- **Blockchain**: Là một công nghệ mới đang được phát triển mạnh mẽ, với nhiều ứng dụng trong lĩnh vực tài chính, bảo mật, và nhiều lĩnh vực khác.\n- **Thực tế ảo/AR**: Là một công nghệ mới đang được phát triển mạnh mẽ, với nhiều ứng dụng trong lĩnh vực giải trí, giáo dục, và nhiều lĩnh vực khác.\n\nHy vọng những gợi ý trên sẽ giúp bạn tìm được hướng nghiệp phù hợp với sở thích và năng lực của mình.",
+      "sources": [
+        {
+          "title": "Định hướng nghề nghiệp là gì? Hướng dẫn tự định hướng ... - TopCV",
+          "url": "https://www.topcv.vn/dinh-huong-nghe-nghiep",
+          "snippet": "[0](https://www.topcv.vn/viec-lam-da-luu) Lưu tin thành công! Để xem [Danh sách việc làm đã lưu](https://www.topcv.vn/viec-lam-da-luu), click vào đây! Danh sách việc làm đã lưu Danh sách Lời mời cơ hội nghề nghiệp Click để Xem chi tiết Tìm việc an toàn cùng TopCV [![CẢNH BÁO MẠO DANH TOPCV TUYỂN DỤNG CỘNG TÁC VIÊN/LÀM VIỆC THỜI VỤ](https://cdn-new.topcv.vn/unsafe/250x/https://blog.topcv.vn/wp-cont...",
+          "score": 0.0
+        },
+        {
+          "title": "Xu hướng nghề nghiệp hiện nay: Cách lựa chọn đúng đắn cho ...",
+          "url": "https://caodanglaocai.vn/tin-tuc-tuyen-sinh/xu-huong-nghe-nghiep-hien-nay-cach-lua-chon-dung-dan-cho-tuong-lai-338574",
+          "snippet": "| | | --- | | ![image banner](https://storage-vnportal.vnpt.vn/lci-soyte-responsive/4821/moi/picture2.png)<br>- [Trang chủ](https://caodanglaocai.vn/)<br>- Giới thiệu<br> - [Về chúng tôi](https://caodanglaocai.vn/ve-chung-toi)<br> - [Đảng bộ](https://caodanglaocai.vn/dang-bo)<br> - [Thành tựu](https://caodanglaocai.vn/thanh-tuu2)<br> - [Đối tác](https://caodanglaocai.vn/doi-tac2)<br> - [Đoàn thể -...",
+          "score": 0.0
+        },
+        {
+          "title": "Hướng nghiệp: 6 cách giúp người trẻ chọn nghề nghiệp phù hợp",
+          "url": "https://www.elle.vn/bi-quyet-song/huong-nghiep-6-cach-giup-nguoi-tre-chon-nghe/",
+          "snippet": "[Bỏ qua và tới nội dung chính](https://www.elle.vn/bi-quyet-song/huong-nghiep-6-cach-giup-nguoi-tre-chon-nghe/#content) - [Bí quyết sống](https://www.elle.vn/cong-dong/bi-quyet-song/) - [Du lịch](https://www.elle.vn/cong-dong/du-lich/) - [ELLE Voice](https://www.elle.vn/cong-dong/elle-voice/) - [Trải nghiệm](https://www.elle.vn/cong-dong/trai-nghiem/) Hướng nghiệp không chỉ giúp chúng ta chọn được...",
+          "score": 0.0
+        },
+        {
+          "title": "Top 9+ Xu Hướng Nghề Nghiệp Hot Nhất Hiện Nay",
+          "url": "https://bacnghean.edu.vn/tin-tuc/xu-huong-nghe-nghiep/",
+          "snippet": "# Top 9+ Xu Hướng Nghề Nghiệp Hot Nhất Hiện Nay - [admin](https://bacnghean.edu.vn/author/admin/) - Ngày cập nhật: 25/02/2026 Xu hướng nghề nghiệp là sự thay đổi và chuyển dịch của thị trường lao động theo thời gian, phản ánh những ngành nghề, kỹ năng và công việc đang được ưa chuộng, có nhu cầu tuyển dụng cao hoặc được dự báo sẽ phát triển mạnh trong tương lai. Bước vào kỷ nguyên số, những biến đ...",
+          "score": 0.0
+        },
+        {
+          "title": "10 câu hỏi giúp bạn định hướng sự nghiệp | CareerViet.vn",
+          "url": "https://careerviet.vn/vi/talentcommunity/10-cau-hoi-giup-ban-dinh-huong-su-nghiep.35A50BCD.html",
+          "snippet": "#### Danh mục #### Danh mục - [Mới nhất](https://careerviet.vn/vi/talentcommunity) - [Bí quyết tìm việc](https://careerviet.vn/vi/talentcommunity/bi-quyet-tim-viec) - [Hồ sơ ấn tượng](https://careerviet.vn/vi/talentcommunity/bi-quyet-tim-viec/ho-so-an-tuong) - [Phỏng vấn thành công](https://careerviet.vn/vi/talentcommunity/bi-quyet-tim-viec/phong-van-thanh-cong) - [Hồ sơ mẫu](https://careerviet.vn...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://static.topcv.vn/cms/dinh-huong-nghe-nghiep-24.jpg65b7529eea407.jpg"
+      ],
+      "conversation_id": "41f4377a-07df-4a27-bf0a-17ac55ea4332",
+      "updated_at": "2026-05-13T10:05:14.296691+00:00"
+    },
+    "tôi nên ưu tiên học thêm những kỹ năng nào để tăng cơ hội việc làm?": {
+      "question": "Tôi nên ưu tiên học thêm những kỹ năng nào để tăng cơ hội việc làm?",
+      "answer": "Để tăng cơ hội việc làm, bạn nên ưu tiên học thêm các kỹ năng sau:\n- **Lập trình**: Học các ngôn ngữ lập trình phổ biến như **Java**, **Python**, **C#**, **PHP**, **JavaScript**, **Kotlin**, **Swift**.\n- **Phát triển phần mềm**: Tìm hiểu về quy trình phát triển phần mềm, thiết kế và xây dựng các hệ thống quản lý.\n- **Kiểm tra và bảo trì**: Học cách kiểm tra và bảo trì phần mềm để đảm bảo chất lượng và hiệu suất.\n- **Làm việc nhóm**: Phát triển kỹ năng làm việc nhóm, giao tiếp và quản lý dự án.\n- **Tư duy logic**: Phát triển tư duy logic và sáng tạo để giải quyết các vấn đề phức tạp.\n- **Công nghệ mới**: Cập nhật kiến thức về các công nghệ mới và xu hướng trong lĩnh vực **phát triển phần mềm**.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "What can you do with a software engineering degree? After graduation, students can  take on many different positions depending on their abilities and career aspirations.  Below are some of the most common jobs in the software engineering field.    Software Developer / Programmer  Programmers are individuals who directly write code, design, and develop softw…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "title": "05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "url": "",
+          "rerank_score": -7.063127517700195,
+          "image_urls": [
+            "http://localhost:8010/images/05_Software_Engineering_Career_Opportunities_and_Roles-f0980f4f/p1/img001.png"
+          ]
+        },
+        {
+          "rank": 2,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous  salary and broad, clear career advancement opportunities. The level of skill,  experience, and specific responsibilities are assessed based on different skill levels  and experience.   LSoftware engineer career progression    Having a clear career path is something ever…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "url": "",
+          "rerank_score": -7.845156192779541,
+          "image_urls": [
+            "http://localhost:8010/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "http://localhost:8010/images/05_Software_Engineering_Career_Opportunities_and_Roles-f0980f4f/p1/img001.png"
+      ],
+      "conversation_id": "33ef077e-69bf-4e07-9658-b2c0f35ee400",
+      "updated_at": "2026-05-13T10:15:04.323212+00:00"
+    },
+    "tại sao việc có lộ trình sự nghiệp rõ ràng lại quan trọng đối với các kỹ sư phần mềm?": {
+      "question": "Tại sao việc có lộ trình sự nghiệp rõ ràng lại quan trọng đối với các kỹ sư phần mềm?",
+      "answer": "Việc có **lộ trình sự nghiệp** rõ ràng lại quan trọng đối với các **kỹ sư phần mềm** vì nó giúp họ hiểu được **cấp bậc** và **trách nhiệm** cụ thể tại mỗi giai đoạn phát triển sự nghiệp. Điều này cho phép họ đặt mục tiêu và phấn đấu để đạt được **thành tựu** cao hơn, như từ **Junior Software Engineer** lên **Senior Software Engineer**. Lộ trình sự nghiệp rõ ràng cũng giúp họ nhận ra **cơ hội phát triển** và **thăng tiến** trong lĩnh vực **phát triển phần mềm**.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous  salary and broad, clear career advancement opportunities. The level of skill,  experience, and specific responsibilities are assessed based on different skill levels  and experience.   LSoftware engineer career progression    Having a clear career path is something ever…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "url": "",
+          "rerank_score": 7.492739677429199,
+          "image_urls": [
+            "http://localhost:8010/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        },
+        {
+          "rank": 2,
+          "text": "What can you do with a software engineering degree? After graduation, students can  take on many different positions depending on their abilities and career aspirations.  Below are some of the most common jobs in the software engineering field.    Software Developer / Programmer  Programmers are individuals who directly write code, design, and develop softw…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "title": "05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "url": "",
+          "rerank_score": 1.1442701816558838,
+          "image_urls": [
+            "http://localhost:8010/images/05_Software_Engineering_Career_Opportunities_and_Roles-f0980f4f/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "http://localhost:8010/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "conversation_id": "cd48d55b-da78-45b8-b525-c1c6d7ea1b94",
+      "updated_at": "2026-05-13T10:15:47.344752+00:00"
     }
   },
   "history": [
@@ -5547,6 +6004,247 @@
       ],
       "cache_hit": true,
       "timestamp": "2026-05-11T01:59:49.267034+00:00"
+    },
+    {
+      "execution_id": "6486b8e9-4df7-4429-880e-48c3eef409af",
+      "conversation_id": "af6779fb-02ae-426b-87c5-7035b105e32f",
+      "question": "What can you do with a software engineering degree?",
+      "answer": "With a **software engineering degree**, you can pursue various positions based on your abilities and aspirations. Common roles include:\n\n*   **Software Developer / Programmer**: This role involves writing code, designing, and developing software, websites, and mobile applications. Responsibilities include analyzing requirements, building functionality, optimizing code, testing, and maintenance. Programmers often use languages like **Java**, **Python**, **C#**, **PHP**, **JavaScript**, **Kotlin**, and **Swift**. This path is suitable for individuals with logical thinking, creativity, patience, and a passion for technology.\n\nCareer progression in software engineering typically follows these levels:\n\n*   Level 1: **Software Engineer Intern**\n*   Level 2: **Junior Software Engineer**\n*   Level 3: **Software Engineer**\n*   Level 4: **Senior Software Engineer**\n\nUpon reaching the **Senior Software Engineer** level, career paths can diverge into technical or management roles.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "What can you do with a software engineering degree? After graduation, students can \ntake on many dif...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "title": "05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "rerank_score": 10.196949005126953,
+          "image_urls": [
+            "/images/05_Software_Engineering_Career_Opportunities_and_Roles-f0980f4f/p1/img001.png"
+          ]
+        },
+        {
+          "rank": 2,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": 2.1899635791778564,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/05_Software_Engineering_Career_Opportunities_and_Roles-f0980f4f/p1/img001.png"
+      ],
+      "cache_hit": true,
+      "timestamp": "2026-05-13T09:59:41.401248+00:00"
+    },
+    {
+      "execution_id": "be7afac3-5494-484e-a948-fcc7983bf99f",
+      "conversation_id": "ea95aba2-160a-4a26-8614-4ba8f3f4be35",
+      "question": "Why is having a clear career path important for software engineers?",
+      "answer": "Having a clear career path is important for **software engineers** because it provides a sense of direction and allows them to understand how their **skill level**, **experience**, and **responsibilities** are assessed. The higher the rank in the **hierarchical sequence** of a software engineer's career, the greater the **benefits** and **power**.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous \nsalary and ...",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "rerank_score": 7.492735862731934,
+          "image_urls": [
+            "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "cache_hit": true,
+      "timestamp": "2026-05-13T10:00:12.380551+00:00"
+    },
+    {
+      "execution_id": "389cb37e-33f9-4815-923b-08b84f773f85",
+      "conversation_id": "997c9b43-0a2b-490d-83d3-564eea5e09d9",
+      "question": "Why is having a clear career path important for software engineers? How many types of programming languages are mentioned based on their level?",
+      "answer": "## 1. Career Importance\n\n**Câu hỏi:** Why is having a clear career path important for software engineers?\n\nHaving a clear career path is important for software engineers because **it provides a sense of direction and progression**. \n- It allows them to strive for higher ranks, such as **Senior Software Engineer**, which offers greater benefits and power.\n- A clear career path enables software engineers to **set goals and work towards achieving them**, ultimately leading to career advancement opportunities.\n- This clarity also helps software engineers to **develop the necessary skills and experience** required for each level, making them more competitive in the job market.\n\n## 2. Programming Language Types\n\n**Câu hỏi:** How many types of programming languages are mentioned based on their level?\n\nThere are **8** programming languages mentioned: \n- Java\n- Python\n- C# \n- PHP\n- JavaScript\n- Kotlin\n- Swift \nNo levels of programming languages are mentioned, only types.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous  salary and broad, clear career advancement opportunities. The level of skill,  experience, and specific responsibilities are assessed based on different skill levels  and experience.   LSoftware engineer career progression    Having a clear career path is something ever…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "url": "",
+          "rerank_score": 7.492739677429199,
+          "image_urls": [
+            "http://localhost:8010/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        },
+        {
+          "rank": 2,
+          "text": "What can you do with a software engineering degree? After graduation, students can  take on many different positions depending on their abilities and career aspirations.  Below are some of the most common jobs in the software engineering field.    Software Developer / Programmer  Programmers are individuals who directly write code, design, and develop softw…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "title": "05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "url": "",
+          "rerank_score": 1.1442701816558838,
+          "image_urls": [
+            "http://localhost:8010/images/05_Software_Engineering_Career_Opportunities_and_Roles-f0980f4f/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "http://localhost:8010/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png",
+        "http://localhost:8010/images/05_Software_Engineering_Career_Opportunities_and_Roles-f0980f4f/p1/img001.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-13T10:01:21.070445+00:00"
+    },
+    {
+      "execution_id": "1a314183-0b2d-4774-be7a-bea826952a51",
+      "conversation_id": "d5f5821e-0e27-480b-a323-df6b178fc3d3",
+      "question": "Tại sao việc có lộ trình sự nghiệp rõ ràng lại quan trọng đối với các kỹ sư phần mềm? Có bao nhiêu loại ngôn ngữ lập trình được đề cập dựa trên cấp độ của chúng?",
+      "answer": "## 1. Lộ trình sự nghiệp\n\n**Câu hỏi:** Tại sao việc có lộ trình sự nghiệp rõ ràng lại quan trọng đối với các kỹ sư phần mềm?\n\nViệc có **lộ trình sự nghiệp** rõ ràng lại quan trọng đối với các **kỹ sư phần mềm** vì nó giúp họ hiểu được các cấp bậc sự nghiệp, từ **Software Engineer Intern** đến **Senior Software Engineer**, và các cơ hội phát triển sự nghiệp tiếp theo. Điều này cho phép họ lên kế hoạch và phấn đấu để đạt được các mục tiêu sự nghiệp, tận dụng được các **lợi ích** và **quyền lực** ngày càng tăng khi thăng tiến trong sự nghiệp.\n\n## 2. Ngôn ngữ lập trình\n\n**Câu hỏi:** Có bao nhiêu loại ngôn ngữ lập trình được đề cập dựa trên cấp độ của chúng?\n\nKhông có thông tin về cấp độ ngôn ngữ lập trình, chỉ có danh sách các ngôn ngữ lập trình phổ biến như **Java**, **Python**, **C#**, **PHP**, **JavaScript**, **Kotlin**, **Swift**.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous  salary and broad, clear career advancement opportunities. The level of skill,  experience, and specific responsibilities are assessed based on different skill levels  and experience.   LSoftware engineer career progression    Having a clear career path is something ever…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "url": "",
+          "rerank_score": 7.492739677429199,
+          "image_urls": [
+            "http://localhost:8010/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        },
+        {
+          "rank": 2,
+          "text": "What can you do with a software engineering degree? After graduation, students can  take on many different positions depending on their abilities and career aspirations.  Below are some of the most common jobs in the software engineering field.    Software Developer / Programmer  Programmers are individuals who directly write code, design, and develop softw…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "title": "05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "url": "",
+          "rerank_score": 1.1442701816558838,
+          "image_urls": [
+            "http://localhost:8010/images/05_Software_Engineering_Career_Opportunities_and_Roles-f0980f4f/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "http://localhost:8010/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png",
+        "http://localhost:8010/images/05_Software_Engineering_Career_Opportunities_and_Roles-f0980f4f/p1/img001.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-13T10:02:48.472950+00:00"
+    },
+    {
+      "execution_id": "d24a92aa-892d-431a-a1f5-6f4dd1f88954",
+      "conversation_id": "41f4377a-07df-4a27-bf0a-17ac55ea4332",
+      "question": "Dựa trên xu hướng thị trường hiện tại, gợi ý giúp tôi vài hướng nghiệp phù hợp để bắt đầu.",
+      "answer": "Dựa trên thông tin từ các nguồn web, có một số hướng nghiệp phù hợp với xu hướng thị trường hiện tại:\n\n- **Công nghệ thông tin**: Là một trong những ngành nghề hot nhất hiện nay, với sự phát triển không ngừng của công nghệ, nhu cầu về nhân lực trong lĩnh vực này là rất cao.\n- **Marketing kỹ thuật số**: Với sự phát triển của internet và mạng xã hội, marketing kỹ thuật số trở thành một phần quan trọng trong chiến lược kinh doanh của nhiều doanh nghiệp.\n- **Y tế – chăm sóc sức khỏe**: Là một ngành nghề luôn có nhu cầu cao, đặc biệt là trong bối cảnh đại dịch COVID-19 vừa qua.\n- **Năng lượng tái tạo**: Là một ngành nghề đang phát triển mạnh mẽ, với nhu cầu về nguồn năng lượng sạch và bảo vệ môi trường ngày càng tăng.\n- **Giáo dục trực tuyến**: Là một hình thức giáo dục đang trở nên phổ biến, đặc biệt là trong bối cảnh đại dịch COVID-19 vừa qua.\n- **Kỹ thuật – công nghệ**: Là một ngành nghề luôn có nhu cầu cao, với sự phát triển không ngừng của công nghệ và kỹ thuật.\n- **Blockchain**: Là một công nghệ mới đang được phát triển mạnh mẽ, với nhiều ứng dụng trong lĩnh vực tài chính, bảo mật, và nhiều lĩnh vực khác.\n- **Thực tế ảo/AR**: Là một công nghệ mới đang được phát triển mạnh mẽ, với nhiều ứng dụng trong lĩnh vực giải trí, giáo dục, và nhiều lĩnh vực khác.\n\nHy vọng những gợi ý trên sẽ giúp bạn tìm được hướng nghiệp phù hợp với sở thích và năng lực của mình.",
+      "sources": [
+        {
+          "title": "Định hướng nghề nghiệp là gì? Hướng dẫn tự định hướng ... - TopCV",
+          "url": "https://www.topcv.vn/dinh-huong-nghe-nghiep",
+          "snippet": "[0](https://www.topcv.vn/viec-lam-da-luu) Lưu tin thành công! Để xem [Danh sách việc làm đã lưu](https://www.topcv.vn/viec-lam-da-luu), click vào đây! Danh sách việc làm đã lưu Danh sách Lời mời cơ hội nghề nghiệp Click để Xem chi tiết Tìm việc an toàn cùng TopCV [![CẢNH BÁO MẠO DANH TOPCV TUYỂN DỤNG CỘNG TÁC VIÊN/LÀM VIỆC THỜI VỤ](https://cdn-new.topcv.vn/unsafe/250x/https://blog.topcv.vn/wp-cont...",
+          "score": 0.0
+        },
+        {
+          "title": "Xu hướng nghề nghiệp hiện nay: Cách lựa chọn đúng đắn cho ...",
+          "url": "https://caodanglaocai.vn/tin-tuc-tuyen-sinh/xu-huong-nghe-nghiep-hien-nay-cach-lua-chon-dung-dan-cho-tuong-lai-338574",
+          "snippet": "| | | --- | | ![image banner](https://storage-vnportal.vnpt.vn/lci-soyte-responsive/4821/moi/picture2.png)<br>- [Trang chủ](https://caodanglaocai.vn/)<br>- Giới thiệu<br> - [Về chúng tôi](https://caodanglaocai.vn/ve-chung-toi)<br> - [Đảng bộ](https://caodanglaocai.vn/dang-bo)<br> - [Thành tựu](https://caodanglaocai.vn/thanh-tuu2)<br> - [Đối tác](https://caodanglaocai.vn/doi-tac2)<br> - [Đoàn thể -...",
+          "score": 0.0
+        },
+        {
+          "title": "Hướng nghiệp: 6 cách giúp người trẻ chọn nghề nghiệp phù hợp",
+          "url": "https://www.elle.vn/bi-quyet-song/huong-nghiep-6-cach-giup-nguoi-tre-chon-nghe/",
+          "snippet": "[Bỏ qua và tới nội dung chính](https://www.elle.vn/bi-quyet-song/huong-nghiep-6-cach-giup-nguoi-tre-chon-nghe/#content) - [Bí quyết sống](https://www.elle.vn/cong-dong/bi-quyet-song/) - [Du lịch](https://www.elle.vn/cong-dong/du-lich/) - [ELLE Voice](https://www.elle.vn/cong-dong/elle-voice/) - [Trải nghiệm](https://www.elle.vn/cong-dong/trai-nghiem/) Hướng nghiệp không chỉ giúp chúng ta chọn được...",
+          "score": 0.0
+        },
+        {
+          "title": "Top 9+ Xu Hướng Nghề Nghiệp Hot Nhất Hiện Nay",
+          "url": "https://bacnghean.edu.vn/tin-tuc/xu-huong-nghe-nghiep/",
+          "snippet": "# Top 9+ Xu Hướng Nghề Nghiệp Hot Nhất Hiện Nay - [admin](https://bacnghean.edu.vn/author/admin/) - Ngày cập nhật: 25/02/2026 Xu hướng nghề nghiệp là sự thay đổi và chuyển dịch của thị trường lao động theo thời gian, phản ánh những ngành nghề, kỹ năng và công việc đang được ưa chuộng, có nhu cầu tuyển dụng cao hoặc được dự báo sẽ phát triển mạnh trong tương lai. Bước vào kỷ nguyên số, những biến đ...",
+          "score": 0.0
+        },
+        {
+          "title": "10 câu hỏi giúp bạn định hướng sự nghiệp | CareerViet.vn",
+          "url": "https://careerviet.vn/vi/talentcommunity/10-cau-hoi-giup-ban-dinh-huong-su-nghiep.35A50BCD.html",
+          "snippet": "#### Danh mục #### Danh mục - [Mới nhất](https://careerviet.vn/vi/talentcommunity) - [Bí quyết tìm việc](https://careerviet.vn/vi/talentcommunity/bi-quyet-tim-viec) - [Hồ sơ ấn tượng](https://careerviet.vn/vi/talentcommunity/bi-quyet-tim-viec/ho-so-an-tuong) - [Phỏng vấn thành công](https://careerviet.vn/vi/talentcommunity/bi-quyet-tim-viec/phong-van-thanh-cong) - [Hồ sơ mẫu](https://careerviet.vn...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://static.topcv.vn/cms/dinh-huong-nghe-nghiep-24.jpg65b7529eea407.jpg"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-13T10:05:14.296691+00:00"
+    },
+    {
+      "execution_id": "a04bab6d-5ff3-423a-a07f-528bcea93a8a",
+      "conversation_id": "33ef077e-69bf-4e07-9658-b2c0f35ee400",
+      "question": "Tôi nên ưu tiên học thêm những kỹ năng nào để tăng cơ hội việc làm?",
+      "answer": "Để tăng cơ hội việc làm, bạn nên ưu tiên học thêm các kỹ năng sau:\n- **Lập trình**: Học các ngôn ngữ lập trình phổ biến như **Java**, **Python**, **C#**, **PHP**, **JavaScript**, **Kotlin**, **Swift**.\n- **Phát triển phần mềm**: Tìm hiểu về quy trình phát triển phần mềm, thiết kế và xây dựng các hệ thống quản lý.\n- **Kiểm tra và bảo trì**: Học cách kiểm tra và bảo trì phần mềm để đảm bảo chất lượng và hiệu suất.\n- **Làm việc nhóm**: Phát triển kỹ năng làm việc nhóm, giao tiếp và quản lý dự án.\n- **Tư duy logic**: Phát triển tư duy logic và sáng tạo để giải quyết các vấn đề phức tạp.\n- **Công nghệ mới**: Cập nhật kiến thức về các công nghệ mới và xu hướng trong lĩnh vực **phát triển phần mềm**.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "What can you do with a software engineering degree? After graduation, students can  take on many different positions depending on their abilities and career aspirations.  Below are some of the most common jobs in the software engineering field.    Software Developer / Programmer  Programmers are individuals who directly write code, design, and develop softw…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "title": "05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "url": "",
+          "rerank_score": -7.063127517700195,
+          "image_urls": [
+            "http://localhost:8010/images/05_Software_Engineering_Career_Opportunities_and_Roles-f0980f4f/p1/img001.png"
+          ]
+        },
+        {
+          "rank": 2,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous  salary and broad, clear career advancement opportunities. The level of skill,  experience, and specific responsibilities are assessed based on different skill levels  and experience.   LSoftware engineer career progression    Having a clear career path is something ever…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "url": "",
+          "rerank_score": -7.845156192779541,
+          "image_urls": [
+            "http://localhost:8010/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "http://localhost:8010/images/05_Software_Engineering_Career_Opportunities_and_Roles-f0980f4f/p1/img001.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-13T10:15:04.323212+00:00"
+    },
+    {
+      "execution_id": "6995ba3b-88f5-478b-9187-4a40bea43d88",
+      "conversation_id": "cd48d55b-da78-45b8-b525-c1c6d7ea1b94",
+      "question": "Tại sao việc có lộ trình sự nghiệp rõ ràng lại quan trọng đối với các kỹ sư phần mềm?",
+      "answer": "Việc có **lộ trình sự nghiệp** rõ ràng lại quan trọng đối với các **kỹ sư phần mềm** vì nó giúp họ hiểu được **cấp bậc** và **trách nhiệm** cụ thể tại mỗi giai đoạn phát triển sự nghiệp. Điều này cho phép họ đặt mục tiêu và phấn đấu để đạt được **thành tựu** cao hơn, như từ **Junior Software Engineer** lên **Senior Software Engineer**. Lộ trình sự nghiệp rõ ràng cũng giúp họ nhận ra **cơ hội phát triển** và **thăng tiến** trong lĩnh vực **phát triển phần mềm**.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous  salary and broad, clear career advancement opportunities. The level of skill,  experience, and specific responsibilities are assessed based on different skill levels  and experience.   LSoftware engineer career progression    Having a clear career path is something ever…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "url": "",
+          "rerank_score": 7.492739677429199,
+          "image_urls": [
+            "http://localhost:8010/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        },
+        {
+          "rank": 2,
+          "text": "What can you do with a software engineering degree? After graduation, students can  take on many different positions depending on their abilities and career aspirations.  Below are some of the most common jobs in the software engineering field.    Software Developer / Programmer  Programmers are individuals who directly write code, design, and develop softw…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "title": "05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "url": "",
+          "rerank_score": 1.1442701816558838,
+          "image_urls": [
+            "http://localhost:8010/images/05_Software_Engineering_Career_Opportunities_and_Roles-f0980f4f/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "http://localhost:8010/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-13T10:15:47.344752+00:00"
     }
   ]
 }

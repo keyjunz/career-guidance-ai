@@ -18,9 +18,9 @@ from importlib.util import find_spec
 langdetect = import_module("langdetect") if find_spec("langdetect") else None
 
 from src.modules.rag_module.schema_models import RAGQuery, RAGResult, SourceInfo
-from src.services.embedding_service.main import EmbeddingService
+from src.services.embedding_service.main import EmbeddingService, get_embedding_service
 from src.services.llm_service.main import LLMService
-from src.services.reranker_service.main import RerankerService
+from src.services.reranker_service.main import RerankerService, get_reranker_service
 from src.services.retriever_service.main import RetrieverService
 
 
@@ -91,15 +91,11 @@ class RAGModuleImpl:
         self.user_id = str(user_id).strip() if user_id else None
         self.logger = logging.getLogger(f"{__name__}[{execution_id}]")
 
-        self.embedding_service = embedding_service or EmbeddingService(
-            execution_id=self.execution_id
-        )
+        self.embedding_service = embedding_service or get_embedding_service()
         self.retriever_service = retriever_service or RetrieverService(
             execution_id=self.execution_id
         )
-        self.reranker_service = reranker_service or RerankerService(
-            execution_id=self.execution_id
-        )
+        self.reranker_service = reranker_service or get_reranker_service()
         self.llm_service = llm_service
 
         # Empty string => emit relative URLs like /images/... so the frontend
@@ -174,7 +170,9 @@ class RAGModuleImpl:
                 docs_with_image_urls += 1
             context_parts.append(f"[{i + 1}] {doc['text']}")
             raw_title = str(doc.get("title") or metadata.get("title") or "").strip()
-            raw_source = str(doc.get("source") or metadata.get("file_path") or "").strip()
+            raw_source = str(
+                doc.get("source") or metadata.get("file_path") or ""
+            ).strip()
             display_title = _display_source_title(raw_title, raw_source)
             sources.append(
                 SourceInfo(

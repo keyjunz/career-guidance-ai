@@ -1,4 +1,5 @@
 import logging
+from functools import lru_cache
 from typing import Dict, List
 
 from sentence_transformers import CrossEncoder
@@ -63,3 +64,17 @@ class RerankerService:
         return sum(
             p.numel() * p.element_size() for p in self.model.model.parameters()
         ) / (1024**2)
+
+
+@lru_cache(maxsize=4)
+def get_reranker_service(
+    *,
+    model_key: str = DEFAULT_RERANKER,
+    device: str = DEVICE,
+) -> RerankerService:
+    """Return a cached reranker service for reuse across requests."""
+    return RerankerService(
+        execution_id="shared",
+        model_key=model_key,
+        device=device,
+    )
