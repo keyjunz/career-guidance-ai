@@ -1,205 +1,30 @@
 {
   "user_id": "00000000-0000-0000-0000-000000000010",
   "created_at": "2026-05-06T09:56:47.867875+00:00",
-  "updated_at": "2026-05-12T14:41:00.084016+00:00",
-  "pending_by_execution": {},
+  "updated_at": "2026-05-15T15:02:15.235109+00:00",
+  "pending_by_execution": {
+    "03efc5d9-4200-4de2-8a49-8b22a9e4a1e5": {
+      "conversation_id": "c109e512-113c-415d-b646-90d3479aa98c",
+      "question": "Việt nam có bao nhiêu tỉnh?",
+      "timestamp": "2026-05-15T14:04:35.669006+00:00"
+    },
+    "3ee87f65-b588-4ba4-a95d-3710e5699b6b": {
+      "conversation_id": "c109e512-113c-415d-b646-90d3479aa98c",
+      "question": "Việt nam có bao nhiêu tỉnh",
+      "timestamp": "2026-05-15T14:25:39.489393+00:00"
+    },
+    "cb151339-b6b0-4c80-b109-a541ab017d2f": {
+      "conversation_id": "c109e512-113c-415d-b646-90d3479aa98c",
+      "question": "Việt nam có bao nhiêu tỉnh?",
+      "timestamp": "2026-05-15T14:27:22.818289+00:00"
+    },
+    "11498419-124d-4f86-b3f4-0ae5299be019": {
+      "conversation_id": "c109e512-113c-415d-b646-90d3479aa98c",
+      "question": "Easup là xã hay huyện",
+      "timestamp": "2026-05-15T15:01:33.604262+00:00"
+    }
+  },
   "status_by_execution": {
-    "e4e8388b-8905-4fdc-b747-67014679cba5": [
-      {
-        "status": "Da nhan cau hoi.",
-        "timestamp": "2026-05-06T09:56:47.874138+00:00"
-      },
-      {
-        "status": "Da luu cau hoi vao store theo user.",
-        "timestamp": "2026-05-06T09:56:47.877222+00:00"
-      },
-      {
-        "status": "Dang kiem tra cau tra loi trung lap trong store.",
-        "timestamp": "2026-05-06T09:56:47.879992+00:00"
-      },
-      {
-        "status": "Dang kiem tra guardrails cho cau hoi.",
-        "timestamp": "2026-05-06T09:56:47.885504+00:00"
-      },
-      {
-        "status": "Dang lap ke hoach va chon tool.",
-        "timestamp": "2026-05-06T09:56:47.889595+00:00"
-      },
-      {
-        "status": "Dang chay tool theo ke hoach.",
-        "timestamp": "2026-05-06T09:56:47.892144+00:00"
-      },
-      {
-        "status": "Dang tong hop ban nhap cau tra loi.",
-        "timestamp": "2026-05-06T09:56:47.901732+00:00"
-      },
-      {
-        "status": "Dang danh gia chat luong cau tra loi.",
-        "timestamp": "2026-05-06T09:56:47.906351+00:00"
-      },
-      {
-        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
-        "timestamp": "2026-05-06T09:56:47.910080+00:00"
-      },
-      {
-        "status": "Hoan tat xu ly.",
-        "timestamp": "2026-05-06T09:56:47.913336+00:00"
-      }
-    ],
-    "1eb50a06-3d51-4e6c-836f-0612e3b087ba": [
-      {
-        "status": "Da nhan cau hoi.",
-        "timestamp": "2026-05-06T09:57:23.113789+00:00"
-      },
-      {
-        "status": "Da luu cau hoi vao store theo user.",
-        "timestamp": "2026-05-06T09:57:23.121064+00:00"
-      },
-      {
-        "status": "Dang kiem tra cau tra loi trung lap trong store.",
-        "timestamp": "2026-05-06T09:57:23.122092+00:00"
-      },
-      {
-        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
-        "timestamp": "2026-05-06T09:57:23.125569+00:00"
-      },
-      {
-        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
-        "timestamp": "2026-05-06T09:57:23.140748+00:00"
-      },
-      {
-        "status": "Hoan tat xu ly.",
-        "timestamp": "2026-05-06T09:57:23.142289+00:00"
-      }
-    ],
-    "bdebe616-7ce6-491b-a317-def6dd14d5dd": [
-      {
-        "status": "Da nhan cau hoi.",
-        "timestamp": "2026-05-06T11:24:53.330344+00:00"
-      },
-      {
-        "status": "Da luu cau hoi vao store theo user.",
-        "timestamp": "2026-05-06T11:24:53.347670+00:00"
-      },
-      {
-        "status": "Dang kiem tra cau tra loi trung lap trong store.",
-        "timestamp": "2026-05-06T11:24:53.349670+00:00"
-      },
-      {
-        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
-        "timestamp": "2026-05-06T11:24:53.352096+00:00"
-      },
-      {
-        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
-        "timestamp": "2026-05-06T11:24:53.352420+00:00"
-      },
-      {
-        "status": "Hoan tat xu ly.",
-        "timestamp": "2026-05-06T11:24:53.352420+00:00"
-      }
-    ],
-    "f204aec0-ab6f-46e0-aa3d-7bc818db2a78": [
-      {
-        "status": "Da nhan cau hoi.",
-        "timestamp": "2026-05-06T11:25:04.649120+00:00"
-      },
-      {
-        "status": "Da luu cau hoi vao store theo user.",
-        "timestamp": "2026-05-06T11:25:04.649120+00:00"
-      },
-      {
-        "status": "Dang kiem tra cau tra loi trung lap trong store.",
-        "timestamp": "2026-05-06T11:25:04.660961+00:00"
-      },
-      {
-        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
-        "timestamp": "2026-05-06T11:25:04.662961+00:00"
-      },
-      {
-        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
-        "timestamp": "2026-05-06T11:25:04.667421+00:00"
-      },
-      {
-        "status": "Hoan tat xu ly.",
-        "timestamp": "2026-05-06T11:25:04.672176+00:00"
-      }
-    ],
-    "944f8937-112a-4400-9547-beba9eef3f50": [
-      {
-        "status": "Da nhan cau hoi.",
-        "timestamp": "2026-05-06T12:28:56.138739+00:00"
-      },
-      {
-        "status": "Da luu cau hoi vao store theo user.",
-        "timestamp": "2026-05-06T12:28:56.141766+00:00"
-      },
-      {
-        "status": "Dang kiem tra cau tra loi trung lap trong store.",
-        "timestamp": "2026-05-06T12:28:56.142768+00:00"
-      },
-      {
-        "status": "Da tim thay cau tra loi trong store, tra ve nhanh.",
-        "timestamp": "2026-05-06T12:28:56.144777+00:00"
-      },
-      {
-        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
-        "timestamp": "2026-05-06T12:28:56.147775+00:00"
-      },
-      {
-        "status": "Hoan tat xu ly.",
-        "timestamp": "2026-05-06T12:28:56.148778+00:00"
-      }
-    ],
-    "c18ffce6-599b-4665-b31c-c5e26fcae089": [
-      {
-        "status": "Da nhan cau hoi.",
-        "timestamp": "2026-05-06T12:29:18.813169+00:00"
-      },
-      {
-        "status": "Da luu cau hoi vao store theo user.",
-        "timestamp": "2026-05-06T12:29:18.816176+00:00"
-      },
-      {
-        "status": "Dang kiem tra cau tra loi trung lap trong store.",
-        "timestamp": "2026-05-06T12:29:18.818190+00:00"
-      },
-      {
-        "status": "Dang kiem tra guardrails cho cau hoi.",
-        "timestamp": "2026-05-06T12:29:18.819181+00:00"
-      },
-      {
-        "status": "Dang lap ke hoach va chon tool.",
-        "timestamp": "2026-05-06T12:29:18.821698+00:00"
-      },
-      {
-        "status": "Dang chay tool theo ke hoach.",
-        "timestamp": "2026-05-06T12:29:18.826783+00:00"
-      },
-      {
-        "status": "Dang tong hop ban nhap cau tra loi.",
-        "timestamp": "2026-05-06T12:29:25.138041+00:00"
-      },
-      {
-        "status": "Dang danh gia chat luong cau tra loi.",
-        "timestamp": "2026-05-06T12:29:25.140043+00:00"
-      },
-      {
-        "status": "Dang sua cau tra loi theo danh gia.",
-        "timestamp": "2026-05-06T12:29:25.141042+00:00"
-      },
-      {
-        "status": "Dang danh gia chat luong cau tra loi.",
-        "timestamp": "2026-05-06T12:29:30.001015+00:00"
-      },
-      {
-        "status": "Da luu cau hoi va cau tra loi vao store cua user.",
-        "timestamp": "2026-05-06T12:29:30.004014+00:00"
-      },
-      {
-        "status": "Hoan tat xu ly.",
-        "timestamp": "2026-05-06T12:29:30.005019+00:00"
-      }
-    ],
     "3fa290e1-7dda-4514-becb-a8f80240fb43": [
       {
         "status": "Da nhan cau hoi.",
@@ -3131,6 +2956,414 @@
         "status": "Processing complete.",
         "timestamp": "2026-05-12T14:41:00.084016+00:00"
       }
+    ],
+    "6e486ec1-0d1e-405f-af71-4deabdbec860": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-15T11:05:23.343719+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-15T11:05:23.420920+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-15T11:05:23.441480+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-15T11:05:23.466306+00:00"
+      },
+      {
+        "status": "Analyzing question structure.",
+        "timestamp": "2026-05-15T11:05:23.497205+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-15T11:05:23.519704+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-15T11:05:26.444274+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-15T11:05:33.702109+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-15T11:05:33.725453+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-15T11:05:35.041251+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-15T11:05:35.051904+00:00"
+      }
+    ],
+    "2f6ca237-3234-4485-870d-f07c789bac1d": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-15T11:05:46.198077+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-15T11:05:46.231846+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-15T11:05:46.265616+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-15T11:05:46.279694+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-15T11:05:46.301596+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-15T11:06:03.309067+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-15T11:06:03.325383+00:00"
+      },
+      {
+        "status": "Refining answer based on evaluation.",
+        "timestamp": "2026-05-15T11:06:04.008731+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-15T11:06:04.024434+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-15T11:06:04.673187+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-15T11:06:04.691484+00:00"
+      }
+    ],
+    "1efae4f8-43f5-4c2f-9bc2-d0cac91c48d2": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-15T11:06:30.301897+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-15T11:06:30.328073+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-15T11:06:30.350884+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-15T11:06:30.371928+00:00"
+      },
+      {
+        "status": "Analyzing question structure.",
+        "timestamp": "2026-05-15T11:06:30.398078+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-15T11:06:30.419949+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-15T11:06:30.812981+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-15T11:06:34.948895+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-15T11:06:34.975983+00:00"
+      },
+      {
+        "status": "Refining answer based on evaluation.",
+        "timestamp": "2026-05-15T11:06:35.989509+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-15T11:06:40.099132+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-15T11:06:40.667266+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-15T11:06:40.688643+00:00"
+      }
+    ],
+    "cb789cf5-d18c-41af-b9d4-008547e11697": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-15T11:19:41.226318+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-15T11:19:41.305317+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-15T11:19:41.370869+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-15T11:19:41.431404+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-15T11:19:41.480404+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-15T11:20:14.604803+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-15T11:20:14.632337+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-15T11:20:15.728868+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-15T11:20:15.774412+00:00"
+      }
+    ],
+    "03efc5d9-4200-4de2-8a49-8b22a9e4a1e5": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-15T14:04:35.655475+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-15T14:04:35.679651+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-15T14:04:35.692745+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-15T14:04:35.703480+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-15T14:04:35.714926+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-15T14:04:45.729450+00:00"
+      }
+    ],
+    "3ee87f65-b588-4ba4-a95d-3710e5699b6b": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-15T14:25:39.479606+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-15T14:25:39.497497+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-15T14:25:39.507728+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-15T14:25:39.523548+00:00"
+      },
+      {
+        "status": "Analyzing question structure.",
+        "timestamp": "2026-05-15T14:25:39.537259+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-15T14:25:39.550831+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-15T14:25:40.514932+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-15T14:25:46.193452+00:00"
+      }
+    ],
+    "cb151339-b6b0-4c80-b109-a541ab017d2f": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-15T14:27:22.808691+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-15T14:27:22.830677+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-15T14:27:22.838590+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-15T14:27:22.853496+00:00"
+      },
+      {
+        "status": "Analyzing question structure.",
+        "timestamp": "2026-05-15T14:27:22.864916+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-15T14:27:22.877360+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-15T14:27:23.452315+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-15T14:27:27.168207+00:00"
+      }
+    ],
+    "227200fc-ed0d-40af-a615-647fb5e246a1": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-15T15:00:59.661152+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-15T15:00:59.681697+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-15T15:00:59.708068+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-15T15:00:59.718166+00:00"
+      },
+      {
+        "status": "Analyzing question structure.",
+        "timestamp": "2026-05-15T15:00:59.732644+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-15T15:00:59.745841+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-15T15:01:01.101715+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-15T15:01:04.885187+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-15T15:01:04.897118+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-15T15:01:06.057788+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-15T15:01:06.068825+00:00"
+      }
+    ],
+    "11498419-124d-4f86-b3f4-0ae5299be019": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-15T15:01:33.593893+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-15T15:01:33.615238+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-15T15:01:33.627263+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-15T15:01:33.637959+00:00"
+      },
+      {
+        "status": "Analyzing question structure.",
+        "timestamp": "2026-05-15T15:01:33.653970+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-15T15:01:33.671005+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-15T15:01:34.349193+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-15T15:02:08.207871+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-15T15:02:08.227343+00:00"
+      }
+    ],
+    "8dcc48a8-4a34-40bc-84f8-b38b441b15ad": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-15T15:01:49.065336+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-15T15:01:49.085640+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-15T15:01:49.097409+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-15T15:01:49.111317+00:00"
+      },
+      {
+        "status": "Analyzing question structure.",
+        "timestamp": "2026-05-15T15:01:49.123340+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-15T15:01:49.130740+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-15T15:01:49.894680+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-15T15:02:14.332889+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-15T15:02:14.377521+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-15T15:02:15.224439+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-15T15:02:15.235109+00:00"
+      }
     ]
   },
   "qa_cache": {
@@ -3479,6 +3712,123 @@
       ],
       "conversation_id": "51f399c5-b035-414a-9300-da3f0652df90",
       "updated_at": "2026-05-12T14:37:27.859184+00:00"
+    },
+    "việt nam có bao nhiêu tỉnh hiện tại": {
+      "question": "Việt Nam có bao nhiêu tỉnh hiện tại",
+      "answer": "Việt Nam hiện tại có **34** tỉnh thành. Thông tin này được cập nhật sau khi Quốc hội thông qua Nghị quyết về việc sắp xếp đơn vị hành chính cấp tỉnh năm 2025, có hiệu lực từ ngày 1/7/2025.",
+      "sources": [
+        {
+          "title": "Tên 34 tỉnh thành của Việt Nam từ 12.6.2025 - Báo Lao Động",
+          "url": "https://laodong.vn/thoi-su/ten-34-tinh-thanh-cua-viet-nam-tu-1262025-1522395.ldo",
+          "snippet": "### [Thời sự](https://laodong.vn/thoi-su) ### [Sự kiện Bình luận](https://laodong.vn/su-kien-binh-luan) # Tên 34 tỉnh thành của Việt Nam từ 12.6.2025 Tô Thế \\- Thứ năm, 12/06/2025 09:57 (GMT+7) [![](https://media-cdn-v2.laodong.vn/laodong/2.0.0.35/images/google-news.png)](https://news.google.com/publications/CAAiEMd7LKx8SFheC7cdYmUKIisqFAgKIhDHeyysfEhYXgu3HWJlCiIr?hl=vi&gl=VN&ceid=VN%3Avi) Sau sắp...",
+          "score": 0.0
+        },
+        {
+          "title": "Đơn vị hành chính cấp tỉnh (Việt Nam) - Wikipedia",
+          "url": "https://vi.wikipedia.org/wiki/%C4%90%C6%A1n_v%E1%BB%8B_h%C3%A0nh_ch%C3%ADnh_c%E1%BA%A5p_t%E1%BB%89nh_(Vi%E1%BB%87t_Nam)",
+          "snippet": "[Bước tới nội dung](https://vi.wikipedia.org/wiki/%C4%90%C6%A1n_v%E1%BB%8B_h%C3%A0nh_ch%C3%ADnh_c%E1%BA%A5p_t%E1%BB%89nh_(Vi%E1%BB%87t_Nam)#bodyContent) | | | | --- | --- | | **Biểu quyết xóa** **[Xóa bài](https://vi.wikipedia.org/wiki/Wikipedia:Bi%E1%BB%83u_quy%E1%BA%BFt_xo%C3%A1_b%C3%A0i \"Wikipedia:Biểu quyết xoá bài\")**: [House of Dreams: Sáng bừng sức sống](https://vi.wikipedia.org/wiki/Wikipe...",
+          "score": 0.0
+        },
+        {
+          "title": "Bản đồ chi tiết về 34 tỉnh, thành mới của Việt Nam | Báo Dân trí",
+          "url": "https://dantri.com.vn/noi-vu/ban-do-chi-tiet-ve-34-tinh-thanh-moi-cua-viet-nam-20250612060908850.htm",
+          "snippet": "Đọc4 [In](https://dantri.com.vn/print-20250612060908850.htm \"In\") - [Nội vụ](https://dantri.com.vn/noi-vu.htm \"Nội vụ\") - [Tổ chức bộ máy](https://dantri.com.vn/noi-vu/to-chuc-bo-may.htm \"Tổ chức bộ máy\") # Bản đồ chi tiết về 34 tỉnh, thành mới của Việt Nam [![Hoa Lê](https://cdnphoto.dantri.com.vn/hQSbcKkaq21GY62UByJzqedPAbE=/zoom/36_36/2023/04/03/8728916116068198194655284509370362609270784n-crop...",
+          "score": 0.0
+        },
+        {
+          "title": "Danh sách 34 tỉnh thành của Việt Nam theo vùng, miền",
+          "url": "https://thuvienphapluat.vn/chinh-sach-phap-luat-moi/vn/ho-tro-phap-luat/chinh-sach-moi/95959/danh-sach-34-tinh-thanh-cua-viet-nam-theo-vung-mien",
+          "snippet": "Quảng cáo i ✕ Tắt quảng cáo ! Báo cáo quảng cáo [Chính sách mới >> Chính sách mới](https://thuvienphapluat.vn/chinh-sach-phap-luat-moi/vn/ho-tro-phap-luat/chinh-sach-moi) 07/10/2025 09:45 AM # Danh sách 34 tỉnh thành của Việt Nam theo vùng, miền Tham vấn bởi Luật sư **Nguyễn Thụy Hân** Chuyên viên pháp lý **Lê Nguyễn Anh Hào** 07/10/2025 09:45 AM ## Dưới đây là chi tiết danh sách 34 tỉnh thành của...",
+          "score": 0.0
+        },
+        {
+          "title": "Tên chính thức của 34 tỉnh thành của Việt Nam từ 12/06 ... - YouTube",
+          "url": "https://www.youtube.com/watch?v=PofKshsowL8",
+          "snippet": "![Thumbnail (1920x1080)](https://i.ytimg.com/vi/PofKshsowL8/maxresdefault.jpg) # [Tên chính thức của 34 tỉnh thành của Việt Nam từ 12/06 sau quyết định lịch sử của Quốc hội](https://www.youtube.com/watch?v=PofKshsowL8) **Visibility**: Public **Uploaded by**: [Chuyển động 24h](https://www.youtube.com/@vtvchuyendong) **Uploaded at**: 2025-06-12 **Published at**: **Length**: 10:59 **Views**: 519728 *...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://media-cdn-v2.laodong.vn/storage/newsportal/2025/6/12/1522395/Sap-Nhap-3.jpg?w=800&h=420&crop=auto&scale=both"
+      ],
+      "conversation_id": "c109e512-113c-415d-b646-90d3479aa98c",
+      "updated_at": "2026-05-15T11:20:15.706870+00:00"
+    },
+    "việt nam có bao nhiêu tỉnh?": {
+      "question": "Việt Nam có bao nhiêu tỉnh?",
+      "answer": "Việt Nam có **34** tỉnh thành phố, bao gồm **6** thành phố trực thuộc trung ương và **28** tỉnh. Thông tin này được cập nhật sau khi Quốc hội thông qua Nghị quyết về việc sắp xếp đơn vị hành chính cấp tỉnh năm 2025.",
+      "sources": [
+        {
+          "title": "Đơn vị hành chính cấp tỉnh (Việt Nam) - Wikipedia",
+          "url": "https://vi.wikipedia.org/wiki/%C4%90%C6%A1n_v%E1%BB%8B_h%C3%A0nh_ch%C3%ADnh_c%E1%BA%A5p_t%E1%BB%89nh_(Vi%E1%BB%87t_Nam)",
+          "snippet": "[Bước tới nội dung](https://vi.wikipedia.org/wiki/%C4%90%C6%A1n_v%E1%BB%8B_h%C3%A0nh_ch%C3%ADnh_c%E1%BA%A5p_t%E1%BB%89nh_(Vi%E1%BB%87t_Nam)#bodyContent) | | | | --- | --- | | **Biểu quyết xóa** **[Xóa bài](https://vi.wikipedia.org/wiki/Wikipedia:Bi%E1%BB%83u_quy%E1%BA%BFt_xo%C3%A1_b%C3%A0i \"Wikipedia:Biểu quyết xoá bài\")**: [House of Dreams: Sáng bừng sức sống](https://vi.wikipedia.org/wiki/Wikipe...",
+          "score": 0.0
+        },
+        {
+          "title": "Bản đồ chi tiết về 34 tỉnh, thành mới của Việt Nam | Báo Dân trí",
+          "url": "https://dantri.com.vn/noi-vu/ban-do-chi-tiet-ve-34-tinh-thanh-moi-cua-viet-nam-20250612060908850.htm",
+          "snippet": "Đọc4 [In](https://dantri.com.vn/print-20250612060908850.htm \"In\") - [Nội vụ](https://dantri.com.vn/noi-vu.htm \"Nội vụ\") - [Tổ chức bộ máy](https://dantri.com.vn/noi-vu/to-chuc-bo-may.htm \"Tổ chức bộ máy\") # Bản đồ chi tiết về 34 tỉnh, thành mới của Việt Nam [![Hoa Lê](https://cdnphoto.dantri.com.vn/hQSbcKkaq21GY62UByJzqedPAbE=/zoom/36_36/2023/04/03/8728916116068198194655284509370362609270784n-crop...",
+          "score": 0.0
+        },
+        {
+          "title": "Danh sách 63 Tỉnh thành Việt Nam và 34 Tỉnh thành sau sáp nhập",
+          "url": "https://dauthau.asia/news/tu-lieu-cho-nha-thau/63-tinh-thanh-viet-nam-950.html",
+          "snippet": "![](https://dauthau.asia/uploads/bannersdt/slide-banner-1366x320px.png) ![Xem Video Báo cáo Toàn cảnh Đấu thầu 2025](https://dauthau.asia/uploads/bannersdt/slide-banner-1366x320px.png) [Xem Video Báo cáo Toàn cảnh Đấu thầu 2025](https://dauthau.asia/news/tin-tuc/phat-hanh-video-toan-canh-dau-thau-2025-1860.html \"Xem Video Báo cáo Toàn cảnh Đấu thầu 2025\") ![Góp điểm làm từ thiện](https://dauthau.a...",
+          "score": 0.0
+        },
+        {
+          "title": "Tên 34 tỉnh thành của Việt Nam từ 12.6.2025 - Báo Lao Động",
+          "url": "https://laodong.vn/thoi-su/ten-34-tinh-thanh-cua-viet-nam-tu-1262025-1522395.ldo",
+          "snippet": "### [Thời sự](https://laodong.vn/thoi-su) ### [Sự kiện Bình luận](https://laodong.vn/su-kien-binh-luan) # Tên 34 tỉnh thành của Việt Nam từ 12.6.2025 Tô Thế \\- Thứ năm, 12/06/2025 09:57 (GMT+7) [![](https://media-cdn-v2.laodong.vn/laodong/2.0.0.35/images/google-news.png)](https://news.google.com/publications/CAAiEMd7LKx8SFheC7cdYmUKIisqFAgKIhDHeyysfEhYXgu3HWJlCiIr?hl=vi&gl=VN&ceid=VN%3Avi) Sau sắp...",
+          "score": 0.0
+        },
+        {
+          "title": "Việt Nam có 63 hay 64 tỉnh thành phố? Tỉnh thành phố nào có diện ...",
+          "url": "https://thuvienphapluat.vn/hoi-dap-phap-luat/viet-nam-co-63-hay-64-tinh-thanh-pho-tinh-thanh-pho-nao-co-dien-tich-lon-nhat-138012776.html",
+          "snippet": "Quảng cáo i ✕ Tắt quảng cáo ! Báo cáo quảng cáo **[Chu Tường Vy](https://thuvienphapluat.vn/hoi-dap-phap-luat/tac-gia/chu-tuong-vy-3798 \"Trang tác giả: Chu Tường Vy\")** 237,868 lượt xem 09:29 \\| 16/06/2025 Cho tôi hỏi hiện nay nước ta có bao nhiêu tỉnh thành phố, tỉnh thành nào có diện tích lớn nhất cả nước? Mong được giải đáp thắc mắc! 1. [Nước ta hiện nay có 63 hay 64 tỉnh thành phố?](https://th...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/f/f9/Closewindow14x14.png"
+      ],
+      "conversation_id": "c109e512-113c-415d-b646-90d3479aa98c",
+      "updated_at": "2026-05-15T15:01:06.049244+00:00"
+    },
+    "easup là xã hay huyện?": {
+      "question": "Easup là xã hay huyện?",
+      "answer": "Ea Súp có thể là cả **xã** và **huyện**. \n- Theo nguồn web 2, Ea Súp là một **xã**.\n- Theo nguồn web 3, Ea Súp là một **huyện** của tỉnh Đắk Lắk.",
+      "sources": [
+        {
+          "title": "Huyện Ea Súp cũ tỉnh Đắk Lắk sau sáp nhập thành các xã nào? Kể ...",
+          "url": "https://thuvienphapluat.vn/phap-luat/huyen-ea-sup-cu-tinh-dak-lak-sau-sap-nhap-thanh-cac-xa-nao-ke-ten-cac-xa-moi-thuoc-huyen-ea-sup-cu-896855-232703.html",
+          "snippet": "Đăng nhập/Đăng ký - [Pháp luật](https://thuvienphapluat.vn/phap-luat \"Pháp luật\") - [Pháp luật vừa ban hành](https://thuvienphapluat.vn/phap-luat/phap-luat-vua-ban-hanh \"Pháp luật vừa ban hành\") - Lĩnh vực Pháp luật - Chủ đề Pháp luật nổi bật - [Lịch Âm 2026](https://thuvienphapluat.vn/phap-luat/am-lich-hom-nay \"Âm Lịch Lịch Vạn Niên 2026\") - [Giá Vàng Hôm Nay](https://thuvienphapluat.vn/phap-luat...",
+          "score": 0.0
+        },
+        {
+          "title": "Ea Súp (xã) – Wikipedia tiếng Việt",
+          "url": "https://vi.wikipedia.org/wiki/Ea_S%C3%BAp_(x%C3%A3)",
+          "snippet": "# Ea Súp (xã) Ea Súp (xã) | | | | --- | --- | | [![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Clock_and_warning.svg/120px-Clock_and_warning.svg.png)](https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Clock_and_warning.svg) | Bài viết này **cần được [cập nhật](https://vi.wikipedia.org/wiki/Th%E1%BB%83_lo%E1%BA%A1i:B%C3%A0i_l%E1%BB%97i_th%E1%BB%9Di \"Thể loại:Bài lỗi thời\")** do có chứa...",
+          "score": 0.0
+        },
+        {
+          "title": "[PDF] LỜI GIỚI THIỆU - XÃ EA SÚP",
+          "url": "https://easup.daklak.gov.vn/documents/10179/1587289/L%E1%BB%8ACH%20S%E1%BB%AC%20%C4%90%E1%BA%A2NG%20B%E1%BB%98%20HUY%E1%BB%86N%20EA%20S%C3%9AP.pdf",
+          "snippet": "## LỜI GIỚI THIỆU Huyện Ea Súp, tỉnh Đắk Lắk được thành lập theo Quyết định số 230/CP, ngày 30-8-1977 của Chính phủ. Tổng diện tích tự nhiên của huyện hiện nay là 176.563 ha, dân số toàn huyện là 68.486 người. Huyện có 9 xã và 01 thị trấn, bao gồm các xã Ea Lê, Ea Bung, Ea Rốc, Cư Mlan, Cư Kbang, Ia Rvê, Ia Jlơi, Ia Lốp, Ya Tờ Mốt và thị trấn Ea Súp. Trong hai cuộc kháng chiến chống Pháp và chống...",
+          "score": 0.0
+        },
+        {
+          "title": "Xã Ea Súp của Đắk Lắk sau sáp nhập và tiềm năng phát triển vùng ...",
+          "url": "https://fptshop.com.vn/tin-tuc/danh-gia/xa-ea-sup-cua-dak-lak-sau-sap-nhap-181574",
+          "snippet": "- [Nổi bật](https://fptshop.com.vn/tin-tuc) - [Tin mới](https://fptshop.com.vn/tin-tuc/tin-moi) - [Điện máy - Gia dụng](https://fptshop.com.vn/tin-tuc/dien-may) - [Khuyến mãi](https://fptshop.com.vn/tin-tuc/tin-khuyen-mai) - [Đánh giá - Tư vấn](https://fptshop.com.vn/tin-tuc/danh-gia) - [Thủ thuật](https://fptshop.com.vn/tin-tuc/thu-thuat) - [Video hot](https://fptshop.com.vn/tin-tuc/video-hot) -...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://cdn.thuvienphapluat.vn//uploads/phapluat/2022-2/XU/2025/09/17/huyen-ea-sup-cu-tinh-dak-lak-sau-sap-nhap-thanh-xa-gi.jpg"
+      ],
+      "conversation_id": "c109e512-113c-415d-b646-90d3479aa98c",
+      "updated_at": "2026-05-15T15:02:15.215140+00:00"
     }
   },
   "history": [
@@ -4738,6 +5088,192 @@
       ],
       "cache_hit": false,
       "timestamp": "2026-05-12T14:41:00.058562+00:00"
+    },
+    {
+      "execution_id": "6e486ec1-0d1e-405f-af71-4deabdbec860",
+      "conversation_id": "c109e512-113c-415d-b646-90d3479aa98c",
+      "question": "Đại học Duy Tân gồm những trường nào?",
+      "answer": "Hiện hệ thống chưa truy cập được nguồn dữ liệu phù hợp. Vui lòng thử lại sau hoặc chuyển sang chế độ chat khác.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-15T11:05:35.029835+00:00"
+    },
+    {
+      "execution_id": "2f6ca237-3234-4485-870d-f07c789bac1d",
+      "conversation_id": "c109e512-113c-415d-b646-90d3479aa98c",
+      "question": "Đại học Duy Tân gồm những trường nào?",
+      "answer": "Không tìm thấy dữ liệu phù hợp để trả lời câu hỏi này.",
+      "sources": [
+        {
+          "title": "Ngành nghề đào tạo - Đại học Duy Tân - Duy Tan University",
+          "url": "https://duytan.edu.vn/tuyen-sinh/Page/Education.aspx?id=0",
+          "snippet": "[![Xếp hạng THE Rankings 2026](https://duytan.edu.vn/tuyen-sinh/Upload/banner/TOP-600-THE-3877.jpg)![Xếp hạng THE Rankings 2026](https://duytan.edu.vn/tuyen-sinh/Upload/banner/Mobile-THE-8749.jpg)](https://tienphong.vn/cac-dai-hoc-cua-viet-nam-tren-bang-xep-hang-cac-dai-hoc-tot-nhat-the-gioi-the-2026-post1798142.tpo) [![QS World University Rankings 2026](https://duytan.edu.vn/tuyen-sinh/Upload/ban...",
+          "score": 0.0
+        },
+        {
+          "title": "NGÀNH NGHỀ ĐÀO TẠO - Duy Tan University",
+          "url": "https://duytan.edu.vn/tuyen-sinh/Page/EducationViewAll.aspx",
+          "snippet": "[![Xếp hạng THE Rankings 2026](https://duytan.edu.vn/tuyen-sinh/Upload/banner/TOP-600-THE-3877.jpg)![Xếp hạng THE Rankings 2026](https://duytan.edu.vn/tuyen-sinh/Upload/banner/Mobile-THE-8749.jpg)](https://tienphong.vn/cac-dai-hoc-cua-viet-nam-tren-bang-xep-hang-cac-dai-hoc-tot-nhat-the-gioi-the-2026-post1798142.tpo) [![QS World University Rankings 2026](https://duytan.edu.vn/tuyen-sinh/Upload/ban...",
+          "score": 0.0
+        },
+        {
+          "title": "Đại học Duy Tân – Wikipedia tiếng Việt",
+          "url": "https://vi.wikipedia.org/wiki/%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Duy_T%C3%A2n",
+          "snippet": "# Đại học Duy Tân Đại học Duy Tân | Đại học Duy Tân | | --- | | Duy Tan University | | [![](https://upload.wikimedia.org/wikipedia/vi/thumb/1/12/Logo_dtu_footer.png/500px-Logo_dtu_footer.png)](https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Logo_dtu_footer.png) | | Địa chỉ | | ![](https://vi.wikipedia.org/wiki/270x200@2x.png?lang=vi&domain=vi.wikipedia.org&title=%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Duy_T%C3...",
+          "score": 0.0
+        },
+        {
+          "title": "Mã trường, các ngành Đại Học Duy Tân 2026",
+          "url": "https://diemthi.tuyensinh247.com/thong-tin-dai-hoc-duy-tan-DDT.html",
+          "snippet": "# Mã trường, các ngành Đại Học Duy Tân 2026 **Xem thông tin khác của:** Đại Học Duy Tân **» Xem điểm chuẩn** **» Xem đề án tuyển sinh** ![Đại Học Duy Tân](https://diemthi.tuyensinh247.com/images/simages/DDT.jpg) Preview - **Tên trường**: Đại Học Duy Tân - **Mã trường**: DDT - **Tên tiếng Anh**: Duy Tan University - **Tên viết tắt**: DTU - **Địa chỉ**: 254 Nguyễn Văn Linh, Quận Thanh Khê - Tp. Đà N...",
+          "score": 0.0
+        },
+        {
+          "title": "Trường Đại học Duy Tân - dean1665",
+          "url": "https://dean1665.vn/school/dai-hoc/truong-dai-hoc-duy-tan-34.html",
+          "snippet": "- [Trang nhất](https://dean1665.vn/) - [Danh sách trường](https://dean1665.vn/school/ \"Danh sách trường\") - [Trường Đại học Duy Tân](https://dean1665.vn/school/dai-hoc/truong-dai-hoc-duy-tan-34.html \"Trường Đại học Duy Tân\") ![Trường Đại học Duy Tân](https://dean1665.vn/uploads/school/avt-dh-duy-tan.jpg) SINCE 11/11/1994 Điểm đánh giá: 77 sao trong 22 đánh giá Click để đánh giá trường - [Giới thiệ...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://duytan.edu.vn/tuyen-sinh/Upload/images/23-12-2025-13-30-3-3.jpg"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-15T11:06:04.656773+00:00"
+    },
+    {
+      "execution_id": "1efae4f8-43f5-4c2f-9bc2-d0cac91c48d2",
+      "conversation_id": "c109e512-113c-415d-b646-90d3479aa98c",
+      "question": "Khoa Khoa Học Máy Tính Đại Học Duy Tân gồm những ngành nào",
+      "answer": "Hiện hệ thống chưa truy cập được nguồn dữ liệu phù hợp. Vui lòng thử lại sau hoặc chuyển sang chế độ chat khác.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-15T11:06:40.651919+00:00"
+    },
+    {
+      "execution_id": "cb789cf5-d18c-41af-b9d4-008547e11697",
+      "conversation_id": "c109e512-113c-415d-b646-90d3479aa98c",
+      "question": "Việt Nam có bao nhiêu tỉnh hiện tại",
+      "answer": "Việt Nam hiện tại có **34** tỉnh thành. Thông tin này được cập nhật sau khi Quốc hội thông qua Nghị quyết về việc sắp xếp đơn vị hành chính cấp tỉnh năm 2025, có hiệu lực từ ngày 1/7/2025.",
+      "sources": [
+        {
+          "title": "Tên 34 tỉnh thành của Việt Nam từ 12.6.2025 - Báo Lao Động",
+          "url": "https://laodong.vn/thoi-su/ten-34-tinh-thanh-cua-viet-nam-tu-1262025-1522395.ldo",
+          "snippet": "### [Thời sự](https://laodong.vn/thoi-su) ### [Sự kiện Bình luận](https://laodong.vn/su-kien-binh-luan) # Tên 34 tỉnh thành của Việt Nam từ 12.6.2025 Tô Thế \\- Thứ năm, 12/06/2025 09:57 (GMT+7) [![](https://media-cdn-v2.laodong.vn/laodong/2.0.0.35/images/google-news.png)](https://news.google.com/publications/CAAiEMd7LKx8SFheC7cdYmUKIisqFAgKIhDHeyysfEhYXgu3HWJlCiIr?hl=vi&gl=VN&ceid=VN%3Avi) Sau sắp...",
+          "score": 0.0
+        },
+        {
+          "title": "Đơn vị hành chính cấp tỉnh (Việt Nam) - Wikipedia",
+          "url": "https://vi.wikipedia.org/wiki/%C4%90%C6%A1n_v%E1%BB%8B_h%C3%A0nh_ch%C3%ADnh_c%E1%BA%A5p_t%E1%BB%89nh_(Vi%E1%BB%87t_Nam)",
+          "snippet": "[Bước tới nội dung](https://vi.wikipedia.org/wiki/%C4%90%C6%A1n_v%E1%BB%8B_h%C3%A0nh_ch%C3%ADnh_c%E1%BA%A5p_t%E1%BB%89nh_(Vi%E1%BB%87t_Nam)#bodyContent) | | | | --- | --- | | **Biểu quyết xóa** **[Xóa bài](https://vi.wikipedia.org/wiki/Wikipedia:Bi%E1%BB%83u_quy%E1%BA%BFt_xo%C3%A1_b%C3%A0i \"Wikipedia:Biểu quyết xoá bài\")**: [House of Dreams: Sáng bừng sức sống](https://vi.wikipedia.org/wiki/Wikipe...",
+          "score": 0.0
+        },
+        {
+          "title": "Bản đồ chi tiết về 34 tỉnh, thành mới của Việt Nam | Báo Dân trí",
+          "url": "https://dantri.com.vn/noi-vu/ban-do-chi-tiet-ve-34-tinh-thanh-moi-cua-viet-nam-20250612060908850.htm",
+          "snippet": "Đọc4 [In](https://dantri.com.vn/print-20250612060908850.htm \"In\") - [Nội vụ](https://dantri.com.vn/noi-vu.htm \"Nội vụ\") - [Tổ chức bộ máy](https://dantri.com.vn/noi-vu/to-chuc-bo-may.htm \"Tổ chức bộ máy\") # Bản đồ chi tiết về 34 tỉnh, thành mới của Việt Nam [![Hoa Lê](https://cdnphoto.dantri.com.vn/hQSbcKkaq21GY62UByJzqedPAbE=/zoom/36_36/2023/04/03/8728916116068198194655284509370362609270784n-crop...",
+          "score": 0.0
+        },
+        {
+          "title": "Danh sách 34 tỉnh thành của Việt Nam theo vùng, miền",
+          "url": "https://thuvienphapluat.vn/chinh-sach-phap-luat-moi/vn/ho-tro-phap-luat/chinh-sach-moi/95959/danh-sach-34-tinh-thanh-cua-viet-nam-theo-vung-mien",
+          "snippet": "Quảng cáo i ✕ Tắt quảng cáo ! Báo cáo quảng cáo [Chính sách mới >> Chính sách mới](https://thuvienphapluat.vn/chinh-sach-phap-luat-moi/vn/ho-tro-phap-luat/chinh-sach-moi) 07/10/2025 09:45 AM # Danh sách 34 tỉnh thành của Việt Nam theo vùng, miền Tham vấn bởi Luật sư **Nguyễn Thụy Hân** Chuyên viên pháp lý **Lê Nguyễn Anh Hào** 07/10/2025 09:45 AM ## Dưới đây là chi tiết danh sách 34 tỉnh thành của...",
+          "score": 0.0
+        },
+        {
+          "title": "Tên chính thức của 34 tỉnh thành của Việt Nam từ 12/06 ... - YouTube",
+          "url": "https://www.youtube.com/watch?v=PofKshsowL8",
+          "snippet": "![Thumbnail (1920x1080)](https://i.ytimg.com/vi/PofKshsowL8/maxresdefault.jpg) # [Tên chính thức của 34 tỉnh thành của Việt Nam từ 12/06 sau quyết định lịch sử của Quốc hội](https://www.youtube.com/watch?v=PofKshsowL8) **Visibility**: Public **Uploaded by**: [Chuyển động 24h](https://www.youtube.com/@vtvchuyendong) **Uploaded at**: 2025-06-12 **Published at**: **Length**: 10:59 **Views**: 519728 *...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://media-cdn-v2.laodong.vn/storage/newsportal/2025/6/12/1522395/Sap-Nhap-3.jpg?w=800&h=420&crop=auto&scale=both"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-15T11:20:15.706870+00:00"
+    },
+    {
+      "execution_id": "227200fc-ed0d-40af-a615-647fb5e246a1",
+      "conversation_id": "c109e512-113c-415d-b646-90d3479aa98c",
+      "question": "Việt Nam có bao nhiêu tỉnh?",
+      "answer": "Việt Nam có **34** tỉnh thành phố, bao gồm **6** thành phố trực thuộc trung ương và **28** tỉnh. Thông tin này được cập nhật sau khi Quốc hội thông qua Nghị quyết về việc sắp xếp đơn vị hành chính cấp tỉnh năm 2025.",
+      "sources": [
+        {
+          "title": "Đơn vị hành chính cấp tỉnh (Việt Nam) - Wikipedia",
+          "url": "https://vi.wikipedia.org/wiki/%C4%90%C6%A1n_v%E1%BB%8B_h%C3%A0nh_ch%C3%ADnh_c%E1%BA%A5p_t%E1%BB%89nh_(Vi%E1%BB%87t_Nam)",
+          "snippet": "[Bước tới nội dung](https://vi.wikipedia.org/wiki/%C4%90%C6%A1n_v%E1%BB%8B_h%C3%A0nh_ch%C3%ADnh_c%E1%BA%A5p_t%E1%BB%89nh_(Vi%E1%BB%87t_Nam)#bodyContent) | | | | --- | --- | | **Biểu quyết xóa** **[Xóa bài](https://vi.wikipedia.org/wiki/Wikipedia:Bi%E1%BB%83u_quy%E1%BA%BFt_xo%C3%A1_b%C3%A0i \"Wikipedia:Biểu quyết xoá bài\")**: [House of Dreams: Sáng bừng sức sống](https://vi.wikipedia.org/wiki/Wikipe...",
+          "score": 0.0
+        },
+        {
+          "title": "Bản đồ chi tiết về 34 tỉnh, thành mới của Việt Nam | Báo Dân trí",
+          "url": "https://dantri.com.vn/noi-vu/ban-do-chi-tiet-ve-34-tinh-thanh-moi-cua-viet-nam-20250612060908850.htm",
+          "snippet": "Đọc4 [In](https://dantri.com.vn/print-20250612060908850.htm \"In\") - [Nội vụ](https://dantri.com.vn/noi-vu.htm \"Nội vụ\") - [Tổ chức bộ máy](https://dantri.com.vn/noi-vu/to-chuc-bo-may.htm \"Tổ chức bộ máy\") # Bản đồ chi tiết về 34 tỉnh, thành mới của Việt Nam [![Hoa Lê](https://cdnphoto.dantri.com.vn/hQSbcKkaq21GY62UByJzqedPAbE=/zoom/36_36/2023/04/03/8728916116068198194655284509370362609270784n-crop...",
+          "score": 0.0
+        },
+        {
+          "title": "Danh sách 63 Tỉnh thành Việt Nam và 34 Tỉnh thành sau sáp nhập",
+          "url": "https://dauthau.asia/news/tu-lieu-cho-nha-thau/63-tinh-thanh-viet-nam-950.html",
+          "snippet": "![](https://dauthau.asia/uploads/bannersdt/slide-banner-1366x320px.png) ![Xem Video Báo cáo Toàn cảnh Đấu thầu 2025](https://dauthau.asia/uploads/bannersdt/slide-banner-1366x320px.png) [Xem Video Báo cáo Toàn cảnh Đấu thầu 2025](https://dauthau.asia/news/tin-tuc/phat-hanh-video-toan-canh-dau-thau-2025-1860.html \"Xem Video Báo cáo Toàn cảnh Đấu thầu 2025\") ![Góp điểm làm từ thiện](https://dauthau.a...",
+          "score": 0.0
+        },
+        {
+          "title": "Tên 34 tỉnh thành của Việt Nam từ 12.6.2025 - Báo Lao Động",
+          "url": "https://laodong.vn/thoi-su/ten-34-tinh-thanh-cua-viet-nam-tu-1262025-1522395.ldo",
+          "snippet": "### [Thời sự](https://laodong.vn/thoi-su) ### [Sự kiện Bình luận](https://laodong.vn/su-kien-binh-luan) # Tên 34 tỉnh thành của Việt Nam từ 12.6.2025 Tô Thế \\- Thứ năm, 12/06/2025 09:57 (GMT+7) [![](https://media-cdn-v2.laodong.vn/laodong/2.0.0.35/images/google-news.png)](https://news.google.com/publications/CAAiEMd7LKx8SFheC7cdYmUKIisqFAgKIhDHeyysfEhYXgu3HWJlCiIr?hl=vi&gl=VN&ceid=VN%3Avi) Sau sắp...",
+          "score": 0.0
+        },
+        {
+          "title": "Việt Nam có 63 hay 64 tỉnh thành phố? Tỉnh thành phố nào có diện ...",
+          "url": "https://thuvienphapluat.vn/hoi-dap-phap-luat/viet-nam-co-63-hay-64-tinh-thanh-pho-tinh-thanh-pho-nao-co-dien-tich-lon-nhat-138012776.html",
+          "snippet": "Quảng cáo i ✕ Tắt quảng cáo ! Báo cáo quảng cáo **[Chu Tường Vy](https://thuvienphapluat.vn/hoi-dap-phap-luat/tac-gia/chu-tuong-vy-3798 \"Trang tác giả: Chu Tường Vy\")** 237,868 lượt xem 09:29 \\| 16/06/2025 Cho tôi hỏi hiện nay nước ta có bao nhiêu tỉnh thành phố, tỉnh thành nào có diện tích lớn nhất cả nước? Mong được giải đáp thắc mắc! 1. [Nước ta hiện nay có 63 hay 64 tỉnh thành phố?](https://th...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://upload.wikimedia.org/wikipedia/commons/f/f9/Closewindow14x14.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-15T15:01:06.049244+00:00"
+    },
+    {
+      "execution_id": "8dcc48a8-4a34-40bc-84f8-b38b441b15ad",
+      "conversation_id": "c109e512-113c-415d-b646-90d3479aa98c",
+      "question": "Easup là xã hay huyện?",
+      "answer": "Ea Súp có thể là cả **xã** và **huyện**. \n- Theo nguồn web 2, Ea Súp là một **xã**.\n- Theo nguồn web 3, Ea Súp là một **huyện** của tỉnh Đắk Lắk.",
+      "sources": [
+        {
+          "title": "Huyện Ea Súp cũ tỉnh Đắk Lắk sau sáp nhập thành các xã nào? Kể ...",
+          "url": "https://thuvienphapluat.vn/phap-luat/huyen-ea-sup-cu-tinh-dak-lak-sau-sap-nhap-thanh-cac-xa-nao-ke-ten-cac-xa-moi-thuoc-huyen-ea-sup-cu-896855-232703.html",
+          "snippet": "Đăng nhập/Đăng ký - [Pháp luật](https://thuvienphapluat.vn/phap-luat \"Pháp luật\") - [Pháp luật vừa ban hành](https://thuvienphapluat.vn/phap-luat/phap-luat-vua-ban-hanh \"Pháp luật vừa ban hành\") - Lĩnh vực Pháp luật - Chủ đề Pháp luật nổi bật - [Lịch Âm 2026](https://thuvienphapluat.vn/phap-luat/am-lich-hom-nay \"Âm Lịch Lịch Vạn Niên 2026\") - [Giá Vàng Hôm Nay](https://thuvienphapluat.vn/phap-luat...",
+          "score": 0.0
+        },
+        {
+          "title": "Ea Súp (xã) – Wikipedia tiếng Việt",
+          "url": "https://vi.wikipedia.org/wiki/Ea_S%C3%BAp_(x%C3%A3)",
+          "snippet": "# Ea Súp (xã) Ea Súp (xã) | | | | --- | --- | | [![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Clock_and_warning.svg/120px-Clock_and_warning.svg.png)](https://vi.wikipedia.org/wiki/T%E1%BA%ADp_tin:Clock_and_warning.svg) | Bài viết này **cần được [cập nhật](https://vi.wikipedia.org/wiki/Th%E1%BB%83_lo%E1%BA%A1i:B%C3%A0i_l%E1%BB%97i_th%E1%BB%9Di \"Thể loại:Bài lỗi thời\")** do có chứa...",
+          "score": 0.0
+        },
+        {
+          "title": "[PDF] LỜI GIỚI THIỆU - XÃ EA SÚP",
+          "url": "https://easup.daklak.gov.vn/documents/10179/1587289/L%E1%BB%8ACH%20S%E1%BB%AC%20%C4%90%E1%BA%A2NG%20B%E1%BB%98%20HUY%E1%BB%86N%20EA%20S%C3%9AP.pdf",
+          "snippet": "## LỜI GIỚI THIỆU Huyện Ea Súp, tỉnh Đắk Lắk được thành lập theo Quyết định số 230/CP, ngày 30-8-1977 của Chính phủ. Tổng diện tích tự nhiên của huyện hiện nay là 176.563 ha, dân số toàn huyện là 68.486 người. Huyện có 9 xã và 01 thị trấn, bao gồm các xã Ea Lê, Ea Bung, Ea Rốc, Cư Mlan, Cư Kbang, Ia Rvê, Ia Jlơi, Ia Lốp, Ya Tờ Mốt và thị trấn Ea Súp. Trong hai cuộc kháng chiến chống Pháp và chống...",
+          "score": 0.0
+        },
+        {
+          "title": "Xã Ea Súp của Đắk Lắk sau sáp nhập và tiềm năng phát triển vùng ...",
+          "url": "https://fptshop.com.vn/tin-tuc/danh-gia/xa-ea-sup-cua-dak-lak-sau-sap-nhap-181574",
+          "snippet": "- [Nổi bật](https://fptshop.com.vn/tin-tuc) - [Tin mới](https://fptshop.com.vn/tin-tuc/tin-moi) - [Điện máy - Gia dụng](https://fptshop.com.vn/tin-tuc/dien-may) - [Khuyến mãi](https://fptshop.com.vn/tin-tuc/tin-khuyen-mai) - [Đánh giá - Tư vấn](https://fptshop.com.vn/tin-tuc/danh-gia) - [Thủ thuật](https://fptshop.com.vn/tin-tuc/thu-thuat) - [Video hot](https://fptshop.com.vn/tin-tuc/video-hot) -...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://cdn.thuvienphapluat.vn//uploads/phapluat/2022-2/XU/2025/09/17/huyen-ea-sup-cu-tinh-dak-lak-sau-sap-nhap-thanh-xa-gi.jpg"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-15T15:02:15.215140+00:00"
     }
   ]
 }

@@ -28,7 +28,7 @@ export function mapApiPayloadToAssistantMessage(
   return {
     id: `a_${Date.now()}`,
     role: 'assistant',
-    authorLabel: 'Kinetic AI',
+    authorLabel: 'RecomMind Bot',
     variant: 'standard',
     text: text || 'No text response from server.',
     imageUrls: imageUrls.length > 0 ? imageUrls : undefined,

@@ -32,3 +32,12 @@ class MessageRepository(RepositoryFactory[Message, dict, dict]):
             .limit(normalized_size)
         )
         return list(self.session.scalars(stmt).all())
+
+    def get_first_by_conversation(self, conversation_id: UUID) -> Message | None:
+        stmt = (
+            select(Message)
+            .where(Message.conversation_id == conversation_id)
+            .order_by(Message.timestamp.asc())
+            .limit(1)
+        )
+        return self.session.scalars(stmt).first()

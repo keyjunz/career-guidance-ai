@@ -68,6 +68,7 @@ def _try_llm_eval(state: AgentRuntimeState) -> tuple[float | None, list[str]]:
             execution_id=state.execution_id,
             api_key_env_override="GEMINI_AGENT_API_KEY",
         )
+        state._active_llm = llm
         result = llm.generate_raw(
             prompt=_build_eval_prompt(state),
             max_tokens=180,

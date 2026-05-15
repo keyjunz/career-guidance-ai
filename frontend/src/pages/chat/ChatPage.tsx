@@ -18,21 +18,46 @@ import {
 } from '../../mappers/chatMapper'
 import { clearAuthTokens, getAccessToken } from '../../services/authStorage'
 import { getMe } from '../../services/authApi'
+import {
+  deleteConversationApi,
+  fetchConversationMessages,
+  fetchConversations,
+  renameConversation,
+  type ApiConversationMessage,
+} from '../../services/conversationsApi'
 
-const BOT_LABEL = 'Kinetic AI'
+const BOT_LABEL = 'RecomMind Bot'
 const THEME_STORAGE_KEY = 'career_guidance_theme'
 
 function createId(prefix: string): string {
   return `${prefix}_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`
 }
 
+function isUuid(value: string): boolean {
+  return /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(
+    value,
+  )
+}
+
 function createEmptyConversation(): ChatConversation {
   return {
-    id: createId('conv'),
+    id: crypto.randomUUID(),
     title: 'New conversation',
     createdAt: new Date().toISOString(),
     messages: [],
   }
+}
+
+function mapApiMessagesToChat(
+  rows: ApiConversationMessage[],
+  userName: string,
+): ChatMessage[] {
+  return rows.map((row) => ({
+    id: row.id,
+    role: row.role,
+    authorLabel: row.role === 'user' ? userName : BOT_LABEL,
+    text: row.text,
+  }))
 }
 
 function firstNameFromUserName(name: string): string {
@@ -40,6 +65,8 @@ function firstNameFromUserName(name: string): string {
   if (!trimmed) return ''
   return trimmed.split(/\s+/)[0] ?? ''
 }
+
+/* -------------------------------------------------------------------------- */
 
 export function ChatPage() {
   const navigate = useNavigate()
@@ -53,12 +80,15 @@ export function ChatPage() {
   const [chatMode, setChatMode] = useState<ChatMode>('auto')
   const [conversations, setConversations] = useState<ChatConversation[]>([])
   const [activeConversationId, setActiveConversationId] = useState<string>('')
-  const [apiTypingConversationId, setApiTypingConversationId] = useState<string | null>(
-    null,
-  )
+  const [apiTypingConversationId, setApiTypingConversationId] = useState<
+    string | null
+  >(null)
 
   const activeConversation = useMemo(
-    () => conversations.find((conversation) => conversation.id === activeConversationId),
+    () =>
+      conversations.find(
+        (conversation) => conversation.id === activeConversationId,
+      ),
     [conversations, activeConversationId],
   )
   const activeMessages = useMemo(
@@ -72,13 +102,16 @@ export function ChatPage() {
     [activeMessages],
   )
 
+  /* ---- derived helpers ---- */
   const isTyping = activeConversationId === apiTypingConversationId
   const streamAbortRef = useRef<AbortController | null>(null)
 
+  /* ---- stop handler ---- */
   const handleStopStream = () => {
     streamAbortRef.current?.abort()
   }
 
+  /* ---- keyboard Escape to stop ---- */
   useEffect(() => {
     if (!isTyping) return
 
@@ -92,11 +125,13 @@ export function ChatPage() {
     return () => window.removeEventListener('keydown', onKeyDown)
   }, [isTyping])
 
+  /* ---- theme ---- */
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
     window.localStorage.setItem(THEME_STORAGE_KEY, theme)
   }, [theme])
 
+  /* ---- session verify + conversations load ---- */
   useEffect(() => {
     let isMounted = true
 
@@ -111,9 +146,40 @@ export function ChatPage() {
         const user = await getMe()
         if (isMounted) {
           setCurrentUser(user)
-          const initialConversation = createEmptyConversation()
-          setConversations([initialConversation])
-          setActiveConversationId(initialConversation.id)
+          try {
+            const list = await fetchConversations()
+            if (list.length === 0) {
+              const initialConversation = createEmptyConversation()
+              setConversations([initialConversation])
+              setActiveConversationId(initialConversation.id)
+            } else {
+              const mapped: ChatConversation[] = list.map((item) => ({
+                id: item.id,
+                title: item.title,
+                createdAt: item.started_at ?? new Date().toISOString(),
+                messages: [],
+                conversationIdFromApi: item.id,
+              }))
+              setConversations(mapped)
+              const firstId = mapped[0].id
+              setActiveConversationId(firstId)
+              const rows = await fetchConversationMessages(firstId)
+              setConversations((prev) =>
+                prev.map((conversation) =>
+                  conversation.id === firstId
+                    ? {
+                        ...conversation,
+                        messages: mapApiMessagesToChat(rows, user.user_name),
+                      }
+                    : conversation,
+                ),
+              )
+            }
+          } catch {
+            const initialConversation = createEmptyConversation()
+            setConversations([initialConversation])
+            setActiveConversationId(initialConversation.id)
+          }
         }
       } catch {
         clearAuthTokens()
@@ -132,6 +198,7 @@ export function ChatPage() {
     }
   }, [navigate])
 
+  /* ---- new chat ---- */
   const handleNewChat = () => {
     const nextConversation = createEmptyConversation()
     setConversations((prev) => [nextConversation, ...prev])
@@ -139,11 +206,37 @@ export function ChatPage() {
     setErrorMessage('')
   }
 
+  /* ---- load history ---- */
+  const loadMessagesForConversation = async (conversationId: string) => {
+    if (!currentUser || !isUuid(conversationId)) return
+    try {
+      const rows = await fetchConversationMessages(conversationId)
+      setConversations((prev) =>
+        prev.map((conversation) =>
+          conversation.id === conversationId
+            ? {
+                ...conversation,
+                messages: mapApiMessagesToChat(rows, currentUser.user_name),
+              }
+            : conversation,
+        ),
+      )
+    } catch {
+      setErrorMessage('Không thể tải lịch sử cuộc trò chuyện.')
+    }
+  }
+
+  /* ---- select conversation ---- */
   const handleSelectConversation = (conversationId: string) => {
     setActiveConversationId(conversationId)
     setErrorMessage('')
+    const selected = conversations.find((c) => c.id === conversationId)
+    if (selected && selected.messages.length === 0 && isUuid(conversationId)) {
+      void loadMessagesForConversation(conversationId)
+    }
   }
 
+  /* ---- rename ---- */
   const handleRenameConversation = (conversationId: string, nextTitle: string) => {
     setConversations((prev) =>
       prev.map((conversation) =>
@@ -152,8 +245,16 @@ export function ChatPage() {
           : conversation,
       ),
     )
+    if (isUuid(conversationId)) {
+      void renameConversation(conversationId, nextTitle).catch((err) => {
+        setErrorMessage(
+          err instanceof Error ? err.message : 'Failed to rename conversation.',
+        )
+      })
+    }
   }
 
+  /* ---- delete ---- */
   const handleDeleteConversation = (conversationId: string) => {
     const remainingConversations = conversations.filter(
       (conversation) => conversation.id !== conversationId,
@@ -172,17 +273,28 @@ export function ChatPage() {
       setApiTypingConversationId(null)
     }
     setErrorMessage('')
+
+    if (isUuid(conversationId)) {
+      void deleteConversationApi(conversationId).catch((err) => {
+        setErrorMessage(
+          err instanceof Error ? err.message : 'Failed to delete conversation.',
+        )
+      })
+    }
   }
 
+  /* ---- logout ---- */
   const handleLogout = () => {
     clearAuthTokens()
     navigate('/login', { replace: true })
   }
 
+  /* ---- theme toggle ---- */
   const handleToggleTheme = () => {
     setTheme((prev) => (prev === 'light' ? 'dark' : 'light'))
   }
 
+  /* ---- send message ---- */
   const handleSend = async (text: string) => {
     const trimmed = text.trim()
     if (!trimmed || isTyping || !activeConversationId) return
@@ -203,10 +315,11 @@ export function ChatPage() {
       authorLabel: BOT_LABEL,
       text: '',
     }
+
+    // Thêm tin nhắn người dùng + assistant trống vào UI
     setConversations((prev) =>
       prev.map((conversation) => {
         if (conversation.id !== activeConversationId) return conversation
-
         const currentTitle =
           conversation.title === 'New conversation' ? trimmed : conversation.title
         return {
@@ -228,6 +341,10 @@ export function ChatPage() {
           ? ('web_only' as const)
           : undefined
 
+    const conversationIdForApi = isUuid(activeConversationId)
+      ? activeConversationId
+      : undefined
+
     const streamController = new AbortController()
     streamAbortRef.current = streamController
 
@@ -235,6 +352,7 @@ export function ChatPage() {
     let latestStatus = ''
 
     try {
+      /* --- inner try: stream the response --- */
       try {
         let streamedExecutionId: string | undefined
         let streamedConversationId: string | undefined
@@ -244,8 +362,15 @@ export function ChatPage() {
         let streamedCached: boolean | undefined
         let streamedRetrievalCacheHit: boolean | undefined
         let streamedAnswerSections: Array<Record<string, unknown>> | undefined
+
         await streamChatMessage(
-          { question: trimmed, ...(planValue ? { plan: planValue } : {}) },
+          {
+            question: trimmed,
+            ...(planValue ? { plan: planValue } : {}),
+            ...(conversationIdForApi
+              ? { conversation_id: conversationIdForApi }
+              : {}),
+          },
           {
             onToken: (token) => {
               streamedText += token
@@ -302,6 +427,7 @@ export function ChatPage() {
           { signal: streamController.signal },
         )
 
+        // Stream hoàn tất → cập nhật final message
         setConversations((prev) =>
           prev.map((conversation) =>
             conversation.id === activeConversationId
@@ -338,11 +464,17 @@ export function ChatPage() {
         return
       } catch (streamErr) {
         if (isStreamAbortError(streamErr)) {
+          // Người dùng dừng → giữ lại text đã stream, đánh dấu stopped
           const stoppedSuffix = '\n\n*(Đã dừng.)*'
           const base =
             streamedText.trim() ||
-            (latestStatus.trim() ? `Processing: ${latestStatus}` : '')
-          const finalStoppedText = base ? `${base}${stoppedSuffix}` : stoppedSuffix.trim()
+            (latestStatus.trim()
+              ? `Processing: ${latestStatus}`
+              : '')
+          const finalStoppedText = base
+            ? `${base}${stoppedSuffix}`
+            : stoppedSuffix.trim()
+
           setConversations((prev) =>
             prev.map((conversation) =>
               conversation.id === activeConversationId
@@ -366,7 +498,7 @@ export function ChatPage() {
           )
           return
         }
-        // Remove temporary stream bubble before sync fallback.
+        // Lỗi khác (ko phải abort) → bỏ tin nhắn tạm, fallback sang sync
         setConversations((prev) =>
           prev.map((conversation) =>
             conversation.id === activeConversationId
@@ -381,29 +513,30 @@ export function ChatPage() {
         )
       }
 
-      try {
-        const payload = await sendChatMessage({
-          question: trimmed,
-          ...(planValue ? { plan: planValue } : {}),
-        })
-
-        const assistantMessage = mapApiPayloadToAssistantMessage(payload)
-        setConversations((prev) =>
-          prev.map((conversation) =>
-            conversation.id === activeConversationId
-              ? {
-                  ...conversation,
-                  conversationIdFromApi: payload.conversation_id,
-                  messages: [...conversation.messages, assistantMessage],
-                }
-              : conversation,
-          ),
-        )
-      } catch (error) {
-        const message =
-          error instanceof Error ? error.message : 'Failed to connect chat API.'
-        setErrorMessage(message)
-      }
+      /* --- sync fallback --- */
+      const payload = await sendChatMessage({
+        question: trimmed,
+        ...(planValue ? { plan: planValue } : {}),
+        ...(conversationIdForApi
+          ? { conversation_id: conversationIdForApi }
+          : {}),
+      })
+      const assistantMessage = mapApiPayloadToAssistantMessage(payload)
+      setConversations((prev) =>
+        prev.map((conversation) =>
+          conversation.id === activeConversationId
+            ? {
+                ...conversation,
+                conversationIdFromApi: payload.conversation_id,
+                messages: [...conversation.messages, assistantMessage],
+              }
+            : conversation,
+        ),
+      )
+    } catch (error) {
+      const message =
+        error instanceof Error ? error.message : 'Failed to connect chat API.'
+      setErrorMessage(message)
     } finally {
       streamAbortRef.current = null
       setApiTypingConversationId((prev) =>
@@ -412,18 +545,19 @@ export function ChatPage() {
     }
   }
 
+  /* ---- render ---- */
   if (isCheckingAuth) {
     return (
       <div className="grid h-screen place-items-center bg-background text-on-surface">
         <div className="u-card rounded-2xl px-8 py-6 text-sm font-medium text-on-surface/70">
-          Verifying secure session...
+          Verifying secure session…
         </div>
       </div>
     )
   }
 
   return (
-    <div className="h-screen w-full overflow-hidden bg-background text-on-surface kv-texture-overlay">
+    <div className="app-shell-bg h-screen w-full overflow-hidden text-on-surface kv-texture-overlay">
       <div className="absolute inset-0 z-0" />
       <SideNav
         conversations={conversations}
@@ -435,7 +569,7 @@ export function ChatPage() {
         onSelectConversation={handleSelectConversation}
       />
 
-      <main className="relative z-10 ml-72 flex h-full flex-col bg-background">
+      <main className="chat-main-surface relative z-10 ml-72 flex h-full flex-col">
         <ChatHeader
           user={currentUser}
           conversationTitle={activeConversation?.title}
@@ -454,7 +588,7 @@ export function ChatPage() {
         />
 
         <ChatInputDock
-          placeholder="Hỏi về hướng nghiệp hoặc kỹ năng..."
+          placeholder="Hỏi về hướng nghiệp hoặc kỹ năng…"
           onSend={handleSend}
           disabled={isTyping}
           isStreaming={isTyping}
@@ -466,4 +600,3 @@ export function ChatPage() {
     </div>
   )
 }
-

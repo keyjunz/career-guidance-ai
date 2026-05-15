@@ -21,20 +21,13 @@ function formatMs(ms: number): string {
 
 function StatusBadge({ status }: { status: string }) {
   const colorMap: Record<string, string> = {
-    completed:
-      'bg-emerald-500/15 text-emerald-400 border-emerald-500/25',
-    failed:
-      'bg-red-500/15 text-red-400 border-red-500/25',
-    processing:
-      'bg-primary/12 text-primary border-primary/25',
+    completed: 'u-badge u-badge-success',
+    failed: 'u-badge u-badge-error',
+    processing: 'u-badge u-badge-info',
   }
-  const cls = colorMap[status] ?? 'bg-outline-variant/15 text-on-surface/70 border-outline-variant/25'
+  const cls = colorMap[status] ?? 'u-badge'
 
-  return (
-    <span className={`inline-block rounded-full border px-3 py-0.5 text-[11px] font-bold uppercase tracking-wider ${cls}`}>
-      {status}
-    </span>
-  )
+  return <span className={cls}>{status}</span>
 }
 
 export function SyncDocPage() {
@@ -176,7 +169,7 @@ export function SyncDocPage() {
       <nav className="fixed left-0 top-0 z-50 flex h-full w-72 flex-col overflow-y-auto bg-surface/98 shadow-[4px_0_48px_rgb(0_0_0_/0.12)] backdrop-blur-xl dark:shadow-[6px_0_56px_rgb(0_0_0_/0.45)]">
         <div className="px-4 pb-4 pt-5">
           <h1 className="font-headline text-[15px] font-bold tracking-tight text-on-surface">
-            Kinetic Assistant
+            RecomMind Bot
           </h1>
           <p className="mt-0.5 text-xs text-on-surface/50">Document sync</p>
         </div>
@@ -367,7 +360,7 @@ export function SyncDocPage() {
 
               {/* Error */}
               {errorMessage && (
-                <div className="mt-4 rounded-2xl border border-red-400/20 bg-red-500/10 px-4 py-3 text-sm text-red-200">
+                <div className="u-alert u-alert-error mt-4 px-4 py-3 text-sm">
                   {errorMessage}
                 </div>
               )}
@@ -431,7 +424,7 @@ export function SyncDocPage() {
                       </div>
 
                       {job.error && (
-                        <p className="text-xs text-red-400">{job.error}</p>
+                        <p className="text-xs text-error">{job.error}</p>
                       )}
 
                       {job.response && (

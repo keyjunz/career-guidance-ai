@@ -37,13 +37,13 @@ function ConversationItem({
 
   if (isEditing) {
     return (
-      <div className="my-1 rounded-2xl bg-surface-container-high px-3 py-3 shadow-sm">
+      <div className="sidebar-inline-panel my-1 px-3 py-3">
         <input
-          className="u-focus w-full rounded-xl bg-surface-container-low px-3 py-2 text-sm text-on-surface outline-none"
+          className="u-focus w-full rounded-xl border border-outline-variant/25 bg-surface-container-lowest px-3 py-2 text-sm text-on-surface outline-none"
           onChange={(event) => setDraftTitle(event.target.value)}
           value={draftTitle}
         />
-        {itemError && <p className="mt-2 text-xs text-red-300">{itemError}</p>}
+        {itemError && <p className="mt-2 text-xs text-error">{itemError}</p>}
         <div className="mt-2 flex justify-end gap-2">
           <button
             className="u-focus rounded-lg px-3 py-1 text-xs font-semibold text-on-surface/65 hover:bg-surface-container"
@@ -57,7 +57,7 @@ function ConversationItem({
             Cancel
           </button>
           <button
-            className="u-focus rounded-lg bg-primary px-3 py-1 text-xs font-semibold text-white hover:opacity-95"
+            className="u-focus rounded-lg bg-on-surface px-3 py-1 text-xs font-semibold text-surface-bright shadow-sm transition hover:bg-on-surface/88"
             onClick={saveRename}
             type="button"
           >
@@ -70,20 +70,20 @@ function ConversationItem({
 
   if (isDeleteConfirming) {
     return (
-      <div className="my-1 rounded-2xl bg-red-500/12 px-3 py-3">
-        <p className="text-xs text-red-200">
+      <div className="sidebar-inline-panel my-1 px-3 py-3">
+        <p className="text-xs font-medium text-on-surface/82">
           Delete <span className="font-semibold">"{label}"</span>?
         </p>
         <div className="mt-2 flex justify-end gap-2">
           <button
-            className="u-focus rounded-lg px-3 py-1 text-xs font-semibold text-on-surface/65 hover:bg-white/5"
+            className="u-focus rounded-lg border border-outline-variant/35 bg-surface-bright/70 px-3 py-1 text-xs font-semibold text-on-surface/75 shadow-sm transition hover:bg-surface-container-lowest"
             onClick={() => setIsDeleteConfirming(false)}
             type="button"
           >
             Cancel
           </button>
           <button
-            className="u-focus rounded-lg bg-red-500 px-3 py-1 text-xs font-semibold text-white hover:bg-red-400"
+            className="u-focus rounded-lg bg-on-surface px-3 py-1 text-xs font-semibold text-surface-bright shadow-sm transition hover:bg-on-surface/88"
             onClick={() => onDelete(id)}
             type="button"
           >
@@ -170,7 +170,7 @@ function AdminSyncButton() {
   const navigate = useNavigate()
   return (
     <button
-      className="u-focus flex w-full items-center gap-2.5 rounded-xl bg-surface-container-low px-3 py-2 text-left text-[13px] font-medium text-on-surface/78 transition hover:bg-surface-container"
+      className="u-focus flex w-full items-center gap-2.5 rounded-xl border border-outline-variant/28 bg-surface-container-low/82 px-3 py-2 text-left text-[13px] font-medium text-on-surface/78 transition hover:bg-surface-container-lowest"
       onClick={() => navigate('/sync')}
       type="button"
     >
@@ -186,7 +186,7 @@ function AdminViewDocsButton() {
   const navigate = useNavigate()
   return (
     <button
-      className="u-focus flex w-full items-center gap-2.5 rounded-xl bg-surface-container-low px-3 py-2 text-left text-[13px] font-medium text-on-surface/78 transition hover:bg-surface-container"
+      className="u-focus flex w-full items-center gap-2.5 rounded-xl border border-outline-variant/28 bg-surface-container-low/82 px-3 py-2 text-left text-[13px] font-medium text-on-surface/78 transition hover:bg-surface-container-lowest"
       onClick={() => navigate('/admin/documents')}
       type="button"
     >
@@ -194,6 +194,22 @@ function AdminViewDocsButton() {
         folder_open
       </span>
       <span className="min-w-0 truncate">View documents</span>
+    </button>
+  )
+}
+
+function AdminCostLogsButton() {
+  const navigate = useNavigate()
+  return (
+    <button
+      className="u-focus flex w-full items-center gap-2.5 rounded-xl border border-outline-variant/28 bg-surface-container-low/82 px-3 py-2 text-left text-[13px] font-medium text-on-surface/78 transition hover:bg-surface-container-lowest"
+      onClick={() => navigate('/admin/cost-logs')}
+      type="button"
+    >
+      <span className="material-symbols-outlined shrink-0 text-[18px] text-primary/85">
+        payments
+      </span>
+      <span className="min-w-0 truncate">Token usage</span>
     </button>
   )
 }
@@ -212,10 +228,10 @@ export function SideNav({
   const initials = getInitials(userName)
 
   return (
-    <nav className="fixed left-0 top-0 z-50 flex h-full w-72 flex-col bg-surface/98 shadow-[4px_0_48px_rgb(0_0_0_/0.12)] backdrop-blur-xl dark:shadow-[6px_0_56px_rgb(0_0_0_/0.45)]">
+    <nav className="sidebar-surface fixed left-0 top-0 z-50 flex h-full w-72 flex-col backdrop-blur-xl">
       <div className="shrink-0 px-3.5 pb-2 pt-3.5">
         <h1 className="font-headline text-[0.8125rem] font-semibold leading-tight tracking-tight text-on-surface">
-          Kinetic Assistant
+          RecomMind Bot
         </h1>
         <p className="mt-1 text-[11px] leading-snug text-on-surface/42">
           Trợ lý hướng nghiệp
@@ -254,6 +270,7 @@ export function SideNav({
           <div className="flex flex-col gap-1">
             <AdminSyncButton />
             <AdminViewDocsButton />
+            <AdminCostLogsButton />
           </div>
         ) : null}
 

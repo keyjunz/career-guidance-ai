@@ -3,6 +3,7 @@ export type ChatMode = 'auto' | 'rag' | 'web'
 export type ApiChatRequest = {
   question: string
   plan?: 'rag_only' | 'web_only' | null
+  conversation_id?: string
 }
 
 export type ApiChatContentItem = {

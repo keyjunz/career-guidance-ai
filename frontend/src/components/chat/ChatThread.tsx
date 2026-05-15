@@ -97,14 +97,14 @@ export function ChatThread({
     >
       <div className="mx-auto flex w-full max-w-[46rem] flex-col gap-3">
         {errorMessage ? (
-          <div className="rounded-2xl bg-red-500/12 px-4 py-3 text-sm text-red-200">
+          <div className="u-alert u-alert-error px-4 py-3 text-sm">
             {errorMessage}
           </div>
         ) : null}
 
         {isEmpty && !errorMessage ? (
           <div className="flex min-h-[calc(100dvh-12.5rem)] flex-col items-center justify-center px-3 py-8 text-center sm:min-h-[calc(100dvh-11.5rem)] sm:px-6">
-            <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-primary/14">
+            <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full border border-white/70 bg-gradient-to-br from-primary-dim/70 to-secondary/16 shadow-[0_16px_42px_rgb(42_45_43_/0.12)]">
               <span
                 className="material-symbols-outlined text-[32px] text-primary"
                 style={{ fontVariationSettings: "'FILL' 1, 'wght' 400" }}
@@ -130,7 +130,7 @@ export function ChatThread({
                     type="button"
                     disabled={startersDisabled}
                     onClick={() => onStarterPrompt(chip.prompt)}
-                    className="u-focus inline-flex items-center gap-2 rounded-full bg-surface-container-high px-3.5 py-2 text-left text-[13px] font-medium text-on-surface/88 shadow-md transition hover:bg-surface-container disabled:cursor-not-allowed disabled:opacity-45 sm:px-4 sm:py-2.5 dark:shadow-[0_4px_20px_rgb(0_0_0_/0.35)]"
+                    className="u-focus inline-flex items-center gap-2 rounded-full border border-white/60 bg-surface-bright/88 px-3.5 py-2 text-left text-[13px] font-medium text-on-surface/88 shadow-[0_8px_22px_rgb(42_45_43_/0.08),inset_0_1px_0_rgb(255_255_255_/0.72)] transition hover:bg-surface-container-lowest hover:text-on-surface disabled:cursor-not-allowed disabled:opacity-45 sm:px-4 sm:py-2.5 dark:border-transparent dark:bg-surface-container-high dark:shadow-[0_4px_20px_rgb(0_0_0_/0.35)]"
                   >
                     <span className="material-symbols-outlined text-[18px] text-primary/90">
                       {chip.icon}

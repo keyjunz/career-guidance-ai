@@ -3,9 +3,13 @@ import logging
 from collections.abc import AsyncIterator
 from time import perf_counter
 from typing import Any
-from uuid import uuid4
+from uuid import UUID, uuid4
 
 from src.agent.edges.pipeline import run_pipeline
+from src.services.database_service.conversation_db import (
+    ConversationAccessError,
+    resolve_conversation_id,
+)
 from src.agent.state.agent_state import AgentRuntimeState
 from src.agent.state.user_store_registry import UserStoreRegistry
 from src.request_body.chat_request_body import ChatRequest, ChatResponse, ContentItem
@@ -24,18 +28,28 @@ def _build_state(
 ) -> AgentRuntimeState:
     user_id = str(request.user_id)
     execution_id = _resolve_execution_id(context)
-    conversation_id = uuid4()
+    if request.user_id is None:
+        raise ValueError("user_id is required")
+    try:
+        conversation_id = resolve_conversation_id(
+            user_id=UUID(str(request.user_id)),
+            conversation_id=request.conversation_id,
+        )
+    except ConversationAccessError as exc:
+        raise PermissionError(str(exc)) from exc
 
     question = request.question.strip()
     if not question:
         raise ValueError("question is required for RAG chat")
 
+    import threading
     state = AgentRuntimeState(
         user_id=user_id,
         execution_id=execution_id,
         conversation_id=conversation_id,
         question=question,
     )
+    state._cancel_event = threading.Event()
     if request.plan:
         state.plan = request.plan
         state.plan_override = True
@@ -195,50 +209,63 @@ async def invoke_stream(
 
     background_task = asyncio.create_task(asyncio.to_thread(worker))
 
-    while True:
-        payload = await queue.get()
-        payload_type = payload.get("type")
+    try:
+        while True:
+            payload = await queue.get()
+            payload_type = payload.get("type")
 
-        if payload_type == "status":
-            yield {"type": "status", "status": str(payload.get("status") or "")}
-            continue
+            if payload_type == "status":
+                yield {"type": "status", "status": str(payload.get("status") or "")}
+                continue
 
-        if payload_type == "error":
-            logger.error(
-                "[agent-main] stream payload error execution_id=%s error=%s",
-                state.execution_id,
-                payload.get("error") or "streaming failed",
-            )
-            await background_task
-            raise RuntimeError(str(payload.get("error") or "streaming failed"))
-
-        if payload_type == "done":
-            final_state = payload.get("state")
-            if not isinstance(final_state, AgentRuntimeState):
+            if payload_type == "error":
+                logger.error(
+                    "[agent-main] stream payload error execution_id=%s error=%s",
+                    state.execution_id,
+                    payload.get("error") or "streaming failed",
+                )
                 await background_task
-                raise RuntimeError("invalid final state in stream pipeline")
+                raise RuntimeError(str(payload.get("error") or "streaming failed"))
 
-            for token in _iter_answer_tokens(final_state.answer):
-                yield {"type": "token", "token": token}
+            if payload_type == "done":
+                final_state = payload.get("state")
+                if not isinstance(final_state, AgentRuntimeState):
+                    await background_task
+                    raise RuntimeError("invalid final state in stream pipeline")
 
-            final_payload = _to_chat_response(final_state).model_dump(mode="json")
-            yield {
-                "type": "final_payload",
-                "payload": final_payload,
-            }
-            yield {
-                "type": "done",
-                "execution_id": final_state.execution_id,
-            }
+                yield {
+                    "type": "usage",
+                    "usage": final_state.token_usage,
+                }
 
-            logger.info(
-                "[agent-main] stream done execution_id=%s answer_len=%d token_count=%d",
-                state.execution_id,
-                len(final_state.answer),
-                len(_iter_answer_tokens(final_state.answer)),
-            )
+                for token in _iter_answer_tokens(final_state.answer):
+                    yield {"type": "token", "token": token}
 
-            break
+                final_payload = _to_chat_response(final_state).model_dump(mode="json")
+                yield {
+                    "type": "final_payload",
+                    "payload": final_payload,
+                }
+                yield {
+                    "type": "done",
+                    "execution_id": final_state.execution_id,
+                }
+
+                logger.info(
+                    "[agent-main] stream done execution_id=%s answer_len=%d token_count=%d",
+                    state.execution_id,
+                    len(final_state.answer),
+                    len(_iter_answer_tokens(final_state.answer)),
+                )
+
+                break
+
+    except (asyncio.CancelledError, GeneratorExit):
+        logger.warning("[agent-main] client disconnected, cancelling stream execution_id=%s", state.execution_id)
+        if hasattr(state, "cancel"):
+            state.cancel()
+        background_task.cancel()
+        raise
 
     await background_task
     elapsed_ms = (perf_counter() - started_at) * 1000

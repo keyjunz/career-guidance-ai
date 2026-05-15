@@ -12,6 +12,7 @@ from pydantic import BaseModel
 from src.config.database import session_scope
 from src.database.models import Document, Role, User
 from src.repositories.document_repository import DocumentRepository
+from src.repositories.request_cost_log_repository import RequestCostLogRepository
 from src.repositories.user_repository import UserRepository
 from src.request_body.auth_request_body import UserResponse
 from src.services.auth_service.dependencies import require_roles
@@ -425,3 +426,103 @@ def delete_document(
         images_deleted=images_deleted,
         warnings=warnings,
     )
+
+
+class CostLogEntry(BaseModel):
+    id: str
+    user_id: str
+    user_name: str | None = None
+    request_type: str
+    model_name: str
+    input_tokens: int
+    output_tokens: int
+    total_tokens: int
+    timestamp: str
+
+
+class UserCostSummary(BaseModel):
+    user_id: str
+    user_name: str | None = None
+    input_tokens: int
+    output_tokens: int
+    total_tokens: int
+
+
+@router.get(
+    "/cost-logs",
+    summary="List request cost logs",
+    response_model=list[CostLogEntry],
+)
+def list_cost_logs(
+    limit: int = Query(default=100, ge=1, le=500),
+    offset: int = Query(default=0, ge=0),
+    user_id: UUID | None = Query(default=None),
+    _admin: User = Depends(_admin_guard),
+):
+    with session_scope() as session:
+        cost_repo = RequestCostLogRepository(session)
+        user_repo = UserRepository(session)
+        rows = cost_repo.list_recent(limit=limit, offset=offset, user_id=user_id)
+        user_names: dict[UUID, str] = {}
+        out: list[CostLogEntry] = []
+        for row in rows:
+            if row.user_id not in user_names:
+                user = user_repo.get_by_id(row.user_id)
+                user_names[row.user_id] = user.user_name if user else None
+            out.append(
+                CostLogEntry(
+                    id=str(row.id),
+                    user_id=str(row.user_id),
+                    user_name=user_names.get(row.user_id),
+                    request_type=row.request_type,
+                    model_name=row.model_name,
+                    input_tokens=int(row.input_tokens or 0),
+                    output_tokens=int(row.output_tokens or 0),
+                    total_tokens=int(row.input_tokens or 0)
+                    + int(row.output_tokens or 0),
+                    timestamp=row.timestamp.isoformat() if row.timestamp else "",
+                )
+            )
+        session.expunge_all()
+    return out
+
+
+@router.get(
+    "/cost-logs/summary",
+    summary="Aggregate token usage per user",
+    response_model=list[UserCostSummary],
+)
+def cost_logs_summary(
+    _admin: User = Depends(_admin_guard),
+):
+    with session_scope() as session:
+        from sqlalchemy import func, select
+
+        from src.database.models import RequestCostLog
+
+        stmt = (
+            select(
+                RequestCostLog.user_id,
+                func.coalesce(func.sum(RequestCostLog.input_tokens), 0),
+                func.coalesce(func.sum(RequestCostLog.output_tokens), 0),
+            )
+            .group_by(RequestCostLog.user_id)
+            .order_by(func.sum(RequestCostLog.input_tokens).desc())
+        )
+        aggregates = session.execute(stmt).all()
+        user_repo = UserRepository(session)
+        out: list[UserCostSummary] = []
+        for user_id, input_tokens, output_tokens in aggregates:
+            user = user_repo.get_by_id(user_id)
+            input_total = int(input_tokens or 0)
+            output_total = int(output_tokens or 0)
+            out.append(
+                UserCostSummary(
+                    user_id=str(user_id),
+                    user_name=user.user_name if user else None,
+                    input_tokens=input_total,
+                    output_tokens=output_total,
+                    total_tokens=input_total + output_total,
+                )
+            )
+    return out

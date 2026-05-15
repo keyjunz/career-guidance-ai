@@ -91,6 +91,7 @@ def run_decompose_query(state: AgentRuntimeState) -> None:
             execution_id=state.execution_id,
             api_key_env_override="GEMINI_AGENT_API_KEY",
         )
+        state._active_llm = llm
         result = llm.generate_raw(prompt=prompt, max_tokens=700, temperature=0.0)
         llm.unload()
         raw = str(result.get("answer") or "").strip()

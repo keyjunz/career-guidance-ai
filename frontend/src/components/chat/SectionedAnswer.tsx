@@ -2,8 +2,6 @@ import ReactMarkdown from 'react-markdown'
 import rehypeSanitize from 'rehype-sanitize'
 import remarkGfm from 'remark-gfm'
 import { resolveApiMediaUrl } from '../../utils/mediaUrl'
-import { SourceListRich } from './SourceListRich'
-
 export type AnswerSection = {
   intent_title: string
   query: string
@@ -82,11 +80,7 @@ export function SectionedAnswer({
             >
               {section.answer}
             </ReactMarkdown>
-          </div>          {section.sources && section.sources.length > 0 ? (
-            <div className="mt-3">
-              <SourceListRich sources={section.sources} initialVisible={3} />
-            </div>
-          ) : null}
+          </div>
         </div>
       ))}
     </div>

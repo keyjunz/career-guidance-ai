@@ -124,8 +124,8 @@ def choose_plan(state: AgentRuntimeState) -> str:
     try:
         llm = LLMService(
             execution_id=state.execution_id,
-            api_key_env_override="GEMINI_AGENT_API_KEY",
         )
+        state._active_llm = llm
         result = llm.generate_raw(prompt=prompt, max_tokens=120, temperature=0.0)
         routed_plan = _parse_plan(result.get("answer", ""))
         llm.unload()

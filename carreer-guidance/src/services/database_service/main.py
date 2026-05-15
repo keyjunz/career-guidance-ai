@@ -6,11 +6,11 @@ from uuid import UUID, uuid4
 from sqlalchemy import select
 
 from src.config.database import session_scope
-from src.database.models import Conversation, Document, Message
+from src.database.models import Document
 from src.enums.doc_status_method import DocSyncStatus
-from src.repositories.conversation_repository import ConversationRepository
 from src.repositories.document_repository import DocumentRepository
-from src.repositories.message_repository import MessageRepository
+from src.services.cost_tracking.token_usage import TokenUsageAccumulator
+from src.services.database_service import conversation_db
 from src.request_body.sync_request_body import (
     SyncDocumentsRequest,
     SyncDocumentsResponse,
@@ -34,67 +34,64 @@ class DatabaseChatService:
         answer: str,
         conversation_id: UUID | None = None,
         session_id: str | None = None,
+        usage: TokenUsageAccumulator | None = None,
     ) -> tuple[UUID, UUID]:
-        normalized_question = question.strip()
-        normalized_answer = answer.strip()
-        if not normalized_question:
-            raise ValueError("question must not be empty")
-        if not normalized_answer:
-            raise ValueError("answer must not be empty")
-
         normalized_session_id = (
             session_id or self.execution_id or str(uuid4())
         ).strip()
-        normalized_session_id = normalized_session_id[:50] or uuid4().hex[:50]
+        return conversation_db.save_chat_turn(
+            user_id=user_id,
+            question=question,
+            answer=answer,
+            conversation_id=conversation_id,
+            session_id=normalized_session_id,
+            usage=usage,
+        )
 
-        with session_scope() as session:
-            conversation_repo = ConversationRepository(session)
-            message_repo = MessageRepository(session)
-
-            conversation = self._resolve_conversation(
-                conversation_repo=conversation_repo,
-                user_id=user_id,
-                conversation_id=conversation_id,
-                session_id=normalized_session_id,
-            )
-
-            message = message_repo.create(
-                {
-                    "conversation_id": conversation.id,
-                    "user_message": normalized_question,
-                    "chatbot_response": normalized_answer,
-                    "user_id": user_id,
-                }
-            )
-
-        return conversation.id, message.id
-
-    def _resolve_conversation(
+    def list_user_conversations(
         self,
-        *,
-        conversation_repo: ConversationRepository,
         user_id: UUID,
-        conversation_id: UUID | None,
-        session_id: str,
-    ) -> Conversation:
-        if conversation_id is not None:
-            existing = conversation_repo.get_by_id(conversation_id)
-            if existing is not None:
-                return existing
+        *,
+        limit: int = 50,
+        offset: int = 0,
+    ) -> list[dict]:
+        return conversation_db.list_user_conversations(
+            user_id=user_id,
+            limit=limit,
+            offset=offset,
+        )
 
-            return conversation_repo.create(
-                {
-                    "id": conversation_id,
-                    "session_id": session_id,
-                    "user_id": user_id,
-                }
-            )
+    def get_conversation_messages(
+        self,
+        user_id: UUID,
+        conversation_id: UUID,
+        *,
+        page: int = 1,
+        page_size: int = 100,
+    ) -> list[dict]:
+        return conversation_db.get_conversation_messages(
+            user_id=user_id,
+            conversation_id=conversation_id,
+            page=page,
+            page_size=page_size,
+        )
 
-        return conversation_repo.create(
-            {
-                "session_id": session_id,
-                "user_id": user_id,
-            }
+    def update_conversation_title(
+        self,
+        user_id: UUID,
+        conversation_id: UUID,
+        title: str,
+    ) -> None:
+        conversation_db.update_conversation_title(
+            user_id=user_id,
+            conversation_id=conversation_id,
+            title=title,
+        )
+
+    def delete_conversation(self, user_id: UUID, conversation_id: UUID) -> None:
+        conversation_db.delete_conversation(
+            user_id=user_id,
+            conversation_id=conversation_id,
         )
 
 

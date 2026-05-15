@@ -6,6 +6,7 @@ import time
 from typing import Any, Dict, Optional
 
 from src.config.settings_models import get_settings
+from src.services.cost_tracking.token_usage import record_token_usage
 from src.prompts.rag_prompts import RAG_PROMPT_TEMPLATE, RAG_PROMPT_TEMPLATE_VI
 from src.prompts.translation_prompts import build_vi_to_en_translation_prompt
 
@@ -147,6 +148,33 @@ class LLMService:
 
         return None
 
+    def _record_api_usage(
+        self,
+        response: Any,
+        *,
+        request_type: str,
+        fallback_output_tokens: int = 0,
+    ) -> int:
+        input_tokens = 0
+        output_tokens = max(0, int(fallback_output_tokens))
+        if self.provider == "groq":
+            usage = getattr(response, "usage", None)
+            if usage is not None:
+                input_tokens = int(getattr(usage, "prompt_tokens", 0) or 0)
+                output_tokens = int(getattr(usage, "completion_tokens", 0) or 0)
+        elif self.provider == "gemini":
+            meta = getattr(response, "usage_metadata", None)
+            if meta is not None:
+                input_tokens = int(getattr(meta, "prompt_token_count", 0) or 0)
+                output_tokens = int(getattr(meta, "candidates_token_count", 0) or 0)
+        record_token_usage(
+            request_type=request_type,
+            model_name=self.model_name,
+            input_tokens=input_tokens,
+            output_tokens=output_tokens,
+        )
+        return output_tokens
+
     def load(self) -> None:
         if self._loaded:
             return
@@ -189,10 +217,10 @@ class LLMService:
                         temperature=temp,
                     )
                     answer = response.choices[0].message.content
-                    tokens_gen = (
-                        response.usage.completion_tokens
-                        if response.usage
-                        else len(answer.split())
+                    tokens_gen = self._record_api_usage(
+                        response,
+                        request_type="rag_generate",
+                        fallback_output_tokens=len((answer or "").split()),
                     )
                 elif self.provider == "gemini":
                     response = self.client.generate_content(
@@ -203,7 +231,11 @@ class LLMService:
                         },
                     )
                     answer = response.text
-                    tokens_gen = len(answer.split())
+                    tokens_gen = self._record_api_usage(
+                        response,
+                        request_type="rag_generate",
+                        fallback_output_tokens=len((answer or "").split()),
+                    )
                 break
             except Exception as e:
                 self.logger.warning(
@@ -251,10 +283,10 @@ class LLMService:
                         temperature=temp,
                     )
                     answer = response.choices[0].message.content
-                    tokens_gen = (
-                        response.usage.completion_tokens
-                        if response.usage
-                        else len(answer.split())
+                    tokens_gen = self._record_api_usage(
+                        response,
+                        request_type="llm_raw",
+                        fallback_output_tokens=len((answer or "").split()),
                     )
                 elif self.provider == "gemini":
                     response = self.client.generate_content(
@@ -265,7 +297,11 @@ class LLMService:
                         },
                     )
                     answer = response.text
-                    tokens_gen = len(answer.split())
+                    tokens_gen = self._record_api_usage(
+                        response,
+                        request_type="llm_raw",
+                        fallback_output_tokens=len((answer or "").split()),
+                    )
                 break
             except Exception as e:
                 self.logger.warning(
@@ -303,12 +339,22 @@ class LLMService:
                     temperature=0.1,
                 )
                 eng_query = response.choices[0].message.content
+                self._record_api_usage(
+                    response,
+                    request_type="translation",
+                    fallback_output_tokens=len((eng_query or "").split()),
+                )
             elif self.provider == "gemini":
                 response = self.client.generate_content(
                     prompt,
                     generation_config={"max_output_tokens": 60, "temperature": 0.1},
                 )
                 eng_query = response.text
+                self._record_api_usage(
+                    response,
+                    request_type="translation",
+                    fallback_output_tokens=len((eng_query or "").split()),
+                )
             else:
                 return query
             eng_query = eng_query.strip(" '\"\n`")

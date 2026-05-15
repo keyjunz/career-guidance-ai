@@ -40,3 +40,16 @@ class RequestCostLogRepository(RepositoryFactory[RequestCostLog, dict, dict]):
             "output_tokens": output_total,
             "total_tokens": input_total + output_total,
         }
+
+    def list_recent(
+        self,
+        *,
+        limit: int = 100,
+        offset: int = 0,
+        user_id: UUID | None = None,
+    ) -> list[RequestCostLog]:
+        stmt = select(RequestCostLog).order_by(RequestCostLog.timestamp.desc())
+        if user_id is not None:
+            stmt = stmt.where(RequestCostLog.user_id == user_id)
+        stmt = stmt.offset(max(offset, 0)).limit(max(limit, 1))
+        return list(self.session.scalars(stmt).all())

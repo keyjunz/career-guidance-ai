@@ -195,33 +195,33 @@ export function ChatInputDock({
             {isStreaming && onStop ? (
               <button
                 type="button"
-                className="u-focus mr-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-on-surface/14 bg-surface-container-high text-on-surface shadow-sm transition hover:bg-surface-container sm:h-11 sm:w-11"
+                className="u-focus mr-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-on-surface/14 bg-surface-container-high text-on-surface shadow-sm transition hover:bg-surface-container sm:h-9 sm:w-9"
                 aria-label="Dừng tạo câu trả lời"
                 onClick={onStop}
               >
                 <span
-                  className="material-symbols-outlined text-[22px]"
+                  className="material-symbols-outlined text-[18px]"
                   style={{ fontVariationSettings: "'FILL' 1" }}
                 >
                   stop
                 </span>
               </button>
-            ) : null}
-
-            <button
-              type="button"
-              className="u-focus mr-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-white shadow-md transition hover:opacity-95 disabled:cursor-not-allowed disabled:opacity-38 sm:h-11 sm:w-11"
-              aria-label="Send message"
-              disabled={disabled || !value.trim()}
-              onClick={submitMessage}
-            >
-              <span
-                className="material-symbols-outlined text-[21px]"
-                style={{ fontVariationSettings: "'FILL' 1" }}
+            ) : (
+              <button
+                type="button"
+                className="u-focus mr-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-surface-bright text-on-surface shadow-[0_2px_8px_rgb(0_0_0_/0.12)] transition hover:bg-surface-container-lowest disabled:cursor-not-allowed disabled:bg-on-surface/5 disabled:text-on-surface/38 disabled:shadow-none sm:h-9 sm:w-9"
+                aria-label="Gửi tin nhắn"
+                disabled={disabled || !value.trim()}
+                onClick={submitMessage}
               >
-                arrow_upward
-              </span>
-            </button>
+                <span
+                  className="material-symbols-outlined text-[19px]"
+                  style={{ fontVariationSettings: "'FILL' 1" }}
+                >
+                  arrow_upward
+                </span>
+              </button>
+            )}
           </div>
         </div>
 

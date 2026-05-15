@@ -37,7 +37,7 @@ export function looksLikeLocalFilesystemPath(s: string): boolean {
 
 /** Build file:/// URL for local paths (Windows + POSIX). */
 export function localPathToFileHref(absPath: string): string {
-  let p = absPath.trim().replace(/\\/g, '/')
+  const p = absPath.trim().replace(/\\/g, '/')
   if (/^[a-zA-Z]:\//.test(p)) {
     return `file:///${p}`
   }
@@ -68,7 +68,7 @@ export function normalizeSourceRow(raw: Record<string, unknown>): NormalizedSour
     [sourceRaw, urlRaw].find((s) => s && looksLikeLocalFilesystemPath(s)) ?? ''
 
   const looksTitle = titleRaw.length > 0 && !looksLikeLocalFilesystemPath(titleRaw)
-  let displayTitle = looksTitle
+  const displayTitle = looksTitle
     ? titleRaw
     : basenameFromPath(pathCandidate || titleRaw || sourceRaw || urlRaw)
   if (!displayTitle) return null

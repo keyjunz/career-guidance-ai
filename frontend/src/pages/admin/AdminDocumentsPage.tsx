@@ -17,22 +17,16 @@ const PAGE_SIZE = 20
 
 function StatusBadge({ status }: { status: string }) {
   const colorMap: Record<string, string> = {
-    completed: 'bg-emerald-500/15 text-emerald-400 border-emerald-500/25',
-    failed: 'bg-red-500/15 text-red-400 border-red-500/25',
-    processing: 'bg-primary/12 text-primary border-primary/25',
-    start: 'bg-amber-500/15 text-amber-400 border-amber-500/25',
+    completed: 'u-badge u-badge-success',
+    failed: 'u-badge u-badge-error',
+    processing: 'u-badge u-badge-info',
+    start: 'u-badge u-badge-warn',
   }
   const cls =
     colorMap[status] ??
-    'bg-outline-variant/15 text-on-surface/70 border-outline-variant/25'
+    'u-badge'
 
-  return (
-    <span
-      className={`inline-block rounded-full border px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${cls}`}
-    >
-      {status}
-    </span>
-  )
+  return <span className={cls}>{status}</span>
 }
 
 function ImageGallery({
@@ -198,7 +192,7 @@ function DocumentCard({
           <div className="flex items-center gap-1">
             <button
               type="button"
-              className="u-focus rounded-lg bg-red-500/15 px-3 py-1.5 text-[11px] font-semibold text-red-300 transition-colors hover:bg-red-500/25"
+              className="u-focus rounded-lg bg-on-surface px-3 py-1.5 text-[11px] font-semibold text-surface-bright shadow-sm transition hover:bg-on-surface/88"
               onClick={() => {
                 onDelete(doc.id)
                 setConfirmDelete(false)
@@ -255,6 +249,20 @@ export function AdminDocumentsPage() {
     )
   }, [])
 
+  const loadDocuments = useCallback(async (currentOffset: number) => {
+    setIsLoading(true)
+    setError('')
+    try {
+      const res = await fetchDocuments(PAGE_SIZE, currentOffset)
+      setDocuments(res.documents)
+      setTotal(res.total)
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to load documents')
+    } finally {
+      setIsLoading(false)
+    }
+  }, [])
+
   useEffect(() => {
     let mounted = true
     async function verify() {
@@ -271,6 +279,7 @@ export function AdminDocumentsPage() {
           return
         }
         setCurrentUser(user)
+        void loadDocuments(0)
       } catch {
         clearAuthTokens()
         navigate('/login', { replace: true })
@@ -282,7 +291,7 @@ export function AdminDocumentsPage() {
     return () => {
       mounted = false
     }
-  }, [navigate])
+  }, [loadDocuments, navigate])
 
   useEffect(() => {
     return () => {
@@ -338,26 +347,6 @@ export function AdminDocumentsPage() {
     }
   }, [])
 
-  const loadDocuments = useCallback(async (currentOffset: number) => {
-    setIsLoading(true)
-    setError('')
-    try {
-      const res = await fetchDocuments(PAGE_SIZE, currentOffset)
-      setDocuments(res.documents)
-      setTotal(res.total)
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to load documents')
-    } finally {
-      setIsLoading(false)
-    }
-  }, [])
-
-  useEffect(() => {
-    if (!isCheckingAuth && currentUser) {
-      loadDocuments(offset)
-    }
-  }, [isCheckingAuth, currentUser, offset, loadDocuments])
-
   const handleDelete = async (docId: string) => {
     setDeletingId(docId)
     setDeleteNotice('')
@@ -377,6 +366,10 @@ export function AdminDocumentsPage() {
 
   const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE))
   const currentPage = Math.floor(offset / PAGE_SIZE) + 1
+  const changePage = (nextOffset: number) => {
+    setOffset(nextOffset)
+    void loadDocuments(nextOffset)
+  }
 
   if (isCheckingAuth) {
     return (
@@ -427,12 +420,10 @@ export function AdminDocumentsPage() {
 
       <main className="mx-auto max-w-6xl px-4 py-6 sm:px-6 sm:py-8">
         {error && (
-          <div className="mb-5 rounded-xl border border-red-400/25 bg-red-500/10 px-4 py-3 text-sm text-red-200">
-            {error}
-          </div>
+          <div className="u-alert u-alert-error mb-5 px-4 py-3 text-sm">{error}</div>
         )}
         {deleteNotice && (
-          <div className="mb-5 rounded-xl border border-amber-400/25 bg-amber-500/10 px-4 py-3 text-sm text-amber-100/90">
+          <div className="u-alert u-alert-warn mb-5 px-4 py-3 text-sm">
             {deleteNotice}
           </div>
         )}
@@ -481,9 +472,7 @@ export function AdminDocumentsPage() {
                   type="button"
                   className="u-focus rounded-lg border border-outline-variant/15 bg-surface-container-high/60 px-3 py-1.5 text-xs font-medium text-on-surface/65 transition-colors hover:bg-surface-container-high disabled:opacity-30"
                   disabled={currentPage <= 1}
-                  onClick={() =>
-                    setOffset(Math.max(0, offset - PAGE_SIZE))
-                  }
+                  onClick={() => changePage(Math.max(0, offset - PAGE_SIZE))}
                 >
                   Previous
                 </button>
@@ -494,7 +483,7 @@ export function AdminDocumentsPage() {
                   type="button"
                   className="u-focus rounded-lg border border-outline-variant/15 bg-surface-container-high/60 px-3 py-1.5 text-xs font-medium text-on-surface/65 transition-colors hover:bg-surface-container-high disabled:opacity-30"
                   disabled={currentPage >= totalPages}
-                  onClick={() => setOffset(offset + PAGE_SIZE)}
+                  onClick={() => changePage(offset + PAGE_SIZE)}
                 >
                   Next
                 </button>

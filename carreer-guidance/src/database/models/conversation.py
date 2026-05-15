@@ -21,6 +21,7 @@ class Conversation(Base):
         nullable=False,
         index=True,
     )
+    title: Mapped[str | None] = mapped_column(String(200), nullable=True)
     started_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True),
         nullable=False,
@@ -29,5 +30,8 @@ class Conversation(Base):
 
     user: Mapped["User"] = relationship("User", back_populates="conversations")
     messages: Mapped[list["Message"]] = relationship(
-        "Message", back_populates="conversation"
+        "Message",
+        back_populates="conversation",
+        cascade="all, delete-orphan",
+        passive_deletes=True,
     )

@@ -19,6 +19,7 @@ class ChatRequest(BaseModel):
         ]
         | None
     ) = None
+    conversation_id: UUID | None = None
     # Injected from auth layer; keep it as a real field so ChatHandler can assign to it,
     # but hide it from Swagger/OpenAPI schema.
     user_id: UUID | None = Field(default=None, exclude=True)

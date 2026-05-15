@@ -18,6 +18,7 @@ from fastapi.staticfiles import StaticFiles
 
 from local_server.routes.admin.router import router as admin_router
 from local_server.routes.auth.router import router as auth_router
+from local_server.routes.chat.conversations import router as chat_conversations_router
 from local_server.routes.chat.router import router as chat_router
 from local_server.routes.sync_doc.router import router as sync_doc_router
 from src.utils.common import ErrorResponse
@@ -91,6 +92,7 @@ def create_app() -> FastAPI:
 
     app.include_router(auth_router)
     app.include_router(chat_router)
+    app.include_router(chat_conversations_router)
     app.include_router(sync_doc_router)
     app.include_router(admin_router)
 

@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from 'react'
+import { useMemo, useState, type ReactNode } from 'react'
 import type { ChatMessage } from '../../types/chat'
 import ReactMarkdown from 'react-markdown'
 import rehypeSanitize from 'rehype-sanitize'
@@ -180,11 +180,21 @@ export function MessageBubble({
   const sources = message.meta?.sources ?? []
   const markdownText = normalizeAssistantMarkdown(message.text)
   const answerSections = !isUser ? parseAnswerSections(message.meta) : null
+  const sectionSources = useMemo(() => {
+    if (!answerSections?.length) return []
+    const merged: Array<Record<string, unknown>> = []
+    for (const section of answerSections) {
+      if (section.sources?.length) merged.push(...section.sources)
+    }
+    return merged
+  }, [answerSections])
+  const bottomSources =
+    answerSections && answerSections.length > 0 ? sectionSources : sources
 
   if (isUser) {
     return (
       <div className="flex justify-end">
-        <div className="max-w-[min(88%,38rem)] rounded-[1.35rem] rounded-br-md bg-surface-container-high px-4 py-2.5 text-[15px] leading-relaxed text-on-surface shadow-md dark:shadow-[0_4px_24px_rgb(0_0_0_/0.35)]">
+        <div className="max-w-[min(88%,38rem)] rounded-[1.35rem] rounded-br-md border border-white/70 bg-gradient-to-b from-surface-bright to-surface-container-high px-4 py-2.5 text-[15px] leading-relaxed text-on-surface shadow-[0_10px_30px_rgb(40_38_35_/0.12),inset_0_1px_0_rgb(255_255_255_/0.72)] dark:border-transparent dark:bg-surface-container-high dark:bg-none dark:shadow-[0_4px_24px_rgb(0_0_0_/0.35)]">
           {message.text}
         </div>
       </div>
@@ -229,7 +239,7 @@ export function MessageBubble({
           <CacheBadges message={message} />
           {answerSections && answerSections.length > 0 ? (
             <SectionedAnswer sections={answerSections} onImageClick={openImage} />
-          ) : !!message.text ? (
+          ) : message.text ? (
             <div className="text-[15px] leading-[1.75] text-on-surface/88">
               <ReactMarkdown
                 remarkPlugins={[remarkGfm]}
@@ -307,8 +317,8 @@ export function MessageBubble({
               ))}
             </div>
           )}
-          {sources.length > 0 && !(answerSections && answerSections.length) ? (
-            <SourceListRich sources={sources} initialVisible={3} />
+          {bottomSources.length > 0 ? (
+            <SourceListRich sources={bottomSources} initialVisible={3} />
           ) : null}
         </div>
       </div>

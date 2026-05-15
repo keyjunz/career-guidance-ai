@@ -99,9 +99,7 @@ export function RegisterPage() {
             </label>
 
             {errorMessage && (
-              <p className="rounded-xl border border-red-400/25 bg-red-500/10 px-4 py-3 text-sm text-red-200">
-                {errorMessage}
-              </p>
+              <p className="u-alert u-alert-error px-4 py-3 text-sm">{errorMessage}</p>
             )}
             {successMessage && (
               <p className="rounded-xl border border-primary/25 bg-primary/10 px-4 py-3 text-sm text-on-surface">

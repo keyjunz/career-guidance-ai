@@ -29,8 +29,25 @@ class AgentRuntimeState:
     web_tool_client: Any | None = None
     # Hybrid retrieval cache hit for any RAG call in this execution (UI + metrics).
     retrieval_cache_hit: bool = False
+    # Internal per-run token accounting; used by DB persistence after streaming.
+    token_usage: Any | None = None
     # Multi-intent decomposition
     multi_intent: bool = False
     sub_queries: list[dict[str, Any]] = field(default_factory=list)
     tool_results_by_intent: dict[str, dict[str, Any]] = field(default_factory=dict)
     answer_sections: list[dict[str, Any]] = field(default_factory=list)
+    _cancel_event: Any | None = field(default=None, repr=False, compare=False)
+    _active_llm: Any | None = field(default=None, repr=False, compare=False)
+
+    def is_cancelled(self) -> bool:
+        return self._cancel_event.is_set() if self._cancel_event else False
+
+    def cancel(self) -> None:
+        if self._cancel_event:
+            self._cancel_event.set()
+        if self._active_llm and hasattr(self._active_llm, "unload"):
+            try:
+                self._active_llm.unload()
+            except Exception:
+                pass
+

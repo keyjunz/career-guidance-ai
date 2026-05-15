@@ -49,6 +49,43 @@ export async function deleteDocument(
   )
 }
 
+export type AdminCostLog = {
+  id: string
+  user_id: string
+  user_name: string | null
+  request_type: string
+  model_name: string
+  input_tokens: number
+  output_tokens: number
+  total_tokens: number
+  timestamp: string
+}
+
+export type UserCostSummary = {
+  user_id: string
+  user_name: string | null
+  input_tokens: number
+  output_tokens: number
+  total_tokens: number
+}
+
+export async function fetchCostLogs(
+  limit = 100,
+  offset = 0,
+  userId?: string,
+): Promise<AdminCostLog[]> {
+  const params = new URLSearchParams({
+    limit: String(limit),
+    offset: String(offset),
+  })
+  if (userId) params.set('user_id', userId)
+  return apiRequest<AdminCostLog[]>(`/api/admin/cost-logs?${params}`)
+}
+
+export async function fetchCostLogSummary(): Promise<UserCostSummary[]> {
+  return apiRequest<UserCostSummary[]>('/api/admin/cost-logs/summary')
+}
+
 export async function fetchDocumentFileBlob(documentId: string): Promise<Blob> {
   const headers = new Headers()
   const token = getAccessToken()

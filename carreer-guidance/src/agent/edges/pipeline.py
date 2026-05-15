@@ -36,6 +36,11 @@ def _run_step(
     operation: Callable[..., Any],
     *args: Any,
 ) -> Any:
+    import asyncio
+    if hasattr(state, "is_cancelled") and state.is_cancelled():
+        logger.warning("[agent-pipeline] step=%s cancelled execution_id=%s", step_name, state.execution_id)
+        raise asyncio.CancelledError("Pipeline execution cancelled by client disconnect")
+
     started_at = perf_counter()
     logger.info(
         "[agent-pipeline] step=%s started execution_id=%s",
@@ -277,6 +282,13 @@ def run_pipeline(
     *,
     status_callback: Callable[[str], None] | None = None,
 ) -> AgentRuntimeState:
+    from src.services.cost_tracking.token_usage import (
+        TokenUsageAccumulator,
+        set_token_usage_accumulator,
+    )
+
+    usage_acc = TokenUsageAccumulator()
+    set_token_usage_accumulator(usage_acc)
     pipeline_started_at = perf_counter()
     logger.info(
         "[agent-pipeline] run started execution_id=%s user_id=%s",
@@ -342,6 +354,7 @@ def run_pipeline(
             "passed": None,
         }
     )
+    state.token_usage = usage_acc
 
     total_elapsed_ms = (perf_counter() - pipeline_started_at) * 1000
     logger.info(

@@ -18,10 +18,10 @@ export function ChatHeader({
   const isDark = theme === 'dark'
   const title =
     conversationTitle?.trim() ||
-    'Kinetic Assistant'
+    'RecomMind Bot'
 
   return (
-    <header className="sticky top-0 z-20 flex flex-shrink-0 items-center gap-3 bg-background/80 px-4 py-2.5 backdrop-blur-md sm:px-5 sm:py-3">
+    <header className="chat-header-surface sticky top-0 z-20 flex flex-shrink-0 items-center gap-3 px-4 py-2.5 backdrop-blur-md sm:px-5 sm:py-3">
       <div className="min-w-0 flex-1 sm:max-w-[33%]" />
 
       <div className="min-w-0 max-w-[min(100%,28rem)] flex-1 text-center">
