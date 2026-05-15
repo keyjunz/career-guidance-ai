@@ -41,12 +41,26 @@ class User(Base):
 
     role: Mapped["Role"] = relationship("Role", back_populates="users")
     documents: Mapped[list["Document"]] = relationship(
-        "Document", back_populates="user"
+        "Document",
+        back_populates="user",
+        cascade="all, delete-orphan",
+        passive_deletes=True,
     )
     conversations: Mapped[list["Conversation"]] = relationship(
-        "Conversation", back_populates="user"
+        "Conversation",
+        back_populates="user",
+        cascade="all, delete-orphan",
+        passive_deletes=True,
     )
     request_cost_logs: Mapped[list["RequestCostLog"]] = relationship(
-        "RequestCostLog", back_populates="user"
+        "RequestCostLog",
+        back_populates="user",
+        cascade="all, delete-orphan",
+        passive_deletes=True,
     )
-    messages: Mapped[list["Message"]] = relationship("Message", back_populates="user")
+    messages: Mapped[list["Message"]] = relationship(
+        "Message",
+        back_populates="user",
+        cascade="all, delete-orphan",
+        passive_deletes=True,
+    )
