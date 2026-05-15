@@ -86,9 +86,11 @@ class UserStore:
             if len(cache) > MAX_QA_CACHE_ITEMS:
                 sorted_items = sorted(
                     cache.items(),
-                    key=lambda pair: str(pair[1].get("updated_at", ""))
-                    if isinstance(pair[1], dict)
-                    else "",
+                    key=lambda pair: (
+                        str(pair[1].get("updated_at", ""))
+                        if isinstance(pair[1], dict)
+                        else ""
+                    ),
                 )
                 self._data["qa_cache"] = dict(sorted_items[-MAX_QA_CACHE_ITEMS:])
 
@@ -134,6 +136,23 @@ class UserStore:
                 return None
             return item
 
+    def get_recent_history(
+        self,
+        *,
+        conversation_id: str,
+        limit: int = 3,
+    ) -> list[dict[str, Any]]:
+        if limit <= 0:
+            return []
+        with self._lock:
+            history = list(self._data.get("history") or [])
+        filtered = [
+            item
+            for item in history
+            if str(item.get("conversation_id") or "") == str(conversation_id)
+        ]
+        return filtered[-limit:]
+
     def save_answer(
         self,
         execution_id: str,
@@ -159,8 +178,13 @@ class UserStore:
 
             normalized = normalize_question(resolved_question)
             normalized_answer = str(answer or "").strip().lower()
-            should_cache = cacheable and bool(normalized_answer) and not any(
-                marker in normalized_answer for marker in NON_CACHEABLE_ANSWER_MARKERS
+            should_cache = (
+                cacheable
+                and bool(normalized_answer)
+                and not any(
+                    marker in normalized_answer
+                    for marker in NON_CACHEABLE_ANSWER_MARKERS
+                )
             )
             if should_cache:
                 self._data.setdefault("qa_cache", {})[normalized] = {

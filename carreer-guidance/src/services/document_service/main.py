@@ -154,6 +154,24 @@ class DocumentService:
         current_text_parts: list[str] = []
         current_length = 0
         chunk_index = 0
+        overlap_chars = max(0, int(self.chunk_overlap or 0))
+
+        def _build_overlap_blocks(
+            blocks: list[dict[str, Any]],
+        ) -> list[dict[str, Any]]:
+            if not blocks or overlap_chars <= 0:
+                return []
+            overlap: list[dict[str, Any]] = []
+            char_count = 0
+            for block in reversed(blocks):
+                text = str(block.get("text") or "").strip()
+                if not text:
+                    continue
+                overlap.insert(0, block)
+                char_count += len(text) + 1
+                if char_count >= overlap_chars:
+                    break
+            return overlap
 
         for block in text_blocks:
             text = str(block.get("text") or "").strip()
@@ -173,9 +191,20 @@ class DocumentService:
                 )
                 chunks.append(chunk)
                 chunk_index += 1
-                current_blocks = []
-                current_text_parts = []
-                current_length = 0
+                overlap_blocks = _build_overlap_blocks(current_blocks)
+                current_blocks = overlap_blocks
+                current_text_parts = [
+                    str(block.get("text") or "").strip()
+                    for block in current_blocks
+                    if str(block.get("text") or "").strip()
+                ]
+                current_length = sum(len(s) for s in current_text_parts) + max(
+                    len(current_text_parts) - 1, 0
+                )
+                if current_length > self.max_chunk_size:
+                    current_blocks = []
+                    current_text_parts = []
+                    current_length = 0
 
             current_blocks.append(block)
             current_text_parts.append(text)
@@ -405,6 +434,19 @@ class DocumentService:
             chunks: list[str] = []
             current_chunk: list[str] = []
             current_length = 0
+            overlap_chars = max(0, int(self.chunk_overlap or 0))
+
+            def _build_overlap(prev_chunk: list[str]) -> list[str]:
+                if not prev_chunk or overlap_chars <= 0:
+                    return []
+                overlap: list[str] = []
+                char_count = 0
+                for sentence in reversed(prev_chunk):
+                    overlap.insert(0, sentence)
+                    char_count += len(sentence) + 1
+                    if char_count >= overlap_chars:
+                        break
+                return overlap
 
             for sentence in sentences:
                 sentence_length = len(sentence)
@@ -413,8 +455,14 @@ class DocumentService:
                 if current_length + sentence_length > self.max_chunk_size:
                     if current_chunk:
                         chunks.append(" ".join(current_chunk))
-                        current_chunk = [sentence]
-                        current_length = sentence_length
+                        overlap = _build_overlap(current_chunk)
+                        current_chunk = overlap + [sentence]
+                        current_length = sum(len(s) for s in current_chunk) + max(
+                            len(current_chunk) - 1, 0
+                        )
+                        if current_length > self.max_chunk_size:
+                            current_chunk = [sentence[: self.max_chunk_size]]
+                            current_length = len(current_chunk[0])
                     else:
                         # Single sentence exceeds max, split it
                         chunks.append(sentence[: self.max_chunk_size])

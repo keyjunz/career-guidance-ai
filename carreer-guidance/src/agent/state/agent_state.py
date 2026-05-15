@@ -9,6 +9,8 @@ class AgentRuntimeState:
     execution_id: str
     conversation_id: UUID
     question: str
+    resolved_question: str | None = None
+    history_context: str | None = None
     plan: str = "rag_only"
     plan_override: bool = False
     status_history: list[str] = field(default_factory=list)
@@ -50,4 +52,3 @@ class AgentRuntimeState:
                 self._active_llm.unload()
             except Exception:
                 pass
-
