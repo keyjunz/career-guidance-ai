@@ -1,6 +1,7 @@
 import hashlib
 import logging
 import pickle
+from functools import lru_cache
 from pathlib import Path
 from typing import List, Union
 
@@ -141,3 +142,17 @@ class EmbeddingService:
             p.numel() * p.element_size() for p in self.model[0].auto_model.parameters()
         )
         return param_size / (1024**2)
+
+
+@lru_cache(maxsize=4)
+def get_embedding_service(
+    *,
+    model_key: str = DEFAULT_EMBEDDING,
+    device: str = DEVICE,
+) -> EmbeddingService:
+    """Return a cached embedding service for reuse across requests."""
+    return EmbeddingService(
+        execution_id="shared",
+        model_key=model_key,
+        device=device,
+    )
