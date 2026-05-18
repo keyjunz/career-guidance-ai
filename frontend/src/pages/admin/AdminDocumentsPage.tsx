@@ -382,7 +382,7 @@ export function AdminDocumentsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background text-on-surface kv-texture-overlay">
+    <div className="h-screen overflow-y-auto bg-background text-on-surface kv-texture-overlay">
       <header className="sticky top-0 z-20 border-b border-outline-variant/10 bg-surface/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3 sm:px-6 sm:py-3.5">
           <button

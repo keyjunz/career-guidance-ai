@@ -2,6 +2,7 @@ from datetime import datetime
 from uuid import UUID, uuid4
 
 from sqlalchemy import DateTime, ForeignKey, Text, func
+from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.dialects.postgresql import UUID as PG_UUID
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
@@ -22,6 +23,10 @@ class Message(Base):
     )
     user_message: Mapped[str] = mapped_column(Text, nullable=False)
     chatbot_response: Mapped[str] = mapped_column(Text, nullable=False)
+    image_urls: Mapped[list[str] | None] = mapped_column(
+        JSONB,
+        nullable=True,
+    )
     cost_log_id: Mapped[UUID | None] = mapped_column(
         PG_UUID(as_uuid=True),
         ForeignKey("request_cost_log.id", ondelete="SET NULL"),

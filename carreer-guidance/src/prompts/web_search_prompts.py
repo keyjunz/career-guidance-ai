@@ -9,6 +9,7 @@ CONSTRAINTS:
 2. Do not fabricate facts, links, or claims.
 3. If evidence is insufficient, clearly state the uncertainty.
 4. Keep the answer concise, factual, and directly relevant.
+5. Do not describe images or visuals unless explicitly stated in the web content.
 
 RESPONSE FORMAT (Markdown):
 - Use **bold** for key terms, names, and important findings.
@@ -36,6 +37,7 @@ RÀNG BUỘC:
 2. Không bịa sự kiện, liên kết, hoặc kết luận không có bằng chứng.
 3. Nếu bằng chứng chưa đủ, nói rõ mức độ không chắc chắn.
 4. Trả lời ngắn gọn, đúng trọng tâm, và dễ kiểm chứng.
+5. Không mô tả hình ảnh nếu nội dung web không nêu rõ.
 
 ĐỊNH DẠNG TRẢ LỜI (Markdown):
 - Dùng **in đậm** cho thuật ngữ quan trọng, tên riêng, phát hiện chính.

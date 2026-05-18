@@ -1,7 +1,9 @@
 import ReactMarkdown from 'react-markdown'
 import rehypeSanitize from 'rehype-sanitize'
 import remarkGfm from 'remark-gfm'
+import remarkBreaks from 'remark-breaks'
 import { resolveApiMediaUrl } from '../../utils/mediaUrl'
+import { normalizeAssistantMarkdown } from '../../utils/normalizeAssistantMarkdown'
 export type AnswerSection = {
   intent_title: string
   query: string
@@ -31,7 +33,7 @@ export function SectionedAnswer({
           </p>
           <div className="mt-2 text-[15px] leading-[1.75] text-on-surface/88">
             <ReactMarkdown
-              remarkPlugins={[remarkGfm]}
+              remarkPlugins={[remarkGfm, remarkBreaks]}
               rehypePlugins={[rehypeSanitize]}
               components={{
                 p: ({ children }) => <p className="mb-2 last:mb-0">{children}</p>,
@@ -78,7 +80,7 @@ export function SectionedAnswer({
                   : {}),
               }}
             >
-              {section.answer}
+              {normalizeAssistantMarkdown(section.answer)}
             </ReactMarkdown>
           </div>
         </div>

@@ -1316,6 +1316,13 @@
               }
             ],
             "title": "Timestamp"
+          },
+          "image_urls": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Image Urls"
           }
         },
         "type": "object",

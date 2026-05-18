@@ -1,5 +1,6 @@
 import logging
 import time
+from pathlib import Path
 from typing import Any
 
 from src.request_body.sync_request_body import (
@@ -66,6 +67,11 @@ class SyncDocumentModuleGeminiImpl:
 
             job = self.database_service.create_sync_job(request)
             job_id = str(job.get("job_id") or "")
+            file_actions = job.get("file_actions", {})
+            source_keys = job.get("source_keys", {})
+            skipped_count = sum(
+                1 for action in file_actions.values() if action == "skip"
+            )
             self.database_service.update_job_status(job_id, "processing")
             logger.info(
                 "sync_documents_gemini job created: execution_id=%s user_id=%s job_id=%s",
@@ -74,14 +80,21 @@ class SyncDocumentModuleGeminiImpl:
                 job_id,
             )
 
-            prepared_docs = [
-                {
-                    "source_url": file_path,
-                    "file_path": file_path,
-                    "industry_type": str(request.industry_type or ""),
-                }
-                for file_path in request.file_urls
-            ]
+            prepared_docs = []
+            for file_path in request.file_urls:
+                action = str(file_actions.get(file_path, "new"))
+                if action == "skip":
+                    continue
+                source_key = source_keys.get(file_path) or Path(file_path).name
+                prepared_docs.append(
+                    {
+                        "source_url": file_path,
+                        "file_path": file_path,
+                        "industry_type": str(request.industry_type or ""),
+                        "source_key": source_key,
+                        "action": action,
+                    }
+                )
             for item in prepared_docs:
                 logger.info(
                     "sync_documents_gemini file queued: execution_id=%s user_id=%s job_id=%s file_path=%s industry_type=%s",
@@ -90,6 +103,21 @@ class SyncDocumentModuleGeminiImpl:
                     job_id,
                     str(item.get("file_path") or ""),
                     str(item.get("industry_type") or ""),
+                )
+
+            if not prepared_docs:
+                self.database_service.mark_completed(job_id)
+                execution_time_ms = int((time.perf_counter() - started_at) * 1000)
+                return SyncDocumentsResponse(
+                    job_id=job_id,
+                    status="completed",
+                    processed=0,
+                    failed=0,
+                    downloaded=len(request.file_urls),
+                    skipped=skipped_count,
+                    total_pages=0,
+                    file_page_counts={},
+                    execution_time_ms=execution_time_ms,
                 )
 
             ocr_results = self.ocr_service.extract_text_batch(prepared_docs)
@@ -137,9 +165,18 @@ class SyncDocumentModuleGeminiImpl:
                 str(item.get("file_path") or ""): str(item.get("industry_type") or "")
                 for item in prepared_docs
             }
+            source_key_by_path = {
+                str(item.get("file_path") or ""): str(item.get("source_key") or "")
+                for item in prepared_docs
+            }
+            action_by_path = {
+                str(item.get("file_path") or ""): str(item.get("action") or "new")
+                for item in prepared_docs
+            }
             for result in ocr_results:
                 file_path = str(result.get("file_path") or "")
                 result["industry_type"] = industry_by_file_path.get(file_path, "")
+                result["doc_id"] = source_key_by_path.get(file_path, "")
 
             self.database_service.apply_ocr_results(
                 job_id=job_id,
@@ -161,6 +198,23 @@ class SyncDocumentModuleGeminiImpl:
                 job_id,
                 len(chunks),
             )
+
+            success_by_path = {
+                str(item.get("file_path") or ""): bool(item.get("success"))
+                for item in ocr_results
+            }
+            chunk_doc_ids = {
+                str((chunk.get("metadata") or {}).get("doc_id") or "")
+                for chunk in chunks
+            }
+            for file_path, action in action_by_path.items():
+                if action != "update":
+                    continue
+                if not success_by_path.get(file_path, False):
+                    continue
+                doc_id = source_key_by_path.get(file_path, "")
+                if doc_id and doc_id in chunk_doc_ids:
+                    self.vector_db_service.delete_by_doc_id(doc_id)
 
             upserted = self.vector_db_service.upsert_chunks(
                 ingestion_job_id=job_id,
@@ -196,7 +250,8 @@ class SyncDocumentModuleGeminiImpl:
                 status=status,
                 processed=processed_count,
                 failed=failed_count,
-                downloaded=len(prepared_docs),
+                downloaded=len(request.file_urls),
+                skipped=skipped_count,
                 total_pages=total_pages,
                 file_page_counts=file_page_counts,
                 execution_time_ms=execution_time_ms,

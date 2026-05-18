@@ -68,7 +68,8 @@ ROUTING RULES:
 2. Questions about current industry trends, salary data, external companies, or breaking news → web_only.
 3. Questions mixing internal academic content with external context → rag_web_parallel.
 4. If the question is in Vietnamese, still route correctly — language does not affect plan choice.
-5. When uncertain, default to rag_web_parallel.
+5. If internal coverage is uncertain or likely incomplete, prefer rag_web_parallel to allow a web fallback.
+6. When uncertain, default to rag_web_parallel.
 
 OUTPUT FORMAT — Return STRICT JSON only, no extra text:
 {{"plan":"<one_of_valid_plans>","confidence":0.0-1.0,"reason":"short explanation"}}

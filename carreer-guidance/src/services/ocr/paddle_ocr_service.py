@@ -420,4 +420,4 @@ class PaddleOCRService:
 
     def _default_rec_model_dir(self) -> str:
         base_dir = Path(__file__).resolve().parents[3]
-        return str(base_dir / "src" / "model_ml" / "PP-OCRv5_server_rec_infer")
+        return str(base_dir / "src" / "model_ml" / "latest")

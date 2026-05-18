@@ -101,6 +101,7 @@ class DocumentService:
                 continue
 
             file_path = str(result.get("file_path") or "")
+            doc_id = str(result.get("doc_id") or Path(file_path).name)
             pages = self._split_text_by_pages(text)
             total_chunks_for_file = 0
 
@@ -109,7 +110,7 @@ class DocumentService:
                 for idx, part in enumerate(chunk_list):
                     chunks.append(
                         {
-                            "chunk_id": f"{Path(file_path).stem}:p{page_number}:{idx}",
+                            "chunk_id": f"{doc_id}:p{page_number}:{idx}",
                             "document_id": Path(file_path).name,
                             "text": part,
                             "metadata": {
@@ -121,6 +122,7 @@ class DocumentService:
                                 "industry_type": str(result.get("industry_type") or ""),
                                 "page_number": page_number,
                                 "chunk_index": idx,
+                                "doc_id": doc_id,
                             },
                         }
                     )

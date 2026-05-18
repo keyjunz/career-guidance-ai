@@ -1,5 +1,7 @@
+import hashlib
 import logging
 from pathlib import Path
+from typing import Any
 from urllib.parse import urlparse
 from uuid import UUID, uuid4
 
@@ -35,6 +37,7 @@ class DatabaseChatService:
         conversation_id: UUID | None = None,
         session_id: str | None = None,
         usage: TokenUsageAccumulator | None = None,
+        image_urls: list[str] | None = None,
     ) -> tuple[UUID, UUID]:
         normalized_session_id = (
             session_id or self.execution_id or str(uuid4())
@@ -46,6 +49,7 @@ class DatabaseChatService:
             conversation_id=conversation_id,
             session_id=normalized_session_id,
             usage=usage,
+            image_urls=image_urls,
         )
 
     def list_user_conversations(
@@ -104,26 +108,47 @@ class DatabaseSyncService:
     def create_sync_job(
         self,
         request: SyncDocumentsRequest,
-    ) -> dict[str, str | int]:
+    ) -> dict[str, Any]:
         normalized_execution_id = self.execution_id.strip()
         job_id = normalized_execution_id or str(uuid4())
         rows: list[dict] = []
+        file_actions: dict[str, str] = {}
+        source_keys: dict[str, str] = {}
         for file_url in request.file_urls:
             document_name = self._extract_document_name(file_url)
             document_type = self._extract_document_type(document_name)
+            content_hash = self._hash_file(file_url)
+            source_key = document_name
             rows.append(
                 {
                     "user_id": request.user_id,
                     "document_name": document_name,
                     "document_type": document_type,
+                    "source_key": source_key,
+                    "content_hash": content_hash,
                     "content": file_url,
                     "ingestion_job_id": job_id,
                     "status": DocSyncStatus.START.value,
                 }
             )
 
+            source_keys[file_url] = source_key
+
         with session_scope() as session:
             repo = DocumentRepository(session)
+            for row in rows:
+                existing = repo.get_by_user_and_source_key(
+                    row["user_id"],
+                    str(row["source_key"]),
+                )
+                if existing and existing.content_hash == row["content_hash"]:
+                    row["status"] = DocSyncStatus.COMPLETED.value
+                    file_actions[row["content"]] = "skip"
+                elif existing:
+                    file_actions[row["content"]] = "update"
+                else:
+                    file_actions[row["content"]] = "new"
+
             repo.bulk_upsert_metadata(rows)
 
         return {
@@ -132,6 +157,8 @@ class DatabaseSyncService:
             "downloaded": len(request.file_urls),
             "processed": 0,
             "failed": 0,
+            "file_actions": file_actions,
+            "source_keys": source_keys,
         }
 
     def update_job_status(
@@ -143,8 +170,9 @@ class DatabaseSyncService:
             stmt = select(Document).where(Document.ingestion_job_id == job_id)
             docs = list(session.scalars(stmt).all())
             for doc in docs:
-                doc.status = status
-                session.add(doc)
+                if doc.status == DocSyncStatus.START.value:
+                    doc.status = status
+                    session.add(doc)
 
     def apply_ocr_results(
         self,
@@ -226,3 +254,13 @@ class DatabaseSyncService:
     def _extract_document_type(self, document_name: str) -> str:
         suffix = Path(document_name).suffix.lower().lstrip(".")
         return suffix or "unknown"
+
+    def _hash_file(self, file_path: str) -> str:
+        path = Path(file_path)
+        if not path.exists():
+            raise ValueError(f"File not found: {file_path}")
+        hasher = hashlib.sha256()
+        with path.open("rb") as handle:
+            for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+                hasher.update(chunk)
+        return hasher.hexdigest()

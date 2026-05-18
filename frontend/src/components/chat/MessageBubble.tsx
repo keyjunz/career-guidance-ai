@@ -3,6 +3,7 @@ import type { ChatMessage } from '../../types/chat'
 import ReactMarkdown from 'react-markdown'
 import rehypeSanitize from 'rehype-sanitize'
 import remarkGfm from 'remark-gfm'
+import remarkBreaks from 'remark-breaks'
 import { resolveApiMediaUrl } from '../../utils/mediaUrl'
 import { normalizeAssistantMarkdown } from '../../utils/normalizeAssistantMarkdown'
 import { SectionedAnswer, type AnswerSection } from './SectionedAnswer'
@@ -194,7 +195,7 @@ export function MessageBubble({
   if (isUser) {
     return (
       <div className="flex justify-end">
-        <div className="max-w-[min(88%,38rem)] rounded-[1.35rem] rounded-br-md border border-white/70 bg-gradient-to-b from-surface-bright to-surface-container-high px-4 py-2.5 text-[15px] leading-relaxed text-on-surface shadow-[0_10px_30px_rgb(40_38_35_/0.12),inset_0_1px_0_rgb(255_255_255_/0.72)] dark:border-transparent dark:bg-surface-container-high dark:bg-none dark:shadow-[0_4px_24px_rgb(0_0_0_/0.35)]">
+        <div className="max-w-[min(88%,38rem)] whitespace-pre-wrap rounded-[1.35rem] rounded-br-md border border-white/70 bg-gradient-to-b from-surface-bright to-surface-container-high px-4 py-2.5 text-[15px] leading-relaxed text-on-surface shadow-[0_10px_30px_rgb(40_38_35_/0.12),inset_0_1px_0_rgb(255_255_255_/0.72)] dark:border-transparent dark:bg-surface-container-high dark:bg-none dark:shadow-[0_4px_24px_rgb(0_0_0_/0.35)]">
           {message.text}
         </div>
       </div>
@@ -242,7 +243,7 @@ export function MessageBubble({
           ) : message.text ? (
             <div className="text-[15px] leading-[1.75] text-on-surface/88">
               <ReactMarkdown
-                remarkPlugins={[remarkGfm]}
+                remarkPlugins={[remarkGfm, remarkBreaks]}
                 rehypePlugins={[rehypeSanitize]}
                 components={{
                   p: ({ children }) => (

@@ -53,6 +53,7 @@ def save_chat_turn(
     conversation_id: UUID | None,
     session_id: str,
     usage: TokenUsageAccumulator | None = None,
+    image_urls: list[str] | None = None,
 ) -> tuple[UUID, UUID]:
     normalized_question = question.strip()
     normalized_answer = answer.strip()
@@ -94,6 +95,7 @@ def save_chat_turn(
                 "conversation_id": conversation.id,
                 "user_message": normalized_question,
                 "chatbot_response": normalized_answer,
+                "image_urls": image_urls or [],
                 "user_id": user_id,
                 "cost_log_id": cost_log_id,
             }
@@ -164,9 +166,9 @@ def list_user_conversations(
                 {
                     "id": str(conv.id),
                     "title": title,
-                    "started_at": conv.started_at.isoformat()
-                    if conv.started_at
-                    else None,
+                    "started_at": (
+                        conv.started_at.isoformat() if conv.started_at else None
+                    ),
                     "preview": preview,
                 }
             )
@@ -200,6 +202,7 @@ def get_conversation_messages(
                     "role": "user",
                     "text": msg.user_message,
                     "timestamp": msg.timestamp.isoformat() if msg.timestamp else None,
+                    "image_urls": [],
                 }
             )
             items.append(
@@ -208,6 +211,7 @@ def get_conversation_messages(
                     "role": "assistant",
                     "text": msg.chatbot_response,
                     "timestamp": msg.timestamp.isoformat() if msg.timestamp else None,
+                    "image_urls": list(msg.image_urls or []),
                 }
             )
         return items

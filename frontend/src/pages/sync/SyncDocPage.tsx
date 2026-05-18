@@ -416,10 +416,19 @@ export function SyncDocPage() {
                         )}
                       </div>
 
-                      <div className="text-xs text-on-surface/60 mb-2">
-                        {job.fileNames.join(', ')}
+                      <div className="mb-2 flex flex-wrap items-center gap-1.5 text-[11px] text-on-surface/60">
+                        {job.fileNames.map((name) => (
+                          <span
+                            key={name}
+                            className="rounded-full border border-outline-variant/15 bg-surface-container-high px-2 py-0.5"
+                          >
+                            {name}
+                          </span>
+                        ))}
                         {job.industryType && (
-                          <span className="ml-2 text-primary-dim">({job.industryType})</span>
+                          <span className="rounded-full border border-primary/20 bg-primary/10 px-2 py-0.5 text-primary">
+                            {job.industryType}
+                          </span>
                         )}
                       </div>
 
@@ -428,9 +437,11 @@ export function SyncDocPage() {
                       )}
 
                       {job.response && (
-                        <div className="grid grid-cols-4 gap-3 mt-3">
+                        <div className="grid grid-cols-2 gap-3 mt-3 sm:grid-cols-6">
                           {[
+                            { label: 'Downloaded', value: job.response.downloaded },
                             { label: 'Processed', value: job.response.processed },
+                            { label: 'Skipped', value: job.response.skipped },
                             { label: 'Failed', value: job.response.failed },
                             { label: 'Pages', value: job.response.total_pages },
                             { label: 'Time', value: formatMs(job.response.execution_time_ms) },

@@ -26,6 +26,10 @@ class Document(Base):
     )
     document_name: Mapped[str] = mapped_column(String(512), nullable=False, index=True)
     document_type: Mapped[str] = mapped_column(String(512), nullable=False, index=True)
+    source_key: Mapped[str] = mapped_column(String(512), nullable=False, index=True)
+    content_hash: Mapped[str | None] = mapped_column(
+        String(128), nullable=True, index=True
+    )
     content: Mapped[str] = mapped_column(Text, nullable=False)
     ingestion_job_id: Mapped[str | None] = mapped_column(
         String(128), nullable=True, index=True

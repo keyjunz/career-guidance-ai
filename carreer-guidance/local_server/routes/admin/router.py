@@ -72,6 +72,7 @@ def _safe_document_file_path(file_path_str: str) -> Path | None:
             continue
     return None
 
+
 router = APIRouter(prefix="/api/admin", tags=["admin"])
 
 _admin_guard = require_roles("admin")
@@ -174,7 +175,9 @@ def update_user(
         _ = user.role.role
         session.expunge(user)
 
-    logger.info("Admin updated user: id=%s fields=%s", user_id, list(update_data.keys()))
+    logger.info(
+        "Admin updated user: id=%s fields=%s", user_id, list(update_data.keys())
+    )
     return _user_to_response(user)
 
 
@@ -203,6 +206,7 @@ def delete_user(
 # ---------------------------------------------------------------------------
 # Document management endpoints
 # ---------------------------------------------------------------------------
+
 
 class DocumentResponse(BaseModel):
     id: UUID
@@ -251,7 +255,12 @@ def _collect_image_urls(doc: Document) -> list[str]:
     urls: list[str] = []
     for img_file in sorted(doc_image_dir.rglob("*")):
         if img_file.is_file() and img_file.suffix.lower() in {
-            ".png", ".jpg", ".jpeg", ".gif", ".webp", ".bmp",
+            ".png",
+            ".jpg",
+            ".jpeg",
+            ".gif",
+            ".webp",
+            ".bmp",
         }:
             rel = img_file.relative_to(_IMAGE_DIR)
             urls.append(f"/images/{rel.as_posix()}")
@@ -374,9 +383,10 @@ def delete_document(
                 detail="Document not found",
             )
         file_path = (doc.content or "").strip()
+        source_key = str(doc.source_key or "").strip()
         session.expunge(doc)
 
-    chunk_doc_id = _build_doc_id_from_path(file_path) if file_path else ""
+    chunk_doc_id = source_key or (Path(file_path).name if file_path else "")
 
     if chunk_doc_id:
         vector_service = VectorDBService(execution_id="admin-delete")

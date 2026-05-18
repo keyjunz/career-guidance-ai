@@ -4,6 +4,7 @@ export type SyncDocResponse = {
   processed: number
   failed: number
   downloaded: number
+  skipped: number
   total_pages: number
   file_page_counts: Record<string, number>
   execution_time_ms: number

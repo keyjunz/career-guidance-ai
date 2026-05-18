@@ -12,6 +12,7 @@ export type ApiConversationMessage = {
   role: 'user' | 'assistant'
   text: string
   timestamp: string | null
+  image_urls?: string[]
 }
 
 export async function fetchConversations(

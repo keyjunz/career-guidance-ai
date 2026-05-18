@@ -73,6 +73,7 @@ class ChatModuleImpl:
         self._persist_chat_turn(
             request=request,
             answer=self._extract_answer_text(response),
+            image_urls=self._extract_image_urls(response),
             conversation_id=response.conversation_id,
             context=resolved_context,
         )
@@ -87,6 +88,7 @@ class ChatModuleImpl:
         answer_chunks: list[str] = []
         conversation_id = None
         usage = None
+        image_urls: list[str] | None = None
         async for event in agent_main.invoke_stream(request, context=resolved_context):
             if event.get("type") == "token":
                 answer_chunks.append(str(event.get("token") or ""))
@@ -94,6 +96,7 @@ class ChatModuleImpl:
                 payload = event.get("payload")
                 if isinstance(payload, dict):
                     conversation_id = payload.get("conversation_id")
+                    image_urls = self._extract_image_urls(payload)
             elif event.get("type") == "usage":
                 usage = event.get("usage")
                 continue
@@ -105,6 +108,7 @@ class ChatModuleImpl:
                 self._persist_chat_turn,
                 request=request,
                 answer=answer_text,
+                image_urls=image_urls,
                 conversation_id=conversation_id,
                 context=resolved_context,
                 usage=usage,
@@ -130,11 +134,32 @@ class ChatModuleImpl:
                 text_parts.append(item.text)
         return "\n".join(text_parts).strip()
 
+    def _extract_image_urls(self, response: Any) -> list[str]:
+        if isinstance(response, dict):
+            content = response.get("content") or []
+        else:
+            content = getattr(response, "content", [])
+
+        image_urls: list[str] = []
+        for item in content:
+            if isinstance(item, dict):
+                if item.get("type") != "image":
+                    continue
+                url = str(item.get("image_url") or "").strip()
+            else:
+                if getattr(item, "type", None) != "image":
+                    continue
+                url = str(getattr(item, "image_url", "") or "").strip()
+            if url:
+                image_urls.append(url)
+        return image_urls
+
     def _persist_chat_turn(
         self,
         *,
         request: ChatRequest,
         answer: str,
+        image_urls: list[str] | None,
         conversation_id: Any,
         context: RequestContext,
         usage: Any | None = None,
@@ -155,6 +180,7 @@ class ChatModuleImpl:
                 conversation_id=resolved_conversation_id,
                 session_id=session_id,
                 usage=usage,
+                image_urls=image_urls,
             )
         except Exception as exc:
             logger.warning(

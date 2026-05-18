@@ -1,7 +1,7 @@
 {
   "user_id": "4d64496c-be06-4d05-892a-dce083e37c32",
   "created_at": "2026-05-06T18:27:31.298236+00:00",
-  "updated_at": "2026-05-13T10:15:47.396206+00:00",
+  "updated_at": "2026-05-17T05:54:25.611929+00:00",
   "pending_by_execution": {
     "5de44c2f-4e1e-41f5-9e4d-65d0f3789138": {
       "conversation_id": "aa471aa6-efc4-47a8-bccc-51f56e3a808a",
@@ -17,6 +17,11 @@
       "conversation_id": "0af88d4c-2958-4cc3-a2d9-0ee49fb68da9",
       "question": "timeline of software engineer career",
       "timestamp": "2026-05-10T18:01:16.634729+00:00"
+    },
+    "022cb5a9-878c-4281-851a-ffd2fc37ca54": {
+      "conversation_id": "e3409172-cc49-411d-959c-81af38bf965e",
+      "question": "Bạn hãy so sánh ngành đó với ngành an ninh mạng",
+      "timestamp": "2026-05-16T06:01:26.648480+00:00"
     }
   },
   "status_by_execution": {
@@ -2629,6 +2634,466 @@
         "status": "Processing complete.",
         "timestamp": "2026-05-13T10:15:47.396206+00:00"
       }
+    ],
+    "a65408a7-5673-4b07-9e28-a6f3a37b2f89": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-16T05:59:57.780470+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-16T05:59:57.808105+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-16T05:59:57.822209+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-16T05:59:57.835468+00:00"
+      },
+      {
+        "status": "Analyzing question structure.",
+        "timestamp": "2026-05-16T05:59:57.848643+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-16T05:59:57.863165+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-16T05:59:58.840803+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-16T06:00:40.333476+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-16T06:00:40.349478+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-16T06:00:41.676895+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-16T06:00:41.704193+00:00"
+      }
+    ],
+    "71e11bd8-2190-4e0a-b8de-eb996bebf5a3": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-16T06:00:57.780266+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-16T06:00:58.568792+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-16T06:00:58.587077+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-16T06:00:58.606398+00:00"
+      },
+      {
+        "status": "Analyzing question structure.",
+        "timestamp": "2026-05-16T06:00:58.631379+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-16T06:00:59.296952+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-16T06:01:00.098178+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-16T06:01:01.624029+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-16T06:01:01.638906+00:00"
+      },
+      {
+        "status": "Refining answer based on evaluation.",
+        "timestamp": "2026-05-16T06:01:02.160694+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-16T06:01:02.172358+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-16T06:01:02.864410+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-16T06:01:02.877834+00:00"
+      }
+    ],
+    "dc2546cf-1c0b-43c2-8cb4-89f06a706e47": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-16T06:01:16.332027+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-16T06:01:16.935356+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-16T06:01:16.949538+00:00"
+      },
+      {
+        "status": "Cache hit — returning fast response.",
+        "timestamp": "2026-05-16T06:01:16.965466+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-16T06:01:17.000626+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-16T06:01:17.015096+00:00"
+      }
+    ],
+    "022cb5a9-878c-4281-851a-ffd2fc37ca54": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-16T06:01:26.155657+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-16T06:01:26.659984+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-16T06:01:26.675616+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-16T06:01:26.691861+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-16T06:01:26.709605+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-16T06:02:07.864791+00:00"
+      }
+    ],
+    "763adb83-7877-4dc1-a978-2aeccd9b5cca": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-16T13:00:56.852338+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-16T13:00:57.852902+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-16T13:00:57.862912+00:00"
+      },
+      {
+        "status": "Cache hit — returning fast response.",
+        "timestamp": "2026-05-16T13:00:57.873782+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-16T13:00:57.894207+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-16T13:00:57.905160+00:00"
+      }
+    ],
+    "b8d61a32-e99c-43b6-b8ab-e9e167c53145": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-16T13:01:00.129936+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-16T13:01:00.152314+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-16T13:01:00.163785+00:00"
+      },
+      {
+        "status": "Cache hit — returning fast response.",
+        "timestamp": "2026-05-16T13:01:00.175770+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-16T13:01:00.196396+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-16T13:01:00.207518+00:00"
+      }
+    ],
+    "492c4c7a-0423-4a73-ba09-b6e4211d36aa": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-16T13:01:17.543125+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-16T13:01:17.959188+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-16T13:01:17.969191+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-16T13:01:17.979194+00:00"
+      },
+      {
+        "status": "Analyzing question structure.",
+        "timestamp": "2026-05-16T13:01:17.990557+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-16T13:01:19.842881+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-16T13:01:19.857827+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-16T13:02:15.845366+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-16T13:02:15.871161+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-16T13:02:16.994162+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-16T13:02:17.007408+00:00"
+      }
+    ],
+    "f01d2ad7-7f10-4ac7-b632-8952acbcd979": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-16T13:09:40.637160+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-16T13:09:40.658136+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-16T13:09:40.670547+00:00"
+      },
+      {
+        "status": "Cache hit — returning fast response.",
+        "timestamp": "2026-05-16T13:09:40.683734+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-16T13:09:40.706885+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-16T13:09:40.717636+00:00"
+      }
+    ],
+    "a7b3a7d2-1c10-44c2-8961-919c37ec6ca9": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-16T13:10:30.285194+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-16T13:10:31.232709+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-16T13:10:31.244560+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-16T13:10:31.256973+00:00"
+      },
+      {
+        "status": "Analyzing question structure.",
+        "timestamp": "2026-05-16T13:10:31.268582+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-16T13:10:32.006253+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-16T13:10:32.018064+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-16T13:11:13.541062+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-16T13:11:13.561145+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-16T13:11:14.608902+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-16T13:11:14.621363+00:00"
+      }
+    ],
+    "4ef63322-2263-443c-9def-1174495611a4": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-16T13:11:56.146144+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-16T13:11:56.578041+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-16T13:11:56.602104+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-16T13:11:56.617419+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-16T13:11:56.642814+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-16T13:12:16.140117+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-16T13:12:16.153130+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-16T13:12:17.083685+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-16T13:12:17.100383+00:00"
+      }
+    ],
+    "f77425f0-7935-442c-b78b-1e4fe5a04a13": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-17T02:56:54.517450+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-17T02:56:55.443891+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-17T02:56:55.459340+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-17T02:56:55.477377+00:00"
+      },
+      {
+        "status": "Analyzing question structure.",
+        "timestamp": "2026-05-17T02:56:55.498303+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-17T02:56:55.512724+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-17T02:56:55.926106+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-17T02:56:55.948302+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-17T02:56:55.971727+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-17T02:56:56.706633+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-17T02:56:56.720687+00:00"
+      }
+    ],
+    "3b0056e5-bd83-42db-a2b3-7233e246017d": [
+      {
+        "status": "Question received.",
+        "timestamp": "2026-05-17T05:54:19.110120+00:00"
+      },
+      {
+        "status": "Question saved to user store.",
+        "timestamp": "2026-05-17T05:54:19.747179+00:00"
+      },
+      {
+        "status": "Checking for cached answers.",
+        "timestamp": "2026-05-17T05:54:19.760841+00:00"
+      },
+      {
+        "status": "Running guardrails check.",
+        "timestamp": "2026-05-17T05:54:19.776687+00:00"
+      },
+      {
+        "status": "Analyzing question structure.",
+        "timestamp": "2026-05-17T05:54:19.787438+00:00"
+      },
+      {
+        "status": "Planning and selecting tools.",
+        "timestamp": "2026-05-17T05:54:19.803033+00:00"
+      },
+      {
+        "status": "Executing tools.",
+        "timestamp": "2026-05-17T05:54:20.453803+00:00"
+      },
+      {
+        "status": "Composing draft answer.",
+        "timestamp": "2026-05-17T05:54:24.150429+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-17T05:54:24.166401+00:00"
+      },
+      {
+        "status": "Refining answer based on evaluation.",
+        "timestamp": "2026-05-17T05:54:24.854151+00:00"
+      },
+      {
+        "status": "Evaluating answer quality.",
+        "timestamp": "2026-05-17T05:54:24.869525+00:00"
+      },
+      {
+        "status": "Answer saved to user store.",
+        "timestamp": "2026-05-17T05:54:25.597034+00:00"
+      },
+      {
+        "status": "Processing complete.",
+        "timestamp": "2026-05-17T05:54:25.611929+00:00"
+      }
     ]
   },
   "qa_cache": {
@@ -3954,8 +4419,8 @@
       "image_urls": [
         "https://static.topcv.vn/cms/dinh-huong-nghe-nghiep-24.jpg65b7529eea407.jpg"
       ],
-      "conversation_id": "41f4377a-07df-4a27-bf0a-17ac55ea4332",
-      "updated_at": "2026-05-13T10:05:14.296691+00:00"
+      "conversation_id": "bff5415c-a440-4407-8f80-cdd73e1d409f",
+      "updated_at": "2026-05-16T13:09:40.696410+00:00"
     },
     "tôi nên ưu tiên học thêm những kỹ năng nào để tăng cơ hội việc làm?": {
       "question": "Tôi nên ưu tiên học thêm những kỹ năng nào để tăng cơ hội việc làm?",
@@ -4022,6 +4487,451 @@
       ],
       "conversation_id": "cd48d55b-da78-45b8-b525-c1c6d7ea1b94",
       "updated_at": "2026-05-13T10:15:47.344752+00:00"
+    },
+    "cơ hội nghề nghiệp ngành công nghệ thông tin": {
+      "question": "cơ hội nghề nghiệp ngành công nghệ thông tin",
+      "answer": "Ngành **công nghệ thông tin** mang lại nhiều **cơ hội nghề nghiệp** đa dạng và phong phú. Một số vị trí phổ biến bao gồm:\n- **Software Developer / Programmer**: Phát triển và thiết kế phần mềm, ứng dụng, và hệ thống quản lý.\n- **Software Engineer**: Thiết kế, xây dựng, và bảo trì các hệ thống phần mềm.\n- Các vị trí khác như **Technical Team Leader**, **Project Manager**, và **Management-level Software Engineer** cũng là những lựa chọn hấp dẫn cho những người có kinh nghiệm và kỹ năng phù hợp.\n\nNhững người theo đuổi ngành này có thể tận dụng các **ngôn ngữ lập trình** như **Java**, **Python**, **C#**, **PHP**, **JavaScript**, **Kotlin**, **Swift**, v.v. để tạo ra các sản phẩm và giải pháp công nghệ sáng tạo.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous  salary and broad, clear career advancement opportunities. The level of skill,  experience, and specific responsibilities are assessed based on different skill levels  and experience.   LSoftware engineer career progression    Having a clear career path is something ever…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "url": "",
+          "rerank_score": -3.5125651359558105,
+          "image_urls": [
+            "http://localhost:8010/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        },
+        {
+          "rank": 2,
+          "text": "What can you do with a software engineering degree? After graduation, students can  take on many different positions depending on their abilities and career aspirations.  Below are some of the most common jobs in the software engineering field.    Software Developer / Programmer  Programmers are individuals who directly write code, design, and develop softw…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "title": "05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "url": "",
+          "rerank_score": -5.344969749450684,
+          "image_urls": [
+            "http://localhost:8010/images/05_Software_Engineering_Career_Opportunities_and_Roles-f0980f4f/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "http://localhost:8010/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "conversation_id": "196a6397-0b4d-413a-a3f7-fc8701ac537f",
+      "updated_at": "2026-05-16T13:01:00.185884+00:00"
+    },
+    "so sánh ngành đó với ngành an ninh mạng": {
+      "question": "so sánh ngành đó với ngành an ninh mạng",
+      "answer": "Thiếu thông tin về ngành an ninh mạng.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "StepstoStartaCareerinGamingEngineering",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "url": "",
+          "rerank_score": -10.952619552612305,
+          "image_urls": []
+        },
+        {
+          "rank": 2,
+          "text": "What can you do with a software engineering degree? After graduation, students can  take on many different positions depending on their abilities and career aspirations.  Below are some of the most common jobs in the software engineering field.    Software Developer / Programmer  Programmers are individuals who directly write code, design, and develop softw…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "title": "05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "url": "",
+          "rerank_score": -10.974628448486328,
+          "image_urls": [
+            "http://localhost:8010/images/05_Software_Engineering_Career_Opportunities_and_Roles-f0980f4f/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "http://localhost:8010/images/05_Software_Engineering_Career_Opportunities_and_Roles-f0980f4f/p1/img001.png"
+      ],
+      "conversation_id": "e3409172-cc49-411d-959c-81af38bf965e",
+      "updated_at": "2026-05-16T06:01:16.985085+00:00"
+    },
+    "so sánh ngành đó với ngành big data and machine learning": {
+      "question": "So sánh ngành đó với ngành big data and machine learning",
+      "answer": "## 1. So sánh ngành\n\n**Câu hỏi:** So sánh ngành đó với ngành big data\n\nNgành **Big Data** và ngành **Khoa học Máy tính** (trong đó bao gồm **Trí tuệ nhân tạo - AI**) có mối quan hệ chặt chẽ và bổ sung cho nhau. Cả hai đều tập trung vào việc xử lý và phân tích dữ liệu, nhưng chúng có những điểm khác biệt về phạm vi và phương pháp tiếp cận.\n\n- **Ngành Big Data** tập trung vào việc thu thập, lưu trữ, xử lý và phân tích lượng lớn dữ liệu không cấu trúc hoặc bán cấu trúc để đưa ra quyết định kinh doanh thông minh. Nó bao gồm các công nghệ như **Hadoop**, **Spark**, và các kỹ thuật phân tích dữ liệu tiên tiến.\n\n- **Ngành Khoa học Máy tính**, đặc biệt là **Trí tuệ nhân tạo (AI)**, tập trung vào việc thiết kế, phát triển và ứng dụng các hệ thống thông minh có thể thực hiện các nhiệm vụ thường yêu cầu sự thông minh của con người, như học hỏi, suy luận, và giải quyết vấn đề. **AI** sử dụng các kỹ thuật như **Machine Learning**, **Deep Learning** để phân tích dữ liệu và đưa ra quyết định.\n\nCả hai ngành đều cần kiến thức về **lập trình**, **cơ sở dữ liệu**, và **phân tích dữ liệu**, nhưng **Big Data** tập trung nhiều hơn vào việc xử lý và quản lý dữ liệu lớn, trong khi **AI** tập trung vào việc phát triển các hệ thống thông minh có thể học hỏi và thích nghi.\n\nTóm lại, **Big Data** và **AI** là hai lĩnh vực liên quan chặt chẽ, với **Big Data** cung cấp dữ liệu cần thiết cho **AI** để học hỏi và đưa ra quyết định, và **AI** cung cấp các công cụ và kỹ thuật để phân tích và tận dụng dữ liệu từ **Big Data**.\n\n## 2. So sánh ngành\n\n**Câu hỏi:** So sánh ngành đó với ngành machine learning\n\n- Ngành **Big Data & Machine Learning** tại Đại học Duy Tân (DTU) tập trung vào việc đào tạo sinh viên về các kỹ thuật và công cụ để xử lý và phân tích dữ liệu lớn, cũng như xây dựng các mô hình **Machine Learning**.\n- Còn **Machine Learning** là một lĩnh vực thuộc **Trí tuệ nhân tạo (AI)**, tập trung vào việc phát triển các thuật toán và mô hình cho phép máy tính học hỏi từ dữ liệu và cải thiện hiệu suất của mình trong việc thực hiện các nhiệm vụ cụ thể.\n- Cả hai đều liên quan đến việc xử lý và phân tích dữ liệu, nhưng **Big Data & Machine Learning** có phạm vi rộng hơn, bao gồm cả việc thu thập, lưu trữ và phân tích dữ liệu lớn, trong khi **Machine Learning** tập trung vào việc xây dựng các mô hình học máy để giải quyết các vấn đề cụ thể.\n- Ngành **Big Data & Machine Learning** tại DTU sử dụng mô hình **CDIO** để đảm bảo sinh viên có thể phát triển các sản phẩm công nghệ thực tế, trong khi **Machine Learning** thường tập trung vào việc phát triển các thuật toán và mô hình học máy.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "I. PROGRAM OVERVIEW The Big Data & Machine Learning program at Duy Tan University (DTU) is managed by the School of  Computer Science (SCS). It is a flagship academic program designed to prepare students for the  Industry 4.0 era, where data serves as the critical engine for economic and technological growth. 1.1. Educational Philosophy The curriculum emplo…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\GEN_01_DTU_BigData_ML_Roadmap.pdf",
+          "title": "GEN_01_DTU_BigData_ML_Roadmap.pdf",
+          "url": "",
+          "rerank_score": -2.9119863510131836,
+          "image_urls": [
+            "http://localhost:8010/images/GEN_01_DTU_BigData_ML_Roadmap-cfa93230/p1/img001.png"
+          ]
+        },
+        {
+          "rank": 2,
+          "text": "I. THE ERA OF DATA-DRIVEN INTELLIGENCE In the 2026 digital economy, data is no longer just \"information\"—it is the primary raw material for  every industry. From healthcare diagnostics to autonomous traffic management in Da Nang, the ability  to process massive datasets and build predictive models is the most sought-after skill in the global job  market. 1.…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\Career_Roadmap_and_Industry_Overview.pdf",
+          "title": "Career_Roadmap_and_Industry_Overview.pdf",
+          "url": "",
+          "rerank_score": -4.087202548980713,
+          "image_urls": [
+            "http://localhost:8010/images/Career_Roadmap_and_Industry_Overview-2d660656/p1/img001.jpeg"
+          ]
+        },
+        {
+          "rank": 4,
+          "text": "1. Big O  Big O (THE) It is a mathematical notation used to describe the upper limit of  algorithmic complexity (running time or memory space) when the size of the input  data (n) increases. It helps to compare the efficiency of algorithms in the worst-case  scenario, ignoring small constants to focus on growth rate.      Some common complexity levels  O(n)…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\09_Algorithm_Complexity_and_Big_O_Notation.pdf",
+          "title": "09_Algorithm_Complexity_and_Big_O_Notation.pdf",
+          "url": "",
+          "rerank_score": -6.495469570159912,
+          "image_urls": [
+            "http://localhost:8010/images/09_Algorithm_Complexity_and_Big_O_Notation-9845cc50/p1/img001.png",
+            "http://localhost:8010/images/09_Algorithm_Complexity_and_Big_O_Notation-9845cc50/p4/img001.png"
+          ]
+        },
+        {
+          "rank": 5,
+          "text": "I. THE ROLE OF SQLIN THE BIG DATA ERA 病用组究组 Unia tmakwrf Wiama ad sabLECT column, FUNCTIONO OVER (PARTITION BY group_col ORDER BY sort_col) FROM macloud enironment AP), anpimizedqury dsntjust run swlitcsts m macloudeironen ACP), anptizedquerdsntust slitsts tu n  r RACCALATA o",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\Advanced_SQL_for_Big_Data_Engineering.pdf",
+          "title": "Advanced_SQL_for_Big_Data_Engineering.pdf",
+          "url": "",
+          "rerank_score": -7.106453895568848,
+          "image_urls": []
+        },
+        {
+          "rank": 6,
+          "text": "I. OVERVIEW: THE ENGINE OF PERSONALIZATION In the era of Big Data, a Recommender System (RS) is not just a feature; it is the soul of digital  platforms. Its core mission is to predict the level of interest (Rating/Preference) a user would give to  an item they have never interacted with before. 1.1. Case Studies in Industry Amazon: Increases revenue throug…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\Recommendation Systems.docx.pdf",
+          "title": "Recommendation Systems.docx.pdf",
+          "url": "",
+          "rerank_score": -7.4195380210876465,
+          "image_urls": [
+            "http://localhost:8010/images/Recommendation Systems.docx-146469d1/p1/img001.png"
+          ]
+        },
+        {
+          "rank": 7,
+          "text": "I:CLOUDECONOMICS&INFRASTRUCTURESTRATEGY heShiftfromOn-PremisetoCloud Dat Understanding how AWS is built is critical for system reliability: Amazon S3 (Simple Storage Service) is the foundation of any Big Data project. To turn raw data into insights, AWS provides specialized tools: 2.3 The AI Layer: Amazon SageMaker 2.3 The AI Layer: Amazon SageMaker 3.1 Ide…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\AWS_Cloud_Practitioner_for_Data.docx.pdf",
+          "title": "AWS_Cloud_Practitioner_for_Data.docx.pdf",
+          "url": "",
+          "rerank_score": -8.114011764526367,
+          "image_urls": []
+        },
+        {
+          "rank": 8,
+          "text": "Apache Hadoop and Apache Spark are two open-source frameworks you can use to  manage and process large volumes of data for analytical purposes. Organizations need  to process data at scale and speed to obtain real-time insights for business intelligence.  Apache Hadoop allows you to cluster multiple computers to analyze massive datasets  in parallel faster.…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\29_Big_Data_Processing_Hadoop_and_Spark.pdf",
+          "title": "29_Big_Data_Processing_Hadoop_and_Spark.pdf",
+          "url": "",
+          "rerank_score": -9.129716873168945,
+          "image_urls": [
+            "http://localhost:8010/images/29_Big_Data_Processing_Hadoop_and_Spark-df457c82/p1/img001.png"
+          ]
+        },
+        {
+          "title": "Khoa học dữ liệu và Khoa học máy tính: Nên chọn học ngành nào?",
+          "url": "https://vinuni.edu.vn/vi/khoa-hoc-du-lieu-va-khoa-hoc-may-tinh-nen-chon-hoc-nganh-nao/",
+          "snippet": "![VinUni Banner](https://vinuni.edu.vn/wp-content/themes/vinuni2023/assets/images/vinuni_banner.png) # Khoa học dữ liệu và Khoa học máy tính: Nên chọn học ngành nào? 14/10/2024 Mục lục Trong thời đại công nghệ thông tin phát triển mạnh mẽ như hiện nay, **Khoa học Dữ liệu** **và Khoa học Máy tính** đang trở thành những ngành học thu hút sự quan tâm của giới trẻ. Cả hai lĩnh vực này không chỉ đóng v...",
+          "score": 0.0
+        },
+        {
+          "title": "Big data (dữ liệu lớn) là gì? Các ngành đang ứng ... - Intech Group",
+          "url": "https://intech-group.vn/big-data-du-lieu-lon-la-gi-bv1024.htm",
+          "snippet": "# Tin tức & Sự kiện - [Trang Chủ](https://intech-group.vn/) - [Tin tức & Sự kiện](https://intech-group.vn/tin-tuc-su-kien.htm) - [Tin công nghệ](https://intech-group.vn/tin-cong-nghe.htm) # Big data (dữ liệu lớn) là gì? Các ngành đang ứng dụng Big data bạn cần biết 23-12-2024 9.180 Share - [Chia sẻ bài viết lên Facebook](https://www.facebook.com/sharer/sharer.php?u=https://intech-group.vn/big-data...",
+          "score": 0.0
+        },
+        {
+          "title": "Điểm khác biệt giữa khoa học dữ liệu và trí tuệ nhân tạo là gì? - AWS",
+          "url": "https://aws.amazon.com/vi/compare/the-difference-between-data-science-and-ai/",
+          "snippet": "## Chọn tùy chọn cookie của bạn Chúng tôi sử dụng các cookie thiết yếu và công cụ tương tự cần thiết để cung cấp trang web và dịch vụ của chúng tôi. Chúng tôi sử dụng cookie hiệu năng để thu thập số liệu thống kê ẩn danh, qua đó hiểu rõ cách khách hàng sử dụng trang web của chúng tôi và tiến hành cải tiến. Bạn không thể vô hiệu hóa cookie thiết yếu, nhưng có thể nhấp vào “Tùy chỉnh” hoặc “Từ chối”...",
+          "score": 0.0
+        },
+        {
+          "title": "Giải đáp cơ hội nghề nghiệp ngành Big Data cho sinh viên mới ra ...",
+          "url": "https://insight.isb.edu.vn/co-hoi-nghe-nghiep-nganh-big-data/",
+          "snippet": "[![](https://insight.isb.edu.vn/wp-content/uploads/sites/2/2020/05/LOGO_ISB-268x118-1.png)](https://insight.isb.edu.vn/)[×](https://insight.isb.edu.vn/co-hoi-nghe-nghiep-nganh-big-data/#) ![](https://insight.isb.edu.vn/wp-content/uploads/sites/2/2019/12/Job-big-data-thumnail-1024x662-1.png) - [Data & Analytics](https://insight.isb.edu.vn/category/data-analytics/ \"Data & Analytics\") # Giải đáp cơ h...",
+          "score": 0.0
+        },
+        {
+          "title": "Big data là gì? Đặc điểm & ứng dụng Big data vào các ngành - PACE",
+          "url": "https://www.pace.edu.vn/tin-kho-tri-thuc/big-data-la-gi",
+          "snippet": "![Banner](https://www.pace.edu.vn/uploads/banners/PACE/event/blanchard-nang-luc-lanh-dao.jpg) - [Kho tri thức](https://www.pace.edu.vn/kho-tri-thuc) ## Big data là gì? Đặc điểm & ứng dụng Big data vào các ngành CHIA SẺ [Facebook](https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.pace.edu.vn%2Ftin-kho-tri-thuc%2Fbig-data-la-gi \"Chia sẻ bài viết lên Facebook\") [LinkedIn](https://www.lin...",
+          "score": 0.0
+        },
+        {
+          "rank": 2,
+          "text": "I. INTRODUCTION: THE ROLE OF UNCERTAINTY In Machine Learning, we rarely have 100% certainty. We deal with Stochastic processes. Statistics  allows us to quantify uncertainty, find patterns in noise, and validate whether a model's performance is  statistically significant or just a result of random luck. 1.1. Descriptive vs. Inferential Statistics Descriptiv…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\MATH_03_Probability_Statistics_DS.pdf",
+          "title": "MATH_03_Probability_Statistics_DS.pdf",
+          "url": "",
+          "rerank_score": -9.901052474975586,
+          "image_urls": [
+            "http://localhost:8010/images/MATH_03_Probability_Statistics_DS-28f43c39/p1/img001.jpeg",
+            "http://localhost:8010/images/MATH_03_Probability_Statistics_DS-28f43c39/p2/img001.jpeg"
+          ]
+        },
+        {
+          "rank": 4,
+          "text": "vector, we get the Gradient  L). The Gradient always points in the direction of the steepest increase in error. To learn, the AI must move in the opposite direction  - L). III. THE CHAIN RULE: THE BACKBONE OF BACKPROPAGATION Deep Learning models are \"deep\" because they consist of many layers stacked together.  Mathematically, this is a Composite Function: O…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\Calculus_and_Optimization_The_Engine_of_Learning.pdf",
+          "title": "Calculus_and_Optimization_The_Engine_of_Learning.pdf",
+          "url": "",
+          "rerank_score": -10.938566207885742,
+          "image_urls": [
+            "http://localhost:8010/images/Calculus_and_Optimization_The_Engine_of_Learning-8fd5236d/p3/img001.png",
+            "http://localhost:8010/images/Calculus_and_Optimization_The_Engine_of_Learning-8fd5236d/p3/img002.png",
+            "http://localhost:8010/images/Calculus_and_Optimization_The_Engine_of_Learning-8fd5236d/p3/img003.png",
+            "http://localhost:8010/images/Calculus_and_Optimization_The_Engine_of_Learning-8fd5236d/p4/img001.png",
+            "http://localhost:8010/images/Calculus_and_Optimization_The_Engine_of_Learning-8fd5236d/p4/img002.png"
+          ]
+        },
+        {
+          "rank": 5,
+          "text": "at paert Fistadl la Key design elements to understand for mobile app design: 33 Learn how to publish your app to the store.  As mentioned at the beginning of this article, publishing your application on app  stores (App Store or Google Play) is essential for your application to reach a wider  audience.  You may need to familiarize yourself with the followin…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\13_Mobile_App_Development_Fundamentals.pdf",
+          "title": "13_Mobile_App_Development_Fundamentals.pdf",
+          "url": "",
+          "rerank_score": -11.04631519317627,
+          "image_urls": [
+            "http://localhost:8010/images/13_Mobile_App_Development_Fundamentals-c45557b5/p4/img001.png"
+          ]
+        },
+        {
+          "rank": 6,
+          "text": "StepstoStartaCareerinGamingEngineering",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "url": "",
+          "rerank_score": -11.05288314819336,
+          "image_urls": []
+        },
+        {
+          "rank": 7,
+          "text": "I. THE CORE CHALLENGE: HOW MACHINES \"READ\" Computers are excellent at processing numbers but incapable of understanding the \"meaning\" of a  string like \"Apple.\" Historically, NLP used One-Hot Encoding, where each word was a vector of 0s  with a single 1 at its unique index. 1.1. The Failure of One-Hot Encoding Sparsity: If your vocabulary has 50,000 words,…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\Text_Preprocessing_and_Word_Embeddings.pdf",
+          "title": "Text_Preprocessing_and_Word_Embeddings.pdf",
+          "url": "",
+          "rerank_score": -11.10525894165039,
+          "image_urls": [
+            "http://localhost:8010/images/Text_Preprocessing_and_Word_Embeddings-e9573ee7/p1/img001.png"
+          ]
+        },
+        {
+          "rank": 8,
+          "text": "Programming languages ​ are categorized into three types based on their level:  ●​ Machine languageA machine language, also known as a low-format language,  is a programming language used to interact directly with the hardware of a  computer. It uses only 0 and 1 commands, written in a specific format.binary  code.  ●​ Assembly language (assembly languageAs…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\10_Programming_Languages_Overview_and_Comparison.pdf",
+          "title": "10_Programming_Languages_Overview_and_Comparison.pdf",
+          "url": "",
+          "rerank_score": -11.116981506347656,
+          "image_urls": [
+            "http://localhost:8010/images/10_Programming_Languages_Overview_and_Comparison-1ee844cc/p1/img001.png"
+          ]
+        },
+        {
+          "title": "So sánh chi tiết giữa ngành khoa học dữ liệu và trí tuệ nhân tạo |",
+          "url": "https://careers.smartosc.com/so-sanh-chi-tiet-giua-nganh-khoa-hoc-du-lieu-va-tri-tue-nhan-tao/",
+          "snippet": "[![](https://careers.smartosc.com/wp-content/uploads/2023/04/logo-2019-e1696233023932.png)](https://careers.smartosc.com/) [![SmartOSC Careers](https://careers.smartosc.com/wp-content/uploads/2021/12/logo-2023_update-removebg-preview.png)](https://careers.smartosc.com/) [Đăng ký](https://careers.smartosc.com/so-sanh-chi-tiet-giua-nganh-khoa-hoc-du-lieu-va-tri-tue-nhan-tao/#) # So sánh chi tiết giữ...",
+          "score": 0.0
+        },
+        {
+          "title": "Bạn phù hợp để trở thành Data Scientist hay Machine Learning ...",
+          "url": "https://www.dataguystory.com/post/2020-09-11-ban-phu-hop-tro-thanh-data-scientist-hay-machine-learning-engineer/",
+          "snippet": "Table of Contents - [Bắt đầu, xuất phát điểm và background](https://www.dataguystory.com/post/2020-09-11-ban-phu-hop-tro-thanh-data-scientist-hay-machine-learning-engineer/#b%e1%ba%aft-%c4%91%e1%ba%a7u-xu%e1%ba%a5t-ph%c3%a1t-%c4%91i%e1%bb%83m-v%c3%a0-background) - [Data Scientist](https://www.dataguystory.com/post/2020-09-11-ban-phu-hop-tro-thanh-data-scientist-hay-machine-learning-engineer/#data-...",
+          "score": 0.0
+        },
+        {
+          "title": "Sự khác biệt giữa đi học và đi làm về #ai #datascience ... - YouTube",
+          "url": "https://www.youtube.com/watch?v=qZofQzpyDww",
+          "snippet": "![Thumbnail (1920x1080)](https://i.ytimg.com/vi/qZofQzpyDww/maxresdefault.jpg) # [Sự khác biệt giữa đi học và đi làm về #ai #datascience #machinelearning](https://www.youtube.com/watch?v=qZofQzpyDww) **Visibility**: Public **Uploaded by**: [Việt Nguyễn AI](https://www.youtube.com/@vietnh1009) **Uploaded at**: 2023-04-10 **Published at**: **Length**: 17:11 **Views**: 11690 **Likes**: 192 **Category...",
+          "score": 0.0
+        },
+        {
+          "title": "Sự khác nhau giữa Deep Learning, Machine Learning và Data ...",
+          "url": "https://thegioimaychu.vn/blog/ai-hpc/su-khac-nhau-giua-deep-learning-machine-learning-va-data-science-p7918/",
+          "snippet": "Search for: Search [Skip to content](https://thegioimaychu.vn/blog/ai-hpc/su-khac-nhau-giua-deep-learning-machine-learning-va-data-science-p7918/#content) ![](https://thegioimaychu.vn/blog/wp-content/uploads/2020/12/TheGioiMayChu-Blog-Image-ML-DL-DS.jpg) ## Deep Learning, Machine Learning và Data Science là gì? Chúng khác nhau như thế nào? Trong những năm gần đây, [Machine Learning](https://thegio...",
+          "score": 0.0
+        },
+        {
+          "title": "AI so với Máy học - Điểm khác biệt giữa trí tuệ nhân tạo và ML - AWS",
+          "url": "https://aws.amazon.com/vi/compare/the-difference-between-artificial-intelligence-and-machine-learning/",
+          "snippet": "## Chọn tùy chọn cookie của bạn Chúng tôi sử dụng các cookie thiết yếu và công cụ tương tự cần thiết để cung cấp trang web và dịch vụ của chúng tôi. Chúng tôi sử dụng cookie hiệu năng để thu thập số liệu thống kê ẩn danh, qua đó hiểu rõ cách khách hàng sử dụng trang web của chúng tôi và tiến hành cải tiến. Bạn không thể vô hiệu hóa cookie thiết yếu, nhưng có thể nhấp vào “Tùy chỉnh” hoặc “Từ chối”...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "http://localhost:8010/images/GEN_01_DTU_BigData_ML_Roadmap-cfa93230/p1/img001.png",
+        "http://localhost:8010/images/Career_Roadmap_and_Industry_Overview-2d660656/p1/img001.jpeg",
+        "http://localhost:8010/images/09_Algorithm_Complexity_and_Big_O_Notation-9845cc50/p1/img001.png"
+      ],
+      "conversation_id": "196a6397-0b4d-413a-a3f7-fc8701ac537f",
+      "updated_at": "2026-05-16T13:02:16.983367+00:00"
+    },
+    "bạn hãy tìm cho tôi ngành an ninh mạng học gì và cơ hội nghề nghiệp của ngành này năm 2027": {
+      "question": "Bạn hãy tìm cho tôi ngành an ninh mạng học gì và cơ hội nghề nghiệp của ngành này năm 2027",
+      "answer": "## 1. Chương trình học\n\n**Câu hỏi:** ngành an ninh mạng học gì\n\nNgành **An Ninh Mạng** học về các kỹ thuật và công nghệ để bảo vệ hệ thống máy tính, mạng và dữ liệu khỏi các mối đe dọa và tấn công mạng. Một số lĩnh vực học trong ngành này bao gồm:\n- **Quản lý rủi ro**: Đánh giá và giảm thiểu rủi ro liên quan đến công nghệ thông tin và dữ liệu.\n- **Kiểm tra thâm nhập**: Sử dụng kỹ thuật tấn công mạng hợp pháp để kiểm tra và cải thiện hệ thống bảo mật.\n- **Phân tích và ứng phó sự cố**: Xử lý và ứng phó với các sự cố bảo mật, bao gồm việc phát hiện, phân tích và khắc phục.\n- **Quản lý mạng**: Quản lý và bảo mật mạng, bao gồm việc thiết lập và duy trì hệ thống mạng an toàn.\n- **Bảo mật dữ liệu**: Học cách bảo vệ dữ liệu khỏi các mối đe dọa và tấn công mạng.\n- **Tấn công mạng hợp pháp (Ethical Hacking)**: Sử dụng kỹ thuật tấn công mạng hợp pháp để kiểm tra và cải thiện hệ thống bảo mật.\n\n## 2. Cơ hội nghề nghiệp\n\n**Câu hỏi:** cơ hội nghề nghiệp của ngành an ninh mạng năm 2027\n\n_Không có phản hồi từ công cụ cho ý này._",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Mid-level cybersecurity positions: 星 or positions in the cybersecurity field: 5.​ Responsibilities of Risk Manager/Compliance Officer​ Assess and mitigate IT and data-related risks, ensuring compliance with  relevant regulations such as GDPR, HIPAA, PCI-DSS, etc.  6.​ Responsibilities of the Penetration Testing Lead/Attack Lead (Red  Team)​ Lead attack simu…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\30_Cybersecurity_Career_Path_and_Learning_Roadmap.pdf",
+          "title": "30_Cybersecurity_Career_Path_and_Learning_Roadmap.pdf",
+          "url": "",
+          "rerank_score": 3.4856204986572266,
+          "image_urls": [
+            "http://localhost:8010/images/30_Cybersecurity_Career_Path_and_Learning_Roadmap-5fcd3f5e/p4/img001.png"
+          ]
+        },
+        {
+          "rank": 6,
+          "text": "A career in security is a lifelong journey of learning furic atTUisdvidedintfourrical pilarstsu6-ge 1川 IV: THE CMU ADVANTAGE & GLOBAL RECOGNITION 4.1 The CMU Partnership DTU is one of the few universities in Vietnam to adopt the curriculum of Carnegie Mellon University  (USA), the world leader in Cyber Security. This means students study the exact same mate…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\1_OVERVIEW OF CYBER SECURITY AT DUY TAN UNIVERSITY (DTU).pdf",
+          "title": "1_OVERVIEW OF CYBER SECURITY AT DUY TAN UNIVERSITY (DTU).pdf",
+          "url": "",
+          "rerank_score": -1.045548439025879,
+          "image_urls": [
+            "http://localhost:8010/images/1_OVERVIEW OF CYBER SECURITY AT DUY TAN UNIVERSITY (DTU)-2b6f95c6/p3/img001.png"
+          ]
+        },
+        {
+          "rank": 7,
+          "text": "II. CAREER PATHS IN NETWORK MANAGEMENT 2.1. The Master of the Infrastructure Secure Network Administration is a critical function in all organizations, regardless of size or industry.  From small businesses to multinational corporations, every entity relies on secure connectivity. This makes it one of the most: Stable  In-demand  Long-term career paths in I…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\6_SECURE NETWORK ADMINISTRATION.pdf",
+          "title": "6_SECURE NETWORK ADMINISTRATION.pdf",
+          "url": "",
+          "rerank_score": -1.491841197013855,
+          "image_urls": [
+            "http://localhost:8010/images/6_SECURE NETWORK ADMINISTRATION-454aeab2/p2/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "http://localhost:8010/images/30_Cybersecurity_Career_Path_and_Learning_Roadmap-5fcd3f5e/p4/img001.png",
+        "http://localhost:8010/images/30_Cybersecurity_Career_Path_and_Learning_Roadmap-5fcd3f5e/p2/img001.png",
+        "http://localhost:8010/images/1_OVERVIEW OF CYBER SECURITY AT DUY TAN UNIVERSITY (DTU)-2b6f95c6/p3/img001.png"
+      ],
+      "conversation_id": "bff5415c-a440-4407-8f80-cdd73e1d409f",
+      "updated_at": "2026-05-16T13:11:14.596899+00:00"
+    },
+    "cơ hội nghề nghiệp của ngành này năm 2027": {
+      "question": "cơ hội nghề nghiệp của ngành này năm 2027",
+      "answer": "Cơ hội nghề nghiệp của ngành **an ninh mạng** năm 2027 là rất lớn. Theo nguồn web 3, nhu cầu về chuyên môn **an ninh mạng** đang gia tăng với CAGR dự báo là 16,8% cho Thị trường **An ninh mạng** Việt Nam vào năm 2027. Điều này cho thấy có nhiều cơ hội cho các chuyên gia tay nghề cao trong lĩnh vực này.",
+      "sources": [
+        {
+          "title": "Có Nên Học Ngành An Ninh Mạng Hay Không? Phân Tích Cơ Hội ...",
+          "url": "https://www.careerlink.vn/cam-nang-viec-lam/tu-van-nghe-nghiep/co-nen-hoc-nganh-an-ninh-mang-hay-khong",
+          "snippet": "![close](https://www.careerlink.vn/cam-nang-viec-lam/wp-content/themes/blog-story/assets/images/close.svg) [![icon](https://www.careerlink.vn/cam-nang-viec-lam/wp-content/themes/blog-story/assets/images/job-search-default.svg)\\\\ My CareerLink](https://www.careerlink.vn/nguoi-tim-viec)![icon](https://www.careerlink.vn/cam-nang-viec-lam/wp-content/themes/blog-story/assets/images/angle-down.svg) - [!...",
+          "score": 0.0
+        },
+        {
+          "title": "Ngành An ninh mạng là gì? Cơ hội nghề nghiệp và những hiểu lầm ...",
+          "url": "https://www.vlu.edu.vn/news/nganh-an-ninh-mang-la-gi-co-hoi-nghe-nghiep-va-nhung-hieu-lam-pho-bien",
+          "snippet": "[news-events](https://www.vlu.edu.vn/news-events) [Tin Tức](https://www.vlu.edu.vn/news-events/news/search) Ngành An ninh mạng là gì? Cơ hội nghề nghiệp và những hiểu lầm phổ biến # Ngành An ninh mạng là gì? Cơ hội nghề nghiệp và những hiểu lầm phổ biến Tác Giả Khoa Công nghệ Thông tin Ngày 23/04/2025(8767 lượt xem) Chia sẻ qua [![](data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%2...",
+          "score": 0.0
+        },
+        {
+          "title": "Tương Lai Và Xu Hướng Nghề An Ninh Mạng Ở Việt Nam 2024",
+          "url": "https://www.reeracoen.com.vn/en/articles/tuong-lai-va-xu-huong-nghe-an-ninh-mang-viet-nam-2024",
+          "snippet": "# Tương Lai Và Xu Hướng Nghề An Ninh Mạng Ở Việt Nam 2024 [Career](https://www.reeracoen.com.vn/en/articles?category_id=81)April 02, 2024 11:00 # **![Tương Lai Và Xu Hướng Nghề An Ninh Mạng Ở Việt Nam 2024](https://lh7-us.googleusercontent.com/bVzsCxz8TnYCZ9IKlxB5N1ati0ZLu66MNxe_NKScNJicQ7GvsGuqCLRB9ATP_2fkSPs4i3a6E9uJwW0bWThT3tSeoQxtJ42LttipHr7HmaN0hh6EmNTafvh_hAE4Hhf1ytiRA2LHeZzS)** # **Tương La...",
+          "score": 0.0
+        },
+        {
+          "title": "Ngành an ninh mạng là gì? Cơ hội việc làm và mức lương",
+          "url": "https://careerviet.vn/vi/talentcommunity/wiki-career/nganh-an-ninh-mang-la-gi-co-hoi-viec-lam-va-muc-luong.35A52958.html",
+          "snippet": "#### Danh mục #### Danh mục - [Mới nhất](https://careerviet.vn/vi/talentcommunity) - [Bí quyết tìm việc](https://careerviet.vn/vi/talentcommunity/bi-quyet-tim-viec) - [Hồ sơ ấn tượng](https://careerviet.vn/vi/talentcommunity/bi-quyet-tim-viec/ho-so-an-tuong) - [Phỏng vấn thành công](https://careerviet.vn/vi/talentcommunity/bi-quyet-tim-viec/phong-van-thanh-cong) - [Hồ sơ mẫu](https://careerviet.vn...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://cl-wpml.careerlink.vn/cam-nang-viec-lam/wp-content/uploads/2026/02/25160540/Co-Nen-Hoc-Nganh-An-Ninh-Mang-Hay-Khong.jpg"
+      ],
+      "conversation_id": "bff5415c-a440-4407-8f80-cdd73e1d409f",
+      "updated_at": "2026-05-16T13:12:17.064258+00:00"
+    },
+    "what are u": {
+      "question": "what are u",
+      "answer": "I can help you with career guidance, skills development, and web-sourced references when needed.",
+      "sources": [],
+      "image_urls": [],
+      "conversation_id": "bff5415c-a440-4407-8f80-cdd73e1d409f",
+      "updated_at": "2026-05-17T02:56:56.689755+00:00"
+    },
+    "sáu khía cạnh cốt lõi để đánh giá chất lượng dữ liệu (data quality) là gì?": {
+      "question": "Sáu khía cạnh cốt lõi để đánh giá chất lượng dữ liệu (Data Quality) là gì?",
+      "answer": "Thiếu thông tin về sáu khía cạnh cốt lõi để đánh giá chất lượng dữ liệu.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Quality control (QC) not only detects bugs but also evaluates usability, performance,  and security. A professional QC team not only \"finds errors\" but also provides  quantitative evidence to help QA and PM improve processes and minimize recurring  errors.    QA process in software development  Analyze requirements and define quality standards.  This is a f…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\23_Quality_Assurance_QA_and_Quality_Control_QC.pdf",
+          "title": "23_Quality_Assurance_QA_and_Quality_Control_QC.pdf",
+          "url": "",
+          "rerank_score": -5.059622764587402,
+          "image_urls": [
+            "http://localhost:8010/images/23_Quality_Assurance_QA_and_Quality_Control_QC-744f3438/p2/img001.png",
+            "http://localhost:8010/images/23_Quality_Assurance_QA_and_Quality_Control_QC-744f3438/p3/img001.png"
+          ]
+        },
+        {
+          "rank": 2,
+          "text": "I:THESIXPILLARSOFDATAINTEGRITY Usrattas tta 3.1 Data Quality Service Level Agreements (SLAs) 3.1 Data Quality Service Level Agreements (SLAs) 的 tion cloud environment, the checklist is au",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\Data _Quality _Checklist.docx.pdf",
+          "title": "Data _Quality _Checklist.docx.pdf",
+          "url": "",
+          "rerank_score": -5.839142799377441,
+          "image_urls": []
+        },
+        {
+          "rank": 4,
+          "text": "Criteria for evaluating frameworks:  ●​ Execution performance (benchmark requests/sec)  ●​ Scalability (scale-out/scale-in)  ●​ Security features (XSS, CSRF, injection prevention)  ●​ ORM management, database migration  ●​ Support for API development (RESTful, GraphQL)",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\12_Backend_Development_and_Server_Architecture.pdf",
+          "title": "12_Backend_Development_and_Server_Architecture.pdf",
+          "url": "",
+          "rerank_score": -6.6365966796875,
+          "image_urls": [
+            "http://localhost:8010/images/12_Backend_Development_and_Server_Architecture-4ea7f77b/p7/img001.png"
+          ]
+        },
+        {
+          "rank": 5,
+          "text": "I: ETHICAL AI FOUNDATIONS 1.1. The Necessity of Ethics in AI AI models are not neutral; they learn from data that may contain human biases. Ethical AI ensures that  our systems do not reinforce stereotypes or make unfair decisions. 1.2. The Core Pillars of Responsible AI Fairness & Bias Mitigation: Ensuring the model performs equally well across different g…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\AI Ethics & Security Standards .pdf",
+          "title": "AI Ethics & Security Standards .pdf",
+          "url": "",
+          "rerank_score": -8.186391830444336,
+          "image_urls": [
+            "http://localhost:8010/images/AI Ethics & Security Standards -c35a6e03/p1/img001.png"
+          ]
+        },
+        {
+          "rank": 7,
+          "text": "The Software Development Life Cycle (SDLC) is a structured process used to plan,  design, develop, test, deploy, and maintain software. It ensures a systematic workflow  and helps align software development with business goals and user requirements.  ●​ It provides a clear and organized framework for managing the development  phases.  ●​ It helps detect err…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\03_Software_Development_Life_Cycle_SDLC.pdf",
+          "title": "03_Software_Development_Life_Cycle_SDLC.pdf",
+          "url": "",
+          "rerank_score": -8.73002815246582,
+          "image_urls": [
+            "http://localhost:8010/images/03_Software_Development_Life_Cycle_SDLC-c5486c8d/p1/img001.png"
+          ]
+        },
+        {
+          "rank": 8,
+          "text": "III. DISADVANTAGES & CHALLENGES While powerful, Kafka has certain trade-offs: Setup Complexity: Initial installation and configuration can be difficult for beginners. Deep Learning Curve: Requires significant knowledge of distributed systems and networking to  manage effectively. Resource Intensive: Demands substantial memory and processing power to perform…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\Apache_Kafka_Enterprise_Architectures (1).pdf",
+          "title": "Apache_Kafka_Enterprise_Architectures (1).pdf",
+          "url": "",
+          "rerank_score": -9.822607040405273,
+          "image_urls": [
+            "http://localhost:8010/images/Apache_Kafka_Enterprise_Architectures (1)-8e075643/p2/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "http://localhost:8010/images/23_Quality_Assurance_QA_and_Quality_Control_QC-744f3438/p2/img001.png"
+      ],
+      "conversation_id": "bff5415c-a440-4407-8f80-cdd73e1d409f",
+      "updated_at": "2026-05-17T05:54:25.581663+00:00"
     }
   },
   "history": [
@@ -6245,6 +7155,611 @@
       ],
       "cache_hit": false,
       "timestamp": "2026-05-13T10:15:47.344752+00:00"
+    },
+    {
+      "execution_id": "a65408a7-5673-4b07-9e28-a6f3a37b2f89",
+      "conversation_id": "e3409172-cc49-411d-959c-81af38bf965e",
+      "question": "cơ hội nghề nghiệp ngành công nghệ thông tin",
+      "answer": "Ngành **công nghệ thông tin** mang lại nhiều **cơ hội nghề nghiệp** đa dạng và phong phú. Một số vị trí phổ biến bao gồm:\n- **Software Developer / Programmer**: Phát triển và thiết kế phần mềm, ứng dụng, và hệ thống quản lý.\n- **Software Engineer**: Thiết kế, xây dựng, và bảo trì các hệ thống phần mềm.\n- Các vị trí khác như **Technical Team Leader**, **Project Manager**, và **Management-level Software Engineer** cũng là những lựa chọn hấp dẫn cho những người có kinh nghiệm và kỹ năng phù hợp.\n\nNhững người theo đuổi ngành này có thể tận dụng các **ngôn ngữ lập trình** như **Java**, **Python**, **C#**, **PHP**, **JavaScript**, **Kotlin**, **Swift**, v.v. để tạo ra các sản phẩm và giải pháp công nghệ sáng tạo.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous  salary and broad, clear career advancement opportunities. The level of skill,  experience, and specific responsibilities are assessed based on different skill levels  and experience.   LSoftware engineer career progression    Having a clear career path is something ever…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "url": "",
+          "rerank_score": -3.5125651359558105,
+          "image_urls": [
+            "http://localhost:8010/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        },
+        {
+          "rank": 2,
+          "text": "What can you do with a software engineering degree? After graduation, students can  take on many different positions depending on their abilities and career aspirations.  Below are some of the most common jobs in the software engineering field.    Software Developer / Programmer  Programmers are individuals who directly write code, design, and develop softw…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "title": "05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "url": "",
+          "rerank_score": -5.344969749450684,
+          "image_urls": [
+            "http://localhost:8010/images/05_Software_Engineering_Career_Opportunities_and_Roles-f0980f4f/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "http://localhost:8010/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-16T06:00:41.647816+00:00"
+    },
+    {
+      "execution_id": "71e11bd8-2190-4e0a-b8de-eb996bebf5a3",
+      "conversation_id": "e3409172-cc49-411d-959c-81af38bf965e",
+      "question": "so sánh ngành đó với ngành an ninh mạng",
+      "answer": "Thiếu thông tin về ngành an ninh mạng.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "StepstoStartaCareerinGamingEngineering",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "url": "",
+          "rerank_score": -10.952619552612305,
+          "image_urls": []
+        },
+        {
+          "rank": 2,
+          "text": "What can you do with a software engineering degree? After graduation, students can  take on many different positions depending on their abilities and career aspirations.  Below are some of the most common jobs in the software engineering field.    Software Developer / Programmer  Programmers are individuals who directly write code, design, and develop softw…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "title": "05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "url": "",
+          "rerank_score": -10.974628448486328,
+          "image_urls": [
+            "http://localhost:8010/images/05_Software_Engineering_Career_Opportunities_and_Roles-f0980f4f/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "http://localhost:8010/images/05_Software_Engineering_Career_Opportunities_and_Roles-f0980f4f/p1/img001.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-16T06:01:02.853420+00:00"
+    },
+    {
+      "execution_id": "dc2546cf-1c0b-43c2-8cb4-89f06a706e47",
+      "conversation_id": "e3409172-cc49-411d-959c-81af38bf965e",
+      "question": "so sánh ngành đó với ngành an ninh mạng",
+      "answer": "Thiếu thông tin về ngành an ninh mạng.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "StepstoStartaCareerinGamingEngineering",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "url": "",
+          "rerank_score": -10.952619552612305,
+          "image_urls": []
+        },
+        {
+          "rank": 2,
+          "text": "What can you do with a software engineering degree? After graduation, students can  take on many different positions depending on their abilities and career aspirations.  Below are some of the most common jobs in the software engineering field.    Software Developer / Programmer  Programmers are individuals who directly write code, design, and develop softw…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "title": "05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "url": "",
+          "rerank_score": -10.974628448486328,
+          "image_urls": [
+            "http://localhost:8010/images/05_Software_Engineering_Career_Opportunities_and_Roles-f0980f4f/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "http://localhost:8010/images/05_Software_Engineering_Career_Opportunities_and_Roles-f0980f4f/p1/img001.png"
+      ],
+      "cache_hit": true,
+      "timestamp": "2026-05-16T06:01:16.985085+00:00"
+    },
+    {
+      "execution_id": "763adb83-7877-4dc1-a978-2aeccd9b5cca",
+      "conversation_id": "e3409172-cc49-411d-959c-81af38bf965e",
+      "question": "cơ hội nghề nghiệp ngành công nghệ thông tin",
+      "answer": "Ngành **công nghệ thông tin** mang lại nhiều **cơ hội nghề nghiệp** đa dạng và phong phú. Một số vị trí phổ biến bao gồm:\n- **Software Developer / Programmer**: Phát triển và thiết kế phần mềm, ứng dụng, và hệ thống quản lý.\n- **Software Engineer**: Thiết kế, xây dựng, và bảo trì các hệ thống phần mềm.\n- Các vị trí khác như **Technical Team Leader**, **Project Manager**, và **Management-level Software Engineer** cũng là những lựa chọn hấp dẫn cho những người có kinh nghiệm và kỹ năng phù hợp.\n\nNhững người theo đuổi ngành này có thể tận dụng các **ngôn ngữ lập trình** như **Java**, **Python**, **C#**, **PHP**, **JavaScript**, **Kotlin**, **Swift**, v.v. để tạo ra các sản phẩm và giải pháp công nghệ sáng tạo.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous  salary and broad, clear career advancement opportunities. The level of skill,  experience, and specific responsibilities are assessed based on different skill levels  and experience.   LSoftware engineer career progression    Having a clear career path is something ever…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "url": "",
+          "rerank_score": -3.5125651359558105,
+          "image_urls": [
+            "http://localhost:8010/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        },
+        {
+          "rank": 2,
+          "text": "What can you do with a software engineering degree? After graduation, students can  take on many different positions depending on their abilities and career aspirations.  Below are some of the most common jobs in the software engineering field.    Software Developer / Programmer  Programmers are individuals who directly write code, design, and develop softw…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "title": "05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "url": "",
+          "rerank_score": -5.344969749450684,
+          "image_urls": [
+            "http://localhost:8010/images/05_Software_Engineering_Career_Opportunities_and_Roles-f0980f4f/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "http://localhost:8010/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "cache_hit": true,
+      "timestamp": "2026-05-16T13:00:57.882976+00:00"
+    },
+    {
+      "execution_id": "b8d61a32-e99c-43b6-b8ab-e9e167c53145",
+      "conversation_id": "196a6397-0b4d-413a-a3f7-fc8701ac537f",
+      "question": "cơ hội nghề nghiệp ngành công nghệ thông tin",
+      "answer": "Ngành **công nghệ thông tin** mang lại nhiều **cơ hội nghề nghiệp** đa dạng và phong phú. Một số vị trí phổ biến bao gồm:\n- **Software Developer / Programmer**: Phát triển và thiết kế phần mềm, ứng dụng, và hệ thống quản lý.\n- **Software Engineer**: Thiết kế, xây dựng, và bảo trì các hệ thống phần mềm.\n- Các vị trí khác như **Technical Team Leader**, **Project Manager**, và **Management-level Software Engineer** cũng là những lựa chọn hấp dẫn cho những người có kinh nghiệm và kỹ năng phù hợp.\n\nNhững người theo đuổi ngành này có thể tận dụng các **ngôn ngữ lập trình** như **Java**, **Python**, **C#**, **PHP**, **JavaScript**, **Kotlin**, **Swift**, v.v. để tạo ra các sản phẩm và giải pháp công nghệ sáng tạo.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Currently, software engineering is a highly sought-after profession due to its generous  salary and broad, clear career advancement opportunities. The level of skill,  experience, and specific responsibilities are assessed based on different skill levels  and experience.   LSoftware engineer career progression    Having a clear career path is something ever…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "url": "",
+          "rerank_score": -3.5125651359558105,
+          "image_urls": [
+            "http://localhost:8010/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+          ]
+        },
+        {
+          "rank": 2,
+          "text": "What can you do with a software engineering degree? After graduation, students can  take on many different positions depending on their abilities and career aspirations.  Below are some of the most common jobs in the software engineering field.    Software Developer / Programmer  Programmers are individuals who directly write code, design, and develop softw…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "title": "05_Software_Engineering_Career_Opportunities_and_Roles.pdf",
+          "url": "",
+          "rerank_score": -5.344969749450684,
+          "image_urls": [
+            "http://localhost:8010/images/05_Software_Engineering_Career_Opportunities_and_Roles-f0980f4f/p1/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "http://localhost:8010/images/26_Software_Engineer_Career_Path_and_Advancement-1a1b1b70/p1/img001.png"
+      ],
+      "cache_hit": true,
+      "timestamp": "2026-05-16T13:01:00.185884+00:00"
+    },
+    {
+      "execution_id": "492c4c7a-0423-4a73-ba09-b6e4211d36aa",
+      "conversation_id": "196a6397-0b4d-413a-a3f7-fc8701ac537f",
+      "question": "So sánh ngành đó với ngành big data and machine learning",
+      "answer": "## 1. So sánh ngành\n\n**Câu hỏi:** So sánh ngành đó với ngành big data\n\nNgành **Big Data** và ngành **Khoa học Máy tính** (trong đó bao gồm **Trí tuệ nhân tạo - AI**) có mối quan hệ chặt chẽ và bổ sung cho nhau. Cả hai đều tập trung vào việc xử lý và phân tích dữ liệu, nhưng chúng có những điểm khác biệt về phạm vi và phương pháp tiếp cận.\n\n- **Ngành Big Data** tập trung vào việc thu thập, lưu trữ, xử lý và phân tích lượng lớn dữ liệu không cấu trúc hoặc bán cấu trúc để đưa ra quyết định kinh doanh thông minh. Nó bao gồm các công nghệ như **Hadoop**, **Spark**, và các kỹ thuật phân tích dữ liệu tiên tiến.\n\n- **Ngành Khoa học Máy tính**, đặc biệt là **Trí tuệ nhân tạo (AI)**, tập trung vào việc thiết kế, phát triển và ứng dụng các hệ thống thông minh có thể thực hiện các nhiệm vụ thường yêu cầu sự thông minh của con người, như học hỏi, suy luận, và giải quyết vấn đề. **AI** sử dụng các kỹ thuật như **Machine Learning**, **Deep Learning** để phân tích dữ liệu và đưa ra quyết định.\n\nCả hai ngành đều cần kiến thức về **lập trình**, **cơ sở dữ liệu**, và **phân tích dữ liệu**, nhưng **Big Data** tập trung nhiều hơn vào việc xử lý và quản lý dữ liệu lớn, trong khi **AI** tập trung vào việc phát triển các hệ thống thông minh có thể học hỏi và thích nghi.\n\nTóm lại, **Big Data** và **AI** là hai lĩnh vực liên quan chặt chẽ, với **Big Data** cung cấp dữ liệu cần thiết cho **AI** để học hỏi và đưa ra quyết định, và **AI** cung cấp các công cụ và kỹ thuật để phân tích và tận dụng dữ liệu từ **Big Data**.\n\n## 2. So sánh ngành\n\n**Câu hỏi:** So sánh ngành đó với ngành machine learning\n\n- Ngành **Big Data & Machine Learning** tại Đại học Duy Tân (DTU) tập trung vào việc đào tạo sinh viên về các kỹ thuật và công cụ để xử lý và phân tích dữ liệu lớn, cũng như xây dựng các mô hình **Machine Learning**.\n- Còn **Machine Learning** là một lĩnh vực thuộc **Trí tuệ nhân tạo (AI)**, tập trung vào việc phát triển các thuật toán và mô hình cho phép máy tính học hỏi từ dữ liệu và cải thiện hiệu suất của mình trong việc thực hiện các nhiệm vụ cụ thể.\n- Cả hai đều liên quan đến việc xử lý và phân tích dữ liệu, nhưng **Big Data & Machine Learning** có phạm vi rộng hơn, bao gồm cả việc thu thập, lưu trữ và phân tích dữ liệu lớn, trong khi **Machine Learning** tập trung vào việc xây dựng các mô hình học máy để giải quyết các vấn đề cụ thể.\n- Ngành **Big Data & Machine Learning** tại DTU sử dụng mô hình **CDIO** để đảm bảo sinh viên có thể phát triển các sản phẩm công nghệ thực tế, trong khi **Machine Learning** thường tập trung vào việc phát triển các thuật toán và mô hình học máy.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "I. PROGRAM OVERVIEW The Big Data & Machine Learning program at Duy Tan University (DTU) is managed by the School of  Computer Science (SCS). It is a flagship academic program designed to prepare students for the  Industry 4.0 era, where data serves as the critical engine for economic and technological growth. 1.1. Educational Philosophy The curriculum emplo…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\GEN_01_DTU_BigData_ML_Roadmap.pdf",
+          "title": "GEN_01_DTU_BigData_ML_Roadmap.pdf",
+          "url": "",
+          "rerank_score": -2.9119863510131836,
+          "image_urls": [
+            "http://localhost:8010/images/GEN_01_DTU_BigData_ML_Roadmap-cfa93230/p1/img001.png"
+          ]
+        },
+        {
+          "rank": 2,
+          "text": "I. THE ERA OF DATA-DRIVEN INTELLIGENCE In the 2026 digital economy, data is no longer just \"information\"—it is the primary raw material for  every industry. From healthcare diagnostics to autonomous traffic management in Da Nang, the ability  to process massive datasets and build predictive models is the most sought-after skill in the global job  market. 1.…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\Career_Roadmap_and_Industry_Overview.pdf",
+          "title": "Career_Roadmap_and_Industry_Overview.pdf",
+          "url": "",
+          "rerank_score": -4.087202548980713,
+          "image_urls": [
+            "http://localhost:8010/images/Career_Roadmap_and_Industry_Overview-2d660656/p1/img001.jpeg"
+          ]
+        },
+        {
+          "rank": 4,
+          "text": "1. Big O  Big O (THE) It is a mathematical notation used to describe the upper limit of  algorithmic complexity (running time or memory space) when the size of the input  data (n) increases. It helps to compare the efficiency of algorithms in the worst-case  scenario, ignoring small constants to focus on growth rate.      Some common complexity levels  O(n)…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\09_Algorithm_Complexity_and_Big_O_Notation.pdf",
+          "title": "09_Algorithm_Complexity_and_Big_O_Notation.pdf",
+          "url": "",
+          "rerank_score": -6.495469570159912,
+          "image_urls": [
+            "http://localhost:8010/images/09_Algorithm_Complexity_and_Big_O_Notation-9845cc50/p1/img001.png",
+            "http://localhost:8010/images/09_Algorithm_Complexity_and_Big_O_Notation-9845cc50/p4/img001.png"
+          ]
+        },
+        {
+          "rank": 5,
+          "text": "I. THE ROLE OF SQLIN THE BIG DATA ERA 病用组究组 Unia tmakwrf Wiama ad sabLECT column, FUNCTIONO OVER (PARTITION BY group_col ORDER BY sort_col) FROM macloud enironment AP), anpimizedqury dsntjust run swlitcsts m macloudeironen ACP), anptizedquerdsntust slitsts tu n  r RACCALATA o",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\Advanced_SQL_for_Big_Data_Engineering.pdf",
+          "title": "Advanced_SQL_for_Big_Data_Engineering.pdf",
+          "url": "",
+          "rerank_score": -7.106453895568848,
+          "image_urls": []
+        },
+        {
+          "rank": 6,
+          "text": "I. OVERVIEW: THE ENGINE OF PERSONALIZATION In the era of Big Data, a Recommender System (RS) is not just a feature; it is the soul of digital  platforms. Its core mission is to predict the level of interest (Rating/Preference) a user would give to  an item they have never interacted with before. 1.1. Case Studies in Industry Amazon: Increases revenue throug…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\Recommendation Systems.docx.pdf",
+          "title": "Recommendation Systems.docx.pdf",
+          "url": "",
+          "rerank_score": -7.4195380210876465,
+          "image_urls": [
+            "http://localhost:8010/images/Recommendation Systems.docx-146469d1/p1/img001.png"
+          ]
+        },
+        {
+          "rank": 7,
+          "text": "I:CLOUDECONOMICS&INFRASTRUCTURESTRATEGY heShiftfromOn-PremisetoCloud Dat Understanding how AWS is built is critical for system reliability: Amazon S3 (Simple Storage Service) is the foundation of any Big Data project. To turn raw data into insights, AWS provides specialized tools: 2.3 The AI Layer: Amazon SageMaker 2.3 The AI Layer: Amazon SageMaker 3.1 Ide…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\AWS_Cloud_Practitioner_for_Data.docx.pdf",
+          "title": "AWS_Cloud_Practitioner_for_Data.docx.pdf",
+          "url": "",
+          "rerank_score": -8.114011764526367,
+          "image_urls": []
+        },
+        {
+          "rank": 8,
+          "text": "Apache Hadoop and Apache Spark are two open-source frameworks you can use to  manage and process large volumes of data for analytical purposes. Organizations need  to process data at scale and speed to obtain real-time insights for business intelligence.  Apache Hadoop allows you to cluster multiple computers to analyze massive datasets  in parallel faster.…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\29_Big_Data_Processing_Hadoop_and_Spark.pdf",
+          "title": "29_Big_Data_Processing_Hadoop_and_Spark.pdf",
+          "url": "",
+          "rerank_score": -9.129716873168945,
+          "image_urls": [
+            "http://localhost:8010/images/29_Big_Data_Processing_Hadoop_and_Spark-df457c82/p1/img001.png"
+          ]
+        },
+        {
+          "title": "Khoa học dữ liệu và Khoa học máy tính: Nên chọn học ngành nào?",
+          "url": "https://vinuni.edu.vn/vi/khoa-hoc-du-lieu-va-khoa-hoc-may-tinh-nen-chon-hoc-nganh-nao/",
+          "snippet": "![VinUni Banner](https://vinuni.edu.vn/wp-content/themes/vinuni2023/assets/images/vinuni_banner.png) # Khoa học dữ liệu và Khoa học máy tính: Nên chọn học ngành nào? 14/10/2024 Mục lục Trong thời đại công nghệ thông tin phát triển mạnh mẽ như hiện nay, **Khoa học Dữ liệu** **và Khoa học Máy tính** đang trở thành những ngành học thu hút sự quan tâm của giới trẻ. Cả hai lĩnh vực này không chỉ đóng v...",
+          "score": 0.0
+        },
+        {
+          "title": "Big data (dữ liệu lớn) là gì? Các ngành đang ứng ... - Intech Group",
+          "url": "https://intech-group.vn/big-data-du-lieu-lon-la-gi-bv1024.htm",
+          "snippet": "# Tin tức & Sự kiện - [Trang Chủ](https://intech-group.vn/) - [Tin tức & Sự kiện](https://intech-group.vn/tin-tuc-su-kien.htm) - [Tin công nghệ](https://intech-group.vn/tin-cong-nghe.htm) # Big data (dữ liệu lớn) là gì? Các ngành đang ứng dụng Big data bạn cần biết 23-12-2024 9.180 Share - [Chia sẻ bài viết lên Facebook](https://www.facebook.com/sharer/sharer.php?u=https://intech-group.vn/big-data...",
+          "score": 0.0
+        },
+        {
+          "title": "Điểm khác biệt giữa khoa học dữ liệu và trí tuệ nhân tạo là gì? - AWS",
+          "url": "https://aws.amazon.com/vi/compare/the-difference-between-data-science-and-ai/",
+          "snippet": "## Chọn tùy chọn cookie của bạn Chúng tôi sử dụng các cookie thiết yếu và công cụ tương tự cần thiết để cung cấp trang web và dịch vụ của chúng tôi. Chúng tôi sử dụng cookie hiệu năng để thu thập số liệu thống kê ẩn danh, qua đó hiểu rõ cách khách hàng sử dụng trang web của chúng tôi và tiến hành cải tiến. Bạn không thể vô hiệu hóa cookie thiết yếu, nhưng có thể nhấp vào “Tùy chỉnh” hoặc “Từ chối”...",
+          "score": 0.0
+        },
+        {
+          "title": "Giải đáp cơ hội nghề nghiệp ngành Big Data cho sinh viên mới ra ...",
+          "url": "https://insight.isb.edu.vn/co-hoi-nghe-nghiep-nganh-big-data/",
+          "snippet": "[![](https://insight.isb.edu.vn/wp-content/uploads/sites/2/2020/05/LOGO_ISB-268x118-1.png)](https://insight.isb.edu.vn/)[×](https://insight.isb.edu.vn/co-hoi-nghe-nghiep-nganh-big-data/#) ![](https://insight.isb.edu.vn/wp-content/uploads/sites/2/2019/12/Job-big-data-thumnail-1024x662-1.png) - [Data & Analytics](https://insight.isb.edu.vn/category/data-analytics/ \"Data & Analytics\") # Giải đáp cơ h...",
+          "score": 0.0
+        },
+        {
+          "title": "Big data là gì? Đặc điểm & ứng dụng Big data vào các ngành - PACE",
+          "url": "https://www.pace.edu.vn/tin-kho-tri-thuc/big-data-la-gi",
+          "snippet": "![Banner](https://www.pace.edu.vn/uploads/banners/PACE/event/blanchard-nang-luc-lanh-dao.jpg) - [Kho tri thức](https://www.pace.edu.vn/kho-tri-thuc) ## Big data là gì? Đặc điểm & ứng dụng Big data vào các ngành CHIA SẺ [Facebook](https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.pace.edu.vn%2Ftin-kho-tri-thuc%2Fbig-data-la-gi \"Chia sẻ bài viết lên Facebook\") [LinkedIn](https://www.lin...",
+          "score": 0.0
+        },
+        {
+          "rank": 2,
+          "text": "I. INTRODUCTION: THE ROLE OF UNCERTAINTY In Machine Learning, we rarely have 100% certainty. We deal with Stochastic processes. Statistics  allows us to quantify uncertainty, find patterns in noise, and validate whether a model's performance is  statistically significant or just a result of random luck. 1.1. Descriptive vs. Inferential Statistics Descriptiv…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\MATH_03_Probability_Statistics_DS.pdf",
+          "title": "MATH_03_Probability_Statistics_DS.pdf",
+          "url": "",
+          "rerank_score": -9.901052474975586,
+          "image_urls": [
+            "http://localhost:8010/images/MATH_03_Probability_Statistics_DS-28f43c39/p1/img001.jpeg",
+            "http://localhost:8010/images/MATH_03_Probability_Statistics_DS-28f43c39/p2/img001.jpeg"
+          ]
+        },
+        {
+          "rank": 4,
+          "text": "vector, we get the Gradient  L). The Gradient always points in the direction of the steepest increase in error. To learn, the AI must move in the opposite direction  - L). III. THE CHAIN RULE: THE BACKBONE OF BACKPROPAGATION Deep Learning models are \"deep\" because they consist of many layers stacked together.  Mathematically, this is a Composite Function: O…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\Calculus_and_Optimization_The_Engine_of_Learning.pdf",
+          "title": "Calculus_and_Optimization_The_Engine_of_Learning.pdf",
+          "url": "",
+          "rerank_score": -10.938566207885742,
+          "image_urls": [
+            "http://localhost:8010/images/Calculus_and_Optimization_The_Engine_of_Learning-8fd5236d/p3/img001.png",
+            "http://localhost:8010/images/Calculus_and_Optimization_The_Engine_of_Learning-8fd5236d/p3/img002.png",
+            "http://localhost:8010/images/Calculus_and_Optimization_The_Engine_of_Learning-8fd5236d/p3/img003.png",
+            "http://localhost:8010/images/Calculus_and_Optimization_The_Engine_of_Learning-8fd5236d/p4/img001.png",
+            "http://localhost:8010/images/Calculus_and_Optimization_The_Engine_of_Learning-8fd5236d/p4/img002.png"
+          ]
+        },
+        {
+          "rank": 5,
+          "text": "at paert Fistadl la Key design elements to understand for mobile app design: 33 Learn how to publish your app to the store.  As mentioned at the beginning of this article, publishing your application on app  stores (App Store or Google Play) is essential for your application to reach a wider  audience.  You may need to familiarize yourself with the followin…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\13_Mobile_App_Development_Fundamentals.pdf",
+          "title": "13_Mobile_App_Development_Fundamentals.pdf",
+          "url": "",
+          "rerank_score": -11.04631519317627,
+          "image_urls": [
+            "http://localhost:8010/images/13_Mobile_App_Development_Fundamentals-c45557b5/p4/img001.png"
+          ]
+        },
+        {
+          "rank": 6,
+          "text": "StepstoStartaCareerinGamingEngineering",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "title": "26_Software_Engineer_Career_Path_and_Advancement.pdf",
+          "url": "",
+          "rerank_score": -11.05288314819336,
+          "image_urls": []
+        },
+        {
+          "rank": 7,
+          "text": "I. THE CORE CHALLENGE: HOW MACHINES \"READ\" Computers are excellent at processing numbers but incapable of understanding the \"meaning\" of a  string like \"Apple.\" Historically, NLP used One-Hot Encoding, where each word was a vector of 0s  with a single 1 at its unique index. 1.1. The Failure of One-Hot Encoding Sparsity: If your vocabulary has 50,000 words,…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\Text_Preprocessing_and_Word_Embeddings.pdf",
+          "title": "Text_Preprocessing_and_Word_Embeddings.pdf",
+          "url": "",
+          "rerank_score": -11.10525894165039,
+          "image_urls": [
+            "http://localhost:8010/images/Text_Preprocessing_and_Word_Embeddings-e9573ee7/p1/img001.png"
+          ]
+        },
+        {
+          "rank": 8,
+          "text": "Programming languages ​ are categorized into three types based on their level:  ●​ Machine languageA machine language, also known as a low-format language,  is a programming language used to interact directly with the hardware of a  computer. It uses only 0 and 1 commands, written in a specific format.binary  code.  ●​ Assembly language (assembly languageAs…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\10_Programming_Languages_Overview_and_Comparison.pdf",
+          "title": "10_Programming_Languages_Overview_and_Comparison.pdf",
+          "url": "",
+          "rerank_score": -11.116981506347656,
+          "image_urls": [
+            "http://localhost:8010/images/10_Programming_Languages_Overview_and_Comparison-1ee844cc/p1/img001.png"
+          ]
+        },
+        {
+          "title": "So sánh chi tiết giữa ngành khoa học dữ liệu và trí tuệ nhân tạo |",
+          "url": "https://careers.smartosc.com/so-sanh-chi-tiet-giua-nganh-khoa-hoc-du-lieu-va-tri-tue-nhan-tao/",
+          "snippet": "[![](https://careers.smartosc.com/wp-content/uploads/2023/04/logo-2019-e1696233023932.png)](https://careers.smartosc.com/) [![SmartOSC Careers](https://careers.smartosc.com/wp-content/uploads/2021/12/logo-2023_update-removebg-preview.png)](https://careers.smartosc.com/) [Đăng ký](https://careers.smartosc.com/so-sanh-chi-tiet-giua-nganh-khoa-hoc-du-lieu-va-tri-tue-nhan-tao/#) # So sánh chi tiết giữ...",
+          "score": 0.0
+        },
+        {
+          "title": "Bạn phù hợp để trở thành Data Scientist hay Machine Learning ...",
+          "url": "https://www.dataguystory.com/post/2020-09-11-ban-phu-hop-tro-thanh-data-scientist-hay-machine-learning-engineer/",
+          "snippet": "Table of Contents - [Bắt đầu, xuất phát điểm và background](https://www.dataguystory.com/post/2020-09-11-ban-phu-hop-tro-thanh-data-scientist-hay-machine-learning-engineer/#b%e1%ba%aft-%c4%91%e1%ba%a7u-xu%e1%ba%a5t-ph%c3%a1t-%c4%91i%e1%bb%83m-v%c3%a0-background) - [Data Scientist](https://www.dataguystory.com/post/2020-09-11-ban-phu-hop-tro-thanh-data-scientist-hay-machine-learning-engineer/#data-...",
+          "score": 0.0
+        },
+        {
+          "title": "Sự khác biệt giữa đi học và đi làm về #ai #datascience ... - YouTube",
+          "url": "https://www.youtube.com/watch?v=qZofQzpyDww",
+          "snippet": "![Thumbnail (1920x1080)](https://i.ytimg.com/vi/qZofQzpyDww/maxresdefault.jpg) # [Sự khác biệt giữa đi học và đi làm về #ai #datascience #machinelearning](https://www.youtube.com/watch?v=qZofQzpyDww) **Visibility**: Public **Uploaded by**: [Việt Nguyễn AI](https://www.youtube.com/@vietnh1009) **Uploaded at**: 2023-04-10 **Published at**: **Length**: 17:11 **Views**: 11690 **Likes**: 192 **Category...",
+          "score": 0.0
+        },
+        {
+          "title": "Sự khác nhau giữa Deep Learning, Machine Learning và Data ...",
+          "url": "https://thegioimaychu.vn/blog/ai-hpc/su-khac-nhau-giua-deep-learning-machine-learning-va-data-science-p7918/",
+          "snippet": "Search for: Search [Skip to content](https://thegioimaychu.vn/blog/ai-hpc/su-khac-nhau-giua-deep-learning-machine-learning-va-data-science-p7918/#content) ![](https://thegioimaychu.vn/blog/wp-content/uploads/2020/12/TheGioiMayChu-Blog-Image-ML-DL-DS.jpg) ## Deep Learning, Machine Learning và Data Science là gì? Chúng khác nhau như thế nào? Trong những năm gần đây, [Machine Learning](https://thegio...",
+          "score": 0.0
+        },
+        {
+          "title": "AI so với Máy học - Điểm khác biệt giữa trí tuệ nhân tạo và ML - AWS",
+          "url": "https://aws.amazon.com/vi/compare/the-difference-between-artificial-intelligence-and-machine-learning/",
+          "snippet": "## Chọn tùy chọn cookie của bạn Chúng tôi sử dụng các cookie thiết yếu và công cụ tương tự cần thiết để cung cấp trang web và dịch vụ của chúng tôi. Chúng tôi sử dụng cookie hiệu năng để thu thập số liệu thống kê ẩn danh, qua đó hiểu rõ cách khách hàng sử dụng trang web của chúng tôi và tiến hành cải tiến. Bạn không thể vô hiệu hóa cookie thiết yếu, nhưng có thể nhấp vào “Tùy chỉnh” hoặc “Từ chối”...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "http://localhost:8010/images/GEN_01_DTU_BigData_ML_Roadmap-cfa93230/p1/img001.png",
+        "http://localhost:8010/images/Career_Roadmap_and_Industry_Overview-2d660656/p1/img001.jpeg",
+        "http://localhost:8010/images/09_Algorithm_Complexity_and_Big_O_Notation-9845cc50/p1/img001.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-16T13:02:16.983367+00:00"
+    },
+    {
+      "execution_id": "f01d2ad7-7f10-4ac7-b632-8952acbcd979",
+      "conversation_id": "bff5415c-a440-4407-8f80-cdd73e1d409f",
+      "question": "Dựa trên xu hướng thị trường hiện tại, gợi ý giúp tôi vài hướng nghiệp phù hợp để bắt đầu.",
+      "answer": "Dựa trên thông tin từ các nguồn web, có một số hướng nghiệp phù hợp với xu hướng thị trường hiện tại:\n\n- **Công nghệ thông tin**: Là một trong những ngành nghề hot nhất hiện nay, với sự phát triển không ngừng của công nghệ, nhu cầu về nhân lực trong lĩnh vực này là rất cao.\n- **Marketing kỹ thuật số**: Với sự phát triển của internet và mạng xã hội, marketing kỹ thuật số trở thành một phần quan trọng trong chiến lược kinh doanh của nhiều doanh nghiệp.\n- **Y tế – chăm sóc sức khỏe**: Là một ngành nghề luôn có nhu cầu cao, đặc biệt là trong bối cảnh đại dịch COVID-19 vừa qua.\n- **Năng lượng tái tạo**: Là một ngành nghề đang phát triển mạnh mẽ, với nhu cầu về nguồn năng lượng sạch và bảo vệ môi trường ngày càng tăng.\n- **Giáo dục trực tuyến**: Là một hình thức giáo dục đang trở nên phổ biến, đặc biệt là trong bối cảnh đại dịch COVID-19 vừa qua.\n- **Kỹ thuật – công nghệ**: Là một ngành nghề luôn có nhu cầu cao, với sự phát triển không ngừng của công nghệ và kỹ thuật.\n- **Blockchain**: Là một công nghệ mới đang được phát triển mạnh mẽ, với nhiều ứng dụng trong lĩnh vực tài chính, bảo mật, và nhiều lĩnh vực khác.\n- **Thực tế ảo/AR**: Là một công nghệ mới đang được phát triển mạnh mẽ, với nhiều ứng dụng trong lĩnh vực giải trí, giáo dục, và nhiều lĩnh vực khác.\n\nHy vọng những gợi ý trên sẽ giúp bạn tìm được hướng nghiệp phù hợp với sở thích và năng lực của mình.",
+      "sources": [
+        {
+          "title": "Định hướng nghề nghiệp là gì? Hướng dẫn tự định hướng ... - TopCV",
+          "url": "https://www.topcv.vn/dinh-huong-nghe-nghiep",
+          "snippet": "[0](https://www.topcv.vn/viec-lam-da-luu) Lưu tin thành công! Để xem [Danh sách việc làm đã lưu](https://www.topcv.vn/viec-lam-da-luu), click vào đây! Danh sách việc làm đã lưu Danh sách Lời mời cơ hội nghề nghiệp Click để Xem chi tiết Tìm việc an toàn cùng TopCV [![CẢNH BÁO MẠO DANH TOPCV TUYỂN DỤNG CỘNG TÁC VIÊN/LÀM VIỆC THỜI VỤ](https://cdn-new.topcv.vn/unsafe/250x/https://blog.topcv.vn/wp-cont...",
+          "score": 0.0
+        },
+        {
+          "title": "Xu hướng nghề nghiệp hiện nay: Cách lựa chọn đúng đắn cho ...",
+          "url": "https://caodanglaocai.vn/tin-tuc-tuyen-sinh/xu-huong-nghe-nghiep-hien-nay-cach-lua-chon-dung-dan-cho-tuong-lai-338574",
+          "snippet": "| | | --- | | ![image banner](https://storage-vnportal.vnpt.vn/lci-soyte-responsive/4821/moi/picture2.png)<br>- [Trang chủ](https://caodanglaocai.vn/)<br>- Giới thiệu<br> - [Về chúng tôi](https://caodanglaocai.vn/ve-chung-toi)<br> - [Đảng bộ](https://caodanglaocai.vn/dang-bo)<br> - [Thành tựu](https://caodanglaocai.vn/thanh-tuu2)<br> - [Đối tác](https://caodanglaocai.vn/doi-tac2)<br> - [Đoàn thể -...",
+          "score": 0.0
+        },
+        {
+          "title": "Hướng nghiệp: 6 cách giúp người trẻ chọn nghề nghiệp phù hợp",
+          "url": "https://www.elle.vn/bi-quyet-song/huong-nghiep-6-cach-giup-nguoi-tre-chon-nghe/",
+          "snippet": "[Bỏ qua và tới nội dung chính](https://www.elle.vn/bi-quyet-song/huong-nghiep-6-cach-giup-nguoi-tre-chon-nghe/#content) - [Bí quyết sống](https://www.elle.vn/cong-dong/bi-quyet-song/) - [Du lịch](https://www.elle.vn/cong-dong/du-lich/) - [ELLE Voice](https://www.elle.vn/cong-dong/elle-voice/) - [Trải nghiệm](https://www.elle.vn/cong-dong/trai-nghiem/) Hướng nghiệp không chỉ giúp chúng ta chọn được...",
+          "score": 0.0
+        },
+        {
+          "title": "Top 9+ Xu Hướng Nghề Nghiệp Hot Nhất Hiện Nay",
+          "url": "https://bacnghean.edu.vn/tin-tuc/xu-huong-nghe-nghiep/",
+          "snippet": "# Top 9+ Xu Hướng Nghề Nghiệp Hot Nhất Hiện Nay - [admin](https://bacnghean.edu.vn/author/admin/) - Ngày cập nhật: 25/02/2026 Xu hướng nghề nghiệp là sự thay đổi và chuyển dịch của thị trường lao động theo thời gian, phản ánh những ngành nghề, kỹ năng và công việc đang được ưa chuộng, có nhu cầu tuyển dụng cao hoặc được dự báo sẽ phát triển mạnh trong tương lai. Bước vào kỷ nguyên số, những biến đ...",
+          "score": 0.0
+        },
+        {
+          "title": "10 câu hỏi giúp bạn định hướng sự nghiệp | CareerViet.vn",
+          "url": "https://careerviet.vn/vi/talentcommunity/10-cau-hoi-giup-ban-dinh-huong-su-nghiep.35A50BCD.html",
+          "snippet": "#### Danh mục #### Danh mục - [Mới nhất](https://careerviet.vn/vi/talentcommunity) - [Bí quyết tìm việc](https://careerviet.vn/vi/talentcommunity/bi-quyet-tim-viec) - [Hồ sơ ấn tượng](https://careerviet.vn/vi/talentcommunity/bi-quyet-tim-viec/ho-so-an-tuong) - [Phỏng vấn thành công](https://careerviet.vn/vi/talentcommunity/bi-quyet-tim-viec/phong-van-thanh-cong) - [Hồ sơ mẫu](https://careerviet.vn...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://static.topcv.vn/cms/dinh-huong-nghe-nghiep-24.jpg65b7529eea407.jpg"
+      ],
+      "cache_hit": true,
+      "timestamp": "2026-05-16T13:09:40.696410+00:00"
+    },
+    {
+      "execution_id": "a7b3a7d2-1c10-44c2-8961-919c37ec6ca9",
+      "conversation_id": "bff5415c-a440-4407-8f80-cdd73e1d409f",
+      "question": "Bạn hãy tìm cho tôi ngành an ninh mạng học gì và cơ hội nghề nghiệp của ngành này năm 2027",
+      "answer": "## 1. Chương trình học\n\n**Câu hỏi:** ngành an ninh mạng học gì\n\nNgành **An Ninh Mạng** học về các kỹ thuật và công nghệ để bảo vệ hệ thống máy tính, mạng và dữ liệu khỏi các mối đe dọa và tấn công mạng. Một số lĩnh vực học trong ngành này bao gồm:\n- **Quản lý rủi ro**: Đánh giá và giảm thiểu rủi ro liên quan đến công nghệ thông tin và dữ liệu.\n- **Kiểm tra thâm nhập**: Sử dụng kỹ thuật tấn công mạng hợp pháp để kiểm tra và cải thiện hệ thống bảo mật.\n- **Phân tích và ứng phó sự cố**: Xử lý và ứng phó với các sự cố bảo mật, bao gồm việc phát hiện, phân tích và khắc phục.\n- **Quản lý mạng**: Quản lý và bảo mật mạng, bao gồm việc thiết lập và duy trì hệ thống mạng an toàn.\n- **Bảo mật dữ liệu**: Học cách bảo vệ dữ liệu khỏi các mối đe dọa và tấn công mạng.\n- **Tấn công mạng hợp pháp (Ethical Hacking)**: Sử dụng kỹ thuật tấn công mạng hợp pháp để kiểm tra và cải thiện hệ thống bảo mật.\n\n## 2. Cơ hội nghề nghiệp\n\n**Câu hỏi:** cơ hội nghề nghiệp của ngành an ninh mạng năm 2027\n\n_Không có phản hồi từ công cụ cho ý này._",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Mid-level cybersecurity positions: 星 or positions in the cybersecurity field: 5.​ Responsibilities of Risk Manager/Compliance Officer​ Assess and mitigate IT and data-related risks, ensuring compliance with  relevant regulations such as GDPR, HIPAA, PCI-DSS, etc.  6.​ Responsibilities of the Penetration Testing Lead/Attack Lead (Red  Team)​ Lead attack simu…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\30_Cybersecurity_Career_Path_and_Learning_Roadmap.pdf",
+          "title": "30_Cybersecurity_Career_Path_and_Learning_Roadmap.pdf",
+          "url": "",
+          "rerank_score": 3.4856204986572266,
+          "image_urls": [
+            "http://localhost:8010/images/30_Cybersecurity_Career_Path_and_Learning_Roadmap-5fcd3f5e/p4/img001.png"
+          ]
+        },
+        {
+          "rank": 6,
+          "text": "A career in security is a lifelong journey of learning furic atTUisdvidedintfourrical pilarstsu6-ge 1川 IV: THE CMU ADVANTAGE & GLOBAL RECOGNITION 4.1 The CMU Partnership DTU is one of the few universities in Vietnam to adopt the curriculum of Carnegie Mellon University  (USA), the world leader in Cyber Security. This means students study the exact same mate…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\1_OVERVIEW OF CYBER SECURITY AT DUY TAN UNIVERSITY (DTU).pdf",
+          "title": "1_OVERVIEW OF CYBER SECURITY AT DUY TAN UNIVERSITY (DTU).pdf",
+          "url": "",
+          "rerank_score": -1.045548439025879,
+          "image_urls": [
+            "http://localhost:8010/images/1_OVERVIEW OF CYBER SECURITY AT DUY TAN UNIVERSITY (DTU)-2b6f95c6/p3/img001.png"
+          ]
+        },
+        {
+          "rank": 7,
+          "text": "II. CAREER PATHS IN NETWORK MANAGEMENT 2.1. The Master of the Infrastructure Secure Network Administration is a critical function in all organizations, regardless of size or industry.  From small businesses to multinational corporations, every entity relies on secure connectivity. This makes it one of the most: Stable  In-demand  Long-term career paths in I…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\6_SECURE NETWORK ADMINISTRATION.pdf",
+          "title": "6_SECURE NETWORK ADMINISTRATION.pdf",
+          "url": "",
+          "rerank_score": -1.491841197013855,
+          "image_urls": [
+            "http://localhost:8010/images/6_SECURE NETWORK ADMINISTRATION-454aeab2/p2/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "http://localhost:8010/images/30_Cybersecurity_Career_Path_and_Learning_Roadmap-5fcd3f5e/p4/img001.png",
+        "http://localhost:8010/images/30_Cybersecurity_Career_Path_and_Learning_Roadmap-5fcd3f5e/p2/img001.png",
+        "http://localhost:8010/images/1_OVERVIEW OF CYBER SECURITY AT DUY TAN UNIVERSITY (DTU)-2b6f95c6/p3/img001.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-16T13:11:14.596899+00:00"
+    },
+    {
+      "execution_id": "4ef63322-2263-443c-9def-1174495611a4",
+      "conversation_id": "bff5415c-a440-4407-8f80-cdd73e1d409f",
+      "question": "cơ hội nghề nghiệp của ngành này năm 2027",
+      "answer": "Cơ hội nghề nghiệp của ngành **an ninh mạng** năm 2027 là rất lớn. Theo nguồn web 3, nhu cầu về chuyên môn **an ninh mạng** đang gia tăng với CAGR dự báo là 16,8% cho Thị trường **An ninh mạng** Việt Nam vào năm 2027. Điều này cho thấy có nhiều cơ hội cho các chuyên gia tay nghề cao trong lĩnh vực này.",
+      "sources": [
+        {
+          "title": "Có Nên Học Ngành An Ninh Mạng Hay Không? Phân Tích Cơ Hội ...",
+          "url": "https://www.careerlink.vn/cam-nang-viec-lam/tu-van-nghe-nghiep/co-nen-hoc-nganh-an-ninh-mang-hay-khong",
+          "snippet": "![close](https://www.careerlink.vn/cam-nang-viec-lam/wp-content/themes/blog-story/assets/images/close.svg) [![icon](https://www.careerlink.vn/cam-nang-viec-lam/wp-content/themes/blog-story/assets/images/job-search-default.svg)\\\\ My CareerLink](https://www.careerlink.vn/nguoi-tim-viec)![icon](https://www.careerlink.vn/cam-nang-viec-lam/wp-content/themes/blog-story/assets/images/angle-down.svg) - [!...",
+          "score": 0.0
+        },
+        {
+          "title": "Ngành An ninh mạng là gì? Cơ hội nghề nghiệp và những hiểu lầm ...",
+          "url": "https://www.vlu.edu.vn/news/nganh-an-ninh-mang-la-gi-co-hoi-nghe-nghiep-va-nhung-hieu-lam-pho-bien",
+          "snippet": "[news-events](https://www.vlu.edu.vn/news-events) [Tin Tức](https://www.vlu.edu.vn/news-events/news/search) Ngành An ninh mạng là gì? Cơ hội nghề nghiệp và những hiểu lầm phổ biến # Ngành An ninh mạng là gì? Cơ hội nghề nghiệp và những hiểu lầm phổ biến Tác Giả Khoa Công nghệ Thông tin Ngày 23/04/2025(8767 lượt xem) Chia sẻ qua [![](data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%2...",
+          "score": 0.0
+        },
+        {
+          "title": "Tương Lai Và Xu Hướng Nghề An Ninh Mạng Ở Việt Nam 2024",
+          "url": "https://www.reeracoen.com.vn/en/articles/tuong-lai-va-xu-huong-nghe-an-ninh-mang-viet-nam-2024",
+          "snippet": "# Tương Lai Và Xu Hướng Nghề An Ninh Mạng Ở Việt Nam 2024 [Career](https://www.reeracoen.com.vn/en/articles?category_id=81)April 02, 2024 11:00 # **![Tương Lai Và Xu Hướng Nghề An Ninh Mạng Ở Việt Nam 2024](https://lh7-us.googleusercontent.com/bVzsCxz8TnYCZ9IKlxB5N1ati0ZLu66MNxe_NKScNJicQ7GvsGuqCLRB9ATP_2fkSPs4i3a6E9uJwW0bWThT3tSeoQxtJ42LttipHr7HmaN0hh6EmNTafvh_hAE4Hhf1ytiRA2LHeZzS)** # **Tương La...",
+          "score": 0.0
+        },
+        {
+          "title": "Ngành an ninh mạng là gì? Cơ hội việc làm và mức lương",
+          "url": "https://careerviet.vn/vi/talentcommunity/wiki-career/nganh-an-ninh-mang-la-gi-co-hoi-viec-lam-va-muc-luong.35A52958.html",
+          "snippet": "#### Danh mục #### Danh mục - [Mới nhất](https://careerviet.vn/vi/talentcommunity) - [Bí quyết tìm việc](https://careerviet.vn/vi/talentcommunity/bi-quyet-tim-viec) - [Hồ sơ ấn tượng](https://careerviet.vn/vi/talentcommunity/bi-quyet-tim-viec/ho-so-an-tuong) - [Phỏng vấn thành công](https://careerviet.vn/vi/talentcommunity/bi-quyet-tim-viec/phong-van-thanh-cong) - [Hồ sơ mẫu](https://careerviet.vn...",
+          "score": 0.0
+        }
+      ],
+      "image_urls": [
+        "https://cl-wpml.careerlink.vn/cam-nang-viec-lam/wp-content/uploads/2026/02/25160540/Co-Nen-Hoc-Nganh-An-Ninh-Mang-Hay-Khong.jpg"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-16T13:12:17.064258+00:00"
+    },
+    {
+      "execution_id": "f77425f0-7935-442c-b78b-1e4fe5a04a13",
+      "conversation_id": "bff5415c-a440-4407-8f80-cdd73e1d409f",
+      "question": "what are u",
+      "answer": "I can help you with career guidance, skills development, and web-sourced references when needed.",
+      "sources": [],
+      "image_urls": [],
+      "cache_hit": false,
+      "timestamp": "2026-05-17T02:56:56.689755+00:00"
+    },
+    {
+      "execution_id": "3b0056e5-bd83-42db-a2b3-7233e246017d",
+      "conversation_id": "bff5415c-a440-4407-8f80-cdd73e1d409f",
+      "question": "Sáu khía cạnh cốt lõi để đánh giá chất lượng dữ liệu (Data Quality) là gì?",
+      "answer": "Thiếu thông tin về sáu khía cạnh cốt lõi để đánh giá chất lượng dữ liệu.",
+      "sources": [
+        {
+          "rank": 1,
+          "text": "Quality control (QC) not only detects bugs but also evaluates usability, performance,  and security. A professional QC team not only \"finds errors\" but also provides  quantitative evidence to help QA and PM improve processes and minimize recurring  errors.    QA process in software development  Analyze requirements and define quality standards.  This is a f…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\23_Quality_Assurance_QA_and_Quality_Control_QC.pdf",
+          "title": "23_Quality_Assurance_QA_and_Quality_Control_QC.pdf",
+          "url": "",
+          "rerank_score": -5.059622764587402,
+          "image_urls": [
+            "http://localhost:8010/images/23_Quality_Assurance_QA_and_Quality_Control_QC-744f3438/p2/img001.png",
+            "http://localhost:8010/images/23_Quality_Assurance_QA_and_Quality_Control_QC-744f3438/p3/img001.png"
+          ]
+        },
+        {
+          "rank": 2,
+          "text": "I:THESIXPILLARSOFDATAINTEGRITY Usrattas tta 3.1 Data Quality Service Level Agreements (SLAs) 3.1 Data Quality Service Level Agreements (SLAs) 的 tion cloud environment, the checklist is au",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\Data _Quality _Checklist.docx.pdf",
+          "title": "Data _Quality _Checklist.docx.pdf",
+          "url": "",
+          "rerank_score": -5.839142799377441,
+          "image_urls": []
+        },
+        {
+          "rank": 4,
+          "text": "Criteria for evaluating frameworks:  ●​ Execution performance (benchmark requests/sec)  ●​ Scalability (scale-out/scale-in)  ●​ Security features (XSS, CSRF, injection prevention)  ●​ ORM management, database migration  ●​ Support for API development (RESTful, GraphQL)",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\12_Backend_Development_and_Server_Architecture.pdf",
+          "title": "12_Backend_Development_and_Server_Architecture.pdf",
+          "url": "",
+          "rerank_score": -6.6365966796875,
+          "image_urls": [
+            "http://localhost:8010/images/12_Backend_Development_and_Server_Architecture-4ea7f77b/p7/img001.png"
+          ]
+        },
+        {
+          "rank": 5,
+          "text": "I: ETHICAL AI FOUNDATIONS 1.1. The Necessity of Ethics in AI AI models are not neutral; they learn from data that may contain human biases. Ethical AI ensures that  our systems do not reinforce stereotypes or make unfair decisions. 1.2. The Core Pillars of Responsible AI Fairness & Bias Mitigation: Ensuring the model performs equally well across different g…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\AI Ethics & Security Standards .pdf",
+          "title": "AI Ethics & Security Standards .pdf",
+          "url": "",
+          "rerank_score": -8.186391830444336,
+          "image_urls": [
+            "http://localhost:8010/images/AI Ethics & Security Standards -c35a6e03/p1/img001.png"
+          ]
+        },
+        {
+          "rank": 7,
+          "text": "The Software Development Life Cycle (SDLC) is a structured process used to plan,  design, develop, test, deploy, and maintain software. It ensures a systematic workflow  and helps align software development with business goals and user requirements.  ●​ It provides a clear and organized framework for managing the development  phases.  ●​ It helps detect err…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\03_Software_Development_Life_Cycle_SDLC.pdf",
+          "title": "03_Software_Development_Life_Cycle_SDLC.pdf",
+          "url": "",
+          "rerank_score": -8.73002815246582,
+          "image_urls": [
+            "http://localhost:8010/images/03_Software_Development_Life_Cycle_SDLC-c5486c8d/p1/img001.png"
+          ]
+        },
+        {
+          "rank": 8,
+          "text": "III. DISADVANTAGES & CHALLENGES While powerful, Kafka has certain trade-offs: Setup Complexity: Initial installation and configuration can be difficult for beginners. Deep Learning Curve: Requires significant knowledge of distributed systems and networking to  manage effectively. Resource Intensive: Demands substantial memory and processing power to perform…",
+          "source": "C:\\Users\\Nitro 5\\OneDrive\\Documents\\nckh\\datn\\career-guidance-ai\\carreer-guidance\\src\\database\\file_downloaded\\4d64496c-be06-4d05-892a-dce083e37c32\\Apache_Kafka_Enterprise_Architectures (1).pdf",
+          "title": "Apache_Kafka_Enterprise_Architectures (1).pdf",
+          "url": "",
+          "rerank_score": -9.822607040405273,
+          "image_urls": [
+            "http://localhost:8010/images/Apache_Kafka_Enterprise_Architectures (1)-8e075643/p2/img001.png"
+          ]
+        }
+      ],
+      "image_urls": [
+        "http://localhost:8010/images/23_Quality_Assurance_QA_and_Quality_Control_QC-744f3438/p2/img001.png"
+      ],
+      "cache_hit": false,
+      "timestamp": "2026-05-17T05:54:25.581663+00:00"
     }
   ]
 }

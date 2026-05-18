@@ -92,9 +92,7 @@ def _merge_parallel_answers(
         web_answer
     )
     if rag_ok and web_ok:
-        return (
-            web_answer if _is_insufficient_answer_text(rag_answer) else rag_answer
-        )
+        return web_answer if _is_insufficient_answer_text(rag_answer) else rag_answer
     if rag_ok:
         return rag_answer
     if web_ok:
@@ -168,9 +166,7 @@ def _intent_bundle_from_both(
     }
 
 
-def _run_single_intent(
-    state: AgentRuntimeState, sub: dict[str, Any]
-) -> dict[str, Any]:
+def _run_single_intent(state: AgentRuntimeState, sub: dict[str, Any]) -> dict[str, Any]:
     q = str(sub.get("query") or "").strip()
     mode = str(sub.get("suggested_tool") or "rag").strip().lower()
 
@@ -275,9 +271,7 @@ def _execute_multi_intent(state: AgentRuntimeState) -> dict[str, dict[str, Any]]
         for iid, fut in futures.items():
             state.tool_results_by_intent[iid] = fut.result()
 
-    ok_count = sum(
-        1 for b in state.tool_results_by_intent.values() if b.get("success")
-    )
+    ok_count = sum(1 for b in state.tool_results_by_intent.values() if b.get("success"))
     state.tool_results = {
         "multi_intent": {
             "tool_name": "multi_intent",
@@ -338,9 +332,11 @@ def execute_tools(state: AgentRuntimeState) -> dict[str, dict[str, Any]]:
         state.tool_results = {"rag": rag_payload}
         if _is_insufficient_rag(rag_payload):
             logger.info(
-                "[agent-tools] rag_only mode keeps internal retrieval only execution_id=%s",
+                "[agent-tools] rag_only insufficient; attempting web fallback execution_id=%s",
                 state.execution_id,
             )
+            web_payload = _safe_execute(state, "web", run_web)
+            state.tool_results["web"] = web_payload
         logger.info(
             "[agent-tools] dispatch finished execution_id=%s tool_count=%d",
             state.execution_id,

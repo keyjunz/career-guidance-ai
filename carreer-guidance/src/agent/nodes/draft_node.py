@@ -2,7 +2,6 @@ from typing import Any
 
 from src.agent.state.agent_state import AgentRuntimeState
 
-
 FRIENDLY_TOOL_ERROR_EN = (
     "I could not access the required data source right now. "
     "Please try again later or switch to another chat mode."
@@ -44,6 +43,8 @@ def _is_insufficient_answer(text: str) -> bool:
         "no relevant data found",
         "context is insufficient",
         "i don't have enough information",
+        "thieu thong tin",
+        "thiếu thông tin",
         "khong tim thay",
         "không tìm thấy",
         "khong co thong tin",
@@ -96,6 +97,21 @@ def _collect_images(state: AgentRuntimeState) -> list[str]:
     if web_url:
         return [web_url]
 
+    return []
+
+
+def _collect_images_for_answer(
+    state: AgentRuntimeState,
+    answer_source: str,
+) -> list[str]:
+    if answer_source == "web":
+        web_payload = state.tool_results.get("web", {})
+        web_url = _pick_first_image_url(list(web_payload.get("images") or []))
+        return [web_url] if web_url else []
+    if answer_source == "rag":
+        rag_payload = state.tool_results.get("rag", {})
+        rag_url = _pick_first_image_url(list(rag_payload.get("images") or []))
+        return [rag_url] if rag_url else []
     return []
 
 
@@ -188,25 +204,37 @@ def compose_draft_answer(
 
     rag_answer = str(rag_payload.get("answer") or "").strip()
     web_answer = str(web_payload.get("answer") or "").strip()
+    rag_sources = list(rag_payload.get("sources") or [])
+    web_sources = list(web_payload.get("sources") or [])
     rag_ok = bool(rag_payload.get("success")) and not _is_insufficient_answer(
         rag_answer
     )
     web_ok = bool(web_payload.get("success")) and not _is_insufficient_answer(
         web_answer
     )
+    rag_weak = (not rag_sources) and bool(web_sources)
 
     final_answer = ""
+    answer_source = ""
     if rag_ok and web_ok:
         # Prefer web answer when rag is weak/insufficient; otherwise prefer rag.
-        final_answer = web_answer if _is_insufficient_answer(rag_answer) else rag_answer
+        if _is_insufficient_answer(rag_answer) or rag_weak:
+            final_answer = web_answer
+            answer_source = "web"
+        else:
+            final_answer = rag_answer
+            answer_source = "rag"
     elif rag_ok:
         final_answer = rag_answer
+        answer_source = "rag"
     elif web_ok:
         final_answer = web_answer
+        answer_source = "web"
 
     if not final_answer:
         if bool(rag_payload.get("success")) and rag_answer:
             final_answer = rag_answer
+            answer_source = "rag"
 
     if not final_answer:
         errors: list[str] = []
@@ -235,7 +263,11 @@ def compose_draft_answer(
         final_answer = fallback
 
     state.sources = _collect_sources(state)
-    state.image_urls = _collect_images(state)
+    state.image_urls = (
+        _collect_images_for_answer(state, answer_source)
+        if answer_source
+        else _collect_images(state)
+    )
 
     state.draft_answer = final_answer.strip()
     state.answer = state.draft_answer

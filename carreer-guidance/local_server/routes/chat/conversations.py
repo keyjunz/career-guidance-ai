@@ -26,6 +26,7 @@ class ConversationMessage(BaseModel):
     role: str
     text: str
     timestamp: str | None = None
+    image_urls: list[str] = Field(default_factory=list)
 
 
 class UpdateConversationTitleRequest(BaseModel):

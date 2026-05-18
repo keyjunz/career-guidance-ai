@@ -65,7 +65,7 @@ export function AdminCostLogsPage() {
   }, [load, navigate])
 
   return (
-    <div className="min-h-screen bg-background px-4 py-8 text-on-surface sm:px-8">
+    <div className="h-screen overflow-y-auto bg-background px-4 py-8 text-on-surface sm:px-8">
       <div className="mx-auto max-w-6xl">
         <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
           <div>
@@ -77,14 +77,14 @@ export function AdminCostLogsPage() {
           <div className="flex gap-2">
             <Link
               to="/chat"
-              className="u-focus rounded-xl bg-surface-container-high px-4 py-2 text-sm font-medium"
+              className="u-focus rounded-xl border border-outline-variant/25 bg-surface-container-highest px-4 py-2 text-sm font-semibold text-on-surface shadow-sm transition-colors hover:bg-surface-container-high"
             >
               Back to chat
             </Link>
             <button
               type="button"
               onClick={() => load()}
-              className="u-focus rounded-xl bg-primary px-4 py-2 text-sm font-semibold text-white"
+              className="u-focus rounded-xl bg-primary px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-primary/90"
             >
               Refresh
             </button>

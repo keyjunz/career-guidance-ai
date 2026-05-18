@@ -16,6 +16,7 @@ import {
   collectResolvedImageUrls,
   mapApiPayloadToAssistantMessage,
 } from '../../mappers/chatMapper'
+import { resolveApiMediaUrl } from '../../utils/mediaUrl'
 import { clearAuthTokens, getAccessToken } from '../../services/authStorage'
 import { getMe } from '../../services/authApi'
 import {
@@ -57,6 +58,10 @@ function mapApiMessagesToChat(
     role: row.role,
     authorLabel: row.role === 'user' ? userName : BOT_LABEL,
     text: row.text,
+    imageUrls:
+      row.image_urls && row.image_urls.length > 0
+        ? row.image_urls.map((url) => resolveApiMediaUrl(url))
+        : undefined,
   }))
 }
 

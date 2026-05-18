@@ -64,6 +64,17 @@ class DocumentRepository(RepositoryFactory[Document, dict, dict]):
         )
         return list(self.session.scalars(stmt).all())
 
+    def get_by_user_and_source_key(
+        self,
+        user_id: UUID,
+        source_key: str,
+    ) -> Document | None:
+        stmt = select(Document).where(
+            Document.user_id == user_id,
+            Document.source_key == source_key,
+        )
+        return self.session.scalar(stmt)
+
     def get_by_ingestion_job_id(self, ingestion_job_id: str) -> list[Document]:
         stmt = (
             select(Document)
@@ -82,12 +93,11 @@ class DocumentRepository(RepositoryFactory[Document, dict, dict]):
             if document_id is not None:
                 entity = self.get_by_id(document_id)
 
-            if entity is None and row.get("ingestion_job_id") and row.get("user_id"):
-                stmt = select(Document).where(
-                    Document.ingestion_job_id == row["ingestion_job_id"],
-                    Document.user_id == row["user_id"],
+            if entity is None and row.get("user_id") and row.get("source_key"):
+                entity = self.get_by_user_and_source_key(
+                    row["user_id"],
+                    str(row["source_key"]),
                 )
-                entity = self.session.scalar(stmt)
 
             if entity is None:
                 entity = self.create(row)
